@@ -3,6 +3,26 @@
 面向公众的 AI 图像与视频提示词案例静态网站：每个完整案例一个独立页面，提示词保持 Wiki 原文，
 生成结果、实测成片与输入参考图分别标注。规划与设计文档见 `docs/`。
 
+## 页面截图
+
+截图来自本地预览，展示首页、案例检索、案例详情与手机布局。
+
+### 首页（桌面）
+
+![AI 提示词档案馆桌面首页](docs/screenshots/home-desktop.png)
+
+### 案例检索
+
+![图像与视频案例检索页](docs/screenshots/case-search-desktop.png)
+
+### 案例详情
+
+![视频案例详情页与媒体预览](docs/screenshots/case-detail-desktop.png)
+
+### 首页（手机）
+
+![AI 提示词档案馆手机首页](docs/screenshots/home-mobile.png)
+
 ## 常用命令
 
 ```bash
@@ -15,6 +35,7 @@ npm run preview        # 预览 dist/（需先 build）
 ```
 
 环境变量：`WIKI_ROOT`（默认 `/Users/zhiguang/wiki`）。
+本仓库不包含 Wiki 原文、导出的内容与媒体文件；本地构建需要另行提供 `WIKI_ROOT` 指向的源资料。
 
 ## 目录结构
 
@@ -33,4 +54,4 @@ npm run preview        # 预览 dist/（需先 build）
 
 `content/catalog.json` 中每条 `approvedForPublic` 对应 `docs/content-review.md` 的逐项记录。
 `SITE_MODE=public` 构建只包含获准条目，未审核条目（如关联转载受限资料的变量库）自动排除并
-记入 `src/generated/report.json`。公开发布需用户另行确认。
+记入 `src/generated/report.json`。GitHub 仓库公开不代表网站已部署。
