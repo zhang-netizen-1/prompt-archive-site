@@ -1,0 +1,16 @@
+---
+import Icon from './Icon.astro';
+import type { NoteItem } from '../lib/catalog';
+
+interface Props {
+  note: NoteItem;
+}
+const { note } = Astro.props;
+const tocHint = note.toc.slice(0, 4).map((t) => t.text).join(' / ');
+---
+<a class="note-card" href={`/notes/${note.slug}/`}>
+  <span class="note-kind">{note.category} · {note.medium === 'image' ? '图像' : note.medium === 'video' ? '视频' : '共用'}</span>
+  <h3>{note.title}</h3>
+  <p>{note.summary}</p>
+  {tocHint && <span class="note-toc-hint">{tocHint}</span>}
+</a>

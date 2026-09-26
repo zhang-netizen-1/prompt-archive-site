@@ -1,0 +1,81 @@
+---
+import '../styles/global.css';
+import Icon from '../components/Icon.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  activeNav?: 'home' | 'images' | 'videos' | 'notes' | 'cases';
+}
+const { title, description = '可浏览、可检索、可复制的 AI 图像与视频提示词案例。', activeNav = 'home' } = Astro.props;
+const navItems = [
+  { href: '/images/', label: '图像案例', no: '01', key: 'images' },
+  { href: '/videos/', label: '视频案例', no: '02', key: 'videos' },
+  { href: '/notes/', label: '方法笔记', no: '03', key: 'notes' },
+];
+---
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要内容</a>
+    <div class="announce">
+      <a href="/cases/">PA·ARCHIVE — 每个完整案例一个独立页面，提示词与 Wiki 原文逐字一致 ↗</a>
+    </div>
+    <header class="site-header">
+      <div class="container">
+        <a class="brand" href="/">
+          <span class="brand-glyph">PA</span>
+          <span class="brand-name">AI 提示词档案馆</span>
+        </a>
+        <nav class="site-nav" aria-label="主导航">
+          {navItems.map((item) => (
+            <a href={item.href} aria-current={activeNav === item.key ? 'page' : undefined}>
+              {item.label}
+              <span class="nav-no">{item.no}</span>
+            </a>
+          ))}
+        </nav>
+        <div class="header-cta">
+          <a class="header-search-link" href="/cases/" aria-label="全站搜索案例">
+            <Icon name="search" size={15} />
+            <span>搜索</span>
+            <span class="nav-no">04</span>
+          </a>
+          <a class="btn btn-primary" style="min-height:36px;padding:7px 14px" href="/videos/">看实测成片</a>
+        </div>
+      </div>
+    </header>
+    <main id="main">
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="container">
+        <p style="margin:0">
+          案例提示词均取自用户 Wiki 原文；「作者称已测试」表示来源声明，本站未复测。
+        </p>
+        <p style="margin:0">
+          <a href="/cases/">全站搜索</a> · <a href="/notes/">方法笔记</a> · <span style="color:var(--text-3)">PA-ARCHIVE</span>
+        </p>
+      </div>
+    </footer>
+    <style>
+      .skip-link {
+        position: absolute;
+        left: -999px;
+        top: 8px;
+        z-index: 100;
+        background: var(--bg-raised);
+        color: var(--text);
+        padding: 10px 16px;
+      }
+      .skip-link:focus { left: 8px; }
+    </style>
+  </body>
+</html>

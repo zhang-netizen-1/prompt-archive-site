@@ -1,0 +1,31 @@
+---
+// 克制的档案控件：统一线性图标，20px 基准、1.75 描边，仅配合文字使用。
+interface Props {
+  name: 'search' | 'image' | 'video' | 'play' | 'copy' | 'check' | 'note' | 'arrow-right' | 'arrow-left' | 'filter' | 'close' | 'external' | 'film' | 'link';
+  size?: number;
+  class?: string;
+}
+const { name, size = 20, class: className = 'icon' } = Astro.props;
+
+const paths: Record<Props['name'], string> = {
+  search: '<circle cx="9" cy="9" r="6.1"/><line x1="13.6" y1="13.6" x2="18" y2="18"/>',
+  image: '<rect x="3" y="4" width="14" height="12" rx="1.5"/><circle cx="7.4" cy="8.4" r="1.4"/><path d="M3 13.2l3.8-3.4 3.2 2.8 2.6-2.2 4.4 3.6"/>',
+  video: '<rect x="2.5" y="5" width="12.5" height="10" rx="1.5"/><path d="M15 9l4.5-2.6v7.2L15 11z"/>',
+  play: '<path d="M7 4.8v10.4a.6.6 0 0 0 .92.5l8.1-5.2a.6.6 0 0 0 0-1L7.92 4.3a.6.6 0 0 0-.92.5z"/>',
+  copy: '<rect x="8" y="8" width="10.5" height="10.5" rx="1.5"/><path d="M5.5 13.5h-.7A1.8 1.8 0 0 1 3 11.7V4.8A1.8 1.8 0 0 1 4.8 3h6.9a1.8 1.8 0 0 1 1.8 1.8v.7"/>',
+  check: '<path d="M4.5 12.5l4.4 4.4L19.5 6.3"/>',
+  note: '<path d="M5 4.5A1.5 1.5 0 0 1 6.5 3h11A1.5 1.5 0 0 1 19 4.5v15l-3.5-2.4-3.5 2.4-3.5-2.4L5 19.5z"/><line x1="8.5" y1="8" x2="15.5" y2="8"/><line x1="8.5" y1="11.5" x2="13.5" y2="11.5"/>',
+  'arrow-right': '<line x1="4" y1="10" x2="16.4" y2="10"/><path d="M12 5.4l4.8 4.6-4.8 4.6"/>',
+  'arrow-left': '<line x1="17" y1="10" x2="4.6" y2="10"/><path d="M9 5.4L4.2 10l4.8 4.6"/>',
+  filter: '<path d="M3.5 5.5h17l-6.6 7.6v5.2l-3.8 1.9v-7.1z"/>',
+  close: '<line x1="5" y1="5" x2="15" y2="15"/><line x1="15" y1="5" x2="5" y2="15"/>',
+  external: '<path d="M8.5 4.5H4.8A1.3 1.3 0 0 0 3.5 5.8v9.4a1.3 1.3 0 0 0 1.3 1.3h9.4a1.3 1.3 0 0 0 1.3-1.3v-3.7"/><path d="M12.5 3.5h4v4"/><line x1="16.2" y1="3.8" x2="9.5" y2="10.5"/>',
+  film: '<rect x="3" y="3.5" width="14" height="13" rx="1.5"/><line x1="3" y1="7.4" x2="17" y2="7.4"/><line x1="3" y1="12.6" x2="17" y2="12.6"/><line x1="7" y1="3.5" x2="7" y2="16.5"/><line x1="13" y1="3.5" x2="13" y2="16.5"/>',
+  link: '<path d="M8.5 11.5a4 4 0 0 1 0-5.6l1.4-1.4a4 4 0 0 1 5.6 5.6l-1.4 1.4"/><path d="M11.5 8.5a4 4 0 0 1 0 5.6l-1.4 1.4a4 4 0 0 1-5.6-5.6l1.4-1.4"/>',
+};
+const d = paths[name];
+---
+
+<span class={className} style={`width:${size}px;height:${size}px`} aria-hidden="true">
+  <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" set:html={d} />
+</span>

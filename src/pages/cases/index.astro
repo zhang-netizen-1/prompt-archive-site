@@ -1,0 +1,267 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import Icon from '../../components/Icon.astro';
+import { getAllCases, evidenceLabel, getTopics, type CaseItem } from '../../lib/catalog';
+
+const cases = getAllCases();
+const topics = getTopics();
+
+interface SearchItem {
+  slug: string;
+  title: string;
+  medium: CaseItem['medium'];
+  topic: string;
+  evidence: string;
+  summary: string;
+  tags: string[];
+  duration: string | null;
+  cover: string | null;
+  coverKind: 'poster' | 'image' | null;
+  searchText: string;
+}
+const items: SearchItem[] = cases.map((c) => {
+  const poster = c.media.find((m) => m.role === 'result' && m.kind === 'video')?.poster ?? null;
+  const img = c.media.find((m) => m.kind === 'image' && (m.role === 'result' || m.role === 'example' || m.role === 'reference')) ?? null;
+  return {
+    slug: c.slug,
+    title: c.title,
+    medium: c.medium,
+    topic: c.topic,
+    evidence: c.evidence,
+    summary: c.summary,
+    tags: c.tags,
+    duration: c.duration,
+    cover: poster ?? img?.url ?? null,
+    coverKind: poster ? 'poster' : img ? 'image' : null,
+    searchText: c.searchText,
+  };
+});
+---
+<SiteLayout title="全站搜索 · AI 提示词档案馆" activeNav="cases">
+  <div class="container">
+    <section class="case-header" style="padding-bottom:0">
+      <h1 style="font-size:36px">全站搜索</h1>
+      <p class="case-summary">同时搜索图像与视频案例：覆盖标题、摘要、标签与提示词正文。结果卡上标注媒介与媒体身份。</p>
+    </section>
+
+    <div class="toolbar">
+      <div class="search-row">
+        <Icon name="search" size={18} />
+        <input
+          type="search"
+          data-search-input
+          placeholder="输入关键词，例如：微表情、变装、故事板、追逐…"
+          aria-label="搜索案例"
+          autofocus
+        />
+      </div>
+      <label style="display:inline-flex;align-items:center;gap:8px;font-size:14px;color:var(--text-2)">
+        媒介
+        <select data-filter-medium aria-label="按媒介筛选">
+          <option value="">全部</option>
+          <option value="image">图像案例</option>
+          <option value="video">视频案例</option>
+        </select>
+      </label>
+      <label style="display:inline-flex;align-items:center;gap:8px;font-size:14px;color:var(--text-2)">
+        主题
+        <select data-filter-topic aria-label="按主题筛选">
+          <option value="">全部主题</option>
+          {topics.map((t) => <option value={t}>{t}</option>)}
+        </select>
+      </label>
+      <button class="reset" type="button" data-filter-reset>清空搜索与筛选</button>
+      <span class="result-count" data-result-count aria-live="polite"></span>
+    </div>
+
+    <div class="grid-cases" data-search-grid style="padding-bottom:56px"></div>
+    <div class="empty-state" data-empty hidden>
+      <p style="margin:0 0 4px"><strong style="color:var(--text)">没有匹配的案例</strong></p>
+      <p style="margin:0;font-size:14px">换一个关键词，或清空搜索与筛选再试。</p>
+      <button class="btn btn-ghost" type="button" data-filter-reset>清空搜索与筛选</button>
+    </div>
+  </div>
+
+  <template data-card-template>
+    <a class="case-card search-card">
+      <div class="card-media">
+        <div class="photo">
+          <img alt="" loading="lazy" hidden />
+          <div class="media-cover" hidden>
+            <span class="cover-kind"></span>
+            <span class="cover-title"></span>
+            <span class="cover-note"></span>
+          </div>
+        </div>
+        <span class="card-badge" hidden></span>
+      </div>
+      <div class="card-holes" aria-hidden="true"></div>
+      <div class="card-body">
+        <div class="card-meta">
+          <span class="medium-chip"></span>
+          <span class="status-chip"></span>
+        </div>
+        <h3 class="card-title"></h3>
+        <p class="card-summary"></p>
+        <div class="card-tags"></div>
+      </div>
+    </a>
+  </template>
+
+  <script type="application/json" id="search-index" set:html={JSON.stringify(items)} />
+
+  <style>
+    .search-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 0px;
+      padding: 4px 14px;
+      flex: 1 1 320px;
+      color: var(--ink-2);
+      min-height: 48px;
+    }
+    .search-row input {
+      border: none;
+      outline: none;
+      background: none;
+      font: inherit;
+      font-size: 15px;
+      color: var(--ink);
+      width: 100%;
+    }
+    .search-card mark {
+      background: var(--hl);
+      color: inherit;
+      padding: 0 1px;
+    }
+  </style>
+
+  <script>
+    interface SearchItem {
+      slug: string;
+      title: string;
+      medium: 'image' | 'video';
+      topic: string;
+      evidence: string;
+      summary: string;
+      tags: string[];
+      duration: string | null;
+      cover: string | null;
+      coverKind: 'poster' | 'image' | null;
+      searchText: string;
+    }
+    const indexEl = document.getElementById('search-index')!;
+    const items = JSON.parse(indexEl.textContent ?? '[]') as SearchItem[];
+    const input = document.querySelector<HTMLInputElement>('[data-search-input]')!;
+    const mediumSelect = document.querySelector<HTMLSelectElement>('[data-filter-medium]')!;
+    const topicSelect = document.querySelector<HTMLSelectElement>('[data-filter-topic]')!;
+    const grid = document.querySelector<HTMLElement>('[data-search-grid]')!;
+    const empty = document.querySelector<HTMLElement>('[data-empty]')!;
+    const count = document.querySelector<HTMLElement>('[data-result-count]')!;
+    const template = document.querySelector<HTMLTemplateElement>('[data-card-template]')!;
+
+    const statusLabel = (item: SearchItem) => {
+      const isVideo = item.medium === 'video';
+      switch (item.evidence) {
+        case 'film-attached': return { text: '附实测成片', cls: 'ok' };
+        case 'result-attached': return { text: '附结果图', cls: 'ok' };
+        case 'author-tested': return { text: isVideo ? '作者称已测试 · 未附成片' : '作者称已测试 · 未附结果图', cls: 'warn' };
+        case 'source-example': return { text: '附源资料示例图', cls: 'warn' };
+        case 'reference-only': return { text: isVideo ? '有参考图 · 未附成片' : '有参考图 · 未附结果图', cls: '' };
+        default: return { text: isVideo ? '暂无成片' : '暂无结果图', cls: '' };
+      }
+    };
+
+    function buildCard(item: SearchItem): HTMLElement {
+      const node = template.content.firstElementChild!.cloneNode(true) as HTMLElement;
+      node.setAttribute('href', `/cases/${item.slug}/`);
+      const img = node.querySelector<HTMLImageElement>('.card-media img')!;
+      const cover = node.querySelector<HTMLElement>('.card-media .media-cover')!;
+      const badge = node.querySelector<HTMLElement>('.play-badge')!;
+      if (item.cover) {
+        img.src = item.cover;
+        img.alt = `${item.title}${item.coverKind === 'poster' ? ' 实测成片画面' : ' 媒体图'}`;
+        img.hidden = false;
+        badge.hidden = false;
+        if (item.coverKind === 'poster') {
+          badge.textContent = '▶ 实测成片';
+        } else if (item.evidence === 'source-example') {
+          badge.textContent = '▣ 示例图';
+        } else {
+          badge.textContent = '▣ 参考图';
+        }
+      } else {
+        cover.hidden = false;
+        cover.querySelector('.cover-kind')!.textContent = item.medium === 'video' ? 'VIDEO PROMPT' : 'IMAGE PROMPT';
+        cover.querySelector('.cover-title')!.textContent = item.title;
+        cover.querySelector('.cover-note')!.textContent = item.medium === 'video' ? '暂无成片 · 提示词可复制' : '暂无结果图 · 提示词可复制';
+      }
+      const chip = node.querySelector<HTMLElement>('.medium-chip')!;
+      chip.textContent = item.medium === 'video' ? '视频' : '图像';
+      chip.classList.add(item.medium);
+      const status = node.querySelector<HTMLElement>('.status-chip')!;
+      const st = statusLabel(item);
+      status.textContent = st.text;
+      status.classList.add(st.cls);
+      node.querySelector('.card-title')!.textContent = item.title;
+      node.querySelector('.card-summary')!.textContent = item.summary;
+      const tags = node.querySelector<HTMLElement>('.card-tags')!;
+      for (const t of [item.topic, ...item.tags.slice(0, 2)]) {
+        const el = document.createElement('span');
+        el.className = 'tag';
+        el.textContent = t;
+        tags.appendChild(el);
+      }
+      return node;
+    }
+
+    function apply() {
+      const q = input.value.trim().toLowerCase();
+      const medium = mediumSelect.value;
+      const topic = topicSelect.value;
+      grid.innerHTML = '';
+      let visible = 0;
+      for (const item of items) {
+        if (medium && item.medium !== medium) continue;
+        if (topic && item.topic !== topic) continue;
+        if (q && !item.searchText.includes(q)) continue;
+        grid.appendChild(buildCard(item));
+        visible += 1;
+      }
+      count.textContent = `${visible} 个案例`;
+      empty.hidden = visible !== 0;
+      grid.hidden = visible === 0;
+      const params = new URLSearchParams();
+      if (q) params.set('q', input.value.trim());
+      if (medium) params.set('medium', medium);
+      if (topic) params.set('topic', topic);
+      const qs = params.toString();
+      history.replaceState(null, '', qs ? `?${qs}` : location.pathname);
+    }
+
+    let debounce: ReturnType<typeof setTimeout>;
+    input.addEventListener('input', () => {
+      clearTimeout(debounce);
+      debounce = setTimeout(apply, 120);
+    });
+    mediumSelect.addEventListener('change', apply);
+    topicSelect.addEventListener('change', apply);
+    document.querySelectorAll('[data-filter-reset]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        input.value = '';
+        mediumSelect.value = '';
+        topicSelect.value = '';
+        apply();
+      });
+    });
+
+    const url = new URL(location.href);
+    input.value = url.searchParams.get('q') ?? '';
+    mediumSelect.value = url.searchParams.get('medium') ?? '';
+    topicSelect.value = url.searchParams.get('topic') ?? '';
+    apply();
+  </script>
+</SiteLayout>

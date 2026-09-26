@@ -1,0 +1,19 @@
+---
+import CaseListPage from '../../components/CaseListPage.astro';
+import { getAllCollections } from '../../lib/catalog';
+
+const collectionLinks = getAllCollections()
+  .filter((c) => c.caseSlugs.length > 0)
+  .map((c) => ({ href: `/collections/${c.slug}/`, label: `合集：${c.title}` }));
+---
+<CaseListPage
+  medium="image"
+  siteTitle="图像案例"
+  intro="可独立使用的图像提示词案例：先看示例结果，再复制原文。提示词含待填占位符的条目收录在方法笔记中，不冒充实测案例。"
+  evidenceOptions={[
+    { value: 'source-example', label: '附源资料示例图' },
+    { value: 'result-attached', label: '附结果图' },
+    { value: 'no-record', label: '暂无结果图' },
+  ]}
+  collectionLinks={collectionLinks}
+/>

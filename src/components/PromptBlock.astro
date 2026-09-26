@@ -1,0 +1,114 @@
+---
+import Icon from './Icon.astro';
+import type { PromptBlockData } from '../lib/catalog';
+
+interface Props {
+  blocks: PromptBlockData[];
+  /** 多段案例不提供全文复制，避免拼接出不属于原文的内容 */
+  slug: string;
+}
+const { blocks, slug } = Astro.props;
+const multi = blocks.length > 1;
+---
+
+{multi && (
+  <p class="multi-prompt-note">
+    本案例为多段提示词（{blocks.length} 段），每段单独投喂生成。为保证逐字一致，仅提供「复制本段」，不提供跨段拼接的全文复制。
+  </p>
+)}
+
+{blocks.map((b, i) => (
+  <section class="prompt-block" data-prompt-block={i}>
+    <div class="prompt-block-head">
+      <span class="prompt-name">
+        <Icon name={multi ? 'film' : 'note'} size={16} />
+        {multi ? b.label : '提示词原文'}
+        <span class="prompt-count">· 共 {b.raw.length} 字</span>
+      </span>
+      <div class="prompt-actions">
+        <span class="copy-feedback" data-copy-feedback aria-live="polite"></span>
+        <button
+          class="copy-btn"
+          type="button"
+          data-copy-button
+          data-copy-source={`prompt-json-${slug}-${i}`}
+          data-copy-mode={multi ? 'section' : 'full'}
+          data-copy-name={b.label}
+        >
+          <Icon name="copy" size={16} />
+          <span data-copy-text>{multi ? '复制本段' : '复制全文'}</span>
+        </button>
+      </div>
+    </div>
+    <pre class="prompt-text">{b.raw}</pre>
+    <script type="application/json" id={`prompt-json-${slug}-${i}`} set:html={JSON.stringify(b.raw)} />
+  </section>
+))}
+
+<script>
+  const FEEDBACK_MS = 3000;
+
+  function readPayload(id: string): string {
+    const el = document.getElementById(id);
+    if (!el || el.tagName !== 'SCRIPT') throw new Error('missing payload');
+    return JSON.parse(el.textContent ?? '""') as string;
+  }
+
+  async function copyText(text: string): Promise<boolean> {
+    try {
+      await navigator.clipboard.writeText(text);
+      return true;
+    } catch {
+      // 非安全上下文或权限受限时的回退：选中正文供手动复制
+      try {
+        const ta = document.createElement('textarea');
+        ta.value = text;
+        ta.style.position = 'fixed';
+        ta.style.opacity = '0';
+        document.body.appendChild(ta);
+        ta.select();
+        const ok = document.execCommand('copy');
+        ta.remove();
+        return ok;
+      } catch {
+        return false;
+      }
+    }
+  }
+
+  document.querySelectorAll<HTMLButtonElement>('[data-copy-button]').forEach((btn) => {
+    let timer: ReturnType<typeof setTimeout> | undefined;
+    btn.addEventListener('click', async () => {
+      const feedback = btn.closest('.prompt-block')?.querySelector<HTMLElement>('[data-copy-feedback]');
+      const label = btn.querySelector<HTMLElement>('[data-copy-text]');
+      const defaultText = label?.textContent ?? '复制';
+      let payload: string;
+      try {
+        payload = readPayload(btn.dataset.copySource!);
+      } catch {
+        if (feedback) {
+          feedback.textContent = '复制失败，请手动选取';
+          feedback.classList.add('error');
+        }
+        return;
+      }
+      const ok = await copyText(payload);
+      if (feedback) {
+        const name = btn.dataset.copyMode === 'section' ? `已复制「${btn.dataset.copyName ?? '本段'}」` : '已复制完整提示词';
+        feedback.classList.toggle('error', !ok);
+        feedback.textContent = ok ? name : '复制失败，请手动选取';
+      }
+      if (label && ok) label.textContent = '已复制';
+      btn.classList.toggle('copied', ok);
+      clearTimeout(timer);
+      timer = setTimeout(() => {
+        if (label) label.textContent = defaultText;
+        btn.classList.remove('copied');
+        if (feedback) {
+          feedback.textContent = '';
+          feedback.classList.remove('error');
+        }
+      }, FEEDBACK_MS);
+    });
+  });
+</script>

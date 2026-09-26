@@ -1,0 +1,116 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import CaseCard from '../components/CaseCard.astro';
+import NotePreview from '../components/NotePreview.astro';
+import { getFeaturedCases, getAllNotes, getTopics, getAllCases } from '../lib/catalog';
+
+const featured = getFeaturedCases();
+const videoTopics = getTopics('video');
+const imageTopics = getTopics('image');
+const notes = getAllNotes();
+const filmCount = getAllCases().filter((c) => c.evidence === 'film-attached').length;
+const heroPhoto = featured.find((c) => c.media.some((m) => m.poster)) ?? featured[0];
+const heroPhotoItem = heroPhoto?.media.find((m) => m.poster) ?? heroPhoto?.media[0];
+const latestNotes = notes.filter((n) => n.category === '模板' || n.category === '方法').slice(0, 3);
+---
+<SiteLayout title="AI 提示词档案馆 · 图像与视频提示词案例" activeNav="home">
+  <section class="hero">
+    <div class="container">
+      <div>
+        <p class="hero-kicker">The Prompt Archive</p>
+        <h1>先看真实的图像与成片，<br />再<span class="hl">复制提示词原文</span>。</h1>
+        <p class="hero-sub">
+          案例分「图像案例」与「视频案例」两类，共用搜索与方法笔记。每个完整案例一个独立页面，
+          生成结果、实测成片与输入参考图分别标注，不混淆身份。
+        </p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="/cases/">浏览案例 <span class="arrow">&gt;</span></a>
+          <a class="btn btn-ghost" href="/notes/">方法笔记</a>
+        </div>
+        <form class="hero-search" action="/cases/" method="get" role="search">
+          <input type="search" name="q" placeholder="搜索标题、标签或提示词正文…" aria-label="全站搜索案例" />
+          <button type="submit">搜索</button>
+        </form>
+        <p class="hero-terminal"><span class="prompt-sign">$</span>copy --full PA-001 &amp;&amp; paste-into-model --verify-verbatim</p>
+      </div>
+      <div class="hero-collage" aria-hidden="true">
+        {heroPhoto && heroPhotoItem && (
+          <figure class="hero-photo" style="margin:0">
+            <img src={heroPhotoItem.poster ?? heroPhotoItem.url} alt="" loading="eager" />
+            <figcaption class="photo-cap">
+              <span>{heroPhoto.title}</span>
+              <span>{heroPhoto.archiveNo}</span>
+            </figcaption>
+          </figure>
+        )}
+        <div class="hero-card">
+          <h3>馆藏速览</h3>
+          <div class="hero-card-row"><span>案例总数</span><b>{getAllCases().length}</b></div>
+          <div class="hero-card-row"><span>附实测成片</span><b>{filmCount}</b></div>
+          <div class="hero-card-row"><span>方法笔记</span><b>{notes.length}</b></div>
+          <div class="hero-card-row"><span>提示词逐字核对</span><b>✓</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="featured-heading">
+    <div class="container">
+      <div class="section-head">
+        <h2 id="featured-heading">精选案例</h2>
+        <span class="head-note">媒体身份在卡片右上角与状态行标注</span>
+        <a class="more" href="/cases/">全部案例 →</a>
+      </div>
+      <div class="grid-cases">
+        {featured.map((item) => <CaseCard item={item} eager={true} />)}
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="topics-heading">
+    <div class="container">
+      <div class="section-head">
+        <h2 id="topics-heading">按创作目标浏览</h2>
+      </div>
+      <div style="display:grid;gap:32px">
+        <div>
+          <div class="mono" style="margin-bottom:14px">视频案例 · VIDEO</div>
+          <div class="tag-cloud">
+            {videoTopics.map((t) => <a class="topic-pill" href={`/videos/?topic=${encodeURIComponent(t)}`}>{t}</a>)}
+          </div>
+        </div>
+        <div>
+          <div class="mono" style="margin-bottom:14px">图像案例 · IMAGE</div>
+          <div class="tag-cloud">
+            {imageTopics.map((t) => <a class="topic-pill" href={`/images/?topic=${encodeURIComponent(t)}`}>{t}</a>)}
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="notes-heading">
+    <div class="container">
+      <div class="section-head">
+        <h2 id="notes-heading">方法笔记</h2>
+        <a class="more" href="/notes/">全部笔记 →</a>
+      </div>
+      <div class="note-cards" style="margin-top:0">
+        {latestNotes.map((n) => <NotePreview note={n} />)}
+      </div>
+    </div>
+  </section>
+</SiteLayout>
+
+<style>
+  .tag-cloud { display: flex; gap: 10px; flex-wrap: wrap; }
+  .topic-pill {
+    display: inline-flex; align-items: center;
+    background-color: var(--paper); background-image: var(--tex-paper); background-blend-mode: var(--tex-blend); color: var(--ink);
+    padding: 8px 16px; font-size: 14px; text-decoration: none; min-height: 40px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+  }
+  .topic-pill:nth-child(odd) { transform: rotate(-0.6deg); }
+  .topic-pill:nth-child(even) { transform: rotate(0.5deg); }
+  .topic-pill:hover { background: var(--hl); color: var(--ink); transform: rotate(0deg); }
+</style>

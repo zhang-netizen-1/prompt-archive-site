@@ -1,0 +1,34 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+import CaseCard from '../components/CaseCard.astro';
+import ListFilter from '../components/ListFilter.astro';
+import { getCasesByMedium, getTopics, type Medium } from '../lib/catalog';
+
+interface Props {
+  medium: Medium;
+  siteTitle: string;
+  intro: string;
+  evidenceOptions: { value: string; label: string }[];
+  collectionLinks?: { href: string; label: string }[];
+}
+const { medium, siteTitle, intro, evidenceOptions, collectionLinks = [] } = Astro.props;
+const cases = getCasesByMedium(medium);
+const topics = getTopics(medium);
+---
+<SiteLayout title={`${siteTitle} · AI 提示词档案馆`} description={intro} activeNav={medium === 'image' ? 'images' : 'videos'}>
+  <div class="container">
+    <section class="case-header" style="padding-bottom:0">
+      <h1 style="font-size:36px">{siteTitle}</h1>
+      <p class="case-summary">{intro}</p>
+      {collectionLinks.length > 0 && (
+        <div class="case-tags">
+          {collectionLinks.map((c) => <a class="tag" style="text-decoration:none" href={c.href}>{c.label}</a>)}
+        </div>
+      )}
+    </section>
+    <ListFilter topics={topics} evidenceOptions={evidenceOptions} topicParam={Astro.url.searchParams.get('topic') ?? ''} />
+    <div class="grid-cases" data-case-grid style="padding-bottom:56px">
+      {cases.map((item) => <CaseCard item={item} />)}
+    </div>
+  </div>
+</SiteLayout>

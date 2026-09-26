@@ -1,0 +1,81 @@
+---
+import Icon from './Icon.astro';
+
+interface Props {
+  topics: string[];
+  /** 状态筛选项：值来自真实内容的 evidence 枚举 */
+  evidenceOptions: { value: string; label: string }[];
+  topicParam?: string;
+}
+const { topics, evidenceOptions, topicParam = '' } = Astro.props;
+---
+<div class="toolbar" data-list-toolbar>
+  <label>
+    <Icon name="filter" size={16} />
+    主题
+    <select data-filter-topic aria-label="按主题筛选">
+      <option value="">全部主题</option>
+      {topics.map((t) => (
+        <option value={t} selected={t === topicParam ? true : undefined}>{t}</option>
+      ))}
+    </select>
+  </label>
+  <label>
+    媒体状态
+    <select data-filter-evidence aria-label="按结果媒体状态筛选">
+      <option value="">全部状态</option>
+      {evidenceOptions.map((o) => <option value={o.value}>{o.label}</option>)}
+    </select>
+  </label>
+  <button class="reset" type="button" data-filter-reset>清除筛选</button>
+  <span class="result-count" data-result-count aria-live="polite"></span>
+</div>
+<div data-empty-state hidden class="empty-state">
+  <p style="margin:0 0 4px"><strong style="color:var(--text)">没有匹配的案例</strong></p>
+  <p style="margin:0;font-size:14px">当前主题与媒体状态下没有案例，试试清除筛选。</p>
+  <button class="btn btn-ghost" type="button" data-filter-reset>清除筛选</button>
+</div>
+
+<script>
+  function initListFilter(toolbar: HTMLElement) {
+    const topicSelect = toolbar.querySelector<HTMLSelectElement>('[data-filter-topic]')!;
+    const evidenceSelect = toolbar.querySelector<HTMLSelectElement>('[data-filter-evidence]')!;
+    const count = toolbar.querySelector<HTMLElement>('[data-result-count]')!;
+    const grid = toolbar.parentElement?.querySelector<HTMLElement>('[data-case-grid]');
+    const empty = toolbar.parentElement?.querySelector<HTMLElement>('[data-empty-state]');
+    if (!grid) return;
+    const cards = Array.from(grid.querySelectorAll<HTMLElement>('[data-medium]'));
+
+    function apply() {
+      const topic = topicSelect.value;
+      const evidence = evidenceSelect.value;
+      let visible = 0;
+      for (const card of cards) {
+        const okTopic = !topic || card.dataset.topic === topic;
+        const okEvidence = !evidence || card.dataset.evidence === evidence;
+        const show = okTopic && okEvidence;
+        card.hidden = !show;
+        if (show) visible += 1;
+      }
+      count.textContent = `${visible} 个案例`;
+      if (empty) empty.hidden = visible !== 0;
+      grid.hidden = visible === 0;
+      const params = new URLSearchParams();
+      if (topic) params.set('topic', topic);
+      const qs = params.toString();
+      history.replaceState(null, '', qs ? `?${qs}` : location.pathname);
+    }
+
+    topicSelect.addEventListener('change', apply);
+    evidenceSelect.addEventListener('change', apply);
+    toolbar.parentElement?.querySelectorAll('[data-filter-reset]').forEach((btn) => {
+      btn.addEventListener('click', () => {
+        topicSelect.value = '';
+        evidenceSelect.value = '';
+        apply();
+      });
+    });
+    apply();
+  }
+  document.querySelectorAll<HTMLElement>('[data-list-toolbar]').forEach(initListFilter);
+</script>

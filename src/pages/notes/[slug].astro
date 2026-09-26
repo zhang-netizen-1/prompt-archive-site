@@ -1,0 +1,147 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import Icon from '../../components/Icon.astro';
+import CaseCard from '../../components/CaseCard.astro';
+import { getCollection, render } from 'astro:content';
+import { getAllNotes, getNote, getCase, type NoteItem } from '../../lib/catalog';
+
+export async function getStaticPaths() {
+  const notes = getAllNotes();
+  const entries = (await getCollection('notes')).filter((e) => notes.some((n) => n.slug === e.id));
+  return entries.map((entry) => {
+    const note = notes.find((n) => n.slug === entry.id)!;
+    return { params: { slug: note.slug }, props: { note } };
+  });
+}
+
+interface Props {
+  note: NoteItem;
+}
+const { note } = Astro.props;
+const entry = (await getCollection('notes')).find((e) => e.id === note.slug)!;
+const { Content } = await render(entry);
+
+const relatedCases = note.relatedCases.map((s) => getCase(s)).filter((c) => c != null);
+const listHref = note.medium === 'image' ? '/images/' : note.medium === 'video' ? '/videos/' : '/cases/';
+const listLabel = note.medium === 'image' ? '图像案例' : note.medium === 'video' ? '视频案例' : '全部案例';
+---
+<SiteLayout title={`${note.title} · 方法笔记`} description={note.summary} activeNav="notes">
+  <div class="note-page">
+    <div class="note-header">
+      <nav class="breadcrumbs" aria-label="面包屑">
+        <a href="/">首页</a>
+        <span aria-hidden="true">/</span>
+        <a href="/notes/">方法笔记</a>
+        <span aria-hidden="true">/</span>
+        <span aria-current="page">{note.title}</span>
+      </nav>
+      <h1 style="font-size:32px">{note.title}</h1>
+      <p class="note-meta">
+        <span class="medium-chip">{note.category}</span>
+        <span>{note.medium === 'image' ? '图像' : note.medium === 'video' ? '视频' : '图像＋视频共用'}</span>
+        <span>源资料：{note.sourceDisplay}</span>
+      </p>
+      {note.summary && <p class="note-summary">{note.summary}</p>}
+    </div>
+    <div class="note-layout">
+      <aside class="note-toc" aria-label="目录">
+        <p class="toc-title">目录</p>
+        {note.toc.length === 0 && <p style="font-size:13px;color:var(--text-2);margin:0">本笔记无二级标题</p>}
+        {note.toc.map((t) => (
+          <a href={`#${t.slug}`} class={t.depth === 3 ? 'depth-3' : undefined}>{t.text}</a>
+        ))}
+      </aside>
+      <div class="note-main">
+        <div class="prose">
+          <Content />
+        </div>
+
+        {relatedCases.length > 0 && (
+          <section class="note-related" aria-label="关联案例">
+            <h2 class="section-title" style="font-size:20px">
+              <Icon name="link" size={18} /> 应用这些写法的案例
+            </h2>
+            <div class="grid-cases" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr));margin-top:16px">
+              {relatedCases.map((c) => c && <CaseCard item={c} />)}
+            </div>
+            <p style="font-size:14px;margin-top:12px">
+              <a href={listHref}>浏览{listLabel} →</a>
+            </p>
+          </section>
+        )}
+      </div>
+    </div>
+  </div>
+</SiteLayout>
+
+<script>
+  // 笔记正文的所有代码块（案例、模板、公式、取值速拷）包上面板头并提供「复制本块」。
+  // 复制内容 = 渲染后的代码文本（与页面显示逐字一致）。
+  function enhanceCodePanels() {
+    document.querySelectorAll<HTMLElement>('.prose pre').forEach((pre) => {
+      if (pre.closest('.code-panel')) return;
+      const code = pre.querySelector('code');
+      const text = (code ?? pre).textContent ?? '';
+      const lang = code?.className.match(/language-([\w+-]+)/)?.[1] ?? 'text';
+      const lines = text.replace(/\n$/, '').split('\n').length;
+
+      const panel = document.createElement('figure');
+      panel.className = 'code-panel';
+      const head = document.createElement('figcaption');
+      head.className = 'code-panel-head';
+      const langEl = document.createElement('span');
+      langEl.className = 'code-lang';
+      langEl.textContent = lang;
+      const linesEl = document.createElement('span');
+      linesEl.className = 'code-lines';
+      linesEl.textContent = `${lines} 行`;
+      const feedback = document.createElement('span');
+      feedback.className = 'copy-feedback';
+      feedback.setAttribute('aria-live', 'polite');
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'copy-btn';
+      btn.textContent = '复制本块';
+      head.append(langEl, linesEl, feedback, btn);
+
+      pre.replaceWith(panel);
+      panel.append(head, pre);
+
+      let timer: ReturnType<typeof setTimeout> | undefined;
+      btn.addEventListener('click', async () => {
+        let ok = false;
+        try {
+          await navigator.clipboard.writeText(text);
+          ok = true;
+        } catch {
+          try {
+            const ta = document.createElement('textarea');
+            ta.value = text;
+            ta.style.position = 'fixed';
+            ta.style.opacity = '0';
+            document.body.appendChild(ta);
+            ta.select();
+            ok = document.execCommand('copy');
+            ta.remove();
+          } catch { ok = false; }
+        }
+        feedback.textContent = ok ? '已复制本块' : '复制失败，请手动选取';
+        btn.textContent = ok ? '已复制' : '复制本块';
+        clearTimeout(timer);
+        timer = setTimeout(() => {
+          feedback.textContent = '';
+          btn.textContent = '复制本块';
+        }, 3000);
+      });
+    });
+  }
+  enhanceCodePanels();
+</script>
+
+<style>
+  .note-header {
+    max-width: calc(var(--note-width) + 280px);
+    margin: 0 auto;
+    padding: 40px 24px 0;
+  }
+</style>

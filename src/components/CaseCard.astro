@@ -1,0 +1,73 @@
+---
+import Icon from './Icon.astro';
+import { evidenceLabel, type CaseItem } from '../lib/catalog';
+
+interface Props {
+  item: CaseItem;
+  eager?: boolean;
+}
+const { item, eager = false } = Astro.props;
+const status = evidenceLabel(item);
+
+const resultMedia = item.media.find((m) => m.role === 'result' && m.kind === 'video');
+const poster = resultMedia?.poster ?? null;
+const coverImage = item.media.find((m) => m.role === 'result' && m.kind === 'image')
+  ?? item.media.find((m) => m.role === 'example')
+  ?? item.media.find((m) => m.role === 'reference');
+const hasVisual = Boolean(poster || coverImage);
+
+// 右上角荧光笔角标：短身份词；完整状态词在下方 meta 行
+const badge = resultMedia
+  ? { text: '实测成片', ok: true, icon: 'play' as const }
+  : coverImage?.role === 'example'
+    ? { text: '示例图', ok: false, icon: 'image' as const }
+    : coverImage?.role === 'reference'
+      ? { text: '参考图', ok: false, icon: 'image' as const }
+      : null;
+---
+<a class="case-card" href={`/cases/${item.slug}/`}
+  data-medium={item.medium}
+  data-topic={item.topic}
+  data-evidence={item.evidence}
+  data-search={[item.title, item.topic, item.summary, item.tags.join(' ')].join(' ').toLowerCase()}>
+  <div class="card-media">
+    <div class="photo">
+      {poster && (
+        <img src={poster} alt={`${item.title} 实测成片画面`} loading={eager ? 'eager' : 'lazy'} />
+      )}
+      {!poster && coverImage && (
+        <img src={coverImage.url} alt={coverImage.role === 'example'
+          ? `${item.title} 源资料示例图`
+          : `${item.title} ${coverImage.role === 'reference' ? '输入参考图' : '结果图'}`}
+          loading={eager ? 'eager' : 'lazy'} />
+      )}
+      {!hasVisual && (
+        <div class="media-cover">
+          <span class="cover-kind">{item.medium === 'video' ? 'VIDEO PROMPT' : 'IMAGE PROMPT'}</span>
+          <span class="cover-title">{item.title}</span>
+          <span class="cover-note">{item.medium === 'video' ? '暂无成片 · 提示词可复制' : '暂无结果图 · 提示词可复制'}</span>
+        </div>
+      )}
+    </div>
+    {badge && (
+      <span class={`card-badge${badge.ok ? '' : ' mute'}`}>
+        <Icon name={badge.icon} size={12} />
+        {badge.text}
+      </span>
+    )}
+  </div>
+  <div class="card-holes" aria-hidden="true"></div>
+  <div class="card-body">
+    <div class="card-meta">
+      <span>{item.archiveNo}</span>
+      <span>{item.medium === 'video' ? '视频' : '图像'}</span>
+      <span class={`status ${status.tone === 'ok' ? 'ok' : status.tone === 'copper' ? 'warn' : ''}`}>{status.text}</span>
+    </div>
+    <h3 class="card-title">{item.title}</h3>
+    <p class="card-summary">{item.summary}</p>
+    <div class="card-tags">
+      <span class="tag">{item.topic}</span>
+      {item.tags.slice(0, 2).map((t) => <span class="tag">{t}</span>)}
+    </div>
+  </div>
+</a>

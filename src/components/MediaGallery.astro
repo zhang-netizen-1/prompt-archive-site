@@ -1,0 +1,128 @@
+---
+import Icon from './Icon.astro';
+import { mediaRoleLabel, type CaseItem, type CaseMedia } from '../lib/catalog';
+
+interface Props {
+  media: CaseMedia[];
+  medium: CaseItem['medium'];
+  title: string;
+}
+const { media, medium, title } = Astro.props;
+
+// 面板分组：结果（成片/结果图）、参考图、示例图，按真实媒体角色决定默认项
+type Panel = { id: string; roleLabel: string; label: string; items: CaseMedia[] };
+const panels: Panel[] = [];
+function pushPanel(role: CaseMedia['role'], label: string) {
+  const items = media.filter((m) => m.role === role);
+  if (items.length) {
+    panels.push({ id: role, roleLabel: mediaRoleLabel(items[0]), label, items });
+  }
+}
+pushPanel('result', medium === 'video' ? '实测成片' : '生成结果图');
+pushPanel('reference', '输入参考图');
+pushPanel('example', '源资料示例图');
+
+const hasMedia = panels.length > 0;
+const noMediaText = medium === 'video' ? '暂无成片' : '暂无结果图';
+---
+
+{hasMedia ? (
+  <div class="media-tabs" role="tablist" aria-label="媒体附件切换">
+    {panels.map((p, i) => (
+      <button
+        class="media-tab"
+        role="tab"
+        id={`tab-${p.id}`}
+        aria-selected={i === 0 ? 'true' : 'false'}
+        aria-controls={`panel-${p.id}`}
+        data-panel={p.id}
+        type="button"
+      >
+        <Icon name={p.items[0].kind === 'video' ? 'film' : 'image'} size={16} />
+        {p.label}{p.items.length > 1 ? `（${p.items.length}）` : ''}
+      </button>
+    ))}
+  </div>
+) : null}
+
+{!hasMedia && (
+  <div class="no-media-note">
+    <strong>{noMediaText}</strong>
+    本案例暂无{medium === 'video' ? '实测成片' : '生成结果图'}，提示词与来源说明仍可阅读、复制。
+  </div>
+)}
+
+{panels.map((p, i) => (
+  <div
+    class={`media-panel${i === 0 ? ' active' : ''}`}
+    id={`panel-${p.id}`}
+    role="tabpanel"
+    aria-labelledby={`tab-${p.id}`}
+    data-panel-body={p.id}
+  >
+    <span class="media-role-label">
+      <Icon name={p.items[0].kind === 'video' ? 'film' : 'image'} size={14} />
+      {p.roleLabel}
+    </span>
+    {p.items[0].kind === 'video' ? (
+      p.items.map((m) => (
+        <figure class="media-figure">
+          <div class="media-frame">
+            <video controls preload="metadata" src={m.url} poster={m.poster ?? undefined} aria-label={`${title} ${m.label}`}></video>
+          </div>
+          <figcaption class="media-caption">{m.label} · {p.roleLabel}</figcaption>
+        </figure>
+      ))
+    ) : (
+      <div class={p.items.length > 1 ? 'ref-grid' : ''}>
+        {p.items.map((m, j) => (
+          <figure class="media-figure">
+            <div class="media-frame">
+              <img
+                src={m.url}
+                alt={`${title} ${m.label}`}
+                loading={i === 0 && j < 2 ? 'eager' : 'lazy'}
+                data-lightbox-trigger
+              />
+            </div>
+            <figcaption class="media-caption">{m.label}</figcaption>
+          </figure>
+        ))}
+      </div>
+    )}
+  </div>
+))}
+
+<dialog class="lightbox" data-lightbox aria-label="查看大图">
+  <button class="lightbox-close" type="button" data-lightbox-close aria-label="关闭大图">
+    <Icon name="close" size={20} />
+  </button>
+  <img src="" alt="" data-lightbox-img />
+</dialog>
+
+<script>
+  function initMediaGallery(root: HTMLElement) {
+    const tabs = Array.from(root.querySelectorAll<HTMLButtonElement>('.media-tab'));
+    const panels = Array.from(root.querySelectorAll<HTMLElement>('.media-panel'));
+    tabs.forEach((tab) => {
+      tab.addEventListener('click', () => {
+        const id = tab.dataset.panel;
+        tabs.forEach((t) => t.setAttribute('aria-selected', t === tab ? 'true' : 'false'));
+        panels.forEach((p) => p.classList.toggle('active', p.dataset.panelBody === id));
+      });
+    });
+
+    const dialog = root.querySelector<HTMLDialogElement>('[data-lightbox]');
+    const lbImg = dialog?.querySelector<HTMLImageElement>('[data-lightbox-img]');
+    root.querySelectorAll<HTMLImageElement>('[data-lightbox-trigger]').forEach((img) => {
+      img.addEventListener('click', () => {
+        if (!dialog || !lbImg) return;
+        lbImg.src = img.src;
+        lbImg.alt = img.alt;
+        dialog.showModal();
+      });
+    });
+    dialog?.querySelector('[data-lightbox-close]')?.addEventListener('click', () => dialog.close());
+  }
+  document.querySelectorAll<HTMLElement>('[data-gallery]').forEach(initMediaGallery);
+</script>

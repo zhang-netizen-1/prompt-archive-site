@@ -1,0 +1,13 @@
+---
+import CaseListPage from '../../components/CaseListPage.astro';
+---
+<CaseListPage
+  medium="video"
+  siteTitle="视频案例"
+  intro="可独立投喂的视频提示词案例：「附实测成片」可直接播放核对；「作者称已测试 · 未附成片」表示来源声明，本站未复测。"
+  evidenceOptions={[
+    { value: 'film-attached', label: '附实测成片' },
+    { value: 'author-tested', label: '作者称已测试 · 未附成片' },
+    { value: 'no-record', label: '暂无成片' },
+  ]}
+/>

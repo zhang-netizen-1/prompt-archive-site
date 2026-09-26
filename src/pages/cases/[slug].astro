@@ -1,0 +1,187 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import Icon from '../../components/Icon.astro';
+import MediaGallery from '../../components/MediaGallery.astro';
+import PromptBlock from '../../components/PromptBlock.astro';
+import NotePreview from '../../components/NotePreview.astro';
+import { getAllCases, getCase, getNote, getCollection, getCaseNeighbors, evidenceStatement, evidenceLabel } from '../../lib/catalog';
+import type { CaseItem } from '../../lib/catalog';
+
+export function getStaticPaths() {
+  return getAllCases().map((caseItem) => ({
+    params: { slug: caseItem.slug },
+    props: { caseItem },
+  }));
+}
+
+interface Props {
+  caseItem: CaseItem;
+}
+const { caseItem } = Astro.props;
+
+const relatedNotes = caseItem.relatedNotes.map((s) => getNote(s)).filter((n) => n != null);
+const collection = caseItem.collection ? getCollection(caseItem.collection) : undefined;
+const { prev, next } = getCaseNeighbors(caseItem);
+const status = evidenceLabel(caseItem);
+const statement = evidenceStatement(caseItem);
+const listHref = caseItem.medium === 'video' ? '/videos/' : '/images/';
+const listLabel = caseItem.medium === 'video' ? '视频案例' : '图像案例';
+
+// 制作链路：只有清单里确有独立提示词的关联案例才进入此区
+const chainItems = caseItem.chain
+  .map((c) => ({ relation: c.relation, item: getCase(c.slug) }))
+  .filter((c) => c.item != null);
+// 反向链路：其他案例的制作链路指向本页
+const backLinks = getAllCases()
+  .filter((c) => c.chain.some((l) => l.slug === caseItem.slug))
+  .map((c) => ({ item: c, relation: c.chain.find((l) => l.slug === caseItem.slug)!.relation }));
+const hasChain = chainItems.length > 0 || backLinks.length > 0;
+---
+<SiteLayout title={`${caseItem.title} · ${listLabel}`} description={caseItem.summary} activeNav={caseItem.medium === 'video' ? 'videos' : 'images'}>
+  <article>
+    <div class="container reading">
+      <nav class="breadcrumbs" aria-label="面包屑">
+        <a href="/">首页</a>
+        <span aria-hidden="true">/</span>
+        <a href={listHref}>{listLabel}</a>
+        {collection && (
+          <>
+            <span aria-hidden="true">/</span>
+            <a href={`/collections/${collection.slug}/`}>{collection.title}</a>
+          </>
+        )}
+        <span aria-hidden="true">/</span>
+        <span aria-current="page">{caseItem.title}</span>
+      </nav>
+      <header class="case-header" style="padding-top:0">
+        <p class="case-file-no">{caseItem.archiveNo} · CASE FILE</p>
+        <h1>{caseItem.title}</h1>
+        <p class="case-summary">{caseItem.summary}</p>
+        <div class="case-tags">
+          <span class="tag">{caseItem.topic}</span>
+          {caseItem.tags.map((t) => <span class="tag">{t}</span>)}
+        </div>
+        <div class="case-meta-line">
+          <span class={`medium-chip ${caseItem.medium}`}>{caseItem.medium === 'video' ? '视频案例' : '图像案例'}</span>
+          <span class={`status ${status.tone === 'ok' ? 'ok' : status.tone === 'copper' ? 'warn' : ''}`}>
+            <Icon name={status.tone === 'ok' ? 'check' : 'image'} size={15} />
+            {status.text}
+          </span>
+          {caseItem.duration && <span>时长：{caseItem.duration}</span>}
+        </div>
+      </header>
+    </div>
+
+    <section class="case-media-section" aria-label="案例媒体">
+      <div class="container reading" data-gallery>
+        <MediaGallery media={caseItem.media} medium={caseItem.medium} title={caseItem.title} />
+      </div>
+    </section>
+
+    <section class="case-prompt-section" aria-label="提示词原文">
+      <div class="container reading">
+        <h2 class="section-title"><span class="section-no">01</span> 提示词原文</h2>
+        <PromptBlock blocks={caseItem.promptBlocks} slug={caseItem.slug} />
+      </div>
+    </section>
+
+    <section class="fact-section" aria-label="来源与结果">
+      <div class="container reading">
+        <h2 class="section-title"><span class="section-no">02</span> 来源与结果</h2>
+        <dl class="fact-grid">
+          <div class="fact-row">
+            <dt>源资料</dt>
+            <dd>{caseItem.sourceDisplay}</dd>
+          </div>
+          <div class="fact-row">
+            <dt>实测依据</dt>
+            <dd>
+              <span class={`fact-flag ${statement.tone === 'ok' ? 'ok' : 'warn'}`}>
+                <Icon name={statement.tone === 'ok' ? 'check' : 'note'} size={15} />
+                {statement.text}
+              </span>
+              {caseItem.provenance.testedNote && (
+                <span class="flag-note">{caseItem.provenance.testedNote}</span>
+              )}
+            </dd>
+          </div>
+          <div class="fact-row">
+            <dt>媒体齐备状态</dt>
+            <dd>
+              {caseItem.provenance.mediaNote ?? (caseItem.media.length ? `共 ${caseItem.media.length} 项媒体附件` : '无媒体附件')}
+            </dd>
+          </div>
+          <div class="fact-row">
+            <dt>已知模型 / 平台</dt>
+            <dd>源文未注明，不推断。</dd>
+          </div>
+          {caseItem.duration && (
+            <div class="fact-row">
+              <dt>时长</dt>
+              <dd>{caseItem.duration}</dd>
+            </div>
+          )}
+          <div class="fact-row">
+            <dt>站方核查</dt>
+            <dd>2026-09-26 对照 Wiki 原文核对；提示词逐字一致。</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    {hasChain && (
+      <section class="related-section" aria-label="制作链路">
+        <div class="container reading">
+          <h2 class="section-title"><span class="section-no">03</span> 制作链路</h2>
+          <ul class="chain-list">
+            {chainItems.map(({ item, relation }) => item && (
+              <li>
+                <span>
+                  <span class="relation">{relation}</span>
+                  <strong style="margin-left:8px">{item.title}</strong>
+                </span>
+                <a href={`/cases/${item.slug}/`}>查看案例 →</a>
+              </li>
+            ))}
+            {backLinks.map(({ item, relation }) => (
+              <li>
+                <span>
+                  <span class="relation">{relation}</span>
+                  <strong style="margin-left:8px">{item.title}</strong>
+                </span>
+                <a href={`/cases/${item.slug}/`}>查看案例 →</a>
+              </li>
+            ))}
+          </ul>
+        </div>
+      </section>
+    )}
+
+    {relatedNotes.length > 0 && (
+      <section class="related-section" aria-label="关联笔记">
+        <div class="container reading">
+          <h2 class="section-title"><span class="section-no">04</span> 关联方法笔记</h2>
+          <div class="note-cards">
+            {relatedNotes.map((n) => n && <NotePreview note={n} />)}
+          </div>
+        </div>
+      </section>
+    )}
+
+    <div class="reading" style="padding-bottom:0"><nav class="case-pager" aria-label="前后案例">
+      {prev ? (
+        <a href={`/cases/${prev.slug}/`} class="prev">
+          <span class="pager-label">上一篇</span>
+          <span>← {prev.title}</span>
+        </a>
+      ) : <span></span>}
+      {next && (
+        <a href={`/cases/${next.slug}/`} class="next">
+          <span class="pager-label">下一篇</span>
+          <span>{next.title} →</span>
+        </a>
+      )}
+    </nav>
+    </div>
+  </article>
+</SiteLayout>

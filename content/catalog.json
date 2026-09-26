@@ -1,0 +1,493 @@
+{
+  "version": "1.0.0",
+  "generatedAt": "2026-09-26",
+  "site": {
+    "title": "AI 提示词档案馆",
+    "titleNote": "正式名称，2026-09-26 用户确认",
+    "description": "可浏览、可检索、可复制的 AI 图像与视频提示词案例：每个完整案例一个独立页面，提示词保持原文。"
+  },
+  "collections": [
+    {
+      "slug": "image2-storyboard",
+      "title": "image2 故事板玩法：人物、道具与分镜故事板",
+      "sourceDisplay": "👀图片-image2故事板玩法-9组（ai-video/prompts）",
+      "description": "同一篇源文件中的三组可独立使用的完整提示词，分别生成人物角色概念板、道具概念图与分镜故事板。源文件其余小节（故事版骨架、草图、连续动作等）为待填写占位模板，本站未建独立案例页。",
+      "caseSlugs": ["image2-character-board", "image2-prop-board", "image2-fight-storyboard"],
+      "approvedForPublic": true
+    }
+  ],
+  "cases": [
+    {
+      "slug": "christmas-snow-chase",
+      "title": "圣诞夜雪街追逐",
+      "source": "library/visual-prompt-system/案例-圣诞夜雪街追逐.md",
+      "sourceDisplay": "案例-圣诞夜雪街追逐（visual-prompt-system）",
+      "promptBlocks": [{ "heading": "提示词全文", "label": "完整提示词" }],
+      "medium": "video",
+      "topic": "叙事短片",
+      "tags": ["追逐", "圣诞", "反转", "多镜头", "参考图锚定"],
+      "evidence": "film-attached",
+      "duration": "五镜 15 秒（2.5 / 2 / 5 / 2 / 3.5 秒）",
+      "summary": "五镜圣诞夜雪街追逐：看似惊险的追逐实为圣诞礼物降临，用子弹时间放大魔法瞬间，收束在女孩自拍杆的 Vlog 质感。附两张输入参考图与实测成片。",
+      "media": [
+        { "role": "result", "kind": "video", "ref": "raw/assets/visual-prompt-system/圣诞夜雪街追逐/实测成片.mp4", "label": "实测成片" },
+        { "role": "reference", "kind": "image", "ref": "raw/assets/visual-prompt-system/圣诞夜雪街追逐/图片1-女孩四视图.png", "label": "图片1 · 女孩四视图设定图" },
+        { "role": "reference", "kind": "image", "ref": "raw/assets/visual-prompt-system/圣诞夜雪街追逐/图片2-雪夜街道场景.jpg", "label": "图片2 · 雪夜街道场景图" }
+      ],
+      "provenance": {
+        "testedNote": "源文标注「2026-09-16 实测验收通过」（志光实测），附实测成片。",
+        "mediaNote": "实测成片 1 段；输入参考图 2 张（女孩四视图、雪夜街道场景）。生成结果与参考图分区展示。"
+      },
+      "relatedNotes": ["video-prompt-structure"],
+      "featured": true,
+      "approvedForPublic": true
+    },
+    {
+      "slug": "white-bg-outfit-spin",
+      "title": "白底变装旋转",
+      "source": "library/visual-prompt-system/案例-白底变装旋转.md",
+      "sourceDisplay": "案例-白底变装旋转（visual-prompt-system）",
+      "promptBlocks": [{ "heading": "提示词全文", "label": "完整提示词" }],
+      "medium": "video",
+      "topic": "变装与图像锚定",
+      "tags": ["变装", "影棚", "多套造型", "图像锚定", "固定机位"],
+      "evidence": "film-attached",
+      "duration": "七镜 10 秒（六次换装＋收尾定格）",
+      "summary": "白色影棚中的七套造型变装短片：模特原地「定格亮相＋旋身 360°」，换装在旋转中完成，机位全程不动。八张输入参考图锚定模特与各套造型，附实测成片。",
+      "media": [
+        { "role": "result", "kind": "video", "ref": "raw/assets/visual-prompt-system/白底变装旋转/实测成片.mp4", "label": "实测成片" },
+        { "role": "reference", "kind": "image", "ref": "raw/assets/visual-prompt-system/白底变装旋转/图片1-模特四视图.png", "label": "图片1 · 模特四视图（身份锚定）" },
+        { "role": "reference", "kind": "image", "ref": "raw/assets/visual-prompt-system/白底变装旋转/图片2-灰夹克泡泡裙.png", "label": "图片2 · 灰夹克泡泡裙" },
+        { "role": "reference", "kind": "image", "ref": "raw/assets/visual-prompt-system/白底变装旋转/图片3-黑白极简.png", "label": "图片3 · 黑白极简" },
+        { "role": "reference", "kind": "image", "ref": "raw/assets/visual-prompt-system/白底变装旋转/图片4-海滨浅蓝.png", "label": "图片4 · 海滨浅蓝" },
+        { "role": "reference", "kind": "image", "ref": "raw/assets/visual-prompt-system/白底变装旋转/图片5-酒红运动.png", "label": "图片5 · 酒红运动" },
+        { "role": "reference", "kind": "image", "ref": "raw/assets/visual-prompt-system/白底变装旋转/图片6-蓝白条纹.png", "label": "图片6 · 蓝白条纹" },
+        { "role": "reference", "kind": "image", "ref": "raw/assets/visual-prompt-system/白底变装旋转/图片7-牛仔叠穿.png", "label": "图片7 · 牛仔叠穿" },
+        { "role": "reference", "kind": "image", "ref": "raw/assets/visual-prompt-system/白底变装旋转/图片8-黑西装.png", "label": "图片8 · 黑西装" }
+      ],
+      "provenance": {
+        "testedNote": "源文标注「2026-09-16 实测验收通过（反馈：效果与节奏俱佳）」（志光实测），附实测成片。",
+        "mediaNote": "实测成片 1 段；输入参考图 8 张（模特四视图＋七套造型平铺图）。生成结果与参考图分区展示。"
+      },
+      "relatedNotes": ["video-prompt-structure"],
+      "featured": true,
+      "approvedForPublic": true
+    },
+    {
+      "slug": "forty-three-sunsets",
+      "title": "一天四十三次日落",
+      "source": "library/visual-prompt-system/案例-一天四十三次日落.md",
+      "sourceDisplay": "案例-一天四十三次日落（visual-prompt-system）",
+      "promptBlocks": [
+        { "heading": "提示词全文", "section": "① 早高峰人行道（14.5 秒）", "label": "① 早高峰人行道（14.5 秒）" },
+        { "heading": "提示词全文", "section": "② 写字楼大堂幕墙（14.5 秒）", "label": "② 写字楼大堂幕墙（14.5 秒）" },
+        { "heading": "提示词全文", "section": "③ 地铁车厢（13.5 秒）", "label": "③ 地铁车厢（13.5 秒）" },
+        { "heading": "提示词全文", "section": "④ 写字楼天台（15 秒）", "label": "④ 写字楼天台（15 秒）" },
+        { "heading": "提示词全文", "section": "⑤ 江边步道·发问（13 秒）", "label": "⑤ 江边步道·发问（13 秒）" },
+        { "heading": "提示词全文", "section": "⑥ 江边步道·落点（11 秒）", "label": "⑥ 江边步道·落点（11 秒）" }
+      ],
+      "medium": "video",
+      "topic": "多段成片",
+      "tags": ["对谈", "多段生成", "竖幅", "参考图锚定", "实测复盘"],
+      "evidence": "author-tested",
+      "duration": "六段提示词共 81.5 秒（14.5＋14.5＋13.5＋15＋13＋11），分六次生成后剪接",
+      "summary": "外星小王子 × 地球女生的六段对谈短片：随问题推进从人行道走到江边日落。作者实测判定「勉强及格」，身高差、时间跨度与段落收尾三项问题及预改方向随案例记录；未附成片文件。",
+      "media": [
+        { "role": "reference", "kind": "image", "ref": "raw/assets/visual-prompt-system/一天四十三次日落/图片1-小王子锚定.png", "label": "图片1 · 小王子锚定图" },
+        { "role": "reference", "kind": "image", "ref": "raw/assets/visual-prompt-system/一天四十三次日落/图片2-女主锚定.png", "label": "图片2 · 女主锚定图" },
+        { "role": "reference", "kind": "image", "ref": "raw/assets/visual-prompt-system/一天四十三次日落/图片3-场景-早高峰人行道.jpg", "label": "图片3 · 场景底图 · 早高峰人行道" },
+        { "role": "reference", "kind": "image", "ref": "raw/assets/visual-prompt-system/一天四十三次日落/图片4-场景-写字楼幕墙.jpg", "label": "图片4 · 场景底图 · 写字楼幕墙" },
+        { "role": "reference", "kind": "image", "ref": "raw/assets/visual-prompt-system/一天四十三次日落/图片5-场景-地铁车厢.jpg", "label": "图片5 · 场景底图 · 地铁车厢" },
+        { "role": "reference", "kind": "image", "ref": "raw/assets/visual-prompt-system/一天四十三次日落/图片6-场景-天台.jpg", "label": "图片6 · 场景底图 · 天台" },
+        { "role": "reference", "kind": "image", "ref": "raw/assets/visual-prompt-system/一天四十三次日落/图片7-场景-江边步道.jpg", "label": "图片7 · 场景底图 · 江边步道" }
+      ],
+      "provenance": {
+        "testedNote": "作者称已测试：源文记录 2026-09-17 实测判定「勉强及格」，并附实测问题与待改清单；未提供成片文件，本站未复测。",
+        "mediaNote": "输入参考图 7 张（角色锚定 2 张＋空场景四视角底图 5 张）；本案例无成片。多段提示词按段复制。"
+      },
+      "relatedNotes": ["multi-segment-discipline", "video-prompt-structure", "dialogue-punctuation"],
+      "featured": false,
+      "approvedForPublic": true
+    },
+    {
+      "slug": "restrained-micro-expression",
+      "title": "克制微表情五段情绪递进",
+      "source": "library/visual-prompt-system/案例-克制微表情五段情绪递进.md",
+      "sourceDisplay": "案例-克制微表情五段情绪递进（visual-prompt-system）",
+      "promptBlocks": [{ "heading": "提示词全文", "label": "完整提示词" }],
+      "medium": "video",
+      "topic": "微表情",
+      "tags": ["微表情", "表演控制", "负面提示词", "固定机位", "无台词"],
+      "evidence": "author-tested",
+      "duration": "15 秒",
+      "summary": "15 秒固定机位微表情短片：全程禁止眼泪流出，面部肌肉位移以毫米计，五段情绪从幸福递进到意难平，附源文的撰写表达方式分析。纯文字案例。",
+      "media": [],
+      "provenance": {
+        "testedNote": "作者称已测试：源文标注「2026-09-20 志光提供并明确说明已经验证」；本次未复测，未附成片。",
+        "mediaNote": "无参考图、无成片；纯文字案例。"
+      },
+      "relatedNotes": ["micro-expression-template", "performance-variables", "writing-rules"],
+      "featured": false,
+      "approvedForPublic": true
+    },
+    {
+      "slug": "tear-control-15s",
+      "title": "眼泪控制｜15秒室内怀疑与崩溃",
+      "source": "library/ai-video/prompts/眼泪控制-15秒室内怀疑与崩溃-用户实测提示词.md",
+      "sourceDisplay": "眼泪控制-15秒室内怀疑与崩溃-用户实测提示词（ai-video/prompts）",
+      "promptBlocks": [{ "heading": "提示词原文", "label": "完整提示词" }],
+      "medium": "video",
+      "topic": "哭戏与眼神",
+      "tags": ["哭戏", "台词", "正反打", "室内", "韩剧质感"],
+      "evidence": "author-tested",
+      "duration": "15 秒（原文时间线 0–15s）",
+      "summary": "室内哭戏对峙：从「原来你怀疑我了啊」的错愕到崩溃痛哭的连续情绪线，台词与微表情逐段推进。纯文字案例。",
+      "media": [],
+      "provenance": {
+        "testedNote": "作者称已测试：来源注记「志光于 2026-09-25 提供，称这批视频提示词已测试」；本次未复测，未附平台、模型、成片或效果。",
+        "mediaNote": "无参考图、无成片；纯文字案例。"
+      },
+      "relatedNotes": ["micro-expression-template", "dialogue-punctuation"],
+      "featured": false,
+      "approvedForPublic": true
+    },
+    {
+      "slug": "crying-monologue-15s",
+      "title": "哭戏独白｜15秒室内一镜到底",
+      "source": "library/ai-video/prompts/哭戏独白-15秒室内一镜到底-用户实测提示词.md",
+      "sourceDisplay": "哭戏独白-15秒室内一镜到底-用户实测提示词（ai-video/prompts）",
+      "promptBlocks": [{ "heading": "提示词原文", "label": "完整提示词" }],
+      "medium": "video",
+      "topic": "一镜到底表演",
+      "tags": ["一镜到底", "哭戏", "独白", "固定机位"],
+      "evidence": "author-tested",
+      "duration": "15 秒",
+      "summary": "固定中近景一镜到底的哭戏独白：情绪由压抑递进至崩溃再归于失望沉默，台词「你让我自己一个人……」贯穿全段。纯文字案例。",
+      "media": [],
+      "provenance": {
+        "testedNote": "作者称已测试：来源注记「志光于 2026-09-25 在对话中提供，称这批视频提示词已经测试过」；本条未附平台、模型、参数、成片或效果，本站未复测。",
+        "mediaNote": "无参考图、无成片；纯文字案例。"
+      },
+      "relatedNotes": ["micro-expression-template", "performance-variables"],
+      "featured": false,
+      "approvedForPublic": true
+    },
+    {
+      "slug": "wuxia-blade-five-shot",
+      "title": "武打片｜15秒白衣女侠连招五镜",
+      "source": "library/ai-video/prompts/武打片-15秒白衣女侠连招五镜-用户实测提示词.md",
+      "sourceDisplay": "武打片-15秒白衣女侠连招五镜-用户实测提示词（ai-video/prompts）",
+      "promptBlocks": [{ "heading": "提示词原文", "label": "完整提示词" }],
+      "medium": "video",
+      "topic": "武侠动作",
+      "tags": ["武打", "连招", "女侠", "无台词"],
+      "evidence": "author-tested",
+      "duration": "15 秒（五段时序）",
+      "summary": "白衣女侠五段连招：开场爆发、环绕斩杀、横扫腾空、贴身近战到终结收势，全片无台词、以动作表达。纯文字案例。",
+      "media": [],
+      "provenance": {
+        "testedNote": "作者称已测试：来源注记「志光于 2026-09-25 在对话中提供，称这批视频提示词已经测试过」；本条未附平台、模型、成片或效果记录，本站未复测。",
+        "mediaNote": "无参考图、无成片；纯文字案例。"
+      },
+      "relatedNotes": ["fight-action-template"],
+      "featured": false,
+      "approvedForPublic": true
+    },
+    {
+      "slug": "one-vs-six-parking",
+      "title": "以一敌六｜地下停车场女侠对战十一镜",
+      "source": "library/ai-video/prompts/以一敌六-地下停车场女侠对战十一镜-用户实测提示词.md",
+      "sourceDisplay": "以一敌六-地下停车场女侠对战十一镜-用户实测提示词（ai-video/prompts）",
+      "promptBlocks": [{ "heading": "提示词原文", "label": "完整提示词" }],
+      "medium": "video",
+      "topic": "多人打斗",
+      "tags": ["武打", "多人对战", "地下停车场", "十一镜"],
+      "evidence": "author-tested",
+      "duration": "原文未给总时长，不补写",
+      "summary": "地下停车场中以一敌六的十一镜对战：从入场、拔刀、俯拍全景到收刀定格，含灯光切换的时序分镜收尾。纯文字案例。",
+      "media": [],
+      "provenance": {
+        "testedNote": "作者称已测试：来源注记「志光于 2026-09-25 提供，称这批视频提示词已测试」；本次未复测，未附平台、模型、成片或效果。",
+        "mediaNote": "无参考图、无成片；纯文字案例。"
+      },
+      "relatedNotes": ["fight-action-template"],
+      "featured": false,
+      "approvedForPublic": true
+    },
+    {
+      "slug": "cat-launch-28s",
+      "title": "小猫发布会｜28秒英短蓝白产品片",
+      "source": "library/ai-video/prompts/小猫发布会-28秒英短蓝白产品片-用户实测提示词.md",
+      "sourceDisplay": "小猫发布会-28秒英短蓝白产品片-用户实测提示词（ai-video/prompts）",
+      "promptBlocks": [{ "heading": "提示词原文", "label": "完整提示词" }],
+      "medium": "video",
+      "topic": "产品片",
+      "tags": ["产品片", "广告文案", "静音", "宠物"],
+      "evidence": "author-tested",
+      "duration": "约 28 秒（16:9 横屏，全片静音）",
+      "summary": "白色摄影棚里的英短蓝白「产品发布片」：微距材质展示、悬浮旋转与四句广告文案的完整时间轴。纯文字案例。",
+      "media": [],
+      "provenance": {
+        "testedNote": "作者称已测试：来源注记「志光提供，称这批提示词已测试」；本次未复测，未附本条平台、模型、成片或效果。",
+        "mediaNote": "无参考图、无成片；纯文字案例。原文中的待核之处（如「本体：，」）按原样保留。"
+      },
+      "relatedNotes": ["video-prompt-structure"],
+      "featured": false,
+      "approvedForPublic": true
+    },
+    {
+      "slug": "cool-walk-two-leads",
+      "title": "酷飒走路｜雨后停机坪双人出场五镜",
+      "source": "library/ai-video/prompts/酷飒走路-雨后停机坪双人出场五镜-用户实测提示词.md",
+      "sourceDisplay": "酷飒走路-雨后停机坪双人出场五镜-用户实测提示词（ai-video/prompts）",
+      "promptBlocks": [{ "heading": "提示词原文", "label": "完整提示词" }],
+      "medium": "video",
+      "topic": "人物出场",
+      "tags": ["出场", "双人", "3D动漫风", "无台词"],
+      "evidence": "author-tested",
+      "duration": "原文未给总时长，不补写",
+      "summary": "深夜雨后停机坪的双人出场五镜：舷梯而下、点烟回望、并肩前行到背影虚化，冷灰暗调的反派气质出场。纯文字案例。",
+      "media": [],
+      "provenance": {
+        "testedNote": "作者称已测试：来源注记「志光于 2026-09-25 在对话中提供，称这批视频提示词已经测试过」；本条未附平台、模型、参数、成片或效果，本站未复测。",
+        "mediaNote": "无参考图、无成片；纯文字案例。原文镜头四存在两种机位描述并存，按原文保留。"
+      },
+      "relatedNotes": ["video-prompt-structure"],
+      "featured": false,
+      "approvedForPublic": true
+    },
+    {
+      "slug": "father-daughter-hallway",
+      "title": "父女亲情｜居家玄关崩溃安慰六镜",
+      "source": "library/ai-video/prompts/父女亲情-居家玄关崩溃安慰六镜-用户实测提示词.md",
+      "sourceDisplay": "父女亲情-居家玄关崩溃安慰六镜-用户实测提示词（ai-video/prompts）",
+      "promptBlocks": [{ "heading": "提示词原文", "label": "完整提示词" }],
+      "medium": "video",
+      "topic": "亲情短剧",
+      "tags": ["亲情", "哭戏", "居家", "六镜"],
+      "evidence": "author-tested",
+      "duration": "原文未给总时长，不补写",
+      "summary": "居家玄关的父女对手戏六镜：女儿含泪蹲下崩溃，父亲从错愕到下蹲安慰，「对不起，爸爸，我可能……并没有那么坚强」。纯文字案例。",
+      "media": [],
+      "provenance": {
+        "testedNote": "作者称已测试：来源注记「志光提供，称这批视频提示词已测试」；本次未复测，未附本条平台、模型、成片或效果。",
+        "mediaNote": "无参考图、无成片；纯文字案例。"
+      },
+      "relatedNotes": ["fifteen-second-drama", "micro-expression-template"],
+      "featured": false,
+      "approvedForPublic": true
+    },
+    {
+      "slug": "rain-alley-courier",
+      "title": "雨天小巷｜邻里快递一见钟情六镜",
+      "source": "library/ai-video/prompts/雨天小巷-邻里快递一见钟情六镜-用户实测提示词.md",
+      "sourceDisplay": "雨天小巷-邻里快递一见钟情六镜-用户实测提示词（ai-video/prompts）",
+      "promptBlocks": [{ "heading": "提示词原文", "label": "完整提示词" }],
+      "medium": "video",
+      "topic": "都市叙事",
+      "tags": ["爱情", "邻里", "韩剧氛围", "六镜"],
+      "evidence": "author-tested",
+      "duration": "原文未给总时长，不补写",
+      "summary": "韩式居民区雨天小巷：男生送还错放的快递，女生一声「아저씨」引来奔跑相遇，一见钟情的六镜结构。纯文字案例。",
+      "media": [],
+      "provenance": {
+        "testedNote": "作者称已测试：来源注记「志光于 2026-09-25 在对话中提供，称这批视频提示词已经测试过」；本次未复测，未附平台、模型、成片或效果。",
+        "mediaNote": "无参考图、无成片；纯文字案例。"
+      },
+      "relatedNotes": ["fifteen-second-drama", "dialogue-punctuation"],
+      "featured": false,
+      "approvedForPublic": true
+    },
+    {
+      "slug": "image2-character-board",
+      "title": "人物角色概念板（魏晋风设定）",
+      "source": "library/ai-video/prompts/👀图片-image2故事板玩法-9组.md",
+      "sourceDisplay": "👀图片-image2故事板玩法-9组 · 人物角色版（ai-video/prompts）",
+      "promptBlocks": [{ "heading": "人物角色版", "label": "完整提示词" }],
+      "medium": "image",
+      "topic": "角色概念板",
+      "tags": ["角色设定", "概念板", "三视图", "模块化信息"],
+      "evidence": "source-example",
+      "duration": null,
+      "summary": "一张图生成模块化角色概念板：左侧主视觉半身肖像，右侧三视图、身份资料、五官特写、妆容发型、服装配饰、表情与动作参考。附源资料示例图。",
+      "media": [
+        { "role": "example", "kind": "image", "ref": "raw/assets/ai-video/👀图片-image2故事板玩法-9组-01.png", "label": "源资料示例图 · 人物角色板" }
+      ],
+      "provenance": {
+        "testedNote": "源文未附实测记录；所附图像为源资料中与该提示词对应的示例图，本站未复现核对。",
+        "mediaNote": "源资料示例图 1 张（非输入参考图，非本站生成结果）。"
+      },
+      "relatedNotes": ["character-sheet-template", "char-scene-prop-structure"],
+      "collection": "image2-storyboard",
+      "featured": true,
+      "approvedForPublic": true
+    },
+    {
+      "slug": "image2-prop-board",
+      "title": "道具概念图（赛博复古巡航摩托）",
+      "source": "library/ai-video/prompts/👀图片-image2故事板玩法-9组.md",
+      "sourceDisplay": "👀图片-image2故事板玩法-9组 · 道具概念图（ai-video/prompts）",
+      "promptBlocks": [{ "heading": "道具概念图", "label": "完整提示词" }],
+      "medium": "image",
+      "topic": "道具概念板",
+      "tags": ["道具设定", "概念板", "多角度视图", "材质说明"],
+      "evidence": "source-example",
+      "duration": null,
+      "summary": "一张图生成影视级道具设计图：左侧道具主视觉，右侧多角度标准视图、核心部件特写、涂装材质说明与姿态场景参考。附源资料示例图。",
+      "media": [
+        { "role": "example", "kind": "image", "ref": "raw/assets/ai-video/👀图片-image2故事板玩法-9组-02.png", "label": "源资料示例图 · 道具概念图" }
+      ],
+      "provenance": {
+        "testedNote": "源文未附实测记录；所附图像为源资料中与该提示词对应的示例图，本站未复现核对。",
+        "mediaNote": "源资料示例图 1 张（非输入参考图，非本站生成结果）。"
+      },
+      "relatedNotes": ["char-scene-prop-structure"],
+      "collection": "image2-storyboard",
+      "featured": true,
+      "approvedForPublic": true
+    },
+    {
+      "slug": "image2-fight-storyboard",
+      "title": "打斗故事板（图书馆 16 镜）",
+      "source": "library/ai-video/prompts/👀图片-image2故事板玩法-9组.md",
+      "sourceDisplay": "👀图片-image2故事板玩法-9组 · 故事版/打斗（ai-video/prompts）",
+      "promptBlocks": [{ "heading": "故事版", "section": "打斗（给故事详情）", "label": "完整提示词" }],
+      "medium": "image",
+      "topic": "故事板分镜",
+      "tags": ["故事板", "打斗", "16镜头", "子弹时间"],
+      "evidence": "source-example",
+      "duration": null,
+      "summary": "把 16 镜打斗故事一次性投喂成一张电影制作板：网格分镜、镜头编号与运动标注，用于短片前期概念。附源资料示例图。",
+      "media": [
+        { "role": "example", "kind": "image", "ref": "raw/assets/ai-video/👀图片-image2故事板玩法-9组-05.png", "label": "源资料示例图 · 打斗故事板" }
+      ],
+      "provenance": {
+        "testedNote": "源文未附实测记录；所附图像为源资料中与该提示词对应的示例图，本站未复现核对。",
+        "mediaNote": "源资料示例图 1 张（非输入参考图，非本站生成结果）。"
+      },
+      "relatedNotes": ["character-sheet-template"],
+      "collection": "image2-storyboard",
+      "featured": false,
+      "approvedForPublic": true
+    }
+  ],
+  "notes": [
+    {
+      "slug": "video-prompt-structure",
+      "title": "视频提示词总结构",
+      "source": "library/visual-prompt-system/模板-视频提示词总结构.md",
+      "category": "模板",
+      "medium": "video",
+      "summary": "视频提示词的统一拆解结构：全局设定＋参考图（可选）＋多个镜头；每个镜头由「镜头」与「拍摄内容」组成。",
+      "approvedForPublic": true
+    },
+    {
+      "slug": "fifteen-second-drama",
+      "title": "十五秒短剧模板",
+      "source": "library/visual-prompt-system/模板-十五秒短剧.md",
+      "category": "模板",
+      "medium": "video",
+      "summary": "15 秒短剧的完整写作模板：从人物、对峙关系到分镜与台词的落地方法。",
+      "approvedForPublic": true
+    },
+    {
+      "slug": "micro-expression-template",
+      "title": "微表情特写模板",
+      "source": "library/visual-prompt-system/模板-微表情特写.md",
+      "category": "模板",
+      "medium": "video",
+      "summary": "微表情特写提示词模板：用生理变量与时间轴控制克制向表演。",
+      "approvedForPublic": true
+    },
+    {
+      "slug": "fight-action-template",
+      "title": "打斗动作模板",
+      "source": "library/visual-prompt-system/模板-打斗动作.md",
+      "category": "模板",
+      "medium": "video",
+      "summary": "打斗动作提示词模板：动作链、镜头语言与物理反馈的组织方式。",
+      "approvedForPublic": true
+    },
+    {
+      "slug": "multi-segment-discipline",
+      "title": "多段成片的分段纪律与连续性",
+      "source": "library/visual-prompt-system/多段成片的分段纪律与连续性.md",
+      "category": "方法",
+      "medium": "video",
+      "summary": "多段成片的分段纪律：段间切点、转场三法与全片光线轴的处理规则。",
+      "approvedForPublic": true
+    },
+    {
+      "slug": "dialogue-punctuation",
+      "title": "台词标点与配音语气",
+      "source": "library/visual-prompt-system/台词标点与配音语气.md",
+      "category": "方法",
+      "medium": "video",
+      "summary": "台词书写、标点与配音语气的约定：让台词在提示词里可执行。",
+      "approvedForPublic": true
+    },
+    {
+      "slug": "shot-breakdown-rules",
+      "title": "拆解分镜规则",
+      "source": "library/visual-prompt-system/拆解分镜规则.md",
+      "category": "规则",
+      "medium": "video",
+      "summary": "把叙事意图拆成镜头序列的方法：景别、机位与叙事功能的对应。",
+      "approvedForPublic": true
+    },
+    {
+      "slug": "writing-rules",
+      "title": "写法规则库",
+      "source": "library/visual-prompt-system/写法规则库.md",
+      "category": "规则",
+      "medium": "mixed",
+      "summary": "跨案例沉淀的提示词写作规则索引，连接分镜、台词与多段成片方法。",
+      "approvedForPublic": true
+    },
+    {
+      "slug": "scene-variables",
+      "title": "场景变量库",
+      "source": "library/visual-prompt-system/场景变量库.md",
+      "category": "变量库",
+      "medium": "mixed",
+      "summary": "场景要素的变量与取值集合：按 Wiki《库定义规范》原文收录，网站不改动取值。",
+      "approvedForPublic": true
+    },
+    {
+      "slug": "performance-variables",
+      "title": "表演变量库",
+      "source": "library/visual-prompt-system/表演变量库.md",
+      "category": "变量库",
+      "medium": "video",
+      "summary": "表演控制的变量与取值集合：情绪、生理反应与表演幅度的可组合写法。",
+      "approvedForPublic": true
+    },
+    {
+      "slug": "character-sheet-template",
+      "title": "人物设定图模板",
+      "source": "library/visual-prompt-system/模板-人物设定图.md",
+      "category": "模板",
+      "medium": "image",
+      "summary": "人物设定图提示词模板：模块化设定板的结构与填写方式。",
+      "approvedForPublic": true
+    },
+    {
+      "slug": "char-scene-prop-structure",
+      "title": "角色、场景、道具提示词总结构",
+      "source": "library/visual-prompt-system/模板-角色、场景、道具提示词总结构.md",
+      "category": "模板",
+      "medium": "image",
+      "summary": "三类视觉资产的统一提示词结构：角色四视图、场景设定与道具设计图。",
+      "approvedForPublic": true
+    },
+    {
+      "slug": "character-style-variables",
+      "title": "角色造型变量库",
+      "source": "library/visual-prompt-system/角色造型变量库.md",
+      "category": "变量库",
+      "medium": "image",
+      "summary": "发型、妆容、服装等造型要素的取值集合；关联的图像资料仍在公开审核中。",
+      "approvedForPublic": false
+    }
+  ]
+}
