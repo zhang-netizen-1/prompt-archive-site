@@ -1,6 +1,15 @@
 ---
 import '../styles/global.css';
 import Icon from '../components/Icon.astro';
+import { getAllCases, getAllNotes, getAllCollections } from '../lib/catalog';
+
+const footerStats = {
+  caseCount: getAllCases().length,
+  filmCount: getAllCases().filter((c) => c.evidence === 'film-attached').length,
+  noteCount: getAllNotes().length,
+  collectionCount: getAllCollections().length,
+};
+const { caseCount, filmCount, noteCount, collectionCount } = footerStats;
 
 interface Props {
   title: string;
@@ -48,7 +57,6 @@ const navItems = [
             <span>搜索</span>
             <span class="nav-no">04</span>
           </a>
-          <a class="btn btn-primary" style="min-height:36px;padding:7px 14px" href="/videos/">看实测成片</a>
         </div>
       </div>
     </header>
@@ -57,12 +65,33 @@ const navItems = [
     </main>
     <footer class="site-footer">
       <div class="container">
-        <p style="margin:0">
-          案例提示词均取自用户 Wiki 原文；「作者称已测试」表示来源声明，本站未复测。
-        </p>
-        <p style="margin:0">
-          <a href="/cases/">全站搜索</a> · <a href="/notes/">方法笔记</a> · <span style="color:var(--text-3)">PA-ARCHIVE</span>
-        </p>
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a class="brand" href="/">
+              <span class="brand-glyph">PA</span>
+              <span class="brand-name">AI 提示词档案馆</span>
+            </a>
+            <p class="footer-desc">可浏览、可检索、可复制的 AI 图像与视频提示词案例库。每个完整案例一个独立页面，提示词与 Wiki 原文逐字一致。</p>
+          </div>
+          <nav class="footer-col" aria-label="页脚导航">
+            <p class="footer-label">浏览</p>
+            <a href="/images/">图像案例</a>
+            <a href="/videos/">视频案例</a>
+            <a href="/notes/">方法笔记</a>
+            <a href="/cases/">全站搜索</a>
+          </nav>
+          <div class="footer-col">
+            <p class="footer-label">本馆收录</p>
+            <p class="footer-stat"><span>案例</span><b>{caseCount}</b></p>
+            <p class="footer-stat"><span>附实测成片</span><b>{filmCount}</b></p>
+            <p class="footer-stat"><span>方法笔记</span><b>{noteCount}</b></p>
+            <p class="footer-stat"><span>合集</span><b>{collectionCount}</b></p>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>「作者称已测试」表示来源声明，本站未复测。</p>
+          <p>PA·ARCHIVE © 2026</p>
+        </div>
       </div>
     </footer>
     <style>

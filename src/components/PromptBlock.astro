@@ -54,6 +54,15 @@ const multi = blocks.length > 1;
     return JSON.parse(el.textContent ?? '""') as string;
   }
 
+  // 复制为 Markdown 代码块：包上围栏；围栏长度避开正文里已有的反引号串
+  function mdFence(text: string, lang = 'markdown'): string {
+    const runs = Array.from(text.matchAll(/`{3,}/g)).map((m) => m[0].length);
+    const len = runs.length ? Math.max(3, Math.max(...runs) + 1) : 3;
+    const fence = '`'.repeat(len);
+    const body = text.endsWith('\n') ? text : text + '\n';
+    return `${fence}${lang}\n${body}${fence}`;
+  }
+
   async function copyText(text: string): Promise<boolean> {
     try {
       await navigator.clipboard.writeText(text);
@@ -84,7 +93,7 @@ const multi = blocks.length > 1;
       const defaultText = label?.textContent ?? '复制';
       let payload: string;
       try {
-        payload = readPayload(btn.dataset.copySource!);
+        payload = mdFence(readPayload(btn.dataset.copySource!));
       } catch {
         if (feedback) {
           feedback.textContent = '复制失败，请手动选取';

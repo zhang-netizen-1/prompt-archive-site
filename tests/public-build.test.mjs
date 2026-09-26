@@ -28,11 +28,10 @@ test('公开门禁：public 导出仅含 approvedForPublic 条目且可复核', 
   assert.ok(notes.every((item) => item.approvedForPublic === true), '公开笔记全部已获准');
   assert.ok(collections.every((item) => item.approvedForPublic === true), '公开合集全部已获准');
   assert.equal(report.errors.length, 0, '公开导出零错误');
-  assert.ok(report.excludedFromPublic.length >= 1, '受限条目被记录为排除项');
-  assert.ok(
-    report.excludedFromPublic.some((e) => e.kind === 'note' && e.slug === 'character-style-variables'),
-    '关联转载受限资料的变量库不进入公开构建',
-  );
+  // 用户已决定全部公开：排除列表允许为空；若未来再有暂不公开条目，必须完整记录
+  for (const e of report.excludedFromPublic) {
+    assert.ok(e.reason, '每项排除必须带理由');
+  }
 
   // 公开数据中不残留未审核条目的痕迹：搜索文本、合集成员、笔记关联案例
   const approvedCaseSlugs = new Set(cases.map((c) => c.slug));

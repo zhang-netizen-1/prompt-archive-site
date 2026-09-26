@@ -64,32 +64,25 @@ const noMediaText = medium === 'video' ? '暂无成片' : '暂无结果图';
       <Icon name={p.items[0].kind === 'video' ? 'film' : 'image'} size={14} />
       {p.roleLabel}
     </span>
-    {p.items[0].kind === 'video' ? (
-      p.items.map((m) => (
+    <div class={p.items.length > 1 && p.items.every((m) => m.kind === 'image') ? 'ref-grid' : ''}>
+      {p.items.map((m, j) => (
         <figure class="media-figure">
           <div class="media-frame">
-            <video controls preload="metadata" src={m.url} poster={m.poster ?? undefined} aria-label={`${title} ${m.label}`}></video>
-          </div>
-          <figcaption class="media-caption">{m.label} · {p.roleLabel}</figcaption>
-        </figure>
-      ))
-    ) : (
-      <div class={p.items.length > 1 ? 'ref-grid' : ''}>
-        {p.items.map((m, j) => (
-          <figure class="media-figure">
-            <div class="media-frame">
+            {m.kind === 'video' ? (
+              <video controls preload="metadata" src={m.url} poster={m.poster ?? undefined} aria-label={`${title} ${m.label}`}></video>
+            ) : (
               <img
                 src={m.url}
                 alt={`${title} ${m.label}`}
                 loading={i === 0 && j < 2 ? 'eager' : 'lazy'}
                 data-lightbox-trigger
               />
-            </div>
-            <figcaption class="media-caption">{m.label}</figcaption>
-          </figure>
-        ))}
-      </div>
-    )}
+            )}
+          </div>
+          <figcaption class="media-caption">{m.label && m.label !== mediaRoleLabel(m) ? `${m.label} · ${mediaRoleLabel(m)}` : mediaRoleLabel(m)}</figcaption>
+        </figure>
+      ))}
+    </div>
   </div>
 ))}
 
@@ -97,7 +90,7 @@ const noMediaText = medium === 'video' ? '暂无成片' : '暂无结果图';
   <button class="lightbox-close" type="button" data-lightbox-close aria-label="关闭大图">
     <Icon name="close" size={20} />
   </button>
-  <img src="" alt="" data-lightbox-img />
+  <img data-lightbox-img alt="" />
 </dialog>
 
 <script>

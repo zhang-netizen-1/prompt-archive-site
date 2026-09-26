@@ -11,9 +11,9 @@ const status = evidenceLabel(item);
 
 const resultMedia = item.media.find((m) => m.role === 'result' && m.kind === 'video');
 const poster = resultMedia?.poster ?? null;
-const coverImage = item.media.find((m) => m.role === 'result' && m.kind === 'image')
-  ?? item.media.find((m) => m.role === 'example')
-  ?? item.media.find((m) => m.role === 'reference');
+const coverImage = item.media.find((m) => m.kind === 'image' && m.role === 'result')
+  ?? item.media.find((m) => m.kind === 'image' && m.role === 'example')
+  ?? item.media.find((m) => m.kind === 'image' && m.role === 'reference');
 const hasVisual = Boolean(poster || coverImage);
 
 // 右上角荧光笔角标：短身份词；完整状态词在下方 meta 行

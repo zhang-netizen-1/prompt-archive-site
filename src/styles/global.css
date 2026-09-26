@@ -57,6 +57,10 @@
   --edge-paper: inset 0 1px 0 rgba(255,255,255,0.65), inset 0 -1px 0 rgba(0,0,0,0.05);
   --shadow-paper: 0 1px 2px rgba(0, 0, 0, 0.5), 0 10px 28px rgba(0, 0, 0, 0.42);
 
+  --code-bg: #101418;       /* 可复制代码块的屏幕底色 */
+  --code-line: #262D33;
+  --code-text: #D9DEDA;
+
   --font-sans: 'Geist', -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', 'Noto Sans CJK SC', sans-serif;
   --font-mono: 'Geist Mono', ui-monospace, 'SF Mono', Menlo, Consolas, monospace;
   --font-type: 'Courier Prime', 'Geist Mono', ui-monospace, 'PingFang SC', 'Microsoft YaHei', monospace;
@@ -69,6 +73,9 @@
 
 * { box-sizing: border-box; }
 html { -webkit-text-size-adjust: 100%; }
+
+/* hidden 属性必须始终生效（防止组件 display 覆盖导致筛选失效） */
+[hidden] { display: none !important; }
 
 body {
   margin: 0;
@@ -89,7 +96,7 @@ img, video { max-width: 100%; display: block; }
 a { color: var(--chalk); text-decoration: none; }
 a:hover { color: var(--hl); }
 :focus-visible { outline: 2px solid var(--hl); outline-offset: 2px; }
-h1, h2, h3, h4 { line-height: 1.25; margin: 0; font-weight: 700; color: var(--chalk); }
+h1, h2, h3, h4 { line-height: 1.25; margin: 0; font-weight: 700; color: var(--chalk); scroll-margin-top: 92px; }
 
 .mono { font-family: var(--font-mono); font-size: 12.5px; letter-spacing: 0.12em; color: var(--chalk-2); text-transform: uppercase; }
 
@@ -99,11 +106,11 @@ h1, h2, h3, h4 { line-height: 1.25; margin: 0; font-weight: 700; color: var(--ch
 /* 荧光笔划重点 */
 .hl {
   background-image:
-    linear-gradient(100deg, rgba(247, 227, 83, 0) 0.5%, var(--hl) 4%, #F2DC4A 96%, rgba(247, 227, 83, 0) 99.5%),
+    linear-gradient(100deg, rgba(247, 227, 83, 0) 1.5%, var(--hl) 5%, #F2DC4A 95%, rgba(247, 227, 83, 0) 98.5%),
     var(--grain-fine);
   background-blend-mode: normal, multiply;
-  padding: 0.08em 0.3em;
-  margin: 0 -0.05em;
+  padding: 0.1em 0.26em;
+  margin: 0 0.04em;
   border-radius: 0.15em 0.3em 0.2em 0.32em;
   color: var(--ink);
   box-decoration-break: clone;
@@ -213,20 +220,6 @@ h1, h2, h3, h4 { line-height: 1.25; margin: 0; font-weight: 700; color: var(--ch
 .hero h1 .hl { color: var(--ink); }
 .hero p.hero-sub { margin: 22px 0 0; max-width: 34em; font-size: 16.5px; color: var(--chalk-2); }
 .hero-actions { display: flex; gap: 12px; margin-top: 34px; flex-wrap: wrap; }
-.hero-search { margin-top: 26px; max-width: 520px; display: flex; gap: 8px; }
-.hero-search input {
-  flex: 1; background: var(--paper); border: 1px solid var(--paper); border-radius: 0;
-  color: var(--ink); font-family: var(--font-type); font-size: 14px; padding: 12px 14px;
-}
-.hero-search input::placeholder { color: var(--ink-3); }
-.hero-search button {
-  background: var(--ink); color: var(--paper); border: 1px solid var(--ink);
-  font-family: var(--font-mono); font-size: 12.5px; letter-spacing: 0.12em; text-transform: uppercase;
-  padding: 0 20px; cursor: pointer;
-}
-.hero-search button:hover { background: var(--hl); color: var(--ink); }
-.hero-terminal { margin-top: 22px; font-family: var(--font-type); font-size: 13px; color: var(--chalk-3); }
-.hero-terminal .prompt-sign { color: var(--hl); margin-right: 8px; }
 
 /* Hero 右侧排贴：贴带照片 + 索引卡 */
 .hero-collage { position: relative; min-height: 380px; }
@@ -294,7 +287,14 @@ h1, h2, h3, h4 { line-height: 1.25; margin: 0; font-weight: 700; color: var(--ch
 
 /* ---------- 案例卡：索引卡 ---------- */
 
-.grid-cases { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px 26px; padding-top: 6px; }
+.grid-cases {
+  columns: 3; column-gap: 26px; padding-top: 6px;
+}
+.grid-cases > * {
+  break-inside: avoid; -webkit-column-break-inside: avoid;
+  min-width: 0; width: auto;
+  margin: 0 0 30px;
+}
 
 .case-card {
   position: relative;
@@ -340,7 +340,7 @@ h1, h2, h3, h4 { line-height: 1.25; margin: 0; font-weight: 700; color: var(--ch
   background: var(--paper-2); padding: 6px;
   border: 1px solid var(--rule); box-shadow: 0 4px 12px rgba(0, 0, 0, 0.22);
 }
-.card-media img, .card-media video { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; }
+.card-media img, .card-media video { width: 100%; height: auto; }
 .card-media .media-cover {
   aspect-ratio: 16 / 9; display: flex; flex-direction: column; align-items: center; justify-content: center;
   gap: 8px; color: var(--ink-3); text-align: center; padding: 16px;
@@ -448,6 +448,7 @@ h1, h2, h3, h4 { line-height: 1.25; margin: 0; font-weight: 700; color: var(--ch
 .media-frame { background: var(--paper-2); padding: 8px; border: 1px solid var(--line); }
 .media-frame video { width: 100%; max-height: 72vh; }
 .media-frame img { width: auto; max-width: 100%; max-height: 76vh; cursor: zoom-in; }
+.ref-grid .media-frame img { width: 100%; height: auto; object-fit: contain; }
 .media-figure { margin: 0; }
 .ref-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 22px 20px; }
 .ref-grid .media-frame img { width: 100%; max-height: none; }
@@ -472,7 +473,7 @@ h1, h2, h3, h4 { line-height: 1.25; margin: 0; font-weight: 700; color: var(--ch
 }
 
 /* 提示词区：档案纸 */
-.case-prompt-section { padding: 52px 0 8px; }
+.case-prompt-section { padding: 52px 0 8px; scroll-margin-top: 76px; }
 .section-title { font-size: 21px; display: flex; align-items: baseline; gap: 14px; color: var(--chalk); }
 .section-title .section-no { font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.2em; color: var(--chalk-3); font-weight: 400; }
 
@@ -511,18 +512,19 @@ h1, h2, h3, h4 { line-height: 1.25; margin: 0; font-weight: 700; color: var(--ch
 .copy-feedback { font-family: var(--font-type); font-size: 12.5px; color: var(--green); display: inline-flex; align-items: center; gap: 5px; min-width: 11em; }
 .copy-feedback.error { color: #A33327; }
 .prompt-text {
-  margin: 0; padding: 24px 22px 24px 44px;
-  font-family: var(--font-type); font-size: 14px; line-height: 27px;
-  white-space: pre-wrap; word-break: break-word; color: var(--ink);
+  margin: 16px 16px 16px 44px; padding: 18px 20px;
+  font-family: var(--font-type); font-size: 14px; line-height: 1.85;
+  white-space: pre-wrap; word-break: break-word; overflow-wrap: anywhere; color: var(--code-text);
   max-height: 640px; overflow: auto;
-  background-color: var(--paper);
-  background-image: var(--grain-fine), repeating-linear-gradient(to bottom, transparent 0 26px, rgba(139,120,80,0.30) 26px 27px);
-  background-blend-mode: soft-light, normal;
+  background-color: var(--code-bg);
+  background-image: var(--grain-fine);
+  background-blend-mode: soft-light;
+  border: 1px solid var(--code-line);
 }
 .multi-prompt-note { font-family: var(--font-type); font-size: 13px; color: var(--chalk-3); margin: 16px 0 0; }
 
 /* 来源与事实状态：档案卡 */
-.fact-section { padding: 48px 0 8px; }
+.fact-section { padding: 48px 0 8px; scroll-margin-top: 76px; }
 .fact-grid {
   display: grid; grid-template-columns: repeat(2, 1fr); gap: 0 48px;
   background-color: var(--paper); background-image: var(--tex-paper); background-blend-mode: var(--tex-blend); color: var(--ink); box-shadow: var(--edge-paper), var(--shadow-paper);
@@ -539,10 +541,10 @@ h1, h2, h3, h4 { line-height: 1.25; margin: 0; font-weight: 700; color: var(--ch
 .fact-flag .flag-note { color: var(--ink-2); font-size: 13px; }
 
 /* 关联笔记与制作链路 */
-.related-section { padding: 48px 0 24px; }
+.related-section { padding: 48px 0 24px; scroll-margin-top: 76px; }
 .note-cards {
   display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 30px 26px; margin-top: 24px;
+  gap: 30px 26px; margin-top: 24px; align-items: start;
 }
 .note-card {
   position: relative; background: var(--paper); color: var(--ink);
@@ -571,6 +573,7 @@ h1, h2, h3, h4 { line-height: 1.25; margin: 0; font-weight: 700; color: var(--ch
   font-family: var(--font-mono); font-size: 10.5px; color: var(--ink-3);
   border-top: 1px solid var(--rule); padding-top: 9px; margin-top: auto;
   overflow: hidden; text-overflow: ellipsis; white-space: nowrap;
+  max-width: 100%; min-width: 0;
 }
 .chain-list { margin: 24px 0 0; padding: 0; list-style: none; display: grid; gap: 22px 26px; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); }
 .chain-list li {
@@ -648,17 +651,16 @@ h1, h2, h3, h4 { line-height: 1.25; margin: 0; font-weight: 700; color: var(--ch
   padding: 1px 6px; color: var(--ink);
 }
 .prose pre {
-  background: var(--paper-2) !important;
-  border: 1px solid var(--rule);
-  color: var(--ink) !important;
-  padding: 16px 18px; overflow-x: auto;
+  background-color: var(--code-bg) !important;
+  border: none; color: var(--code-text);
+  padding: 18px 20px;
+  white-space: pre-wrap; word-break: break-word; overflow-wrap: anywhere;
+  overflow-x: hidden !important; /* 折行优先：完整可见，不做横向滑动 */
   font-size: 13px; line-height: 1.75; margin: 0;
 }
-/* shiki 内联主题色在纸面上不可读：统一为打字机单色墨 */
-.prose pre span, .prose pre code { color: var(--ink) !important; background: transparent !important; }
 
 /* 笔记代码块面板：打字机标签 + 行数 + 复制本块 */
-.code-panel { margin: 18px 0; background: var(--paper-2); border: 1px solid var(--rule); box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16); }
+.code-panel { margin: 18px 0; background: var(--paper); border: 1px solid var(--rule); box-shadow: 0 3px 10px rgba(0, 0, 0, 0.16); }
 .code-panel-head {
   display: flex; align-items: center; gap: 12px;
   padding: 8px 12px; border-bottom: 1px dashed var(--rule); background: var(--paper);
@@ -672,6 +674,9 @@ h1, h2, h3, h4 { line-height: 1.25; margin: 0; font-weight: 700; color: var(--ch
 .code-panel-head .copy-btn { min-height: 32px; padding: 6px 12px; font-size: 11.5px; }
 .prose pre code { background: none; color: inherit; padding: 0; font-size: inherit; border: none; }
 .prose table { border-collapse: collapse; width: 100%; margin: 18px 0; font-size: 13.5px; display: block; overflow-x: auto; background: var(--paper-2); }
+@media (max-width: 767px) {
+  .prose table { min-width: 470px; }
+}
 .prose th, .prose td { border: 1px solid var(--rule); padding: 9px 13px; text-align: left; vertical-align: top; color: var(--ink); }
 .prose th { background: #EFEBDC; font-weight: 700; }
 .prose img { border: 1px solid var(--rule); margin: 16px 0; }
@@ -716,8 +721,34 @@ h1, h2, h3, h4 { line-height: 1.25; margin: 0; font-weight: 700; color: var(--ch
 
 /* ---------- 页脚 ---------- */
 
-.site-footer { background: var(--desk); border-top: 1px solid var(--line); color: var(--chalk-3); margin-top: 0; padding: 32px 0; font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.04em; }
-.site-footer .container { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+.site-footer {
+  background: var(--desk); border-top: 1px solid var(--line); color: var(--chalk-3);
+  padding: 48px 0 28px; font-size: 13px;
+}
+.footer-grid {
+  display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr) minmax(0, 1fr);
+  gap: 48px; padding-bottom: 36px; border-bottom: 1px solid var(--line);
+}
+.footer-brand .brand { margin-bottom: 14px; }
+.footer-desc { color: var(--chalk-3); max-width: 30em; margin: 0; font-size: 13.5px; line-height: 1.8; }
+.footer-label {
+  font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--chalk-3); margin: 0 0 12px;
+}
+.footer-col { display: flex; flex-direction: column; gap: 8px; align-items: flex-start; }
+.footer-col a { color: var(--chalk-2); text-decoration: none; font-size: 14px; padding: 2px 0; }
+.footer-col a:hover { color: var(--hl); }
+.footer-stat {
+  display: flex; justify-content: space-between; gap: 12px; width: 100%; max-width: 200px;
+  margin: 0; border-bottom: 1px dashed var(--line); padding: 4px 0; color: var(--chalk-2);
+}
+.footer-stat b { color: var(--chalk); font-weight: 600; }
+.footer-bottom {
+  display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap;
+  margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--line);
+  color: var(--chalk-3); font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.04em;
+}
+.footer-bottom p { margin: 0; }
 .site-footer a { color: var(--chalk-2); }
 .site-footer a:hover { color: var(--hl); }
 
@@ -729,7 +760,7 @@ h1, h2, h3, h4 { line-height: 1.25; margin: 0; font-weight: 700; color: var(--ch
 /* ---------- 响应式 ---------- */
 
 @media (max-width: 1199px) {
-  .grid-cases { grid-template-columns: repeat(2, 1fr); }
+  .grid-cases { columns: 2; }
   .hero h1 { font-size: 42px; }
   .hero .container { grid-template-columns: 1fr; }
   .hero-collage { min-height: 0; margin-top: 12px; }

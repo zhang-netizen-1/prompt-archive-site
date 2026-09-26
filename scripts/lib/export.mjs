@@ -19,6 +19,7 @@ import {
 const execFileAsync = promisify(execFile);
 
 const MEDIA_URL_BASE = '/media';
+const VIDEO_EXTENSIONS = new Set(['.mp4', '.mov', '.webm', '.m4v', '.ogv']);
 const VALID_MEDIUMS = new Set(['image', 'video', 'mixed']);
 const CASE_MEDIUMS = new Set(['image', 'video']);
 const VALID_EVIDENCE = new Set([
@@ -73,7 +74,7 @@ async function exportCase(entry, ctx) {
   const promptBlocks = [];
   for (const spec of entry.promptBlocks ?? []) {
     try {
-      const block = findFencedBlock(source, { heading: spec.heading, section: spec.section });
+      const block = findFencedBlock(source, { heading: spec.heading, section: spec.section, index: spec.index });
       promptBlocks.push({ label: spec.label, heading: spec.heading, section: spec.section ?? null, raw: block.raw, sourceLines: [block.startLine, block.endLine] });
     } catch (err) {
       report.errors.push({ type: 'prompt-block', message: err.message, entry: entry.slug });
@@ -181,6 +182,9 @@ function convertNoteMarkdown(body, noteAbs, ctx, linkMap, anchorIndex) {
         const resolution = resolveObsidianMedia(index, target);
         if (resolution.status === 'ok') {
           const url = copyMedia(resolution.absPath, mediaDir, copied);
+          if (VIDEO_EXTENSIONS.has(path.extname(resolution.absPath).toLowerCase())) {
+            return `<video controls preload="metadata" src="${url}"></video>`;
+          }
           return `![${text}](${url})`;
         }
         report.errors.push({ type: 'missing-media', message: `笔记媒体无法解析（${resolution.status}）：${target}`, entry: slug });
@@ -216,6 +220,9 @@ function convertNoteMarkdown(body, noteAbs, ctx, linkMap, anchorIndex) {
       const resolution = resolveRelativeMediaInWiki(index, noteAbs, ref);
       if (resolution.status === 'ok') {
         const url = copyMedia(resolution.absPath, mediaDir, copied);
+        if (VIDEO_EXTENSIONS.has(path.extname(resolution.absPath).toLowerCase())) {
+          return `<video controls preload="metadata" src="${url}"></video>`;
+        }
         return `![${alt}](${url})`;
       }
       if (resolution.status === 'external') return whole;
@@ -514,7 +521,8 @@ export async function exportWiki(options) {
     if (!pre) continue;
     const converted0 = convertNoteMarkdown(stripDuplicateH1(pre.source.body, entry.title), pre.absSource, { wikiRoot, index, mediaDir, copied, report, mode, slug: entry.slug }, linkMap, anchorIndex);
     const norm = normalizeValueTables(converted0.markdown);
-    const converted = { markdown: norm.markdown, unresolved: converted0.unresolved };
+    // 公开站点不携带本机绝对路径：正文中的路径引用做显示层脱敏（提示词围栏内容不受影响）
+    const converted = { markdown: norm.markdown.replaceAll('/Users/zhiguang', '~'), unresolved: converted0.unresolved };
     valueCopyBlocksTotal += norm.copyBlocks;
     for (const u of converted.unresolved) {
       report.unresolvedLinks.push({ entry: entry.slug, target: u.target, renderedAs: u.rendered });
@@ -543,6 +551,7 @@ export async function exportWiki(options) {
       sourceDisplay: entry.sourceDisplay
         ?? `${path.basename(entry.source).replace(/\.md$/i, '')}（${path.basename(path.dirname(entry.source))}）`,
       approvedForPublic: entry.approvedForPublic === true,
+      featured: entry.featured === true,
       toc: pre.toc,
       searchText: [entry.title, entry.summary ?? '', entry.category ?? '', pre.source.body].join('\n').toLowerCase(),
     });

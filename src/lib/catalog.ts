@@ -63,6 +63,7 @@ export interface NoteItem {
   medium: Medium | 'mixed';
   sourceDisplay: string;
   approvedForPublic: boolean;
+  featured: boolean;
   toc: NoteTocEntry[];
   searchText: string;
   relatedCases: string[];
@@ -176,6 +177,7 @@ export function mediaRoleLabel(m: CaseMedia): string {
   if (m.role === 'result' && m.kind === 'video') return '实测成片';
   if (m.role === 'result') return '生成结果图';
   if (m.role === 'reference') return '输入参考图';
+  if (m.role === 'example' && m.kind === 'video') return '源资料示例视频';
   return '源资料示例图';
 }
 

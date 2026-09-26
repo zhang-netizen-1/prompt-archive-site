@@ -180,7 +180,7 @@ const items: SearchItem[] = cases.map((c) => {
       node.setAttribute('href', `/cases/${item.slug}/`);
       const img = node.querySelector<HTMLImageElement>('.card-media img')!;
       const cover = node.querySelector<HTMLElement>('.card-media .media-cover')!;
-      const badge = node.querySelector<HTMLElement>('.play-badge')!;
+      const badge = node.querySelector<HTMLElement>('.card-badge')!;
       if (item.cover) {
         img.src = item.cover;
         img.alt = `${item.title}${item.coverKind === 'poster' ? ' 实测成片画面' : ' 媒体图'}`;

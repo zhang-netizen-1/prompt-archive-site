@@ -2,16 +2,29 @@
 import SiteLayout from '../layouts/SiteLayout.astro';
 import CaseCard from '../components/CaseCard.astro';
 import NotePreview from '../components/NotePreview.astro';
-import { getFeaturedCases, getAllNotes, getTopics, getAllCases } from '../lib/catalog';
+import { getFeaturedCases, getAllNotes, getAllCases } from '../lib/catalog';
+import type { CaseItem, NoteItem } from '../lib/catalog';
 
-const featured = getFeaturedCases();
-const videoTopics = getTopics('video');
-const imageTopics = getTopics('image');
-const notes = getAllNotes();
+// 混合精选：视频案例、图像案例与方法笔记交错排列
+type FeaturedEntry = { kind: 'case' | 'note'; item: CaseItem | NoteItem };
+const featuredCases = getFeaturedCases();
+const featuredNotes = getAllNotes().filter((n) => n.featured);
+const featured: FeaturedEntry[] = [];
+let ci = 0, ni = 0;
+const pattern = ['case', 'case', 'note', 'case', 'case', 'note', 'case', 'note', 'case'];
+for (const kind of pattern) {
+  if (kind === 'case' && ci < featuredCases.length) featured.push({ kind: 'case', item: featuredCases[ci++] });
+  else if (kind === 'note' && ni < featuredNotes.length) featured.push({ kind: 'note', item: featuredNotes[ni++] });
+  else if (ci < featuredCases.length) featured.push({ kind: 'case', item: featuredCases[ci++] });
+  else if (ni < featuredNotes.length) featured.push({ kind: 'note', item: featuredNotes[ni++] });
+}
 const filmCount = getAllCases().filter((c) => c.evidence === 'film-attached').length;
-const heroPhoto = featured.find((c) => c.media.some((m) => m.poster)) ?? featured[0];
-const heroPhotoItem = heroPhoto?.media.find((m) => m.poster) ?? heroPhoto?.media[0];
-const latestNotes = notes.filter((n) => n.category === '模板' || n.category === '方法').slice(0, 3);
+const notes = getAllNotes();
+const heroPhotoCase = featured.find((e) => e.kind === 'case' && e.item.media.some((m) => m.poster))?.item
+  ?? featured.find((e) => e.kind === 'case' && e.item.media.length > 0)?.item;
+const heroPhotoItem = heroPhotoCase
+  ? (heroPhotoCase.media.find((m) => m.poster) ?? heroPhotoCase.media[0])
+  : null;
 ---
 <SiteLayout title="AI 提示词档案馆 · 图像与视频提示词案例" activeNav="home">
   <section class="hero">
@@ -27,19 +40,14 @@ const latestNotes = notes.filter((n) => n.category === '模板' || n.category ==
           <a class="btn btn-primary" href="/cases/">浏览案例 <span class="arrow">&gt;</span></a>
           <a class="btn btn-ghost" href="/notes/">方法笔记</a>
         </div>
-        <form class="hero-search" action="/cases/" method="get" role="search">
-          <input type="search" name="q" placeholder="搜索标题、标签或提示词正文…" aria-label="全站搜索案例" />
-          <button type="submit">搜索</button>
-        </form>
-        <p class="hero-terminal"><span class="prompt-sign">$</span>copy --full PA-001 &amp;&amp; paste-into-model --verify-verbatim</p>
       </div>
       <div class="hero-collage" aria-hidden="true">
-        {heroPhoto && heroPhotoItem && (
+        {heroPhotoCase && heroPhotoItem && (
           <figure class="hero-photo" style="margin:0">
             <img src={heroPhotoItem.poster ?? heroPhotoItem.url} alt="" loading="eager" />
             <figcaption class="photo-cap">
-              <span>{heroPhoto.title}</span>
-              <span>{heroPhoto.archiveNo}</span>
+              <span>{heroPhotoCase.title}</span>
+              <span>{heroPhotoCase.archiveNo}</span>
             </figcaption>
           </figure>
         )}
@@ -58,59 +66,16 @@ const latestNotes = notes.filter((n) => n.category === '模板' || n.category ==
     <div class="container">
       <div class="section-head">
         <h2 id="featured-heading">精选案例</h2>
-        <span class="head-note">媒体身份在卡片右上角与状态行标注</span>
+        <span class="head-note">视频、图像与方法笔记混合精选，媒体身份在卡片上标注</span>
         <a class="more" href="/cases/">全部案例 →</a>
       </div>
-      <div class="grid-cases">
-        {featured.map((item) => <CaseCard item={item} eager={true} />)}
+      <div class="grid-cases grid-featured">
+        {featured.map((entry) => entry.kind === 'case'
+          ? <CaseCard item={entry.item as CaseItem} eager={true} />
+          : <NotePreview note={entry.item as NoteItem} />)}
       </div>
     </div>
   </section>
 
-  <section class="section" aria-labelledby="topics-heading">
-    <div class="container">
-      <div class="section-head">
-        <h2 id="topics-heading">按创作目标浏览</h2>
-      </div>
-      <div style="display:grid;gap:32px">
-        <div>
-          <div class="mono" style="margin-bottom:14px">视频案例 · VIDEO</div>
-          <div class="tag-cloud">
-            {videoTopics.map((t) => <a class="topic-pill" href={`/videos/?topic=${encodeURIComponent(t)}`}>{t}</a>)}
-          </div>
-        </div>
-        <div>
-          <div class="mono" style="margin-bottom:14px">图像案例 · IMAGE</div>
-          <div class="tag-cloud">
-            {imageTopics.map((t) => <a class="topic-pill" href={`/images/?topic=${encodeURIComponent(t)}`}>{t}</a>)}
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="section" aria-labelledby="notes-heading">
-    <div class="container">
-      <div class="section-head">
-        <h2 id="notes-heading">方法笔记</h2>
-        <a class="more" href="/notes/">全部笔记 →</a>
-      </div>
-      <div class="note-cards" style="margin-top:0">
-        {latestNotes.map((n) => <NotePreview note={n} />)}
-      </div>
-    </div>
-  </section>
 </SiteLayout>
 
-<style>
-  .tag-cloud { display: flex; gap: 10px; flex-wrap: wrap; }
-  .topic-pill {
-    display: inline-flex; align-items: center;
-    background-color: var(--paper); background-image: var(--tex-paper); background-blend-mode: var(--tex-blend); color: var(--ink);
-    padding: 8px 16px; font-size: 14px; text-decoration: none; min-height: 40px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
-  }
-  .topic-pill:nth-child(odd) { transform: rotate(-0.6deg); }
-  .topic-pill:nth-child(even) { transform: rotate(0.5deg); }
-  .topic-pill:hover { background: var(--hl); color: var(--ink); transform: rotate(0deg); }
-</style>
