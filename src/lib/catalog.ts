@@ -145,7 +145,7 @@ export function evidenceLabel(item: Pick<CaseItem, 'evidence' | 'medium'>): { te
     case 'author-tested':
       return { text: isVideo ? '作者称已测试 · 未附成片' : '作者称已测试 · 未附结果图', tone: 'copper' };
     case 'source-example':
-      return { text: '附源资料示例图', tone: 'copper' };
+      return { text: isVideo ? '附源资料示例视频' : '附源资料示例图', tone: 'copper' };
     case 'reference-only':
       return { text: isVideo ? '有参考图 · 未附成片' : '有参考图 · 未附结果图', tone: 'plain' };
     case 'no-record':
@@ -162,7 +162,7 @@ export function evidenceStatement(item: CaseItem): { text: string; tone: 'ok' | 
     case 'author-tested':
       return { text: '作者称已测试；本站未复测，未附成片。', tone: 'warn' };
     case 'source-example':
-      return { text: '源资料附示例图；本站未复现，不作为生成结果展示。', tone: 'warn' };
+      return { text: '源资料附示例视频/示例图；本站未复现，不作为生成结果展示。', tone: 'warn' };
     case 'result-attached':
       return { text: '附结果图，已与提示词对应核对。', tone: 'ok' };
     case 'reference-only':

@@ -2518,7 +2518,7 @@
      "label": "转视频提示词"
     }
    ],
-   "medium": "image",
+   "medium": "video",
    "topic": "白模流程",
    "tags": [
     "白模",
@@ -2545,7 +2545,7 @@
    ],
    "provenance": {
     "testedNote": "源文未附实测记录；所附图像/视频为源资料中与提示词对应的示例，本站未复现核对。",
-    "mediaNote": "媒体 2 项（源资料示例与参考图，分区展示）。"
+    "mediaNote": "源资料示例图 1 张、示例视频 1 段（本站未复现）。"
    },
    "relatedNotes": [
     "image2-playbook"
@@ -2570,7 +2570,7 @@
      "label": "转视频提示词"
     }
    ],
-   "medium": "image",
+   "medium": "video",
    "topic": "白模流程",
    "tags": [
     "白模",
@@ -2597,7 +2597,7 @@
    ],
    "provenance": {
     "testedNote": "源文未附实测记录；所附图像/视频为源资料中与提示词对应的示例，本站未复现核对。",
-    "mediaNote": "媒体 2 项（源资料示例与参考图，分区展示）。"
+    "mediaNote": "源资料示例图 1 张、示例视频 1 段（本站未复现）。"
    },
    "relatedNotes": [
     "image2-playbook"
@@ -2622,7 +2622,7 @@
      "label": "转视频提示词"
     }
    ],
-   "medium": "image",
+   "medium": "video",
    "topic": "白模流程",
    "tags": [
     "白模",
@@ -2649,7 +2649,7 @@
    ],
    "provenance": {
     "testedNote": "源文未附实测记录；所附图像/视频为源资料中与提示词对应的示例，本站未复现核对。",
-    "mediaNote": "媒体 2 项（源资料示例与参考图，分区展示）。"
+    "mediaNote": "源资料示例图 1 张、示例视频 1 段（本站未复现）。"
    },
    "relatedNotes": [
     "image2-playbook"
@@ -2737,7 +2737,7 @@
      "label": "转视频提示词"
     }
    ],
-   "medium": "image",
+   "medium": "video",
    "topic": "减少抽卡",
    "tags": [
     "减少抽卡",
@@ -2770,7 +2770,7 @@
    ],
    "provenance": {
     "testedNote": "源文未附实测记录；所附图像/视频为源资料中与提示词对应的示例，本站未复现核对。",
-    "mediaNote": "媒体 3 项（源资料示例与参考图，分区展示）。"
+    "mediaNote": "源资料示例图 2 张、示例视频 1 段（本站未复现）。"
    },
    "relatedNotes": [
     "image2-playbook"
@@ -2795,7 +2795,7 @@
      "label": "转视频提示词"
     }
    ],
-   "medium": "image",
+   "medium": "video",
    "topic": "减少抽卡",
    "tags": [
     "减少抽卡",
@@ -2822,7 +2822,7 @@
    ],
    "provenance": {
     "testedNote": "源文未附实测记录；所附图像/视频为源资料中与提示词对应的示例，本站未复现核对。",
-    "mediaNote": "媒体 2 项（源资料示例与参考图，分区展示）。"
+    "mediaNote": "源资料示例图 1 张、示例视频 1 段（本站未复现）。"
    },
    "relatedNotes": [
     "image2-playbook"
@@ -2847,7 +2847,7 @@
      "label": "转视频提示词"
     }
    ],
-   "medium": "image",
+   "medium": "video",
    "topic": "减少抽卡",
    "tags": [
     "减少抽卡",
@@ -2874,7 +2874,7 @@
    ],
    "provenance": {
     "testedNote": "源文未附实测记录；所附图像/视频为源资料中与提示词对应的示例，本站未复现核对。",
-    "mediaNote": "媒体 2 项（源资料示例与参考图，分区展示）。"
+    "mediaNote": "源资料示例图 1 张、示例视频 1 段（本站未复现）。"
    },
    "relatedNotes": [
     "image2-playbook"
@@ -2904,7 +2904,7 @@
      "label": "转视频提示词"
     }
    ],
-   "medium": "image",
+   "medium": "video",
    "topic": "减少抽卡",
    "tags": [
     "减少抽卡",
@@ -2937,7 +2937,7 @@
    ],
    "provenance": {
     "testedNote": "源文未附实测记录；所附图像/视频为源资料中与提示词对应的示例，本站未复现核对。",
-    "mediaNote": "媒体 3 项（源资料示例与参考图，分区展示）。"
+    "mediaNote": "源资料示例图 2 张、示例视频 1 段（本站未复现）。"
    },
    "relatedNotes": [
     "image2-playbook"
@@ -2962,7 +2962,7 @@
      "label": "转视频提示词"
     }
    ],
-   "medium": "image",
+   "medium": "video",
    "topic": "减少抽卡",
    "tags": [
     "减少抽卡",
@@ -2989,7 +2989,7 @@
    ],
    "provenance": {
     "testedNote": "源文未附实测记录；所附图像/视频为源资料中与提示词对应的示例，本站未复现核对。",
-    "mediaNote": "媒体 2 项（源资料示例与参考图，分区展示）。"
+    "mediaNote": "源资料示例图 1 张、示例视频 1 段（本站未复现）。"
    },
    "relatedNotes": [
     "image2-playbook"
@@ -3009,7 +3009,7 @@
      "label": "转视频提示词"
     }
    ],
-   "medium": "image",
+   "medium": "video",
    "topic": "场景一致性",
    "tags": [
     "场景一致性",
@@ -3036,7 +3036,7 @@
    ],
    "provenance": {
     "testedNote": "源文未附实测记录；所附图像/视频为源资料中与提示词对应的示例，本站未复现核对。",
-    "mediaNote": "媒体 2 项（源资料示例与参考图，分区展示）。"
+    "mediaNote": "源资料示例图 1 张、示例视频 1 段（本站未复现）。"
    },
    "relatedNotes": [
     "image2-playbook"
@@ -3066,7 +3066,7 @@
      "label": "转视频提示词"
     }
    ],
-   "medium": "image",
+   "medium": "video",
    "topic": "场景一致性",
    "tags": [
     "场景一致性",
@@ -3099,7 +3099,7 @@
    ],
    "provenance": {
     "testedNote": "源文未附实测记录；所附图像/视频为源资料中与提示词对应的示例，本站未复现核对。",
-    "mediaNote": "媒体 3 项（源资料示例与参考图，分区展示）。"
+    "mediaNote": "源资料示例图 2 张、示例视频 1 段（本站未复现）。"
    },
    "relatedNotes": [
     "image2-playbook"
@@ -3119,7 +3119,7 @@
      "label": "转视频提示词"
     }
    ],
-   "medium": "image",
+   "medium": "video",
    "topic": "场景一致性",
    "tags": [
     "场景一致性",
@@ -3146,7 +3146,7 @@
    ],
    "provenance": {
     "testedNote": "源文未附实测记录；所附图像/视频为源资料中与提示词对应的示例，本站未复现核对。",
-    "mediaNote": "媒体 2 项（源资料示例与参考图，分区展示）。"
+    "mediaNote": "源资料示例图 1 张、示例视频 1 段（本站未复现）。"
    },
    "relatedNotes": [
     "image2-playbook"
@@ -3171,7 +3171,7 @@
      "label": "第二段提示词"
     }
    ],
-   "medium": "image",
+   "medium": "video",
    "topic": "画线运镜",
    "tags": [
     "画线",
@@ -3228,7 +3228,7 @@
    ],
    "provenance": {
     "testedNote": "源文未附实测记录；所附图像/视频为源资料中与提示词对应的示例，本站未复现核对。",
-    "mediaNote": "媒体 7 项（源资料示例与参考图，分区展示）。"
+    "mediaNote": "输入参考图 6 张；源资料示例图 6 张、示例视频 1 段（本站未复现）。"
    },
    "relatedNotes": [
     "image2-playbook"
@@ -3247,7 +3247,7 @@
      "label": "单人物绕拍提示词"
     }
    ],
-   "medium": "image",
+   "medium": "video",
    "topic": "画线运镜",
    "tags": [
     "画线",
@@ -3280,7 +3280,7 @@
    ],
    "provenance": {
     "testedNote": "源文未附实测记录；所附图像/视频为源资料中与提示词对应的示例，本站未复现核对。",
-    "mediaNote": "媒体 3 项（源资料示例与参考图，分区展示）。"
+    "mediaNote": "输入参考图 2 张；源资料示例图 2 张、示例视频 1 段（本站未复现）。"
    },
    "relatedNotes": [
     "image2-playbook"
@@ -3299,7 +3299,7 @@
      "label": "穿梭提示词"
     }
    ],
-   "medium": "image",
+   "medium": "video",
    "topic": "画线运镜",
    "tags": [
     "画线",
@@ -3332,7 +3332,7 @@
    ],
    "provenance": {
     "testedNote": "源文未附实测记录；所附图像/视频为源资料中与提示词对应的示例，本站未复现核对。",
-    "mediaNote": "媒体 3 项（源资料示例与参考图，分区展示）。"
+    "mediaNote": "输入参考图 2 张；源资料示例图 2 张、示例视频 1 段（本站未复现）。"
    },
    "relatedNotes": [
     "image2-playbook"
@@ -3351,7 +3351,7 @@
      "label": "群像扫拍提示词"
     }
    ],
-   "medium": "image",
+   "medium": "video",
    "topic": "画线运镜",
    "tags": [
     "画线",
@@ -3384,7 +3384,7 @@
    ],
    "provenance": {
     "testedNote": "源文未附实测记录；所附图像/视频为源资料中与提示词对应的示例，本站未复现核对。",
-    "mediaNote": "媒体 3 项（源资料示例与参考图，分区展示）。"
+    "mediaNote": "输入参考图 2 张；源资料示例图 2 张、示例视频 1 段（本站未复现）。"
    },
    "relatedNotes": [
     "image2-playbook"
