@@ -1,0 +1,36 @@
+<style>
+  .visual-intro{max-width:760px;margin:0 0 22px}.visual-intro h2{font-size:1.35rem;line-height:1.35;margin:0 0 7px}.visual-intro p{color:#9ca3af;margin:0;font-size:.92rem;line-height:1.65}
+  .design-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.design-card{min-width:0}.design-card .card-image{display:block;aspect-ratio:auto;padding:0;background:transparent}.design-card .card-body{padding:18px 19px}.design-card .card-body h3{margin:0 0 6px;font-size:1rem}.design-card .card-body p{line-height:1.6;margin:0}.site-mini{height:495px;overflow:hidden;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;text-align:left}.site-mini *{box-sizing:border-box}.site-mini img{display:block;width:100%;height:100%;object-fit:cover}.site-mini .nav{display:flex;align-items:center;justify-content:space-between;padding:14px 17px;font-size:9px;letter-spacing:.02em}.site-mini .logo{font-weight:800;font-size:13px;letter-spacing:.06em}.site-mini .nav-links{display:flex;gap:12px;align-items:center}.site-mini .nav-links span{white-space:nowrap}.site-mini .hero{position:relative}.site-mini .eyebrow{text-transform:uppercase;font-size:8px;font-weight:700;letter-spacing:.16em}.site-mini h4{font-size:25px;line-height:1.16;letter-spacing:-.04em;margin:9px 0 12px;font-weight:740}.site-mini .desc{font-size:10px;line-height:1.6;margin:0}.site-mini .mini-btn{display:inline-flex;align-items:center;gap:5px;border-radius:7px;padding:9px 11px;font-size:9px;font-weight:750}.site-mini .section-title{font-size:10px;font-weight:760;margin:0 0 10px}.site-mini .thumb{position:relative;border-radius:7px;overflow:hidden;height:81px}.site-mini .tag{display:inline-block;padding:4px 6px;border-radius:4px;font-size:7px;font-weight:700}.site-mini .mock-copy{font-size:8px;line-height:1.55;opacity:.75}.site-mini .mini-card-title{font-size:9px;font-weight:700;margin:8px 0 3px}.site-mini .faux-icon{display:inline-grid;place-items:center;width:13px;height:13px;font-size:11px}
+  .archive{background:#12161b;color:#f6f0e7}.archive .nav{background:#15191d;border-bottom:1px solid #2e3438}.archive .nav-links{color:#b3b9b9}.archive .hero{height:232px;overflow:hidden}.archive .hero img{filter:brightness(.48) saturate(.78);object-position:center 42%}.archive .hero-content{position:absolute;inset:0;padding:32px 22px;background:linear-gradient(90deg,rgba(17,21,25,.83),rgba(17,21,25,.04))}.archive .eyebrow{color:#d5a672}.archive .desc{color:#d6d8d5;max-width:230px}.archive .mini-btn{margin-top:13px;background:#d2a16a;color:#17191b}.archive .lower{background:#f2eee6;color:#242b2d;padding:17px 18px;height:230px}.archive .chips{display:flex;gap:5px;margin-bottom:15px}.archive .chip{padding:5px 7px;border:1px solid #cec7bb;border-radius:20px;color:#566061;font-size:8px}.archive .chip.active{background:#263136;border-color:#263136;color:#fff}.archive .tiles{display:grid;grid-template-columns:1.1fr .9fr;gap:10px}.archive .thumb.alt{background:#273739}.archive .thumb.alt img{object-position:center top;filter:saturate(.75)}.archive .mini-muted{color:#7d8584;font-size:8px}.archive .tag{position:absolute;left:6px;bottom:6px;background:rgba(16,20,21,.8);color:#fff}
+  .studio{background:#f7f8fa;color:#1f2937}.studio .nav{background:#fff;border-bottom:1px solid #e6e9ee}.studio .logo{color:#21315e}.studio .nav-links{color:#576274}.studio .hero{height:170px;padding:25px 22px 15px;background:#f8faff}.studio .eyebrow{color:#4d67da}.studio h4{font-size:23px;margin:7px 0}.studio .desc{color:#647084}.studio .search{margin-top:15px;padding:10px 11px;background:#fff;border:1px solid #dce1ea;border-radius:8px;color:#99a3b1;font-size:9px;box-shadow:0 4px 15px rgba(30,50,90,.04)}.studio .lower{padding:13px 18px}.studio .chips{display:flex;gap:6px;margin-bottom:14px}.studio .chip{background:#fff;border:1px solid #e0e5ec;padding:6px 8px;border-radius:6px;font-size:8px;color:#5b6678}.studio .chip.active{background:#dfe6ff;border-color:#b9c9fb;color:#3152bd}.studio .tiles{display:grid;grid-template-columns:1fr 1fr;gap:8px}.studio .tile{background:white;border:1px solid #e8ebf1;border-radius:9px;padding:7px}.studio .thumb{height:82px}.studio .thumb img{object-position:center 44%}.studio .tile .tag{margin-top:7px;background:#edf1ff;color:#3d5ac1}.studio .mini-card-title{margin:5px 0 3px}.studio .mini-muted{font-size:8px;color:#8b95a4}
+  @media(max-width:850px){.design-grid{grid-template-columns:1fr}.site-mini{height:495px}}
+</style>
+
+<div class="visual-intro">
+  <h2>网站视觉基调：你更希望访客先感受到什么？</h2>
+  <p>下面使用你资料中的真实参考图制作首页草图。点击更接近目标的一版；图标和交互细节将在选定基调后继续细化。</p>
+</div>
+
+<div class="cards design-grid">
+  <div class="card design-card" data-choice="archive" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div class="site-mini archive">
+        <div class="nav"><div class="logo">FRAME / 档案</div><div class="nav-links"><span>图像案例</span><span>视频案例</span><span>方法笔记</span><span class="faux-icon">⌕</span></div></div>
+        <div class="hero"><img src="/files/snow-street.jpg" alt="圣诞夜雪街追逐参考图"><div class="hero-content"><div class="eyebrow">AI IMAGE &amp; VIDEO PROMPTS</div><h4>把想法，<br>拍成可复现的画面。</h4><p class="desc">从真实案例进入，看到画面、复制原文、读懂写法。</p><div class="mini-btn">探索案例 <span>↗</span></div></div></div>
+        <div class="lower"><div class="chips"><span class="chip active">精选</span><span class="chip">图像案例</span><span class="chip">视频案例</span><span class="chip">方法笔记</span></div><p class="section-title">从画面开始</p><div class="tiles"><div><div class="thumb"><img src="/files/snow-street.jpg" alt=""><span class="tag">▶ 视频案例</span></div><div class="mini-card-title">圣诞夜雪街追逐</div><div class="mini-muted">15秒 · 有实测成片</div></div><div><div class="thumb alt"><img src="/files/prop-board.png" alt=""><span class="tag">▣ 图像案例</span></div><div class="mini-card-title">影视道具概念板</div><div class="mini-muted">图像参考 · 提示词可复制</div></div></div></div>
+      </div>
+    </div>
+    <div class="card-body"><h3>A｜影像资料馆</h3><p>深色首页承托画面，浅色内容区保证长提示词的阅读。偏展览与作品档案，适合强调案例质感。</p></div>
+  </div>
+
+  <div class="card design-card" data-choice="studio" onclick="toggleSelect(this)">
+    <div class="card-image">
+      <div class="site-mini studio">
+        <div class="nav"><div class="logo">FRAME / 提示词库</div><div class="nav-links"><span>图像案例</span><span>视频案例</span><span>方法笔记</span><span class="faux-icon">⌕</span></div></div>
+        <div class="hero"><div class="eyebrow">PROMPT LIBRARY</div><h4>找到可用的创作提示词</h4><p class="desc">按画面、题材与镜头方式查找。</p><div class="search">⌕　搜索「微表情」「人物设定」「打斗运镜」</div></div>
+        <div class="lower"><div class="chips"><span class="chip active">全部案例</span><span class="chip">图像</span><span class="chip">视频</span><span class="chip">有生成结果</span></div><p class="section-title">为你精选</p><div class="tiles"><div class="tile"><div class="thumb"><img src="/files/snow-street.jpg" alt=""></div><span class="tag">视频 · 有成片</span><div class="mini-card-title">圣诞夜雪街追逐</div><div class="mini-muted">多镜头 / 叙事短片</div></div><div class="tile"><div class="thumb"><img src="/files/prop-board.png" alt=""></div><span class="tag">图像 · 概念板</span><div class="mini-card-title">影视道具概念板</div><div class="mini-muted">图像生成 / 道具设计</div></div></div></div>
+      </div>
+    </div>
+    <div class="card-body"><h3>B｜创作工作台</h3><p>浅色界面把搜索与筛选放在首位，卡片信息更密。适合经常来查找、筛选和复制提示词的访客。</p></div>
+  </div>
+</div>

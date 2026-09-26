@@ -1,0 +1,52 @@
+<style>
+  .detail-intro{max-width:850px;margin:0 0 22px}.detail-intro h2{font-size:1.35rem;line-height:1.35;margin:0 0 7px}.detail-intro p{color:#9ca3af;margin:0;font-size:.92rem;line-height:1.65}
+  .detail-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}.detail-card{min-width:0}.detail-card .card-image{display:block;aspect-ratio:auto;padding:0;background:transparent}.detail-card .card-body{padding:18px 19px}.detail-card .card-body h3{margin:0 0 6px;font-size:1rem}.detail-card .card-body p{line-height:1.6;margin:0}
+  .detail-mini{height:586px;overflow:hidden;background:#f2eee6;color:#263034;font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif;text-align:left;font-size:10px}.detail-mini *{box-sizing:border-box}.detail-mini img{display:block;width:100%;height:100%;object-fit:cover}.detail-mini .nav{height:39px;display:flex;align-items:center;justify-content:space-between;padding:0 16px;background:#15191d;color:#f6f0e7}.detail-mini .logo{font-size:11px;font-weight:800;letter-spacing:.055em}.detail-mini .navlinks{display:flex;gap:11px;color:#c5c9c6;font-size:8px}.detail-mini .crumb{color:#7a8280;font-size:8px;margin-bottom:11px}.detail-mini h4{font-size:21px;line-height:1.2;letter-spacing:-.035em;margin:0 0 8px}.detail-mini .deck{font-size:9px;line-height:1.65;color:#687371;margin:0}.detail-mini .tags{display:flex;gap:5px;flex-wrap:wrap;margin-top:10px}.detail-mini .tag{border:1px solid #d1c9bd;border-radius:20px;padding:4px 7px;color:#51605f;font-size:7px}.detail-mini .tag.emph{background:#263136;border-color:#263136;color:white}.detail-mini .section-head{font-weight:760;font-size:10px;margin:0 0 8px;display:flex;align-items:center;justify-content:space-between}.detail-mini .section-head small{font-size:7px;font-weight:500;color:#818985}.detail-mini .media{position:relative;overflow:hidden;border-radius:7px;background:#172027}.detail-mini .media img{filter:brightness(.78) saturate(.82);object-position:center 41%}.detail-mini .media-label{position:absolute;top:8px;left:8px;padding:5px 7px;background:rgba(18,23,25,.82);color:white;border-radius:4px;font-size:8px;font-weight:720}.detail-mini .media-play{position:absolute;inset:0;display:grid;place-items:center;color:#fff;font-size:22px;text-shadow:0 3px 15px #000}.detail-mini .caption{font-size:8px;line-height:1.55;color:#79817e;margin-top:7px}.detail-mini .prompt{background:#fff;border:1px solid #ded8cd;border-radius:8px;overflow:hidden}.detail-mini .prompt-head{height:37px;padding:0 11px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #e7e3db;font-weight:760}.detail-mini .copy{border:0;background:#263136;color:white;padding:6px 8px;border-radius:5px;font-size:8px;font-weight:700}.detail-mini .prompt-text{padding:10px 11px;font-size:8px;line-height:1.75;color:#46504e;white-space:pre-wrap}.detail-mini .prompt-fade{position:relative;max-height:112px;overflow:hidden}.detail-mini .prompt-fade:after{content:"";position:absolute;inset:auto 0 0;height:30px;background:linear-gradient(transparent,#fff)}.detail-mini .prompt-more{padding:8px 11px;color:#815b37;font-size:8px;font-weight:750;border-top:1px solid #eee9e0}.detail-mini .aside-note{border-left:2px solid #d4a573;padding-left:10px;font-size:8px;line-height:1.6;color:#65706e}.detail-mini .note-link{color:#815b37;font-weight:750}.detail-mini .icon{font-size:10px;line-height:1}
+  .stacked .body{padding:18px 19px}.stacked .head{margin-bottom:16px}.stacked .media{height:210px}.stacked .under-media{display:flex;align-items:flex-start;justify-content:space-between;gap:12px;margin:10px 0 18px}.stacked .under-media .caption{max-width:270px;margin:0}.stacked .more-assets{flex:none;color:#815b37;font-size:8px;font-weight:750}.stacked .prompt-section{margin:0 0 15px}.stacked .aside-note{margin-top:12px}
+  .side-by-side .body{padding:18px 17px}.side-by-side .head{margin-bottom:16px}.side-by-side .columns{display:grid;grid-template-columns:1.08fr .92fr;gap:11px;align-items:start}.side-by-side .media{height:275px}.side-by-side .caption{margin:7px 0 11px}.side-by-side .related{margin-top:11px;padding:11px;border:1px solid #ddd6ca;border-radius:7px;background:#ebe6dc;font-size:8px;line-height:1.6}.side-by-side .prompt-text{font-size:7.5px}.side-by-side .prompt-fade{max-height:238px}.side-by-side .prompt-fade:after{height:45px}.side-by-side .prompt-more{background:#fff}.side-by-side .aside-note{margin-top:11px}
+  @media(max-width:850px){.detail-grid{grid-template-columns:1fr}.detail-mini{height:586px}}
+</style>
+
+<div class="detail-intro">
+  <h2>案例详情页：画面与提示词如何同屏？</h2>
+  <p>两版都沿用已选定的 A「影像资料馆」风格。这里用“圣诞夜雪街追逐”示意；画面是资料中的<strong>参考图</strong>，不是生成结果。点击更适合公开案例库的一版。</p>
+</div>
+
+<div class="cards detail-grid">
+  <div class="card detail-card" data-choice="detail-stacked" onclick="toggleSelect(this)">
+    <div class="card-image"><div class="detail-mini stacked">
+      <div class="nav"><span class="logo">FRAME / 档案</span><span class="navlinks"><span>图像案例</span><span>视频案例</span><span>方法笔记</span><span>⌕</span></span></div>
+      <div class="body">
+        <div class="head"><div class="crumb">视频案例　/　叙事短片　/　圣诞夜雪街追逐</div><h4>圣诞夜雪街追逐</h4><p class="deck">一场惊险追逐，最后成为圣诞夜的温暖惊喜。</p><div class="tags"><span class="tag emph">视频案例</span><span class="tag">15 秒</span><span class="tag">5 个镜头</span><span class="tag">已实测</span></div></div>
+        <p class="section-head">画面与附件 <small>参考图 · 实测成片另附</small></p>
+        <div class="media"><img src="/files/snow-street.jpg" alt="圣诞夜雪街道参考图"><span class="media-label">参考图 2 / 雪夜街道</span></div>
+        <div class="under-media"><p class="caption">参考图用于锚定街道环境；页面应另设“实测成片”播放器与附件切换。</p><span class="more-assets">查看全部附件 ↗</span></div>
+        <div class="prompt-section"><p class="section-head">完整提示词 <small>保留原文与换行</small></p><div class="prompt"><div class="prompt-head">提示词原文 <button class="copy">▢　复制全文</button></div><div class="prompt-fade"><div class="prompt-text">【全局设定】
+核心风格：超写实真人奇幻短片，电影感画质，35mm胶片颗粒质感，浅景深，雪花与灯串光斑细节丰富。
+影片基调：惊险追逐反转为温暖惊喜，圣诞魔法奇遇感，轻快而不失幽默。
+光线设计：圣诞夜街道，两侧圣诞树彩灯与市集摊位、橱窗的暖黄光为主……</div></div><div class="prompt-more">展开提示词全文 ↓</div></div></div>
+        <div class="aside-note">写法解析：参考图锚定、镜头节奏与冷暖光关系。<span class="note-link">阅读相关笔记 →</span></div>
+      </div>
+    </div></div>
+    <div class="card-body"><h3>方案 1｜画面优先</h3><p>大图先讲清案例，再纵向阅读提示词。适合画面浏览与分享；复制全文需要继续向下看。</p></div>
+  </div>
+
+  <div class="card detail-card" data-choice="detail-split" onclick="toggleSelect(this)">
+    <div class="card-image"><div class="detail-mini side-by-side">
+      <div class="nav"><span class="logo">FRAME / 档案</span><span class="navlinks"><span>图像案例</span><span>视频案例</span><span>方法笔记</span><span>⌕</span></span></div>
+      <div class="body">
+        <div class="head"><div class="crumb">视频案例　/　叙事短片　/　圣诞夜雪街追逐</div><h4>圣诞夜雪街追逐</h4><p class="deck">一场惊险追逐，最后成为圣诞夜的温暖惊喜。</p><div class="tags"><span class="tag emph">视频案例</span><span class="tag">15 秒</span><span class="tag">5 个镜头</span><span class="tag">已实测</span></div></div>
+        <div class="columns"><div><p class="section-head">画面与附件 <small>2 张参考图</small></p><div class="media"><img src="/files/snow-street.jpg" alt="圣诞夜雪街道参考图"><span class="media-label">参考图 2 / 雪夜街道</span></div><p class="caption">参考图用于锚定街道环境；实测成片以独立选项播放。</p><div class="related"><strong>资料切换</strong><br>◉ 参考图　　○ 实测成片　　○ 人物设定</div></div>
+          <div><p class="section-head">完整提示词 <small>原文</small></p><div class="prompt"><div class="prompt-head">提示词原文 <button class="copy">▢　复制全文</button></div><div class="prompt-fade"><div class="prompt-text">【全局设定】
+核心风格：超写实真人奇幻短片，电影感画质，35mm胶片颗粒质感，浅景深，雪花与灯串光斑细节丰富。
+影片基调：惊险追逐反转为温暖惊喜，圣诞魔法奇遇感，轻快而不失幽默。
+光线设计：圣诞夜街道，两侧圣诞树彩灯与市集摊位、橱窗的暖黄光为主……
+
+【参考图】
+图片1作为女孩的视觉锚定……</div></div><div class="prompt-more">展开提示词全文 ↓</div></div><div class="aside-note">写法解析与关联笔记<br><span class="note-link">阅读相关笔记 →</span></div></div>
+        </div>
+      </div>
+    </div></div>
+    <div class="card-body"><h3>方案 2｜画面与提示词并列</h3><p>桌面端可同时看画面与复制原文，手机端改为上下排列。适合查阅与复用；画面展示面积较小。</p></div>
+  </div>
+</div>
