@@ -27,7 +27,7 @@ const topics = getTopics(medium);
       )}
     </section>
     <ListFilter topics={topics} evidenceOptions={evidenceOptions} topicParam={Astro.url.searchParams.get('topic') ?? ''} />
-    <div class="grid-cases" data-case-grid style="padding-bottom:56px">
+    <div class="grid-cases" data-case-grid data-masonry style="padding-bottom:56px">
       {cases.map((item) => <CaseCard item={item} />)}
     </div>
   </div>

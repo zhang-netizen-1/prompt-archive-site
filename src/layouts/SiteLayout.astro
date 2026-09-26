@@ -107,4 +107,87 @@ const navItems = [
       .skip-link:focus { left: 8px; }
     </style>
   </body>
+  <script>
+    // 瀑布流：把 [data-masonry] 的卡片按行序轮转分配到 N 个列容器，
+    // 列高取最高列，卡片完整呈现、不会被后续区块遮盖。
+    function layoutMasonry() {
+      document.querySelectorAll('[data-masonry]').forEach((grid) => {
+        const cards = Array.from(grid.querySelectorAll(':scope > .m-cols > .m-col > *, :scope > *:not(.m-cols)'));
+        grid.querySelectorAll('.m-cols').forEach((w) => w.remove());
+        if (cards.length === 0) return;
+        const cols = window.matchMedia('(max-width: 767px)').matches ? 1
+          : window.matchMedia('(max-width: 1199px)').matches ? 2 : 3;
+        const wrap = document.createElement('div');
+        wrap.className = 'm-cols';
+        const colDivs = Array.from({ length: cols }, () => {
+          const d = document.createElement('div');
+          d.className = 'm-col';
+          return d;
+        });
+        cards.forEach((el, i) => colDivs[i % cols].appendChild(el));
+        grid.appendChild(wrap);
+        colDivs.forEach((d) => wrap.appendChild(d));
+      });
+    }
+    window.refreshMasonry = layoutMasonry;
+    layoutMasonry();
+    let rzTimer;
+    window.addEventListener('resize', () => { clearTimeout(rzTimer); rzTimer = setTimeout(layoutMasonry, 150); });
+  </script>
+  <script>
+    // 卡片跟手倾斜：角度随指针相对卡片中心的位置连续变化；
+    // 仅鼠标（pointerType=mouse 且 fine pointer）；减弱动态时完全静止。
+    (() => {
+      const MAX_DEG = 4.5;          // 最大倾斜角
+      const PERSPECTIVE = 1100;
+      const CARD_SEL = '.case-card, .note-card, .note-list-card';
+      const reduced = window.matchMedia('(prefers-reduced-motion: reduce)');
+
+      let card = null;              // 当前作用中的卡片
+      let rect = null;
+      let returnTimer = 0;
+
+      const reducedChange = () => { if (reduced.matches) reset(); };
+      reduced.addEventListener?.('change', reducedChange);
+
+      function reset() {
+        if (!card) return;
+        const el = card;
+        el.classList.remove('tilt-active');
+        el.classList.add('tilt-return');   // 平滑过渡回 CSS 基础角
+        el.style.transform = '';
+        clearTimeout(returnTimer);
+        returnTimer = setTimeout(() => el.classList.remove('tilt-return'), 320);
+        card = null; rect = null;
+      }
+
+      document.addEventListener('pointermove', (e) => {
+        if (e.pointerType !== 'mouse' || !e.isPrimary || reduced.matches) return;
+        const target = e.target instanceof Element ? e.target.closest(CARD_SEL) : null;
+        if (target !== card) {
+          reset();
+          if (!target) return;
+          card = target;
+          rect = card.getBoundingClientRect();
+          card.classList.add('tilt-active');
+          card.classList.remove('tilt-return');
+        }
+        if (!card || !rect) return;
+        const px = (e.clientX - rect.left) / rect.width - 0.5;   // -0.5 ~ 0.5
+        const py = (e.clientY - rect.top) / rect.height - 0.5;
+        const ry = Math.max(-1, Math.min(1, px * 2)) * MAX_DEG;
+        const rxx = Math.max(-1, Math.min(1, py * 2)) * -MAX_DEG;
+        card.style.transform =
+          `perspective(${PERSPECTIVE}px) rotateX(${rxx.toFixed(3)}deg) rotateY(${ry.toFixed(3)}deg) translateY(-3px)`;
+      }, { passive: true });
+
+      document.addEventListener('pointerleave', () => reset());
+      document.addEventListener('pointerdown', (e) => {
+        const target = e.target instanceof Element ? e.target.closest(CARD_SEL) : null;
+        if (target !== card) reset();
+      }, { passive: true });
+      window.addEventListener('blur', () => reset());
+      window.addEventListener('scroll', () => reset(), { passive: true });
+    })();
+  </script>
 </html>

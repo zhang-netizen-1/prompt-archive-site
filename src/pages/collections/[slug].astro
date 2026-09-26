@@ -31,7 +31,7 @@ const cases = collection.caseSlugs.map((s) => getCase(s)).filter((c) => c != nul
         <h2>本合集案例（{cases.length}）</h2>
         <span style="font-size:14px;color:var(--text-2)">每个案例都有独立页面，可从下方直接进入</span>
       </div>
-      <div class="grid-cases">
+      <div class="grid-cases" data-masonry>
         {cases.map((item) => item && <CaseCard item={item} />)}
       </div>
     </div>

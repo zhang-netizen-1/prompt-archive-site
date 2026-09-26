@@ -74,7 +74,7 @@ const items: SearchItem[] = cases.map((c) => {
       <span class="result-count" data-result-count aria-live="polite"></span>
     </div>
 
-    <div class="grid-cases" data-search-grid style="padding-bottom:56px"></div>
+    <div class="grid-cases" data-search-grid data-masonry style="padding-bottom:56px"></div>
     <div class="empty-state" data-empty hidden>
       <p style="margin:0 0 4px"><strong style="color:var(--text)">没有匹配的案例</strong></p>
       <p style="margin:0;font-size:14px">换一个关键词，或清空搜索与筛选再试。</p>
@@ -234,6 +234,7 @@ const items: SearchItem[] = cases.map((c) => {
       count.textContent = `${visible} 个案例`;
       empty.hidden = visible !== 0;
       grid.hidden = visible === 0;
+      window.refreshMasonry?.();
       const params = new URLSearchParams();
       if (q) params.set('q', input.value.trim());
       if (medium) params.set('medium', medium);

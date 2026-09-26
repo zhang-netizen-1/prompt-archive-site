@@ -31,7 +31,7 @@ const { topics, evidenceOptions, topicParam = '' } = Astro.props;
   <span class="result-count" data-result-count aria-live="polite"></span>
 </div>
 <div data-empty-state hidden class="empty-state">
-  <p style="margin:0 0 4px"><strong style="color:var(--text)">没有匹配的案例</strong></p>
+  <p style="margin:0 0 4px"><strong style="color:var(--chalk)">没有匹配的案例</strong></p>
   <p style="margin:0;font-size:14px">当前主题与媒体状态下没有案例，试试清除筛选。</p>
   <button class="btn btn-ghost" type="button" data-filter-reset>清除筛选</button>
 </div>
@@ -41,10 +41,10 @@ const { topics, evidenceOptions, topicParam = '' } = Astro.props;
     const topicSelect = toolbar.querySelector<HTMLSelectElement>('[data-filter-topic]')!;
     const evidenceSelect = toolbar.querySelector<HTMLSelectElement>('[data-filter-evidence]')!;
     const count = toolbar.querySelector<HTMLElement>('[data-result-count]')!;
-    const grid = toolbar.parentElement?.querySelector<HTMLElement>('[data-case-grid]');
+    const grid = toolbar.parentElement?.querySelector<HTMLElement>('[data-case-grid][data-masonry]');
     const empty = toolbar.parentElement?.querySelector<HTMLElement>('[data-empty-state]');
     if (!grid) return;
-    const cards = Array.from(grid.querySelectorAll<HTMLElement>('[data-medium]'));
+    const cards = Array.from(grid.querySelectorAll<HTMLElement>('.case-card'));
 
     function apply() {
       const topic = topicSelect.value;
@@ -59,11 +59,7 @@ const { topics, evidenceOptions, topicParam = '' } = Astro.props;
       }
       count.textContent = `${visible} 个案例`;
       if (empty) empty.hidden = visible !== 0;
-      grid.hidden = visible === 0;
-      const params = new URLSearchParams();
-      if (topic) params.set('topic', topic);
-      const qs = params.toString();
-      history.replaceState(null, '', qs ? `?${qs}` : location.pathname);
+      // 瀑布流列高随隐藏卡片收缩，无需重排
     }
 
     topicSelect.addEventListener('change', apply);
