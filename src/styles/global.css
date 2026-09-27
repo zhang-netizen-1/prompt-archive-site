@@ -117,23 +117,6 @@ h1, h2, h3, h4 { line-height: 1.25; margin: 0; font-weight: 700; color: var(--ch
   -webkit-box-decoration-break: clone;
 }
 
-/* ---------- 公告条：纸带 ---------- */
-
-.announce {
-  background: var(--paper);
-  color: var(--ink);
-  border-bottom: 1px solid var(--line);
-  text-align: center;
-  padding: 8px 16px;
-}
-.announce a {
-  font-family: var(--font-mono);
-  font-size: 12px;
-  letter-spacing: 0.06em;
-  color: var(--ink);
-}
-.announce a:hover { background: var(--hl); }
-
 /* ---------- 页眉：黑桌 + 等宽大写导航 ---------- */
 
 .site-header {
