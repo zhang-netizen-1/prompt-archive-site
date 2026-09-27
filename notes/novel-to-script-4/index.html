@@ -1,0 +1,164 @@
+<!DOCTYPE html><html lang="zh-CN" data-astro-cid-tq46r5sz><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="4 类「小说/故事转脚本」LLM 元提示词：按剧情转脚本，含人设与原著一致性限制条件、脚本字段要求（镜头号/运镜/景别/台词/音效/时长）与分镜图描述规范。"><link rel="icon" href="/prompt-archive-site/favicon.svg" type="image/svg+xml"><title>小说等转脚本（4 类元提示词） · 方法笔记</title><link rel="stylesheet" href="/prompt-archive-site/_astro/SiteLayout.DYPNTGRP.css"><style>.note-header[data-astro-cid-vex5zuxs]{max-width:calc(var(--note-width) + 280px);margin:0 auto;padding:40px 24px 0}
+</style></head><body data-astro-cid-tq46r5sz><a class="skip-link" href="#main" data-astro-cid-tq46r5sz>跳到主要内容</a><div class="announce" data-astro-cid-tq46r5sz><a href="/prompt-archive-site/cases/" data-astro-cid-tq46r5sz>PA·ARCHIVE — 每个完整案例一个独立页面，提示词与 Wiki 原文逐字一致 ↗</a></div><header class="site-header" data-astro-cid-tq46r5sz><div class="container" data-astro-cid-tq46r5sz><a class="brand" href="/prompt-archive-site/" data-astro-cid-tq46r5sz><span class="brand-glyph" data-astro-cid-tq46r5sz>PA</span><span class="brand-name" data-astro-cid-tq46r5sz>AI 提示词档案馆</span></a><nav class="site-nav" aria-label="主导航" data-astro-cid-tq46r5sz><a href="/prompt-archive-site/images/" data-astro-cid-tq46r5sz>图像案例<span class="nav-no" data-astro-cid-tq46r5sz>01</span></a><a href="/prompt-archive-site/videos/" data-astro-cid-tq46r5sz>视频案例<span class="nav-no" data-astro-cid-tq46r5sz>02</span></a><a href="/prompt-archive-site/notes/" aria-current="page" data-astro-cid-tq46r5sz>方法笔记<span class="nav-no" data-astro-cid-tq46r5sz>03</span></a></nav><div class="header-cta" data-astro-cid-tq46r5sz><a class="header-search-link" href="/prompt-archive-site/cases/" aria-label="全站搜索案例" data-astro-cid-tq46r5sz><span class="icon" style="width:15px;height:15px" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="6.1"/><line x1="13.6" y1="13.6" x2="18" y2="18"/></svg></span><span data-astro-cid-tq46r5sz>搜索</span><span class="nav-no" data-astro-cid-tq46r5sz>04</span></a></div></div></header><main id="main" data-astro-cid-tq46r5sz><div class="note-page" data-astro-cid-vex5zuxs><div class="note-header" data-astro-cid-vex5zuxs><nav class="breadcrumbs" aria-label="面包屑" data-astro-cid-vex5zuxs><a href="/prompt-archive-site/" data-astro-cid-vex5zuxs>首页</a><span aria-hidden="true" data-astro-cid-vex5zuxs>/</span><a href="/prompt-archive-site/notes/" data-astro-cid-vex5zuxs>方法笔记</a><span aria-hidden="true" data-astro-cid-vex5zuxs>/</span><span aria-current="page" data-astro-cid-vex5zuxs>小说等转脚本（4 类元提示词）</span></nav><h1 style="font-size:32px" data-astro-cid-vex5zuxs>小说等转脚本（4 类元提示词）</h1><p class="note-meta" data-astro-cid-vex5zuxs><span class="medium-chip" data-astro-cid-vex5zuxs>方法</span><span data-astro-cid-vex5zuxs>视频</span><span data-astro-cid-vex5zuxs>源资料：✏️脚本-小说等转脚本-4类（prompts）</span></p><p class="note-summary" data-astro-cid-vex5zuxs>4 类「小说/故事转脚本」LLM 元提示词：按剧情转脚本，含人设与原著一致性限制条件、脚本字段要求（镜头号/运镜/景别/台词/音效/时长）与分镜图描述规范。</p></div><div class="note-layout" data-astro-cid-vex5zuxs><aside class="note-toc" aria-label="目录" data-astro-cid-vex5zuxs><p class="toc-title" data-astro-cid-vex5zuxs>目录</p><a href="#小说网文转脚本" data-astro-cid-vex5zuxs>小说网文转脚本：</a><a href="#模糊想法转脚本" data-astro-cid-vex5zuxs>模糊想法转脚本：</a><a href="#网梗段子转脚本" data-astro-cid-vex5zuxs>网梗段子转脚本：</a><a href="#真实故事转脚本" data-astro-cid-vex5zuxs>真实故事转脚本：</a></aside><div class="note-main" data-astro-cid-vex5zuxs><div class="prose" data-astro-cid-vex5zuxs><h1 id="小说等转脚本">小说等转脚本</h1>
+<h2 id="小说网文转脚本">小说网文转脚本：</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#6A737D">&lt;!--根据剧情/故事转脚本--&gt;</span></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># 任务</span></span>
+<span class="line"><span style="color:#E1E4E8">阅读并理解我所提供的故事内容，并把它转化成短剧/漫剧脚本</span></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># 限制条件</span></span>
+<span class="line"><span style="color:#FFAB70">1.</span><span style="color:#E1E4E8"> 所有角色的人设、行为逻辑、人物关系、台词风格、命运结局，必须100%严格遵循用户提供的完整原著故事内容，不得擅自新增、修改、删减人物核心设定与原著明确描写的关键行为；</span></span>
+<span class="line"><span style="color:#FFAB70">2.</span><span style="color:#E1E4E8"> 若本模块的角色细节设定，与用户提供的原著故事原文有冲突，无条件以原著故事原文为准，不得自行发挥；</span></span>
+<span class="line"><span style="color:#FFAB70">3.</span><span style="color:#E1E4E8"> 脚本中角色的台词、动作、神态、心理活动描写，必须服务于原著故事的剧情推进与人物弧光，不得添加与原著无关的人设标签、支线剧情与戏份；</span></span>
+<span class="line"><span style="color:#FFAB70">4.</span><span style="color:#E1E4E8"> 严格区分核心主角、次要配角、工具人角色的叙事权重，配角/工具人不得抢戏、不得擅自加戏，戏份占比严格贴合原著。</span></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># 内容要求</span></span>
+<span class="line"><span style="color:#FFAB70">1.</span><span style="color:#E1E4E8"> 脚本需包含镜头号、运镜、景别、画面描述、画面补充细节、人物台词、音效设计、镜头时长</span></span>
+<span class="line"><span style="color:#FFAB70">2.</span><span style="color:#E1E4E8"> 其中画面描述的部分我将用于图片生成分镜图，请满足如下要求</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 描述需要精简，请勿超过200个字</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 每个描述都是一个完整的画面，包含视觉风格（例如：二次元动漫、3D动画等）、人物、场景等内容</span></span>
+<span class="line"><span style="color:#FFAB70">3.</span><span style="color:#E1E4E8"> 运镜和景别需根据故事脉络丰富多彩，包括但不限于远景、全景、特写等，千万不要大篇幅使用单一镜头</span></span>
+<span class="line"><span style="color:#FFAB70">4.</span><span style="color:#E1E4E8"> 结合我给你的单集时长去自动规划镜头数量、剧情的反转、高潮、推进以及每个镜头时长</span></span>
+<span class="line"><span style="color:#FFAB70">-</span><span style="color:#E1E4E8"> 4.1 若时长&lt;=60s，则满足如下条件</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 开篇：0.5-1.5秒，2-3个镜头，占时≤3秒</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 剧情主体：2-3秒/个，15-22个镜头，占时45-50 秒</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 小高潮反转：1-2秒/个，2-3个镜头，占时3-5秒</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 结尾留坑：3-4秒，1个镜头，占时3-4秒</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 总镜头数：20-30个</span></span>
+<span class="line"><span style="color:#6A737D">&lt;!--阿拉赛博蕾--&gt;</span></span>
+<span class="line"><span style="color:#FFAB70">-</span><span style="color:#E1E4E8"> 4.2 若时长&gt;60s，且&lt;=120s，则满足如下条件</span></span>
+<span class="line"><span style="color:#FFAB70">   -</span><span style="color:#E1E4E8"> 开篇：0.5-1.5秒，3-4个镜头，占时≤3 秒</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 剧情推进A段：2-3秒/个，12-15个镜头，占时30-35 秒</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 第一个小高潮：1-2秒/个，3-4个镜头，占时4-6 秒</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 剧情推进 B 段：2-4秒/个，12-15个镜头，占时35-40秒</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 结尾大反转+留坑：2-4秒/个，3-5个镜头，占时10-15秒</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 总镜头数：35-45个</span></span>
+<span class="line"><span style="color:#FFAB70">-</span><span style="color:#E1E4E8"> 4.3 若时长&gt;120s且&lt;=180s，则满足如下条件</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 开篇钩子：0.5-2秒，3-5个镜头，占时≤5 秒</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 剧情第一幕：2-3秒/个，15-18个镜头，占时 40-45秒</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 第一个反转高潮：1-2秒/个，4-5个镜头，占时 5-8秒</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 剧情第二幕：3-4秒/个，15-18个镜头，占时 45-50秒</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 第二个反转高潮：1-2秒/个，3-4个镜头，占时 4-6秒</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 结尾悬念留坑：3-5秒/个，2-3个镜头，占时 8-12秒</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 总镜头数：45-60个</span></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># 工作流程</span></span>
+<span class="line"><span style="color:#FFAB70">1.</span><span style="color:#E1E4E8"> 步骤1: 要求用户提供该剧的风格、总集数及每集时长。提问方式如下</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 请告诉我本剧的风格、总集数及所预期的每集时长</span></span>
+<span class="line"><span style="color:#FFAB70">2.</span><span style="color:#E1E4E8"> 步骤2: 结合用户给的故事附件及输出内容综合规划输出脚本csv文件</span></span>
+<span class="line"><span style="color:#FFAB70">3.</span><span style="color:#E1E4E8"> 步骤3: 该csv文件可支持下载</span></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># 输出</span></span>
+<span class="line"><span style="color:#E1E4E8">第一章/第1集</span></span>
+<span class="line"><span style="color:#E1E4E8">第一章/第2集</span></span>
+<span class="line"><span style="color:#E1E4E8">...</span></span>
+<span class="line"><span style="color:#E1E4E8">第N章/第N集</span></span></code></pre>
+<h2 id="模糊想法转脚本">模糊想法转脚本：</h2>
+<p>这个提示词需要跟Ai来来回回沟通很久，如果想法比较模糊，建议先跟Ai把故事聊清楚了之后，用其他三段提示词</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#6A737D">&lt;!--模糊想法转脚本--&gt;</span></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># 角色</span></span>
+<span class="line"><span style="color:#E1E4E8">你是一名从业10年的影视编剧，擅长把碎片化的灵感打磨成逻辑完整、有共情力的故事。</span></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># 任务</span></span>
+<span class="line"><span style="color:#E1E4E8">将我的想法转化成短剧/漫剧脚本</span></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># 工作流程</span></span>
+<span class="line"><span style="color:#FFAB70">1.</span><span style="color:#E1E4E8"> 步骤1: 结合我的要求为我生成3个版本的故事梗概（对应a\b\c），每个版本不要超过300字，并询问我喜欢哪一个；</span></span>
+<span class="line"><span style="color:#FFAB70">2.</span><span style="color:#E1E4E8"> 步骤2: 在我做出选择后，结合具体的故事梗概为我输出人物小传。人物小传要求如下：</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 包含人物的基本信息、外貌特征、性格底色、成长背景、核心欲望、内心恐惧、人物弧光（从开头到结局的成长变化）</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 补充3个能体现人物性格的标志性细节动作/口头禅/习惯，比如“紧张的时候会攥紧外卖袋的提手，说话不敢看人的眼睛”</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 人物行为逻辑自洽，符合故事的背景和核心情绪，不悬浮</span></span>
+<span class="line"><span style="color:#FFAB70">3.</span><span style="color:#E1E4E8"> 步骤3: 当故事梗概及人物小传确定后，为我生成故事大纲及分集大纲</span></span>
+<span class="line"><span style="color:#FFAB70">4.</span><span style="color:#E1E4E8"> 步骤4: 当步骤1～3均完成后，为我生成标准格式单场剧本脚本，脚本内容包含：</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 镜头号、运镜、景别、画面描述、画面补充细节、人物台词、音效设计、镜头时长</span></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># 要求</span></span>
+<span class="line"><span style="color:#E1E4E8">请严格按照我所规划的工作流程执行命令，不要跳步</span></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># 输出</span></span>
+<span class="line"><span style="color:#E1E4E8">第1集脚本</span></span>
+<span class="line"><span style="color:#E1E4E8">第2集脚本</span></span>
+<span class="line"><span style="color:#E1E4E8">...</span></span>
+<span class="line"><span style="color:#E1E4E8">第N集脚本</span></span></code></pre>
+<h2 id="网梗段子转脚本">网梗段子转脚本：</h2>
+<p>注意这个提示词是根据15s的剧情写的，所以内容很短</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#79B8FF;font-weight:bold"># 任务</span></span>
+<span class="line"><span style="color:#E1E4E8">阅读并理解用户提供的网梗、热梗、段子、神评论、搞笑名场面等核心内容，100%还原梗的核心笑点、反转内核与名场面精髓，转化为严格控制在15s以内的竖屏短视频/漫剧/真人出镜脚本</span></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># 限制条件</span></span>
+<span class="line"><span style="color:#FFAB70">1.</span><span style="color:#E1E4E8"> 脚本中所有的台词、动作、神态、画面设计，必须全程服务于原梗的笑点落地与反转呈现，每一秒内容都必须为梗的核心服务，严禁出现任何无意义的铺垫、冗余镜头与无效内容；</span></span>
+<span class="line"><span style="color:#FFAB70">2.</span><span style="color:#E1E4E8"> 总时长&lt;15s，核心爆点/反转笑点必须在视频开播后8s内完成呈现，严格适配短视频平台黄金停留规则；</span></span>
+<span class="line"><span style="color:#FFAB70">3.</span><span style="color:#E1E4E8"> 针对谐音梗、方言梗、特定圈层梗，必须通过字幕、画面补充等方式保障笑点可被快速理解，不得丢失梗的核心趣味点，同时严禁篡改原梗原意。</span></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># 内容要求</span></span>
+<span class="line"><span style="color:#FFAB70">1.</span><span style="color:#E1E4E8"> 脚本必填字段：镜头号、景别、运镜、竖屏画面描述、人物台词/醒目字幕、音效/BGM设计、单镜头时长、总时长校验，所有字段必须完整填写，无遗漏；</span></span>
+<span class="line"><span style="color:#FFAB70">2.</span><span style="color:#E1E4E8"> 竖屏画面描述要求（用于AI生成分镜图）：</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 描述必须精简，单条画面描述严禁超过100个字；</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 每条描述对应一个完整的竖屏9:16画面，必须明确标注视觉风格（如：真人搞笑出镜、沙雕2D动画、二次元动漫、写实3D等）、核心人物、场景、关键动作，适配竖屏居中构图，符合AI生图逻辑；</span></span>
+<span class="line"><span style="color:#FFAB70">3.</span><span style="color:#E1E4E8"> 运镜与景别要求：</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 必须根据梗的节奏灵活切换景别与运镜，涵盖特写（抓表情/细节）、近景、中景、全景等，严禁大篇幅使用单一景别/运镜；</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 单镜头时长严禁超过3s，全程快切节奏，适配短视频用户观看习惯，无拖沓长镜头；</span></span>
+<span class="line"><span style="color:#FFAB70">4.</span><span style="color:#E1E4E8"> 15s内专属时长&amp;镜头数硬性规则（总时长严格锁定8-15s，严禁超时）：</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 开篇：0.5-1s，2-3个镜头，占时≤3s</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 剧情主体：1-2s/个，3-4个镜头，占时3-6s</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 小高潮反转：0.5-1.5s/个，2-3个镜头，占时1-4s</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 结尾留钩：1-2s，1个镜头，占时1-2s</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 总镜头数：8-11个</span></span>
+<span class="line"><span style="color:#FFAB70">5.</span><span style="color:#E1E4E8"> 额外适配要求：</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 台词必须口语化、接地气，完全贴合网梗的传播语境，严禁书面化、冗长化表达，核心台词必须搭配醒目全屏字幕，适配静音观看场景；</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 音效/BGM必须匹配梗的风格，优先选用短视频平台热门BGM、梗专属音效、搞笑卡点音效，精准踩中笑点与镜头切换节点。</span></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># 工作流程</span></span>
+<span class="line"><span style="color:#FFAB70">1.</span><span style="color:#E1E4E8"> 步骤1: 要求用户提供核心信息，提问方式固定如下</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 请告诉我该网梗/段子的完整核心内容、视频呈现风格、预期精准时长（需在8-15s区间内）</span></span>
+<span class="line"><span style="color:#FFAB70">2.</span><span style="color:#E1E4E8"> 步骤2: 结合用户提供的原梗内容，严格遵循上述所有规则，完成单条竖屏脚本的全字段创作，确保时长合规、笑点完整、适配短视频传播；</span></span>
+<span class="line"><span style="color:#FFAB70">3.</span><span style="color:#E1E4E8"> 步骤3: 可同步输出符合规范的csv格式脚本文件，支持下载使用。</span></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># 输出</span></span>
+<span class="line"><span style="color:#E1E4E8">脚本</span></span></code></pre>
+<h2 id="真实故事转脚本">真实故事转脚本：</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">!-- 真实故事转脚本 --&gt;</span></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold">## 任务</span></span>
+<span class="line"><span style="color:#E1E4E8">深度阅读、共情并</span><span style="color:#E1E4E8;font-weight:bold">**100%严格遵循用户提供的真实感人/励志故事完整素材**</span><span style="color:#E1E4E8">，精准提炼故事核心情感内核（温暖感人/正向励志），绝对尊重真实人物原型、真实事件脉络、真实人生经历，将其转化为适配竖屏短视频传播、情绪饱满、节奏精准的短剧/漫剧标准化分镜脚本。</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold">## 限制条件</span></span>
+<span class="line"><span style="color:#FFAB70">1.</span><span style="color:#E1E4E8"> 所有真实人物的原型人设、人生经历、行为逻辑、人物关系、台词风格、事件结局，必须100%严格遵循用户提供的真实故事原文/真实事件素材，不得擅自新增、修改、删减人物核心设定与原文明确记载的关键真实事件、关键人生节点；</span><span style="color:#E1E4E8;font-weight:bold">**严禁为了戏剧效果虚构、歪曲真实人物的经历与品格**</span><span style="color:#E1E4E8">。</span></span>
+<span class="line"><span style="color:#FFAB70">2.</span><span style="color:#E1E4E8"> 若本模块的细节设定，与用户提供的真实故事原文/真实事件素材有冲突，无条件以用户提供的真实素材为准，不得自行发挥、虚构情节；严禁篡改真实故事的核心事实与情感内核。</span></span>
+<span class="line"><span style="color:#FFAB70">3.</span><span style="color:#E1E4E8"> 脚本中人物的台词、动作、神态、心理活动描写，必须严格贴合真实人物的真实状态，服务于真实故事的情感传递（感人/励志核心）与人物真实成长弧光，不得添加与真实故事无关的人设标签、支线剧情、狗血戏份与过度戏剧化改编。</span></span>
+<span class="line"><span style="color:#FFAB70">4.</span><span style="color:#E1E4E8"> 严格区分核心故事主人公、次要亲历者、背景人物的叙事权重，次要人物/背景人物不得抢戏、不得擅自加戏，戏份占比严格贴合真实故事的叙事重心，始终聚焦主人公的感人/励志核心主线。</span></span>
+<span class="line"><span style="color:#FFAB70">5.</span><span style="color:#E1E4E8"> 必须坚守真实故事的正向价值观，聚焦感人至深的真情内核、励志向上的成长力量，不得添加低俗、博眼球、歪曲正能量的内容；</span><span style="color:#E1E4E8;font-weight:bold">**严禁消费苦难、过度渲染负面情绪**</span><span style="color:#E1E4E8">，始终以传递温暖、治愈、向上的力量为核心导向。</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold">## 内容要求</span></span>
+<span class="line"><span style="color:#FFAB70">1.</span><span style="color:#E1E4E8"> 脚本需完整包含镜头号、运镜、景别、画面描述、画面补充细节、人物台词、音效设计、镜头时长，所有镜头设计优先服务于真实故事的情感递进与核心情绪表达。</span></span>
+<span class="line"><span style="color:#FFAB70">2.</span><span style="color:#E1E4E8"> 其中画面描述部分将用于AI生成分镜图，需严格满足如下要求：</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 描述精简，单条画面描述请勿超过200个字</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 每条描述对应一个完整的独立画面，必须明确标注视觉风格（例如：纪实真人实拍风、写实3D动画、治愈二次元动漫、国风插画等）、核心人物、场景、核心动作等关键视觉信息</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 视觉风格需贴合真实故事的年代、地域、场景属性，兼顾纪实感与画面感染力，人物形象需贴合真实原型的特征描述，严禁过度美化/丑化</span></span>
+<span class="line"><span style="color:#FFAB70">3.</span><span style="color:#E1E4E8"> 运镜和景别需根据故事的情绪节奏与脉络灵活设计，丰富多元，包括但不限于远景、全景、中景、近景、特写等；需精准匹配情绪设计运镜：温情段落多用舒缓推镜、环绕运镜；励志高光段落多用升镜、跟拍、推拉镜头；催泪节点多用慢镜头、细节特写，禁止大篇幅使用单一镜头。</span></span>
+<span class="line"><span style="color:#FFAB70">4.</span><span style="color:#E1E4E8"> 严格结合用户指定的单集时长，自动规划镜头数量、剧情节奏、情绪递进、高潮落点以及每个镜头的精准时长，具体规则如下：</span></span>
+<span class="line"><span style="color:#FFAB70">-</span><span style="color:#E1E4E8"> 4.1 若单集时长≤60s，需满足如下条件：</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 开篇钩子：0.5-1.5s/个，2-3个镜头，占时≤3s，直击故事最戳心/最励志的核心高光瞬间，强抓观众注意力</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 剧情主体（情感递进）：2-3s/个，15-22个镜头，占时45-50s，完整还原真实故事核心脉络，层层递进传递感人/励志情绪</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 情绪高潮：1-2s/个，2-3个镜头，占时3-5s，落点于故事最催泪/最燃的核心情绪顶点</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 结尾升华/共鸣：3-4s，1个镜头，占时3-4s，传递温暖治愈/向上力量，引发观众共情、点赞与评论</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 总镜头数：20-30个</span></span>
+<span class="line"><span style="color:#FFAB70">-</span><span style="color:#E1E4E8"> 4.2 若单集时长&gt;60s，且≤120s，需满足如下条件：</span></span>
+<span class="line"><span style="color:#FFAB70">   -</span><span style="color:#E1E4E8"> 开篇钩子：0.5-1.5s/个，3-4个镜头，占时≤3s，抛出故事最具冲击力的真实悬念/高光瞬间，锁定观众</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 剧情推进A段（背景铺垫/困境呈现）：2-3s/个，12-15个镜头，占时30-35s，清晰交代真实故事的背景、主人公的处境，铺垫核心情绪</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 第一个情绪小高潮：1-2s/个，3-4个镜头，占时4-6s，呈现主人公的第一次抉择/突破，推动情绪升温</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 剧情推进 B 段（核心经历/情感递进）：2-4s/个，12-15个镜头，占时35-40s，还原故事核心真实经历，层层递进拉满感人/励志情绪</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 结尾大高潮+情感升华：2-4s/个，3-5个镜头，占时10-15s，落点于故事最戳心的情感顶点/最燃的励志高光，传递正向价值观，引发观众深度共鸣</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 总镜头数：35-45个</span></span>
+<span class="line"><span style="color:#FFAB70">-</span><span style="color:#E1E4E8"> 4.3 若单集时长&gt;120s且≤180s，需满足如下条件：</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 开篇钩子：0.5-2s/个，3-5个镜头，占时≤5s，直击故事最具张力的真实冲突/高光时刻，强钩子留住观众</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 剧情第一幕（困境铺垫/人物立住）：2-3s/个，15-18个镜头，占时 40-45s，真实还原主人公的人生处境、核心困境，立住真实人物形象，铺垫核心情感</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 第一个转折高潮：1-2s/个，4-5个镜头，占时 5-8s，呈现主人公的关键抉择/人生转折点，推动剧情与情绪跃升</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 剧情第二幕（核心成长/情感递进）：3-4s/个，15-18个镜头，占时 45-50s，深度还原故事核心真实经历，细腻呈现主人公的成长与心路历程，层层递进拉满感人/励志情绪</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 第二个高光高潮：1-2s/个，3-4个镜头，占时 4-6s，落点于故事最催泪的真情瞬间/最燃的励志高光，推至全片情绪顶点</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 结尾情感升华/系列留序：3-5s/个，2-3个镜头，占时 8-12s，单集内容落点于正向价值观传递与情感共鸣；系列剧集可适度设置温和悬念，引导用户追更下一集</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 总镜头数：45-60个</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold">## 工作流程</span></span>
+<span class="line"><span style="color:#FFAB70">1.</span><span style="color:#E1E4E8"> 步骤1: 请用户补充核心创作信息，标准化提问方式如下</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 请告诉我本剧的核心情感侧重（感人方向：如亲情/大爱/坚守/救赎等；励志方向：如逆境成长/绝境逆袭/梦想坚守等）、视觉风格、总集数及所预期的单集时长</span></span>
+<span class="line"><span style="color:#FFAB70">2.</span><span style="color:#E1E4E8"> 步骤2: 结合用户提供的真实故事完整素材、补充的创作信息，严格遵循上述所有规则，精准规划每一集的剧情节奏、情绪递进与镜头设计，输出标准化分镜脚本</span></span>
+<span class="line"><span style="color:#FFAB70">3.</span><span style="color:#E1E4E8"> 步骤3: 同步输出可直接下载、适配剪辑软件/AI分镜生成工具的脚本csv文件，csv字段与脚本核心字段完全对应，包含：集数、镜头号、运镜、景别、画面描述、画面补充细节、人物台词、音效设计、镜头时长</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold">## 输出格式</span></span>
+<span class="line"><span style="color:#E1E4E8">【第X集 核心情感内核：XXX】</span></span>
+<span class="line"><span style="color:#E1E4E8">第1集</span></span>
+<span class="line"><span style="color:#E1E4E8">第2集</span></span>
+<span class="line"><span style="color:#E1E4E8">...</span></span>
+<span class="line"><span style="color:#E1E4E8">第N集</span></span></code></pre>
+</div></div></div></div></main><footer class="site-footer" data-astro-cid-tq46r5sz><div class="container" data-astro-cid-tq46r5sz><div class="footer-grid" data-astro-cid-tq46r5sz><div class="footer-brand" data-astro-cid-tq46r5sz><a class="brand" href="/prompt-archive-site/" data-astro-cid-tq46r5sz><span class="brand-glyph" data-astro-cid-tq46r5sz>PA</span><span class="brand-name" data-astro-cid-tq46r5sz>AI 提示词档案馆</span></a><p class="footer-desc" data-astro-cid-tq46r5sz>可浏览、可检索、可复制的 AI 图像与视频提示词案例库。每个完整案例一个独立页面，提示词与 Wiki 原文逐字一致。</p></div><nav class="footer-col" aria-label="页脚导航" data-astro-cid-tq46r5sz><p class="footer-label" data-astro-cid-tq46r5sz>浏览</p><a href="/prompt-archive-site/images/" data-astro-cid-tq46r5sz>图像案例</a><a href="/prompt-archive-site/videos/" data-astro-cid-tq46r5sz>视频案例</a><a href="/prompt-archive-site/notes/" data-astro-cid-tq46r5sz>方法笔记</a><a href="/prompt-archive-site/cases/" data-astro-cid-tq46r5sz>全站搜索</a></nav><div class="footer-col" data-astro-cid-tq46r5sz><p class="footer-label" data-astro-cid-tq46r5sz>本馆收录</p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>案例</span><b data-astro-cid-tq46r5sz>105</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>附实测成片</span><b data-astro-cid-tq46r5sz>2</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>方法笔记</span><b data-astro-cid-tq46r5sz>60</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>合集</span><b data-astro-cid-tq46r5sz>11</b></p></div></div><div class="footer-bottom" data-astro-cid-tq46r5sz><p data-astro-cid-tq46r5sz>「作者称已测试」表示来源声明，本站未复测。</p><p data-astro-cid-tq46r5sz>PA·ARCHIVE © 2026</p></div></div></footer></body><script type="module">function e(){document.querySelectorAll(`[data-masonry]`).forEach(e=>{let t=Array.from(e.querySelectorAll(`:scope > .m-cols > .m-col > *, :scope > *:not(.m-cols)`));if(e.querySelectorAll(`.m-cols`).forEach(e=>e.remove()),t.length===0)return;let n=window.matchMedia(`(max-width: 767px)`).matches?1:window.matchMedia(`(max-width: 1199px)`).matches?2:3,r=document.createElement(`div`);r.className=`m-cols`;let i=Array.from({length:n},()=>{let e=document.createElement(`div`);return e.className=`m-col`,e});t.forEach((e,t)=>i[t%n].appendChild(e)),e.appendChild(r),i.forEach(e=>r.appendChild(e))})}window.refreshMasonry=e,e();var t;window.addEventListener(`resize`,()=>{clearTimeout(t),t=setTimeout(e,150)});</script><script type="module">(()=>{let e=`.case-card, .note-card, .note-list-card`,t=window.matchMedia(`(prefers-reduced-motion: reduce)`),n=null,r=null,i=0;t.addEventListener?.(`change`,()=>{t.matches&&a()});function a(){if(!n)return;let e=n;e.classList.remove(`tilt-active`),e.classList.add(`tilt-return`),e.style.transform=``,clearTimeout(i),i=setTimeout(()=>e.classList.remove(`tilt-return`),320),n=null,r=null}document.addEventListener(`pointermove`,i=>{if(i.pointerType!==`mouse`||!i.isPrimary||t.matches)return;let o=i.target instanceof Element?i.target.closest(e):null;if(o!==n){if(a(),!o)return;n=o,r=n.getBoundingClientRect(),n.classList.add(`tilt-active`),n.classList.remove(`tilt-return`)}if(!n||!r)return;let s=(i.clientX-r.left)/r.width-.5,c=(i.clientY-r.top)/r.height-.5,l=Math.max(-1,Math.min(1,s*2))*4.5,u=Math.max(-1,Math.min(1,c*2))*-4.5;n.style.transform=`perspective(1100px) rotateX(${u.toFixed(3)}deg) rotateY(${l.toFixed(3)}deg) translateY(-3px)`},{passive:!0}),document.addEventListener(`pointerleave`,()=>a()),document.addEventListener(`pointerdown`,t=>{(t.target instanceof Element?t.target.closest(e):null)!==n&&a()},{passive:!0}),window.addEventListener(`blur`,()=>a()),window.addEventListener(`scroll`,()=>a(),{passive:!0})})();</script></html><script type="module">function e(){document.querySelectorAll(`.prose pre`).forEach(e=>{if(e.closest(`.code-panel`))return;let t=e.querySelector(`code`),n=(t??e).textContent??``,r=t?.className.match(/language-([\w+-]+)/)?.[1]??`text`,i=n.replace(/\n$/,``).split(`
+`).length,a=Array.from(n.matchAll(/`{3,}/g)).map(e=>e[0].length),o=a.length?Math.max(3,Math.max(...a)+1):3,s="`".repeat(o)+`markdown
+`+(n.endsWith(`
+`)?n:n+`
+`)+"`".repeat(o),c=document.createElement(`figure`);c.className=`code-panel`;let l=document.createElement(`figcaption`);l.className=`code-panel-head`;let u=document.createElement(`span`);u.className=`code-lang`,u.textContent=r;let d=document.createElement(`span`);d.className=`code-lines`,d.textContent=`${i} 行`;let f=document.createElement(`span`);f.className=`copy-feedback`,f.setAttribute(`aria-live`,`polite`);let p=document.createElement(`button`);p.type=`button`,p.className=`copy-btn`,p.textContent=`复制本块`,l.append(u,d,f,p),e.replaceWith(c),c.append(l,e);let m;p.addEventListener(`click`,async()=>{let e=!1;try{await navigator.clipboard.writeText(s),e=!0}catch{try{let t=document.createElement(`textarea`);t.value=s,t.style.position=`fixed`,t.style.opacity=`0`,document.body.appendChild(t),t.select(),e=document.execCommand(`copy`),t.remove()}catch{e=!1}}f.textContent=e?`已复制本块`:`复制失败，请手动选取`,p.textContent=e?`已复制`:`复制本块`,clearTimeout(m),m=setTimeout(()=>{f.textContent=``,p.textContent=`复制本块`},3e3)})})}e();</script>

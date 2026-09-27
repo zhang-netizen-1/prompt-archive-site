@@ -1,0 +1,388 @@
+<!DOCTYPE html><html lang="zh-CN" data-astro-cid-tq46r5sz><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="四种特效风格各配效果视频、完整打斗提示词与约 12 行特效形态取值表，可整段投喂或按行替换特效描述。含「酒剑仙」角色名，公开前需确认。"><link rel="icon" href="/prompt-archive-site/favicon.svg" type="image/svg+xml"><title>Seedance 风格化打斗效果（水墨/烟尘/破碎/能量） · 方法笔记</title><link rel="stylesheet" href="/prompt-archive-site/_astro/SiteLayout.DYPNTGRP.css"><style>.note-header[data-astro-cid-vex5zuxs]{max-width:calc(var(--note-width) + 280px);margin:0 auto;padding:40px 24px 0}
+</style></head><body data-astro-cid-tq46r5sz><a class="skip-link" href="#main" data-astro-cid-tq46r5sz>跳到主要内容</a><div class="announce" data-astro-cid-tq46r5sz><a href="/prompt-archive-site/cases/" data-astro-cid-tq46r5sz>PA·ARCHIVE — 每个完整案例一个独立页面，提示词与 Wiki 原文逐字一致 ↗</a></div><header class="site-header" data-astro-cid-tq46r5sz><div class="container" data-astro-cid-tq46r5sz><a class="brand" href="/prompt-archive-site/" data-astro-cid-tq46r5sz><span class="brand-glyph" data-astro-cid-tq46r5sz>PA</span><span class="brand-name" data-astro-cid-tq46r5sz>AI 提示词档案馆</span></a><nav class="site-nav" aria-label="主导航" data-astro-cid-tq46r5sz><a href="/prompt-archive-site/images/" data-astro-cid-tq46r5sz>图像案例<span class="nav-no" data-astro-cid-tq46r5sz>01</span></a><a href="/prompt-archive-site/videos/" data-astro-cid-tq46r5sz>视频案例<span class="nav-no" data-astro-cid-tq46r5sz>02</span></a><a href="/prompt-archive-site/notes/" aria-current="page" data-astro-cid-tq46r5sz>方法笔记<span class="nav-no" data-astro-cid-tq46r5sz>03</span></a></nav><div class="header-cta" data-astro-cid-tq46r5sz><a class="header-search-link" href="/prompt-archive-site/cases/" aria-label="全站搜索案例" data-astro-cid-tq46r5sz><span class="icon" style="width:15px;height:15px" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="6.1"/><line x1="13.6" y1="13.6" x2="18" y2="18"/></svg></span><span data-astro-cid-tq46r5sz>搜索</span><span class="nav-no" data-astro-cid-tq46r5sz>04</span></a></div></div></header><main id="main" data-astro-cid-tq46r5sz><div class="note-page" data-astro-cid-vex5zuxs><div class="note-header" data-astro-cid-vex5zuxs><nav class="breadcrumbs" aria-label="面包屑" data-astro-cid-vex5zuxs><a href="/prompt-archive-site/" data-astro-cid-vex5zuxs>首页</a><span aria-hidden="true" data-astro-cid-vex5zuxs>/</span><a href="/prompt-archive-site/notes/" data-astro-cid-vex5zuxs>方法笔记</a><span aria-hidden="true" data-astro-cid-vex5zuxs>/</span><span aria-current="page" data-astro-cid-vex5zuxs>Seedance 风格化打斗效果（水墨/烟尘/破碎/能量）</span></nav><h1 style="font-size:32px" data-astro-cid-vex5zuxs>Seedance 风格化打斗效果（水墨/烟尘/破碎/能量）</h1><p class="note-meta" data-astro-cid-vex5zuxs><span class="medium-chip" data-astro-cid-vex5zuxs>提示词库</span><span data-astro-cid-vex5zuxs>视频</span><span data-astro-cid-vex5zuxs>源资料：🎬seedance2.5+2.0fast风格化打斗效果（prompts）</span></p><p class="note-summary" data-astro-cid-vex5zuxs>四种特效风格各配效果视频、完整打斗提示词与约 12 行特效形态取值表，可整段投喂或按行替换特效描述。含「酒剑仙」角色名，公开前需确认。</p></div><div class="note-layout" data-astro-cid-vex5zuxs><aside class="note-toc" aria-label="目录" data-astro-cid-vex5zuxs><p class="toc-title" data-astro-cid-vex5zuxs>目录</p><a href="#水墨" data-astro-cid-vex5zuxs>水墨</a><a href="#烟尘" data-astro-cid-vex5zuxs>烟尘</a><a href="#破碎" data-astro-cid-vex5zuxs>破碎</a><a href="#能量" data-astro-cid-vex5zuxs>能量</a><a href="#豆包生成效果" data-astro-cid-vex5zuxs>豆包生成效果</a></aside><div class="note-main" data-astro-cid-vex5zuxs><div class="prose" data-astro-cid-vex5zuxs><h1 id="seedance2520fast-风格化打斗效果">Seedance2.5+2.0fast 风格化打斗效果</h1>
+<p>草图是用来理解规则表格的，不要作为参考图用</p>
+<h2 id="水墨">水墨</h2>
+<p><video controls preload="metadata" src="/prompt-archive-site/media/d8f1118237484431-h264-720p-v1.mp4"></video></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">3D次世代CG写实渲染，顶级仙侠玄幻美学，高燃精准卡点，快节奏，8K超清高帧率，电影级UE5渲染，PBR物理材质，Lumen全局光照，体积光，动态运动模糊，自然景深，电影级高对比光影，画面洁净无噪点，动作丝滑无穿模/崩坏/跳帧，时序精准匹配，光影统一，镜头逻辑连贯， 暗调电影光影，冷暖色调对比，月夜环境，点缀暖金色星火，大面积暗部极简留白，舞台氛围感浓厚，写意水墨质感，宽银幕构图，气质飒爽清冷孤寂空灵，细节极致丰富，裙摆缠绕水墨流体星火火焰碎光，虚实水墨剑气流光能量环绕周身，凌厉仙侠战斗特效，地面有薄薄积水倒映满月与星火， 0s-0.5s, 固定机位定帧锁焦，画面中央巨型满月散发暖黄辉光，白衣长裙女子墨妖从满月前爆发式持笔冲出，逆光深色剪影，裙摆开衩广袖长发高速后飘，脚下踏破薄积水溅起弧形水花，</span></span>
+<span class="line"><span style="color:#E1E4E8">0.5s-1s, 尾部稳定跟拍极速推镜，墨妖笔尖拖出黑色水墨光轨，星火碎光环绕，身后白衣长发捉妖师持剑爆发追上，剑身反射暖黄月光，剑刃拖出金色光轨，</span></span>
+<span class="line"><span style="color:#E1E4E8">1s-1.5s, 侧方平行高速跟拍，木质栈道上两人踏碎积水狂奔水花四溅，捉妖师挥剑横扫带出金色剑光轨迹，墨妖旋身闪避，广袖翻飞水墨残留，</span></span>
+<span class="line"><span style="color:#E1E4E8">1.5s-2s, 碰撞点极速推镜+交缠点小半环绕锁焦，毛笔与金色剑光高频交格火星四溅，黑色水墨轨迹炸开，两人衣发剧烈飘动，</span></span>
+<span class="line"><span style="color:#E1E4E8">2s-2.5s, 攻击轨迹全程跟拍+攻击终点定点锁焦，墨妖挥笔横扫，笔尖拖出黑色水墨流体缠绕裙摆，捉妖师后仰闪避发丝飞扬，</span></span>
+<span class="line"><span style="color:#E1E4E8">2.5s-3s, 低仰角贴地跟拍横扫轨迹+末端急停拉镜，捉妖师金色剑光横扫，撕裂栈道两侧写满毛笔字的白色垂纱布幔，不规则毛边碎布纷飞，</span></span>
+<span class="line"><span style="color:#E1E4E8">3s-3.5s, 跟随运镜+粒子凝聚全程锁焦，墨妖被手中毛笔牵引带飞，身体平展如御笔飞行，广袖长发与裙摆水墨向后流淌，笔尖直指前方一个白色帷帐飞入，</span></span>
+<span class="line"><span style="color:#E1E4E8">3.5s-4s, 越肩视角急起伏跟拍，捉妖师紧随其后同样钻入白色帷帐，画面瞬间切换为2D黑白水墨虚空世界，半空漂浮巨大毛笔字，字迹边缘散发黑色水墨氤氲气息，</span></span>
+<span class="line"><span style="color:#E1E4E8">4s-4.5s, 锁帧定格+多机位跳切+极速跟拍，墨妖手中毛笔消失，在巨字间掐诀闪躲，毛笔字拖着水墨氤氲轨迹高速冲向捉妖师， 5s-5.5s, 攻击轨迹全程跟拍+攻击终点定点锁焦，捉妖师挥剑砍劈第一个毛笔字，剑在2D水墨虚空中化为黑色水墨质地轨迹，被砍中的字如墨滴落入清水般缓缓晕开，水墨向四周优美扩散消散， 5.5s-6s, 多攻击点快速切换跟拍+最后一击定点定格，捉妖师连续挥砍多个毛笔字，黑色水墨剑刃上下翻飞，毛笔字接连被斩碎化作氤氲墨晕缓缓散开，墨点如雨飘落， 6s-6.5s, 低仰角极速推镜+爆发中心主体锁焦，更多毛笔字从四面八方围攻，捉妖师旋身挥剑连斩，黑色水墨剑刃横扫字群，被斩中的字接连晕开成墨色涟漪四散， 6.5s-7s, 固定机位锁焦+核心动作点锚点定格，捉妖师背对镜头双手持剑奋力横劈，黑色水墨剑刃在虚空中划开一道横向的笔直细长的白色缝隙，缝隙光滑无毛边，深处透出月亮， 7s-8s, 穿堂式穿梭推进，捉妖师背对镜头被剑牵引顺着笔直缝隙高速穿过，2D水墨画面平滑切换为3D世界，月光倾泻而入</span></span></code></pre>
+<p><img src="/prompt-archive-site/media/8cdf335004fbd219.png" alt=""></p>
+<table>
+<thead>
+<tr>
+<th>形态</th>
+<th>运动规律</th>
+<th>Seedance提示词</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>飞行</strong></td>
+<td>沿抛物线射出，尾部拖出光滑弧线光轨</td>
+<td>墨汁从笔尖甩出，在空中拉伸为流动的黑色墨带。尾部拖出光滑弧形光轨向前飞驰。</td>
+</tr>
+<tr>
+<td><strong>飞溅</strong></td>
+<td>被击中瞬间向四面八方散射弹飞</td>
+<td>墨团被斩击命中，瞬间炸裂为密集黑色墨点。墨点向四面八方高速散射弹飞。</td>
+</tr>
+<tr>
+<td><strong>扩散</strong></td>
+<td>由中心向外优美扩散，边缘渐变透明直至消散</td>
+<td>墨滴如落入清水，由中心向外缓缓晕开成氤氲墨晕。边缘渐变透明直至彻底消散于虚空。</td>
+</tr>
+<tr>
+<td><strong>墨液缠绕</strong></td>
+<td>随衣物飘动流淌，沿布料纹理蜿蜒延伸</td>
+<td>黑色水墨流体如丝带缠绕附着在裙摆上。随布料飘动沿纹理蜿蜒流淌蜿蜒起伏。</td>
+</tr>
+<tr>
+<td><strong>文字悬浮</strong></td>
+<td>静止悬浮虚空中，边缘墨息如呼吸般微弱脉动</td>
+<td>巨大毛笔字悬浮于墨色虚空，字迹边缘散发潮湿氤氲气息。墨息如呼吸般微弱脉动明暗交替。</td>
+</tr>
+<tr>
+<td><strong>文字飞行</strong></td>
+<td>从四面八方汇聚冲向目标，尾部拖出飘忽墨痕</td>
+<td>毛笔字拖着水墨氤氲轨迹从四面八方高速冲向画面中心。尾部飘忽墨痕拉出长尾，拖曳感强烈。</td>
+</tr>
+<tr>
+<td><strong>剑的轨迹</strong></td>
+<td>挥砍中拖出光滑流畅的弧形水墨残影</td>
+<td>剑身在挥砍中化为黑色水墨质地，拖出光滑流畅的弧形墨痕残影。残影随剑速拉长逐渐变淡。</td>
+</tr>
+<tr>
+<td><strong>墨点飘落</strong></td>
+<td>自空中缓慢垂直下落，质地轻盈飘忽</td>
+<td>碎裂的墨晕化作密集墨点，如细雨自空中轻盈飘落。墨点下落轨迹微飘摇曳，质地轻若无物。</td>
+</tr>
+<tr>
+<td><strong>涟漪</strong></td>
+<td>以被击中点为中心，涟漪向外层层扩散消退</td>
+<td>击中处晕开为墨色同心涟漪，由中心向外层层扩散。涟漪幅度逐渐衰减后缓缓消退归于平静。</td>
+</tr>
+<tr>
+<td><strong>墨缝开裂</strong></td>
+<td>自上而下劈开虚空，裂缝光滑无毛边，瞬间定格</td>
+<td>水墨剑刃自上而下劈开虚空，留下一道光滑无毛边的笔直白色细缝。裂缝定格瞬间，深处透出微光。</td>
+</tr>
+<tr>
+<td><strong>墨团现身</strong></td>
+<td>墨团先在地面晕开扩散，再从墨中探出肢体</td>
+<td>一团氤氲墨汁在地面晕开扩散，墨痕沿地面蔓延。一只手骤然从墨团中心探出，指间墨痕滴落。</td>
+</tr>
+<tr>
+<td><strong>墨身消散</strong></td>
+<td>身体由实体逐渐半透明，最终化为墨雾融入虚空</td>
+<td>人形由实体逐渐化为半透明水墨烟雾，轮廓缓缓模糊。最终彻底融入墨色虚空，消散于无形。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>取值速拷（12 条 · 与上表逐字一致）</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>墨汁从笔尖甩出，在空中拉伸为流动的黑色墨带。尾部拖出光滑弧形光轨向前飞驰。</span></span>
+<span class="line"><span>墨团被斩击命中，瞬间炸裂为密集黑色墨点。墨点向四面八方高速散射弹飞。</span></span>
+<span class="line"><span>墨滴如落入清水，由中心向外缓缓晕开成氤氲墨晕。边缘渐变透明直至彻底消散于虚空。</span></span>
+<span class="line"><span>黑色水墨流体如丝带缠绕附着在裙摆上。随布料飘动沿纹理蜿蜒流淌蜿蜒起伏。</span></span>
+<span class="line"><span>巨大毛笔字悬浮于墨色虚空，字迹边缘散发潮湿氤氲气息。墨息如呼吸般微弱脉动明暗交替。</span></span>
+<span class="line"><span>毛笔字拖着水墨氤氲轨迹从四面八方高速冲向画面中心。尾部飘忽墨痕拉出长尾，拖曳感强烈。</span></span>
+<span class="line"><span>剑身在挥砍中化为黑色水墨质地，拖出光滑流畅的弧形墨痕残影。残影随剑速拉长逐渐变淡。</span></span>
+<span class="line"><span>碎裂的墨晕化作密集墨点，如细雨自空中轻盈飘落。墨点下落轨迹微飘摇曳，质地轻若无物。</span></span>
+<span class="line"><span>击中处晕开为墨色同心涟漪，由中心向外层层扩散。涟漪幅度逐渐衰减后缓缓消退归于平静。</span></span>
+<span class="line"><span>水墨剑刃自上而下劈开虚空，留下一道光滑无毛边的笔直白色细缝。裂缝定格瞬间，深处透出微光。</span></span>
+<span class="line"><span>一团氤氲墨汁在地面晕开扩散，墨痕沿地面蔓延。一只手骤然从墨团中心探出，指间墨痕滴落。</span></span>
+<span class="line"><span>人形由实体逐渐化为半透明水墨烟雾，轮廓缓缓模糊。最终彻底融入墨色虚空，消散于无形。</span></span></code></pre>
+<h2 id="烟尘">烟尘</h2>
+<p><video controls preload="metadata" src="/prompt-archive-site/media/02f08ada369de62f-h264-720p-v1.mp4"></video></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">3D CG国漫，顶级仙侠玄幻美学、硬核格斗美学，高燃精准卡点，快节奏，8K超清高帧率，电影级UE5渲染，PBR物理材质，全局体积光照，氛围感强，动作丝滑无穿模/崩坏/跳帧，时序精准匹配，动态模糊自然，光影统一，镜头逻辑连贯，</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#E1E4E8">0s-0.5s, 贴身平行极速横移运镜+碰撞点锁焦，废弃村落硝烟弥漫空无一人，黑发红衣少年持银剑与白发男子持黑玄铁剑正面相撞，双剑交击火星四溅，红发光烟与蓝焰交织，两人衣发剧烈飘动，</span></span>
+<span class="line"><span style="color:#E1E4E8">0.5s-1s, 碰撞点极速推镜+交缠点小半环绕锁焦，双剑互格角力僵持，银剑红色发光烟雾翻涌，玄铁剑蓝焰燃烧，白发男子周身黑色烟雾随发力激荡，</span></span>
+<span class="line"><span style="color:#E1E4E8">1s-1.5s, 攻击轨迹全程跟拍+攻击终点定点锁焦，红衣少年连续快斩，银剑拖出红色光轨残影，白发男子挥剑格挡后退，黑色烟雾沿运动轨迹拖出长尾，</span></span>
+<span class="line"><span style="color:#E1E4E8">1.5s-2s, 低角度贴地跟拍横扫轨迹+横扫末端急停拉镜，白发男子玄铁剑蓄力横扫，蓝焰划出弧形光带，红衣少年后仰闪避，剑风掀起地面尘土碎石飞溅，</span></span>
+<span class="line"><span style="color:#E1E4E8">2s-2.5s, 低仰角贴脸渐进推进+发力点锁焦，红衣少年银剑高举蓄力，红色发光烟雾在剑身螺旋汇聚翻涌，黑发红衣狂舞，白发男子冷眼注视，黑色烟雾在周身脉冲式扩散，</span></span>
+<span class="line"><span style="color:#E1E4E8">2.5s-3s, 垂直攻击轨迹跟拍+落地冲击点俯角锁焦，红衣少年一剑劈下震退白发男子，随即纵身跃起，地面被剑压犁出裂纹扬尘，白发男子被震得黑烟四溢，</span></span>
+<span class="line"><span style="color:#E1E4E8">3s-3.5s, 低角度仰跟运镜+垂直上摇至过顶跟拍，红衣少年凌空翻身落在残破屋顶瓦片上，瓦片崩飞尘土溅起，白发男子周身黑烟缠绕腾身跃起追击，蓝焰剑光在硝烟中拖出轨迹，</span></span>
+<span class="line"><span style="color:#E1E4E8">3.5s-4s, 贴地侧移极速跟拍+低角度半环绕，两人在屋顶高速对攻，银剑与玄铁剑连环碰撞火星四溅，红色光烟与蓝焰在硝烟中交织炸开，瓦片崩飞，黑烟随白发男子每个动作剧烈翻涌，</span></span>
+<span class="line"><span style="color:#E1E4E8">4s-4.5s, 侧方跟随运镜+高速连续甩镜越障跟拍，红衣少年踏瓦急转跃过残破屋檐，白发男子化作半透明黑烟紧追不舍，黑烟拖出飘忽轨迹，蓝焰剑光在烟中闪烁明灭，</span></span>
+<span class="line"><span style="color:#E1E4E8">4.5s-5s, 尾部稳定跟拍运镜+极速推镜穿云，白发男子身形骤然崩散为浓烈黑色烟雾冲天而起，蓝焰剑光裹挟其中直冲云霄，黑烟翻滚如龙，红衣少年仰头纵身跃起追击，</span></span>
+<span class="line"><span style="color:#E1E4E8">5s-5.5s, 低仰角极速推进转半环绕运镜，红衣少年腾空直上高空，银剑红色发光烟雾拖出长尾光带，白发男子悬空而立，人形连同手中玄铁剑一同崩解消融，化作一团浓烈黑色魔雾，如墨龙冲天直追红衣少年，</span></span>
+<span class="line"><span style="color:#E1E4E8">5.5s-6s, 尾随极速跟拍+穿云推进运镜，黑色魔雾翻滚如墨龙穿云，紧咬红衣少年身后高速追逐，黑雾拖出飘忽长尾撕开云层，红衣少年回头疾驰，银剑红烟拖曳如彗星长尾，双方距离急速拉近，</span></span>
+<span class="line"><span style="color:#E1E4E8">6s-6.5s, 尾随极速跟拍+低仰角急速推进，黑色魔雾保持一团整体形态紧咬红衣少年继续高速追击，红烟长尾与黑雾轨迹在云层间交错缠绕，双方破云疾驰，距离在追逐中不断拉近，</span></span>
+<span class="line"><span style="color:#E1E4E8">6.5s-7s, 低仰角极速推进+正面锁定运镜，黑色魔雾绕到红衣少年正前方急速收拢凝聚，白发男子手持玄铁剑自黑雾中重新浮现人形，蓝焰包裹剑身暴涨，与红衣少年凌空对峙，两人衣发在云风中狂舞，</span></span>
+<span class="line"><span style="color:#E1E4E8">7s-7.5s, 垂直俯冲跟拍+极速推进运镜，银剑与玄铁剑凌空正面相撞，红色发光烟雾与蓝色燃烧烟雾对冲爆发，环形冲击波震开云层，两人从云端高速下坠边打边落，连环碰撞火星四溅，黑雾沿下坠轨迹拖出长尾，</span></span>
+<span class="line"><span style="color:#E1E4E8">7.5s-8s, 低角度贴地仰拍+冲击点锁焦定格，两人坠回地面，最后一记重击玄铁剑与银剑正面硬撼，环形冲击波炸开尘土碎石，红衣少年与白发男子剑刃相抵僵持，黑雾余烟四散，画面定格收尾。</span></span></code></pre>
+<p><img src="/prompt-archive-site/media/f902852f4f823ff8.png" alt=""></p>
+<table>
+<thead>
+<tr>
+<th><strong>形态</strong></th>
+<th><strong>运动规律</strong></th>
+<th><strong>视频提示词</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>烟雾附着</strong></td>
+<td>发光烟雾紧贴武器表面，随兵器挥动同步流转</td>
+<td>红色发光烟雾紧贴银剑剑身吞吐涌动，随挥砍方向同步流转。蓝色燃烧火焰包裹玄铁剑表面剧烈跳动不息。</td>
+</tr>
+<tr>
+<td><strong>脉冲</strong></td>
+<td>以身体为中心向外呈环形脉冲式扩散</td>
+<td>黑色烟雾以身体为中心向外脉冲式扩散，一波接一波激荡开来。每次脉冲都随发力节奏同步推进增强。</td>
+</tr>
+<tr>
+<td><strong>长尾</strong></td>
+<td>高速移动时烟雾沿运动轨迹拖出飘忽长尾</td>
+<td>烟雾沿高速运动轨迹向后拖出飘忽长尾，尾端逐渐变薄消散。长尾随转向弯曲拉出流畅弧线轨迹。</td>
+</tr>
+<tr>
+<td><strong>翻涌</strong></td>
+<td>烟雾在周身剧烈翻滚涌动，体积层层堆叠</td>
+<td>浓烈黑色烟雾在周身剧烈翻涌，体积层层堆叠如浪涌。烟雾随每个攻击动作爆发出更强的翻滚幅度。</td>
+</tr>
+<tr>
+<td><strong>尘土扬飞</strong></td>
+<td>剑风/踩踏/撞击掀起地面尘土碎石，呈扇形弹射</td>
+<td>剑风掠过地面掀起尘土碎石呈扇形弹射飞溅。瓦片踏碎瞬间尘土从缝隙中爆涌而出向上飞扬。</td>
+</tr>
+<tr>
+<td><strong>对冲</strong></td>
+<td>双色烟雾正面相撞，对冲处爆发环形冲击波</td>
+<td>红色发光烟雾与蓝色燃烧烟雾正面相撞，对冲处骤然爆发。环形冲击波震开周围烟尘向四面八方扩散。</td>
+</tr>
+<tr>
+<td><strong>崩散</strong></td>
+<td>人形连同武器崩解消融，散为浓烈烟雾团</td>
+<td>人形连同手中兵器骤然崩解消融，散为一团浓烈黑色烟雾。烟雾团原地剧烈翻滚膨胀后冲天而起。</td>
+</tr>
+<tr>
+<td><strong>烟雾穿透云雾</strong></td>
+<td>烟雾形体高速穿透云层，拖出飘忽长尾撕开云雾</td>
+<td>黑色魔雾翻滚如墨龙高速穿透云层向上空冲刺。尾部拖出飘忽长尾撕开云雾留下贯穿通道。</td>
+</tr>
+<tr>
+<td><strong>缠绕</strong></td>
+<td>多条烟雾轨迹在空间中交错缠绕纠缠</td>
+<td>红色烟尾与黑色雾轨在云层间高速交错，彼此缠绕追逐。双色烟雾轨迹螺旋交织画出复杂弧线后分开。</td>
+</tr>
+<tr>
+<td><strong>冲击+荡尘</strong></td>
+<td>冲击波/重击产生的环形气浪向外推开周围烟尘</td>
+<td>重击落地瞬间环形冲击波猛烈炸开，推开周围弥漫的烟尘。烟尘被推出一圈清晰的洁净区域后缓缓回流。</td>
+</tr>
+<tr>
+<td><strong>烟尘余散</strong></td>
+<td>战斗结束后烟尘减速沉降，由浓转淡消散</td>
+<td>黑雾余烟从浓烈逐渐变薄，缓缓向四周沉降扩散。烟尘减速飘荡最终消散归于宁静。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>取值速拷（11 条 · 与上表逐字一致）</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>红色发光烟雾紧贴银剑剑身吞吐涌动，随挥砍方向同步流转。蓝色燃烧火焰包裹玄铁剑表面剧烈跳动不息。</span></span>
+<span class="line"><span>黑色烟雾以身体为中心向外脉冲式扩散，一波接一波激荡开来。每次脉冲都随发力节奏同步推进增强。</span></span>
+<span class="line"><span>烟雾沿高速运动轨迹向后拖出飘忽长尾，尾端逐渐变薄消散。长尾随转向弯曲拉出流畅弧线轨迹。</span></span>
+<span class="line"><span>浓烈黑色烟雾在周身剧烈翻涌，体积层层堆叠如浪涌。烟雾随每个攻击动作爆发出更强的翻滚幅度。</span></span>
+<span class="line"><span>剑风掠过地面掀起尘土碎石呈扇形弹射飞溅。瓦片踏碎瞬间尘土从缝隙中爆涌而出向上飞扬。</span></span>
+<span class="line"><span>红色发光烟雾与蓝色燃烧烟雾正面相撞，对冲处骤然爆发。环形冲击波震开周围烟尘向四面八方扩散。</span></span>
+<span class="line"><span>人形连同手中兵器骤然崩解消融，散为一团浓烈黑色烟雾。烟雾团原地剧烈翻滚膨胀后冲天而起。</span></span>
+<span class="line"><span>黑色魔雾翻滚如墨龙高速穿透云层向上空冲刺。尾部拖出飘忽长尾撕开云雾留下贯穿通道。</span></span>
+<span class="line"><span>红色烟尾与黑色雾轨在云层间高速交错，彼此缠绕追逐。双色烟雾轨迹螺旋交织画出复杂弧线后分开。</span></span>
+<span class="line"><span>重击落地瞬间环形冲击波猛烈炸开，推开周围弥漫的烟尘。烟尘被推出一圈清晰的洁净区域后缓缓回流。</span></span>
+<span class="line"><span>黑雾余烟从浓烈逐渐变薄，缓缓向四周沉降扩散。烟尘减速飘荡最终消散归于宁静。</span></span></code></pre>
+<h2 id="破碎">破碎</h2>
+<p><video controls preload="metadata" src="/prompt-archive-site/media/fba26a7e03a234cd-h264-720p-v1.mp4"></video></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">3D CG国漫，顶级仙侠玄幻美学，夜晚刚下过雨，高燃精准卡点，快节奏，8K超清高帧率，电影级UE5渲染，PBR物理材质，全局体积光照，氛围感强，动作丝滑无穿模/崩坏/跳帧，时序精准匹配，动态模糊自然，光影统一，镜头逻辑连贯，</span></span>
+<span class="line"><span style="color:#E1E4E8">0s-0.5s, 客栈外，手部特写急推→碰撞点极速推镜，酒剑仙0.1秒内闪电从腰间抽剑，剑尖带出巨大耀眼的金色光轨直刺红衣女妖，女妖手中收拢的红伞猛然撑开，伞面正正挡住剑尖，紫色氤氲烟雾爆涌，火星四溅，湿滑地面水花飞溅，</span></span>
+<span class="line"><span style="color:#E1E4E8">0.5s-1s, 客栈外空地，贴身平行极速横移→躯干纵向锁焦，剑伞高频互格，酒剑仙挥剑连斩，粗壮金色剑轨如电横扫，女妖撑伞格挡顺势转伞卸力，身姿曼妙如舞，紫色烟雾与金光交错炸裂，白袍红裙猎猎翻飞、发丝飘动，</span></span>
+<span class="line"><span style="color:#E1E4E8">1s-1.5s, 客栈外，攻击轨迹全程跟拍→攻击终点定点锁焦，红衣女妖收伞如枪横扫反击，旋身带伞划出优美弧线，伞身裹着紫色氤氲烟雾砸向酒剑仙，酒剑仙提剑格挡，巨大金色光轨与紫雾相撞火星迸溅，两人一路激战至客栈墙根朱红廊柱旁，屋檐滴水，湿滑地面水花四溅，</span></span>
+<span class="line"><span style="color:#E1E4E8">1.5s-2s, 客栈外沿朱红廊柱垂直而上，低角度仰跟运镜→垂直上摇至过顶跟拍，红衣女妖收伞踏柱飞身，足尖连点朱红廊柱攀升，身段如柳轻盈，酒剑仙足踏红柱紧随其后，两人同框一前一后追逐爬升，紫色烟雾拖出上升残影，雨后廊柱湿滑泛光，</span></span>
+<span class="line"><span style="color:#E1E4E8">2s-2.5s, 屋顶瓦片之上，双体中心等距同步跟移→对抗中线锁焦，红衣女妖旋身转伞，下腰仰身伞面划过，紫色烟雾划出柔美圆弧，酒剑仙挥剑横扫巨大金色光轨，剑伞交击湿滑瓦片溅起水珠瓦片碎裂，</span></span>
+<span class="line"><span style="color:#E1E4E8">2.5s-3s, 屋顶瓦片之上，碰撞点极速推镜→交缠点小半环绕锁焦，酒剑仙一剑重斩，巨大金色光轨如虹劈落，红衣女妖下腰后仰堪堪避过，旋身借力转伞反削一剑，身姿如舞，脚下瓦片崩裂炸开，整片房顶开始塌陷，</span></span>
+<span class="line"><span style="color:#E1E4E8">3s-3.5s, 房顶塌陷坠入客栈内，俯冲跟拍→快速下降，屋顶轰然塌陷，瓦片、房梁、砖石崩裂下坠，两人随塌陷的屋顶坠入客栈内二层，半空中红衣女妖撑伞旋身缓冲，裙摆飞扬身姿柔美，酒剑仙挥剑追击巨大金色光轨，剑光与紫雾在塌陷坠落中仍纠缠碰撞，砖瓦尘土翻涌，</span></span>
+<span class="line"><span style="color:#E1E4E8">3.5s-4s, 客栈二层走廊，贴地同步跟移→地面核心动作点锁焦，落地即战，头顶塌陷的瓦片砖石还在坠落，大红色彩绸垂挂被剑气撕碎飘飞，剑伞互格巨大金色光轨与紫雾交击撞碎木栏，木屑飞溅，女妖旋身转伞卸力稳住身形，走廊地板水渍反光，</span></span>
+<span class="line"><span style="color:#E1E4E8">4s-4.5s, 客栈二层走廊，直线抽击轨迹极速跟拍→命中点微距锁焦，红衣女妖合伞如枪突刺，紫色烟雾凝成尖芒直刺，酒剑仙侧身闪避，伞尖擦身而过刺穿木柱，伞尖甩落水珠，4.5s-5s, 从客栈二层荡入一层大堂，摆荡轨迹极速跟拍→落地缓冲甩镜，红衣女妖退至栏杆边抓住垂挂大红色彩绸凌空荡向一层，凌空旋身裙摆如花绽放，紫色烟雾拖出弧线，酒剑仙纵身跃下紧追，落地瞬间桌椅被气浪掀翻，紫雾金光炸开，大堂地面水渍被震起水花，5s-5.5s, 客栈一层大堂，低仰角极速推进→对抗中线锁焦，两人落地继续激战，酒剑仙挥剑巨大金色光轨连斩，女妖撑伞格挡旋身转伞，下腰仰身躲避剑锋，伞面紫雾螺旋翻涌，衣袂翻飞，5.5s-6s, 客栈一层大堂，绕身极速圆周环移→躯体核心动态锁焦，红衣女妖旋身转伞蓄力，下腰仰身后伞尖裹着紫色烟雾横扫反击，身姿如惊鸿，逼得酒剑仙横剑格挡，巨大金色光轨抵住紫雾被震退滑步，有来有回攻防互换，6s-6.5s, 客栈一层大堂，碰撞点极速推镜→交缠点环绕锁焦，酒剑仙挥剑格挡，剑伞相抵角力僵持，巨大金色光轨与紫色烟雾在交点炸裂，两人四目相对，发丝衣袍被气浪掀起，衣摆水珠甩落，6.5s-7s, 客栈一层大堂，攻击轨迹全程跟拍→攻击终点定点锁焦，酒剑仙一剑横扫，粗壮金色光轨划出长弧，红衣女妖下腰仰身险险避过，旋身转伞卸力稳住身形，彩绸残片随气浪飘飞，7s-8s, 客栈一层大堂，锁帧定格→极速推镜，酒剑仙跃起一剑下劈，巨大金色光轨如瀑倾泻，红衣女妖撑伞顶格，下腰仰身裙摆飞扬，伞面紫雾爆涌如潮，剑伞交击水花四溅火星四溅，画面定格收尾。</span></span></code></pre>
+<p><img src="/prompt-archive-site/media/cd4290fb51efa4fb.png" alt=""></p>
+<table>
+<thead>
+<tr>
+<th><strong>形态</strong></th>
+<th><strong>运动规律</strong></th>
+<th><strong>视频提示词</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>瓦片崩飞</strong></td>
+<td>被踩踏时瓦片从中心崩裂，碎片向四周弹射飞溅</td>
+<td>脚掌踏落屋顶，瓦片从中心向外崩裂碎成数块弹射飞溅。碎片沿受力方向呈扇形散射，互相碰撞二次碎裂。</td>
+</tr>
+<tr>
+<td><strong>屋顶塌陷</strong></td>
+<td>结构由受力点开始逐层坍塌，整片向下陷落</td>
+<td>屋顶受力贯穿后由中心开始逐层向下塌陷，坍塌范围向外扩大。瓦片、房梁、砖石失去支撑相继崩裂坠落。</td>
+</tr>
+<tr>
+<td><strong>梁柱崩落</strong></td>
+<td>梁木断裂后自身重量拖拽下部结构一同下坠</td>
+<td>断裂的房梁失去两端支撑，自身重量拖拽下部结构一同坠落。梁木在下坠中翻滚碰撞其他构件加速解体。</td>
+</tr>
+<tr>
+<td><strong>木栏撞碎</strong></td>
+<td>横向受力导致木栏从撞击点断为数截，木屑扇形飞溅</td>
+<td>剑伞互格撞上木栏，栏杆从撞击点断为数截向外弹飞。木屑呈扇形高速飞溅，细小碎片飘散如雾。</td>
+</tr>
+<tr>
+<td><strong>木屑飞溅</strong></td>
+<td>冲击瞬间产生大量细小木屑，高速散射后飘浮沉降</td>
+<td>撞击瞬间大量细小木屑从碎裂处炸开，高速向外散射。木屑散射速度骤降后在空中飘浮，缓缓旋转沉降。</td>
+</tr>
+<tr>
+<td><strong>柱身贯穿</strong></td>
+<td>锐物刺入木柱留下贯穿孔洞，裂纹从孔洞向外放射</td>
+<td>伞尖刺穿木柱留下光滑贯穿孔洞，伞尖从另一侧透出。裂纹从孔洞边缘向外放射蔓延，木渣沿孔壁脱落。</td>
+</tr>
+<tr>
+<td><strong>撕布</strong></td>
+<td>剑气横向划过布料，留下不规则毛边撕裂口</td>
+<td>金色剑气横向扫过垂挂的红色彩绸，切出平滑裂口后撕裂扩大。不规则毛边碎布从裂口处分离，随气流翻卷飘飞。</td>
+</tr>
+<tr>
+<td><strong>气浪</strong></td>
+<td>冲击气浪以爆发点为中心向外推开轻质物体</td>
+<td>落地气浪以撞击点为中心向外猛推，桌椅被骤然掀翻。轻质物体沿气浪方向滑移翻滚，相互碰撞后散落一地。</td>
+</tr>
+<tr>
+<td><strong>碎片</strong></td>
+<td>多种材质碎片在空中混合翻转飘荡</td>
+<td>瓦片、木屑、碎布、尘土混合碎片在空中翻转飘荡。碎片互相碰撞改变轨迹，大小不一的残片分层沉降。</td>
+</tr>
+<tr>
+<td><strong>布幔被扯碎然后飘残</strong></td>
+<td>撕裂后的布幔残片失去张力，轻柔飘落</td>
+<td>撕裂的彩绸残片失去张力后从高处轻柔飘落翻卷。布幔残片在空中起伏翻转，边缘毛边随气流微微颤动。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>取值速拷（10 条 · 与上表逐字一致）</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>脚掌踏落屋顶，瓦片从中心向外崩裂碎成数块弹射飞溅。碎片沿受力方向呈扇形散射，互相碰撞二次碎裂。</span></span>
+<span class="line"><span>屋顶受力贯穿后由中心开始逐层向下塌陷，坍塌范围向外扩大。瓦片、房梁、砖石失去支撑相继崩裂坠落。</span></span>
+<span class="line"><span>断裂的房梁失去两端支撑，自身重量拖拽下部结构一同坠落。梁木在下坠中翻滚碰撞其他构件加速解体。</span></span>
+<span class="line"><span>剑伞互格撞上木栏，栏杆从撞击点断为数截向外弹飞。木屑呈扇形高速飞溅，细小碎片飘散如雾。</span></span>
+<span class="line"><span>撞击瞬间大量细小木屑从碎裂处炸开，高速向外散射。木屑散射速度骤降后在空中飘浮，缓缓旋转沉降。</span></span>
+<span class="line"><span>伞尖刺穿木柱留下光滑贯穿孔洞，伞尖从另一侧透出。裂纹从孔洞边缘向外放射蔓延，木渣沿孔壁脱落。</span></span>
+<span class="line"><span>金色剑气横向扫过垂挂的红色彩绸，切出平滑裂口后撕裂扩大。不规则毛边碎布从裂口处分离，随气流翻卷飘飞。</span></span>
+<span class="line"><span>落地气浪以撞击点为中心向外猛推，桌椅被骤然掀翻。轻质物体沿气浪方向滑移翻滚，相互碰撞后散落一地。</span></span>
+<span class="line"><span>瓦片、木屑、碎布、尘土混合碎片在空中翻转飘荡。碎片互相碰撞改变轨迹，大小不一的残片分层沉降。</span></span>
+<span class="line"><span>撕裂的彩绸残片失去张力后从高处轻柔飘落翻卷。布幔残片在空中起伏翻转，边缘毛边随气流微微颤动。</span></span></code></pre>
+<h2 id="能量">能量</h2>
+<p><video controls preload="metadata" src="/prompt-archive-site/media/b09560cae2ebc227-h264-720p-v1.mp4"></video></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">D CG国漫，顶级仙侠玄幻美学，夜晚诛仙台对决，高燃精准卡点，快节奏，8K超清高帧率，电影级UE5渲染，PBR物理材质，全局体积光照，氛围感强，动作丝滑无穿模/崩坏/跳帧，时序精准匹配，动态模糊自然，光影统一，镜头逻辑连贯。</span></span>
+<span class="line"><span style="color:#E1E4E8">0s-0.5s, 贴身平行极速横移运镜，诛仙台上紫衣魔女挥剑横扫，剑身紫色电弧噼啪炸响，白衣修士仰身躲过，衣袍猎猎。</span></span>
+<span class="line"><span style="color:#E1E4E8">0.5s-1s, 碰撞点极速推镜，白衣修士挥拳反击，拳锋黄色光轨与紫色闪电剑身相撞，爆发强烈爆炸感，火星火光炸裂，冲击波荡开黄色烟尘。</span></span>
+<span class="line"><span style="color:#E1E4E8">1s-1.5s, 攻击轨迹全程跟拍，紫衣魔女旋身连斩，紫色电弧呈弧线甩出，白衣修士侧移闪避，光轨擦过石面溅起碎石，黄色粒子与火光翻涌。</span></span>
+<span class="line"><span style="color:#E1E4E8">1.5s-2s, 低仰角贴脸渐进推进，白衣修士低喝蓄力，双拳黄光暴涨，光轨如流星冲拳轰出，紫衣魔女横剑格挡，碰撞处猛烈爆炸，冲击波炸开，黄色流体透明屏障在爆炸中骤然形成并笼罩全场，黄色粒子、烟尘、雾、火光弥漫。</span></span>
+<span class="line"><span style="color:#E1E4E8">2s-2.5s, 主体朝镜头极速飞来运镜，紫衣魔女猛然撤剑转身，从爆炸的黄色强光中腾空冲出，爆炸光裹挟着飞溅的火星与氤氲气息状的物质翻涌弥漫，身体开始高速自转，长发挥洒、裙摆开衩随旋转甩出层层螺旋弧线，面向镜头疾冲向上空，镜头即天空方向，旋转着冲破爆炸光外围的高空结界，缺口处黄色光芒炸开，下方诛仙台渐远。</span></span>
+<span class="line"><span style="color:#E1E4E8">2.5s-3s, 低仰角极速推进，紫衣魔女保持身体自转，旋转着继续面向镜头冲向天空，脸逐渐变大，裙摆与发丝拖出螺旋光轨，身后白衣修士在追逐中身形直接幻化成巨大的黄色虚影发光巨手，周身骤然炸开狂暴的黄色闪电，粗壮电弧如蛇群缠绕翻涌，瞬间照亮夜空。</span></span>
+<span class="line"><span style="color:#E1E4E8">3s-3.5s, 第一视角极速推镜，紫衣魔女边高速自转边逼近镜头，旋转带起的螺旋气流搅动黄色烟尘，她身后黄色巨手完全成型，位于紫衣魔女后方、相对她离镜头更远，周身黄色闪电高频分叉炸裂、电弧疯狂窜动、噼啪巨响震彻天空，无数黄色发光碎屑如星屑剥离飞散，五指张开朝上空追来。</span></span>
+<span class="line"><span style="color:#E1E4E8">3.5s-4s, 极速推镜逼近，紫衣魔女旋转着急速逼近，脸越来越大、几乎占满画面，发丝与裙摆在自转中画出一道道螺旋残影，</span></span>
+<span class="line"><span style="color:#E1E4E8">4s-4.5s, 子弹时间定格环绕，紫衣魔女的脸几乎占满整个画面，时间骤然凝滞，眉眼妩媚、紫色眼影、发髻散落，旋转中的发丝与裙摆定格在半空、呈螺旋状凝固，黄色光尘、碎屑静止漂浮，镜头以极缓速度环绕她的面部，临场压迫感拉满。4.5s-5s, 子弹时间延续，凝滞感继续延伸，魔女的脸保持占满画面，螺旋状凝固的发丝与衣袂在定格中悬浮，黄色粒子、烟尘在定格中悬浮，悬念张力持续累积。5s-5.5s, 时间恢复镜头剧烈抖动拉远，时间骤然恢复流速，紫衣魔女的自转与冲刺猛然恢复，镜头忽然剧烈抖动、向更高的远处急速移动拉远，紫衣魔女身形在画面中骤然变小。5.5s-6s, 极速拉远至高空俯视，镜头保持持续剧烈抖动、继续向更高处拉远，黄色巨手裹挟狂暴的闪电风暴冲向镜头方向，指尖与掌缘电弧不断炸裂、照亮半边天空，漫天发光碎屑翻涌，遮天蔽日。6s-6.5s, 第一视角极速推镜，黄色巨手几乎占满整个屏幕，周身粗壮闪电狂暴翻涌、电弧如藤蔓般沿巨手蔓延爬升、高频闪烁，五指张开，碎屑翻腾，紫衣魔女在巨手衬托下显得十分渺小。6.5s-7s, 抓取瞬间微距锁焦，黄色巨手五指猛然收拢，掌间黄色闪电轰然爆闪、粗壮电弧沿着巨手手臂炸裂窜动、光耀刺目，碎屑向四周炸开，将渺小的紫衣魔女整个攥住。7s-7.5s, 极速变向甩镜，巨手攥着紫衣魔女向下朝诛仙台方向极速倒飞，周身闪电拖出长长的黄色电弧尾迹，裙摆长发向上拉直，黄色流体屏障在下方若隐若现。7.5s-8s, 俯冲砸落定格收尾，巨手将紫衣魔女狠狠摔在诛仙台上，砸落瞬间周身闪电轰然爆闪后骤然收敛，黄色巨手变回白衣修士本体，砸落激起碎石与黄色光尘，流体屏障剧烈震荡，黄色粒子、烟尘、雾、火光四溅，画面定格结束。</span></span></code></pre>
+<p><img src="/prompt-archive-site/media/c1de9a7133e8b14d.png" alt=""></p>
+<table>
+<thead>
+<tr>
+<th><strong>形态</strong></th>
+<th><strong>运动规律</strong></th>
+<th><strong>视频提示词</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>电弧</strong></td>
+<td>电弧沿武器表面噼啪炸响爬行，高频闪烁分叉</td>
+<td>紫色电弧沿剑身噼啪炸响高速爬行，电光不断分叉闪烁。粗壮电弧如活蛇般缠绕剑刃高频窜动弹跳不止。</td>
+</tr>
+<tr>
+<td><strong>光轨冲拳</strong></td>
+<td>拳锋爆发出明亮光轨，沿出拳方向拖出能量残影</td>
+<td>拳锋骤然爆发黄色光芒，沿出拳方向拖出明亮能量光轨。光轨残影随拳速拉长留下彗星尾迹般的能量拖痕。</td>
+</tr>
+<tr>
+<td><strong>爆炸</strong></td>
+<td>攻击碰撞处猛烈爆炸，火光与能量粒子炸开</td>
+<td>拳与剑碰撞处猛烈爆炸，火光与能量粒子向四周轰然炸开。爆炸中心亮度极高，外围能量碎屑翻滚翻涌。</td>
+</tr>
+<tr>
+<td><strong>冲击+扩散</strong></td>
+<td>冲击波呈环形向外推进，推开周围粒子与烟尘</td>
+<td>冲击波以爆炸点为中心呈环形向外高速推进扩散。波面所过之处推开黄色粒子与烟尘形成清晰涟漪边界。</td>
+</tr>
+<tr>
+<td><strong>屏障护体</strong></td>
+<td>能量流体凝聚为透明屏障，笼罩战场并随冲击震颤</td>
+<td>黄色能量流体凝聚为半球形透明屏障骤然形成笼罩全场。屏障表面随冲击波传递剧烈震荡，波纹从受力点向外扩散。</td>
+</tr>
+<tr>
+<td><strong>粒子弥漫</strong></td>
+<td>大量发光粒子从爆炸/能量源头弥散充满空间</td>
+<td>大量黄色发光粒子从能量源头爆发弥散，逐渐充满整个空间。粒子明暗交替浮动，如星尘般缓慢翻涌弥漫不散。</td>
+</tr>
+<tr>
+<td><strong>气流</strong></td>
+<td>身体高速自转搅动空气形成螺旋气流轨迹</td>
+<td>身体高速自转搅动空气形成向上螺旋气流，发丝与裙摆甩出层叠弧线。螺旋气流裹挟黄色烟尘与碎屑环绕身体盘旋上升。</td>
+</tr>
+<tr>
+<td><strong>崩解</strong></td>
+<td>人形连同衣物兵器从实体崩散为能量态</td>
+<td>人形连同衣物兵器从实体骤然崩散，化为浓烈黄色能量态。身体轮廓从清晰到模糊最终彻底解体为能量团翻涌重组。</td>
+</tr>
+<tr>
+<td><strong>巨像</strong></td>
+<td>崩散的能量重新凝聚为巨大发光虚影形体</td>
+<td>崩散的黄色能量团重新收拢凝聚，逐渐成型为巨大的发光虚影巨手。巨手轮廓从模糊能量态逐步清晰，五指关节细节浮现。</td>
+</tr>
+<tr>
+<td><strong>闪电风暴</strong></td>
+<td>能量巨像周身炸开密集闪电，电弧如藤蔓蔓延爬升</td>
+<td>能量巨手周身骤然炸开密集黄色闪电风暴，粗壮电弧高频分叉炸裂。电弧如藤蔓沿巨手手臂表面蔓延爬升照亮半边天空。</td>
+</tr>
+<tr>
+<td><strong>碎屑剥离</strong></td>
+<td>发光碎屑持续从能量体表面剥离，向外飞散</td>
+<td>无数发光碎屑如星屑持续从巨手表面剥离脱落，向四周飞散飘远。碎屑剥离后亮度逐渐衰减，最终化为微光消散于夜空。</td>
+</tr>
+<tr>
+<td><strong>能量还原</strong></td>
+<td>能量体急速回缩收敛，由虚影态还原为肉身人形</td>
+<td>黄色巨手急速回缩收敛，虚影轮廓由外向内坍缩，亮度骤降还原为人形。残余电弧与光尘随还原过程缓缓消散归于无形。</td>
+</tr>
+</tbody>
+</table>
+<p><strong>取值速拷（12 条 · 与上表逐字一致）</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>紫色电弧沿剑身噼啪炸响高速爬行，电光不断分叉闪烁。粗壮电弧如活蛇般缠绕剑刃高频窜动弹跳不止。</span></span>
+<span class="line"><span>拳锋骤然爆发黄色光芒，沿出拳方向拖出明亮能量光轨。光轨残影随拳速拉长留下彗星尾迹般的能量拖痕。</span></span>
+<span class="line"><span>拳与剑碰撞处猛烈爆炸，火光与能量粒子向四周轰然炸开。爆炸中心亮度极高，外围能量碎屑翻滚翻涌。</span></span>
+<span class="line"><span>冲击波以爆炸点为中心呈环形向外高速推进扩散。波面所过之处推开黄色粒子与烟尘形成清晰涟漪边界。</span></span>
+<span class="line"><span>黄色能量流体凝聚为半球形透明屏障骤然形成笼罩全场。屏障表面随冲击波传递剧烈震荡，波纹从受力点向外扩散。</span></span>
+<span class="line"><span>大量黄色发光粒子从能量源头爆发弥散，逐渐充满整个空间。粒子明暗交替浮动，如星尘般缓慢翻涌弥漫不散。</span></span>
+<span class="line"><span>身体高速自转搅动空气形成向上螺旋气流，发丝与裙摆甩出层叠弧线。螺旋气流裹挟黄色烟尘与碎屑环绕身体盘旋上升。</span></span>
+<span class="line"><span>人形连同衣物兵器从实体骤然崩散，化为浓烈黄色能量态。身体轮廓从清晰到模糊最终彻底解体为能量团翻涌重组。</span></span>
+<span class="line"><span>崩散的黄色能量团重新收拢凝聚，逐渐成型为巨大的发光虚影巨手。巨手轮廓从模糊能量态逐步清晰，五指关节细节浮现。</span></span>
+<span class="line"><span>能量巨手周身骤然炸开密集黄色闪电风暴，粗壮电弧高频分叉炸裂。电弧如藤蔓沿巨手手臂表面蔓延爬升照亮半边天空。</span></span>
+<span class="line"><span>无数发光碎屑如星屑持续从巨手表面剥离脱落，向四周飞散飘远。碎屑剥离后亮度逐渐衰减，最终化为微光消散于夜空。</span></span>
+<span class="line"><span>黄色巨手急速回缩收敛，虚影轮廓由外向内坍缩，亮度骤降还原为人形。残余电弧与光尘随还原过程缓缓消散归于无形。</span></span></code></pre>
+<h2 id="豆包生成效果">豆包生成效果</h2>
+<p><video controls preload="metadata" src="/prompt-archive-site/media/75ae3e3448e7d661-h264-720p-v1.mp4"></video>
+<video controls preload="metadata" src="/prompt-archive-site/media/2a49fe5b3704441c-h264-720p-v1.mp4"></video></p>
+</div></div></div></div></main><footer class="site-footer" data-astro-cid-tq46r5sz><div class="container" data-astro-cid-tq46r5sz><div class="footer-grid" data-astro-cid-tq46r5sz><div class="footer-brand" data-astro-cid-tq46r5sz><a class="brand" href="/prompt-archive-site/" data-astro-cid-tq46r5sz><span class="brand-glyph" data-astro-cid-tq46r5sz>PA</span><span class="brand-name" data-astro-cid-tq46r5sz>AI 提示词档案馆</span></a><p class="footer-desc" data-astro-cid-tq46r5sz>可浏览、可检索、可复制的 AI 图像与视频提示词案例库。每个完整案例一个独立页面，提示词与 Wiki 原文逐字一致。</p></div><nav class="footer-col" aria-label="页脚导航" data-astro-cid-tq46r5sz><p class="footer-label" data-astro-cid-tq46r5sz>浏览</p><a href="/prompt-archive-site/images/" data-astro-cid-tq46r5sz>图像案例</a><a href="/prompt-archive-site/videos/" data-astro-cid-tq46r5sz>视频案例</a><a href="/prompt-archive-site/notes/" data-astro-cid-tq46r5sz>方法笔记</a><a href="/prompt-archive-site/cases/" data-astro-cid-tq46r5sz>全站搜索</a></nav><div class="footer-col" data-astro-cid-tq46r5sz><p class="footer-label" data-astro-cid-tq46r5sz>本馆收录</p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>案例</span><b data-astro-cid-tq46r5sz>105</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>附实测成片</span><b data-astro-cid-tq46r5sz>2</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>方法笔记</span><b data-astro-cid-tq46r5sz>60</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>合集</span><b data-astro-cid-tq46r5sz>11</b></p></div></div><div class="footer-bottom" data-astro-cid-tq46r5sz><p data-astro-cid-tq46r5sz>「作者称已测试」表示来源声明，本站未复测。</p><p data-astro-cid-tq46r5sz>PA·ARCHIVE © 2026</p></div></div></footer></body><script type="module">function e(){document.querySelectorAll(`[data-masonry]`).forEach(e=>{let t=Array.from(e.querySelectorAll(`:scope > .m-cols > .m-col > *, :scope > *:not(.m-cols)`));if(e.querySelectorAll(`.m-cols`).forEach(e=>e.remove()),t.length===0)return;let n=window.matchMedia(`(max-width: 767px)`).matches?1:window.matchMedia(`(max-width: 1199px)`).matches?2:3,r=document.createElement(`div`);r.className=`m-cols`;let i=Array.from({length:n},()=>{let e=document.createElement(`div`);return e.className=`m-col`,e});t.forEach((e,t)=>i[t%n].appendChild(e)),e.appendChild(r),i.forEach(e=>r.appendChild(e))})}window.refreshMasonry=e,e();var t;window.addEventListener(`resize`,()=>{clearTimeout(t),t=setTimeout(e,150)});</script><script type="module">(()=>{let e=`.case-card, .note-card, .note-list-card`,t=window.matchMedia(`(prefers-reduced-motion: reduce)`),n=null,r=null,i=0;t.addEventListener?.(`change`,()=>{t.matches&&a()});function a(){if(!n)return;let e=n;e.classList.remove(`tilt-active`),e.classList.add(`tilt-return`),e.style.transform=``,clearTimeout(i),i=setTimeout(()=>e.classList.remove(`tilt-return`),320),n=null,r=null}document.addEventListener(`pointermove`,i=>{if(i.pointerType!==`mouse`||!i.isPrimary||t.matches)return;let o=i.target instanceof Element?i.target.closest(e):null;if(o!==n){if(a(),!o)return;n=o,r=n.getBoundingClientRect(),n.classList.add(`tilt-active`),n.classList.remove(`tilt-return`)}if(!n||!r)return;let s=(i.clientX-r.left)/r.width-.5,c=(i.clientY-r.top)/r.height-.5,l=Math.max(-1,Math.min(1,s*2))*4.5,u=Math.max(-1,Math.min(1,c*2))*-4.5;n.style.transform=`perspective(1100px) rotateX(${u.toFixed(3)}deg) rotateY(${l.toFixed(3)}deg) translateY(-3px)`},{passive:!0}),document.addEventListener(`pointerleave`,()=>a()),document.addEventListener(`pointerdown`,t=>{(t.target instanceof Element?t.target.closest(e):null)!==n&&a()},{passive:!0}),window.addEventListener(`blur`,()=>a()),window.addEventListener(`scroll`,()=>a(),{passive:!0})})();</script></html><script type="module">function e(){document.querySelectorAll(`.prose pre`).forEach(e=>{if(e.closest(`.code-panel`))return;let t=e.querySelector(`code`),n=(t??e).textContent??``,r=t?.className.match(/language-([\w+-]+)/)?.[1]??`text`,i=n.replace(/\n$/,``).split(`
+`).length,a=Array.from(n.matchAll(/`{3,}/g)).map(e=>e[0].length),o=a.length?Math.max(3,Math.max(...a)+1):3,s="`".repeat(o)+`markdown
+`+(n.endsWith(`
+`)?n:n+`
+`)+"`".repeat(o),c=document.createElement(`figure`);c.className=`code-panel`;let l=document.createElement(`figcaption`);l.className=`code-panel-head`;let u=document.createElement(`span`);u.className=`code-lang`,u.textContent=r;let d=document.createElement(`span`);d.className=`code-lines`,d.textContent=`${i} 行`;let f=document.createElement(`span`);f.className=`copy-feedback`,f.setAttribute(`aria-live`,`polite`);let p=document.createElement(`button`);p.type=`button`,p.className=`copy-btn`,p.textContent=`复制本块`,l.append(u,d,f,p),e.replaceWith(c),c.append(l,e);let m;p.addEventListener(`click`,async()=>{let e=!1;try{await navigator.clipboard.writeText(s),e=!0}catch{try{let t=document.createElement(`textarea`);t.value=s,t.style.position=`fixed`,t.style.opacity=`0`,document.body.appendChild(t),t.select(),e=document.execCommand(`copy`),t.remove()}catch{e=!1}}f.textContent=e?`已复制本块`:`复制失败，请手动选取`,p.textContent=e?`已复制`:`复制本块`,clearTimeout(m),m=setTimeout(()=>{f.textContent=``,p.textContent=`复制本块`},3e3)})})}e();</script>

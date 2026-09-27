@@ -1,0 +1,2040 @@
+<!DOCTYPE html><html lang="zh-CN" data-astro-cid-tq46r5sz><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="运镜总库四部分：基础 49 套、动态 60 组、复合 40 组规则、2.5 图解 144 组（配 16 张图解）。核心是变量定义＋调用模板的拼装体系。"><link rel="icon" href="/prompt-archive-site/favicon.svg" type="image/svg+xml"><title>运镜提示词总集（2.0 到 2.5） · 方法笔记</title><link rel="stylesheet" href="/prompt-archive-site/_astro/SiteLayout.DYPNTGRP.css"><style>.note-header[data-astro-cid-vex5zuxs]{max-width:calc(var(--note-width) + 280px);margin:0 auto;padding:40px 24px 0}
+</style></head><body data-astro-cid-tq46r5sz><a class="skip-link" href="#main" data-astro-cid-tq46r5sz>跳到主要内容</a><div class="announce" data-astro-cid-tq46r5sz><a href="/prompt-archive-site/cases/" data-astro-cid-tq46r5sz>PA·ARCHIVE — 每个完整案例一个独立页面，提示词与 Wiki 原文逐字一致 ↗</a></div><header class="site-header" data-astro-cid-tq46r5sz><div class="container" data-astro-cid-tq46r5sz><a class="brand" href="/prompt-archive-site/" data-astro-cid-tq46r5sz><span class="brand-glyph" data-astro-cid-tq46r5sz>PA</span><span class="brand-name" data-astro-cid-tq46r5sz>AI 提示词档案馆</span></a><nav class="site-nav" aria-label="主导航" data-astro-cid-tq46r5sz><a href="/prompt-archive-site/images/" data-astro-cid-tq46r5sz>图像案例<span class="nav-no" data-astro-cid-tq46r5sz>01</span></a><a href="/prompt-archive-site/videos/" data-astro-cid-tq46r5sz>视频案例<span class="nav-no" data-astro-cid-tq46r5sz>02</span></a><a href="/prompt-archive-site/notes/" aria-current="page" data-astro-cid-tq46r5sz>方法笔记<span class="nav-no" data-astro-cid-tq46r5sz>03</span></a></nav><div class="header-cta" data-astro-cid-tq46r5sz><a class="header-search-link" href="/prompt-archive-site/cases/" aria-label="全站搜索案例" data-astro-cid-tq46r5sz><span class="icon" style="width:15px;height:15px" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="6.1"/><line x1="13.6" y1="13.6" x2="18" y2="18"/></svg></span><span data-astro-cid-tq46r5sz>搜索</span><span class="nav-no" data-astro-cid-tq46r5sz>04</span></a></div></div></header><main id="main" data-astro-cid-tq46r5sz><div class="note-page" data-astro-cid-vex5zuxs><div class="note-header" data-astro-cid-vex5zuxs><nav class="breadcrumbs" aria-label="面包屑" data-astro-cid-vex5zuxs><a href="/prompt-archive-site/" data-astro-cid-vex5zuxs>首页</a><span aria-hidden="true" data-astro-cid-vex5zuxs>/</span><a href="/prompt-archive-site/notes/" data-astro-cid-vex5zuxs>方法笔记</a><span aria-hidden="true" data-astro-cid-vex5zuxs>/</span><span aria-current="page" data-astro-cid-vex5zuxs>运镜提示词总集（2.0 到 2.5）</span></nav><h1 style="font-size:32px" data-astro-cid-vex5zuxs>运镜提示词总集（2.0 到 2.5）</h1><p class="note-meta" data-astro-cid-vex5zuxs><span class="medium-chip" data-astro-cid-vex5zuxs>提示词库</span><span data-astro-cid-vex5zuxs>视频</span><span data-astro-cid-vex5zuxs>源资料：🎬运镜提示词总集-2.0到2.5（prompts）</span></p><p class="note-summary" data-astro-cid-vex5zuxs>运镜总库四部分：基础 49 套、动态 60 组、复合 40 组规则、2.5 图解 144 组（配 16 张图解）。核心是变量定义＋调用模板的拼装体系。</p></div><div class="note-layout" data-astro-cid-vex5zuxs><aside class="note-toc" aria-label="目录" data-astro-cid-vex5zuxs><p class="toc-title" data-astro-cid-vex5zuxs>目录</p><a href="#一基础运镜49套--seedance-20" data-astro-cid-vex5zuxs>一、基础运镜（49套 · Seedance 2.0）</a><a href="#变量定义" data-astro-cid-vex5zuxs>变量定义</a><a href="#调用模板" data-astro-cid-vex5zuxs>调用模板</a><a href="#素材库变量取值来源" data-astro-cid-vex5zuxs>素材库（变量取值来源）</a><a href="#一镜头运动方向" class="depth-3" data-astro-cid-vex5zuxs>一、镜头运动方向</a><a href="#二镜头视角层级" class="depth-3" data-astro-cid-vex5zuxs>二、镜头视角层级</a><a href="#三情绪化运镜" class="depth-3" data-astro-cid-vex5zuxs>三、情绪化运镜</a><a href="#四其他特殊场景拍摄" class="depth-3" data-astro-cid-vex5zuxs>四、其他特殊场景拍摄</a><a href="#五运动打斗等场景新增" class="depth-3" data-astro-cid-vex5zuxs>五、运动、打斗等场景（新增）</a><a href="#二动态运镜60组--seedance-20" data-astro-cid-vex5zuxs>二、动态运镜（60组 · Seedance 2.0）</a><a href="#调用公式" data-astro-cid-vex5zuxs>调用公式</a><a href="#具体提示词" data-astro-cid-vex5zuxs>具体提示词</a><a href="#一沉浸式跟拍追踪" class="depth-3" data-astro-cid-vex5zuxs>一、沉浸式跟拍追踪</a><a href="#二主体环绕旋转" class="depth-3" data-astro-cid-vex5zuxs>二、主体环绕旋转</a><a href="#三横摇平移基础运镜" class="depth-3" data-astro-cid-vex5zuxs>三、横摇平移基础运镜</a><a href="#四升降变速情绪运镜" class="depth-3" data-astro-cid-vex5zuxs>四、升降变速情绪运镜</a><a href="#五特效创意冲击运镜" class="depth-3" data-astro-cid-vex5zuxs>五、特效创意冲击运镜</a><a href="#六氛围感细节运镜" class="depth-3" data-astro-cid-vex5zuxs>六、氛围感细节运镜</a><a href="#三复合运镜规则40组" data-astro-cid-vex5zuxs>三、复合运镜规则（40组）</a><a href="#360-环绕--急推" data-astro-cid-vex5zuxs>360° 环绕 + 急推</a><a href="#摇镜--升镜头" data-astro-cid-vex5zuxs>摇镜 + 升镜头</a><a href="#降镜头-投掷-pov" data-astro-cid-vex5zuxs>降镜头 +投掷 POV</a><a href="#跟镜头转第一视角" data-astro-cid-vex5zuxs>跟镜头转第一视角</a><a href="#推拉反转运镜" data-astro-cid-vex5zuxs>推拉反转运镜</a><a href="#预期反转震惊惊喜恍然大悟细思极恐" class="depth-3" data-astro-cid-vex5zuxs>预期反转，震惊、惊喜、恍然大悟、细思极恐</a><a href="#四运镜图解-144-组seedance-25" data-astro-cid-vex5zuxs>四、运镜图解 144 组（Seedance 2.5）</a></aside><div class="note-main" data-astro-cid-vex5zuxs><div class="prose" data-astro-cid-vex5zuxs><h1 id="运镜提示词总集">运镜提示词总集</h1>
+<blockquote>
+<p>四部分结构：[一]基础运镜（49套，2.0）→ [二]动态运镜（60组，2.0）→ [三]复合运镜规则（40组）→ [四]2.5运镜图解（144组，含前三部分图解对照与2.5新增）。同一条运镜以 2.5 图解版为最新描述；2.0 各篇保留原始条目。</p>
+</blockquote>
+<h2 id="一基础运镜49套--seedance-20">一、基础运镜（49套 · Seedance 2.0）</h2>
+<h2 id="变量定义">变量定义</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: left">变量名</th>
+<th style="text-align: left">数据来源优先级</th>
+<th style="text-align: left">取值规则</th>
+<th style="text-align: left">输出示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left">{主题}</td>
+<td style="text-align: left">输入字段直取，无缺省</td>
+<td style="text-align: left">视频内容主体：谁 + 在做什么，一句话</td>
+<td style="text-align: left"><code>一位古装女子雪中拔剑</code></td>
+</tr>
+<tr>
+<td style="text-align: left">{起始}</td>
+<td style="text-align: left">输入字段 &gt; 缺省=主体静置初始态</td>
+<td style="text-align: left">第一帧画面或初始动作，写静态状态</td>
+<td style="text-align: left"><code>她静立雪原，手按剑柄</code></td>
+</tr>
+<tr>
+<td style="text-align: left">{过程}</td>
+<td style="text-align: left">[三]情绪化运镜（有明确情绪诉求时优先）&gt; [一]镜头运动方向 &gt; 叠加[二]视角层级</td>
+<td style="text-align: left">有情绪诉求先查[三]取修饰描述；否则从[一]选主运镜；需要空间语境再叠一层[二]。整条搬用表中描述，不要自行改写句式——表格条目已按 Seedance 2.0 特性调优</td>
+<td style="text-align: left"><code>智能环绕跟踪，保持与主体恒定距离，始终正对主体，背景呈现流畅的视觉流动感</code></td>
+</tr>
+<tr>
+<td style="text-align: left">{结尾}</td>
+<td style="text-align: left">输入字段 &gt; 缺省=动作自然收尾定格</td>
+<td style="text-align: left">收尾画面一句话，与起始形成闭环</td>
+<td style="text-align: left"><code>定格于剑尖，雪片缓缓落下</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="调用模板">调用模板</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">{主题}。{起始}。{过程}，{结尾}。</span></span></code></pre>
+<p>拼装示例（{过程} 取自下方[一]的"环绕镜头"条目原文）：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">一位古装女子雪中拔剑。她静立雪原，手按剑柄。智能环绕跟踪，保持与主体恒定距离，环绕速度可调（慢速30°/秒或快速90°/秒），始终正对主体，背景呈现流畅的视觉流动感，定格于剑尖，雪片缓缓落下。</span></span></code></pre>
+<h2 id="素材库变量取值来源">素材库（变量取值来源）</h2>
+<h3 id="一镜头运动方向">一、镜头运动方向</h3>
+<ul>
+<li>==Seedance 2.0 支持更智能的运动追踪与平滑过渡，因此加入“自适应速度”、“轻微晃动”、“动态模糊”等参数，增强真实感与情绪表达。==</li>
+<li>==强调“镜头呼吸感”、“透视变化”等细节，以利用 Seedance 2.0 在镜头物理模拟上的优势。==</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>运镜方式</strong></td>
+<td><strong>Seedance2.0描述方式</strong></td>
+</tr>
+<tr>
+<td><strong>跟镜头</strong></td>
+<td>智能跟随，速度自适应主体运动（步行/奔跑），平滑跟拍，轻微镜头晃动模拟手持感，保持主体清晰追踪<!--阿拉赛博蕾--></td>
+</tr>
+<tr>
+<td><strong>推镜头</strong></td>
+<td>平滑推进，动态对焦系统，从全景渐变至中景，每秒移动5-10厘米，镜头轻微呼吸感增强沉浸</td>
+</tr>
+<tr>
+<td><strong>拉镜头</strong></td>
+<td>智能拉远，0.3秒内完成从特写到全景，加入轻微镜头模糊与透视变化，增强空间感</td>
+</tr>
+<tr>
+<td><strong>水平摇镜头</strong></td>
+<td>动态水平摇镜，加入轻微速度曲线（缓入缓出），扫视过程中自动对焦环境细节，增强场景叙事</td>
+</tr>
+<tr>
+<td><strong>垂直摇镜头</strong></td>
+<td>快速垂直摇镜，加入动态模糊与光影追踪，1.5秒内完成，强化视觉冲击与情绪张力</td>
+</tr>
+<tr>
+<td><strong>移镜头</strong></td>
+<td>智能侧移，镜头保持与主体距离自适应，加入轻微上下浮动模拟步行感，增强真实拍摄体验</td>
+</tr>
+<tr>
+<td><strong>升镜头</strong></td>
+<td>智能垂直上升，<!--ray-->速度曲线设计（缓起缓停），上升过程中自动调整曝光与焦距，保持主体清晰，背景环境渐变扩展，增强空间展开感</td>
+</tr>
+<tr>
+<td><strong>降镜头</strong></td>
+<td>快速垂直降落，加入轻微镜头震动和风噪模拟，最终缓慢停稳，降落过程中保持主体对焦，背景虚化渐变增强落地冲击感</td>
+</tr>
+<tr>
+<td><strong>旋转镜头</strong></td>
+<td>智能旋转运镜，速度可调（慢速360°或快速急旋），旋转过程中保持主体在画面中央，背景产生动态模糊与透视变化，增强视觉动感</td>
+</tr>
+<tr>
+<td><strong>环绕镜头</strong></td>
+<td>智能环绕跟踪，保持与主体恒定距离，环绕速度可调（慢速30°/秒或快速90°/秒），始终正对主体，背景呈现流畅的视觉流动感</td>
+</tr>
+</tbody>
+</table>
+<h3 id="二镜头视角层级">二、镜头视角层级</h3>
+<ul>
+<li>==利用 Seedance 2.0 更强大的物理渲染引擎，加入光斑虚化、大气透视等真实摄影效果。==</li>
+<li>==Seedance 2.0 支持更复杂的动态模拟，因此加入动态模糊、光影等元素，让画面更生动。==</li>
+<li>==通过细节强化、景深控制等，更准确地传递场景情绪和叙事焦点。==</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>运镜方式</strong></td>
+<td><strong>Seedance2.0提示词</strong></td>
+</tr>
+<tr>
+<td><strong>远景</strong></td>
+<td>超广角远景，加入景深层次与大气透视，光线散射模拟，增强空间感与氛围沉浸</td>
+</tr>
+<tr>
+<td><strong>全景</strong></td>
+<td>智能全景跟随，主体与环境光影互动清晰，轻微动态模糊增强视觉流动感</td>
+</tr>
+<tr>
+<td><strong>中景</strong></td>
+<td>聚焦主体动作，背景自动虚化分层，<!--阿拉赛博蕾-->突出主体动态细节</td>
+</tr>
+<tr>
+<td><strong>近景</strong></td>
+<td>浅景深效果，背景光斑虚化，主体眼神/手势细节强化，适合情绪表达</td>
+</tr>
+<tr>
+<td><strong>特写</strong></td>
+<td>超清微距特写，皮肤纹理/物体质感增强，加入轻微镜头颤动模拟真实拍摄</td>
+</tr>
+<tr>
+<td><strong>俯拍</strong></td>
+<td>高空俯拍+轻微旋转，光影投射清晰，增强环境与主体的空间关系</td>
+</tr>
+<tr>
+<td><strong>仰拍</strong></td>
+<td>低角度仰拍+广角畸变，增强主体高大感，天空云层动态增强</td>
+</tr>
+<tr>
+<td><strong>微距</strong></td>
+<td>显微级细节+景深动态变化，背景光斑运动模拟，适合情感细腻表达</td>
+</tr>
+</tbody>
+</table>
+<h3 id="三情绪化运镜">三、情绪化运镜</h3>
+<ul>
+<li>==充分利用 Seedance 2.0 更强大的视觉特效系统（光影、色彩、景深、畸变），将情绪直接进行视觉化转译==</li>
+<li>==将原本固定的运镜参数（如速度、稳定性），升级为由情绪或情境驱动的智能动态参数。==</li>
+<li>==整合了景深变化、光影渐变、色彩偏移、动态模糊等多种视觉元素设计运镜，营造复合感官体验==</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>运镜方式</strong></td>
+<td><strong>Seedance2.0提示词</strong></td>
+</tr>
+<tr>
+<td><strong>聚焦式推进</strong></td>
+<td>动态对焦+景深渐变，推进过程中背景逐渐虚化，增强情绪沉浸</td>
+</tr>
+<tr>
+<td><strong>抽离式后拉</strong></td>
+<td>后拉过程中加入景深扩展与光影渐变，增强时空疏离感</td>
+</tr>
+<tr>
+<td><strong>探索式横摇</strong></td>
+<td>加入速度变化与镜头轻微颤动，模拟人眼搜索状态，增强探索情绪</td>
+</tr>
+<tr>
+<td><strong>陪伴式平移</strong></td>
+<td>平滑平移+轻微上下浮动，<!--阿拉赛博蕾-->背景动态模糊，增强陪伴叙事感</td>
+</tr>
+<tr>
+<td><strong>升华式上升</strong></td>
+<td>上升过程中光线逐渐明亮，云层/光晕增强，强化希望感</td>
+</tr>
+<tr>
+<td><strong>压抑式下降</strong></td>
+<td>下降过程中光影变暗，景深压缩，增强压抑氛围</td>
+</tr>
+<tr>
+<td><strong>迷幻式旋转</strong></td>
+<td>旋转中加入动态模糊与色彩偏移，增强迷幻与主观情绪</td>
+</tr>
+<tr>
+<td><strong>爆发式急推 / 急拉</strong></td>
+<td>加入镜头畸变与瞬间模糊，增强视觉冲击与情绪爆发</td>
+</tr>
+<tr>
+<td><strong>纪实式手持抖动</strong></td>
+<td>智能抖动模拟，根据不同情绪调整抖动幅度与频率</td>
+</tr>
+<tr>
+<td><strong>静动转换式运镜</strong></td>
+<td>加入过渡模糊与速度曲线，增强情绪转折的戏剧性</td>
+</tr>
+</tbody>
+</table>
+<h3 id="四其他特殊场景拍摄">四、其他特殊场景拍摄</h3>
+<ul>
+<li>==利用Seedance 2.0更强大的实时物理引擎，几乎所有修改都新增了动态物理模拟元素==</li>
+<li>==融合了后期特效思维如HDR模拟、边缘光晕、辉光增强（Seedance 2.0的核心优势）==</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>场景</strong></td>
+<td><strong>Seedance2.0提示词</strong></td>
+</tr>
+<tr>
+<td><strong>雨景</strong></td>
+<td>240fps 慢动作 + 雨滴光斑追踪 + 积水反射增强，氛围光晕模拟</td>
+</tr>
+<tr>
+<td><strong>舞蹈拍摄</strong></td>
+<td>智能环绕 + 动态速度匹配舞者节奏，肢体边缘光晕增强</td>
+</tr>
+<tr>
+<td><strong>美食拍摄</strong></td>
+<td>微距推进 + 热蒸汽模拟 + 食材光泽增强，景深动态变化</td>
+</tr>
+<tr>
+<td><strong>夜景拍摄</strong></td>
+<td>长曝光模拟 + 车流光轨 + 路灯辉光增强，<!--阿拉赛博蕾-->低光降噪优化</td>
+</tr>
+<tr>
+<td><strong>跑步场景</strong></td>
+<td>智能跟随 + 运动模糊增强 + 汗水飞溅细节，增强力量感</td>
+</tr>
+<tr>
+<td><strong>婚礼场景</strong></td>
+<td>长焦推进 + 花瓣飘落模拟 + 柔和光晕，<!--阿拉赛博蕾-->情感焦点自动跟踪</td>
+</tr>
+<tr>
+<td><strong>自然风光</strong></td>
+<td>无人机智能航拍 + 云层动态光影 + 山体细节增强，HDR效果模拟</td>
+</tr>
+<tr>
+<td><strong>昆虫</strong></td>
+<td>超微距 + 景深动态跟踪 + 背景光斑运动模拟，增强生态真实感</td>
+</tr>
+<tr>
+<td><strong>猫咪跳跃</strong></td>
+<td>低角度跟踪 + 瞬间对焦 + 毛发细节增强，落地震动模拟</td>
+</tr>
+</tbody>
+</table>
+<h3 id="五运动打斗等场景新增">五、运动、打斗等场景（新增）</h3>
+<p>==基于seedance2.0高帧率+细腻还原的特性，新增了下方的激烈运动场景==</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>场景</strong></td>
+<td><strong>Seedance2.0提示词</strong></td>
+</tr>
+<tr>
+<td><strong>汽车追逐</strong></td>
+<td>超低机位前跟拍 + 轮胎烟尘粒子模拟 + 路面碎石飞溅 + 镜头速度拉伸，增强追击紧迫感</td>
+</tr>
+<tr>
+<td><strong>武侠打斗</strong></td>
+<td>环绕急转 + 兵器轨迹光效残留 + 衣物布料动态模拟 + 瞬间定格特写，突出招式力道与美感</td>
+</tr>
+<tr>
+<td><strong>能量光束对波</strong></td>
+<td>对抗双方特写快速切换 + 光束交汇处粒子撕裂特效 + 环境光被吸收的变暗效果 + 镜头震动逐级增强</td>
+</tr>
+<tr>
+<td><strong>摩托车飞跃</strong></td>
+<td>无人机同步拉升跟随 + 空中车体慢速自旋细节 + 背景极速下拉模糊 + 落地悬架压缩特写</td>
+</tr>
+<tr>
+<td><strong>跑酷穿梭</strong></td>
+<td>第一人称与第三人称快速切换 + 墙体摩擦剐蹭细节 + 障碍物边缘动态模糊 + 落地呼吸声效模拟<!--阿拉赛博蕾--></td>
+</tr>
+<tr>
+<td><strong>机甲战斗</strong></td>
+<td>快速仰俯角切换 + 金属碰撞火花与凹痕实时生成 + 沉重步伐的地面震动波 + 液压系统特写</td>
+</tr>
+<tr>
+<td><strong>子弹时间</strong></td>
+<td>360°超高速旋转环绕 + 飞行子弹的螺旋气流纹理 + 主角毛发与衣物静止中的细微浮动</td>
+</tr>
+<tr>
+<td><strong>光剑对决</strong></td>
+<td>暗环境背景 + 剑刃碰撞爆燃高光粒子 + 角色面部被剑光周期性照亮 + 电流嗡鸣声的视觉波纹化<!--阿拉赛博蕾--></td>
+</tr>
+<tr>
+<td><strong>爆炸（冲击）</strong></td>
+<td>微距火球膨胀接透明冲击波炸裂，碎片沿物理轨迹飞射，镜头被猛然急拉并伴随瞬间过曝与恢复，展现横扫一切的宏观破坏力。</td>
+</tr>
+<tr>
+<td><strong>爆炸（微观）</strong></td>
+<td>超慢镜头（1000fps）聚焦于单一物体（如玻璃窗、木箱）在冲击波作用下的形变、撕裂与破碎全过程，材质断裂纹理清晰，伴随低速播放的次声波震动效果</td>
+</tr>
+<tr>
+<td><strong>坠落</strong></td>
+<td>第一人称自由落体，大地与天空在视野中急速旋转颠倒，呈现失重与失控的眩晕感。</td>
+</tr>
+<tr>
+<td><strong>飞行</strong></td>
+<td>超低空贴地飞行+机身扰动下方植被的波浪式倒伏+镜头急转绕过山体+引擎轰鸣在峡谷间的反射混响，突出惊险与技术。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="二动态运镜60组--seedance-20">二、动态运镜（60组 · Seedance 2.0）</h2>
+<h2 id="调用公式">调用公式</h2>
+<p><strong>👉总公式如下</strong>，这个是不变的，决定了整体写提示词的思路。其中动态运镜的部分可以根据自己的需要塞在起始、过程、结尾这几个模块里</p>
+<p><img src="/prompt-archive-site/media/d4bfa71f378428a0.png" alt="Pasted image 20260813185718.png"></p>
+<p><strong>👉动态运镜公式如下</strong>，这部分内容，按需要加入起始、过程、结尾部分</p>
+<p><img src="/prompt-archive-site/media/e78ca05b77e1e9e2.png" alt="Pasted image 20260813185746.png"></p>
+<h2 id="具体提示词">具体提示词</h2>
+<h3 id="一沉浸式跟拍追踪">一、沉浸式跟拍追踪</h3>
+<p>==全程锁定运动主体，精准匹配人物 / 物体运动轨迹，主打临场沉浸感、陪伴感与追击感，适配人物行走、奔跑、动作戏份等动态主体场景。==</p>
+<table>
+<thead>
+<tr>
+<th><strong>运镜方式</strong></th>
+<th><strong>Seedance2.0提示词</strong></th>
+<th><strong>适用场景</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>贴地式超低跟拍</strong></td>
+<td>超低机位贴地平滑跟拍，动态锁焦运动主体，地面纹理带动态拖影模糊，速度随主体动作线性变化，增强临场追击感</td>
+<td>追逐、动作</td>
+</tr>
+<tr>
+<td><strong>第一人称式跟拍</strong></td>
+<td>第一人称视角手持跟拍，带自然呼吸感抖动，动态对焦前方主体，环境随移动渐进虚化，强化沉浸式代入感</td>
+<td>vlog、剧情</td>
+</tr>
+<tr>
+<td><strong>倒退式反向跟拍</strong></td>
+<td>主体朝向镜头<!--Ray-->匀速倒退跟拍，背景持续向后拉伸虚化，动态对焦全程锁定主体，增强对话感与叙事张力</td>
+<td>对话、叙事</td>
+</tr>
+<tr>
+<td><strong>平行式侧身跟拍</strong></td>
+<td>与主体运动方向平行侧移跟拍，前景物体扫过带动态模糊，景深恒定锁定主体，强化速度感与并肩陪伴感</td>
+<td>奔跑、运动</td>
+</tr>
+<tr>
+<td><strong>俯冲式低空跟拍</strong></td>
+<td>高空俯冲后贴地低空跟拍，速度由快到缓带径向动态模糊，光影随高度快速变化，增强俯冲冲击与追击感</td>
+<td>航拍、追击</td>
+</tr>
+<tr>
+<td><strong>越障式穿越跟拍</strong></td>
+<td>跟拍过程中同步跨越前景障碍物，障碍物穿镜瞬间带过曝模糊，主体全程锁焦不脱焦，增强沉浸式穿越感</td>
+<td>探险、穿越</td>
+</tr>
+<tr>
+<td><strong>升格式慢动作跟拍</strong></td>
+<td>高速运动主体慢动作跟拍，帧间平滑带动态拖影，背景极致虚化，动态对焦锁定主体细节，强化瞬间氛围感</td>
+<td>动作、高光</td>
+</tr>
+<tr>
+<td><strong>贴脸式近距跟拍</strong></td>
+<td>超近距贴脸跟拍主体面部，轻微前后位移带呼吸感景深变化，背景完全虚化，强化情绪细节的感染力</td>
+<td>特写、情绪</td>
+</tr>
+<tr>
+<td><strong>切换式高低跟拍</strong></td>
+<td>跟拍过程中机位从超低到高位顺滑切换，带轻微俯仰角度变化，动态对焦全程锁定主体，增强叙事层次感</td>
+<td>剧情、叙事</td>
+</tr>
+<tr>
+<td><strong>同步式环绕跟拍</strong></td>
+<td>跟拍主体运动的同时同步小半径环绕，带轻微速度变化与动态边缘模糊，强化主体视觉焦点与动感</td>
+<td>运动、人物</td>
+</tr>
+</tbody>
+</table>
+<p><strong>取值速拷（10 条 · 与上表逐字一致）</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>超低机位贴地平滑跟拍，动态锁焦运动主体，地面纹理带动态拖影模糊，速度随主体动作线性变化，增强临场追击感</span></span>
+<span class="line"><span>第一人称视角手持跟拍，带自然呼吸感抖动，动态对焦前方主体，环境随移动渐进虚化，强化沉浸式代入感</span></span>
+<span class="line"><span>主体朝向镜头&lt;!--Ray--&gt;匀速倒退跟拍，背景持续向后拉伸虚化，动态对焦全程锁定主体，增强对话感与叙事张力</span></span>
+<span class="line"><span>与主体运动方向平行侧移跟拍，前景物体扫过带动态模糊，景深恒定锁定主体，强化速度感与并肩陪伴感</span></span>
+<span class="line"><span>高空俯冲后贴地低空跟拍，速度由快到缓带径向动态模糊，光影随高度快速变化，增强俯冲冲击与追击感</span></span>
+<span class="line"><span>跟拍过程中同步跨越前景障碍物，障碍物穿镜瞬间带过曝模糊，主体全程锁焦不脱焦，增强沉浸式穿越感</span></span>
+<span class="line"><span>高速运动主体慢动作跟拍，帧间平滑带动态拖影，背景极致虚化，动态对焦锁定主体细节，强化瞬间氛围感</span></span>
+<span class="line"><span>超近距贴脸跟拍主体面部，轻微前后位移带呼吸感景深变化，背景完全虚化，强化情绪细节的感染力</span></span>
+<span class="line"><span>跟拍过程中机位从超低到高位顺滑切换，带轻微俯仰角度变化，动态对焦全程锁定主体，增强叙事层次感</span></span>
+<span class="line"><span>跟拍主体运动的同时同步小半径环绕，带轻微速度变化与动态边缘模糊，强化主体视觉焦点与动感</span></span></code></pre>
+<h3 id="二主体环绕旋转">二、主体环绕旋转</h3>
+<p>==以主体为轴心做圆周 / 轴向旋转运动，极致突出主体视觉焦点，营造强空间感与氛围感，适配人物特写、产品展示、高光定格等核心主体突出场景。==</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>运镜方式</strong></td>
+<td><strong>Seedance2.0提示词</strong></td>
+<td><strong>适用场景</strong></td>
+</tr>
+<tr>
+<td><strong>极速式 360° 环绕</strong></td>
+<td>以主体为轴心 360 度极速环绕，带动态径向模糊与光影快速切换，全程锁焦主体，强化极致视觉冲击</td>
+<td>出场、高光</td>
+</tr>
+<tr>
+<td><strong>螺旋式升降环绕</strong></td>
+<td>环绕主体的同时同步螺旋升降，景深随环绕半径渐变，光影随高度动态变化，增强空间纵深感与史诗感</td>
+<td>大场景、史诗</td>
+</tr>
+<tr>
+<td><strong>偏心式动态环绕</strong></td>
+<td>非中心轴心偏心环绕，带轻微镜头晃动与速度变化，前景背景交替虚化，增强不安感与主观情绪</td>
+<td>悬疑、情绪</td>
+</tr>
+<tr>
+<td><strong>低半径贴地环绕</strong></td>
+<td>超低机位贴地小半径环绕主体，地面动态拖影模糊，主体全程锁焦，增强压迫感与力量感</td>
+<td>压迫、力量</td>
+</tr>
+<tr>
+<td><strong>慢扫式氛围感环绕</strong></td>
+<td>超慢速度环绕主体，带极细微的景深渐变与光影流动，背景缓慢虚化过渡，增强氛围感与细节表现力</td>
+<td>产品、氛围感</td>
+</tr>
+<tr>
+<td><strong>急停式冲击环绕</strong></td>
+<td>极速环绕后瞬间急停，带瞬间帧间模糊与对焦回弹，强化情绪爆发的定格冲击力</td>
+<td>爆发、转场</td>
+</tr>
+<tr>
+<td><strong>双轴心旋转环绕</strong></td>
+<td>主体与<!--Ray-->镜头双轴心同步旋转环绕，带动态旋转模糊与色彩偏移，增强迷幻感与超现实氛围</td>
+<td>创意、迷幻</td>
+</tr>
+<tr>
+<td><strong>俯冲式环绕运镜</strong></td>
+<td>高空俯冲的同时环绕主体，速度由快到缓带径向动态模糊，光影随俯冲角度剧烈变化，增强坠落冲击感</td>
+<td>冲击、坠落</td>
+</tr>
+<tr>
+<td><strong>渐扩式揭示环绕</strong></td>
+<td>环绕主体的同时半径逐渐扩大，景深同步扩展，背景逐渐清晰，增强空间揭示感与叙事张力</td>
+<td>场景、揭示</td>
+</tr>
+<tr>
+<td><strong>近距贴脸环绕</strong></td>
+<td>超近距贴脸小半径环绕主体面部，带轻微呼吸感抖动，背景完全虚化，全程锁焦面部微表情，强化极致情绪感染力</td>
+<td>人物、情绪</td>
+</tr>
+</tbody>
+</table>
+<h3 id="三横摇平移基础运镜">三、横摇平移基础运镜</h3>
+<p>沿 XY 轴做横摇、平移、基础推拉运动，主打场景展示、节奏把控与基础叙事，适配空镜扫景、环境展示、基础情绪递进等通用创作场景。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>运镜方式</strong></td>
+<td><strong>Seedance2.0提示词</strong></td>
+<td><strong>适用场景</strong></td>
+</tr>
+<tr>
+<td><strong>俯冲式极速推进</strong></td>
+<td>从高空极速俯冲推进，带强烈径向动态模糊，对焦锁定地面目标，光影随高度快速明暗切换，增强极致冲击感</td>
+<td>航拍、冲击</td>
+</tr>
+<tr>
+<td><strong>穿堂式穿梭推进</strong></td>
+<td>线性穿越多个空间 / 门洞的推进运镜，每个穿入点带瞬间过曝模糊，全程动态锁焦终点主体，增强沉浸式穿梭感</td>
+<td>空间、转场</td>
+</tr>
+<tr>
+<td><strong>甩动式极速横摇</strong></td>
+<td>从一侧到另一侧极速甩动横摇，运动路径带动态拖影模糊，起幅落幅精准锁焦，强化转场冲击与情绪跳转</td>
+<td>转场、跳转</td>
+</tr>
+<tr>
+<td><strong>缓急交替式横摇</strong></td>
+<td>横摇过程中速度缓急交替，带镜头轻微颤动，前景背景交替虚化，模拟人眼扫视的探索感，增强叙事节奏</td>
+<td>扫景、探索</td>
+</tr>
+<tr>
+<td><strong>纵深式穿梭平移</strong></td>
+<td>沿场景纵深方向平滑平移，前景物体持续扫过动态模糊，景深锁定中景主体，增强空间沉浸感与探索感</td>
+<td>空间、叙事</td>
+</tr>
+<tr>
+<td><strong>反向拉伸平移</strong></td>
+<td>与主体运动方向反向平移，背景快速拉伸虚化，带轻微速度变化，强化主体的相对<!--阿拉赛博蕾-->速度感与画面张力</td>
+<td>运动、速度</td>
+</tr>
+<tr>
+<td><strong>渐快式压迫推进</strong></td>
+<td>推进速度由慢到快持续加快，景深逐渐压缩，背景逐渐虚化，带轻微动态模糊，增强情绪递进的压迫感</td>
+<td>悬疑、压迫</td>
+</tr>
+<tr>
+<td><strong>急刹式爆发急推</strong></td>
+<td>极速推进后瞬间急刹，带瞬间前景模糊与对焦回弹，强化视觉冲击与情绪的瞬间爆发</td>
+<td>冲击、爆发</td>
+</tr>
+<tr>
+<td><strong>分层式电影感横摇</strong></td>
+<td>横摇过程中前景、中景、背景分层动态模糊，速度随景深有差异化变化，增强空间层次感与电影质感</td>
+<td>空镜、电影感</td>
+</tr>
+<tr>
+<td><strong>倒退式拉远平移</strong></td>
+<td>镜头倒退拉远的同时横向平移，场景持续展开，带轻微动态边缘模糊，增强空间揭示感与叙事悬念</td>
+<td>场景、揭示</td>
+</tr>
+</tbody>
+</table>
+<h3 id="四升降变速情绪运镜">四、升降变速情绪运镜</h3>
+<p>沿垂直轴做升降、变速反差运动，主打情绪起伏、空间纵深感与氛围渲染，适配大场景空镜、情绪递进、氛围感短片等场景。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>场景</strong></td>
+<td><strong>Seedance2.0提示词</strong></td>
+<td><strong>适用场景</strong></td>
+</tr>
+<tr>
+<td><strong>弹射式极速上升</strong></td>
+<td>从低位瞬间弹射极速上升，带垂直方向动态拖影模糊，光线随高度逐渐明亮，云层光晕同步增强，强化瞬间爆发的希望感</td>
+<td>爆发、希望</td>
+</tr>
+<tr>
+<td><strong>坠落式极速下降</strong></td>
+<td>从高空垂直极速坠落下降，带强烈垂直动态模糊，光影快速变暗，景深持续压缩，增强极致压迫感与失重感</td>
+<td>压抑、坠落</td>
+</tr>
+<tr>
+<td><strong>呼吸式交替升降</strong></td>
+<td>上升与下降顺滑交替，带呼吸感速度曲线，光影随高度同步渐变，增强情绪的起伏感与叙事节奏</td>
+<td>叙事、情绪</td>
+</tr>
+<tr>
+<td><strong>斜向俯冲升降</strong></td>
+<td>斜向 45 度俯冲下降后顺滑拉升上升，带全程动态模糊，光影随角度剧烈变化，增强过山车式的视觉冲击</td>
+<td>运动、冲击</td>
+</tr>
+<tr>
+<td><strong>阶梯式递进上升</strong></td>
+<td>分阶段阶梯式上升，每段上升后短暂停顿，带轻微对焦回弹，光线逐段提亮，增强递进式的史诗感</td>
+<td>史诗、递进</td>
+</tr>
+<tr>
+<td><strong>贴墙式垂直升降</strong></td>
+<td>紧贴墙面垂直升降，墙面纹理动态模糊，景深锁定侧面主体，增强沉浸式的攀爬 / 下坠感</td>
+<td>建筑、攀爬</td>
+</tr>
+<tr>
+<td><strong>旋转式迷幻升降</strong></td>
+<td>垂直升降的同时同步轴向旋转，带旋转动态模糊与色彩偏移，光影随高度变化，增强超现实的迷幻感</td>
+<td>创意、迷幻</td>
+</tr>
+<tr>
+<td><strong>失重式悬浮升降</strong></td>
+<td>无重力感缓慢升降，带极轻微的浮动抖动，景深缓慢渐变，光影柔和流动，<!--ray-->增强空灵的悬浮感</td>
+<td>悬浮、空灵</td>
+</tr>
+<tr>
+<td><strong>急坠急升反差运镜</strong></td>
+<td>极速坠落后瞬间反弹拉升，带强烈的速度变化与动态模糊，光影瞬间明暗切换，强化极致的情绪反差</td>
+<td>情绪、反差</td>
+</tr>
+<tr>
+<td><strong>全景式拉升上升</strong></td>
+<td>从近景主体极速拉升至高空全景，带持续径向模糊，场景逐渐展开，强化宏大叙事感与空间震撼感</td>
+<td>航拍、大场景</td>
+</tr>
+</tbody>
+</table>
+<h3 id="五特效创意冲击运镜">五、特效创意冲击运镜</h3>
+<p>非常规影视特效运镜，主打强视觉冲击、创意转场与超现实氛围，适配高光转场、情绪爆发、创意短片等特殊创作场景。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>场景</strong></td>
+<td><strong>Seedance2.0提示词</strong></td>
+<td><strong>适用场景</strong></td>
+</tr>
+<tr>
+<td><strong>子弹时间冻结</strong></td>
+<td>主体动作瞬间冻结，镜头围绕主体极速环绕，带边缘动态模糊，全程锁焦主体细节，强化定格瞬间的史诗感</td>
+<td>动作、高光</td>
+</tr>
+<tr>
+<td><strong>跳切式闪回运镜</strong></td>
+<td>多段快速跳切式运镜，每段带瞬间过曝模糊与对焦切换，速度节奏随情绪变化，增强闪回的叙事感与冲击感</td>
+<td>闪回、回忆</td>
+</tr>
+<tr>
+<td><strong>穿模式无缝推进</strong></td>
+<td>镜头穿透前景物体 / 墙面无缝推进，穿透瞬间带柔光模糊与对焦过渡，全程无卡顿，增强超现实的穿越感</td>
+<td>转场、穿越</td>
+</tr>
+<tr>
+<td><strong>滚筒式轴向旋转</strong></td>
+<td>镜头沿前进轴向 360 度滚筒式旋转，带动态旋转模糊与光影滚动，增强失重感与迷幻氛围</td>
+<td>迷幻、失重</td>
+</tr>
+<tr>
+<td><strong>甩尾式急转运镜</strong></td>
+<td>前进过程中瞬间甩尾急转，带强烈的动态拖影与运动模糊，转后瞬间精准锁焦新主体，<!--阿拉赛博蕾-->强化突发的情绪冲击</td>
+<td>动作、转场</td>
+</tr>
+<tr>
+<td><strong>失重式漂浮运镜</strong></td>
+<td>无规则失重式漂浮运镜，带轻微的上下左右浮动与旋转，动态对焦锁定主体，景深缓慢变化，增强空灵的失重感</td>
+<td>空灵、悬浮</td>
+</tr>
+<tr>
+<td><strong>动静突变式运镜</strong></td>
+<td>极致静态定格后瞬间爆发极速运镜，带瞬间帧间模糊与速度拉满的动态效果，强化动静反差的极致冲击力</td>
+<td>爆发、反差</td>
+</tr>
+<tr>
+<td><strong>微距式纵深推进</strong></td>
+<td>超微距镜头极速推进，带景深极致压缩，主体细节逐渐放大清晰，背景完全虚化，增强微观世界的沉浸感</td>
+<td>产品、微距</td>
+</tr>
+<tr>
+<td><strong>多轴联动翻转运镜</strong></td>
+<td>镜头多轴同步翻转旋转，带全方位动态模糊与光影快速切换，全程锁焦中心主体，增强眩晕感与超现实氛围</td>
+<td>创意、迷幻</td>
+</tr>
+<tr>
+<td><strong>升空式全景拉远</strong></td>
+<td>从近景主体缓慢拉远，同时持续升空上升，场景逐渐展开全景，带轻微径向模糊，光线逐渐柔和，增强收尾的释然感与宏大感</td>
+<td>大场景、收尾</td>
+</tr>
+</tbody>
+</table>
+<h3 id="六氛围感细节运镜">六、氛围感细节运镜</h3>
+<p>聚焦细节质感、转场丝滑度与画面呼吸感，适配情绪短片、微距特写、氛围感大片、无缝转场等精细化创作场景。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>场景</strong></td>
+<td><strong>Seedance2.0提示词</strong></td>
+<td><strong>适用场景</strong></td>
+</tr>
+<tr>
+<td><strong>窥视式前景遮挡推进</strong></td>
+<td>透过前景遮挡物（门缝 / 窗格 / 栏杆）渐进式推进，遮挡物带边缘动态模糊，动态对焦锁定遮挡后的主体，景深随推进逐渐收窄，增强窥视感与悬念氛围</td>
+<td>悬疑、窥视</td>
+</tr>
+<tr>
+<td><strong>环绕式渐隐转场运镜</strong></td>
+<td>以主体为轴心环绕运镜，环绕过程中画面渐隐渐切，带柔光模糊与色彩过渡，全程锁焦主体，增强无缝转场的丝滑感与叙事连贯性</td>
+<td>转场、叙事</td>
+</tr>
+<tr>
+<td><strong>跟拍式弹跳运镜</strong></td>
+<td>同步主体弹跳节奏的跟拍运镜，带匹配动作的垂直浮动与速度变化，地面前景带动态拖影，动态锁焦主体，增强活力感与运动临场感</td>
+<td>运动、活力</td>
+</tr>
+<tr>
+<td><strong>斜切式对角线推拉</strong></td>
+<td>沿画面对角线斜向极速推拉运镜，带对角线方向的动态拖影模糊，起幅落幅精准锁焦，强化画面张力与对角线构图的冲击感</td>
+<td>冲击、构图</td>
+</tr>
+<tr>
+<td><strong>悬停式微动态运镜</strong></td>
+<td>主体中心悬停，带极细微的圆周浮动与呼吸感抖动，景深缓慢渐变，光影柔和流动，<!--阿拉赛博蕾-->增强静态画面的呼吸感与氛围感</td>
+<td>氛围感、静态</td>
+</tr>
+<tr>
+<td><strong>折返式往返推拉</strong></td>
+<td>向前极速推进后瞬间折返拉远，往返过程带双向径向动态模糊，全程锁焦中心主体，强化情绪的拉扯感与视觉反差</td>
+<td>情绪、拉扯</td>
+</tr>
+<tr>
+<td><strong>贴水面滑行跟拍</strong></td>
+<td>超低机位紧贴水面平滑滑行跟拍，水面倒影带动态波纹模糊，动态锁焦水面上的主体，光影随水面波动渐变，增强灵动的氛围感与沉浸感</td>
+<td>水景、灵动</td>
+</tr>
+<tr>
+<td><strong>阶梯式分段横摇</strong></td>
+<td>分段落阶梯式横摇运镜，每段横摇后精准定格停顿，带轻微对焦回弹，前景背景逐段清晰揭示，增强探索感与叙事节奏感</td>
+<td>扫景、探索</td>
+</tr>
+<tr>
+<td><strong>离心式甩飞运镜</strong></td>
+<td>从主体中心瞬间离心式甩飞拉远，带强烈的径向动态模糊与速度爆发，画面从主体特写快速扩展到全景，强化抽离感与空间震撼感</td>
+<td>冲击、抽离</td>
+</tr>
+<tr>
+<td><strong>微距环绕旋转运镜</strong></td>
+<td>超微距镜头围绕主体细节小半径环绕旋转，带极细微的动态边缘模糊，全程锁焦主体微观细节，背景完全虚化，增强微观世界的精致感与奇幻氛围</td>
+<td>产品、微距</td>
+</tr>
+</tbody>
+</table>
+<h2 id="三复合运镜规则40组">三、复合运镜规则（40组）</h2>
+<h2 id="360-环绕--急推">360° 环绕 + 急推</h2>
+<p>从氛围感铺垫到极致情绪爆破👉传递宿命感和窒息感</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>运镜方式</strong></td>
+<td><strong>Seedance2.0提示词</strong></td>
+<td><strong>适用场景</strong></td>
+</tr>
+<tr>
+<td><strong>变速环绕+急推</strong></td>
+<td>360° 环绕运镜，前 2 秒慢速 0.5 圈 / 秒，最后 1 秒突然加速到 1.2 圈 / 秒，随即以 6m/s 速度极推到 [主体眼睛 / 手部 / 核心道具] 特写，保留自然动态模糊，24mm 广角镜头</td>
+<td>角色黑化、超能力觉醒、情绪爆发顶点</td>
+</tr>
+<tr>
+<td><strong>偏心环绕+急推</strong></td>
+<td>以 [主体肩膀] 为圆心做偏心环绕运镜，速度 0.7 圈 / 秒，环绕1圈后以 5m/s 速度急推到主体面部特写，低角度仰拍，24mm广角镜头</td>
+<td>反派登场、神秘人物亮相、压迫感时刻</td>
+</tr>
+<tr>
+<td><strong>180° 半环绕 + 急推</strong></td>
+<td>180° 半环绕运镜，速度 0.8 圈 / 秒，环绕半圈后立即以 6m/s 速度极推到主体面部特写，总时长 2 秒，轻微手持晃动</td>
+<td>高能时刻、快剪卡点</td>
+</tr>
+<tr>
+<td><strong>环绕+急推+ 急拉</strong></td>
+<td>360° 环绕运镜 3 秒，速度 0.7 圈 / 秒，随即极推到特写停留 0.2 秒，立刻以相同速度急拉回中景，全程跟焦主体</td>
+<td>打脸、突然惊吓、反转瞬间</td>
+</tr>
+<tr>
+<td><strong>环绕+抽帧 + 急推</strong></td>
+<td>360° 环绕运镜，最后 0.5 秒加入 20% 抽帧效果，随即以 7m/s 速度极推到主体瞳孔特写，保留动态模糊，高对比度</td>
+<td>速度撕裂感、时空扭曲、战斗高潮</td>
+</tr>
+<tr>
+<td><strong>环绕+微希区柯克+急推</strong></td>
+<td>360° 环绕运镜 3 秒，速度 0.7 圈 / 秒，急推同时做 10% 希区柯克变焦，最终定格在主体眼睛特写</td>
+<td>恐惧、眩晕、精神崩溃、发现真相</td>
+</tr>
+<tr>
+<td><strong>环绕+急推+ 空镜</strong></td>
+<td>360° 环绕 [主体] 3 秒，速度 0.7 圈 / 秒，极推到特写后无缝切换到 [风吹树叶 / 雨滴落地 / 燃烧的火焰] 空镜，柔和光影</td>
+<td>留白、余韵、悲伤、怅然若失</td>
+</tr>
+<tr>
+<td><strong>急推+环绕</strong></td>
+<td>先以 5m/s 速度急推到 [关键道具] 特写，再以 0.6 圈 / 秒速度缓慢 360° 环绕展示周围环境，35mm 镜头</td>
+<td>关键道具揭示、细节放大、悬念铺垫</td>
+</tr>
+</tbody>
+</table>
+<h2 id="摇镜--升镜头">摇镜 + 升镜头</h2>
+<p><strong>从个体视角升华到全局视角，崇高、孤独、释然、渺小、宿命感</strong>。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>运镜方式</strong></td>
+<td><strong>Seedance2.0提示词</strong></td>
+<td><strong>适用场景</strong></td>
+</tr>
+<tr>
+<td><strong>环摇+升镜</strong></td>
+<td>360° 环摇展示 [主体] 四周环境，速度 0.5m/s，随即以 1m/s 速度匀速升镜头，最终停在 10 米高空上帝视角全景，全程跟焦主体</td>
+<td>山顶、海边、古建筑、主角独自站立</td>
+</tr>
+<tr>
+<td><strong>升镜头+摇镜</strong></td>
+<td>以 1m/s 速度匀速升镜头到 12 米高空，随即水平摇镜扫描整个场景，速度 0.4m/s，展示宏大环境全貌</td>
+<td>开场镜头、灾难片、战争片全景展示</td>
+</tr>
+<tr>
+<td><strong>摇+升+推</strong></td>
+<td>水平右摇展示 [主体] 周围环境x秒，随即升镜头到8米高空，立刻推镜到 [另一个关键人物] 中景，35mm镜头</td>
+<td>多人群戏转场、从环境引入新角色</td>
+</tr>
+<tr>
+<td><strong>摇+变速升</strong></td>
+<td>水平摇镜x秒，随即升镜头，前2秒慢速 0.8m/s，最后1秒突然加速到 2m/s 拉升，最终停在15米高空<!--Ray--></td>
+<td>主角逃离危险、飞向天空、豁然开朗</td>
+</tr>
+<tr>
+<td><strong>摇+升+叠化转场</strong></td>
+<td>水平摇镜x秒，随即升镜头到10米高空，画面逐渐叠化到下一个场景的同机位画面，柔和过渡</td>
+<td>时间流逝、季节更替、地点跳转</td>
+</tr>
+<tr>
+<td><strong>摇+升+急降</strong></td>
+<td>水平摇镜x秒，随即升镜头到10米高空停留0.5秒，突然以3m/s速度垂直急降，镜头轻微震动</td>
+<td>压迫感、危机感、灾难降临</td>
+</tr>
+<tr>
+<td><strong>斜摇+升</strong></td>
+<td>45° 斜向摇镜同时匀速升镜头，速度0.6m/s，展示长条形大场景全貌，柔和自然光</td>
+<td>山脉、河流、长条形大场景展示</td>
+</tr>
+<tr>
+<td><strong>摇+升+跟焦锁定</strong></td>
+<td>水平摇镜x秒，随即匀速升镜头到10米高空，全程焦点死死锁定 [主体]，不随环境漂移</td>
+<td>突出主角在宏大场景中的存在感</td>
+</tr>
+</tbody>
+</table>
+<h2 id="降镜头-投掷-pov">降镜头 +投掷 POV</h2>
+<p><strong>压迫感、冲击力、生理刺激，让观众产生身临其境，被攻击感</strong>。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>运镜方式</strong></td>
+<td><strong>Seedance2.0提示词</strong></td>
+<td><strong>适用场景</strong></td>
+</tr>
+<tr>
+<td><strong>垂直俯冲 + 投掷</strong></td>
+<td>90° 垂直俯拍，从10米高空以 2m/s 速度匀速下降到 3 米高度，[主体] 举起 [巨石 / 炸弹] 向镜头投掷，无缝切到物体跟拍特写，速度 8m/s（8、3自行替换，差距要大一些，下同）</td>
+<td>山顶、海边、古建筑、主角独自站立</td>
+</tr>
+<tr>
+<td><strong>多物体连续投掷</strong></td>
+<td>从8米高空45° 斜俯拍下降到3米，第一个物体砸镜头黑场0.2秒后，第二个物体紧接着砸来，镜头剧烈震动</td>
+<td>开场镜头、灾难片、战争片全景展示</td>
+</tr>
+<tr>
+<td><strong>投掷+慢放特写</strong></td>
+<td>从 8 米高空45°斜俯拍下降到3米，[主体] 投掷物体，无缝切到物体跟拍特写，距镜头0.5 米时进入0.2倍慢放</td>
+<td>多人群戏转场、从环境引入新角色</td>
+</tr>
+<tr>
+<td><strong>投掷+镜头震动</strong></td>
+<td>从8米高空45° 斜俯拍下降到3米，[主体] 投掷物体向镜头，物体距镜头1米时加入 30% 镜头震动，保留动态模糊</td>
+<td>主角逃离危险、飞向天空、豁然开朗</td>
+</tr>
+<tr>
+<td><strong>投掷+碎片飞溅</strong></td>
+<td>从8米高空45° 斜俯拍下降到3米，[主体] 投掷物体砸向镜头，瞬间加入玻璃 / 碎石飞溅的前景效果，高对比度</td>
+<td>时间流逝、季节更替、地点跳转</td>
+</tr>
+<tr>
+<td><strong>升镜头+物体远离</strong></td>
+<td>从 [火箭 / 武器] 特写开始，以 1.5m/s 速度匀速升镜头，同时物体向远处飞去，最终展示广阔天空全景</td>
+<td>压迫感、危机感、灾难降临</td>
+</tr>
+<tr>
+<td><strong>投掷+急拉闪避</strong></td>
+<td>从 8 米高空45° 斜俯拍下降到3米，物体快砸到镜头时突然以 4m/s 速度急拉到全景，展示主角躲开攻击</td>
+<td>山脉、河流、长条形大场景展示</td>
+</tr>
+<tr>
+<td><strong>投掷+黑场转场</strong></td>
+<td>从 8 米高空45° 斜俯拍下降到3米，[主体] 投掷物体向镜头，物体完全填满画面后直接黑场 0.5 秒</td>
+<td>突出主角在宏大场景中的存在感</td>
+</tr>
+</tbody>
+</table>
+<h2 id="跟镜头转第一视角">跟镜头转第一视角</h2>
+<p><strong>从旁观者到参与者的无缝代入，增强沉浸感、紧张感和身临其境感</strong>。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>运镜方式</strong></td>
+<td><strong>Seedance2.0提示词</strong></td>
+<td><strong>适用场景</strong></td>
+</tr>
+<tr>
+<td><strong>低角度跟转第一视角</strong></td>
+<td>低角度跟拍 [主体] 腿部，距离1米，跟拍速度与主体一致，3秒后镜头缓慢前移，无缝切换为第一人称走路视角</td>
+<td>追逐、逃亡、恐怖片潜行</td>
+</tr>
+<tr>
+<td><strong>高角度跟转第一视角</strong></td>
+<td>高角度跟拍 [主体] 头部，距离1.5米，跟拍速度与主体一致，3秒后无缝切换为第一人称俯瞰视角</td>
+<td>站在楼顶、悬崖边、飞机上向下看</td>
+</tr>
+<tr>
+<td><strong>跟拍 + 甩镜转第一视角</strong></td>
+<td>肩扛式跟拍 [主体] 后背，距离 1.5米，3秒后快速甩镜 180°，直接切换为第一人称视角，轻微手持抖动</td>
+<td>突然回头、被人从背后袭击</td>
+</tr>
+<tr>
+<td><strong>肩膀遮挡转第一视角</strong></td>
+<td>肩扛式跟拍 [主体] 后背，距离1.5米，用主体肩膀完全遮挡镜头的瞬间，无缝切换为第一人称视角</td>
+<td>自然无痕迹的视角转换</td>
+</tr>
+<tr>
+<td><strong>第一视角转跟随</strong></td>
+<td>第一人称奔跑视角3秒，随后镜头缓慢后拉，变成跟拍主体后背的视角，速度保持一致</td>
+<td>死亡、灵魂出窍、从梦境中醒来</td>
+</tr>
+<tr>
+<td><strong>跟转第一+呼吸晃动</strong></td>
+<td>肩扛式跟拍 [主体] 后背3秒，无缝切换为第一人称视角，加入轻微的呼吸和身体晃动</td>
+<td>真实感、代入感、紧张感</td>
+</tr>
+<tr>
+<td><strong>多视角连续切换</strong></td>
+<td>跟随视角 1.5 秒→第一视角 1.5 秒→跟随视角 1.5 秒→第一视角 1.5 秒循环切换，速度一致</td>
+<td>混乱的战斗场景、多人追逐</td>
+</tr>
+<tr>
+<td><strong>跟转第一+手持抖动</strong></td>
+<td>全程加入轻微手持抖动，肩扛式跟拍 [主体] 后背 3 秒，无缝切换为第一人称奔跑视角</td>
+<td>模拟真实拍摄、临场感</td>
+</tr>
+</tbody>
+</table>
+<h2 id="推拉反转运镜">推拉反转运镜</h2>
+<h3 id="预期反转震惊惊喜恍然大悟细思极恐">预期反转，震惊、惊喜、恍然大悟、细思极恐</h3>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>运镜方式</strong></td>
+<td><strong>Seedance2.0提示词</strong></td>
+<td><strong>适用场景</strong></td>
+</tr>
+<tr>
+<td><strong>极推转极拉</strong></td>
+<td>低角度跟拍 [主体] 腿部，距离1米，跟拍速度与主体一致，3秒后镜头缓慢前移，无缝切换为第一人称走路视角</td>
+<td>追逐、逃亡、恐怖片潜行</td>
+</tr>
+<tr>
+<td><strong>推转拉+旋转</strong></td>
+<td>高角度跟拍 [主体] 头部，距离1.5米，跟拍速度与主体一致，3秒后无缝切换为第一人称俯瞰视角</td>
+<td>站在楼顶、悬崖边、飞机上向下看</td>
+</tr>
+<tr>
+<td><strong>推转拉+升</strong></td>
+<td>肩扛式跟拍 [主体] 后背，距离1.5米，3 秒后快速甩镜 180°，直接切换为第一人称视角，轻微手持抖动</td>
+<td>突然回头、被人从背后袭击</td>
+</tr>
+<tr>
+<td><strong>多次推拉反转</strong></td>
+<td>肩扛式跟拍 [主体] 后背，距离1.5米，用主体肩膀完全遮挡镜头的瞬间，无缝切换为第一人称视角</td>
+<td>自然无痕迹的视角转换</td>
+</tr>
+<tr>
+<td><strong>推转拉+音效同步</strong></td>
+<td>第一人称奔跑视角3秒，随后镜头缓慢后拉，变成跟拍主体后背的视角，速度保持一致</td>
+<td>死亡、灵魂出窍、从梦境中醒来</td>
+</tr>
+<tr>
+<td><strong>推转拉+空镜</strong></td>
+<td>肩扛式跟拍 [主体] 后背3秒，无缝切换为第一人称视角，加入轻微的呼吸和身体晃动</td>
+<td>真实感、代入感、紧张感</td>
+</tr>
+<tr>
+<td><strong>推转拉+跟焦锁定</strong></td>
+<td>跟随视角 1.5 秒→第一视角1.5 秒→跟随视角1.5秒→第一视角1.5秒循环切换，速度一致</td>
+<td>混乱的战斗场景、多人追逐</td>
+</tr>
+<tr>
+<td><strong>后拉转前推</strong></td>
+<td>全程加入轻微手持抖动，肩扛式跟拍 [主体] 后背3秒，无缝切换为第一人称奔跑视角</td>
+<td>模拟真实拍摄、临场感</td>
+</tr>
+</tbody>
+</table>
+<h2 id="四运镜图解-144-组seedance-25">四、运镜图解 144 组（Seedance 2.5）</h2>
+<blockquote>
+<p>从原运镜（非图解版哪里，共186组）挑选了常用的一组，做了一些拓展，然后新增了图解</p>
+</blockquote>
+<h4 id="基础运镜-49组">基础运镜-49组</h4>
+<h4 id="镜头运动方向">镜头运动方向</h4>
+<p><img src="/prompt-archive-site/media/adb6a3ef7a04c21b.png" alt=""></p>
+<table>
+<thead>
+<tr>
+<th><strong>运镜方式</strong></th>
+<th><strong>视频提示词</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>跟镜头</strong></td>
+<td>智能跟随，速度自适应主体运动（步行/奔跑），平滑跟拍，轻微镜头晃动模拟手持感，保持主体清晰追踪</td>
+</tr>
+<tr>
+<td><strong>推镜头</strong></td>
+<td>平滑推进，动态对焦系统，从全景渐变至中景，每秒移动5-10厘米，镜头轻微呼吸感增强沉浸</td>
+</tr>
+<tr>
+<td><strong>拉镜头</strong></td>
+<td>智能拉远，0.3秒内完成从特写到全景，加入轻微镜头模糊与透视变化，增强空间感</td>
+</tr>
+<tr>
+<td><strong>水平摇镜头</strong></td>
+<td>动态水平摇镜，加入轻微速度曲线（缓入缓出），扫视过程中自动对焦环境细节，增强场景叙事</td>
+</tr>
+<tr>
+<td><strong>垂直摇镜头</strong></td>
+<td>快速垂直摇镜，加入动态模糊与光影追踪，1.5秒内完成，强化视觉冲击与情绪张力</td>
+</tr>
+<tr>
+<td><strong>移镜头</strong></td>
+<td>智能侧移，镜头保持与主体距离自适应，加入轻微上下浮动模拟步行感，增强真实拍摄体验</td>
+</tr>
+<tr>
+<td><strong>升镜头</strong></td>
+<td>智能垂直上升，速度曲线设计（缓起缓停），上升过程中自动调整曝光与焦距，保持主体清晰，背景环境渐变扩展，增强空间展开感</td>
+</tr>
+<tr>
+<td><strong>降镜头</strong></td>
+<td>快速垂直降落，加入轻微镜头震动和风噪模拟，最终缓慢停稳，降落过程中保持主体对焦，背景虚化渐变增强落地冲击感</td>
+</tr>
+<tr>
+<td><strong>旋转镜头</strong></td>
+<td>智能旋转运镜，速度可调（慢速360°或快速急旋），旋转过程中保持主体在画面中央，背景产生动态模糊与透视变化，增强视觉动感</td>
+</tr>
+</tbody>
+</table>
+<p><strong>取值速拷（9 条 · 与上表逐字一致）</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>智能跟随，速度自适应主体运动（步行/奔跑），平滑跟拍，轻微镜头晃动模拟手持感，保持主体清晰追踪</span></span>
+<span class="line"><span>平滑推进，动态对焦系统，从全景渐变至中景，每秒移动5-10厘米，镜头轻微呼吸感增强沉浸</span></span>
+<span class="line"><span>智能拉远，0.3秒内完成从特写到全景，加入轻微镜头模糊与透视变化，增强空间感</span></span>
+<span class="line"><span>动态水平摇镜，加入轻微速度曲线（缓入缓出），扫视过程中自动对焦环境细节，增强场景叙事</span></span>
+<span class="line"><span>快速垂直摇镜，加入动态模糊与光影追踪，1.5秒内完成，强化视觉冲击与情绪张力</span></span>
+<span class="line"><span>智能侧移，镜头保持与主体距离自适应，加入轻微上下浮动模拟步行感，增强真实拍摄体验</span></span>
+<span class="line"><span>智能垂直上升，速度曲线设计（缓起缓停），上升过程中自动调整曝光与焦距，保持主体清晰，背景环境渐变扩展，增强空间展开感</span></span>
+<span class="line"><span>快速垂直降落，加入轻微镜头震动和风噪模拟，最终缓慢停稳，降落过程中保持主体对焦，背景虚化渐变增强落地冲击感</span></span>
+<span class="line"><span>智能旋转运镜，速度可调（慢速360°或快速急旋），旋转过程中保持主体在画面中央，背景产生动态模糊与透视变化，增强视觉动感</span></span></code></pre>
+<h4 id="情绪化运镜">情绪化运镜</h4>
+<p><img src="/prompt-archive-site/media/027e5888e5abc689.png" alt=""></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>运镜方式</strong></td>
+<td><strong>视频提示词</strong></td>
+</tr>
+<tr>
+<td><strong>聚焦式推进</strong></td>
+<td>动态对焦+景深渐变，推进过程中背景逐渐虚化，增强情绪沉浸</td>
+</tr>
+<tr>
+<td><strong>抽离式后拉</strong></td>
+<td>后拉过程中加入景深扩展与光影渐变，增强时空疏离感</td>
+</tr>
+<tr>
+<td><strong>探索式横摇</strong></td>
+<td>加入速度变化与镜头轻微颤动，模拟人眼搜索状态，增强探索情绪</td>
+</tr>
+<tr>
+<td><strong>陪伴式平移</strong></td>
+<td>平滑平移+轻微上下浮动，背景动态模糊，增强陪伴叙事感</td>
+</tr>
+<tr>
+<td><strong>升华式上升</strong></td>
+<td>上升过程中光线逐渐明亮，云层/光晕增强，强化希望感</td>
+</tr>
+<tr>
+<td><strong>压抑式下降</strong></td>
+<td>下降过程中光影变暗，景深压缩，增强压抑氛围</td>
+</tr>
+<tr>
+<td><strong>迷幻式旋转</strong></td>
+<td>旋转中加入动态模糊与色彩偏移，增强迷幻与主观情绪</td>
+</tr>
+<tr>
+<td><strong>爆发式急推 / 急拉</strong></td>
+<td>加入镜头畸变与瞬间模糊，增强视觉冲击与情绪爆发</td>
+</tr>
+<tr>
+<td><strong>纪实式手持抖动</strong></td>
+<td>智能抖动模拟，根据不同情绪调整抖动幅度与频率</td>
+</tr>
+</tbody>
+</table>
+<h4 id="其他特殊场景拍摄">其他特殊场景拍摄</h4>
+<p><img src="/prompt-archive-site/media/ed3339b5e8ef3ac5.png" alt=""></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>场景</strong></td>
+<td><strong>视频提示词</strong></td>
+</tr>
+<tr>
+<td><strong>雨景</strong></td>
+<td>240fps 慢动作 + 雨滴光斑追踪 + 积水反射增强，氛围光晕模拟</td>
+</tr>
+<tr>
+<td><strong>舞蹈拍摄</strong></td>
+<td>智能环绕 + 动态速度匹配舞者节奏，肢体边缘光晕增强</td>
+</tr>
+<tr>
+<td><strong>美食拍摄</strong></td>
+<td>微距推进 + 热蒸汽模拟 + 食材光泽增强，景深动态变化</td>
+</tr>
+<tr>
+<td><strong>夜景拍摄</strong></td>
+<td>长曝光模拟 + 车流光轨 + 路灯辉光增强，<!--阿拉赛博蕾-->低光降噪优化</td>
+</tr>
+<tr>
+<td><strong>跑步场景</strong></td>
+<td>智能跟随 + 运动模糊增强 + 汗水飞溅细节，增强力量感</td>
+</tr>
+<tr>
+<td><strong>婚礼场景</strong></td>
+<td>长焦推进 + 花瓣飘落模拟 + 柔和光晕，<!--阿拉赛博蕾-->情感焦点自动跟踪</td>
+</tr>
+<tr>
+<td><strong>自然风光</strong></td>
+<td>无人机智能航拍 + 云层动态光影 + 山体细节增强，HDR效果模拟</td>
+</tr>
+<tr>
+<td><strong>昆虫</strong></td>
+<td>超微距 + 景深动态跟踪 + 背景光斑运动模拟，增强生态真实感</td>
+</tr>
+<tr>
+<td><strong>猫咪跳跃</strong></td>
+<td>低角度跟踪 + 瞬间对焦 + 毛发细节增强，落地震动模拟</td>
+</tr>
+</tbody>
+</table>
+<h4 id="镜头视角层级">镜头视角层级</h4>
+<p><img src="/prompt-archive-site/media/3ad09a98c40ea455.png" alt=""></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>运镜方式</strong></td>
+<td><strong>视频提示词</strong></td>
+</tr>
+<tr>
+<td><strong>远景</strong></td>
+<td>超广角远景，加入景深层次与大气透视，光线散射模拟，增强空间感与氛围沉浸</td>
+</tr>
+<tr>
+<td><strong>全景</strong></td>
+<td>智能全景跟随，主体与环境光影互动清晰，轻微动态模糊增强视觉流动感</td>
+</tr>
+<tr>
+<td><strong>中景</strong></td>
+<td>聚焦主体动作，背景自动虚化分层，突出主体动态细节</td>
+</tr>
+<tr>
+<td><strong>近景</strong></td>
+<td>浅景深效果，背景光斑虚化，主体眼神/手势细节强化，适合情绪表达</td>
+</tr>
+<tr>
+<td><strong>特写</strong></td>
+<td>超清微距特写，皮肤纹理/物体质感增强，加入轻微镜头颤动模拟真实拍摄</td>
+</tr>
+<tr>
+<td><strong>俯拍</strong></td>
+<td>高空俯拍+轻微旋转，光影投射清晰，增强环境与主体的空间关系</td>
+</tr>
+<tr>
+<td><strong>仰拍</strong></td>
+<td>低角度仰拍+广角畸变，增强主体高大感，天空云层动态增强</td>
+</tr>
+<tr>
+<td><strong>微距</strong></td>
+<td>显微级细节+景深动态变化，背景光斑运动模拟，适合情感细腻表达</td>
+</tr>
+<tr>
+<td>环拍</td>
+<td>360° 匀速环绕运镜，加入视差分层与光影渐变，主体锚定中心，增强立体氛围感与空间张力</td>
+</tr>
+</tbody>
+</table>
+<h4 id="动态运镜提示词60组">动态运镜提示词,60组</h4>
+<h4 id="沉浸式跟拍追踪">沉浸式跟拍追踪</h4>
+<p><img src="/prompt-archive-site/media/c7aee7eddc8cf5c5.png" alt=""></p>
+<table>
+<thead>
+<tr>
+<th><strong>运镜方式</strong></th>
+<th><strong>视频提示词</strong></th>
+<th><strong>适用场景</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>贴地式超低跟拍</strong></td>
+<td>超低机位贴地平滑跟拍，动态锁焦运动主体，地面纹理带动态拖影模糊，速度随主体动作线性变化，增强临场追击感</td>
+<td>追逐、动作</td>
+</tr>
+<tr>
+<td><strong>第一人称式跟拍</strong></td>
+<td>第一人称视角手持跟拍，带自然呼吸感抖动，动态对焦前方主体，环境随移动渐进虚化，强化沉浸式代入感</td>
+<td>vlog、剧情</td>
+</tr>
+<tr>
+<td><strong>倒退式反向跟拍</strong></td>
+<td>主体朝向镜头<!--Ray-->匀速倒退跟拍，背景持续向后拉伸虚化，动态对焦全程锁定主体，增强对话感与叙事张力</td>
+<td>对话、叙事</td>
+</tr>
+<tr>
+<td><strong>平行式侧身跟拍</strong></td>
+<td>与主体运动方向平行侧移跟拍，前景物体扫过带动态模糊，景深恒定锁定主体，强化速度感与并肩陪伴感</td>
+<td>奔跑、运动</td>
+</tr>
+<tr>
+<td><strong>俯冲式低空跟拍</strong></td>
+<td>高空俯冲后贴地低空跟拍，速度由快到缓带径向动态模糊，光影随高度快速变化，增强俯冲冲击与追击感</td>
+<td>航拍、追击</td>
+</tr>
+<tr>
+<td><strong>越障式穿越跟拍</strong></td>
+<td>跟拍过程中同步跨越前景障碍物，障碍物穿镜瞬间带过曝模糊，主体全程锁焦不脱焦，增强沉浸式穿越感</td>
+<td>探险、穿越</td>
+</tr>
+<tr>
+<td><strong>升格式慢动作跟拍</strong></td>
+<td>高速运动主体慢动作跟拍，帧间平滑带动态拖影，背景极致虚化，动态对焦锁定主体细节，强化瞬间氛围感</td>
+<td>动作、高光</td>
+</tr>
+<tr>
+<td><strong>贴脸式近距跟拍</strong></td>
+<td>超近距贴脸跟拍主体面部，轻微前后位移带呼吸感景深变化，背景完全虚化，强化情绪细节的感染力</td>
+<td>特写、情绪</td>
+</tr>
+<tr>
+<td><strong>切换式高低跟拍</strong></td>
+<td>跟拍过程中机位从超低到高位顺滑切换，带轻微俯仰角度变化，动态对焦全程锁定主体，增强叙事层次感</td>
+<td>剧情、叙事</td>
+</tr>
+</tbody>
+</table>
+<p><strong>取值速拷（9 条 · 与上表逐字一致）</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>超低机位贴地平滑跟拍，动态锁焦运动主体，地面纹理带动态拖影模糊，速度随主体动作线性变化，增强临场追击感</span></span>
+<span class="line"><span>第一人称视角手持跟拍，带自然呼吸感抖动，动态对焦前方主体，环境随移动渐进虚化，强化沉浸式代入感</span></span>
+<span class="line"><span>主体朝向镜头&lt;!--Ray--&gt;匀速倒退跟拍，背景持续向后拉伸虚化，动态对焦全程锁定主体，增强对话感与叙事张力</span></span>
+<span class="line"><span>与主体运动方向平行侧移跟拍，前景物体扫过带动态模糊，景深恒定锁定主体，强化速度感与并肩陪伴感</span></span>
+<span class="line"><span>高空俯冲后贴地低空跟拍，速度由快到缓带径向动态模糊，光影随高度快速变化，增强俯冲冲击与追击感</span></span>
+<span class="line"><span>跟拍过程中同步跨越前景障碍物，障碍物穿镜瞬间带过曝模糊，主体全程锁焦不脱焦，增强沉浸式穿越感</span></span>
+<span class="line"><span>高速运动主体慢动作跟拍，帧间平滑带动态拖影，背景极致虚化，动态对焦锁定主体细节，强化瞬间氛围感</span></span>
+<span class="line"><span>超近距贴脸跟拍主体面部，轻微前后位移带呼吸感景深变化，背景完全虚化，强化情绪细节的感染力</span></span>
+<span class="line"><span>跟拍过程中机位从超低到高位顺滑切换，带轻微俯仰角度变化，动态对焦全程锁定主体，增强叙事层次感</span></span></code></pre>
+<h4 id="主体环绕旋转">主体环绕旋转</h4>
+<p><img src="/prompt-archive-site/media/7589c0f73fdb3ca1.png" alt=""></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>运镜方式</strong></td>
+<td><strong>视频提示词</strong></td>
+<td><strong>适用场景</strong></td>
+</tr>
+<tr>
+<td><strong>极速式 360° 环绕</strong></td>
+<td>以主体为轴心 360 度极速环绕，带动态径向模糊与光影快速切换，全程锁焦主体，强化极致视觉冲击</td>
+<td>出场、高光</td>
+</tr>
+<tr>
+<td><strong>螺旋式升降环绕</strong></td>
+<td>环绕主体的同时同步螺旋升降，景深随环绕半径渐变，光影随高度动态变化，增强空间纵深感与史诗感</td>
+<td>大场景、史诗</td>
+</tr>
+<tr>
+<td><strong>偏心式动态环绕</strong></td>
+<td>非中心轴心偏心环绕，带轻微镜头晃动与速度变化，前景背景交替虚化，增强不安感与主观情绪</td>
+<td>悬疑、情绪</td>
+</tr>
+<tr>
+<td><strong>低半径贴地环绕</strong></td>
+<td>超低机位贴地小半径环绕主体，地面动态拖影模糊，主体全程锁焦，增强压迫感与力量感</td>
+<td>压迫、力量</td>
+</tr>
+<tr>
+<td><strong>慢扫式氛围感环绕</strong></td>
+<td>超慢速度环绕主体，带极细微的景深渐变与光影流动，背景缓慢虚化过渡，增强氛围感与细节表现力</td>
+<td>产品、氛围感</td>
+</tr>
+<tr>
+<td><strong>急停式冲击环绕</strong></td>
+<td>极速环绕后瞬间急停，带瞬间帧间模糊与对焦回弹，强化情绪爆发的定格冲击力</td>
+<td>爆发、转场</td>
+</tr>
+<tr>
+<td><strong>双轴心旋转环绕</strong></td>
+<td>主体与<!--Ray-->镜头双轴心同步旋转环绕，带动态旋转模糊与色彩偏移，增强迷幻感与超现实氛围</td>
+<td>创意、迷幻</td>
+</tr>
+<tr>
+<td><strong>俯冲式环绕运镜</strong></td>
+<td>高空俯冲的同时环绕主体，速度由快到缓带径向动态模糊，光影随俯冲角度剧烈变化，增强坠落冲击感</td>
+<td>冲击、坠落</td>
+</tr>
+<tr>
+<td><strong>渐扩式揭示环绕</strong></td>
+<td>环绕主体的同时半径逐渐扩大，景深同步扩展，背景逐渐清晰，增强空间揭示感与叙事张力</td>
+<td>场景、揭示</td>
+</tr>
+</tbody>
+</table>
+<h4 id="横摇平移基础运镜">横摇平移基础运镜</h4>
+<p><img src="/prompt-archive-site/media/c9004b5634ba6fa0.png" alt=""></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>运镜方式</strong></td>
+<td><strong>视频提示词</strong></td>
+<td><strong>适用场景</strong></td>
+</tr>
+<tr>
+<td><strong>俯冲式极速推进</strong></td>
+<td>从高空极速俯冲推进，带强烈径向动态模糊，对焦锁定地面目标，光影随高度快速明暗切换，增强极致冲击感</td>
+<td>航拍、冲击</td>
+</tr>
+<tr>
+<td><strong>穿堂式穿梭推进</strong></td>
+<td>线性穿越多个空间 / 门洞的推进运镜，每个穿入点带瞬间过曝模糊，全程动态锁焦终点主体，增强沉浸式穿梭感</td>
+<td>空间、转场</td>
+</tr>
+<tr>
+<td><strong>甩动式极速横摇</strong></td>
+<td>从一侧到另一侧极速甩动横摇，运动路径带动态拖影模糊，起幅落幅精准锁焦，强化转场冲击与情绪跳转</td>
+<td>转场、跳转</td>
+</tr>
+<tr>
+<td><strong>缓急交替式横摇</strong></td>
+<td>横摇过程中速度缓急交替，带镜头轻微颤动，前景背景交替虚化，模拟人眼扫视的探索感，增强叙事节奏</td>
+<td>扫景、探索</td>
+</tr>
+<tr>
+<td><strong>纵深式穿梭平移</strong></td>
+<td>沿场景纵深方向平滑平移，前景物体持续扫过动态模糊，景深锁定中景主体，增强空间沉浸感与探索感</td>
+<td>空间、叙事</td>
+</tr>
+<tr>
+<td><strong>反向拉伸平移</strong></td>
+<td>与主体运动方向反向平移，背景快速拉伸虚化，带轻微速度变化，强化主体的相对<!--阿拉赛博蕾-->速度感与画面张力</td>
+<td>运动、速度</td>
+</tr>
+<tr>
+<td><strong>渐快式压迫推进</strong></td>
+<td>推进速度由慢到快持续加快，景深逐渐压缩，背景逐渐虚化，带轻微动态模糊，增强情绪递进的压迫感</td>
+<td>悬疑、压迫</td>
+</tr>
+<tr>
+<td><strong>急刹式爆发急推</strong></td>
+<td>极速推进后瞬间急刹，带瞬间前景模糊与对焦回弹，强化视觉冲击与情绪的瞬间爆发</td>
+<td>冲击、爆发</td>
+</tr>
+<tr>
+<td><strong>倒退式拉远平移</strong></td>
+<td>镜头倒退拉远的同时横向平移，场景持续展开，带轻微动态边缘模糊，增强空间揭示感与叙事悬念</td>
+<td>场景、揭示</td>
+</tr>
+</tbody>
+</table>
+<h4 id="升降变速情绪运镜">升降变速情绪运镜</h4>
+<p><img src="/prompt-archive-site/media/9ed8f39ec8a15857.png" alt=""></p>
+<table>
+<thead>
+<tr>
+<th><strong>场景</strong></th>
+<th><strong>视频提示词</strong></th>
+<th><strong>适用场景</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>弹射式极速上升</strong></td>
+<td>从低位瞬间弹射极速上升，带垂直方向动态拖影模糊，光线随高度逐渐明亮，云层光晕同步增强，强化瞬间爆发的希望感</td>
+<td>爆发、希望</td>
+</tr>
+<tr>
+<td><strong>坠落式极速下降</strong></td>
+<td>从高空垂直极速坠落下降，带强烈垂直动态模糊，光影快速变暗，景深持续压缩，增强极致压迫感与失重感</td>
+<td>压抑、坠落</td>
+</tr>
+<tr>
+<td><strong>呼吸式交替升降</strong></td>
+<td>上升与下降顺滑交替，带呼吸感速度曲线，光影随高度同步渐变，增强情绪的起伏感与叙事节奏</td>
+<td>叙事、情绪</td>
+</tr>
+<tr>
+<td><strong>斜向俯冲升降</strong></td>
+<td>斜向 45 度俯冲下降后顺滑拉升上升，带全程动态模糊，光影随角度剧烈变化，增强过山车式的视觉冲击</td>
+<td>运动、冲击</td>
+</tr>
+<tr>
+<td><strong>阶梯式递进上升</strong></td>
+<td>分阶段阶梯式上升，每段上升后短暂停顿，带轻微对焦回弹，光线逐段提亮，增强递进式的史诗感</td>
+<td>史诗、递进</td>
+</tr>
+<tr>
+<td><strong>贴墙式垂直升降</strong></td>
+<td>紧贴墙面垂直升降，墙面纹理动态模糊，景深锁定侧面主体，增强沉浸式的攀爬 / 下坠感</td>
+<td>建筑、攀爬</td>
+</tr>
+<tr>
+<td><strong>旋转式迷幻升降</strong></td>
+<td>垂直升降的同时同步轴向旋转，带旋转动态模糊与色彩偏移，光影随高度变化，增强超现实的迷幻感</td>
+<td>创意、迷幻</td>
+</tr>
+<tr>
+<td><strong>失重式悬浮升降</strong></td>
+<td>无重力感缓慢升降，带极轻微的浮动抖动，景深缓慢渐变，光影柔和流动，增强空灵的悬浮感</td>
+<td>悬浮、空灵</td>
+</tr>
+<tr>
+<td><strong>急坠急升反差运镜</strong></td>
+<td>极速坠落后瞬间反弹拉升，带强烈的速度变化与动态模糊，光影瞬间明暗切换，强化极致的情绪反差</td>
+<td>情绪、反差</td>
+</tr>
+</tbody>
+</table>
+<p><strong>取值速拷（9 条 · 与上表逐字一致）</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>从低位瞬间弹射极速上升，带垂直方向动态拖影模糊，光线随高度逐渐明亮，云层光晕同步增强，强化瞬间爆发的希望感</span></span>
+<span class="line"><span>从高空垂直极速坠落下降，带强烈垂直动态模糊，光影快速变暗，景深持续压缩，增强极致压迫感与失重感</span></span>
+<span class="line"><span>上升与下降顺滑交替，带呼吸感速度曲线，光影随高度同步渐变，增强情绪的起伏感与叙事节奏</span></span>
+<span class="line"><span>斜向 45 度俯冲下降后顺滑拉升上升，带全程动态模糊，光影随角度剧烈变化，增强过山车式的视觉冲击</span></span>
+<span class="line"><span>分阶段阶梯式上升，每段上升后短暂停顿，带轻微对焦回弹，光线逐段提亮，增强递进式的史诗感</span></span>
+<span class="line"><span>紧贴墙面垂直升降，墙面纹理动态模糊，景深锁定侧面主体，增强沉浸式的攀爬 / 下坠感</span></span>
+<span class="line"><span>垂直升降的同时同步轴向旋转，带旋转动态模糊与色彩偏移，光影随高度变化，增强超现实的迷幻感</span></span>
+<span class="line"><span>无重力感缓慢升降，带极轻微的浮动抖动，景深缓慢渐变，光影柔和流动，增强空灵的悬浮感</span></span>
+<span class="line"><span>极速坠落后瞬间反弹拉升，带强烈的速度变化与动态模糊，光影瞬间明暗切换，强化极致的情绪反差</span></span></code></pre>
+<h4 id="视频复合运镜规则40组">视频/复合运镜规则，40组</h4>
+<h4 id="360-环绕--急推-1">360° 环绕 + 急推</h4>
+<p><img src="/prompt-archive-site/media/21b660abbe972028.png" alt=""></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>运镜方式</strong></td>
+<td><strong>视频提示词</strong></td>
+<td><strong>适用场景</strong></td>
+</tr>
+<tr>
+<td><strong>变速环绕+急推</strong></td>
+<td>360° 环绕运镜，前 2 秒慢速 0.5 圈 / 秒，最后 1 秒突然加速到 1.2 圈 / 秒，随即以 6m/s 速度极推到 [主体眼睛 / 手部 / 核心道具] 特写，保留自然动态模糊，24mm 广角镜头</td>
+<td>角色黑化、超能力觉醒、情绪爆发顶点</td>
+</tr>
+<tr>
+<td><strong>偏心环绕+急推</strong></td>
+<td>以 [主体肩膀] 为圆心做偏心环绕运镜，速度 0.7 圈 / 秒，环绕1圈后以 5m/s 速度急推到主体面部特写，低角度仰拍，24mm广角镜头</td>
+<td>反派登场、神秘人物亮相、压迫感时刻</td>
+</tr>
+<tr>
+<td><strong>180° 半环绕 + 急推</strong></td>
+<td>180° 半环绕运镜，速度 0.8 圈 / 秒，环绕半圈后立即以 6m/s 速度极推到主体面部特写，总时长 2 秒，轻微手持晃动</td>
+<td>高能时刻、快剪卡点</td>
+</tr>
+<tr>
+<td><strong>环绕+急推+ 急拉</strong></td>
+<td>360° 环绕运镜 3 秒，速度 0.7 圈 / 秒，随即极推到特写停留 0.2 秒，立刻以相同速度急拉回中景，全程跟焦主体</td>
+<td>打脸、突然惊吓、反转瞬间</td>
+</tr>
+<tr>
+<td><strong>环绕+抽帧 + 急推</strong></td>
+<td>360° 环绕运镜，最后 0.5 秒加入 20% 抽帧效果，随即以 7m/s 速度极推到主体瞳孔特写，保留动态模糊，高对比度</td>
+<td>速度撕裂感、时空扭曲、战斗高潮</td>
+</tr>
+<tr>
+<td><strong>环绕+微希区柯克+急推</strong></td>
+<td>360° 环绕运镜 3 秒，速度 0.7 圈 / 秒，急推同时做 10% 希区柯克变焦，最终定格在主体眼睛特写</td>
+<td>恐惧、眩晕、精神崩溃、发现真相</td>
+</tr>
+<tr>
+<td><strong>环绕+急推+ 空镜</strong></td>
+<td>360° 环绕 [主体] 3 秒，速度 0.7 圈 / 秒，极推到特写后无缝切换到 [风吹树叶 / 雨滴落地 / 燃烧的火焰] 空镜，柔和光影</td>
+<td>留白、余韵、悲伤、怅然若失</td>
+</tr>
+<tr>
+<td><strong>急推+环绕</strong></td>
+<td>先以 5m/s 速度急推到 [关键道具] 特写，再以 0.6 圈 / 秒速度缓慢 360° 环绕展示周围环境，35mm 镜头</td>
+<td>关键道具揭示、细节放大、悬念铺垫</td>
+</tr>
+<tr>
+<td><strong>螺旋升降环绕 + 急推</strong></td>
+<td>以主体为轴心做螺旋上升环绕运镜，垂直抬升速度 1.2m/s，水平环绕速度 0.6 圈 / 秒，环绕上升 1 圈后以 6.5m/s 速度急推到主体核心细节特写，24mm 广角镜头，保留空间纵深感与运动拖影</td>
+<td>角色高光登场、线索揭秘</td>
+</tr>
+</tbody>
+</table>
+<h4 id="摇镜--升镜头-1">摇镜 + 升镜头</h4>
+<p><img src="/prompt-archive-site/media/e71b21a5e13a8249.png" alt=""></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>运镜方式</strong></td>
+<td><strong>视频提示词</strong></td>
+<td><strong>适用场景</strong></td>
+</tr>
+<tr>
+<td><strong>环摇+升镜</strong></td>
+<td>360° 环摇展示 [主体] 四周环境，速度 0.5m/s，随即以 1m/s 速度匀速升镜头，最终停在 10 米高空上帝视角全景，全程跟焦主体</td>
+<td>山顶、海边、古建筑、主角独自站立</td>
+</tr>
+<tr>
+<td><strong>升镜头+摇镜</strong></td>
+<td>以 1m/s 速度匀速升镜头到 12 米高空，随即水平摇镜扫描整个场景，速度 0.4m/s，展示宏大环境全貌</td>
+<td>开场镜头、灾难片、战争片全景展示</td>
+</tr>
+<tr>
+<td><strong>摇+升+推</strong></td>
+<td>水平右摇展示 [主体] 周围环境x秒，随即升镜头到8米高空，立刻推镜到 [另一个关键人物] 中景，35mm镜头</td>
+<td>多人群戏转场、从环境引入新角色</td>
+</tr>
+<tr>
+<td><strong>摇+变速升</strong></td>
+<td>水平摇镜x秒，随即升镜头，前2秒慢速 0.8m/s，最后1秒突然加速到 2m/s 拉升，最终停在15米高空<!--Ray--></td>
+<td>主角逃离危险、飞向天空、豁然开朗</td>
+</tr>
+<tr>
+<td><strong>摇+升+叠化转场</strong></td>
+<td>水平摇镜x秒，随即升镜头到10米高空，画面逐渐叠化到下一个场景的同机位画面，柔和过渡</td>
+<td>时间流逝、季节更替、地点跳转</td>
+</tr>
+<tr>
+<td><strong>摇+升+急降</strong></td>
+<td>水平摇镜x秒，随即升镜头到10米高空停留0.5秒，突然以3m/s速度垂直急降，镜头轻微震动</td>
+<td>压迫感、危机感、灾难降临</td>
+</tr>
+<tr>
+<td><strong>斜摇+升</strong></td>
+<td>45° 斜向摇镜同时匀速升镜头，速度0.6m/s，展示长条形大场景全貌，柔和自然光</td>
+<td>山脉、河流、长条形大场景展示</td>
+</tr>
+<tr>
+<td><strong>摇+升+跟焦锁定</strong></td>
+<td>水平摇镜x秒，随即匀速升镜头到10米高空，全程焦点死死锁定 [主体]，不随环境漂移</td>
+<td>突出主角在宏大场景中的存在感</td>
+</tr>
+</tbody>
+</table>
+<h4 id="跟镜头转第一视角-1">跟镜头转第一视角</h4>
+<p><img src="/prompt-archive-site/media/619fa4456f431a26.png" alt=""></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>运镜方式</strong></td>
+<td><strong>视频提示词</strong></td>
+<td><strong>适用场景</strong></td>
+</tr>
+<tr>
+<td><strong>低角度跟转第一视角</strong></td>
+<td>低角度跟拍 [主体] 腿部，距离1米，跟拍速度与主体一致，3秒后镜头缓慢前移，无缝切换为第一人称走路视角</td>
+<td>追逐、逃亡、恐怖片潜行</td>
+</tr>
+<tr>
+<td><strong>高角度跟转第一视角</strong></td>
+<td>高角度跟拍 [主体] 头部，距离1.5米，跟拍速度与主体一致，3秒后无缝切换为第一人称俯瞰视角</td>
+<td>站在楼顶、悬崖边、飞机上向下看</td>
+</tr>
+<tr>
+<td><strong>跟拍 + 甩镜转第一视角</strong></td>
+<td>肩扛式跟拍 [主体] 后背，距离 1.5米，3秒后快速甩镜 180°，直接切换为第一人称视角，轻微手持抖动</td>
+<td>突然回头、被人从背后袭击</td>
+</tr>
+<tr>
+<td><strong>肩膀遮挡转第一视角</strong></td>
+<td>肩扛式跟拍 [主体] 后背，距离1.5米，用主体肩膀完全遮挡镜头的瞬间，无缝切换为第一人称视角</td>
+<td>自然无痕迹的视角转换</td>
+</tr>
+<tr>
+<td><strong>第一视角转跟随</strong></td>
+<td>第一人称奔跑视角3秒，随后镜头缓慢后拉，变成跟拍主体后背的视角，速度保持一致</td>
+<td>死亡、灵魂出窍、从梦境中醒来</td>
+</tr>
+<tr>
+<td><strong>跟转第一+呼吸晃动</strong></td>
+<td>肩扛式跟拍 [主体] 后背3秒，无缝切换为第一人称视角，加入轻微的呼吸和身体晃动</td>
+<td>真实感、代入感、紧张感</td>
+</tr>
+<tr>
+<td><strong>多视角连续切换</strong></td>
+<td>跟随视角 1.5 秒→第一视角 1.5 秒→跟随视角 1.5 秒→第一视角 1.5 秒循环切换，速度一致</td>
+<td>混乱的战斗场景、多人追逐</td>
+</tr>
+<tr>
+<td><strong>跟转第一+手持抖动</strong></td>
+<td>全程加入轻微手持抖动，肩扛式跟拍 [主体] 后背 3 秒，无缝切换为第一人称奔跑视角</td>
+<td>模拟真实拍摄、临场感</td>
+</tr>
+<tr>
+<td>跟转第一 + 焦点虚化</td>
+<td>肩扛式跟拍 [主体] 后背，距离 1.5 米，匀速跟拍 3 秒后逐步加深失焦，画面完全模糊时无缝切换为第一人称视角，随后缓慢合焦，全程速度同步</td>
+<td>回忆闪回、意识切换</td>
+</tr>
+</tbody>
+</table>
+<h4 id="推拉反转运镜-1">推拉反转运镜</h4>
+<p><img src="/prompt-archive-site/media/19528c4346097282.png" alt=""></p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>运镜方式</strong></td>
+<td><strong>视频提示词</strong></td>
+<td><strong>适用场景</strong></td>
+</tr>
+<tr>
+<td><strong>极推转极拉</strong></td>
+<td>低角度跟拍 [主体] 腿部，距离1米，跟拍速度与主体一致，3秒后镜头缓慢前移，无缝切换为第一人称走路视角</td>
+<td>追逐、逃亡、恐怖片潜行</td>
+</tr>
+<tr>
+<td><strong>推转拉+旋转</strong></td>
+<td>高角度跟拍 [主体] 头部，距离1.5米，跟拍速度与主体一致，3秒后无缝切换为第一人称俯瞰视角</td>
+<td>站在楼顶、悬崖边、飞机上向下看</td>
+</tr>
+<tr>
+<td><strong>推转拉+升</strong></td>
+<td>肩扛式跟拍 [主体] 后背，距离1.5米，3 秒后快速甩镜 180°，直接切换为第一人称视角，轻微手持抖动</td>
+<td>突然回头、被人从背后袭击</td>
+</tr>
+<tr>
+<td><strong>多次推拉反转</strong></td>
+<td>肩扛式跟拍 [主体] 后背，距离1.5米，用主体肩膀完全遮挡镜头的瞬间，无缝切换为第一人称视角</td>
+<td>自然无痕迹的视角转换</td>
+</tr>
+<tr>
+<td><strong>推转拉+音效同步</strong></td>
+<td>第一人称奔跑视角3秒，随后镜头缓慢后拉，变成跟拍主体后背的视角，速度保持一致</td>
+<td>死亡、灵魂出窍、从梦境中醒来</td>
+</tr>
+<tr>
+<td><strong>推转拉+空镜</strong></td>
+<td>肩扛式跟拍 [主体] 后背3秒，无缝切换为第一人称视角，加入轻微的呼吸和身体晃动</td>
+<td>真实感、代入感、紧张感</td>
+</tr>
+<tr>
+<td><strong>推转拉+跟焦锁定</strong></td>
+<td>跟随视角 1.5 秒→第一视角1.5 秒→跟随视角1.5秒→第一视角1.5秒循环切换，速度一致</td>
+<td>混乱的战斗场景、多人追逐</td>
+</tr>
+<tr>
+<td><strong>后拉转前推</strong></td>
+<td>全程加入轻微手持抖动，肩扛式跟拍 [主体] 后背3秒，无缝切换为第一人称奔跑视角</td>
+<td>模拟真实拍摄、临场感</td>
+</tr>
+<tr>
+<td><strong>推转拉 + 希区柯克变焦</strong></td>
+<td>推进过程中同步缩小焦段制造空间压缩感，后拉过程中同步放大焦段强化空间纵深感，推拉速度 4.5m/s，焦段联动范围 24mm-70mm，全程主体尺寸恒定，背景空间剧烈形变</td>
+<td>惊悚压迫、震惊</td>
+</tr>
+</tbody>
+</table>
+<h4 id="非常规镜头视角37组">非常规镜头视角（37组）</h4>
+<h4 id="pov">POV</h4>
+<p><img src="/prompt-archive-site/media/c0c2966cdec9ea0d.png" alt=""></p>
+<table>
+<thead>
+<tr>
+<th>情绪表达</th>
+<th><strong>视频提示词</strong></th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>焦虑</strong></td>
+<td>镜头高频细微抖动，呼吸声被放大；双手反复交握、抠手、快速敲击大腿。</td>
+<td>等待结果、重大悬念揭晓前</td>
+</tr>
+<tr>
+<td><strong>狂喜</strong></td>
+<td>镜头剧烈失重晃动，伴随跳起；双手攥拳猛力挥舞，激动拍手，纸张剧烈抖动。</td>
+<td>接到喜讯、绝地翻盘</td>
+</tr>
+<tr>
+<td><strong>悲伤</strong></td>
+<td>镜头沉重缓慢起伏，几乎静止；手指悬停颤抖不敢触碰，随后双手用力捂眼久久不放。</td>
+<td>悲剧结局</td>
+</tr>
+<tr>
+<td><strong>恐惧</strong></td>
+<td>镜头失控左右乱晃，视线快速切换；双手死死抓握物体，慌乱摸索，猛然捂住口鼻不敢出声。</td>
+<td>躲避追杀、恐怖探索、潜入敌营</td>
+</tr>
+<tr>
+<td><strong>惊讶</strong></td>
+<td>镜头瞬间凝固，手中物体掉落；双手猛地撑桌拉近，手指颤抖指向目标，随后捂嘴。</td>
+<td>剧情反转、意外消息</td>
+</tr>
+<tr>
+<td><strong>厌恶</strong></td>
+<td>镜头强烈后仰与闪躲；只用指尖捏物手臂伸远，随即甩手并在裤子上反复擦拭。</td>
+<td>背叛、觉得恶心</td>
+</tr>
+<tr>
+<td><strong>疲惫</strong></td>
+<td>镜头沉重浮动，频繁短暂黑屏(眨眼)；手托额头揪发，揉搓太阳穴后无力瘫倒。</td>
+<td>通宵加班、力竭时刻、长途跋涉后</td>
+</tr>
+<tr>
+<td><strong>坚定</strong></td>
+<td>镜头由呼吸起伏转为极度稳定；双手沉稳整理衣装，握拳叩胸，果断推门平稳前进。</td>
+<td>最终决战前、重大决定、执行危险任务</td>
+</tr>
+<tr>
+<td><strong>愤怒</strong></td>
+<td>镜头随粗重喘息剧烈起伏，画面紧绷微颤；双手攥拳指节发白，猛砸桌沿，一把扫落身前杂物。</td>
+<td>愤怒、气愤、暴躁</td>
+</tr>
+</tbody>
+</table>
+<p><strong>取值速拷（9 条 · 与上表逐字一致）</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>镜头高频细微抖动，呼吸声被放大；双手反复交握、抠手、快速敲击大腿。</span></span>
+<span class="line"><span>镜头剧烈失重晃动，伴随跳起；双手攥拳猛力挥舞，激动拍手，纸张剧烈抖动。</span></span>
+<span class="line"><span>镜头沉重缓慢起伏，几乎静止；手指悬停颤抖不敢触碰，随后双手用力捂眼久久不放。</span></span>
+<span class="line"><span>镜头失控左右乱晃，视线快速切换；双手死死抓握物体，慌乱摸索，猛然捂住口鼻不敢出声。</span></span>
+<span class="line"><span>镜头瞬间凝固，手中物体掉落；双手猛地撑桌拉近，手指颤抖指向目标，随后捂嘴。</span></span>
+<span class="line"><span>镜头强烈后仰与闪躲；只用指尖捏物手臂伸远，随即甩手并在裤子上反复擦拭。</span></span>
+<span class="line"><span>镜头沉重浮动，频繁短暂黑屏(眨眼)；手托额头揪发，揉搓太阳穴后无力瘫倒。</span></span>
+<span class="line"><span>镜头由呼吸起伏转为极度稳定；双手沉稳整理衣装，握拳叩胸，果断推门平稳前进。</span></span>
+<span class="line"><span>镜头随粗重喘息剧烈起伏，画面紧绷微颤；双手攥拳指节发白，猛砸桌沿，一把扫落身前杂物。</span></span></code></pre>
+<h4 id="act">ACT</h4>
+<p><img src="/prompt-archive-site/media/73b67bd57b1a1e5a.png" alt=""></p>
+<table>
+<thead>
+<tr>
+<th>运镜</th>
+<th><strong>视频提示词</strong></th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>微仰角背部越肩跟拍，重击时镜头震动</td>
+<td>前手刺拳→后手重直拳→转身肘击</td>
+<td>雨夜窄巷，霓虹倒映</td>
+</tr>
+<tr>
+<td>侧面低角度横移，扫腿时绕至正面</td>
+<td>低扫腿→腾空膝撞→转身肘击</td>
+<td>雨夜仓库，钢管结构</td>
+</tr>
+<tr>
+<td>俯视下压转平视，冲拳时前推</td>
+<td>八卦掌闪避→左掌格挡→右直拳→崩拳</td>
+<td>雨夜古寺庭院</td>
+</tr>
+<tr>
+<td>动态追背，冲刺时后拉摇镜，处决时切侧面</td>
+<td>蹬墙反弹回旋踢→左右快拳连击</td>
+<td>雨夜废弃地铁站</td>
+</tr>
+<tr>
+<td>慢镜头环绕，出拳时子弹时间，接正常速甩镜</td>
+<td>升龙拳→凌空飞踢→旋风肘</td>
+<td>暴雨高架桥下</td>
+</tr>
+<tr>
+<td>第一人称受击视角与越肩交替</td>
+<td>膀手架刀→日字冲拳连击→上勾拳终结</td>
+<td>雨夜霓虹街区</td>
+</tr>
+<tr>
+<td>无人机环绕上升，收招时聚焦背影</td>
+<td>转身鞭拳→后摆腿→大弧度转身鞭拳收招</td>
+<td>雨夜古城墙</td>
+</tr>
+<tr>
+<td>手持跟拍环绕，出拳时快速绕至正面</td>
+<td>冲刺刺拳击腹→摆拳击头→勾拳击肋</td>
+<td>雨夜涂鸦巷</td>
+</tr>
+<tr>
+<td>贴边缘环绕跟拍，跃起时俯拍下坠，落地时镜头震颤</td>
+<td>正蹬逼退→腾空砸拳→低扫腿终结</td>
+<td>雨夜高楼天台，城光透雨幕</td>
+</tr>
+</tbody>
+</table>
+<p><strong>取值速拷（9 条 · 与上表逐字一致）</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>前手刺拳→后手重直拳→转身肘击</span></span>
+<span class="line"><span>低扫腿→腾空膝撞→转身肘击</span></span>
+<span class="line"><span>八卦掌闪避→左掌格挡→右直拳→崩拳</span></span>
+<span class="line"><span>蹬墙反弹回旋踢→左右快拳连击</span></span>
+<span class="line"><span>升龙拳→凌空飞踢→旋风肘</span></span>
+<span class="line"><span>膀手架刀→日字冲拳连击→上勾拳终结</span></span>
+<span class="line"><span>转身鞭拳→后摆腿→大弧度转身鞭拳收招</span></span>
+<span class="line"><span>冲刺刺拳击腹→摆拳击头→勾拳击肋</span></span>
+<span class="line"><span>正蹬逼退→腾空砸拳→低扫腿终结</span></span></code></pre>
+<h4 id="fpv">FPV</h4>
+<p><img src="/prompt-archive-site/media/40a8b334b4e4bb8b.png" alt=""></p>
+<table>
+<thead>
+<tr>
+<th>运镜</th>
+<th><strong>视频提示词</strong></th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>贴地极速跟镜</strong></td>
+<td>极限低空跟镜，镜头贴地追踪快速移动的主体，离地高度0.8–1.5米。近处碎石、灌木、地缝边缘等从镜头两侧高速擦过，配合动态模糊与扬尘，制造强烈贴地穿梭纵深感。</td>
+<td>追逐戏、速度感开篇</td>
+</tr>
+<tr>
+<td><strong>贴水箭速掠镜</strong></td>
+<td>超低空水面跟拍，镜头几乎擦水飞行，高度0.3–0.8米。沿蜿蜒水面穿行，芦苇、桥墩、石块等近景从画面侧缘疾速掠过，带起水雾涟漪，产生极强贴水纵深感。</td>
+<td>水上运动</td>
+</tr>
+<tr>
+<td><strong>密林缝隙闪避穿越</strong></td>
+<td>极低空密林穿行视角，飞行高度0.5–1.2米，持续闪避巨叶、倒木与藤蔓。极近的植物多次从镜头边缘擦过，制造幽闭且高速的林下穿梭纵深感。</td>
+<td>奇幻、生态、户外</td>
+</tr>
+<tr>
+<td><strong>废厂管道极速弹射</strong></td>
+<td>低空跟镜在工业管道迷宫中快速穿梭，高度1–2米变化。镜头紧追移动光点，锈蚀管道、缆线、栅格等近景高速掠过，冷光拖尾，制造工业穿梭纵深感。</td>
+<td>科幻、电子</td>
+</tr>
+<tr>
+<td><strong>雪林超低空极速跟拍</strong></td>
+<td>低空雪地跟镜，镜头贴雪面追踪，高度0.8–1.5米。快速绕过树干与岩石，雪雾、挂冰枝杈近景从两侧飞掠，雪粒扑面，纵深感极强。</td>
+<td>冬季、极限</td>
+</tr>
+<tr>
+<td><strong>贴海逐浪急追</strong></td>
+<td>超低空海面追踪，镜头几乎与浪花持平，高度0.5–1米。沿海岸穿梭于礁石与浮标间，浪涌泡沫、礁石块等近景高速擦过，制造咸水溅镜的亲水穿梭纵深感。</td>
+<td>海洋</td>
+</tr>
+</tbody>
+</table>
+<p><strong>取值速拷（6 条 · 与上表逐字一致）</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>极限低空跟镜，镜头贴地追踪快速移动的主体，离地高度0.8–1.5米。近处碎石、灌木、地缝边缘等从镜头两侧高速擦过，配合动态模糊与扬尘，制造强烈贴地穿梭纵深感。</span></span>
+<span class="line"><span>超低空水面跟拍，镜头几乎擦水飞行，高度0.3–0.8米。沿蜿蜒水面穿行，芦苇、桥墩、石块等近景从画面侧缘疾速掠过，带起水雾涟漪，产生极强贴水纵深感。</span></span>
+<span class="line"><span>极低空密林穿行视角，飞行高度0.5–1.2米，持续闪避巨叶、倒木与藤蔓。极近的植物多次从镜头边缘擦过，制造幽闭且高速的林下穿梭纵深感。</span></span>
+<span class="line"><span>低空跟镜在工业管道迷宫中快速穿梭，高度1–2米变化。镜头紧追移动光点，锈蚀管道、缆线、栅格等近景高速掠过，冷光拖尾，制造工业穿梭纵深感。</span></span>
+<span class="line"><span>低空雪地跟镜，镜头贴雪面追踪，高度0.8–1.5米。快速绕过树干与岩石，雪雾、挂冰枝杈近景从两侧飞掠，雪粒扑面，纵深感极强。</span></span>
+<span class="line"><span>超低空海面追踪，镜头几乎与浪花持平，高度0.5–1米。沿海岸穿梭于礁石与浮标间，浪涌泡沫、礁石块等近景高速擦过，制造咸水溅镜的亲水穿梭纵深感。</span></span></code></pre>
+<h4 id="insect--view">INSECT- VIEW</h4>
+<p><img src="/prompt-archive-site/media/037e7ce42e1986fa.png" alt=""></p>
+<table>
+<thead>
+<tr>
+<th>运镜方式</th>
+<th><strong>视频提示词</strong></th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>虫视+贴地仰拍</strong></td>
+<td>主体从上方疾驰而过，地面剧烈震动，沙石碎屑向四周炸开。</td>
+<td>登场 、压迫感</td>
+</tr>
+<tr>
+<td><strong>虫视+低角度跟拍</strong></td>
+<td>主体高速朝画框外冲出，动态模糊拉丝，尾迹尘土飞扬。</td>
+<td>离场</td>
+</tr>
+<tr>
+<td><strong>虫视+贴地飞行</strong></td>
+<td>镜头沿地表快速推进，前景障碍物高速后退，光影流动自然。</td>
+<td>逃亡、追逐</td>
+</tr>
+<tr>
+<td><strong>虫视+极近特写</strong></td>
+<td>局部机械或肢体特写，浅景深，细微动作与纹理质感真实。</td>
+<td>蓄力、细节展示</td>
+</tr>
+<tr>
+<td><strong>虫视+坠落主观</strong></td>
+<td>镜头跟随小物件在空中旋转下落，背景动态虚化，光影流转。</td>
+<td>战斗间歇、音效卡点</td>
+</tr>
+<tr>
+<td><strong>虫视+贴地环绕</strong></td>
+<td>镜头围绕静止主体快速旋转，地面倒影映射出移动光弧。</td>
+<td>对峙</td>
+</tr>
+<tr>
+<td><strong>虫视+翻滚穿越</strong></td>
+<td>镜头从狭窄缝隙或障碍下方翻滚钻过，碎片朝镜头扑面飞来。</td>
+<td>躲避险境</td>
+</tr>
+<tr>
+<td><strong>虫视+垂直仰拍</strong></td>
+<td>液体从高处滴落，镜头仰视其下坠轨迹，最终撞击画面扩散或转黑。</td>
+<td>压抑情绪</td>
+</tr>
+<tr>
+<td><strong>虫视 + 蹬地震镜</strong></td>
+<td>重足狠狠踏落于镜头前方，地表裂纹蔓延扩散，尘土与积水呈环形朝画面爆开。</td>
+<td>重击落地、气势爆发</td>
+</tr>
+</tbody>
+</table>
+<p><strong>取值速拷（9 条 · 与上表逐字一致）</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>主体从上方疾驰而过，地面剧烈震动，沙石碎屑向四周炸开。</span></span>
+<span class="line"><span>主体高速朝画框外冲出，动态模糊拉丝，尾迹尘土飞扬。</span></span>
+<span class="line"><span>镜头沿地表快速推进，前景障碍物高速后退，光影流动自然。</span></span>
+<span class="line"><span>局部机械或肢体特写，浅景深，细微动作与纹理质感真实。</span></span>
+<span class="line"><span>镜头跟随小物件在空中旋转下落，背景动态虚化，光影流转。</span></span>
+<span class="line"><span>镜头围绕静止主体快速旋转，地面倒影映射出移动光弧。</span></span>
+<span class="line"><span>镜头从狭窄缝隙或障碍下方翻滚钻过，碎片朝镜头扑面飞来。</span></span>
+<span class="line"><span>液体从高处滴落，镜头仰视其下坠轨迹，最终撞击画面扩散或转黑。</span></span>
+<span class="line"><span>重足狠狠踏落于镜头前方，地表裂纹蔓延扩散，尘土与积水呈环形朝画面爆开。</span></span></code></pre>
+</div></div></div></div></main><footer class="site-footer" data-astro-cid-tq46r5sz><div class="container" data-astro-cid-tq46r5sz><div class="footer-grid" data-astro-cid-tq46r5sz><div class="footer-brand" data-astro-cid-tq46r5sz><a class="brand" href="/prompt-archive-site/" data-astro-cid-tq46r5sz><span class="brand-glyph" data-astro-cid-tq46r5sz>PA</span><span class="brand-name" data-astro-cid-tq46r5sz>AI 提示词档案馆</span></a><p class="footer-desc" data-astro-cid-tq46r5sz>可浏览、可检索、可复制的 AI 图像与视频提示词案例库。每个完整案例一个独立页面，提示词与 Wiki 原文逐字一致。</p></div><nav class="footer-col" aria-label="页脚导航" data-astro-cid-tq46r5sz><p class="footer-label" data-astro-cid-tq46r5sz>浏览</p><a href="/prompt-archive-site/images/" data-astro-cid-tq46r5sz>图像案例</a><a href="/prompt-archive-site/videos/" data-astro-cid-tq46r5sz>视频案例</a><a href="/prompt-archive-site/notes/" data-astro-cid-tq46r5sz>方法笔记</a><a href="/prompt-archive-site/cases/" data-astro-cid-tq46r5sz>全站搜索</a></nav><div class="footer-col" data-astro-cid-tq46r5sz><p class="footer-label" data-astro-cid-tq46r5sz>本馆收录</p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>案例</span><b data-astro-cid-tq46r5sz>105</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>附实测成片</span><b data-astro-cid-tq46r5sz>2</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>方法笔记</span><b data-astro-cid-tq46r5sz>60</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>合集</span><b data-astro-cid-tq46r5sz>11</b></p></div></div><div class="footer-bottom" data-astro-cid-tq46r5sz><p data-astro-cid-tq46r5sz>「作者称已测试」表示来源声明，本站未复测。</p><p data-astro-cid-tq46r5sz>PA·ARCHIVE © 2026</p></div></div></footer></body><script type="module">function e(){document.querySelectorAll(`[data-masonry]`).forEach(e=>{let t=Array.from(e.querySelectorAll(`:scope > .m-cols > .m-col > *, :scope > *:not(.m-cols)`));if(e.querySelectorAll(`.m-cols`).forEach(e=>e.remove()),t.length===0)return;let n=window.matchMedia(`(max-width: 767px)`).matches?1:window.matchMedia(`(max-width: 1199px)`).matches?2:3,r=document.createElement(`div`);r.className=`m-cols`;let i=Array.from({length:n},()=>{let e=document.createElement(`div`);return e.className=`m-col`,e});t.forEach((e,t)=>i[t%n].appendChild(e)),e.appendChild(r),i.forEach(e=>r.appendChild(e))})}window.refreshMasonry=e,e();var t;window.addEventListener(`resize`,()=>{clearTimeout(t),t=setTimeout(e,150)});</script><script type="module">(()=>{let e=`.case-card, .note-card, .note-list-card`,t=window.matchMedia(`(prefers-reduced-motion: reduce)`),n=null,r=null,i=0;t.addEventListener?.(`change`,()=>{t.matches&&a()});function a(){if(!n)return;let e=n;e.classList.remove(`tilt-active`),e.classList.add(`tilt-return`),e.style.transform=``,clearTimeout(i),i=setTimeout(()=>e.classList.remove(`tilt-return`),320),n=null,r=null}document.addEventListener(`pointermove`,i=>{if(i.pointerType!==`mouse`||!i.isPrimary||t.matches)return;let o=i.target instanceof Element?i.target.closest(e):null;if(o!==n){if(a(),!o)return;n=o,r=n.getBoundingClientRect(),n.classList.add(`tilt-active`),n.classList.remove(`tilt-return`)}if(!n||!r)return;let s=(i.clientX-r.left)/r.width-.5,c=(i.clientY-r.top)/r.height-.5,l=Math.max(-1,Math.min(1,s*2))*4.5,u=Math.max(-1,Math.min(1,c*2))*-4.5;n.style.transform=`perspective(1100px) rotateX(${u.toFixed(3)}deg) rotateY(${l.toFixed(3)}deg) translateY(-3px)`},{passive:!0}),document.addEventListener(`pointerleave`,()=>a()),document.addEventListener(`pointerdown`,t=>{(t.target instanceof Element?t.target.closest(e):null)!==n&&a()},{passive:!0}),window.addEventListener(`blur`,()=>a()),window.addEventListener(`scroll`,()=>a(),{passive:!0})})();</script></html><script type="module">function e(){document.querySelectorAll(`.prose pre`).forEach(e=>{if(e.closest(`.code-panel`))return;let t=e.querySelector(`code`),n=(t??e).textContent??``,r=t?.className.match(/language-([\w+-]+)/)?.[1]??`text`,i=n.replace(/\n$/,``).split(`
+`).length,a=Array.from(n.matchAll(/`{3,}/g)).map(e=>e[0].length),o=a.length?Math.max(3,Math.max(...a)+1):3,s="`".repeat(o)+`markdown
+`+(n.endsWith(`
+`)?n:n+`
+`)+"`".repeat(o),c=document.createElement(`figure`);c.className=`code-panel`;let l=document.createElement(`figcaption`);l.className=`code-panel-head`;let u=document.createElement(`span`);u.className=`code-lang`,u.textContent=r;let d=document.createElement(`span`);d.className=`code-lines`,d.textContent=`${i} 行`;let f=document.createElement(`span`);f.className=`copy-feedback`,f.setAttribute(`aria-live`,`polite`);let p=document.createElement(`button`);p.type=`button`,p.className=`copy-btn`,p.textContent=`复制本块`,l.append(u,d,f,p),e.replaceWith(c),c.append(l,e);let m;p.addEventListener(`click`,async()=>{let e=!1;try{await navigator.clipboard.writeText(s),e=!0}catch{try{let t=document.createElement(`textarea`);t.value=s,t.style.position=`fixed`,t.style.opacity=`0`,document.body.appendChild(t),t.select(),e=document.execCommand(`copy`),t.remove()}catch{e=!1}}f.textContent=e?`已复制本块`:`复制失败，请手动选取`,p.textContent=e?`已复制`:`复制本块`,clearTimeout(m),m=setTimeout(()=>{f.textContent=``,p.textContent=`复制本块`},3e3)})})}e();</script>

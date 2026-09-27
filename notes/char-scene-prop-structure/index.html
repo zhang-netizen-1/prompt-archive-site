@@ -1,0 +1,274 @@
+<!DOCTYPE html><html lang="zh-CN" data-astro-cid-tq46r5sz><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="三类视觉资产的统一提示词结构：角色四视图、场景设定与道具设计图。"><link rel="icon" href="/prompt-archive-site/favicon.svg" type="image/svg+xml"><title>角色、场景、道具提示词总结构 · 方法笔记</title><link rel="stylesheet" href="/prompt-archive-site/_astro/SiteLayout.DYPNTGRP.css"><style>.note-header[data-astro-cid-vex5zuxs]{max-width:calc(var(--note-width) + 280px);margin:0 auto;padding:40px 24px 0}
+</style></head><body data-astro-cid-tq46r5sz><a class="skip-link" href="#main" data-astro-cid-tq46r5sz>跳到主要内容</a><div class="announce" data-astro-cid-tq46r5sz><a href="/prompt-archive-site/cases/" data-astro-cid-tq46r5sz>PA·ARCHIVE — 每个完整案例一个独立页面，提示词与 Wiki 原文逐字一致 ↗</a></div><header class="site-header" data-astro-cid-tq46r5sz><div class="container" data-astro-cid-tq46r5sz><a class="brand" href="/prompt-archive-site/" data-astro-cid-tq46r5sz><span class="brand-glyph" data-astro-cid-tq46r5sz>PA</span><span class="brand-name" data-astro-cid-tq46r5sz>AI 提示词档案馆</span></a><nav class="site-nav" aria-label="主导航" data-astro-cid-tq46r5sz><a href="/prompt-archive-site/images/" data-astro-cid-tq46r5sz>图像案例<span class="nav-no" data-astro-cid-tq46r5sz>01</span></a><a href="/prompt-archive-site/videos/" data-astro-cid-tq46r5sz>视频案例<span class="nav-no" data-astro-cid-tq46r5sz>02</span></a><a href="/prompt-archive-site/notes/" aria-current="page" data-astro-cid-tq46r5sz>方法笔记<span class="nav-no" data-astro-cid-tq46r5sz>03</span></a></nav><div class="header-cta" data-astro-cid-tq46r5sz><a class="header-search-link" href="/prompt-archive-site/cases/" aria-label="全站搜索案例" data-astro-cid-tq46r5sz><span class="icon" style="width:15px;height:15px" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="6.1"/><line x1="13.6" y1="13.6" x2="18" y2="18"/></svg></span><span data-astro-cid-tq46r5sz>搜索</span><span class="nav-no" data-astro-cid-tq46r5sz>04</span></a></div></div></header><main id="main" data-astro-cid-tq46r5sz><div class="note-page" data-astro-cid-vex5zuxs><div class="note-header" data-astro-cid-vex5zuxs><nav class="breadcrumbs" aria-label="面包屑" data-astro-cid-vex5zuxs><a href="/prompt-archive-site/" data-astro-cid-vex5zuxs>首页</a><span aria-hidden="true" data-astro-cid-vex5zuxs>/</span><a href="/prompt-archive-site/notes/" data-astro-cid-vex5zuxs>方法笔记</a><span aria-hidden="true" data-astro-cid-vex5zuxs>/</span><span aria-current="page" data-astro-cid-vex5zuxs>角色、场景、道具提示词总结构</span></nav><h1 style="font-size:32px" data-astro-cid-vex5zuxs>角色、场景、道具提示词总结构</h1><p class="note-meta" data-astro-cid-vex5zuxs><span class="medium-chip" data-astro-cid-vex5zuxs>模板</span><span data-astro-cid-vex5zuxs>图像</span><span data-astro-cid-vex5zuxs>源资料：模板-角色、场景、道具提示词总结构（visual-prompt-system）</span></p><p class="note-summary" data-astro-cid-vex5zuxs>三类视觉资产的统一提示词结构：角色四视图、场景设定与道具设计图。</p></div><div class="note-layout" data-astro-cid-vex5zuxs><aside class="note-toc" aria-label="目录" data-astro-cid-vex5zuxs><p class="toc-title" data-astro-cid-vex5zuxs>目录</p><a href="#一总构成" data-astro-cid-vex5zuxs>一、总构成</a><a href="#数量公式" class="depth-3" data-astro-cid-vex5zuxs>数量公式</a><a href="#当前成熟度" class="depth-3" data-astro-cid-vex5zuxs>当前成熟度</a><a href="#二角色四视图" data-astro-cid-vex5zuxs>二、角色四视图</a><a href="#构成公式" class="depth-3" data-astro-cid-vex5zuxs>构成公式</a><a href="#角色描述公式" class="depth-3" data-astro-cid-vex5zuxs>角色描述公式</a><a href="#真人感必填项" class="depth-3" data-astro-cid-vex5zuxs>真人感必填项</a><a href="#标准模板" class="depth-3" data-astro-cid-vex5zuxs>标准模板</a><a href="#主要锚定内容" class="depth-3" data-astro-cid-vex5zuxs>主要锚定内容</a><a href="#当前验收重点" class="depth-3" data-astro-cid-vex5zuxs>当前验收重点</a><a href="#三场景四视角" data-astro-cid-vex5zuxs>三、场景四视角</a><a href="#构成公式-1" class="depth-3" data-astro-cid-vex5zuxs>构成公式</a><a href="#场景描述公式" class="depth-3" data-astro-cid-vex5zuxs>场景描述公式</a><a href="#标准模板-1" class="depth-3" data-astro-cid-vex5zuxs>标准模板</a><a href="#主要锚定内容-1" class="depth-3" data-astro-cid-vex5zuxs>主要锚定内容</a><a href="#当前验收重点-1" class="depth-3" data-astro-cid-vex5zuxs>当前验收重点</a><a href="#四道具六视图" data-astro-cid-vex5zuxs>四、道具六视图</a><a href="#构成公式-2" class="depth-3" data-astro-cid-vex5zuxs>构成公式</a><a href="#道具描述公式" class="depth-3" data-astro-cid-vex5zuxs>道具描述公式</a><a href="#标准模板-2" class="depth-3" data-astro-cid-vex5zuxs>标准模板</a><a href="#主要锚定内容-2" class="depth-3" data-astro-cid-vex5zuxs>主要锚定内容</a><a href="#当前验收重点-2" class="depth-3" data-astro-cid-vex5zuxs>当前验收重点</a><a href="#五资产清单与交付顺序" data-astro-cid-vex5zuxs>五、资产清单与交付顺序</a><a href="#项目级交付公式" class="depth-3" data-astro-cid-vex5zuxs>项目级交付公式</a><a href="#六与视频提示词的关系" data-astro-cid-vex5zuxs>六、与视频提示词的关系</a><a href="#七相关案例" data-astro-cid-vex5zuxs>七、相关案例</a></aside><div class="note-main" data-astro-cid-vex5zuxs><div class="prose" data-astro-cid-vex5zuxs><blockquote>
+<p>用于视频生成之前的参考资产生产。一个独立视觉锚定对象对应一份生成提示词和一张多视图参考图；没有参考需求时不创建对应资产。</p>
+</blockquote>
+<h2 id="一总构成">一、总构成</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>视频前置参考资产</span></span>
+<span class="line"><span>= 角色四视图</span></span>
+<span class="line"><span>+ 场景四视角</span></span>
+<span class="line"><span>+ 道具六视图</span></span>
+<span class="line"><span>（按项目实际需要选用）</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>单份参考资产生成提示词</span></span>
+<span class="line"><span>= 资产对象定义</span></span>
+<span class="line"><span>+ 多视图版式</span></span>
+<span class="line"><span>+ 各分栏视角</span></span>
+<span class="line"><span>+ 跨视图一致性约束</span></span>
+<span class="line"><span>+ 干净资产约束</span></span>
+<span class="line"><span>+ 统一视觉风格</span></span></code></pre>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>统一视觉风格</span></span>
+<span class="line"><span>= 题材</span></span>
+<span class="line"><span>+ 画风</span></span>
+<span class="line"><span>+ 渲染或成像方式</span></span></code></pre>
+<h3 id="数量公式">数量公式</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>参考资产提示词数量</span></span>
+<span class="line"><span>= 需要独立保持一致的视觉锚定对象数量</span></span></code></pre>
+<ul>
+<li>一个角色即使出现在多个 Shot 中，仍对应一份角色四视图提示词和一张角色四视图。</li>
+<li>一张多视图参考图内部虽然包含多个分栏，仍只算一个对象的一张参考图。</li>
+<li>已经完整包含在角色设定图中的随身物品，不自动拆成独立道具；只有需要独立锚定或特写时才单独生成。</li>
+<li>同一场景重复出现在多个 Shot 中，只生成一张场景四视角；空间发生实质变化时再拆成新的场景资产。</li>
+</ul>
+<h3 id="当前成熟度">当前成熟度</h3>
+<table>
+<thead>
+<tr>
+<th>类型</th>
+<th>当前默认结构</th>
+<th>状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>角色</td>
+<td>9:16、2×2四视图</td>
+<td>已确认，作为默认格式</td>
+</tr>
+<tr>
+<td>场景</td>
+<td>2×2四视角空场景图</td>
+<td>来自《盛唐》案例，作为当前候选格式</td>
+</tr>
+<tr>
+<td>道具</td>
+<td>2×3六视图</td>
+<td>来自《盛唐》案例，作为当前候选格式</td>
+</tr>
+</tbody>
+</table>
+<h2 id="二角色四视图">二、角色四视图</h2>
+<h3 id="构成公式">构成公式</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>角色四视图</span></span>
+<span class="line"><span>= 角色描述</span></span>
+<span class="line"><span>+ 9:16竖幅</span></span>
+<span class="line"><span>+ 2×2四宫格</span></span>
+<span class="line"><span>+ 左上：正面头部胸像</span></span>
+<span class="line"><span>+ 右上：45°侧脸胸像</span></span>
+<span class="line"><span>+ 左下：全身背面视图</span></span>
+<span class="line"><span>+ 右下：全身微侧颈部以下全身图（不包含头部）</span></span>
+<span class="line"><span>+ 人物一致性约束</span></span>
+<span class="line"><span>+ 统一背景与光影</span></span></code></pre>
+<h3 id="角色描述公式">角色描述公式</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>角色描述</span></span>
+<span class="line"><span>= 身份与年龄</span></span>
+<span class="line"><span>+ 性别与地域特征</span></span>
+<span class="line"><span>+ 肤色与气质</span></span>
+<span class="line"><span>+ 自然生物特征与轻微肤色差异（必填）</span></span>
+<span class="line"><span>+ 发型与发色</span></span>
+<span class="line"><span>+ 面部辨识点</span></span>
+<span class="line"><span>+ 身形</span></span>
+<span class="line"><span>+ 服装</span></span>
+<span class="line"><span>+ 随身配饰</span></span></code></pre>
+<h3 id="真人感必填项">真人感必填项</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>真人感必填项</span></span>
+<span class="line"><span>= 可见但克制的生物特征</span></span>
+<span class="line"><span>+ 符合角色年龄与身份的自然皮肤细节</span></span>
+<span class="line"><span>+ 避免过度磨皮与塑料陶瓷肤质</span></span></code></pre>
+<p>人物参考图不能只写“精致、白皙、细腻”等趋向完美的形容词。角色描述必须保留自然生物特征；具体表现可从自然毛孔、面部细软绒毛、若隐若现的毛细血管、轻微肤色差异、雀斑、淡痘印或细纹中按角色选取，不要求机械堆满。</p>
+<h3 id="标准模板">标准模板</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>帮我生成一张{角色名称}角色设定图：</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>{角色描述}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>{真人感必填项：自然生物特征、符合年龄与身份的皮肤细节、反过度磨皮约束}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>人物四视图格式：</span></span>
+<span class="line"><span>双手自然垂落身体两侧，2×2四宫格角色参考图，格式9:16，四个独立等分画面，左上正面头部胸像，右上45°侧脸胸像，左下全身背面视图，右下全身微侧颈部以下全身图（不包含头部），统一纯色浅灰背景，统一光影，四个视角人物样貌、服装、发型完全一致，标准建模角色设定稿，清晰区分四个视角，干净无干扰背景。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>{统一视觉风格}</span></span></code></pre>
+<h3 id="主要锚定内容">主要锚定内容</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>角色四视图负责锚定</span></span>
+<span class="line"><span>= 五官与脸型</span></span>
+<span class="line"><span>+ 正面与45°侧脸</span></span>
+<span class="line"><span>+ 肤色与发型</span></span>
+<span class="line"><span>+ 身高与身体比例</span></span>
+<span class="line"><span>+ 背面造型</span></span>
+<span class="line"><span>+ 服装与配饰的整体样式</span></span></code></pre>
+<blockquote>
+<p>《盛唐》旧案例中的角色四视图是“头部特写占1/3＋三个全身转面占2/3”的横向结构，不作为当前默认角色格式。当前统一采用上述9:16、2×2四宫格。</p>
+</blockquote>
+<p>三视图保留为格式对比，或需要完整正面、90°侧面、背面身体转面时的备选；具体结构见 <a href="/prompt-archive-site/notes/character-sheet-template/#%E8%A7%86%E9%A2%91%E5%8F%82%E8%80%83%E7%94%A8%E4%B8%89%E8%A7%86%E5%9B%BE">模板-人物设定图 › 视频参考用三视图</a>。</p>
+<h3 id="当前验收重点">当前验收重点</h3>
+<ul>
+<li>四格必须是同一个角色，五官、脸型、肤色、发型、身形、服装和配饰保持一致。</li>
+<li>左上与右上的正面、45°侧脸必须能够识别为同一张脸。</li>
+<li>左下必须完整展示包含头部在内的全身背面；右下必须是颈部以下的微侧全身，不包含头部。</li>
+<li>四格各自独立、边界清晰，不得出现无关人物、场景或剧情动作。</li>
+<li>必须呈现与角色年龄、身份一致的自然生物特征和皮肤细节，不得生成过度磨皮或塑料陶瓷肤质。</li>
+</ul>
+<h2 id="三场景四视角">三、场景四视角</h2>
+<blockquote>
+<p>当前结构来自 <a href="/prompt-archive-site/notes/shengtang-assets/">范例-盛唐资产包-角色场景道具设定图</a>，待更多真实案例继续验证。</p>
+</blockquote>
+<h3 id="构成公式-1">构成公式</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>场景四视角</span></span>
+<span class="line"><span>= 场景描述</span></span>
+<span class="line"><span>+ 整幅横向16:9画面</span></span>
+<span class="line"><span>+ 2×2四宫格</span></span>
+<span class="line"><span>+ 每格为独立16:9横向画面</span></span>
+<span class="line"><span>+ 左上：正面中心线大全景</span></span>
+<span class="line"><span>+ 右上：左前方45°大全景</span></span>
+<span class="line"><span>+ 左下：右前方45°大全景</span></span>
+<span class="line"><span>+ 右下：场景最深处向外拍摄的正中心全景</span></span>
+<span class="line"><span>+ 空场景约束</span></span>
+<span class="line"><span>+ 空间一致性约束</span></span>
+<span class="line"><span>+ 统一视觉风格</span></span></code></pre>
+<h3 id="场景描述公式">场景描述公式</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>场景描述</span></span>
+<span class="line"><span>= 名称与空间定位</span></span>
+<span class="line"><span>+ 室内或室外</span></span>
+<span class="line"><span>+ 空间尺度</span></span>
+<span class="line"><span>+ 前景元素</span></span>
+<span class="line"><span>+ 背景元素</span></span>
+<span class="line"><span>+ 氛围</span></span></code></pre>
+<h3 id="标准模板-1">标准模板</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>帮我生成一张{场景名称}场景设定图：</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>场景描述：</span></span>
+<span class="line"><span>名称：{场景名称与定位}。</span></span>
+<span class="line"><span>描述：{室内或室外、空间尺度、宏观或微观}。</span></span>
+<span class="line"><span>前背景：{背景元素}背景，{前景元素}前景。</span></span>
+<span class="line"><span>氛围：{场景氛围}。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>场景四视角格式：</span></span>
+<span class="line"><span>整幅采用横向16:9画面，以2行2列的干净网格分成四个独立等分画面，每格均为独立的16:9横向画面。左上为正面中心线大全景，摄影机正对场景中心轴，构图严格居中，同时展示顶面、底面和完整空间层次；右上为以正面中心线为基准、摄影机移动至场景左前方45°的大全景；左下为摄影机移动至场景右前方45°的大全景；右下为摄影机位于场景最深处、向外拍摄的正中心全景。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>四个视角必须表现同一地点、同一时间、同一天气、同一光源、同一空间结构、同一空间比例和同一美术风格。所有建筑、陈设、主体位置、材质和色彩保持一致，空间连贯，画面端正，无透视畸变。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>这是空场景参考图，四个画面必须空无一人。不得出现人物、人群、背影、剪影、人脸、手脚、人物倒影、人物影子、照片人物、屏幕人物、镜中人物、剧情事件或人物活动。不得出现文字、水印、标签或UI元素。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>{统一视觉风格}</span></span></code></pre>
+<h3 id="主要锚定内容-1">主要锚定内容</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>场景四视角负责锚定</span></span>
+<span class="line"><span>= 空间结构</span></span>
+<span class="line"><span>+ 中心轴与出入口</span></span>
+<span class="line"><span>+ 建筑和陈设关系</span></span>
+<span class="line"><span>+ 前中后景层次</span></span>
+<span class="line"><span>+ 材质与色彩</span></span>
+<span class="line"><span>+ 时间、天气与光源</span></span>
+<span class="line"><span>+ 整体美术风格</span></span></code></pre>
+<h3 id="当前验收重点-1">当前验收重点</h3>
+<ul>
+<li>四格必须是同一个场景，不能生成四个相似但不同的地点。</li>
+<li>正面、左右45°和反向视角不能重复。</li>
+<li>核心建筑、柱位、出入口和大型陈设应跨格对应。</li>
+<li>场景图用于视频视觉锚定，不等同于可精确建模的建筑工程图。</li>
+</ul>
+<h2 id="四道具六视图">四、道具六视图</h2>
+<blockquote>
+<p>当前结构来自 <a href="/prompt-archive-site/notes/shengtang-assets/">范例-盛唐资产包-角色场景道具设定图</a>，待更多真实案例继续验证。</p>
+</blockquote>
+<h3 id="构成公式-2">构成公式</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>道具六视图</span></span>
+<span class="line"><span>= 道具描述</span></span>
+<span class="line"><span>+ 横向构图</span></span>
+<span class="line"><span>+ 2×3六宫格</span></span>
+<span class="line"><span>+ 左上：正面视图</span></span>
+<span class="line"><span>+ 上中：背面视图</span></span>
+<span class="line"><span>+ 右上：左侧视图</span></span>
+<span class="line"><span>+ 左下：右侧视图</span></span>
+<span class="line"><span>+ 下中：顶部俯视图</span></span>
+<span class="line"><span>+ 右下：底部仰视图</span></span>
+<span class="line"><span>+ 近似正交投影</span></span>
+<span class="line"><span>+ 道具一致性约束</span></span>
+<span class="line"><span>+ 干净背景约束</span></span>
+<span class="line"><span>+ 统一视觉风格</span></span></code></pre>
+<h3 id="道具描述公式">道具描述公式</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>道具描述</span></span>
+<span class="line"><span>= 名称与用途</span></span>
+<span class="line"><span>+ 整体尺寸</span></span>
+<span class="line"><span>+ 部件尺寸</span></span>
+<span class="line"><span>+ 结构与造型</span></span>
+<span class="line"><span>+ 材质与颜色</span></span>
+<span class="line"><span>+ 使用痕迹</span></span></code></pre>
+<h3 id="标准模板-2">标准模板</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>帮我生成一张{道具名称}道具设定图：</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>道具描述：</span></span>
+<span class="line"><span>名称：{道具名称与用途}。</span></span>
+<span class="line"><span>尺寸：{整体尺寸与关键部件尺寸}。</span></span>
+<span class="line"><span>结构：{整体造型、组成部件和连接关系}。</span></span>
+<span class="line"><span>材质：{各部件材质、颜色和表面质感}。</span></span>
+<span class="line"><span>特征：{磨损、灰尘、氧化、划痕或其他使用痕迹}。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>道具六视图格式：</span></span>
+<span class="line"><span>高质量专业道具多角度展示图，横向构图，以2行3列的干净网格分成六个独立等分画面。左上为绝对正面视图，上中为绝对背面视图，右上为绝对左侧视图，左下为绝对右侧视图，下中为绝对顶部俯视图，右下为绝对底部仰视图。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>六个画面必须展示同一件道具，材质、颜色、比例、尺寸、结构和使用痕迹完全一致。所有视角不得重复；顶部和底部必须垂直正交拍摄，不得用斜后方视角代替底部仰视。采用超长焦镜头或移轴镜头效果，将透视变形降到最低，接近正交投影；物体在每格中居中，缩放比例、中心线和朝向规范保持一致，完整轮廓入画，无裁剪、倾斜、旋转或透视畸变。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>统一纯白色背景和专业产品影棚光线。不得出现人物、手脚、场景、建筑、自然景观、其他道具、剧情事件、文字、水印、logo或UI元素。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>{统一视觉风格}</span></span></code></pre>
+<h3 id="主要锚定内容-2">主要锚定内容</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>道具六视图负责锚定</span></span>
+<span class="line"><span>= 整体轮廓</span></span>
+<span class="line"><span>+ 正反面结构</span></span>
+<span class="line"><span>+ 左右侧结构</span></span>
+<span class="line"><span>+ 顶部与底部结构</span></span>
+<span class="line"><span>+ 尺寸比例</span></span>
+<span class="line"><span>+ 材质与颜色</span></span>
+<span class="line"><span>+ 使用痕迹</span></span></code></pre>
+<h3 id="当前验收重点-2">当前验收重点</h3>
+<ul>
+<li>六个格子的视角必须一一对应，不能重复生成侧面或背面。</li>
+<li>顶部俯视和底部仰视必须真实呈现对应表面。</li>
+<li>关键部件的数量、位置和连接关系应跨格一致。</li>
+<li>六视图用于视频道具一致性锚定；近景英雄道具仍可能需要额外局部特写。</li>
+</ul>
+<h2 id="五资产清单与交付顺序">五、资产清单与交付顺序</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>故事梗概或分镜表</span></span>
+<span class="line"><span>→ 识别跨镜头重复出现的角色、场景和道具</span></span>
+<span class="line"><span>→ 合并同一对象，形成独立视觉锚定对象清单</span></span>
+<span class="line"><span>→ 为每个对象编写对应的多视图生成提示词</span></span>
+<span class="line"><span>→ 生成参考图</span></span>
+<span class="line"><span>→ 按各类型验收重点确认</span></span>
+<span class="line"><span>→ 在视频提示词中声明每张图的锚定职责</span></span>
+<span class="line"><span>→ 编写带连续时间段的各个 Shot</span></span></code></pre>
+<h3 id="项目级交付公式">项目级交付公式</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>完整视频生成包</span></span>
+<span class="line"><span>= N份参考资产生成提示词</span></span>
+<span class="line"><span>+ N张确认后的参考图</span></span>
+<span class="line"><span>+ 1份引用这些参考图的完整视频提示词</span></span></code></pre>
+<p>没有参考资产时，交付物中不出现参考资产提示词、参考图或参考图职责模块。</p>
+<h2 id="六与视频提示词的关系">六、与视频提示词的关系</h2>
+<p>本模板负责生成视频之前的资产生产；<a href="/prompt-archive-site/notes/video-prompt-structure/">模板-视频提示词总结构</a>负责将已确认的参考图写入视频生成提示词。</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>参考资产提示词</span></span>
+<span class="line"><span>→ 生成并确认多视图参考图</span></span>
+<span class="line"><span>→ 视频提示词中的参考图职责声明</span></span>
+<span class="line"><span>→ Shot 01 至 Shot N</span></span></code></pre>
+<p>参考资产只定义稳定视觉信息，不提前演出剧情：</p>
+<ul>
+<li>角色保持中性表情、自然站姿和干净照明；</li>
+<li>场景保持空场景，不注入人物和剧情事件；</li>
+<li>道具保持独立陈列，不出现手持动作和剧情环境。</li>
+</ul>
+<h2 id="七相关案例">七、相关案例</h2>
+<ul>
+<li><a href="/prompt-archive-site/notes/character-sheet-template/">模板-人物设定图</a>：角色三视图、四视图及女主成品示例。</li>
+<li><a href="/prompt-archive-site/notes/shengtang-assets/">范例-盛唐资产包-角色场景道具设定图</a>：角色、场景、道具资产提示词及生成结果。</li>
+<li><a href="/prompt-archive-site/notes/shengtang-prompts/">范例-盛唐分镜提示词-1至14镜全量</a>：参考资产进入逐镜视频提示词后的实际写法。</li>
+</ul>
+</div><section class="note-related" aria-label="关联案例" data-astro-cid-vex5zuxs><h2 class="section-title" style="font-size:20px" data-astro-cid-vex5zuxs><span class="icon" style="width:18px;height:18px" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 11.5a4 4 0 0 1 0-5.6l1.4-1.4a4 4 0 0 1 5.6 5.6l-1.4 1.4"/><path d="M11.5 8.5a4 4 0 0 1 0 5.6l-1.4 1.4a4 4 0 0 1-5.6-5.6l1.4-1.4"/></svg></span> 应用这些写法的案例</h2><div class="grid-cases" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr));margin-top:16px" data-astro-cid-vex5zuxs><a class="case-card" href="/prompt-archive-site/cases/image2-character-board/" data-medium="image" data-topic="角色概念板" data-evidence="source-example" data-search="人物角色概念板（魏晋风设定） 角色概念板 一张图生成模块化角色概念板：左侧主视觉半身肖像，右侧三视图、身份资料、五官特写、妆容发型、服装配饰、表情与动作参考。附源资料示例图。 角色设定 概念板 三视图 模块化信息"><div class="card-media"><div class="photo"><img src="/prompt-archive-site/media/7d980487dcbe218c.png" alt="人物角色概念板（魏晋风设定） 源资料示例图" loading="lazy"></div><span class="card-badge mute"><span class="icon" style="width:12px;height:12px" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="14" height="12" rx="1.5"/><circle cx="7.4" cy="8.4" r="1.4"/><path d="M3 13.2l3.8-3.4 3.2 2.8 2.6-2.2 4.4 3.6"/></svg></span>示例图</span></div><div class="card-holes" aria-hidden="true"></div><div class="card-body"><div class="card-meta"><span>PA-013</span><span>图像</span><span class="status warn">附源资料示例图</span></div><h3 class="card-title">人物角色概念板（魏晋风设定）</h3><p class="card-summary">一张图生成模块化角色概念板：左侧主视觉半身肖像，右侧三视图、身份资料、五官特写、妆容发型、服装配饰、表情与动作参考。附源资料示例图。</p><div class="card-tags"><span class="tag">角色概念板</span><span class="tag">角色设定</span><span class="tag">概念板</span></div></div></a><a class="case-card" href="/prompt-archive-site/cases/image2-prop-board/" data-medium="image" data-topic="道具概念板" data-evidence="source-example" data-search="道具概念图（赛博复古巡航摩托） 道具概念板 一张图生成影视级道具设计图：左侧道具主视觉，右侧多角度标准视图、核心部件特写、涂装材质说明与姿态场景参考。附源资料示例图。 道具设定 概念板 多角度视图 材质说明"><div class="card-media"><div class="photo"><img src="/prompt-archive-site/media/b93df4ac7d59bb59.png" alt="道具概念图（赛博复古巡航摩托） 源资料示例图" loading="lazy"></div><span class="card-badge mute"><span class="icon" style="width:12px;height:12px" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="14" height="12" rx="1.5"/><circle cx="7.4" cy="8.4" r="1.4"/><path d="M3 13.2l3.8-3.4 3.2 2.8 2.6-2.2 4.4 3.6"/></svg></span>示例图</span></div><div class="card-holes" aria-hidden="true"></div><div class="card-body"><div class="card-meta"><span>PA-014</span><span>图像</span><span class="status warn">附源资料示例图</span></div><h3 class="card-title">道具概念图（赛博复古巡航摩托）</h3><p class="card-summary">一张图生成影视级道具设计图：左侧道具主视觉，右侧多角度标准视图、核心部件特写、涂装材质说明与姿态场景参考。附源资料示例图。</p><div class="card-tags"><span class="tag">道具概念板</span><span class="tag">道具设定</span><span class="tag">概念板</span></div></div></a></div><p style="font-size:14px;margin-top:12px" data-astro-cid-vex5zuxs><a href="/prompt-archive-site/images/" data-astro-cid-vex5zuxs>浏览图像案例 →</a></p></section></div></div></div></main><footer class="site-footer" data-astro-cid-tq46r5sz><div class="container" data-astro-cid-tq46r5sz><div class="footer-grid" data-astro-cid-tq46r5sz><div class="footer-brand" data-astro-cid-tq46r5sz><a class="brand" href="/prompt-archive-site/" data-astro-cid-tq46r5sz><span class="brand-glyph" data-astro-cid-tq46r5sz>PA</span><span class="brand-name" data-astro-cid-tq46r5sz>AI 提示词档案馆</span></a><p class="footer-desc" data-astro-cid-tq46r5sz>可浏览、可检索、可复制的 AI 图像与视频提示词案例库。每个完整案例一个独立页面，提示词与 Wiki 原文逐字一致。</p></div><nav class="footer-col" aria-label="页脚导航" data-astro-cid-tq46r5sz><p class="footer-label" data-astro-cid-tq46r5sz>浏览</p><a href="/prompt-archive-site/images/" data-astro-cid-tq46r5sz>图像案例</a><a href="/prompt-archive-site/videos/" data-astro-cid-tq46r5sz>视频案例</a><a href="/prompt-archive-site/notes/" data-astro-cid-tq46r5sz>方法笔记</a><a href="/prompt-archive-site/cases/" data-astro-cid-tq46r5sz>全站搜索</a></nav><div class="footer-col" data-astro-cid-tq46r5sz><p class="footer-label" data-astro-cid-tq46r5sz>本馆收录</p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>案例</span><b data-astro-cid-tq46r5sz>105</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>附实测成片</span><b data-astro-cid-tq46r5sz>2</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>方法笔记</span><b data-astro-cid-tq46r5sz>60</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>合集</span><b data-astro-cid-tq46r5sz>11</b></p></div></div><div class="footer-bottom" data-astro-cid-tq46r5sz><p data-astro-cid-tq46r5sz>「作者称已测试」表示来源声明，本站未复测。</p><p data-astro-cid-tq46r5sz>PA·ARCHIVE © 2026</p></div></div></footer></body><script type="module">function e(){document.querySelectorAll(`[data-masonry]`).forEach(e=>{let t=Array.from(e.querySelectorAll(`:scope > .m-cols > .m-col > *, :scope > *:not(.m-cols)`));if(e.querySelectorAll(`.m-cols`).forEach(e=>e.remove()),t.length===0)return;let n=window.matchMedia(`(max-width: 767px)`).matches?1:window.matchMedia(`(max-width: 1199px)`).matches?2:3,r=document.createElement(`div`);r.className=`m-cols`;let i=Array.from({length:n},()=>{let e=document.createElement(`div`);return e.className=`m-col`,e});t.forEach((e,t)=>i[t%n].appendChild(e)),e.appendChild(r),i.forEach(e=>r.appendChild(e))})}window.refreshMasonry=e,e();var t;window.addEventListener(`resize`,()=>{clearTimeout(t),t=setTimeout(e,150)});</script><script type="module">(()=>{let e=`.case-card, .note-card, .note-list-card`,t=window.matchMedia(`(prefers-reduced-motion: reduce)`),n=null,r=null,i=0;t.addEventListener?.(`change`,()=>{t.matches&&a()});function a(){if(!n)return;let e=n;e.classList.remove(`tilt-active`),e.classList.add(`tilt-return`),e.style.transform=``,clearTimeout(i),i=setTimeout(()=>e.classList.remove(`tilt-return`),320),n=null,r=null}document.addEventListener(`pointermove`,i=>{if(i.pointerType!==`mouse`||!i.isPrimary||t.matches)return;let o=i.target instanceof Element?i.target.closest(e):null;if(o!==n){if(a(),!o)return;n=o,r=n.getBoundingClientRect(),n.classList.add(`tilt-active`),n.classList.remove(`tilt-return`)}if(!n||!r)return;let s=(i.clientX-r.left)/r.width-.5,c=(i.clientY-r.top)/r.height-.5,l=Math.max(-1,Math.min(1,s*2))*4.5,u=Math.max(-1,Math.min(1,c*2))*-4.5;n.style.transform=`perspective(1100px) rotateX(${u.toFixed(3)}deg) rotateY(${l.toFixed(3)}deg) translateY(-3px)`},{passive:!0}),document.addEventListener(`pointerleave`,()=>a()),document.addEventListener(`pointerdown`,t=>{(t.target instanceof Element?t.target.closest(e):null)!==n&&a()},{passive:!0}),window.addEventListener(`blur`,()=>a()),window.addEventListener(`scroll`,()=>a(),{passive:!0})})();</script></html><script type="module">function e(){document.querySelectorAll(`.prose pre`).forEach(e=>{if(e.closest(`.code-panel`))return;let t=e.querySelector(`code`),n=(t??e).textContent??``,r=t?.className.match(/language-([\w+-]+)/)?.[1]??`text`,i=n.replace(/\n$/,``).split(`
+`).length,a=Array.from(n.matchAll(/`{3,}/g)).map(e=>e[0].length),o=a.length?Math.max(3,Math.max(...a)+1):3,s="`".repeat(o)+`markdown
+`+(n.endsWith(`
+`)?n:n+`
+`)+"`".repeat(o),c=document.createElement(`figure`);c.className=`code-panel`;let l=document.createElement(`figcaption`);l.className=`code-panel-head`;let u=document.createElement(`span`);u.className=`code-lang`,u.textContent=r;let d=document.createElement(`span`);d.className=`code-lines`,d.textContent=`${i} 行`;let f=document.createElement(`span`);f.className=`copy-feedback`,f.setAttribute(`aria-live`,`polite`);let p=document.createElement(`button`);p.type=`button`,p.className=`copy-btn`,p.textContent=`复制本块`,l.append(u,d,f,p),e.replaceWith(c),c.append(l,e);let m;p.addEventListener(`click`,async()=>{let e=!1;try{await navigator.clipboard.writeText(s),e=!0}catch{try{let t=document.createElement(`textarea`);t.value=s,t.style.position=`fixed`,t.style.opacity=`0`,document.body.appendChild(t),t.select(),e=document.execCommand(`copy`),t.remove()}catch{e=!1}}f.textContent=e?`已复制本块`:`复制失败，请手动选取`,p.textContent=e?`已复制`:`复制本块`,clearTimeout(m),m=setTimeout(()=>{f.textContent=``,p.textContent=`复制本块`},3e3)})})}e();</script>

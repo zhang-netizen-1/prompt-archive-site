@@ -1,0 +1,404 @@
+<!DOCTYPE html><html lang="zh-CN" data-astro-cid-tq46r5sz><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="整合第三方作者教程的方法论笔记：先建控制资产（站位图/参考图/子场景）再写视频提示词，含双人构图、情绪四层参数、多动作衔接、失败诊断矩阵等 10 章，对来源做了置信度分级。整理自安歌飞书教程，公开前需确认。"><link rel="icon" href="/prompt-archive-site/favicon.svg" type="image/svg+xml"><title>AI 短剧空间站位与镜头情绪控制 · 方法笔记</title><link rel="stylesheet" href="/prompt-archive-site/_astro/SiteLayout.DYPNTGRP.css"><style>.note-header[data-astro-cid-vex5zuxs]{max-width:calc(var(--note-width) + 280px);margin:0 auto;padding:40px 24px 0}
+</style></head><body data-astro-cid-tq46r5sz><a class="skip-link" href="#main" data-astro-cid-tq46r5sz>跳到主要内容</a><div class="announce" data-astro-cid-tq46r5sz><a href="/prompt-archive-site/cases/" data-astro-cid-tq46r5sz>PA·ARCHIVE — 每个完整案例一个独立页面，提示词与 Wiki 原文逐字一致 ↗</a></div><header class="site-header" data-astro-cid-tq46r5sz><div class="container" data-astro-cid-tq46r5sz><a class="brand" href="/prompt-archive-site/" data-astro-cid-tq46r5sz><span class="brand-glyph" data-astro-cid-tq46r5sz>PA</span><span class="brand-name" data-astro-cid-tq46r5sz>AI 提示词档案馆</span></a><nav class="site-nav" aria-label="主导航" data-astro-cid-tq46r5sz><a href="/prompt-archive-site/images/" data-astro-cid-tq46r5sz>图像案例<span class="nav-no" data-astro-cid-tq46r5sz>01</span></a><a href="/prompt-archive-site/videos/" data-astro-cid-tq46r5sz>视频案例<span class="nav-no" data-astro-cid-tq46r5sz>02</span></a><a href="/prompt-archive-site/notes/" aria-current="page" data-astro-cid-tq46r5sz>方法笔记<span class="nav-no" data-astro-cid-tq46r5sz>03</span></a></nav><div class="header-cta" data-astro-cid-tq46r5sz><a class="header-search-link" href="/prompt-archive-site/cases/" aria-label="全站搜索案例" data-astro-cid-tq46r5sz><span class="icon" style="width:15px;height:15px" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="6.1"/><line x1="13.6" y1="13.6" x2="18" y2="18"/></svg></span><span data-astro-cid-tq46r5sz>搜索</span><span class="nav-no" data-astro-cid-tq46r5sz>04</span></a></div></div></header><main id="main" data-astro-cid-tq46r5sz><div class="note-page" data-astro-cid-vex5zuxs><div class="note-header" data-astro-cid-vex5zuxs><nav class="breadcrumbs" aria-label="面包屑" data-astro-cid-vex5zuxs><a href="/prompt-archive-site/" data-astro-cid-vex5zuxs>首页</a><span aria-hidden="true" data-astro-cid-vex5zuxs>/</span><a href="/prompt-archive-site/notes/" data-astro-cid-vex5zuxs>方法笔记</a><span aria-hidden="true" data-astro-cid-vex5zuxs>/</span><span aria-current="page" data-astro-cid-vex5zuxs>AI 短剧空间站位与镜头情绪控制</span></nav><h1 style="font-size:32px" data-astro-cid-vex5zuxs>AI 短剧空间站位与镜头情绪控制</h1><p class="note-meta" data-astro-cid-vex5zuxs><span class="medium-chip" data-astro-cid-vex5zuxs>方法</span><span data-astro-cid-vex5zuxs>视频</span><span data-astro-cid-vex5zuxs>源资料：🎬方法-AI短剧空间站位与镜头情绪控制（prompts）</span></p><p class="note-summary" data-astro-cid-vex5zuxs>整合第三方作者教程的方法论笔记：先建控制资产（站位图/参考图/子场景）再写视频提示词，含双人构图、情绪四层参数、多动作衔接、失败诊断矩阵等 10 章，对来源做了置信度分级。整理自安歌飞书教程，公开前需确认。</p></div><div class="note-layout" data-astro-cid-vex5zuxs><aside class="note-toc" aria-label="目录" data-astro-cid-vex5zuxs><p class="toc-title" data-astro-cid-vex5zuxs>目录</p><a href="#资料取舍" data-astro-cid-vex5zuxs>资料取舍</a><a href="#一生产架构先做控制资产再写视频提示词" data-astro-cid-vex5zuxs>一、生产架构：先做控制资产，再写视频提示词</a><a href="#最小资产包" class="depth-3" data-astro-cid-vex5zuxs>最小资产包</a><a href="#二双人关系构图不是装饰而是关系编码" data-astro-cid-vex5zuxs>二、双人关系：构图不是装饰，而是关系编码</a><a href="#三个更稳定的控制轴" class="depth-3" data-astro-cid-vex5zuxs>三个更稳定的控制轴</a><a href="#双人提示词骨架" class="depth-3" data-astro-cid-vex5zuxs>双人提示词骨架</a><a href="#三台词情绪把有感情地说拆成四层参数" data-astro-cid-vex5zuxs>三、台词情绪：把“有感情地说”拆成四层参数</a><a href="#四人物站位按人数升级控制手段" data-astro-cid-vex5zuxs>四、人物站位：按人数升级控制手段</a><a href="#23人作者当时测试中可用的直接控制方案" class="depth-3" data-astro-cid-vex5zuxs>2—3人：作者当时测试中可用的直接控制方案</a><a href="#4人及以上不要把全员精准同框当默认方案" class="depth-3" data-astro-cid-vex5zuxs>4人及以上：不要把全员精准同框当默认方案</a><a href="#站位图最少要编码什么" class="depth-3" data-astro-cid-vex5zuxs>站位图最少要编码什么</a><a href="#五导演台与720全景它是空间参考不是真3d" data-astro-cid-vex5zuxs>五、导演台与720°全景：它是空间参考，不是真3D</a><a href="#能解决什么" class="depth-3" data-astro-cid-vex5zuxs>能解决什么</a><a href="#不能解决什么" class="depth-3" data-astro-cid-vex5zuxs>不能解决什么</a><a href="#六场景穿越从剧情子空间向外扩不要先造空洞大场景" data-astro-cid-vex5zuxs>六、场景穿越：从剧情子空间向外扩，不要先造空洞大场景</a><a href="#执行规则" class="depth-3" data-astro-cid-vex5zuxs>执行规则</a><a href="#七多动作衔接切镜点放在动作中间" data-astro-cid-vex5zuxs>七、多动作衔接：切镜点放在动作中间</a><a href="#连续动作" class="depth-3" data-astro-cid-vex5zuxs>连续动作</a><a href="#大空间移动" class="depth-3" data-astro-cid-vex5zuxs>大空间移动</a><a href="#八氛围与真人质感把身份光影和材质分开控制" data-astro-cid-vex5zuxs>八、氛围与真人质感：把身份、光影和材质分开控制</a><a href="#女频氛围三层" class="depth-3" data-astro-cid-vex5zuxs>女频氛围三层</a><a href="#真人质感控制" class="depth-3" data-astro-cid-vex5zuxs>真人质感控制</a><a href="#九失败诊断矩阵" data-astro-cid-vex5zuxs>九、失败诊断矩阵</a><a href="#十验收清单" data-astro-cid-vex5zuxs>十、验收清单</a><a href="#来源" data-astro-cid-vex5zuxs>来源</a><a href="#资产与部署结论" data-astro-cid-vex5zuxs>资产与部署结论</a></aside><div class="note-main" data-astro-cid-vex5zuxs><div class="prose" data-astro-cid-vex5zuxs><blockquote>
+<p>[!abstract] 核心判断
+这组资料真正可复用的不是八段提示词，而是一套<strong>先建立控制资产，再生成视频</strong>的方法：用构图控制关系，用站位图控制空间，用子场景扩展控制场景连续，用说话状态控制表演，用动作中间切镜控制连续性。</p>
+</blockquote>
+<h2 id="资料取舍">资料取舍</h2>
+<table>
+<thead>
+<tr>
+<th>原资料</th>
+<th>Wiki 处理</th>
+<th>保留内容</th>
+<th>未保留内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>双人同框·情感拉扯3技巧</td>
+<td>纳入</td>
+<td>构图与人物关系的映射</td>
+<td>宣传文案、整段案例</td>
+</tr>
+<tr>
+<td>Seedance2.0台词情绪力</td>
+<td>纳入</td>
+<td>说话状态、声音、语速、标点四层控制</td>
+<td>情绪词穷举表</td>
+</tr>
+<tr>
+<td>人物站位·线框法</td>
+<td>纳入并与既有笔记互链</td>
+<td>站位标记、朝向、参考图数量、多人能力边界</td>
+<td>完整古风案例</td>
+</tr>
+<tr>
+<td>多人站位·导演台控制法</td>
+<td>纳入，标记工具依赖</td>
+<td>720°空间参考、机位、室内外适用边界</td>
+<td>工具操作截图与完整提示词</td>
+</tr>
+<tr>
+<td>女频氛围感3步法</td>
+<td>只保留稳定原则</td>
+<td>角色光、场景光、前后景层次</td>
+<td>作者主观优先级、具体工具品牌</td>
+</tr>
+<tr>
+<td>真人剧质感2大技巧</td>
+<td>降低置信度后纳入</td>
+<td>身份资产与质感风格分离、人脸多视图</td>
+<td>未复验的工具效果结论</td>
+</tr>
+<tr>
+<td>场景穿越·走位站位固定</td>
+<td>纳入</td>
+<td>子空间优先、定向扩图、分段生成、动线标记</td>
+<td>单一酒楼案例全文</td>
+</tr>
+<tr>
+<td>镜头语言·多动作衔接</td>
+<td>纳入</td>
+<td>动作中间切镜、关键动作提取、节奏拆分</td>
+<td>完整作业与案例全文</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p>[!info] 证据口径
+<strong>A级</strong>是跨工具仍成立的制作原则；<strong>B级</strong>是作者在特定模型/版本上的经验，需要重新测试；工具名、版本号和抽卡次数不作为长期结论。</p>
+</blockquote>
+<h2 id="一生产架构先做控制资产再写视频提示词">一、生产架构：先做控制资产，再写视频提示词</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="mermaid"><code><span class="line"><span style="color:#F97583">flowchart</span><span style="color:#B392F0"> LR</span></span>
+<span class="line"><span style="color:#FFAB70">    A</span><span style="color:#F97583">[</span><span style="color:#9ECBFF">剧情与情绪目标</span><span style="color:#F97583">]</span><span style="color:#F97583"> --&gt;</span><span style="color:#FFAB70"> B</span><span style="color:#F97583">[</span><span style="color:#9ECBFF">角色与场景资产</span><span style="color:#F97583">]</span></span>
+<span class="line"><span style="color:#FFAB70">    B </span><span style="color:#F97583">--&gt;</span><span style="color:#FFAB70"> C</span><span style="color:#F97583">[</span><span style="color:#9ECBFF">空间控制资产</span><span style="color:#F97583">]</span></span>
+<span class="line"><span style="color:#FFAB70">    C </span><span style="color:#F97583">--&gt;</span><span style="color:#FFAB70"> D</span><span style="color:#F97583">[</span><span style="color:#9ECBFF">分镜与表演参数</span><span style="color:#F97583">]</span></span>
+<span class="line"><span style="color:#FFAB70">    D </span><span style="color:#F97583">--&gt;</span><span style="color:#FFAB70"> E</span><span style="color:#F97583">[</span><span style="color:#9ECBFF">分段生成</span><span style="color:#F97583">]</span></span>
+<span class="line"><span style="color:#FFAB70">    E </span><span style="color:#F97583">--&gt;</span><span style="color:#FFAB70"> F</span><span style="color:#F97583">[</span><span style="color:#9ECBFF">连续性验收</span><span style="color:#F97583">]</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFAB70">    B </span><span style="color:#F97583">--&gt;</span><span style="color:#FFAB70"> B1</span><span style="color:#F97583">[</span><span style="color:#9ECBFF">人脸/服装/光影参考</span><span style="color:#F97583">]</span></span>
+<span class="line"><span style="color:#FFAB70">    B </span><span style="color:#F97583">--&gt;</span><span style="color:#FFAB70"> B2</span><span style="color:#F97583">[</span><span style="color:#9ECBFF">子场景/扩展场景</span><span style="color:#F97583">]</span></span>
+<span class="line"><span style="color:#FFAB70">    C </span><span style="color:#F97583">--&gt;</span><span style="color:#FFAB70"> C1</span><span style="color:#F97583">[</span><span style="color:#9ECBFF">站位图/动线图</span><span style="color:#F97583">]</span></span>
+<span class="line"><span style="color:#FFAB70">    C </span><span style="color:#F97583">--&gt;</span><span style="color:#FFAB70"> C2</span><span style="color:#F97583">[</span><span style="color:#9ECBFF">机位图/全景参考</span><span style="color:#F97583">]</span></span>
+<span class="line"><span style="color:#FFAB70">    D </span><span style="color:#F97583">--&gt;</span><span style="color:#FFAB70"> D1</span><span style="color:#F97583">[</span><span style="color:#9ECBFF">构图与视线</span><span style="color:#F97583">]</span></span>
+<span class="line"><span style="color:#FFAB70">    D </span><span style="color:#F97583">--&gt;</span><span style="color:#FFAB70"> D2</span><span style="color:#F97583">[</span><span style="color:#9ECBFF">台词状态与切镜点</span><span style="color:#F97583">]</span></span></code></pre>
+<p><strong>判断</strong>：人物多、空间复杂、动作连续时，继续堆自然语言的边际收益很低；应把关键约束变成图形资产和分镜契约。</p>
+<h3 id="最小资产包">最小资产包</h3>
+<ol>
+<li><strong>角色资产</strong>：主体参考图；身份容易漂移时补高清人脸二视图或三视图。</li>
+<li><strong>场景资产</strong>：剧情发生的核心子空间；需要穿越时再由子空间定向扩展到大空间。</li>
+<li><strong>站位资产</strong>：人物位置、朝向、视线对象、动作路径。</li>
+<li><strong>机位资产</strong>：拍摄方向、景别、镜头移动路径；复杂多人场景可使用全景或导演台参考。</li>
+<li><strong>表演契约</strong>：说话状态、声音质感、语速语气、台词停顿、微表情。</li>
+<li><strong>连续性契约</strong>：上一镜结束动作、下一镜承接动作、切镜发生点。</li>
+</ol>
+<h2 id="二双人关系构图不是装饰而是关系编码">二、双人关系：构图不是装饰，而是关系编码</h2>
+<p>双人画面的核心变量是：<strong>位置、大小、距离、角度、朝向</strong>。它们共同表达权力关系、情感距离和情绪状态。</p>
+<table>
+<thead>
+<tr>
+<th>构图</th>
+<th>主要关系信号</th>
+<th>适用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>前后景高低</td>
+<td>仰望、崇拜、卑微、权力差</td>
+<td>表白、训话、上下级</td>
+</tr>
+<tr>
+<td>正反打俯仰角</td>
+<td>强势与弱势、压迫与顺从</td>
+<td>对峙、争吵、谈判</td>
+</tr>
+<tr>
+<td>对称</td>
+<td>平等、对立、僵持</td>
+<td>宿命对决、立场冲突</td>
+</tr>
+<tr>
+<td>对角线</td>
+<td>不稳定、张力、暧昧</td>
+<td>拉扯、试探、追逐</td>
+</tr>
+<tr>
+<td>框架遮挡</td>
+<td>隔离、受困、旁观</td>
+<td>孤独、秘密、疏离</td>
+</tr>
+<tr>
+<td>肩并肩</td>
+<td>亲密、陪伴、共同立场</td>
+<td>日常、同行、和解</td>
+</tr>
+<tr>
+<td>背对背</td>
+<td>决裂、错过、无法沟通</td>
+<td>分手、误解、冷战</td>
+</tr>
+<tr>
+<td>一坐一站</td>
+<td>控制权与等级差</td>
+<td>审问、训诫、谈判</td>
+</tr>
+</tbody>
+</table>
+<h3 id="三个更稳定的控制轴">三个更稳定的控制轴</h3>
+<ul>
+<li><strong>距离</strong>：亲密不等于必须贴近；有意保留物理距离，反而能制造压抑的情感浓度。</li>
+<li><strong>高低</strong>：站位、台阶和俯仰角共同决定谁掌控场面。</li>
+<li><strong>朝向</strong>：正面、侧面、背面及视线回避，可以承担关系变化，不必全靠台词解释。</li>
+</ul>
+<h3 id="双人提示词骨架">双人提示词骨架</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">人物A：画面位置、景别、身体朝向、视线对象、动作</span></span>
+<span class="line"><span style="color:#E1E4E8">人物B：画面位置、景别、身体朝向、视线对象、动作</span></span>
+<span class="line"><span style="color:#E1E4E8">关系构图：前后景/正反打/对称/对角线/框架等</span></span>
+<span class="line"><span style="color:#E1E4E8">镜头：机位高度、景别、运动方向、对焦对象</span></span>
+<span class="line"><span style="color:#E1E4E8">情绪证据：眼神、呼吸、手部、停顿，而不是只写“悲伤/暧昧”</span></span></code></pre>
+<h2 id="三台词情绪把有感情地说拆成四层参数">三、台词情绪：把“有感情地说”拆成四层参数</h2>
+<table>
+<thead>
+<tr>
+<th>控制层</th>
+<th>回答的问题</th>
+<th>示例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>说话状态</td>
+<td>人物以什么行为说话</td>
+<td>低声、冷笑、厉声质问、哽咽、试探、轻叹</td>
+</tr>
+<tr>
+<td>声音质感</td>
+<td>听起来是什么质地</td>
+<td>气声、颤音、干涩、冷淡、清亮、低沉</td>
+</tr>
+<tr>
+<td>语气与语速</td>
+<td>节奏和力度如何变化</td>
+<td>缓慢轻柔、平稳无起伏、急促重咬字、迟疑带停顿</td>
+</tr>
+<tr>
+<td>标点与停顿</td>
+<td>台词内部如何断句</td>
+<td>逗号短停、省略号拉长、破折号转折、问号上扬</td>
+</tr>
+</tbody>
+</table>
+<p><strong>写法原则</strong>：台词标签必须同时落到可观察的视听证据——口型幅度、咬字、眼神、呼吸和微表情。只写“愤怒地说”仍然不够。</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">[</span><span style="color:#DBEDFF;text-decoration:underline">人物</span><span style="color:#E1E4E8">]以[</span><span style="color:#DBEDFF;text-decoration:underline">说话状态</span><span style="color:#E1E4E8">]说：“[</span><span style="color:#DBEDFF;text-decoration:underline">带停顿的台词</span><span style="color:#E1E4E8">]”</span></span>
+<span class="line"><span style="color:#E1E4E8">声音：[</span><span style="color:#DBEDFF;text-decoration:underline">音色/气息/颤音</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#E1E4E8">语速语气：[</span><span style="color:#DBEDFF;text-decoration:underline">速度、音量、重音、停顿</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#E1E4E8">表演：[</span><span style="color:#DBEDFF;text-decoration:underline">口型幅度、眼神、眉眼、呼吸、手部动作</span><span style="color:#E1E4E8">]</span></span></code></pre>
+<blockquote>
+<p>[!warning]
+标点影响模型语音表现属于模型行为，不是语言学定律；不同版本必须用同一句台词做 A/B 测试。</p>
+</blockquote>
+<h2 id="四人物站位按人数升级控制手段">四、人物站位：按人数升级控制手段</h2>
+<h3 id="23人作者当时测试中可用的直接控制方案">2—3人：作者当时测试中可用的直接控制方案</h3>
+<blockquote>
+<p>以下规则来自作者在当时 Seedance 2.0 环境下的案例测试，适合作为当前模型的复测起点，不代表新的模型版本仍保持相同稳定性。</p>
+</blockquote>
+<ul>
+<li>双人正反打：作者测试中，两张反打参考图都标注站位比只标第一张更稳定。</li>
+<li>三人：可先测试三角站位，让画面中间人物承担两侧人物之间的视觉桥梁。</li>
+<li>提示词应明确人物朝向和视线对象，不能只写“站在左边/右边”。</li>
+<li>作者观察到多张场景图有时会触发模型自行重组空间；当前模型应从少量参考图起步，通过 A/B 测试逐步增加。</li>
+</ul>
+<p>既有完整案例见：<a href="/prompt-archive-site/notes/blocking-2-3-many/">🎬视频-人物站位2人、3人、多人</a>。</p>
+<h3 id="4人及以上不要把全员精准同框当默认方案">4人及以上：不要把全员精准同框当默认方案</h3>
+<p>作者在当时版本上的测试显示，人数增加后，位置、朝向和身份会同时失稳。更可靠的降级路线是：</p>
+<ol>
+<li>先建立多人全景，作为空间关系母版。</li>
+<li>主要表演拆成单人或双人镜头。</li>
+<li>用屏幕外视线、声音和动作制造其他角色仍在场的空间感。</li>
+<li>用旋转、横移或视线跟随把下一人物带入镜头。</li>
+<li>群体全景只承担空间交代，不承担复杂表演。</li>
+</ol>
+<blockquote>
+<p>[!warning]
+“2—3人较稳、4人以上困难”是特定模型版本的经验边界，不是永久上限。新模型应重新做 2/3/4/5 人阶梯测试。</p>
+</blockquote>
+<h3 id="站位图最少要编码什么">站位图最少要编码什么</h3>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>必须说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>身份</td>
+<td>人物名称或稳定代号</td>
+</tr>
+<tr>
+<td>位置</td>
+<td>左/中/右、前/中/后景、画面占比</td>
+</tr>
+<tr>
+<td>朝向</td>
+<td>面向镜头、侧身、背对镜头、面向谁</td>
+</tr>
+<tr>
+<td>视线</td>
+<td>看向人物、物体或画框外方向</td>
+</tr>
+<tr>
+<td>姿态</td>
+<td>站、坐、跪、蹲及身体重心</td>
+</tr>
+<tr>
+<td>动线</td>
+<td>起点、终点、经过区域、禁止穿越区域</td>
+</tr>
+<tr>
+<td>排除</td>
+<td>站位框、人偶、球体、线条不出现在成片中</td>
+</tr>
+</tbody>
+</table>
+<p>同类角色同时出现时，用明显不同的服装主色和轮廓区分身份，避免只靠性别或发型。</p>
+<h2 id="五导演台与720全景它是空间参考不是真3d">五、导演台与720°全景：它是空间参考，不是真3D</h2>
+<h3 id="能解决什么">能解决什么</h3>
+<ul>
+<li>在全景参考中摆放人偶，形成角色站位母版。</li>
+<li>切换机位，预估不同视角下的景别和人物空间关系。</li>
+<li>先生成多人全景，再截图给双人/单人分镜提供同视角参考。</li>
+</ul>
+<h3 id="不能解决什么">不能解决什么</h3>
+<p>720°全景仍然是球面投影，不是真正可计算遮挡、深度和碰撞的3D场景。因此：</p>
+<ul>
+<li>室外、遮挡少、站位不要求厘米级精确时更适合。</li>
+<li>室内围坐、桌椅沙发遮挡、多层前后关系时难度明显升高。</li>
+<li>室内可先做俯视布局，再生成全景和机位参考。</li>
+<li>不同镜头仍要准备与拍摄视角一致的场景图。</li>
+</ul>
+<h2 id="六场景穿越从剧情子空间向外扩不要先造空洞大场景">六、场景穿越：从剧情子空间向外扩，不要先造空洞大场景</h2>
+<p>当人物从卧室到客厅、包间到大厅等连续空间移动时，先解决<strong>剧情发生处</strong>，再扩展空间。</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>核心子空间 → 按剧情定向扩图 → 大空间母版 → 分段生成 → 动线衔接</span></span></code></pre>
+<h3 id="执行规则">执行规则</h3>
+<ol>
+<li>先生成发生细节表演的子空间，并锁定门、窗、楼梯等连接结构。</li>
+<li>以子空间为不变锚点向外扩图；新增元素必须服务后续剧情和动线。</li>
+<li>大场景穿越分段生成，不要求一条视频同时完成交流、起身、下楼、入厅等全部动作。</li>
+<li>平面正视图容易表达左右关系，难表达前后遮挡；复杂走位用线稿、彩色动线和禁止穿越区补足。</li>
+<li>每段末尾保留可被下一段承接的姿态、朝向和运动方向。</li>
+</ol>
+<h2 id="七多动作衔接切镜点放在动作中间">七、多动作衔接：切镜点放在动作中间</h2>
+<h3 id="连续动作">连续动作</h3>
+<p>同一地点切换景别时，避免在人物完全静止后切镜。让同一个动作跨越切点：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>镜头A：动作启动 → 动作进行中切镜 → 镜头B：承接同一动作并完成</span></span></code></pre>
+<p>运动中的视觉变化会掩盖景别跳变；静态到静态的硬切更容易产生停顿感。</p>
+<h3 id="大空间移动">大空间移动</h3>
+<p>不必完整展示人物从起点走到终点。提取能传递情绪的动作证据：</p>
+<ul>
+<li>雀跃：提裙摆、急促脚步、转身、冲入画面。</li>
+<li>悲伤：伸手、手臂垂落、身体失去支撑、倒下。</li>
+<li>冲突：抬手、拦截、接触、反作用、后退。</li>
+</ul>
+<p>快节奏段落先按情绪拆动作，再为动作、运镜和反应分别分配时长。原资料建议单动作控制在约1秒内，但这是节奏参考，不是固定规范。</p>
+<h2 id="八氛围与真人质感把身份光影和材质分开控制">八、氛围与真人质感：把身份、光影和材质分开控制</h2>
+<h3 id="女频氛围三层">女频氛围三层</h3>
+<ol>
+<li><strong>角色光</strong>：为剧情不同阶段设计角色主光、侧逆光、轮廓光和发丝光。</li>
+<li><strong>场景光</strong>：场景图先有明确、统一的光源方向，再做人物融合。</li>
+<li><strong>空间层次</strong>：用前景遮挡、后景信息和浅景深建立层次；环境服务人物，不与人物争夺视觉中心。</li>
+</ol>
+<p>作者提出“人物占竖屏约70%、环境约30%”，应理解为构图启发而非硬比例。</p>
+<h3 id="真人质感控制">真人质感控制</h3>
+<ul>
+<li>将<strong>身份资产</strong>与<strong>风格质感</strong>拆开：人脸多视图负责身份，材质和摄影词负责皮肤与影像风格。</li>
+<li>高清脸部二视图/三视图可能比“左侧大脸+右侧全身三视图”的复合图更利于锁定五官。</li>
+<li>“真人肤质+3D建模类词汇混搭”是作者的工具实验，尚未在本 Wiki 复验，不作为稳定配方。</li>
+</ul>
+<h2 id="九失败诊断矩阵">九、失败诊断矩阵</h2>
+<table>
+<thead>
+<tr>
+<th>失败现象</th>
+<th>优先检查</th>
+<th>修正方向</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>人物左右位置漂移</td>
+<td>是否有站位图、两张反打图是否都标注</td>
+<td>补全站位与朝向，不继续堆形容词</td>
+</tr>
+<tr>
+<td>人物身份混淆</td>
+<td>同类角色服装/轮廓是否过近</td>
+<td>拉开主色、发型和轮廓差异</td>
+</tr>
+<tr>
+<td>多人同框崩坏</td>
+<td>是否让4人以上同时表演</td>
+<td>降级为全景交代+单/双人分镜</td>
+</tr>
+<tr>
+<td>空间穿模</td>
+<td>平面图是否缺前后关系</td>
+<td>增加俯视图、动线、遮挡和禁止区</td>
+</tr>
+<tr>
+<td>反打背景穿帮</td>
+<td>是否只有单一正视场景</td>
+<td>生成与反打机位一致的场景参考</td>
+</tr>
+<tr>
+<td>台词无情绪</td>
+<td>是否只有情绪形容词</td>
+<td>补说话状态、声音、语速、停顿和表演证据</td>
+</tr>
+<tr>
+<td>切镜卡顿</td>
+<td>是否在动作停止后换景别</td>
+<td>把切点移动到动作中段并承接同一动作</td>
+</tr>
+<tr>
+<td>氛围统一但人物塑料</td>
+<td>身份与质感是否绑在一张复杂参考图</td>
+<td>拆分人脸身份资产和摄影材质控制</td>
+</tr>
+</tbody>
+</table>
+<h2 id="十验收清单">十、验收清单</h2>
+<ul class="contains-task-list">
+<li class="task-list-item"><input type="checkbox" disabled> 每个镜头能说清人物位置、朝向和视线对象。</li>
+<li class="task-list-item"><input type="checkbox" disabled> 反打镜头拥有各自拍摄方向对应的站位/场景参考。</li>
+<li class="task-list-item"><input type="checkbox" disabled> 4人以上场景已决定是精准同框还是空间影射，未默认强求全员表演。</li>
+<li class="task-list-item"><input type="checkbox" disabled> 场景穿越的门、楼梯、走廊等连接结构在子空间与大空间中一致。</li>
+<li class="task-list-item"><input type="checkbox" disabled> 台词情绪落到了声音、节奏、口型或微表情，不只是抽象情绪词。</li>
+<li class="task-list-item"><input type="checkbox" disabled> 连续动作的切镜点位于动作中段，下一镜承接同一动作。</li>
+<li class="task-list-item"><input type="checkbox" disabled> 光源方向一致，前景/后景没有抢夺人物视觉中心。</li>
+<li class="task-list-item"><input type="checkbox" disabled> 新模型上线后重新验证人数上限、标点表现和参考图数量，不沿用旧经验当事实。</li>
+</ul>
+<h2 id="来源">来源</h2>
+<p>资料作者：安歌。原资料为免费教程；本笔记仅提炼必要方法，不镜像视频、图片和完整案例。</p>
+<ol>
+<li><a href="https://my.feishu.cn/docx/RZtVdgTeCoIde0xWz3JcVdXcnuh">双人同框·情感拉扯3技巧</a></li>
+<li><a href="https://my.feishu.cn/docx/HiS6dJ0b8omj2KxSQhEcAmOnnPe">Seedance2.0台词情绪力提示词</a></li>
+<li><a href="https://my.feishu.cn/docx/UReddBUi2obckFxmpa6cNHcdnug">人物站位：测试案例提示词</a></li>
+<li><a href="https://my.feishu.cn/docx/SjSPdbPJDob6ZCx50WzcyiuEnvb">多人站位·导演台控制法</a></li>
+<li><a href="https://my.feishu.cn/docx/HbX3dyv5qo563exnRB1cCZ6JnDh">女频氛围感：3步法+1捷径</a></li>
+<li><a href="https://my.feishu.cn/docx/BKfedhEBDo3b5GxF1JbcHiSSnhg">真人剧质感2大技巧</a></li>
+<li><a href="https://my.feishu.cn/docx/RzkddmBzgo99UcxqR4gccBKkn6c">场景穿越·走位站位固定</a></li>
+<li><a href="https://my.feishu.cn/docx/LhULd2RlGoUrcbxoUOnc4pz6n0d">AI短剧镜头语言01·多动作衔接</a></li>
+</ol>
+<h2 id="资产与部署结论">资产与部署结论</h2>
+<ul>
+<li>原资料包含8篇飞书文档，没有发现压缩包、附件下载、<code>SKILL.md</code>、MCP或Agent Skill安装入口。</li>
+<li>本次不部署Skill；普通提示词模板不应为了“可部署”而强行包装成Skill。</li>
+<li>实时原文审计快照保存在：<code>~/Downloads/ai-short-drama-audit-2026-08-26/source/</code>。</li>
+</ul>
+</div></div></div></div></main><footer class="site-footer" data-astro-cid-tq46r5sz><div class="container" data-astro-cid-tq46r5sz><div class="footer-grid" data-astro-cid-tq46r5sz><div class="footer-brand" data-astro-cid-tq46r5sz><a class="brand" href="/prompt-archive-site/" data-astro-cid-tq46r5sz><span class="brand-glyph" data-astro-cid-tq46r5sz>PA</span><span class="brand-name" data-astro-cid-tq46r5sz>AI 提示词档案馆</span></a><p class="footer-desc" data-astro-cid-tq46r5sz>可浏览、可检索、可复制的 AI 图像与视频提示词案例库。每个完整案例一个独立页面，提示词与 Wiki 原文逐字一致。</p></div><nav class="footer-col" aria-label="页脚导航" data-astro-cid-tq46r5sz><p class="footer-label" data-astro-cid-tq46r5sz>浏览</p><a href="/prompt-archive-site/images/" data-astro-cid-tq46r5sz>图像案例</a><a href="/prompt-archive-site/videos/" data-astro-cid-tq46r5sz>视频案例</a><a href="/prompt-archive-site/notes/" data-astro-cid-tq46r5sz>方法笔记</a><a href="/prompt-archive-site/cases/" data-astro-cid-tq46r5sz>全站搜索</a></nav><div class="footer-col" data-astro-cid-tq46r5sz><p class="footer-label" data-astro-cid-tq46r5sz>本馆收录</p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>案例</span><b data-astro-cid-tq46r5sz>105</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>附实测成片</span><b data-astro-cid-tq46r5sz>2</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>方法笔记</span><b data-astro-cid-tq46r5sz>60</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>合集</span><b data-astro-cid-tq46r5sz>11</b></p></div></div><div class="footer-bottom" data-astro-cid-tq46r5sz><p data-astro-cid-tq46r5sz>「作者称已测试」表示来源声明，本站未复测。</p><p data-astro-cid-tq46r5sz>PA·ARCHIVE © 2026</p></div></div></footer></body><script type="module">function e(){document.querySelectorAll(`[data-masonry]`).forEach(e=>{let t=Array.from(e.querySelectorAll(`:scope > .m-cols > .m-col > *, :scope > *:not(.m-cols)`));if(e.querySelectorAll(`.m-cols`).forEach(e=>e.remove()),t.length===0)return;let n=window.matchMedia(`(max-width: 767px)`).matches?1:window.matchMedia(`(max-width: 1199px)`).matches?2:3,r=document.createElement(`div`);r.className=`m-cols`;let i=Array.from({length:n},()=>{let e=document.createElement(`div`);return e.className=`m-col`,e});t.forEach((e,t)=>i[t%n].appendChild(e)),e.appendChild(r),i.forEach(e=>r.appendChild(e))})}window.refreshMasonry=e,e();var t;window.addEventListener(`resize`,()=>{clearTimeout(t),t=setTimeout(e,150)});</script><script type="module">(()=>{let e=`.case-card, .note-card, .note-list-card`,t=window.matchMedia(`(prefers-reduced-motion: reduce)`),n=null,r=null,i=0;t.addEventListener?.(`change`,()=>{t.matches&&a()});function a(){if(!n)return;let e=n;e.classList.remove(`tilt-active`),e.classList.add(`tilt-return`),e.style.transform=``,clearTimeout(i),i=setTimeout(()=>e.classList.remove(`tilt-return`),320),n=null,r=null}document.addEventListener(`pointermove`,i=>{if(i.pointerType!==`mouse`||!i.isPrimary||t.matches)return;let o=i.target instanceof Element?i.target.closest(e):null;if(o!==n){if(a(),!o)return;n=o,r=n.getBoundingClientRect(),n.classList.add(`tilt-active`),n.classList.remove(`tilt-return`)}if(!n||!r)return;let s=(i.clientX-r.left)/r.width-.5,c=(i.clientY-r.top)/r.height-.5,l=Math.max(-1,Math.min(1,s*2))*4.5,u=Math.max(-1,Math.min(1,c*2))*-4.5;n.style.transform=`perspective(1100px) rotateX(${u.toFixed(3)}deg) rotateY(${l.toFixed(3)}deg) translateY(-3px)`},{passive:!0}),document.addEventListener(`pointerleave`,()=>a()),document.addEventListener(`pointerdown`,t=>{(t.target instanceof Element?t.target.closest(e):null)!==n&&a()},{passive:!0}),window.addEventListener(`blur`,()=>a()),window.addEventListener(`scroll`,()=>a(),{passive:!0})})();</script></html><script type="module">function e(){document.querySelectorAll(`.prose pre`).forEach(e=>{if(e.closest(`.code-panel`))return;let t=e.querySelector(`code`),n=(t??e).textContent??``,r=t?.className.match(/language-([\w+-]+)/)?.[1]??`text`,i=n.replace(/\n$/,``).split(`
+`).length,a=Array.from(n.matchAll(/`{3,}/g)).map(e=>e[0].length),o=a.length?Math.max(3,Math.max(...a)+1):3,s="`".repeat(o)+`markdown
+`+(n.endsWith(`
+`)?n:n+`
+`)+"`".repeat(o),c=document.createElement(`figure`);c.className=`code-panel`;let l=document.createElement(`figcaption`);l.className=`code-panel-head`;let u=document.createElement(`span`);u.className=`code-lang`,u.textContent=r;let d=document.createElement(`span`);d.className=`code-lines`,d.textContent=`${i} 行`;let f=document.createElement(`span`);f.className=`copy-feedback`,f.setAttribute(`aria-live`,`polite`);let p=document.createElement(`button`);p.type=`button`,p.className=`copy-btn`,p.textContent=`复制本块`,l.append(u,d,f,p),e.replaceWith(c),c.append(l,e);let m;p.addEventListener(`click`,async()=>{let e=!1;try{await navigator.clipboard.writeText(s),e=!0}catch{try{let t=document.createElement(`textarea`);t.value=s,t.style.position=`fixed`,t.style.opacity=`0`,document.body.appendChild(t),t.select(),e=document.execCommand(`copy`),t.remove()}catch{e=!1}}f.textContent=e?`已复制本块`:`复制失败，请手动选取`,p.textContent=e?`已复制`:`复制本块`,clearTimeout(m),m=setTimeout(()=>{f.textContent=``,p.textContent=`复制本块`},3e3)})})}e();</script>

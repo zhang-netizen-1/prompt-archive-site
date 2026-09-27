@@ -1,0 +1,361 @@
+<!DOCTYPE html><html lang="zh-CN" data-astro-cid-tq46r5sz><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="全库收录判定规范：变量取值原文一字不改、三层定义、六个变量库边界裁决、高频取值包上限（≤15 条/≤12KB）、命名与入库流程。"><link rel="icon" href="/prompt-archive-site/favicon.svg" type="image/svg+xml"><title>库定义规范 · 方法笔记</title><link rel="stylesheet" href="/prompt-archive-site/_astro/SiteLayout.DYPNTGRP.css"><style>.note-header[data-astro-cid-vex5zuxs]{max-width:calc(var(--note-width) + 280px);margin:0 auto;padding:40px 24px 0}
+</style></head><body data-astro-cid-tq46r5sz><a class="skip-link" href="#main" data-astro-cid-tq46r5sz>跳到主要内容</a><div class="announce" data-astro-cid-tq46r5sz><a href="/prompt-archive-site/cases/" data-astro-cid-tq46r5sz>PA·ARCHIVE — 每个完整案例一个独立页面，提示词与 Wiki 原文逐字一致 ↗</a></div><header class="site-header" data-astro-cid-tq46r5sz><div class="container" data-astro-cid-tq46r5sz><a class="brand" href="/prompt-archive-site/" data-astro-cid-tq46r5sz><span class="brand-glyph" data-astro-cid-tq46r5sz>PA</span><span class="brand-name" data-astro-cid-tq46r5sz>AI 提示词档案馆</span></a><nav class="site-nav" aria-label="主导航" data-astro-cid-tq46r5sz><a href="/prompt-archive-site/images/" data-astro-cid-tq46r5sz>图像案例<span class="nav-no" data-astro-cid-tq46r5sz>01</span></a><a href="/prompt-archive-site/videos/" data-astro-cid-tq46r5sz>视频案例<span class="nav-no" data-astro-cid-tq46r5sz>02</span></a><a href="/prompt-archive-site/notes/" aria-current="page" data-astro-cid-tq46r5sz>方法笔记<span class="nav-no" data-astro-cid-tq46r5sz>03</span></a></nav><div class="header-cta" data-astro-cid-tq46r5sz><a class="header-search-link" href="/prompt-archive-site/cases/" aria-label="全站搜索案例" data-astro-cid-tq46r5sz><span class="icon" style="width:15px;height:15px" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="6.1"/><line x1="13.6" y1="13.6" x2="18" y2="18"/></svg></span><span data-astro-cid-tq46r5sz>搜索</span><span class="nav-no" data-astro-cid-tq46r5sz>04</span></a></div></div></header><main id="main" data-astro-cid-tq46r5sz><div class="note-page" data-astro-cid-vex5zuxs><div class="note-header" data-astro-cid-vex5zuxs><nav class="breadcrumbs" aria-label="面包屑" data-astro-cid-vex5zuxs><a href="/prompt-archive-site/" data-astro-cid-vex5zuxs>首页</a><span aria-hidden="true" data-astro-cid-vex5zuxs>/</span><a href="/prompt-archive-site/notes/" data-astro-cid-vex5zuxs>方法笔记</a><span aria-hidden="true" data-astro-cid-vex5zuxs>/</span><span aria-current="page" data-astro-cid-vex5zuxs>库定义规范</span></nav><h1 style="font-size:32px" data-astro-cid-vex5zuxs>库定义规范</h1><p class="note-meta" data-astro-cid-vex5zuxs><span class="medium-chip" data-astro-cid-vex5zuxs>规则</span><span data-astro-cid-vex5zuxs>图像＋视频共用</span><span data-astro-cid-vex5zuxs>源资料：库定义规范（visual-prompt-system）</span></p><p class="note-summary" data-astro-cid-vex5zuxs>全库收录判定规范：变量取值原文一字不改、三层定义、六个变量库边界裁决、高频取值包上限（≤15 条/≤12KB）、命名与入库流程。</p></div><div class="note-layout" data-astro-cid-vex5zuxs><aside class="note-toc" aria-label="目录" data-astro-cid-vex5zuxs><p class="toc-title" data-astro-cid-vex5zuxs>目录</p><a href="#零原文不变式最高优先级覆盖本规范所有其他条款" data-astro-cid-vex5zuxs>零、原文不变式（最高优先级，覆盖本规范所有其他条款）</a><a href="#零点五写法规则库方法层" data-astro-cid-vex5zuxs>零点五、写法规则库（方法层）</a><a href="#一三层定义" data-astro-cid-vex5zuxs>一、三层定义</a><a href="#变量库取值层" class="depth-3" data-astro-cid-vex5zuxs>变量库（取值层）</a><a href="#模板库结构层" class="depth-3" data-astro-cid-vex5zuxs>模板库（结构层）</a><a href="#示例库成品层" class="depth-3" data-astro-cid-vex5zuxs>示例库（成品层）</a><a href="#二六个变量库的边界" data-astro-cid-vex5zuxs>二、六个变量库的边界</a><a href="#三与源库的分工" data-astro-cid-vex5zuxs>三、与源库的分工</a><a href="#三点五媒介标注" data-astro-cid-vex5zuxs>三点五、媒介标注</a><a href="#三点七高频取值包" data-astro-cid-vex5zuxs>三点七、高频取值包</a><a href="#四命名规范" data-astro-cid-vex5zuxs>四、命名规范</a><a href="#五入库流程" data-astro-cid-vex5zuxs>五、入库流程</a><a href="#六双读者设计" data-astro-cid-vex5zuxs>六、双读者设计</a><a href="#七变量维度词汇表" data-astro-cid-vex5zuxs>七、变量维度词汇表</a></aside><div class="note-main" data-astro-cid-vex5zuxs><div class="prose" data-astro-cid-vex5zuxs><blockquote>
+<p>本域三层结构与六个变量库的收录判定。任何条目入库前先过这里的判定问题；两可时按「你拿它做什么」裁决。</p>
+</blockquote>
+<h2 id="零原文不变式最高优先级覆盖本规范所有其他条款">零、原文不变式（最高优先级，覆盖本规范所有其他条款）</h2>
+<ol>
+<li><strong>变量库与模板高频包中的取值原文，任何整理、重构、优化、合并操作不得增删改一字。</strong> 唯一合法变更 = 志光亲述新经验时的"新增"，以及志光明确指示的逐字替换。</li>
+<li><strong>AI 无改写权</strong>：任何 agent（含执行整理的 AI）发现原文有错、有重复、有更好的写法，只能记录到"待裁决"清单，不得直接修改。</li>
+<li>本条与任何后续条款冲突时，以本条为准。违反本条的任何变更应整体回滚。</li>
+</ol>
+<blockquote>
+<p>来源：2026-09-04 志光拍板。此条将其 Keep 分享玩法经验（变量定义表 + 映射取值 + 禁改写）的原文层定为系统宪法。</p>
+</blockquote>
+<h2 id="零点五写法规则库方法层">零点五、写法规则库（方法层）</h2>
+<p>解决「变量库都是固定描述、无法举一反三」的问题。三类生成规则：<strong>组合公式</strong>（A+B+C 骨架）、<strong>条件路由</strong>（如果X则Y查表）、<strong>参数化条目</strong>（{元素}/{场景}可替换槽位）。</p>
+<ul>
+<li>变量库 = 成品取值（零号条款管辖，一字不动）</li>
+<li>写法规则库 = 生成方法（可随经验迭代，不受零号约束）</li>
+<li>新提示词 = 写法规则(骨架) + 变量取值(填料)；生成的新条目经志光确认后回收入变量库</li>
+</ul>
+<h2 id="一三层定义">一、三层定义</h2>
+<h3 id="变量库取值层">变量库（取值层）</h3>
+<p><strong>一句话</strong>：模板槽位的取值集合，查表、整条搬用、不改写。</p>
+<p><strong>判定问题</strong>：这条内容是<strong>组装前</strong>的素材吗——你拿它去填一个槽位，而不是直接投喂模型？</p>
+<p><strong>条目三种粒度</strong>（都合法）：</p>
+<table>
+<thead>
+<tr>
+<th>粒度</th>
+<th>形态</th>
+<th>例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>原子条目</td>
+<td>一条=一个完整描述</td>
+<td>运镜"智能环绕跟踪，保持与主体恒定距离…"</td>
+</tr>
+<tr>
+<td>链式条目</td>
+<td>一组按顺序使用的原子条目，含节奏参数</td>
+<td>哭情绪链：失焦→瞳孔→冷笑→崩溃（各含时长）</td>
+</tr>
+<tr>
+<td>组合条目</td>
+<td>多变量已按验证过的配对预组合，仍作单槽取值</td>
+<td>打斗整合篇：动作+运镜+特效绑定的单次生成单元</td>
+</tr>
+</tbody>
+</table>
+<p><strong>不收录</strong>：完整交付级 prompt（→示例库）；组装方法与规则（→模板库）；带输入规格的工作流（→模板库·玩法包）。</p>
+<h3 id="模板库结构层">模板库（结构层）</h3>
+<p><strong>一句话</strong>：组装骨架——告诉你有哪些槽位、怎么填、什么组合会冲突。</p>
+<p><strong>标准构成</strong>：变量清单（指向变量库）+ 模板结构（<code>{}</code> 槽位）+ 组装规则 + 成品参照（指向示例库）。</p>
+<p><strong>两个子类</strong>：</p>
+<table>
+<thead>
+<tr>
+<th>子类</th>
+<th>形态</th>
+<th>例</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>场景模板</td>
+<td>轻量骨架，槽位从变量库取值</td>
+<td>单镜头运动 / 微表情特写 / 十五秒短剧…</td>
+</tr>
+<tr>
+<td>玩法包</td>
+<td>预制模板+输入规格+抽卡策略，整包采用不拆件</td>
+<td>image2 各玩法 / 风格复刻</td>
+</tr>
+</tbody>
+</table>
+<p><strong>判定问题</strong>：它描述的是<strong>怎么组装</strong>，而不是具体取值内容吗？</p>
+<h3 id="示例库成品层">示例库（成品层）</h3>
+<p><strong>一句话</strong>：组装完成的交付级成品 prompt + 变量取值标注，用于直接复用或反向拆解。<strong>2026-09-04 起轻量示例内嵌于对应模板文件（模板结构节之后）；2026-09-16 起实测案例全文另存独立笔记（<code>案例-*</code>，模板内仅留索引）——防模板正文膨胀、保可读性。</strong></p>
+<p><strong>判定问题</strong>：拿掉标注后，它是不是一份可以直接粘贴给模型的完整输入？</p>
+<p><strong>硬规则</strong>：入库必须带变量取值标注（用了哪些变量、各取什么值）——只贴原稿不标注的拒收。</p>
+<h2 id="二六个变量库的边界">二、六个变量库的边界</h2>
+<table>
+<thead>
+<tr>
+<th>库</th>
+<th>管什么</th>
+<th>一句话判定</th>
+<th>易混归属裁决</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>运镜</strong></td>
+<td>相机怎么动</td>
+<td>"变的是相机/取景，还是主体？"</td>
+<td>特效条目内<strong>已配对</strong>的运镜描述跟随特效走，不重复收录</td>
+</tr>
+<tr>
+<td><strong>动作</strong></td>
+<td>主体做什么（事件层）</td>
+<td>"这一拍发生了什么事件？"</td>
+<td>打斗中的特效触发→特效库；人物调度（站位/走位）→动作库</td>
+</tr>
+<tr>
+<td><strong>表演</strong></td>
+<td>主体情绪如何外显（情绪层）</td>
+<td>"这条描述的是内在状态变化还是事件？"</td>
+<td>动作=发生了什么；表演=什么情绪状态。哭/笑/眼神/呼吸/反应都在此</td>
+</tr>
+<tr>
+<td><strong>特效</strong></td>
+<td>非物理视觉效果</td>
+<td>"描述的是能量/粒子/魔法表现吗？"</td>
+<td>武器光效公式→特效库（随兵器查表）；施法手势=特效的触发动作子类，随特效收录不拆到动作库</td>
+</tr>
+<tr>
+<td><strong>场景</strong></td>
+<td>空间、环境、风格</td>
+<td>"这条定义的是环境还是人？"</td>
+<td>美学风格包（宋式/吉卜力）=场景库的整包风格预设</td>
+</tr>
+<tr>
+<td><strong>角色造型</strong></td>
+<td>角色外观定义</td>
+<td>"这条定义角色长什么样？"</td>
+<td>角色的情绪变化（表演）不收；五官/发型/服饰/视图类型/画风标签收</td>
+</tr>
+</tbody>
+</table>
+<p><strong>跨库不二收</strong>：同一条目只在一个库有正身；其他库需要时写"见 X 变量库·某节"，不复制。</p>
+<h2 id="三与源库的分工">三、与源库的分工</h2>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>本域</th>
+<th>ai-video 源库</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>定位</td>
+<td>生产加速层：查表→组装→对照</td>
+<td>来源与考证层：完整原稿、模型坑、逐组审计</td>
+</tr>
+<tr>
+<td>内容</td>
+<td>变量条目 + 骨架 + 标注示例</td>
+<td>全量素材、方法、案例、教程原文</td>
+</tr>
+<tr>
+<td>改动约束</td>
+<td>变量取值原文一字不动</td>
+<td>不动（保留）</td>
+</tr>
+</tbody>
+</table>
+<p>教程原文（13 篇 PDF 存档）<strong>不参与本域任何提炼与引用</strong>。</p>
+<h2 id="三点五媒介标注">三点五、媒介标注</h2>
+<p>每个文件 frontmatter 必含 <code>medium: video|image|mixed</code>；mixed 文件必须在目录表加「媒介」列或在节标题后缀（媒介：X）。检索规则：图像任务先过滤 medium=image/mixed，视频任务先过滤 video/mixed。</p>
+<h2 id="三点七高频取值包">三点七、高频取值包</h2>
+<p>模板文件可内嵌<strong>高频取值包</strong>：该模板最常用的变量条目直接抄进文件，完整库仍是扩展层。</p>
+<p><strong>硬性上限（防爆规则）</strong>：</p>
+<ol>
+<li>每个模板的高频取值包 ≤ 15 条目、≤ 12KB——超限即违反规范，拒绝入库；</li>
+<li>只收「该模板 80% 任务会用」的条目：单一依赖库的模板取该库招牌档 5–10 条；多库依赖按使用频率加权分配条目额度；</li>
+<li>内嵌条目必须<strong>逐字复制</strong>自变量库（含模型版本标注），不得改写、不得摘要；</li>
+<li>内嵌条目与变量库<strong>同源同步</strong>：变量库条目修订时，同步检查所有内嵌该条目的模板（模板文件头 <code>embedded_from:</code> 字段登记来源库清单，供同步脚本检索）；</li>
+<li>新增条目优先入变量库；只有当一个条目被 3 个以上模板内嵌时，才允许“晋升”为公共高频包（此时反过来把它从各模板抽出、回归单份维护）；</li>
+<li>轻量示例原稿不受此限；实测案例全文另存独立笔记（<code>案例-*</code>），不占模板篇幅。</li>
+</ol>
+<p><strong>判断口诀</strong>：高频包是「顺手放几发子弹」，不是「把弹药库搬进枪里」。</p>
+<h2 id="四命名规范">四、命名规范</h2>
+<ul>
+<li>变量库：<code>X变量库</code>（六类定名，不新增第六类以外的库）</li>
+<li>模板：<code>模板-场景名</code> / <code>模板-玩法包名</code></li>
+<li>示例：<code>示例库-系列名</code></li>
+</ul>
+<h2 id="五入库流程">五、入库流程</h2>
+<ol>
+<li>判层：组装前素材→变量库；组装方法→模板库；组装完成品→示例库；</li>
+<li>判库：过第二节的判定问题与易混裁决；</li>
+<li>变量条目逐字搬运并标模型版本（2.0/2.5）；示例必须补变量取值标注；</li>
+<li>更新对应库的目录与域导航。</li>
+</ol>
+<h2 id="六双读者设计">六、双读者设计</h2>
+<p>本域服务两类读者，检索方式不同：</p>
+<table>
+<thead>
+<tr>
+<th>读者</th>
+<th>方式</th>
+<th>依据</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>人</td>
+<td>扫目录表→跳到节→复制条目</td>
+<td>每库顶部「目录」表（节/条目数/内容摘要）</td>
+</tr>
+<tr>
+<td>AI</td>
+<td><strong>两段式</strong>：读目录定位节→只加载命中节切片</td>
+<td>目录+切片≈2–3KB/次，整库37–137KB；实测打斗任务 293KB→9KB</td>
+</tr>
+</tbody>
+</table>
+<p>约束：</p>
+<ul>
+<li>目录表是 AI 的检索接口——新增节必须同步登记（节名/条目数/一句话摘要）；</li>
+<li>条目归属节要按「查表时的检索词」命名，不按来源文件名；</li>
+<li>大文件+目录切片是对"整条搬用语义完整"的保留，不预拆文件；单库超过 150KB 时再评估拆分。</li>
+</ul>
+<h2 id="七变量维度词汇表">七、变量维度词汇表</h2>
+<p>示例库标注与模板槽位共用的维度名（标注必用此表词汇，模板槽位引用维度名时可组合）：</p>
+<table>
+<thead>
+<tr>
+<th>维度</th>
+<th>含义</th>
+<th>主要来源库</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{人设}</td>
+<td>角色外观与身份定义</td>
+<td>角色造型</td>
+</tr>
+<tr>
+<td>{场景} / {场景轮换}</td>
+<td>空间环境 / 多镜场景切换序列</td>
+<td>场景</td>
+</tr>
+<tr>
+<td>{运镜}</td>
+<td>相机运动描述</td>
+<td>运镜</td>
+</tr>
+<tr>
+<td>{动作} / {动作结构}</td>
+<td>主体事件 / 动作编排</td>
+<td>动作</td>
+</tr>
+<tr>
+<td>{表演} / {情绪基调}</td>
+<td>情绪外显 / 全片情绪定位</td>
+<td>表演</td>
+</tr>
+<tr>
+<td>{特效}</td>
+<td>视觉效果描述</td>
+<td>特效</td>
+</tr>
+<tr>
+<td>{结构}</td>
+<td>镜头/时间骨架（如五镜×3秒）</td>
+<td>模板自带</td>
+</tr>
+<tr>
+<td>{台词} / {歌词}</td>
+<td>语音文本</td>
+<td>自写</td>
+</tr>
+<tr>
+<td>{卡点}</td>
+<td>音乐事件锚点</td>
+<td>自定+示例参照</td>
+</tr>
+<tr>
+<td>{触发} / {反转机制} / {喜剧机制}</td>
+<td>叙事转折装置</td>
+<td>自写</td>
+</tr>
+<tr>
+<td>{保持项} / {变化项}</td>
+<td>一致性边界</td>
+<td>角色造型·一致性</td>
+</tr>
+<tr>
+<td>{画风} / {风格}</td>
+<td>视觉风格标签</td>
+<td>场景·风格包</td>
+</tr>
+<tr>
+<td>{产品} / {卖点}</td>
+<td>广告对象与主张</td>
+<td>自写</td>
+</tr>
+<tr>
+<td>{镜头路径}</td>
+<td>一镜到底的穿行路线（含各段通过点）</td>
+<td>运镜</td>
+</tr>
+<tr>
+<td>{基调}</td>
+<td>氛围定位</td>
+<td>场景</td>
+</tr>
+</tbody>
+</table>
+<p>模板自有槽位（如 {主题}{起始}{过程}{结尾}）是<strong>组装位</strong>，维度名是<strong>取值类</strong>——标注用维度名，模板组装位由模板自行命名并在变量清单里注明对应维度。</p>
+<table>
+<thead>
+<tr>
+<th>{声音}</th>
+<th>声音设计定位(环境底/声景/拟音)</th>
+<th>方法·声音分层</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{变身前后}</td>
+<td>变身类转变的两端状态</td>
+<td>角色造型·一致性</td>
+</tr>
+<tr>
+<td>{知识对象}</td>
+<td>科普/解说条目的主题实体</td>
+<td>自写</td>
+</tr>
+<tr>
+<td>{视觉策略}</td>
+<td>知识呈现的画面手段(示意动画/字幕/复原)</td>
+<td>自写</td>
+</tr>
+<tr>
+<td>{对比}</td>
+<td>画面对位关系(如外冷内暖)</td>
+<td>场景</td>
+</tr>
+<tr>
+<td>{世界规则}</td>
+<td>一镜到底的穿行空间设定</td>
+<td>自写</td>
+</tr>
+<tr>
+<td>{镜头路径}</td>
+<td>已收录,补注:一镜到底各段通过点</td>
+<td>运镜</td>
+</tr>
+<tr>
+<td>{转场}</td>
+<td>镜头衔接装置(喷雾/遮挡/匹配)</td>
+<td>自写</td>
+</tr>
+<tr>
+<td>{产品呈现}</td>
+<td>广告产品的展示方式</td>
+<td>自写</td>
+</tr>
+</tbody>
+</table>
+</div></div></div></div></main><footer class="site-footer" data-astro-cid-tq46r5sz><div class="container" data-astro-cid-tq46r5sz><div class="footer-grid" data-astro-cid-tq46r5sz><div class="footer-brand" data-astro-cid-tq46r5sz><a class="brand" href="/prompt-archive-site/" data-astro-cid-tq46r5sz><span class="brand-glyph" data-astro-cid-tq46r5sz>PA</span><span class="brand-name" data-astro-cid-tq46r5sz>AI 提示词档案馆</span></a><p class="footer-desc" data-astro-cid-tq46r5sz>可浏览、可检索、可复制的 AI 图像与视频提示词案例库。每个完整案例一个独立页面，提示词与 Wiki 原文逐字一致。</p></div><nav class="footer-col" aria-label="页脚导航" data-astro-cid-tq46r5sz><p class="footer-label" data-astro-cid-tq46r5sz>浏览</p><a href="/prompt-archive-site/images/" data-astro-cid-tq46r5sz>图像案例</a><a href="/prompt-archive-site/videos/" data-astro-cid-tq46r5sz>视频案例</a><a href="/prompt-archive-site/notes/" data-astro-cid-tq46r5sz>方法笔记</a><a href="/prompt-archive-site/cases/" data-astro-cid-tq46r5sz>全站搜索</a></nav><div class="footer-col" data-astro-cid-tq46r5sz><p class="footer-label" data-astro-cid-tq46r5sz>本馆收录</p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>案例</span><b data-astro-cid-tq46r5sz>105</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>附实测成片</span><b data-astro-cid-tq46r5sz>2</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>方法笔记</span><b data-astro-cid-tq46r5sz>60</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>合集</span><b data-astro-cid-tq46r5sz>11</b></p></div></div><div class="footer-bottom" data-astro-cid-tq46r5sz><p data-astro-cid-tq46r5sz>「作者称已测试」表示来源声明，本站未复测。</p><p data-astro-cid-tq46r5sz>PA·ARCHIVE © 2026</p></div></div></footer></body><script type="module">function e(){document.querySelectorAll(`[data-masonry]`).forEach(e=>{let t=Array.from(e.querySelectorAll(`:scope > .m-cols > .m-col > *, :scope > *:not(.m-cols)`));if(e.querySelectorAll(`.m-cols`).forEach(e=>e.remove()),t.length===0)return;let n=window.matchMedia(`(max-width: 767px)`).matches?1:window.matchMedia(`(max-width: 1199px)`).matches?2:3,r=document.createElement(`div`);r.className=`m-cols`;let i=Array.from({length:n},()=>{let e=document.createElement(`div`);return e.className=`m-col`,e});t.forEach((e,t)=>i[t%n].appendChild(e)),e.appendChild(r),i.forEach(e=>r.appendChild(e))})}window.refreshMasonry=e,e();var t;window.addEventListener(`resize`,()=>{clearTimeout(t),t=setTimeout(e,150)});</script><script type="module">(()=>{let e=`.case-card, .note-card, .note-list-card`,t=window.matchMedia(`(prefers-reduced-motion: reduce)`),n=null,r=null,i=0;t.addEventListener?.(`change`,()=>{t.matches&&a()});function a(){if(!n)return;let e=n;e.classList.remove(`tilt-active`),e.classList.add(`tilt-return`),e.style.transform=``,clearTimeout(i),i=setTimeout(()=>e.classList.remove(`tilt-return`),320),n=null,r=null}document.addEventListener(`pointermove`,i=>{if(i.pointerType!==`mouse`||!i.isPrimary||t.matches)return;let o=i.target instanceof Element?i.target.closest(e):null;if(o!==n){if(a(),!o)return;n=o,r=n.getBoundingClientRect(),n.classList.add(`tilt-active`),n.classList.remove(`tilt-return`)}if(!n||!r)return;let s=(i.clientX-r.left)/r.width-.5,c=(i.clientY-r.top)/r.height-.5,l=Math.max(-1,Math.min(1,s*2))*4.5,u=Math.max(-1,Math.min(1,c*2))*-4.5;n.style.transform=`perspective(1100px) rotateX(${u.toFixed(3)}deg) rotateY(${l.toFixed(3)}deg) translateY(-3px)`},{passive:!0}),document.addEventListener(`pointerleave`,()=>a()),document.addEventListener(`pointerdown`,t=>{(t.target instanceof Element?t.target.closest(e):null)!==n&&a()},{passive:!0}),window.addEventListener(`blur`,()=>a()),window.addEventListener(`scroll`,()=>a(),{passive:!0})})();</script></html><script type="module">function e(){document.querySelectorAll(`.prose pre`).forEach(e=>{if(e.closest(`.code-panel`))return;let t=e.querySelector(`code`),n=(t??e).textContent??``,r=t?.className.match(/language-([\w+-]+)/)?.[1]??`text`,i=n.replace(/\n$/,``).split(`
+`).length,a=Array.from(n.matchAll(/`{3,}/g)).map(e=>e[0].length),o=a.length?Math.max(3,Math.max(...a)+1):3,s="`".repeat(o)+`markdown
+`+(n.endsWith(`
+`)?n:n+`
+`)+"`".repeat(o),c=document.createElement(`figure`);c.className=`code-panel`;let l=document.createElement(`figcaption`);l.className=`code-panel-head`;let u=document.createElement(`span`);u.className=`code-lang`,u.textContent=r;let d=document.createElement(`span`);d.className=`code-lines`,d.textContent=`${i} 行`;let f=document.createElement(`span`);f.className=`copy-feedback`,f.setAttribute(`aria-live`,`polite`);let p=document.createElement(`button`);p.type=`button`,p.className=`copy-btn`,p.textContent=`复制本块`,l.append(u,d,f,p),e.replaceWith(c),c.append(l,e);let m;p.addEventListener(`click`,async()=>{let e=!1;try{await navigator.clipboard.writeText(s),e=!0}catch{try{let t=document.createElement(`textarea`);t.value=s,t.style.position=`fixed`,t.style.opacity=`0`,document.body.appendChild(t),t.select(),e=document.execCommand(`copy`),t.remove()}catch{e=!1}}f.textContent=e?`已复制本块`:`复制失败，请手动选取`,p.textContent=e?`已复制`:`复制本块`,clearTimeout(m),m=setTimeout(()=>{f.textContent=``,p.textContent=`复制本块`},3e3)})})}e();</script>

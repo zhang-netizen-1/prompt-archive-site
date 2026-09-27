@@ -1,0 +1,358 @@
+<!DOCTYPE html><html lang="zh-CN" data-astro-cid-tq46r5sz><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="视频提示词的统一拆解结构：全局设定＋参考图（可选）＋多个镜头；每个镜头由「镜头」与「拍摄内容」组成。"><link rel="icon" href="/prompt-archive-site/favicon.svg" type="image/svg+xml"><title>视频提示词总结构 · 方法笔记</title><link rel="stylesheet" href="/prompt-archive-site/_astro/SiteLayout.DYPNTGRP.css"><style>.note-header[data-astro-cid-vex5zuxs]{max-width:calc(var(--note-width) + 280px);margin:0 auto;padding:40px 24px 0}
+</style></head><body data-astro-cid-tq46r5sz><a class="skip-link" href="#main" data-astro-cid-tq46r5sz>跳到主要内容</a><div class="announce" data-astro-cid-tq46r5sz><a href="/prompt-archive-site/cases/" data-astro-cid-tq46r5sz>PA·ARCHIVE — 每个完整案例一个独立页面，提示词与 Wiki 原文逐字一致 ↗</a></div><header class="site-header" data-astro-cid-tq46r5sz><div class="container" data-astro-cid-tq46r5sz><a class="brand" href="/prompt-archive-site/" data-astro-cid-tq46r5sz><span class="brand-glyph" data-astro-cid-tq46r5sz>PA</span><span class="brand-name" data-astro-cid-tq46r5sz>AI 提示词档案馆</span></a><nav class="site-nav" aria-label="主导航" data-astro-cid-tq46r5sz><a href="/prompt-archive-site/images/" data-astro-cid-tq46r5sz>图像案例<span class="nav-no" data-astro-cid-tq46r5sz>01</span></a><a href="/prompt-archive-site/videos/" data-astro-cid-tq46r5sz>视频案例<span class="nav-no" data-astro-cid-tq46r5sz>02</span></a><a href="/prompt-archive-site/notes/" aria-current="page" data-astro-cid-tq46r5sz>方法笔记<span class="nav-no" data-astro-cid-tq46r5sz>03</span></a></nav><div class="header-cta" data-astro-cid-tq46r5sz><a class="header-search-link" href="/prompt-archive-site/cases/" aria-label="全站搜索案例" data-astro-cid-tq46r5sz><span class="icon" style="width:15px;height:15px" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="6.1"/><line x1="13.6" y1="13.6" x2="18" y2="18"/></svg></span><span data-astro-cid-tq46r5sz>搜索</span><span class="nav-no" data-astro-cid-tq46r5sz>04</span></a></div></div></header><main id="main" data-astro-cid-tq46r5sz><div class="note-page" data-astro-cid-vex5zuxs><div class="note-header" data-astro-cid-vex5zuxs><nav class="breadcrumbs" aria-label="面包屑" data-astro-cid-vex5zuxs><a href="/prompt-archive-site/" data-astro-cid-vex5zuxs>首页</a><span aria-hidden="true" data-astro-cid-vex5zuxs>/</span><a href="/prompt-archive-site/notes/" data-astro-cid-vex5zuxs>方法笔记</a><span aria-hidden="true" data-astro-cid-vex5zuxs>/</span><span aria-current="page" data-astro-cid-vex5zuxs>视频提示词总结构</span></nav><h1 style="font-size:32px" data-astro-cid-vex5zuxs>视频提示词总结构</h1><p class="note-meta" data-astro-cid-vex5zuxs><span class="medium-chip" data-astro-cid-vex5zuxs>模板</span><span data-astro-cid-vex5zuxs>视频</span><span data-astro-cid-vex5zuxs>源资料：模板-视频提示词总结构（visual-prompt-system）</span></p><p class="note-summary" data-astro-cid-vex5zuxs>视频提示词的统一拆解结构：全局设定＋参考图（可选）＋多个镜头；每个镜头由「镜头」与「拍摄内容」组成。</p></div><div class="note-layout" data-astro-cid-vex5zuxs><aside class="note-toc" aria-label="目录" data-astro-cid-vex5zuxs><p class="toc-title" data-astro-cid-vex5zuxs>目录</p><a href="#一总公式" data-astro-cid-vex5zuxs>一、总公式</a><a href="#二字段定义与构成" data-astro-cid-vex5zuxs>二、字段定义与构成</a><a href="#镜头字段的内部组装规则" class="depth-3" data-astro-cid-vex5zuxs>“镜头”字段的内部组装规则</a><a href="#参考资产的前置生产公式" class="depth-3" data-astro-cid-vex5zuxs>参考资产的前置生产公式</a><a href="#参考图的图片n标注规则" class="depth-3" data-astro-cid-vex5zuxs>参考图的“@图片N”标注规则</a><a href="#三标准模板" data-astro-cid-vex5zuxs>三、标准模板</a><a href="#四旧提示词的拆解方式" data-astro-cid-vex5zuxs>四、旧提示词的拆解方式</a><a href="#五与现有提示词库的关系" data-astro-cid-vex5zuxs>五、与现有提示词库的关系</a><a href="#六当前缺口" data-astro-cid-vex5zuxs>六、当前缺口</a><a href="#七完整示例深夜餐馆表白" data-astro-cid-vex5zuxs>七、完整示例：深夜餐馆表白</a><a href="#八结构化案例" data-astro-cid-vex5zuxs>八、结构化案例</a><a href="#案例一咖啡店的猫" class="depth-3" data-astro-cid-vex5zuxs>案例一：咖啡店的猫</a><a href="#案例二女生偶遇暗恋对象" class="depth-3" data-astro-cid-vex5zuxs>案例二：女生偶遇暗恋对象</a><a href="#案例三深夜拉面广告" class="depth-3" data-astro-cid-vex5zuxs>案例三：深夜拉面广告</a><a href="#实测案例全文另存独立笔记" class="depth-3" data-astro-cid-vex5zuxs>实测案例（全文另存独立笔记）</a><a href="#九相关笔记" data-astro-cid-vex5zuxs>九、相关笔记</a><a href="#来源" data-astro-cid-vex5zuxs>来源</a></aside><div class="note-main" data-astro-cid-vex5zuxs><div class="prose" data-astro-cid-vex5zuxs><blockquote>
+<p>视频提示词的统一拆解结构：<strong>全局设定 + 参考图（可选）+ 多个镜头</strong>。参考图不是只有用户提供才使用：当视频依赖跨镜头角色、场景或道具一致性而又没有现成素材时，应先生产参考资产，再写入“参考图”；确实不需要视觉锚定时才省略。每个镜头由“镜头”和“拍摄内容”组成；其中“拍摄内容”就是该镜头具体用于生成的视频提示词。</p>
+</blockquote>
+<h2 id="一总公式">一、总公式</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>视频提示词</span></span>
+<span class="line"><span>= 全局设定</span></span>
+<span class="line"><span>+ 参考图（可选）</span></span>
+<span class="line"><span>+ 镜头集合</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>全局设定</span></span>
+<span class="line"><span>= 核心风格</span></span>
+<span class="line"><span>+ 影片基调</span></span>
+<span class="line"><span>+ 光线设计</span></span>
+<span class="line"><span>+ 导演意图</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>参考图</span></span>
+<span class="line"><span>= 图片N</span></span>
+<span class="line"><span>+ 锚定对象</span></span>
+<span class="line"><span>+ 需要继承的特征</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>镜头集合</span></span>
+<span class="line"><span>= Shot 01 + Shot 02 + … + Shot N</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Shot N</span></span>
+<span class="line"><span>= 镜头</span></span>
+<span class="line"><span>+ 拍摄内容</span></span></code></pre>
+<p>这里有两个层级都使用了“镜头”一词：</p>
+<ul>
+<li>上层的“镜头集合”指多个 <code>Shot</code>；</li>
+<li>每个 <code>Shot</code> 内的“镜头”字段，指摄影机如何拍摄。</li>
+</ul>
+<h2 id="二字段定义与构成">二、字段定义与构成</h2>
+<table>
+<thead>
+<tr>
+<th>字段</th>
+<th>定义</th>
+<th>构成公式</th>
+<th>回答的问题</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>核心风格</td>
+<td>整部视频稳定不变的影像形态与质感</td>
+<td>影像类型或真实程度 + 成像质感 + 影像介质或纹理</td>
+<td>看起来像什么类型的影像？</td>
+</tr>
+<tr>
+<td>影片基调</td>
+<td>整部视频主要传递的情绪与审美感受</td>
+<td>主导情绪 + 情绪关系或审美冲突 + 情绪强度</td>
+<td>整体让人感到什么？</td>
+</tr>
+<tr>
+<td>光线设计</td>
+<td>光源如何塑造人物、环境和氛围</td>
+<td>光源类型或颜色 + 光源方向 + 光线性质 + 产生的视觉效果</td>
+<td>画面被怎样照亮？</td>
+</tr>
+<tr>
+<td>导演意图</td>
+<td>这场戏的叙事任务与人物变化</td>
+<td>剧情节点 + 人物变化 + 外部画面与人物内心的关系</td>
+<td>为什么要这样拍？</td>
+</tr>
+<tr>
+<td>参考图（可选）</td>
+<td>为跨镜头重复出现的角色、场景或道具提供视觉锚点；可由用户提供，也可在写视频提示词前生成</td>
+<td>图片编号 + 锚定对象 + 需要继承的具体特征</td>
+<td>哪张图负责决定什么？</td>
+</tr>
+<tr>
+<td>镜头</td>
+<td>摄影机如何取景、成像和运动</td>
+<td>摄影机或成像质感（可选）+ 景别 + 焦段与透视（可选）+ 光圈、景深与焦点设计（按需）+ 快门、帧率等运动成像参数（按需）+ 摄影机方位、高度与拍摄角度 + 主体与构图关系 + 摄影机状态或运镜 + 起幅与落幅</td>
+<td>摄影机从哪里、用什么画面关系、怎样拍到什么结果？</td>
+</tr>
+<tr>
+<td>拍摄内容</td>
+<td>当前 Shot 实际用于生成的具体提示词</td>
+<td>该镜头内要生成的完整、具体画面描述</td>
+<td>这一镜具体生成什么？</td>
+</tr>
+</tbody>
+</table>
+<p>关键边界：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>镜头 = 摄影机怎么拍</span></span>
+<span class="line"><span>拍摄内容 = 这一镜具体生成什么</span></span></code></pre>
+<p>“拍摄内容”不是与具体提示词并列的附加字段，<strong>它本身就是当前 Shot 的具体提示词正文</strong>。</p>
+<h3 id="镜头字段的内部组装规则">“镜头”字段的内部组装规则</h3>
+<p>“镜头”不等于“运镜”。运镜只是完整镜头设计中的一个变量。每个 Shot 仍只保留“镜头”和“拍摄内容”两个字段，不把景别、焦段、光圈等拆成新的同级字段。</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>镜头</span></span>
+<span class="line"><span>= 摄影机或成像质感（可选）</span></span>
+<span class="line"><span>+ 景别</span></span>
+<span class="line"><span>+ 焦段与透视（可选）</span></span>
+<span class="line"><span>+ 光圈、景深与焦点设计（按需）</span></span>
+<span class="line"><span>+ 快门、帧率等运动成像参数（按需）</span></span>
+<span class="line"><span>+ 摄影机方位、高度与拍摄角度</span></span>
+<span class="line"><span>+ 主体与构图关系</span></span>
+<span class="line"><span>+ 摄影机状态或运镜</span></span>
+<span class="line"><span>+ 起幅与落幅</span></span></code></pre>
+<p>基本必填：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>景别</span></span>
+<span class="line"><span>+ 摄影机方位、高度与拍摄角度</span></span>
+<span class="line"><span>+ 主体与构图关系</span></span>
+<span class="line"><span>+ 固定状态或运镜路径</span></span>
+<span class="line"><span>+ 起幅与落幅</span></span></code></pre>
+<p>按需填写：摄影机型号或成像质感、焦段、光圈、快门、帧率。只有当这些参数对应明确可见结果时才写，不能把摄影参数当作“电影感”装饰词。</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>不完整：35mm，T1.2，电影感。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>完整：35mm广角镜头，T1.2极浅景深，焦点锁定男生双眼；</span></span>
+<span class="line"><span>前景女生肩部与背景同学柔和虚化。</span></span></code></pre>
+<p>景别与焦段必须分开理解：景别决定画面取到主体的范围；焦段与拍摄距离共同决定透视关系。同为人物特写，广角近拍与中长焦远拍的空间感并不相同。</p>
+<p>运镜必须写清物理机制及不变量，避免“固定镜头缓慢推近”这类矛盾表达：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>摄影机稳定地缓慢前推，从胸部以上中近景推进至面部特写。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>或</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>摄影机位置、朝向和高度固定，只做缓慢光学变焦拉近，</span></span>
+<span class="line"><span>从胸部以上中近景收窄至面部特写。</span></span></code></pre>
+<p>固定镜头也要说明起幅与落幅。若构图全程不变，落幅写人物、物体、光影或焦点最终停留的状态。</p>
+<h3 id="参考资产的前置生产公式">参考资产的前置生产公式</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>参考图决策</span></span>
+<span class="line"><span>= 不依赖跨镜头视觉一致性 → 省略参考图</span></span>
+<span class="line"><span>+ 已有角色/场景/道具素材 → 直接作为参考图</span></span>
+<span class="line"><span>+ 需要跨镜头视觉一致性但没有素材 → 先生成设定资产，再作为参考图</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>视频前置参考资产</span></span>
+<span class="line"><span>= 角色设定资产</span></span>
+<span class="line"><span>+ 场景设定资产</span></span>
+<span class="line"><span>+ 道具设定资产</span></span>
+<span class="line"><span>（按视频实际需要选用）</span></span></code></pre>
+<p>角色三视图与四视图的构成见 <a href="/prompt-archive-site/notes/character-sheet-template/#%E8%A7%86%E9%A2%91%E8%BE%85%E5%8A%A9%E8%AE%BE%E5%AE%9A%E5%9B%BE%E6%9E%84%E6%88%90%E5%85%AC%E5%BC%8F">模板-人物设定图 › 视频辅助设定图构成公式</a>。</p>
+<p>角色参考资产默认优先生成四视图；只有在需要完整身体转面或进行格式对比时使用三视图。</p>
+<p>角色、场景、道具参考资产的数量判断、生成提示词和多视图结构见 <a href="/prompt-archive-site/notes/char-scene-prop-structure/">模板-角色、场景、道具提示词总结构</a>。</p>
+<h3 id="参考图的图片n标注规则">参考图的“@图片N”标注规则</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>Shot 文本（“镜头”与“拍摄内容”）中凡引用参考图：</span></span>
+<span class="line"><span>加“@”写作“@图片N”（N 同“参考图”模块编号）</span></span>
+<span class="line"><span>例：@图片1锚定的模特身穿…… / 细节以@图片2为准</span></span></code></pre>
+<p>该标注用于生成平台把提示词与对应参考图精确绑定；除加“@”之外，不改动提示词的其他任何文字。</p>
+<h2 id="三标准模板">三、标准模板</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>【全局设定】</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>核心风格：</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>影片基调：</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>光线设计：</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>导演意图：</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>【参考图｜可选；不需要视觉锚定时整段省略】</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>图片1作为________的视觉锚定：</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>图片2作为________的视觉锚定：</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>图片N作为________的视觉锚定：</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>【镜头】</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Shot 01（0–__秒）</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>镜头：</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>拍摄内容：</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Shot 02（__–__秒）</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>镜头：</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>拍摄内容：</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>……</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Shot N（__–__秒）</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>镜头：</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>拍摄内容：</span></span></code></pre>
+<h2 id="四旧提示词的拆解方式">四、旧提示词的拆解方式</h2>
+<p>后续整理既有视频提示词时，统一按以下归属拆解，不新增同级字段：</p>
+<ol>
+<li>整段视频重复生效的影像描述，归入“全局设定”；</li>
+<li>先判断是否需要跨镜头角色、场景或道具一致性：已有素材则直接引用；需要但没有素材则先生成设定资产；确实不需要视觉锚定时才省略“参考图”；</li>
+<li>按实际镜头切分为 <code>Shot 01</code> 至 <code>Shot N</code>；</li>
+<li>景别、焦段与透视、光圈与景深、焦点、构图、摄影机设备、机位、角度、运动方式以及起幅与落幅，归入每个 Shot 的“镜头”；</li>
+<li>当前 Shot 要生成的具体画面内容，完整归入“拍摄内容”。</li>
+</ol>
+<h2 id="五与现有提示词库的关系">五、与现有提示词库的关系</h2>
+<p>当前库已经有较多提示词成品与部分变量，但尚未完全按这套总结构对齐。</p>
+<table>
+<thead>
+<tr>
+<th>结构字段</th>
+<th>当前已有内容</th>
+<th>当前状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>核心风格</td>
+<td><a href="/prompt-archive-site/notes/scene-variables/">场景变量库</a>中的美学风格包，以及各模板中的核心风格示例</td>
+<td>有素材，尚未形成独立、统一的核心风格关键词索引</td>
+</tr>
+<tr>
+<td>影片基调</td>
+<td><a href="/prompt-archive-site/notes/performance-variables/">表演变量库</a>中的情绪表达、<a href="/prompt-archive-site/notes/scene-variables/">场景变量库</a>中的氛围描述</td>
+<td>有素材，但“影片基调”维度尚未独立整理</td>
+</tr>
+<tr>
+<td>光线设计</td>
+<td>镜头光影与质感词表-手册索引和五类双语模板中的16项光影词；镜头意图与构图光源检查表中的光源检查方法</td>
+<td>有来源词表和检查表，尚未沉淀为本域的生产变量库</td>
+</tr>
+<tr>
+<td>参考图（可选）</td>
+<td><a href="/prompt-archive-site/notes/character-sheet-template/">模板-人物设定图</a>、<a href="/prompt-archive-site/notes/image-to-video-template/">模板-图生视频</a>、<a href="/prompt-archive-site/notes/image2-playbook/">模板-image2玩法包</a>及资产相关模板</td>
+<td>可使用现成素材，也可先生产角色、场景或道具设定资产再引用</td>
+</tr>
+<tr>
+<td>镜头</td>
+<td><a href="/prompt-archive-site/notes/camera-variables/">运镜变量库</a>中的运镜、视角和机位描述；既有案例中零散的景别、焦段、光圈与景深写法</td>
+<td>运镜内容较多，但尚缺景别、焦段与透视、光圈/景深/焦点、构图等可组合变量库；完整镜头不能只由运镜组成</td>
+</tr>
+<tr>
+<td>拍摄内容</td>
+<td>既有模板和案例中的具体视频提示词</td>
+<td>已有大量成品，后续按 Shot 归位即可</td>
+</tr>
+</tbody>
+</table>
+<h2 id="六当前缺口">六、当前缺口</h2>
+<p>当前主要缺的不是更多完整提示词，而是与总结构一一对应、可查表取值的关键词索引：</p>
+<ol>
+<li><strong>摄影机镜头设计变量库</strong>：统一整理景别、机位与拍摄角度、焦段与透视、光圈/景深/焦点、构图、运镜、起幅与落幅；<a href="/prompt-archive-site/notes/camera-variables/">运镜变量库</a>只承担其中的运镜变量；</li>
+<li><strong>光线设计关键词库</strong>：把现有光源、方向、光质、颜色和视觉效果整理成可组合取值；</li>
+<li><strong>核心风格关键词索引</strong>：整理影像类型、真实程度、成像质感与介质纹理；</li>
+<li><strong>影片基调关键词索引</strong>：整理主导情绪、审美关系与强度表达。</li>
+</ol>
+<p>这些是后续补库方向。本笔记只确立总结构和字段定义，不在此处扩写具体关键词。</p>
+<h2 id="七完整示例深夜餐馆表白">七、完整示例：深夜餐馆表白</h2>
+<blockquote>
+<p>以下为志光提供的完整示例原稿，逐字保留，不自动补写或修正文案。</p>
+</blockquote>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>核心风格：超写实青春现实主义/回忆电影感/Subtle film grain/Youthful and chaotic.</span></span>
+<span class="line"><span>影片基调：Warm and nostalgic/Sweet and romantic/Fearless and unabashed.</span></span>
+<span class="line"><span>光线设计：Artificial light/Warm amber overhead lighting/Dramatic rim light / Hair light.</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>作为色彩的视觉锚定：所有色彩按照色卡上的颜色比例分配。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>作为场景的视觉锚定：深夜热闹喧嚣的中餐馆内，高中毕业班级聚餐现场。画面正中央，郑南逸身穿浅蓝色敞开衬衫站在木椅上，喝多了正情绪激昂地向下大声当众对陈安安表白。在郑南逸正下方，陈安安穿着蓝白格子衬衫坐在桌旁的椅子上，正仰起头专注地看着他，脸上带着甜蜜、惊喜且略带羞涩的笑容。他两周围簇拥着一大群年轻同学，视线都聚焦在郑南逸身上，众人正开心地笑着、起哄并热烈鼓掌。画面充满市井烟火气息，长木桌上面摆放着玻璃啤酒瓶、吃剩的餐盘、筷子和水杯。整个餐厅笼罩在顶部吊灯散发的温暖光线中，营造出一种喧嚣、狂热且极其浪漫的氛围。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>作为陈安安的视觉锚定：18岁中国女学生，身高168cm,肤白貌美，蓝白格子衬衫敞开、白色内搭、黑皮带、卡其色阔腿裤，长发披肩。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>作为郑南逸的视觉锚定：18岁中国男学生，身高178cm，阳光开朗，稍显调皮，短发、浅蓝衬衫敞开、白T恤、米白长裤。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Shot 01</span></span>
+<span class="line"><span>镜头: ARRI ALEXA 35 场景双人全景，手持镜头微微晃动，35mm T1.4，主体是陈安安和郑南逸；变形宽银幕（Anamorphic）电影镜头，IMAX胶片质感，极致写实。</span></span>
+<span class="line"><span>拍摄内容: 摄影机位于两人侧面，微仰角度。画面一开始，画左的郑南逸坐在椅子上，他推开椅子缓缓站起，身体喝多了身体轻微左右摇晃，他先踩上椅面（右脚踏上，手扶桌沿），然后左脚踏上，直起身，占据画面制高点，面对着画右坐在椅子上的陈安安，他站上椅子后深吸了一口气，目光缓慢扫过全场，周围的说话声逐渐变小，最后带着醉意的痞笑看向陈安安，暖色柔光打在郑南逸的肩膀上，画面充满青春的张狂感。画右，陈安安坐在椅子上，她面带轻微醉意，疑惑可爱的神情看着站到椅子上的郑南逸，处于画面的视觉低点。两人视线形成对角线。前景和背景都是是虚化的其他同学们在热闹起哄，有的在背景走动</span></span></code></pre>
+<h2 id="八结构化案例">八、结构化案例</h2>
+<h3 id="案例一咖啡店的猫">案例一：咖啡店的猫</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>全局设定</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>核心风格：电影感画质，暖色调，浅景深，8K细节。</span></span>
+<span class="line"><span>影片基调：温柔慵懒。</span></span>
+<span class="line"><span>光线设计：咖啡馆午后，阳光从右侧照入，桌面有光斑，柔和光影。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Shot 01</span></span>
+<span class="line"><span>镜头：咖啡杯特写，镜头开始平稳、匀速地缓慢后拉。</span></span>
+<span class="line"><span>拍摄内容：一只戴红色领结的橘白猫坐在木质咖啡桌旁，低头轻嗅冒着热气的拿铁咖啡。咖啡馆午后，阳光从右侧照入，桌面有光斑，背景书架模糊。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Shot 02</span></span>
+<span class="line"><span>镜头：承接 Shot 01，镜头继续平稳、匀速地缓慢后拉，最终到达猫的半身中景，全程连续无剪切。</span></span>
+<span class="line"><span>拍摄内容：同一只戴红色领结的橘白猫抬头望向窗外的阳光，眼神温柔慵懒。主体形象和红色领结保持一致。电影感画质，暖色调，浅景深，柔和光影，8K细节。</span></span></code></pre>
+<h3 id="案例二女生偶遇暗恋对象">案例二：女生偶遇暗恋对象</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>全局设定</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>核心风格：电影级写实风格，自然浅景深，细腻皮肤与发丝质感。</span></span>
+<span class="line"><span>影片基调：短暂错愕、克制回应、强装平静、余味失落。</span></span>
+<span class="line"><span>光线设计：午后校园林荫道，阳光从画面右上方穿过树叶，在女生的脸颊和肩膀形成柔和的斑驳侧光，背景光斑温暖明亮。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Shot 01（0–1.5秒）</span></span>
+<span class="line"><span>镜头：35mm中景固定机位，摄影机位于林荫道侧面、与女生眼睛等高，拍摄女生从左向右行走。画面左侧预留入画空间，画面右侧是女生视线朝向的画外空间。</span></span>
+<span class="line"><span>拍摄内容：画面内只有一位18岁女生。她从画面左侧走进，黑色长发低扎马尾，额前空气刘海，穿白色短袖衬衫校服、深蓝色百褶裙，肩背米色帆布书包。她沿林荫道向画面右侧行走，抬头看见位于画面右侧外的一对情侣中的男生，眼神突然一怔，脚步随即停住，右手下意识攥紧书包肩带。男生和他的女友均在画外。环境音：夏日蝉鸣、远处操场声、风吹树叶声。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Shot 02（1.5–3.5秒）</span></span>
+<span class="line"><span>镜头：50mm男生过肩中近景，摄影机位于男生右后方、与女生眼睛等高。男生的后脑和右肩占据画面右侧前景约四分之一，女生位于画面左侧中景并保持清晰，男生肩部轻微虚化，女生身后的林荫道柔和虚化。</span></span>
+<span class="line"><span>拍摄内容：画面内有两人。男生从画面右侧进入前景，面向女生停下，轻声打招呼：“哟，这么巧。”女生保持原来的外观和服装，抬眼看向男生，短暂停顿后轻声回应：“嗯，好巧。”她眼底短暂的错愕很快收住，嘴角勉强浮起一个很轻的笑，目光停留片刻后缓慢垂下，攥住书包肩带的手指稍稍收紧。男生的女友位于男生右侧画外。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Shot 03（3.5–5秒）</span></span>
+<span class="line"><span>镜头：35mm侧面中景固定机位，摄影机回到林荫道侧面、与女生眼睛等高。女生位于画面中央偏左，画面右侧留出行走和出画空间；男生和女友保持在画面右侧外。</span></span>
+<span class="line"><span>拍摄内容：画面内只有女生。她收回看向男生的视线，嘴角那点强撑的笑意慢慢淡去，轻轻吸气，松开攥紧的书包肩带，重新迈步向画面右侧走去。她经过摄影机前方时始终没有回头，最后从画面右侧完全出画。固定镜头停留在空下来的林荫道上，只剩夏日蝉鸣、远处操场声和风吹树叶声。</span></span></code></pre>
+<h3 id="案例三深夜拉面广告">案例三：深夜拉面广告</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>全局设定</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>核心风格：《深夜食堂》日式治愈电影质感，暖黄胶片色调，颗粒感柔光。</span></span>
+<span class="line"><span>影片基调：温柔、治愈、烟火气。</span></span>
+<span class="line"><span>光线设计：室内暖黄吊灯为主，窗外城市雨夜冷光为辅。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Shot 01（00:00–00:03）</span></span>
+<span class="line"><span>镜头：沸水翻滚的煮锅特写，镜头随蒸汽升腾匀速慢推，最终锁定人物俯身看锅的上半身中景，煮锅始终在画面前景。焦点从沸水顺滑转移到人物，煮锅与产品包装盒全程清晰可见。</span></span>
+<span class="line"><span>拍摄内容：深夜日式原木风出租屋厨房，暖黄吊灯，背景是木质橱柜、小吧台和窗外的城市雨夜。一位26岁独居美食博主，齐肩短发，身穿软糯家居服，眉眼温柔，手持日式豚骨叉烧速食拉面包装盒，俯身看着锅里的沸水，指尖轻轻敲了敲包装盒，对着镜头露出温柔的笑。蒸汽在暖光下袅袅升起。对口型台词：“深夜的快乐，是一碗热拉面给的。”环境音：沸水翻滚声、窗外雨声、轻柔日系纯音乐。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Shot 02（00:03–00:06）</span></span>
+<span class="line"><span>镜头：上帝视角俯拍，镜头从吧台全景缓缓下降，跟拍人物拆包装、放面饼和配料的动作，全程锁定操作台面和食材细节。</span></span>
+<span class="line"><span>拍摄内容：同一位美食博主、同一间厨房，人物外观、服装、拉面产品包装保持一致。人物拆开拉面包装，将非油炸面饼放入沸水中，依次放入豚骨汤包、笋片和海苔配料，动作轻柔不疾不徐，每一样配料都清晰展示。对口型台词：“非油炸面饼，配上浓醇豚骨汤底，料超足。”暖黄灯光均匀铺满吧台，面饼、配料和蒸汽清晰可见。环境音：沸水翻滚声、包装拆开声、轻柔日系纯音乐。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Shot 03（00:06–00:09）</span></span>
+<span class="line"><span>镜头：摄影机位置、朝向和高度固定，以光学变焦在0.5秒内从大块叉烧肉的微距特写急速拉远至人物夹起叉烧的面部近景；随后保持近景构图，焦点落在人物面部和靠近面部的叉烧，两者均清晰。</span></span>
+<span class="line"><span>拍摄内容：同一位美食博主、同一间厨房，人物外观、服装和产品保持一致。人物用筷子夹起碗里的大块厚切叉烧，肉质纹理、肥瘦相间的细节清晰可见；她对着镜头展示叉烧，眼睛弯成月牙，满脸治愈的笑意。对口型台词：“看这大块叉烧！10分钟就能吃到门店级口感。”暖光精准打亮叉烧肉，背景轻微虚化。环境音：筷子碰撞声、窗外雨声、轻柔日系纯音乐。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Shot 04（00:09–00:12）</span></span>
+<span class="line"><span>镜头：固定机位人物中景，摄影机位置和高度不变，镜头匀速向窗外的雨夜城市灯火横摇，再匀速横摇返回人物喝汤的中景；全程连续不切镜，返回时焦点重新锁定人物。</span></span>
+<span class="line"><span>拍摄内容：同一位美食博主、同一间厨房，人物外观、服装、拉面碗和食材保持一致。人物挑起一筷子拉面，吹凉后送入口中，满足地眯起眼睛，再端起碗喝一口浓汤，放下碗后对着镜头露出满足的笑。对口型台词：“汤底浓而不腻，面条劲道爽滑，一口下去太暖了。”窗外雨夜冷光与室内暖黄灯光融合。环境音：吸面声、喝汤声、窗外雨声、轻柔日系纯音乐。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>Shot 05（00:12–00:15）</span></span>
+<span class="line"><span>镜头：从拉面碗的特写匀速升镜至厨房全景，最终定格在人物捧着拉面碗、对着镜头微笑的画面。</span></span>
+<span class="line"><span>拍摄内容：同一位美食博主、同一间厨房，人物外观、服装、产品和食材保持一致。人物捧着满满一碗拉面正对镜头，碗里的叉烧、配料和浓汤清晰可见。暖黄灯光打在她的脸上，身后是雨夜的城市灯火。对口型台词：“独居的深夜，就用这碗热拉面，治愈自己吧。”拉面碗始终处于视觉核心，食材光泽和蒸汽清晰可见。环境音：窗外雨声、轻柔日系纯音乐。</span></span></code></pre>
+<h3 id="实测案例全文另存独立笔记">实测案例（全文另存独立笔记）</h3>
+<blockquote>
+<p>2026-09-16 起实测案例正文不再内嵌本模板（防模板膨胀、保可读性）；全文见独立笔记，参考图与成片归档路径不变。</p>
+</blockquote>
+<ul>
+<li><strong>案例四：圣诞夜雪街追逐</strong>（15秒，实测通过）→ <a href="/prompt-archive-site/cases/christmas-snow-chase/">案例-圣诞夜雪街追逐</a>；参考图与成片存 <code>raw/assets/visual-prompt-system/圣诞夜雪街追逐/</code></li>
+<li><strong>案例五：白底变装旋转</strong>（10秒，实测通过）→ <a href="/prompt-archive-site/cases/white-bg-outfit-spin/">案例-白底变装旋转</a>；资产存 <code>raw/assets/visual-prompt-system/白底变装旋转/</code></li>
+<li><strong>案例六：一天四十三次日落</strong>（81.5秒·6段·对谈短片，实测勉强及格）→ <a href="/prompt-archive-site/cases/forty-three-sunsets/">案例-一天四十三次日落</a>；七张参考图（2 张角色锚定＋5 张空场景四视角底图）连同提示词存 <code>raw/assets/visual-prompt-system/一天四十三次日落/</code>；实测三项问题与预改方向见案例笔记文末</li>
+</ul>
+<h2 id="九相关笔记">九、相关笔记</h2>
+<ul>
+<li><a href="/prompt-archive-site/notes/writing-rules/">写法规则库</a>：已有提示词组合公式与条件路由</li>
+<li><a href="/prompt-archive-site/notes/shot-breakdown-rules/">拆解分镜规则</a>：故事描述到多镜头分镜表</li>
+<li><a href="/prompt-archive-site/notes/camera-variables/">运镜变量库</a>：现有摄影机运动、视角与机位取值</li>
+<li>分镜规划到视频提示词的转译与压缩：分镜转为模型执行文本</li>
+<li><a href="/prompt-archive-site/notes/library-spec/">库定义规范</a>：变量、模板与成品提示词的分层规则</li>
+</ul>
+<h2 id="来源">来源</h2>
+<ul>
+<li>2026-09-14 会话：志光基于一张 LibTV 视频创作画布截图确认结构。</li>
+<li>用户确认：完整层级为“全局设定 + 参考图（可选）+ 多个镜头”；没有参考图时省略该模块；截图只展示了 <code>Shot 01</code>。</li>
+<li>用户确认：“拍摄内容”就是具体提示词。</li>
+<li>2026-09-16：用户确认：Shot 文本中引用参考图处一律加“@图片N”标注（N 同“参考图”模块编号，供生成平台精确绑定；除加“@”外不改动提示词原文）。</li>
+<li>2026-09-16：案例四（圣诞夜雪街追逐，15秒5镜）经志光实测验收通过后收入；参考图两张与实测成片（<code>实测成片.mp4</code>）存 <code>raw/assets/visual-prompt-system/圣诞夜雪街追逐/</code>；另收场景图高清版（1440×1920）。</li>
+<li>2026-09-16：案例五（白底变装旋转，10秒7镜）经志光实测验收通过（反馈：效果与节奏俱佳）；参考图八张（模特四视图＋七套造型平铺图）与实测成片（<code>实测成片.mp4</code>）存 <code>raw/assets/visual-prompt-system/白底变装旋转/</code>。</li>
+<li>2026-09-16：实测案例（案例四、五）正文迁出至独立笔记 <a href="/prompt-archive-site/cases/christmas-snow-chase/">案例-圣诞夜雪街追逐</a>、<a href="/prompt-archive-site/cases/white-bg-outfit-spin/">案例-白底变装旋转</a>，模板内改为索引——防正文膨胀（志光指示）；<code>库定义规范</code>、<code>域导航</code> 同步调整。</li>
+</ul>
+</div><section class="note-related" aria-label="关联案例" data-astro-cid-vex5zuxs><h2 class="section-title" style="font-size:20px" data-astro-cid-vex5zuxs><span class="icon" style="width:18px;height:18px" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 11.5a4 4 0 0 1 0-5.6l1.4-1.4a4 4 0 0 1 5.6 5.6l-1.4 1.4"/><path d="M11.5 8.5a4 4 0 0 1 0 5.6l-1.4 1.4a4 4 0 0 1-5.6-5.6l1.4-1.4"/></svg></span> 应用这些写法的案例</h2><div class="grid-cases" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr));margin-top:16px" data-astro-cid-vex5zuxs><a class="case-card" href="/prompt-archive-site/cases/christmas-snow-chase/" data-medium="video" data-topic="叙事短片" data-evidence="film-attached" data-search="圣诞夜雪街追逐 叙事短片 五镜圣诞夜雪街追逐：看似惊险的追逐实为圣诞礼物降临，用子弹时间放大魔法瞬间，收束在女孩自拍杆的 vlog 质感。附两张输入参考图与实测成片。 追逐 圣诞 反转 多镜头 参考图锚定"><div class="card-media"><div class="photo"><img src="/prompt-archive-site/media/d0046d3a9c1a05e6-h264-720p-v1-poster.png" alt="圣诞夜雪街追逐 实测成片画面" loading="lazy"></div><span class="card-badge"><span class="icon" style="width:12px;height:12px" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4.8v10.4a.6.6 0 0 0 .92.5l8.1-5.2a.6.6 0 0 0 0-1L7.92 4.3a.6.6 0 0 0-.92.5z"/></svg></span>实测成片</span></div><div class="card-holes" aria-hidden="true"></div><div class="card-body"><div class="card-meta"><span>PA-001</span><span>视频</span><span class="status ok">附实测成片</span></div><h3 class="card-title">圣诞夜雪街追逐</h3><p class="card-summary">五镜圣诞夜雪街追逐：看似惊险的追逐实为圣诞礼物降临，用子弹时间放大魔法瞬间，收束在女孩自拍杆的 Vlog 质感。附两张输入参考图与实测成片。</p><div class="card-tags"><span class="tag">叙事短片</span><span class="tag">追逐</span><span class="tag">圣诞</span></div></div></a><a class="case-card" href="/prompt-archive-site/cases/white-bg-outfit-spin/" data-medium="video" data-topic="变装与图像锚定" data-evidence="film-attached" data-search="白底变装旋转 变装与图像锚定 白色影棚中的七套造型变装短片：模特原地「定格亮相＋旋身 360°」，换装在旋转中完成，机位全程不动。八张输入参考图锚定模特与各套造型，附实测成片。 变装 影棚 多套造型 图像锚定 固定机位"><div class="card-media"><div class="photo"><img src="/prompt-archive-site/media/18f907e2923216c6-h264-720p-v1-poster.png" alt="白底变装旋转 实测成片画面" loading="lazy"></div><span class="card-badge"><span class="icon" style="width:12px;height:12px" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4.8v10.4a.6.6 0 0 0 .92.5l8.1-5.2a.6.6 0 0 0 0-1L7.92 4.3a.6.6 0 0 0-.92.5z"/></svg></span>实测成片</span></div><div class="card-holes" aria-hidden="true"></div><div class="card-body"><div class="card-meta"><span>PA-002</span><span>视频</span><span class="status ok">附实测成片</span></div><h3 class="card-title">白底变装旋转</h3><p class="card-summary">白色影棚中的七套造型变装短片：模特原地「定格亮相＋旋身 360°」，换装在旋转中完成，机位全程不动。八张输入参考图锚定模特与各套造型，附实测成片。</p><div class="card-tags"><span class="tag">变装与图像锚定</span><span class="tag">变装</span><span class="tag">影棚</span></div></div></a><a class="case-card" href="/prompt-archive-site/cases/forty-three-sunsets/" data-medium="video" data-topic="多段成片" data-evidence="author-tested" data-search="一天四十三次日落 多段成片 外星小王子 × 地球女生的六段对谈短片：随问题推进从人行道走到江边日落。作者实测判定「勉强及格」，身高差、时间跨度与段落收尾三项问题及预改方向随案例记录；未附成片文件。 对谈 多段生成 竖幅 参考图锚定 实测复盘"><div class="card-media"><div class="photo"><img src="/prompt-archive-site/media/427ba9769f10f349.png" alt="一天四十三次日落 输入参考图" loading="lazy"></div><span class="card-badge mute"><span class="icon" style="width:12px;height:12px" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="14" height="12" rx="1.5"/><circle cx="7.4" cy="8.4" r="1.4"/><path d="M3 13.2l3.8-3.4 3.2 2.8 2.6-2.2 4.4 3.6"/></svg></span>参考图</span></div><div class="card-holes" aria-hidden="true"></div><div class="card-body"><div class="card-meta"><span>PA-003</span><span>视频</span><span class="status warn">作者称已测试 · 未附成片</span></div><h3 class="card-title">一天四十三次日落</h3><p class="card-summary">外星小王子 × 地球女生的六段对谈短片：随问题推进从人行道走到江边日落。作者实测判定「勉强及格」，身高差、时间跨度与段落收尾三项问题及预改方向随案例记录；未附成片文件。</p><div class="card-tags"><span class="tag">多段成片</span><span class="tag">对谈</span><span class="tag">多段生成</span></div></div></a><a class="case-card" href="/prompt-archive-site/cases/cat-launch-28s/" data-medium="video" data-topic="产品片" data-evidence="author-tested" data-search="小猫发布会｜28秒英短蓝白产品片 产品片 白色摄影棚里的英短蓝白「产品发布片」：微距材质展示、悬浮旋转与四句广告文案的完整时间轴。纯文字案例。 产品片 广告文案 静音 宠物"><div class="card-media"><div class="photo"><div class="media-cover"><span class="cover-kind">VIDEO PROMPT</span><span class="cover-title">小猫发布会｜28秒英短蓝白产品片</span><span class="cover-note">暂无成片 · 提示词可复制</span></div></div></div><div class="card-holes" aria-hidden="true"></div><div class="card-body"><div class="card-meta"><span>PA-009</span><span>视频</span><span class="status warn">作者称已测试 · 未附成片</span></div><h3 class="card-title">小猫发布会｜28秒英短蓝白产品片</h3><p class="card-summary">白色摄影棚里的英短蓝白「产品发布片」：微距材质展示、悬浮旋转与四句广告文案的完整时间轴。纯文字案例。</p><div class="card-tags"><span class="tag">产品片</span><span class="tag">产品片</span><span class="tag">广告文案</span></div></div></a><a class="case-card" href="/prompt-archive-site/cases/cool-walk-two-leads/" data-medium="video" data-topic="人物出场" data-evidence="author-tested" data-search="酷飒走路｜雨后停机坪双人出场五镜 人物出场 深夜雨后停机坪的双人出场五镜：舷梯而下、点烟回望、并肩前行到背影虚化，冷灰暗调的反派气质出场。纯文字案例。 出场 双人 3d动漫风 无台词"><div class="card-media"><div class="photo"><div class="media-cover"><span class="cover-kind">VIDEO PROMPT</span><span class="cover-title">酷飒走路｜雨后停机坪双人出场五镜</span><span class="cover-note">暂无成片 · 提示词可复制</span></div></div></div><div class="card-holes" aria-hidden="true"></div><div class="card-body"><div class="card-meta"><span>PA-010</span><span>视频</span><span class="status warn">作者称已测试 · 未附成片</span></div><h3 class="card-title">酷飒走路｜雨后停机坪双人出场五镜</h3><p class="card-summary">深夜雨后停机坪的双人出场五镜：舷梯而下、点烟回望、并肩前行到背影虚化，冷灰暗调的反派气质出场。纯文字案例。</p><div class="card-tags"><span class="tag">人物出场</span><span class="tag">出场</span><span class="tag">双人</span></div></div></a><a class="case-card" href="/prompt-archive-site/cases/tvb-retro-terrace-banter/" data-medium="video" data-topic="都市叙事" data-evidence="author-tested" data-search="港风tvb大小姐｜复古露台对话六镜 都市叙事 90年代tvb老港剧ccd复古质感的露台甜宠对话：女主以「大小姐」姿态娇嗔提要求，男主温柔追问「那我要怎么哄」，六镜正反打完成端架子、提要求、被接住、反击出招的俏皮弧线。附人物造型、光影与整体节奏提示。 港风 tvb 甜宠对话 大小姐 复古"><div class="card-media"><div class="photo"><div class="media-cover"><span class="cover-kind">VIDEO PROMPT</span><span class="cover-title">港风TVB大小姐｜复古露台对话六镜</span><span class="cover-note">暂无成片 · 提示词可复制</span></div></div></div><div class="card-holes" aria-hidden="true"></div><div class="card-body"><div class="card-meta"><span>PA-051</span><span>视频</span><span class="status warn">作者称已测试 · 未附成片</span></div><h3 class="card-title">港风TVB大小姐｜复古露台对话六镜</h3><p class="card-summary">90年代TVB老港剧CCD复古质感的露台甜宠对话：女主以「大小姐」姿态娇嗔提要求，男主温柔追问「那我要怎么哄」，六镜正反打完成端架子、提要求、被接住、反击出招的俏皮弧线。附人物造型、光影与整体节奏提示。</p><div class="card-tags"><span class="tag">都市叙事</span><span class="tag">港风</span><span class="tag">TVB</span></div></div></a><a class="case-card" href="/prompt-archive-site/cases/drift-bridge-and-engagement/" data-medium="video" data-topic="叙事短片" data-evidence="author-tested" data-search="漂移拦截｜夜桥失控车＋订婚宴（双段） 叙事短片 同一条围栏内先后保存两段独立提示词：前段为 3d 动漫风格的夜桥追车短片，女主刹车失灵靠摩擦护栏降速，男主驾车漂移拦截，十七个分镜至逼停收束；后段为 2010 年代台偶质感的订婚宴求婚八镜正反打，含台湾腔台词。两段之间原文未另设标题。 追车戏 漂移 3d动漫风 订婚宴求婚 双段"><div class="card-media"><div class="photo"><div class="media-cover"><span class="cover-kind">VIDEO PROMPT</span><span class="cover-title">漂移拦截｜夜桥失控车＋订婚宴（双段）</span><span class="cover-note">暂无成片 · 提示词可复制</span></div></div></div><div class="card-holes" aria-hidden="true"></div><div class="card-body"><div class="card-meta"><span>PA-052</span><span>视频</span><span class="status warn">作者称已测试 · 未附成片</span></div><h3 class="card-title">漂移拦截｜夜桥失控车＋订婚宴（双段）</h3><p class="card-summary">同一条围栏内先后保存两段独立提示词：前段为 3D 动漫风格的夜桥追车短片，女主刹车失灵靠摩擦护栏降速，男主驾车漂移拦截，十七个分镜至逼停收束；后段为 2010 年代台偶质感的订婚宴求婚八镜正反打，含台湾腔台词。两段之间原文未另设标题。</p><div class="card-tags"><span class="tag">叙事短片</span><span class="tag">追车戏</span><span class="tag">漂移</span></div></div></a></div><p style="font-size:14px;margin-top:12px" data-astro-cid-vex5zuxs><a href="/prompt-archive-site/videos/" data-astro-cid-vex5zuxs>浏览视频案例 →</a></p></section></div></div></div></main><footer class="site-footer" data-astro-cid-tq46r5sz><div class="container" data-astro-cid-tq46r5sz><div class="footer-grid" data-astro-cid-tq46r5sz><div class="footer-brand" data-astro-cid-tq46r5sz><a class="brand" href="/prompt-archive-site/" data-astro-cid-tq46r5sz><span class="brand-glyph" data-astro-cid-tq46r5sz>PA</span><span class="brand-name" data-astro-cid-tq46r5sz>AI 提示词档案馆</span></a><p class="footer-desc" data-astro-cid-tq46r5sz>可浏览、可检索、可复制的 AI 图像与视频提示词案例库。每个完整案例一个独立页面，提示词与 Wiki 原文逐字一致。</p></div><nav class="footer-col" aria-label="页脚导航" data-astro-cid-tq46r5sz><p class="footer-label" data-astro-cid-tq46r5sz>浏览</p><a href="/prompt-archive-site/images/" data-astro-cid-tq46r5sz>图像案例</a><a href="/prompt-archive-site/videos/" data-astro-cid-tq46r5sz>视频案例</a><a href="/prompt-archive-site/notes/" data-astro-cid-tq46r5sz>方法笔记</a><a href="/prompt-archive-site/cases/" data-astro-cid-tq46r5sz>全站搜索</a></nav><div class="footer-col" data-astro-cid-tq46r5sz><p class="footer-label" data-astro-cid-tq46r5sz>本馆收录</p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>案例</span><b data-astro-cid-tq46r5sz>105</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>附实测成片</span><b data-astro-cid-tq46r5sz>2</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>方法笔记</span><b data-astro-cid-tq46r5sz>60</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>合集</span><b data-astro-cid-tq46r5sz>11</b></p></div></div><div class="footer-bottom" data-astro-cid-tq46r5sz><p data-astro-cid-tq46r5sz>「作者称已测试」表示来源声明，本站未复测。</p><p data-astro-cid-tq46r5sz>PA·ARCHIVE © 2026</p></div></div></footer></body><script type="module">function e(){document.querySelectorAll(`[data-masonry]`).forEach(e=>{let t=Array.from(e.querySelectorAll(`:scope > .m-cols > .m-col > *, :scope > *:not(.m-cols)`));if(e.querySelectorAll(`.m-cols`).forEach(e=>e.remove()),t.length===0)return;let n=window.matchMedia(`(max-width: 767px)`).matches?1:window.matchMedia(`(max-width: 1199px)`).matches?2:3,r=document.createElement(`div`);r.className=`m-cols`;let i=Array.from({length:n},()=>{let e=document.createElement(`div`);return e.className=`m-col`,e});t.forEach((e,t)=>i[t%n].appendChild(e)),e.appendChild(r),i.forEach(e=>r.appendChild(e))})}window.refreshMasonry=e,e();var t;window.addEventListener(`resize`,()=>{clearTimeout(t),t=setTimeout(e,150)});</script><script type="module">(()=>{let e=`.case-card, .note-card, .note-list-card`,t=window.matchMedia(`(prefers-reduced-motion: reduce)`),n=null,r=null,i=0;t.addEventListener?.(`change`,()=>{t.matches&&a()});function a(){if(!n)return;let e=n;e.classList.remove(`tilt-active`),e.classList.add(`tilt-return`),e.style.transform=``,clearTimeout(i),i=setTimeout(()=>e.classList.remove(`tilt-return`),320),n=null,r=null}document.addEventListener(`pointermove`,i=>{if(i.pointerType!==`mouse`||!i.isPrimary||t.matches)return;let o=i.target instanceof Element?i.target.closest(e):null;if(o!==n){if(a(),!o)return;n=o,r=n.getBoundingClientRect(),n.classList.add(`tilt-active`),n.classList.remove(`tilt-return`)}if(!n||!r)return;let s=(i.clientX-r.left)/r.width-.5,c=(i.clientY-r.top)/r.height-.5,l=Math.max(-1,Math.min(1,s*2))*4.5,u=Math.max(-1,Math.min(1,c*2))*-4.5;n.style.transform=`perspective(1100px) rotateX(${u.toFixed(3)}deg) rotateY(${l.toFixed(3)}deg) translateY(-3px)`},{passive:!0}),document.addEventListener(`pointerleave`,()=>a()),document.addEventListener(`pointerdown`,t=>{(t.target instanceof Element?t.target.closest(e):null)!==n&&a()},{passive:!0}),window.addEventListener(`blur`,()=>a()),window.addEventListener(`scroll`,()=>a(),{passive:!0})})();</script></html><script type="module">function e(){document.querySelectorAll(`.prose pre`).forEach(e=>{if(e.closest(`.code-panel`))return;let t=e.querySelector(`code`),n=(t??e).textContent??``,r=t?.className.match(/language-([\w+-]+)/)?.[1]??`text`,i=n.replace(/\n$/,``).split(`
+`).length,a=Array.from(n.matchAll(/`{3,}/g)).map(e=>e[0].length),o=a.length?Math.max(3,Math.max(...a)+1):3,s="`".repeat(o)+`markdown
+`+(n.endsWith(`
+`)?n:n+`
+`)+"`".repeat(o),c=document.createElement(`figure`);c.className=`code-panel`;let l=document.createElement(`figcaption`);l.className=`code-panel-head`;let u=document.createElement(`span`);u.className=`code-lang`,u.textContent=r;let d=document.createElement(`span`);d.className=`code-lines`,d.textContent=`${i} 行`;let f=document.createElement(`span`);f.className=`copy-feedback`,f.setAttribute(`aria-live`,`polite`);let p=document.createElement(`button`);p.type=`button`,p.className=`copy-btn`,p.textContent=`复制本块`,l.append(u,d,f,p),e.replaceWith(c),c.append(l,e);let m;p.addEventListener(`click`,async()=>{let e=!1;try{await navigator.clipboard.writeText(s),e=!0}catch{try{let t=document.createElement(`textarea`);t.value=s,t.style.position=`fixed`,t.style.opacity=`0`,document.body.appendChild(t),t.select(),e=document.execCommand(`copy`),t.remove()}catch{e=!1}}f.textContent=e?`已复制本块`:`复制失败，请手动选取`,p.textContent=e?`已复制`:`复制本块`,clearTimeout(m),m=setTimeout(()=>{f.textContent=``,p.textContent=`复制本块`},3e3)})})}e();</script>

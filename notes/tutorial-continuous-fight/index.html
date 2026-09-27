@@ -1,0 +1,171 @@
+<!DOCTYPE html><html lang="zh-CN" data-astro-cid-tq46r5sz><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="「视频风格＝动态＋画风」的实操教程：动态迁移三步法（解析动态风格→检查及替换→生成自己的内容），把画风与动态全部用 AI 拆解再合成。"><link rel="icon" href="/prompt-archive-site/favicon.svg" type="image/svg+xml"><title>实操教程：如何创建连续打斗视频 · 方法笔记</title><link rel="stylesheet" href="/prompt-archive-site/_astro/SiteLayout.DYPNTGRP.css"><style>.note-header[data-astro-cid-vex5zuxs]{max-width:calc(var(--note-width) + 280px);margin:0 auto;padding:40px 24px 0}
+</style></head><body data-astro-cid-tq46r5sz><a class="skip-link" href="#main" data-astro-cid-tq46r5sz>跳到主要内容</a><div class="announce" data-astro-cid-tq46r5sz><a href="/prompt-archive-site/cases/" data-astro-cid-tq46r5sz>PA·ARCHIVE — 每个完整案例一个独立页面，提示词与 Wiki 原文逐字一致 ↗</a></div><header class="site-header" data-astro-cid-tq46r5sz><div class="container" data-astro-cid-tq46r5sz><a class="brand" href="/prompt-archive-site/" data-astro-cid-tq46r5sz><span class="brand-glyph" data-astro-cid-tq46r5sz>PA</span><span class="brand-name" data-astro-cid-tq46r5sz>AI 提示词档案馆</span></a><nav class="site-nav" aria-label="主导航" data-astro-cid-tq46r5sz><a href="/prompt-archive-site/images/" data-astro-cid-tq46r5sz>图像案例<span class="nav-no" data-astro-cid-tq46r5sz>01</span></a><a href="/prompt-archive-site/videos/" data-astro-cid-tq46r5sz>视频案例<span class="nav-no" data-astro-cid-tq46r5sz>02</span></a><a href="/prompt-archive-site/notes/" aria-current="page" data-astro-cid-tq46r5sz>方法笔记<span class="nav-no" data-astro-cid-tq46r5sz>03</span></a></nav><div class="header-cta" data-astro-cid-tq46r5sz><a class="header-search-link" href="/prompt-archive-site/cases/" aria-label="全站搜索案例" data-astro-cid-tq46r5sz><span class="icon" style="width:15px;height:15px" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="6.1"/><line x1="13.6" y1="13.6" x2="18" y2="18"/></svg></span><span data-astro-cid-tq46r5sz>搜索</span><span class="nav-no" data-astro-cid-tq46r5sz>04</span></a></div></div></header><main id="main" data-astro-cid-tq46r5sz><div class="note-page" data-astro-cid-vex5zuxs><div class="note-header" data-astro-cid-vex5zuxs><nav class="breadcrumbs" aria-label="面包屑" data-astro-cid-vex5zuxs><a href="/prompt-archive-site/" data-astro-cid-vex5zuxs>首页</a><span aria-hidden="true" data-astro-cid-vex5zuxs>/</span><a href="/prompt-archive-site/notes/" data-astro-cid-vex5zuxs>方法笔记</a><span aria-hidden="true" data-astro-cid-vex5zuxs>/</span><span aria-current="page" data-astro-cid-vex5zuxs>实操教程：如何创建连续打斗视频</span></nav><h1 style="font-size:32px" data-astro-cid-vex5zuxs>实操教程：如何创建连续打斗视频</h1><p class="note-meta" data-astro-cid-vex5zuxs><span class="medium-chip" data-astro-cid-vex5zuxs>方法</span><span data-astro-cid-vex5zuxs>视频</span><span data-astro-cid-vex5zuxs>源资料：✏️实操教程-如何创建连续打斗视频（prompts）</span></p><p class="note-summary" data-astro-cid-vex5zuxs>「视频风格＝动态＋画风」的实操教程：动态迁移三步法（解析动态风格→检查及替换→生成自己的内容），把画风与动态全部用 AI 拆解再合成。</p></div><div class="note-layout" data-astro-cid-vex5zuxs><aside class="note-toc" aria-label="目录" data-astro-cid-vex5zuxs><p class="toc-title" data-astro-cid-vex5zuxs>目录</p><a href="#完整操作" data-astro-cid-vex5zuxs>完整操作</a><a href="#动态迁移" data-astro-cid-vex5zuxs>动态迁移</a><a href="#步骤1解析风格" class="depth-3" data-astro-cid-vex5zuxs>步骤1：解析风格</a><a href="#步骤2检查及替换" class="depth-3" data-astro-cid-vex5zuxs>步骤2：检查及替换</a><a href="#步骤3生成自己的内容" class="depth-3" data-astro-cid-vex5zuxs>步骤3：生成自己的内容</a><a href="#画风迁移" data-astro-cid-vex5zuxs>画风迁移</a><a href="#人物风格迁移" data-astro-cid-vex5zuxs>人物风格迁移</a><a href="#步骤1获取原图风格" class="depth-3" data-astro-cid-vex5zuxs>步骤1：获取原图风格</a><a href="#步骤2添加描述" class="depth-3" data-astro-cid-vex5zuxs>步骤2：添加描述</a><a href="#步骤3喂提示词" class="depth-3" data-astro-cid-vex5zuxs>步骤3：喂提示词</a><a href="#场景风格拆解" data-astro-cid-vex5zuxs>场景风格拆解</a><a href="#注意事项" data-astro-cid-vex5zuxs>注意事项</a><a href="#视频生成" data-astro-cid-vex5zuxs>视频生成</a></aside><div class="note-main" data-astro-cid-vex5zuxs><div class="prose" data-astro-cid-vex5zuxs><h2 id="完整操作">完整操作</h2>
+<blockquote>
+<p>把画风和动态全部都通过Ai拆解出来，再合到一起，就是视频的风格</p>
+</blockquote>
+<p>视频风格=动态+画风
+动态：运动规律+镜头语言
+画风：角色风格+场景风格（主体是人物，就拆解人物风格；是动物就拆解动物风格……）</p>
+<hr>
+<h2 id="动态迁移">动态迁移</h2>
+<p>步骤1：解析动态风格
+步骤2：检查及替换
+步骤3：生成自己的内容</p>
+<h3 id="步骤1解析风格">步骤1：解析风格</h3>
+<p>给seed-2.0-pro模型上传所需视频的链接或原视频，并粘贴下方提示词👇
+变量替换：{{[平台]}}，就是你需要生成视频的平台名，例如即梦</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#79B8FF;font-weight:bold"># 角色</span></span>
+<span class="line"><span style="color:#E1E4E8">你是专业的视频风格拆解师，精通文生视频模型的关键词逻辑</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># 任务</span></span>
+<span class="line"><span style="color:#FFAB70">1.</span><span style="color:#E1E4E8"> 请基于我提供的视频信息，精准拆解视频的全维度风格参数，输出的内容必须可直接用于即梦视频生成，拒绝空泛形容词，所有描述都要具象化、可落地。</span></span>
+<span class="line"><span style="color:#FFAB70">2.</span><span style="color:#E1E4E8"> 基于你的分析为我生成一条适合{{[</span><span style="color:#DBEDFF;text-decoration:underline">平台</span><span style="color:#E1E4E8">]}}文生成视频的提示词。</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># 要求</span></span>
+<span class="line"><span style="color:#FFAB70">1.</span><span style="color:#E1E4E8"> 分析纬度如下：</span></span>
+<span class="line"><span style="color:#FFAB70">-</span><span style="color:#E1E4E8"> 镜头运动：景别、镜头运动方式、镜头切换节奏、速度、视角类型。这部分内容极其重要，请重点分析</span></span>
+<span class="line"><span style="color:#FFAB70">-</span><span style="color:#E1E4E8"> 角色/物体等运动：画面中的人物的运动方式，这部分内容极其重要，请重点分析</span></span>
+<span class="line"><span style="color:#FFAB70">-</span><span style="color:#E1E4E8"> 光影与色调：主光源类型、光影氛围、色调整体偏向、色彩搭配逻辑</span></span>
+<span class="line"><span style="color:#FFAB70">-</span><span style="color:#E1E4E8"> 核心主题与主体：视频核心内容、核心主体、核心动作/叙事线</span></span>
+<span class="line"><span style="color:#FFAB70">-</span><span style="color:#E1E4E8"> 场景与环境细节：场景空间、环境氛围、道具细节、画面层次</span></span>
+<span class="line"><span style="color:#FFAB70">-</span><span style="color:#E1E4E8"> 节奏与时长：镜头切换速度、画面快慢节奏</span></span>
+<span class="line"><span style="color:#FFAB70">-</span><span style="color:#E1E4E8"> 避坑负面提示词：列出该风格下需要规避的画面问题，适配{{[</span><span style="color:#DBEDFF;text-decoration:underline">平台</span><span style="color:#E1E4E8">]}}负面词逻辑</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># 注意</span></span>
+<span class="line"><span style="color:#FFAB70">1.</span><span style="color:#E1E4E8"> 请勿分析视频中和字幕、水印相关的内容，并在给即梦的提示词中明确要求不带字幕</span></span>
+<span class="line"><span style="color:#FFAB70">2.</span><span style="color:#E1E4E8"> 不管所分析视频分辨率如何，视频生成提示词结尾一律写明[</span><span style="color:#DBEDFF;text-decoration:underline">8K高清，影视级画面效果，细节清晰</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#FFAB70">3.</span><span style="color:#E1E4E8"> 仅输出我需要的提示词即可，请不要给我没做要求的内容</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># 输出</span></span>
+<span class="line"><span style="color:#E1E4E8">提示词，提示词小于700字，并以镜号、时长、景别、镜头运动、画面内容的顺序呈现</span></span></code></pre>
+<hr>
+<h3 id="步骤2检查及替换">步骤2：检查及替换</h3>
+<h4 id="检查">检查：</h4>
+<p>Ai对原视频的动态分析基本准确，有<strong>1个容易遗漏</strong>的地方需要<strong>重点关注</strong>：</p>
+<blockquote>
+<p>若运镜是多个重叠发生的，比如镜头从45度回正+缓慢推进，容易把其中的一个漏掉</p>
+</blockquote>
+<h4 id="替换">替换：</h4>
+<p>将ai给你的提示词里涉及到[画面描述]的部分仔细看下，自行决定要不要替换成自己的场景</p>
+<h3 id="步骤3生成自己的内容">步骤3：生成自己的内容</h3>
+<p>把步骤2生产出的提示词+自己的图（请看画风迁移部分）一起喂给seedance2.0或1.5即可</p>
+<p>👉若涉及到微表情，富含情绪的动态方式（例如疾速、舒缓等），1.5效果不好</p>
+<p>👉若是平铺直叙的视频，效果差不多</p>
+<p>👉使用seedance2.0的时候，个人推荐全能参考模式</p>
+<hr>
+<h2 id="画风迁移">画风迁移</h2>
+<p>若：需要<strong>和原视频画面一致</strong>，直接把原视频画面截图给5.0，要求它复原成高清图即可</p>
+<p>下方内容讲述的是：<strong>迁移风格+画面内容是自己的</strong></p>
+<h2 id="人物风格迁移">人物风格迁移</h2>
+<p>步骤1：获取原图风格 → 步骤2：添加自己的描述 → 步骤3：喂提示词</p>
+<blockquote>
+<p>下方左图为原视频截图（ꖾꗇꕷꖾꕷꖡꗇ𐝥的作品），右侧为风格模仿图</p>
+</blockquote>
+<p><img src="/prompt-archive-site/media/5d95b5bbdd77972e.png" alt="Pasted image 20260813174326.png"></p>
+<blockquote>
+<p>下方左图为原视频截图（URI的作品），右侧为风格模仿图</p>
+</blockquote>
+<p><img src="/prompt-archive-site/media/167e979960198ff8.png" alt="Pasted image 20260813174349.png"></p>
+<hr>
+<h3 id="步骤1获取原图风格">步骤1：获取原图风格</h3>
+<p>将原视频的人物截图发给豆包，打开豆包专家/思考模式，并贴入下方提示词</p>
+<blockquote>
+<p>⚠️ 如果整个视频中人物只是辅助则无需解析人物风格</p>
+</blockquote>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#6A737D">&lt;!--人物风格拆解，使用豆包专家或思考模式--&gt;</span></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># 任务</span></span>
+<span class="line"><span style="color:#FFAB70">1.</span><span style="color:#E1E4E8"> 请你充分理解这幅画，重点聚焦画面中的人物主体</span></span>
+<span class="line"><span style="color:#FFAB70">2.</span><span style="color:#E1E4E8"> 基于你的理解，单独拆分出人物的风格（需排除场景的风格干扰），作为我后续绘制全新人物的视觉参考。</span></span>
+<span class="line"><span style="color:#FFAB70">3.</span><span style="color:#E1E4E8"> 分析画面中与人物风格相关的内容，如人物的色彩运用、笔触技法、质感表现、服饰细节的风格化处理等，但请勿分析场景内容</span></span>
+<span class="line"><span style="color:#FFAB70">4.</span><span style="color:#E1E4E8"> 分析画面的渲染风格、光影方式，并给出详细的参数</span></span>
+<span class="line"><span style="color:#FFAB70">5.</span><span style="color:#E1E4E8"> 基于你的分析，以json结构化数据的形式提取这幅图中人物的画风，作为我后续创作的视觉参考</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold">#  要求</span></span>
+<span class="line"><span style="color:#FFAB70">1.</span><span style="color:#E1E4E8"> 输出为json对象，请严格按照json的格式输出，不要有额外的解释和注释</span></span>
+<span class="line"><span style="color:#FFAB70">2.</span><span style="color:#E1E4E8"> 描述需精简，不要超过500字</span></span>
+<span class="line"><span style="color:#FFAB70">3.</span><span style="color:#E1E4E8"> 仅输出json代码，请勿直接帮我生成图片</span></span></code></pre>
+<h3 id="步骤2添加描述">步骤2：添加描述</h3>
+<p>将上述生成的json代码替换下方提示词变量，其中：</p>
+<ul>
+<li>需尽可能描述自己做需要的人物，包含Ta五官、发型、表情、穿着等；</li>
+<li>将自己的描述和步骤1生成的代码合并，形成新的提示词</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">{{[</span><span style="color:#DBEDFF;text-decoration:underline">你的人物描述，五官、发型、表情、穿着</span><span style="color:#E1E4E8">]}}，人物风格如下：</span></span>
+<span class="line"><span style="color:#E1E4E8">    - [</span><span style="color:#DBEDFF;text-decoration:underline">步骤1的那串代码</span><span style="color:#E1E4E8">]</span></span></code></pre>
+<h3 id="步骤3喂提示词">步骤3：喂提示词</h3>
+<ul>
+<li>将步骤2的提示词给即梦，使用4.6或者5.0模型</li>
+<li>无需垫图</li>
+</ul>
+<h2 id="场景风格拆解">场景风格拆解</h2>
+<p>步骤同3.1 人物风格拆解</p>
+<blockquote>
+<p>下方左图为原视频截图（喜鹊谋杀），右侧为风格模仿图</p>
+</blockquote>
+<p><img src="/prompt-archive-site/media/fd9c7b0dffc222ec.png" alt="Pasted image 20260813174451.png"></p>
+<blockquote>
+<p>下方左图为原视频截图（即梦里的一个截图），右侧为风格模仿图</p>
+</blockquote>
+<p><img src="/prompt-archive-site/media/dc34a889cef8609e.png" alt="Pasted image 20260813174509.png"></p>
+<p>a、若：自己的场景内容和原视频<strong>基本不一样（仅风格相似）</strong>，用下方提示词👇</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#6A737D">&lt;!--场景风格拆解--&gt;</span></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># 任务</span></span>
+<span class="line"><span style="color:#FFAB70">1.</span><span style="color:#E1E4E8"> 请你充分理解这幅画</span></span>
+<span class="line"><span style="color:#FFAB70">2.</span><span style="color:#E1E4E8"> 基于你的理解，拆分出风格和场景</span></span>
+<span class="line"><span style="color:#FFAB70">3.</span><span style="color:#E1E4E8"> 分析这幅画面中和风格相关的内容，如色彩、构图、色调、氛围等，但是请勿分析画面中的具体内容，例如人物、场景</span></span>
+<span class="line"><span style="color:#FFAB70">4.</span><span style="color:#E1E4E8"> 基于你的分析，以json结构化数据的形式提取这幅图的画风，作为我后续创作的视觉参考</span></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold">#  要求</span></span>
+<span class="line"><span style="color:#FFAB70">1.</span><span style="color:#E1E4E8"> 输出为json对象，请严格按照json的格式输出，不要有额外的解释和注释</span></span>
+<span class="line"><span style="color:#FFAB70">2.</span><span style="color:#E1E4E8"> 描述需精简，不要超过500字</span></span>
+<span class="line"><span style="color:#FFAB70">3.</span><span style="color:#E1E4E8"> 仅输出json代码，请勿直接帮我生成图片</span></span></code></pre>
+<p>b、若：自己的场景内容和原视频<strong>差不多（风格、内容都相似）</strong>，用下面的👇</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#6A737D">&lt;!--场景风格拆解--&gt;</span></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># 任务</span></span>
+<span class="line"><span style="color:#FFAB70">1.</span><span style="color:#E1E4E8"> 请你充分理解这幅画</span></span>
+<span class="line"><span style="color:#FFAB70">2.</span><span style="color:#E1E4E8"> 基于你的理解，拆分出风格和场景</span></span>
+<span class="line"><span style="color:#FFAB70">3.</span><span style="color:#E1E4E8"> 分析这幅画面中和风格相关的内容，如色彩、构图、色调、氛围等</span></span>
+<span class="line"><span style="color:#FFAB70">4.</span><span style="color:#E1E4E8"> 基于你的分析，以json结构化数据的形式提取这幅图的画风，作为我后续创作的视觉参考</span></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold">#  要求</span></span>
+<span class="line"><span style="color:#FFAB70">1.</span><span style="color:#E1E4E8"> 输出为json对象，请严格按照json的格式输出，不要有额外的解释和注释</span></span>
+<span class="line"><span style="color:#FFAB70">2.</span><span style="color:#E1E4E8"> 描述需精简，不要超过500字</span></span>
+<span class="line"><span style="color:#FFAB70">3.</span><span style="color:#E1E4E8"> 仅输出json代码，请勿直接帮我生成图片</span></span></code></pre>
+<p>c、若：自己的场景内容和原视频<strong>一样</strong>，用下面的👇</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">参考图片，生成它的高清版本</span></span></code></pre>
+<ul>
+<li>如果需要别人的场景，就垫图</li>
+<li>如果场景是自己的就不垫图</li>
+</ul>
+<h2 id="注意事项">注意事项</h2>
+<p>常见的风格Ai都能处理的很好了，**但是！**一些艺术家个人风格浓厚的因为大模型缺少训练数据，给出的json风格代码不一定十分准确，需要在步骤2中多添加一些自己对这个风格的理解去辅助大模型更好的产出内容</p>
+<h2 id="视频生成">视频生成</h2>
+<p>按照上述步骤生成视频，或使用如下视频风格迁移提示词</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#6A737D">&lt;!--视频风格复刻提示词--&gt;</span></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># 角色</span></span>
+<span class="line"><span style="color:#E1E4E8">你是专业的视频风格拆解师，精通文生视频模型的关键词逻辑</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># 任务</span></span>
+<span class="line"><span style="color:#FFAB70">1.</span><span style="color:#E1E4E8"> 请基于我提供的视频信息，精准拆解视频的全维度风格参数，输出的内容必须可直接用于即梦视频生成，拒绝空泛形容词，所有描述都要具象化、可落地。</span></span>
+<span class="line"><span style="color:#FFAB70">2.</span><span style="color:#E1E4E8"> 基于你的分析为我生成一条适合{{[</span><span style="color:#DBEDFF;text-decoration:underline">平台</span><span style="color:#E1E4E8">]}}文生成视频的提示词。</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># 要求</span></span>
+<span class="line"><span style="color:#FFAB70">1.</span><span style="color:#E1E4E8"> 分析纬度如下：</span></span>
+<span class="line"><span style="color:#FFAB70">-</span><span style="color:#E1E4E8"> 核心主题与主体：视频核心&lt;!--阿拉赛博蕾--&gt;内容、核心主体、核心动作/叙事线</span></span>
+<span class="line"><span style="color:#FFAB70">-</span><span style="color:#E1E4E8"> 视觉美术风格：画风、质感、摄影风格</span></span>
+<span class="line"><span style="color:#FFAB70">-</span><span style="color:#E1E4E8"> 光影与色调：主光源类型、光影氛围、色调整体偏向、色彩搭配逻辑</span></span>
+<span class="line"><span style="color:#FFAB70">-</span><span style="color:#E1E4E8"> 镜头语言与运镜：景别、镜头运动方式、镜头切换节奏、视角类型</span></span>
+<span class="line"><span style="color:#FFAB70">-</span><span style="color:#E1E4E8"> 场景与环境细节：场景空间、环境氛围、道具细节、画面层次</span></span>
+<span class="line"><span style="color:#FFAB70">-</span><span style="color:#E1E4E8"> 节奏与时长：镜头切换速度、画面快慢节奏</span></span>
+<span class="line"><span style="color:#FFAB70">-</span><span style="color:#E1E4E8"> 避坑负面提示词：列出该风格下需要规避的画面问题，适配{{[</span><span style="color:#DBEDFF;text-decoration:underline">平台</span><span style="color:#E1E4E8">]}}负面词逻辑</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># 注意</span></span>
+<span class="line"><span style="color:#FFAB70">1.</span><span style="color:#E1E4E8"> 请勿分析视频中和字幕、水印相关的内容，并在给即梦的提示词中明确要求不带字幕</span></span>
+<span class="line"><span style="color:#FFAB70">2.</span><span style="color:#E1E4E8"> 不管所分析视频分辨率如何，视频生成提示词一律写明[</span><span style="color:#DBEDFF;text-decoration:underline">8K高清，影视级画面效果，细节清晰</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#FFAB70">3.</span><span style="color:#E1E4E8"> 仅输入我需要的提示词即可，请不要给我我没做要求的内容</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># 输出</span></span>
+<span class="line"><span style="color:#E1E4E8">提示词</span></span></code></pre>
+</div></div></div></div></main><footer class="site-footer" data-astro-cid-tq46r5sz><div class="container" data-astro-cid-tq46r5sz><div class="footer-grid" data-astro-cid-tq46r5sz><div class="footer-brand" data-astro-cid-tq46r5sz><a class="brand" href="/prompt-archive-site/" data-astro-cid-tq46r5sz><span class="brand-glyph" data-astro-cid-tq46r5sz>PA</span><span class="brand-name" data-astro-cid-tq46r5sz>AI 提示词档案馆</span></a><p class="footer-desc" data-astro-cid-tq46r5sz>可浏览、可检索、可复制的 AI 图像与视频提示词案例库。每个完整案例一个独立页面，提示词与 Wiki 原文逐字一致。</p></div><nav class="footer-col" aria-label="页脚导航" data-astro-cid-tq46r5sz><p class="footer-label" data-astro-cid-tq46r5sz>浏览</p><a href="/prompt-archive-site/images/" data-astro-cid-tq46r5sz>图像案例</a><a href="/prompt-archive-site/videos/" data-astro-cid-tq46r5sz>视频案例</a><a href="/prompt-archive-site/notes/" data-astro-cid-tq46r5sz>方法笔记</a><a href="/prompt-archive-site/cases/" data-astro-cid-tq46r5sz>全站搜索</a></nav><div class="footer-col" data-astro-cid-tq46r5sz><p class="footer-label" data-astro-cid-tq46r5sz>本馆收录</p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>案例</span><b data-astro-cid-tq46r5sz>105</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>附实测成片</span><b data-astro-cid-tq46r5sz>2</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>方法笔记</span><b data-astro-cid-tq46r5sz>60</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>合集</span><b data-astro-cid-tq46r5sz>11</b></p></div></div><div class="footer-bottom" data-astro-cid-tq46r5sz><p data-astro-cid-tq46r5sz>「作者称已测试」表示来源声明，本站未复测。</p><p data-astro-cid-tq46r5sz>PA·ARCHIVE © 2026</p></div></div></footer></body><script type="module">function e(){document.querySelectorAll(`[data-masonry]`).forEach(e=>{let t=Array.from(e.querySelectorAll(`:scope > .m-cols > .m-col > *, :scope > *:not(.m-cols)`));if(e.querySelectorAll(`.m-cols`).forEach(e=>e.remove()),t.length===0)return;let n=window.matchMedia(`(max-width: 767px)`).matches?1:window.matchMedia(`(max-width: 1199px)`).matches?2:3,r=document.createElement(`div`);r.className=`m-cols`;let i=Array.from({length:n},()=>{let e=document.createElement(`div`);return e.className=`m-col`,e});t.forEach((e,t)=>i[t%n].appendChild(e)),e.appendChild(r),i.forEach(e=>r.appendChild(e))})}window.refreshMasonry=e,e();var t;window.addEventListener(`resize`,()=>{clearTimeout(t),t=setTimeout(e,150)});</script><script type="module">(()=>{let e=`.case-card, .note-card, .note-list-card`,t=window.matchMedia(`(prefers-reduced-motion: reduce)`),n=null,r=null,i=0;t.addEventListener?.(`change`,()=>{t.matches&&a()});function a(){if(!n)return;let e=n;e.classList.remove(`tilt-active`),e.classList.add(`tilt-return`),e.style.transform=``,clearTimeout(i),i=setTimeout(()=>e.classList.remove(`tilt-return`),320),n=null,r=null}document.addEventListener(`pointermove`,i=>{if(i.pointerType!==`mouse`||!i.isPrimary||t.matches)return;let o=i.target instanceof Element?i.target.closest(e):null;if(o!==n){if(a(),!o)return;n=o,r=n.getBoundingClientRect(),n.classList.add(`tilt-active`),n.classList.remove(`tilt-return`)}if(!n||!r)return;let s=(i.clientX-r.left)/r.width-.5,c=(i.clientY-r.top)/r.height-.5,l=Math.max(-1,Math.min(1,s*2))*4.5,u=Math.max(-1,Math.min(1,c*2))*-4.5;n.style.transform=`perspective(1100px) rotateX(${u.toFixed(3)}deg) rotateY(${l.toFixed(3)}deg) translateY(-3px)`},{passive:!0}),document.addEventListener(`pointerleave`,()=>a()),document.addEventListener(`pointerdown`,t=>{(t.target instanceof Element?t.target.closest(e):null)!==n&&a()},{passive:!0}),window.addEventListener(`blur`,()=>a()),window.addEventListener(`scroll`,()=>a(),{passive:!0})})();</script></html><script type="module">function e(){document.querySelectorAll(`.prose pre`).forEach(e=>{if(e.closest(`.code-panel`))return;let t=e.querySelector(`code`),n=(t??e).textContent??``,r=t?.className.match(/language-([\w+-]+)/)?.[1]??`text`,i=n.replace(/\n$/,``).split(`
+`).length,a=Array.from(n.matchAll(/`{3,}/g)).map(e=>e[0].length),o=a.length?Math.max(3,Math.max(...a)+1):3,s="`".repeat(o)+`markdown
+`+(n.endsWith(`
+`)?n:n+`
+`)+"`".repeat(o),c=document.createElement(`figure`);c.className=`code-panel`;let l=document.createElement(`figcaption`);l.className=`code-panel-head`;let u=document.createElement(`span`);u.className=`code-lang`,u.textContent=r;let d=document.createElement(`span`);d.className=`code-lines`,d.textContent=`${i} 行`;let f=document.createElement(`span`);f.className=`copy-feedback`,f.setAttribute(`aria-live`,`polite`);let p=document.createElement(`button`);p.type=`button`,p.className=`copy-btn`,p.textContent=`复制本块`,l.append(u,d,f,p),e.replaceWith(c),c.append(l,e);let m;p.addEventListener(`click`,async()=>{let e=!1;try{await navigator.clipboard.writeText(s),e=!0}catch{try{let t=document.createElement(`textarea`);t.value=s,t.style.position=`fixed`,t.style.opacity=`0`,document.body.appendChild(t),t.select(),e=document.execCommand(`copy`),t.remove()}catch{e=!1}}f.textContent=e?`已复制本块`:`复制失败，请手动选取`,p.textContent=e?`已复制`:`复制本块`,clearTimeout(m),m=setTimeout(()=>{f.textContent=``,p.textContent=`复制本块`},3e3)})})}e();</script>

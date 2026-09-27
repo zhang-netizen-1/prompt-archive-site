@@ -1,0 +1,1712 @@
+<!DOCTYPE html><html lang="zh-CN" data-astro-cid-tq46r5sz><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="{动作} 槽位取值来源：打斗按距离选档 45 组图解＋打斗整合 82 组＋高燃运镜粒子光轨 47 组＋双人/三人/多人站位＋多动作衔接快切模板。条目为 Seedance 2.0 时间轴分镜格式，可整条搬用。"><link rel="icon" href="/prompt-archive-site/favicon.svg" type="image/svg+xml"><title>动作变量库 · 方法笔记</title><link rel="stylesheet" href="/prompt-archive-site/_astro/SiteLayout.DYPNTGRP.css"><style>.note-header[data-astro-cid-vex5zuxs]{max-width:calc(var(--note-width) + 280px);margin:0 auto;padding:40px 24px 0}
+</style></head><body data-astro-cid-tq46r5sz><a class="skip-link" href="#main" data-astro-cid-tq46r5sz>跳到主要内容</a><div class="announce" data-astro-cid-tq46r5sz><a href="/prompt-archive-site/cases/" data-astro-cid-tq46r5sz>PA·ARCHIVE — 每个完整案例一个独立页面，提示词与 Wiki 原文逐字一致 ↗</a></div><header class="site-header" data-astro-cid-tq46r5sz><div class="container" data-astro-cid-tq46r5sz><a class="brand" href="/prompt-archive-site/" data-astro-cid-tq46r5sz><span class="brand-glyph" data-astro-cid-tq46r5sz>PA</span><span class="brand-name" data-astro-cid-tq46r5sz>AI 提示词档案馆</span></a><nav class="site-nav" aria-label="主导航" data-astro-cid-tq46r5sz><a href="/prompt-archive-site/images/" data-astro-cid-tq46r5sz>图像案例<span class="nav-no" data-astro-cid-tq46r5sz>01</span></a><a href="/prompt-archive-site/videos/" data-astro-cid-tq46r5sz>视频案例<span class="nav-no" data-astro-cid-tq46r5sz>02</span></a><a href="/prompt-archive-site/notes/" aria-current="page" data-astro-cid-tq46r5sz>方法笔记<span class="nav-no" data-astro-cid-tq46r5sz>03</span></a></nav><div class="header-cta" data-astro-cid-tq46r5sz><a class="header-search-link" href="/prompt-archive-site/cases/" aria-label="全站搜索案例" data-astro-cid-tq46r5sz><span class="icon" style="width:15px;height:15px" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="6.1"/><line x1="13.6" y1="13.6" x2="18" y2="18"/></svg></span><span data-astro-cid-tq46r5sz>搜索</span><span class="nav-no" data-astro-cid-tq46r5sz>04</span></a></div></div></header><main id="main" data-astro-cid-tq46r5sz><div class="note-page" data-astro-cid-vex5zuxs><div class="note-header" data-astro-cid-vex5zuxs><nav class="breadcrumbs" aria-label="面包屑" data-astro-cid-vex5zuxs><a href="/prompt-archive-site/" data-astro-cid-vex5zuxs>首页</a><span aria-hidden="true" data-astro-cid-vex5zuxs>/</span><a href="/prompt-archive-site/notes/" data-astro-cid-vex5zuxs>方法笔记</a><span aria-hidden="true" data-astro-cid-vex5zuxs>/</span><span aria-current="page" data-astro-cid-vex5zuxs>动作变量库</span></nav><h1 style="font-size:32px" data-astro-cid-vex5zuxs>动作变量库</h1><p class="note-meta" data-astro-cid-vex5zuxs><span class="medium-chip" data-astro-cid-vex5zuxs>变量库</span><span data-astro-cid-vex5zuxs>视频</span><span data-astro-cid-vex5zuxs>源资料：动作变量库（visual-prompt-system）</span></p><p class="note-summary" data-astro-cid-vex5zuxs>{动作} 槽位取值来源：打斗按距离选档 45 组图解＋打斗整合 82 组＋高燃运镜粒子光轨 47 组＋双人/三人/多人站位＋多动作衔接快切模板。条目为 Seedance 2.0 时间轴分镜格式，可整条搬用。</p></div><div class="note-layout" data-astro-cid-vex5zuxs><aside class="note-toc" aria-label="目录" data-astro-cid-vex5zuxs><p class="toc-title" data-astro-cid-vex5zuxs>目录</p><a href="#使用规则" data-astro-cid-vex5zuxs>使用规则</a><a href="#目录" data-astro-cid-vex5zuxs>目录</a><a href="#武侠打斗--按距离划分45组图解" data-astro-cid-vex5zuxs>武侠打斗 · 按距离划分（45组图解）</a><a href="#近身搏斗拳短兵器" data-astro-cid-vex5zuxs>近身搏斗（拳、短兵器）</a><a href="#兵器缠斗刀剑棍等" data-astro-cid-vex5zuxs>兵器缠斗（刀剑棍等）</a><a href="#中距离攻击鞭锁链流星锤绳镖伸缩武器" data-astro-cid-vex5zuxs>中距离攻击（鞭、锁链、流星锤、绳镖、伸缩武器）</a><a href="#远程攻击弓箭暗器飞镖" data-astro-cid-vex5zuxs>远程攻击（弓箭、暗器、飞镖）</a><a href="#超远程攻击" data-astro-cid-vex5zuxs>超远程攻击</a><a href="#打斗整合篇82组图解--组合条目动作运镜特效预绑定单槽取用" data-astro-cid-vex5zuxs>打斗整合篇（82组图解 · 组合条目：动作+运镜+特效预绑定，单槽取用）</a><a href="#一快攻连招与轨迹跟拍15组" data-astro-cid-vex5zuxs>一、快攻连招与轨迹跟拍（15组）</a><a href="#二身法走位与视角切换13组" data-astro-cid-vex5zuxs>二、身法走位与视角切换（13组）</a><a href="#三终结爆发与绝杀慢镜12组" data-astro-cid-vex5zuxs>三、终结爆发与绝杀慢镜（12组）</a><a href="#四格挡相持与劲力对冲13组" data-astro-cid-vex5zuxs>四、格挡相持与劲力对冲（13组）</a><a href="#五精准突刺与破防贯穿15组" data-astro-cid-vex5zuxs>五、精准突刺与破防贯穿（15组）</a><a href="#六缠控反制与攻防反转14组" data-astro-cid-vex5zuxs>六、缠控反制与攻防反转（14组）</a><a href="#高燃打斗运镜粒子光轨-47-组" data-astro-cid-vex5zuxs>高燃打斗运镜+粒子光轨 47 组</a><a href="#近身搏斗拳短兵器-1" data-astro-cid-vex5zuxs>近身搏斗（拳、短兵器）</a><a href="#兵器缠斗刀剑棍等-1" data-astro-cid-vex5zuxs>兵器缠斗（刀剑棍等）</a><a href="#中距离攻击鞭锁链流星锤绳镖伸缩武器-1" data-astro-cid-vex5zuxs>中距离攻击（鞭、锁链、流星锤、绳镖、伸缩武器）</a><a href="#远程攻击弓箭暗器飞镖-1" data-astro-cid-vex5zuxs>远程攻击（弓箭、暗器、飞镖）</a><a href="#超远程攻击仙侠法术" data-astro-cid-vex5zuxs>超远程攻击（仙侠法术）</a><a href="#人物站位双人三人多人" data-astro-cid-vex5zuxs>人物站位（双人/三人/多人）</a><a href="#双人" data-astro-cid-vex5zuxs>双人</a><a href="#参考图" class="depth-3" data-astro-cid-vex5zuxs>参考图：</a><a href="#提示词" class="depth-3" data-astro-cid-vex5zuxs>提示词：</a><a href="#三人" data-astro-cid-vex5zuxs>三人</a><a href="#参考图-1" class="depth-3" data-astro-cid-vex5zuxs>参考图：</a><a href="#提示词-1" class="depth-3" data-astro-cid-vex5zuxs>提示词：</a><a href="#多人" data-astro-cid-vex5zuxs>多人</a><a href="#参考图-2" class="depth-3" data-astro-cid-vex5zuxs>参考图</a><a href="#提示词-2" class="depth-3" data-astro-cid-vex5zuxs>提示词</a><a href="#多动作衔接快切" data-astro-cid-vex5zuxs>多动作衔接快切</a><a href="#模板骨架慢镜头动作衔接" data-astro-cid-vex5zuxs>模板骨架（慢镜头动作衔接）</a><a href="#对照示例悲伤场景问题版-vs-改进版" data-astro-cid-vex5zuxs>对照示例：悲伤场景（问题版 vs 改进版）</a><a href="#快节奏动作衔接模板" data-astro-cid-vex5zuxs>快节奏动作衔接模板</a><a href="#雀跃场景完整脚本骨架15s-多机位快切慢镜跟拍" data-astro-cid-vex5zuxs>雀跃场景完整脚本骨架（15s 多机位快切+慢镜跟拍）</a><a href="#关联" data-astro-cid-vex5zuxs>关联</a></aside><div class="note-main" data-astro-cid-vex5zuxs><div class="prose" data-astro-cid-vex5zuxs><blockquote>
+<p>模板库中 {动作} 类变量的取值来源。打斗动作优先按距离选档（近身→兵器→中距→远程），连续动作用衔接快切句式，多人戏先定站位。全量条目（兵器篇45/308组总表）直接查 prompts/武侠打斗总集。</p>
+</blockquote>
+<h2 id="使用规则">使用规则</h2>
+<p>变量取值<strong>整条搬用，不自行改写</strong>——条目已按对应模型特性调优。同一情绪/动作有多个档位时按「情绪起点→终点」的叙事位置选择，不叠加多条。</p>
+<h2 id="目录">目录</h2>
+<table>
+<thead>
+<tr>
+<th>节</th>
+<th>条目数</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>武侠打斗 · 按距离划分（45组图解）</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>近身搏斗（拳、短兵器）</td>
+<td>9</td>
+<td>0.0s-0.5s  极速纵深推镜→背身锁焦，红衣女子背对镜头静立于滂沱雨幕</td>
+</tr>
+<tr>
+<td>兵器缠斗（刀剑棍等）</td>
+<td>9</td>
+<td>0s-0.5s，剑客背对镜头，独自面向巨型异型机甲，沙粒拍打他的蓑衣发出细密</td>
+</tr>
+<tr>
+<td>中距离攻击（鞭、锁链、流星锤、绳镖、伸缩武器）</td>
+<td>9</td>
+<td>0s-0.5s，旋转中心环绕跟拍→甩出起点锁焦， 双马尾红衣女子甩臂掷出流星</td>
+</tr>
+<tr>
+<td>远程攻击（弓箭、暗器、飞镖）</td>
+<td>9</td>
+<td>0.0s-0.5s，贴身平行极速横移+躯干纵向锁焦，亡灵弓手身披破碎骸骨立于</td>
+</tr>
+<tr>
+<td>超远程攻击</td>
+<td>9</td>
+<td>0.0s-0.5s, 固定机位+低仰角俯瞰，雨夜，大雨滂沱，黑发白衣仙子独立</td>
+</tr>
+<tr>
+<td>打斗整合篇（82组图解 · 组合条目：动作+运镜+特效预绑定，单槽取用）</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>一、快攻连招与轨迹跟拍（15组）</td>
+<td>15</td>
+<td>3D CG国漫，暗黑玄幻风格，古装，硬核格斗美学，电影级UE5渲染，PBR物</td>
+</tr>
+<tr>
+<td>二、身法走位与视角切换（13组）</td>
+<td>13</td>
+<td>视频内容：阴森恐怖的封魔渊底，手持长剑的冷艳白衣仙子立于血月暗空之下，用长剑</td>
+</tr>
+<tr>
+<td>三、终结爆发与绝杀慢镜（12组）</td>
+<td>12</td>
+<td>3D CG 国漫暗黑玄幻风格，史诗级奇幻大片质感，Seedance 2.0</td>
+</tr>
+<tr>
+<td>四、格挡相持与劲力对冲（13组）</td>
+<td>13</td>
+<td>3D CG国漫，暗黑玄幻美学，硬核格斗美学高燃精准卡点，快节奏，8K超清高帧</td>
+</tr>
+<tr>
+<td>五、精准突刺与破防贯穿（15组）</td>
+<td>14</td>
+<td>3D CG国漫，暗黑玄幻美学，硬核格斗美学，高燃精准卡点，快节奏，8K超清高</td>
+</tr>
+<tr>
+<td>六、缠控反制与攻防反转（14组）</td>
+<td>13</td>
+<td>3D CG国漫，暗黑玄幻美学，硬核格斗美学，电影级UE5渲染，PBR物理材质</td>
+</tr>
+<tr>
+<td>高燃打斗运镜+粒子光轨 47 组</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>近身搏斗（拳、短兵器）</td>
+<td>9</td>
+<td>3D CG动画，国漫暗黑玄幻风格，史诗级奇幻大片质感，暗黑电影级极致色调，超</td>
+</tr>
+<tr>
+<td>兵器缠斗（刀剑棍等）</td>
+<td>9</td>
+<td>3D CG动画，国漫顶级玄幻仙侠美学，史诗级奇幻质感，快节奏，UE5极致画质</td>
+</tr>
+<tr>
+<td>中距离攻击（鞭、锁链、流星锤、绳镖、伸缩武器）</td>
+<td>9</td>
+<td>3D CG 动画，国漫顶级玄幻仙侠美学，史诗级奇幻质感，UE5 极致画质 8</td>
+</tr>
+<tr>
+<td>远程攻击（弓箭、暗器、飞镖）</td>
+<td>9</td>
+<td></td>
+</tr>
+<tr>
+<td>超远程攻击（仙侠法术）</td>
+<td>13</td>
+<td>3D CG 国漫暗黑玄幻风格，史诗级奇幻大片质感，Seedance 2.0</td>
+</tr>
+<tr>
+<td>人物站位（双人/三人/多人）</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>双人</td>
+<td>1</td>
+<td>用环绕镜头的方式切换到不同人物的正脸，非常稳，给环绕运镜设置一个比较快的时间</td>
+</tr>
+<tr>
+<td>三人</td>
+<td>1</td>
+<td>把三角站位定死，画面中间的角作为桥梁，链接两边。画面中间的人物可以根据故事需</td>
+</tr>
+<tr>
+<td>多人</td>
+<td>1</td>
+<td>让需要说话的人都去中轴线，或者横轴线上</td>
+</tr>
+<tr>
+<td>多动作衔接快切</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>模板骨架（慢镜头动作衔接）</td>
+<td>1</td>
+<td>0~2s &lt;景别&gt;，&lt;机位角度&gt;，&lt;角色A动作：启动态&gt;。表情：&lt;具体表情&gt;</td>
+</tr>
+<tr>
+<td>对照示例：悲伤场景（问题版 vs 改进版）</td>
+<td>2</td>
+<td>唯一差异证明模板有效——改两处：加"快速切镜，动作连续" + 第二段改"接上</td>
+</tr>
+<tr>
+<td>快节奏动作衔接模板</td>
+<td>2</td>
+<td><N>s &lt;景别+机位&gt;：&lt;单动作1&gt;；</td>
+</tr>
+<tr>
+<td>雀跃场景完整脚本骨架（15s 多机位快切+慢镜跟拍）</td>
+<td>1</td>
+<td>• 女主：参考【图1】，初始位置参考线稿图【图4】，运动轨迹遵循设计稿【图3</td>
+</tr>
+<tr>
+<td>关联</td>
+<td>0</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="武侠打斗--按距离划分45组图解">武侠打斗 · 按距离划分（45组图解）</h2>
+<h2 id="近身搏斗拳短兵器">近身搏斗（拳、短兵器）</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">0.0s-0.5s | 极速纵深推镜→背身锁焦，红衣女子背对镜头静立于滂沱雨幕中，一群黑衣刺客从画面右后方纵深雨幕中破雨突刺而来，短刀刀尖凝聚一点寒芒刺破密集雨帘直逼后心，脚下积水被极速冲刺踩出扇形水花向后炸开，</span></span>
+<span class="line"><span style="color:#E1E4E8">0.5s-1.0s | 贴背锁焦横向甩镜→发力点甩切定格，红衣女子在刀尖即将触及后背的极限瞬间，以腰为轴猛然向左拧转一百八十度，长发与雨水随甩头动作呈弧形飞甩，右手前臂如铁闸般横向格挡在刀锋路径之上，刀刃与手臂硬碰硬撞击迸发一簇尖锐火星，</span></span>
+<span class="line"><span style="color:#E1E4E8">1.0s-1.5s | 低机位仰角极速拉近→碰撞点锁焦特写，刀与臂碰撞瞬间冲击波以接触点为中心向四周炸开，密集雨滴被震成环形水雾层向外扩散，红衣女子脚下砖石表面的积水呈同心圆状爆裂溅起，衣摆与发梢因冲击惯性向前翻卷，刺客握刀手臂被反震力弹开虎口震颤，</span></span>
+<span class="line"><span style="color:#E1E4E8">1.5s-2.0s | 贴身疾速横移运镜→从格挡位平移至躯干中线，红衣女子趁刺客手臂被弹开的僵直瞬间重心下沉双腿微屈扎稳马步，右臂仍架开短刀的同时左臂回收至腰间蓄力，五指猛然攥拳骨节咔咔作响，拳锋凝聚劲气震开周围雨滴形成真空涡旋，</span></span>
+<span class="line"><span style="color:#E1E4E8">2.0s-2.5s | 腰腹锁焦急速环推→发力点极度贴近聚焦，左拳如炮弹般直线崩出直轰刺客胸口正中，拳锋破开雨幕形成锥形气浪隧道，拳头击中的一瞬间刺客胸口衣料以拳面为中心剧烈向内凹陷撕裂，肋骨受击的闷响与雨水爆裂声同时炸开，</span></span>
+<span class="line"><span style="color:#E1E4E8">2.5s-3.0s | 跟随冲击波同步极速后拉运镜→刺客被击飞轨迹锁焦，刺客身体被拳力轰击呈弓形向后弹射飞出，双脚离地身体在空中反弓双脚拖地滑行，背后雨水被气浪推向两侧呈人字形水幕分开，蒙面布料被冲击波掀起一角露出下颌，口中血雾喷出被雨水冲散，</span></span>
+<span class="line"><span style="color:#E1E4E8">3.0s-3.5s | 广角环视甩镜→360°极速扫描战场，镜头以红衣女子为轴心急速旋转扫视，画面切入两名刺客从左右两侧同时冲锋的画面，左侧刺客低姿下盘突刺短刀直取膝盖，右侧刺客高姿跳劈短刀劈向脖颈，两把刀锋在雨幕中反射冷光形成交叉火力网，</span></span>
+<span class="line"><span style="color:#E1E4E8">3.5s-4.0s | 地面贴拍仰角极速推升运镜→从低处跟随腾空轨迹，红衣女子面对夹击不闪不避，双脚猛踏地面借力腾空跃起，脚下砖石被蹬踏之力踩碎龟裂积水爆射飞溅，身体如离弦之箭笔直腾空上升，雨水在升空轨道上被撞开呈柱状水幕，</span></span>
+<span class="line"><span style="color:#E1E4E8">4.0s-4.5s | 空中定点击破双轴环绕运镜→凌空动作中线锁焦，红衣女子腾空至最高点瞬间空中一字马横展开身体，右腿如钢鞭横扫精准踢中左侧刺客短刀刀身中部，刀身受力剧烈弯折震颤后脱手旋转飞向空中，左拳同时垂直下砸正击中右侧刺客头顶百会穴，刺客头部猛然下沉颈椎发出咔嚓脆响，</span></span>
+<span class="line"><span style="color:#E1E4E8">4.5s-5.0s | 俯冲跟拍极速下坠运镜→落地冲击点锁焦，红衣女子从空中收势双脚并拢垂直砸落地面，落地瞬间双膝微屈作缓冲脚下石板应声碎裂，落点处的积水被冲击波炸开形成环形水幕墙向外翻涌扩散，马尾与衣摆因惯性上扬后又啪嗒垂落，最后一命刺客从正面雨幕中持刀狂奔冲来距离已不足两米，</span></span>
+<span class="line"><span style="color:#E1E4E8">5.0s-5.5s | 地面水平极速推进推镜→从远推至近身发力特写，红衣女子落地瞬间不停顿直接借下沉之力沉腰转胯右肩前送，右拳沿腰胯传力轨迹直线崩出拳锋撕裂空气，拳头推进过程中雨滴被拳风卷裹在拳面形成旋转的螺旋水壳，刺客冲来的身形与出拳轨迹在画面中高速对撞逼近，</span></span>
+<span class="line"><span style="color:#E1E4E8">5.5s-6.0s | 碰撞点定帧级锁焦→极限近距离定格爆发，重拳结结实实轰在刺客面门正中央，拳锋与面部接触瞬间蒙面布料从鼻子位置向两侧撕裂崩开，面部五官被拳劲冲击挤压变形鼻梁塌陷眼眶撕裂血雾炸开，刺客身体如断线风筝向后倒飞砸入身后水洼激起数米高的扇形水幕墙轰然落下，战斗终结。</span></span></code></pre>
+<table>
+<thead>
+<tr>
+<th><strong>运镜描述</strong></th>
+<th><strong>seedance2.0提示词</strong></th>
+<th><strong>适用场景</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>贴身平行极速横移运镜→主体躯干纵向锁焦跟拍</td>
+<td>贴身平行极速横移运镜，躯干纵向锁焦，高速拳脚攻防，动态模糊，拳风特效</td>
+<td>拳脚 / 短兵器</td>
+</tr>
+<tr>
+<td>低仰角贴脸渐进推进 + 收尾 180° 小半环绕运镜</td>
+<td>低仰角贴脸渐进推进，收尾 180° 小半环绕，发力点锁焦，重拳破防特写，肌肉紧绷，冲击波纹特效</td>
+<td>蓄力重击</td>
+</tr>
+<tr>
+<td>俯冲贴脸极速推进 + 定点小半径 360° 极速环绕运镜</td>
+<td>俯冲贴脸极速推进，定点小半径 360° 极速环绕，双体中线锁焦，终结大招，慢动作高光</td>
+<td>终结大招</td>
+</tr>
+<tr>
+<td>固定机位锁焦→核心动作点锚点锁焦</td>
+<td>固定机位锁焦定格，核心动作点锚点，格挡瞬间，时间冻结效果，粒子飘散，高对比度</td>
+<td>全流程</td>
+</tr>
+<tr>
+<td>贴地同步跟移→地面主体核心动作点锚点锁焦跟拍</td>
+<td>贴地同步跟移横滚运镜，地面核心动作锁焦，地面砸拳，尘土飞扬，血迹飞溅，低角度拍摄</td>
+<td>全阶段地面缠斗、地面攻防转换</td>
+</tr>
+<tr>
+<td>双体中心等距同步跟移运镜→双体对抗中线锚点锁焦</td>
+<td>双体中心等距同步跟移，对抗中线锁焦，内围缠抱角力，肌肉线条，汗水飞溅，动态张力</td>
+<td>短兵器近身互格、距离僵持</td>
+</tr>
+<tr>
+<td>绕身极速圆周环移运镜→主体躯干核心动态锁焦跟拍</td>
+<td>绕身极速圆周环移运镜，躯干核心锁焦，绕背突袭反杀，残影效果，武器反光，快速切换视角</td>
+<td>绕背突袭反杀</td>
+</tr>
+<tr>
+<td>过顶抛甩弧线跟移 → 翻转轴线重力锁焦</td>
+<td>过顶抛甩弧线跟移运镜，翻转轴线重力锁焦，过肩摔/抱摔投技，天旋地转视角，地面炸裂，骨骼震波特效，慢动作触地</td>
+<td>反制、借力打力</td>
+</tr>
+<tr>
+<td>对峙瞬间横向爆发推轨 → 刃锋切割点锚点锁焦</td>
+<td>对峙静止瞬间横向爆发推轨运镜，刃锋切割点锚点锁焦，匕首突刺，时空切割光效，血雾粒子，收刀后摇慢镜</td>
+<td>冷兵器瞬杀</td>
+</tr>
+</tbody>
+</table>
+<p><strong>取值速拷（9 条 · 与上表逐字一致）</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>贴身平行极速横移运镜，躯干纵向锁焦，高速拳脚攻防，动态模糊，拳风特效</span></span>
+<span class="line"><span>低仰角贴脸渐进推进，收尾 180° 小半环绕，发力点锁焦，重拳破防特写，肌肉紧绷，冲击波纹特效</span></span>
+<span class="line"><span>俯冲贴脸极速推进，定点小半径 360° 极速环绕，双体中线锁焦，终结大招，慢动作高光</span></span>
+<span class="line"><span>固定机位锁焦定格，核心动作点锚点，格挡瞬间，时间冻结效果，粒子飘散，高对比度</span></span>
+<span class="line"><span>贴地同步跟移横滚运镜，地面核心动作锁焦，地面砸拳，尘土飞扬，血迹飞溅，低角度拍摄</span></span>
+<span class="line"><span>双体中心等距同步跟移，对抗中线锁焦，内围缠抱角力，肌肉线条，汗水飞溅，动态张力</span></span>
+<span class="line"><span>绕身极速圆周环移运镜，躯干核心锁焦，绕背突袭反杀，残影效果，武器反光，快速切换视角</span></span>
+<span class="line"><span>过顶抛甩弧线跟移运镜，翻转轴线重力锁焦，过肩摔/抱摔投技，天旋地转视角，地面炸裂，骨骼震波特效，慢动作触地</span></span>
+<span class="line"><span>对峙静止瞬间横向爆发推轨运镜，刃锋切割点锚点锁焦，匕首突刺，时空切割光效，血雾粒子，收刀后摇慢镜</span></span></code></pre>
+<h2 id="兵器缠斗刀剑棍等">兵器缠斗（刀剑棍等）</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">0s-0.5s，剑客背对镜头，独自面向巨型异型机甲，沙粒拍打他的蓑衣发出细密声响，</span></span>
+<span class="line"><span style="color:#E1E4E8">0.5s-1s，碰撞点极速推镜，剑客猛然转身挥剑横斩，剑刃与机甲巨型金属爪臂猛烈碰撞，爆裂火星炸开，冲击波掀起环形沙浪向四周扩散，</span></span>
+<span class="line"><span style="color:#E1E4E8">1s-1.5s，攻击轨迹全程跟拍→攻击终点定点锁焦，剑客身形低伏极速连斩三道剑光弧线劈砍机甲腿关节装甲，金属碎片崩飞，剑气卷起沙尘翻涌，</span></span>
+<span class="line"><span style="color:#E1E4E8">1.5s-2s，贴地同步跟移运镜→地面核心动作</span></span>
+<span class="line"><span style="color:#E1E4E8">点锁焦，剑客贴地滑铲从机甲胯下穿过，剑刃横扫机甲脚踝关节，沙地犁出两道深沟，沙土呈扇形溅射，</span></span>
+<span class="line"><span style="color:#E1E4E8">2s-2.5s，低仰角贴脸渐进推进→发力点锁焦，剑客跃起至半空双手握剑蓄力重劈，蓑笠被风压掀起翻飞，剑刃砸中机甲躯干，冲击波将四周沙尘震散成环形扩散，</span></span>
+<span class="line"><span style="color:#E1E4E8">2.5s-3s，双体中心等距同步跟移运镜→对抗中线锁焦，剑客落地瞬间被机甲巨爪横向格挡，剑刃与金属爪臂紧密交格角力，火星持续飞溅，双方脚下沙地龟裂塌陷，3s-3.5s，绕身极速圆周环移运镜→躯体核心动态锁焦，剑客借力绕机甲身侧极速位移，剑尖划出弧形光轨斩向机甲背部装甲连接处，沙尘被带动旋转成涡流，</span></span>
+<span class="line"><span style="color:#E1E4E8">3.5s-4s，垂直攻击轨迹跟拍→落地冲击点俯角锁焦，剑客腾空翻身自上而下垂直劈击机甲头部，剑刃砸落时沙尘自落点呈圆环状向外猛烈炸开，</span></span>
+<span class="line"><span style="color:#E1E4E8">4s-4.5s，倒退式反向跟拍，机甲爆发力场震退剑客，剑客双脚犁地倒滑出数米，蓑笠疯狂翻飞，沙粒被脚跟铲起呈两道喷溅沙线，</span></span>
+<span class="line"><span style="color:#E1E4E8">4.5s-5s，攻击尖端极速跟拍→命中点微距锁焦，剑客稳住身形后骤然直线冲刺，剑尖精准直刺机甲关节缝隙，刺入瞬间金属裂痕扩散，火花爆射，</span></span>
+<span class="line"><span style="color:#E1E4E8">5s-5.5s，俯冲贴脸极速推进→定点小半径360°极速环绕，剑客拔剑抽离转身360°旋身斩击机甲另一侧关节，剑光形成闭环轨迹，沙尘被剑气卷起旋转升腾，</span></span>
+<span class="line"><span style="color:#E1E4E8">5.5s-6s，横向极速移镜，剑客与机甲交错冲向两侧，剑客蓑笠翻飞衣袂狂舞，金属碎片空中散落，漫天沙尘翻涌不息，打斗持续。</span></span></code></pre>
+<table>
+<thead>
+<tr>
+<th><strong>运镜描述</strong></th>
+<th><strong>seedance2.0提示词</strong></th>
+<th><strong>适用场景</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>碰撞点极速推镜→交缠点小半环绕锁焦</td>
+<td>碰撞点极速推镜，交缠点 360° 小半环绕锁焦，金属碰撞火花，武器震颤特效，慢动作高光</td>
+<td>近距离僵持</td>
+</tr>
+<tr>
+<td>攻击轨迹全程跟拍→攻击终点定点锁焦</td>
+<td>攻击轨迹全程跟拍，攻击终点定点锁焦，武器寒光特效，挥击残影，气流撕裂动态模糊，高对比度</td>
+<td>连续挥击</td>
+</tr>
+<tr>
+<td>低角度贴地跟拍横扫轨迹→横扫末端急停拉镜</td>
+<td>低角度贴地跟拍横扫轨迹，横扫末端急停拉镜，地面扬尘，气流冲击波，大范围动态模糊，肢体受力特写</td>
+<td>大范围横扫</td>
+</tr>
+<tr>
+<td>攻击尖端极速跟拍→命中点微距锁焦</td>
+<td>攻击尖端极速跟拍，命中点微距锁焦，破风音效可视化，血雾喷溅特效，慢动作高光，金属反光</td>
+<td>致命终结一击</td>
+</tr>
+<tr>
+<td>脱手物体抛物线跟拍→落地瞬间时间冻结</td>
+<td>脱手物体全程抛物线跟拍，落地瞬间时间冻结效果，武器旋转反光，粒子飘散，高对比度</td>
+<td>胜负转折</td>
+</tr>
+<tr>
+<td>格挡侧方极速横移→反击方向斜向推镜锁焦</td>
+<td>格挡侧方极速横移运镜，反击方向斜向推镜锁焦，格挡碰撞火花，肌肉紧绷特写，反击残影，动态张力拉满</td>
+<td>攻防快速转换</td>
+</tr>
+<tr>
+<td>物体中心轴环绕跟拍→旋转终点急停锁焦</td>
+<td>物体中心轴 360° 环绕跟拍，旋转终点急停锁焦，武器旋转残影，环形光效，高速动态模糊，主体轮廓清晰</td>
+<td>起势、连招</td>
+</tr>
+<tr>
+<td>垂直攻击轨迹跟拍→落地冲击点俯角锁焦</td>
+<td>垂直攻击轨迹跟拍，落地冲击点俯角锁焦，地面裂纹特效，碎石飞溅，冲击波扩散，尘土飞扬</td>
+<td>重型武器下砸</td>
+</tr>
+<tr>
+<td>交缠点缓慢拉镜→分离瞬间极速推镜</td>
+<td>交缠点缓慢拉镜，分离瞬间极速推镜，金属摩擦火花，武器形变特写，动态模糊，高对比度</td>
+<td>武器绞杀、缠械夺刃</td>
+</tr>
+</tbody>
+</table>
+<p><strong>取值速拷（9 条 · 与上表逐字一致）</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>碰撞点极速推镜，交缠点 360° 小半环绕锁焦，金属碰撞火花，武器震颤特效，慢动作高光</span></span>
+<span class="line"><span>攻击轨迹全程跟拍，攻击终点定点锁焦，武器寒光特效，挥击残影，气流撕裂动态模糊，高对比度</span></span>
+<span class="line"><span>低角度贴地跟拍横扫轨迹，横扫末端急停拉镜，地面扬尘，气流冲击波，大范围动态模糊，肢体受力特写</span></span>
+<span class="line"><span>攻击尖端极速跟拍，命中点微距锁焦，破风音效可视化，血雾喷溅特效，慢动作高光，金属反光</span></span>
+<span class="line"><span>脱手物体全程抛物线跟拍，落地瞬间时间冻结效果，武器旋转反光，粒子飘散，高对比度</span></span>
+<span class="line"><span>格挡侧方极速横移运镜，反击方向斜向推镜锁焦，格挡碰撞火花，肌肉紧绷特写，反击残影，动态张力拉满</span></span>
+<span class="line"><span>物体中心轴 360° 环绕跟拍，旋转终点急停锁焦，武器旋转残影，环形光效，高速动态模糊，主体轮廓清晰</span></span>
+<span class="line"><span>垂直攻击轨迹跟拍，落地冲击点俯角锁焦，地面裂纹特效，碎石飞溅，冲击波扩散，尘土飞扬</span></span>
+<span class="line"><span>交缠点缓慢拉镜，分离瞬间极速推镜，金属摩擦火花，武器形变特写，动态模糊，高对比度</span></span></code></pre>
+<h2 id="中距离攻击鞭锁链流星锤绳镖伸缩武器">中距离攻击（鞭、锁链、流星锤、绳镖、伸缩武器）</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">0s-0.5s，旋转中心环绕跟拍→甩出起点锁焦， 双马尾红衣女子甩臂掷出流星锤，锤头拖曳沉重锁链旋转飞出，红色劲装裙摆翻飞，开衩处大腿线条绷紧，双马尾剧烈甩动。</span></span>
+<span class="line"><span style="color:#E1E4E8">0.5s-1s，直线抽击轨迹极速跟拍→命中点微距锁焦， 流星锤直线砸中魔兽交叉格挡的粗壮前臂，锤头金属撞角与角质铠甲碰撞瞬间火星爆裂四溅，魔兽手臂肌肉剧烈震颤凹陷，冲击震波炸开。</span></span>
+<span class="line"><span style="color:#E1E4E8">1s-1.5s，碰撞点极速推镜→交缠点小半环绕锁焦， 魔兽巨掌暴怒抓住链索回拉，女子被拽得前冲半步却借力旋身，锁链在两人之间绷直发出刺耳金属颤音，衣料因惯性紧贴腰身曲线。</span></span>
+<span class="line"><span style="color:#E1E4E8">1.5s-2s，格挡侧方极速横移→反击方向斜向推镜， 女子腾空前翻，足尖踏向魔兽狰狞面门，魔兽血眼圆睁偏头闪避，鼻中喷出粗重黑气，女子裙摆在空翻中如花瓣绽开。</span></span>
+<span class="line"><span style="color:#E1E4E8">2s-2.5s，攻击轨迹全程跟拍→攻击终点定点锁焦， 女子空中旋转拽回流星锤，锤头绕身画出一道饱满弧线后二次横扫砸出，衣袂与锁链破风声尖锐刺耳，看台观众惊呼声起。</span></span>
+<span class="line"><span style="color:#E1E4E8">2.5s-3s，双体中心等距同步跟移运镜→对抗中线锁焦， 锤头砸中魔兽双臂架起的防御姿态，金属与角质碰撞炸出扇形火星，魔兽双脚在擂台石面上犁出两道深沟，碎石向两侧飞溅。</span></span>
+<span class="line"><span style="color:#E1E4E8">3s-3.5s，低角度贴地跟拍横扫轨迹→横扫末端急停拉镜， 女子下盘低扫踢向魔兽脚踝，同时链索顺势缠绕魔兽小腿两圈骤然收紧勒入皮肉，魔兽发出愤怒咆哮抬腿猛挣。</span></span>
+<span class="line"><span style="color:#E1E4E8">3.5s-4s，大范围圆周旋转跟拍→横扫末端急停拉镜， 女子以腰为轴全身发力抡起流星锤360°大回旋，劲风裹挟擂台碎石与尘埃呈环形扩散，暗红色血煞气息随锤头轨迹弥漫。</span></span>
+<span class="line"><span style="color:#E1E4E8">4s-4.5s，攻击尖端极速跟拍→命中点微距锁焦， 锤头裹挟破风声砸向魔兽面部，魔兽张口喷出黑色气焰冲击波正面迎击，两股力量对撞爆开，空气扭曲出可见波纹，画面短暂过曝。</span></span>
+<span class="line"><span style="color:#E1E4E8">4.5s-5s，俯冲贴脸极速推进→定点小半径360°极速环绕， 女子从爆裂烟尘中悍然冲出，双马尾如火焰飞舞，右臂拽回流星锤于头顶高速旋转蓄力，暗红能量粒子从手臂向锤头螺旋汇聚。</span></span>
+<span class="line"><span style="color:#E1E4E8">5s-5.5s，蓄力阶段缓慢拉镜→攻击瞬间极速推镜跟拍， 女子跃起至高点全身肌肉绷紧，流星锤拖曳红色能量尾焰全力砸下，锤头破开空气形成锥形激波，锁链在高速中拉出残影。</span></span>
+<span class="line"><span style="color:#E1E4E8">5.5s-6s，垂直攻击轨迹跟拍→落地冲击点俯角锁焦， 魔兽侧身险险躲避，流星锤砸中擂台地面，锤头整颗嵌入碎裂石面，碎石呈放射状冲天炸开，烟尘环形扩散席卷看台前排，观众与魔兽齐齐后仰。</span></span></code></pre>
+<table>
+<thead>
+<tr>
+<th><strong>运镜描述</strong></th>
+<th><strong>seedance2.0提示词</strong></th>
+<th><strong>适用场景</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>旋转中心环绕跟拍→甩动起点定点锁焦</td>
+<td>旋转中心 360° 环绕跟拍，甩动起点定点锁焦，柔性物体旋转残影，离心力气流特效，金属反光，高速动态模糊</td>
+<td>起势蓄力</td>
+</tr>
+<tr>
+<td>直线抽击轨迹极速跟拍→命中点瞬间微距锁焦</td>
+<td>直线抽击轨迹极速跟拍，命中点瞬间微距锁焦，破空音效可视化，皮肤撕裂特效，血痕飞溅，慢动作高光，高对比度</td>
+<td>快速抽击</td>
+</tr>
+<tr>
+<td>螺旋缠绕轨迹跟拍→缠绕节点收紧锁焦</td>
+<td>螺旋缠绕轨迹全程跟拍，缠绕节点收紧瞬间锁焦，金属摩擦火花，肢体束缚特写，肌肉拉扯线条，动态张力拉满</td>
+<td>缠绕束缚</td>
+</tr>
+<tr>
+<td>大范围圆周旋转跟拍→横扫末端急停拉镜</td>
+<td>大范围圆周旋转跟拍，横扫末端急停拉镜，旋转残影拖尾，气流漩涡特效，地面扬尘碎石，大范围动态模糊</td>
+<td>群战、逼退多名敌人</td>
+</tr>
+<tr>
+<td>多攻击点快速切换跟拍→最后一击定点定格</td>
+<td>多攻击点快速切换跟拍，最后一击定点定格，多段连续残影，打击光效叠加，时间切片效果，高对比度</td>
+<td>眼花缭乱快攻</td>
+</tr>
+<tr>
+<td>物体回收轨迹跟拍→反击方向反向推镜锁焦</td>
+<td>物体回收轨迹全程跟拍，反击方向反向极速推镜锁焦，快速回收残影，突然爆发攻击特效，出其不意的动态转折</td>
+<td>假动作、攻防瞬间转换</td>
+</tr>
+<tr>
+<td>格挡侧方极速横移→交缠点环绕锁焦</td>
+<td>格挡侧方极速横移运镜，交缠点 360° 小半环绕锁焦，碰撞火花四溅，物体绞缠特写，力量对抗震颤特效</td>
+<td>武器交缠</td>
+</tr>
+<tr>
+<td>蓄力阶段缓慢拉镜→攻击瞬间极速推镜跟拍</td>
+<td>蓄力阶段缓慢拉镜，攻击瞬间极速推镜跟拍，肌肉紧绷特写，物体蓄力震颤，爆发性冲击特效，慢动作高光</td>
+<td>强力终结招式</td>
+</tr>
+<tr>
+<td>俯角全程跟拍缠绕过程→最终束缚状态拉镜展示</td>
+<td>俯角全程跟拍缠绕过程，最终束缚状态缓慢拉镜展示，全身缠绕特写，无法挣脱的动态效果，终结光效</td>
+<td>胜负已定时刻</td>
+</tr>
+</tbody>
+</table>
+<p><strong>取值速拷（9 条 · 与上表逐字一致）</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>旋转中心 360° 环绕跟拍，甩动起点定点锁焦，柔性物体旋转残影，离心力气流特效，金属反光，高速动态模糊</span></span>
+<span class="line"><span>直线抽击轨迹极速跟拍，命中点瞬间微距锁焦，破空音效可视化，皮肤撕裂特效，血痕飞溅，慢动作高光，高对比度</span></span>
+<span class="line"><span>螺旋缠绕轨迹全程跟拍，缠绕节点收紧瞬间锁焦，金属摩擦火花，肢体束缚特写，肌肉拉扯线条，动态张力拉满</span></span>
+<span class="line"><span>大范围圆周旋转跟拍，横扫末端急停拉镜，旋转残影拖尾，气流漩涡特效，地面扬尘碎石，大范围动态模糊</span></span>
+<span class="line"><span>多攻击点快速切换跟拍，最后一击定点定格，多段连续残影，打击光效叠加，时间切片效果，高对比度</span></span>
+<span class="line"><span>物体回收轨迹全程跟拍，反击方向反向极速推镜锁焦，快速回收残影，突然爆发攻击特效，出其不意的动态转折</span></span>
+<span class="line"><span>格挡侧方极速横移运镜，交缠点 360° 小半环绕锁焦，碰撞火花四溅，物体绞缠特写，力量对抗震颤特效</span></span>
+<span class="line"><span>蓄力阶段缓慢拉镜，攻击瞬间极速推镜跟拍，肌肉紧绷特写，物体蓄力震颤，爆发性冲击特效，慢动作高光</span></span>
+<span class="line"><span>俯角全程跟拍缠绕过程，最终束缚状态缓慢拉镜展示，全身缠绕特写，无法挣脱的动态效果，终结光效</span></span></code></pre>
+<h2 id="远程攻击弓箭暗器飞镖">远程攻击（弓箭、暗器、飞镖）</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">0.0s-0.5s，贴身平行极速横移+躯干纵向锁焦，亡灵弓手身披破碎骸骨立于白骨堆之上，红色开衩劲装猎猎狂舞，扭曲骸骨弓已拉满月，弓臂筋膜绷紧震颤。</span></span>
+<span class="line"><span style="color:#E1E4E8">0.5s-1s，弹道追踪极速跟拍+命中点微距锁焦，第一支骸骨箭撕裂空气贯穿正面骷髅阴兵颅骨，骨片飞溅，骷髅瞬间崩解炸裂成一团翻滚黑雾消散。</span></span>
+<span class="line"><span style="color:#E1E4E8">1s-1.5s，绕身极速圆周环移运镜，弓手旋身180度红色开衩下摆撕开空气旋飞如刃，左手从腰侧抽出第二支能量箭扣弦，左侧两只骷髅骨刀已劈至头顶上方。</span></span>
+<span class="line"><span style="color:#E1E4E8">1.5s-2s，双发射点极速切换+弹道并行跟拍，弓手一弓双箭离弦，两道幽蓝箭轨并行贯穿两只骷髅胸膛，黑雾爆散遮天蔽月吞没画面。</span></span>
+<span class="line"><span style="color:#E1E4E8">2s-2.5s，低仰角贴脸极速推镜+发力点急停锁焦，三只骷髅从三面合围逼近，弓手不退反进膝盖微曲重心压至最低，骸骨弓横向满月蓄力，弓臂骨节咯吱作响。</span></span>
+<span class="line"><span style="color:#E1E4E8">2.5s-3s，横扫轨迹极速跟拍+末端急停锁焦，骸骨弓身横扫格挡劈来的骨刀，碰撞火星四溅照亮暗夜，弓手借力后仰翻身腾空，空中松弦一箭贯穿骷髅咽喉，黑雾炸开。</span></span>
+<span class="line"><span style="color:#E1E4E8">3s-3.5s，垂直俯拍极速推镜，弓手空中拧腰转向朝下方连射两箭，箭矢垂直贯穿下方两只骷髅天灵盖，黑雾翻涌升腾弥漫。</span></span>
+<span class="line"><span style="color:#E1E4E8">3.5s-4s，侧面平行极速横移+三连射轨迹跟拍，弓手落地瞬间横向滑步，脚尖碾地扬起碎石沙尘，连续三箭呈扇形展开逐一命中，骷髅接二连三爆成黑雾。</span></span>
+<span class="line"><span style="color:#E1E4E8">4s-4.5s，极速连珠发射+多命中点快速切换锁焦，弓手以肉眼难辨的速度连放五箭，每箭精准贯穿一只骷髅颅骨，黑雾此起彼伏如烟花连爆。</span></span>
+<span class="line"><span style="color:#E1E4E8">4.5s-5s，反手弧线弹道跟拍+命中点锁焦，最后一只骷髅从右后方偷袭扑来，弓手头也不回反手一箭，箭矢划出诡异弧线绕后命中颅骨，骷髅瞬间雾化。</span></span>
+<span class="line"><span style="color:#E1E4E8">5s-5.5s，极速旋转拉远上升运镜，镜头以弓手为轴心极速旋转拉远，层层黑雾弥漫翻涌封魔渊底，弓手身影渐小，红色开衩衣摆仍被气浪掀动狂舞。</span></span>
+<span class="line"><span style="color:#E1E4E8">5.5s-6s，环绕俯冲推镜后极速平移穿行，镜头从高空俯冲掠过弓手身侧，最后一个骷髅残骸在镜头后方化作最后一缕黑雾消散融入夜色，血月暗红光芒笼罩满地尸骸与弥漫黑雾的战场。</span></span></code></pre>
+<table>
+<thead>
+<tr>
+<th><strong>运镜描述</strong></th>
+<th><strong>seedance2.0提示词</strong></th>
+<th><strong>适用场景</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>持握手侧方环绕跟拍→蓄力顶点急停锁焦</td>
+<td>持握手侧方 360° 小环绕跟拍，蓄力顶点瞬间急停锁焦，弓弦绷紧特写，肌肉线条紧绷，眼神专注瞄准，呼吸震颤特效</td>
+<td>远距离致命一击</td>
+</tr>
+<tr>
+<td>发射点极速推镜→飞行轨迹全程跟拍</td>
+<td>发射点极速推镜，飞行轨迹全程贴物跟拍，破风尾迹特效，空气扭曲动态模糊，高速运动残影，高对比度</td>
+<td>直线弹道攻击</td>
+</tr>
+<tr>
+<td>多发射点快速切换跟拍→齐发瞬间全景定格</td>
+<td>多发射点快速切镜跟拍，齐发瞬间全景定格，多道平行尾迹，弹幕式飞行效果，时间切片特效</td>
+<td>群战</td>
+</tr>
+<tr>
+<td>目标侧方预判跟拍→闪避瞬间时间冻结</td>
+<td>目标侧方预判式跟拍，闪避瞬间全局时间冻结，飞行物擦身而过特写，气流波动波纹，发丝衣物飘动，高对比度</td>
+<td>闪避、主角高光时刻</td>
+</tr>
+<tr>
+<td>脱手瞬间微距锁焦→抛物线轨迹全程跟拍</td>
+<td>脱手瞬间微距锁焦，抛物线轨迹全程跟拍，物体旋转反光，隐蔽飞行残影，低亮度环境下的微光特效</td>
+<td>偷袭、出其不意</td>
+</tr>
+<tr>
+<td>回旋轨迹环绕跟拍→回收终点急停锁焦</td>
+<td>回旋轨迹 360° 环绕跟拍，回收终点瞬间急停锁焦，环形飞行残影，反向加速特效，手部接物特写，动态张力拉满</td>
+<td>回旋类武器二次折返</td>
+</tr>
+<tr>
+<td>俯角全景拉镜→落点区域慢动作覆盖</td>
+<td>高空俯角全景拉镜，落点区域慢动作全覆盖，漫天飞行尾迹，地面弹坑碎石，冲击波扩散特效，尘土飞扬</td>
+<td>箭雨</td>
+</tr>
+<tr>
+<td>格挡物正面推镜→碰撞瞬间微距锁焦</td>
+<td>格挡物正面极速推镜，碰撞瞬间微距锁焦，金属碰撞火花，飞行物碎裂飞溅，格挡震颤特效，慢动作高光</td>
+<td>徒手接名场面</td>
+</tr>
+<tr>
+<td>穿透瞬间微距锁焦→连续贯穿慢动作横摇</td>
+<td>穿透瞬间微距锁焦，多目标连续贯穿慢动作横摇，飞行残影拖尾，慢镜头依次炸裂，高反差戏剧光</td>
+<td>穿透、连锁一击</td>
+</tr>
+</tbody>
+</table>
+<p><strong>取值速拷（9 条 · 与上表逐字一致）</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>持握手侧方 360° 小环绕跟拍，蓄力顶点瞬间急停锁焦，弓弦绷紧特写，肌肉线条紧绷，眼神专注瞄准，呼吸震颤特效</span></span>
+<span class="line"><span>发射点极速推镜，飞行轨迹全程贴物跟拍，破风尾迹特效，空气扭曲动态模糊，高速运动残影，高对比度</span></span>
+<span class="line"><span>多发射点快速切镜跟拍，齐发瞬间全景定格，多道平行尾迹，弹幕式飞行效果，时间切片特效</span></span>
+<span class="line"><span>目标侧方预判式跟拍，闪避瞬间全局时间冻结，飞行物擦身而过特写，气流波动波纹，发丝衣物飘动，高对比度</span></span>
+<span class="line"><span>脱手瞬间微距锁焦，抛物线轨迹全程跟拍，物体旋转反光，隐蔽飞行残影，低亮度环境下的微光特效</span></span>
+<span class="line"><span>回旋轨迹 360° 环绕跟拍，回收终点瞬间急停锁焦，环形飞行残影，反向加速特效，手部接物特写，动态张力拉满</span></span>
+<span class="line"><span>高空俯角全景拉镜，落点区域慢动作全覆盖，漫天飞行尾迹，地面弹坑碎石，冲击波扩散特效，尘土飞扬</span></span>
+<span class="line"><span>格挡物正面极速推镜，碰撞瞬间微距锁焦，金属碰撞火花，飞行物碎裂飞溅，格挡震颤特效，慢动作高光</span></span>
+<span class="line"><span>穿透瞬间微距锁焦，多目标连续贯穿慢动作横摇，飞行残影拖尾，慢镜头依次炸裂，高反差戏剧光</span></span></code></pre>
+<h2 id="超远程攻击">超远程攻击</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">0.0s-0.5s, 固定机位+低仰角俯瞰，雨夜，大雨滂沱，黑发白衣仙子独立礁石背影，长发与衣袂在风雨中翻飞，远方海面战船灯火摇曳，暗云压境。</span></span>
+<span class="line"><span style="color:#E1E4E8">0.5s-1s, 极速推镜+低仰角跟拍，仙子冰冷回眸侧脸，雨水顺下颌滑落，眼中寒芒乍现，细碎蓝色粒子从周身雨水中浮现。</span></span>
+<span class="line"><span style="color:#E1E4E8">1s-1.5s, 手部结印特写锁焦，纤指快速掐诀变换，蓝色粒子呈螺旋状向掌心汇聚，形成旋转星云，粒子密度持续增加。</span></span>
+<span class="line"><span style="color:#E1E4E8">1.5s-2s, 360°环绕+极速急推，双手结印动作锁焦，掌心凭空凝聚能量球，表面翻涌流动纹路，内部蓝色闪电窜动。</span></span>
+<span class="line"><span style="color:#E1E4E8">2s-2.5s, 低仰角极速推进转半环绕，圆形法阵从脚下向外急剧扩张，纹路逐层亮起，蓝色光芒照亮礁石与海面。</span></span>
+<span class="line"><span style="color:#E1E4E8">2.5s-3s, 粒子光束从掌心喷涌而出直冲云霄，能量剧烈汇聚，画面短暂过曝，空气扭曲，雨水被能量震开四散。</span></span>
+<span class="line"><span style="color:#E1E4E8">3s-3.5s, 镜头极速拉远至上帝视角，巨大法阵覆盖整片海面，海水剧烈翻涌震荡，法阵蓝光与暗云交相辉映。</span></span>
+<span class="line"><span style="color:#E1E4E8">3.5s-4s, 高空固定俯拍+同步镜头震动，能量瞬间爆发，海水炸裂冲天而起，冲击波呈360度环形向外扩散。</span></span>
+<span class="line"><span style="color:#E1E4E8">4s-4.5s, 俯冲极速推镜，惊涛骇浪冲天而起如万马奔腾，排山倒海之势直扑战船群，海浪高达数十丈遮天蔽日。</span></span>
+<span class="line"><span style="color:#E1E4E8">4.5s-5s, 巨浪吞噬战船，船身瞬间碎裂，木板飞溅，桅杆断裂，战船火光在海水中熄灭，残骸沉入深渊。</span></span>
+<span class="line"><span style="color:#E1E4E8">5s-5.5s, 极速反向拉远+广角拉升，整片海域尽收眼底，浪涛持续席卷余波震荡，战船群全军覆没。</span></span>
+<span class="line"><span style="color:#E1E4E8">5.5s-6s, 大远景固定位定帧，暴雨倾盆，海面暗涌未平，仙子独立礁石渺小身影，白衣在天地间飘扬，肃杀震撼。</span></span></code></pre>
+<table>
+<thead>
+<tr>
+<th><strong>运镜描述</strong></th>
+<th><strong>seedance2.0提示词</strong></th>
+<th><strong>适用场景</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>手部结印特写运镜→核心结印动作锁焦</td>
+<td>手部结印特写，核心结印动作锁焦，法阵如闪电流转，蓝光爆闪，元素粒子炸裂成万千寒光刃激射<!--蕾--></td>
+<td>法术起手结印</td>
+</tr>
+<tr>
+<td>低仰角微推进运镜→双手结印动作锁焦</td>
+<td>低仰角微推进，双手翻飞结印动作锁焦，指尖对应元素（金、水、火等，下同）符文流转，周身万道法阵点亮，符展示虚影，对应光效爆发</td>
+<td>强攻系法术起手蓄力</td>
+</tr>
+<tr>
+<td>360° 环绕 + 极速急推运镜→双手结印动作锁焦</td>
+<td>360° 环绕 + 极速急推，双手结印动作锁焦，漫天元素粒子悬停，掌心对应元素法阵如龟裂大地蔓延，金光爆闪，元素粒子炸裂成亿万金刚砂刃激射</td>
+<td>爆发、荒漠、废墟</td>
+</tr>
+<tr>
+<td>跟随运镜→360° 恒定距离环绕运镜→粒子凝聚全程锁焦</td>
+<td>跟随运镜 + 360° 恒定距离环绕，粒子凝聚全程锁焦，金色 （金、水、火等，下同）粒子逐步聚拢成型，同步生长服饰与肢体，周身浮动鎏金古文字符</td>
+<td>光系粒子凝聚施法、法宝显形</td>
+</tr>
+<tr>
+<td>垂直俯拍加速下推运镜→推镜缓停转小幅前推→上半身结印动作锁焦</td>
+<td>垂直俯拍加速下推，推镜缓停转小幅前推，上半身结印动作锁焦，指尖萦绕灵力微光，结印动作流畅自然</td>
+<td>静谧环境施法</td>
+</tr>
+<tr>
+<td>镜头极速拉远至上帝视角运镜→大范围法术展开全景锁焦</td>
+<td>镜头极速拉远至上帝视角，大范围法术展开全景锁焦，大地 （海洋）拔起数千米环形元素（水、图等）壁，主体身形渺小如芥子</td>
+<td>超远程大范围法术展开</td>
+</tr>
+<tr>
+<td>低仰角极速推进转半环绕运镜→元素洪流全景锁焦</td>
+<td>低仰角极速推进转半环绕，元素洪流全景锁焦，元素如暴雨倒灌天穹，本命元素绽放漫天虚影，元素罡气灼出焰尾轨迹</td>
+<td>大范围洪流型法术展开</td>
+</tr>
+<tr>
+<td>极速反向拉远 + 广角拉升运镜→全域灵力爆发全景锁焦</td>
+<td>极速反向拉远 + 广角拉升，全域灵力爆发全景锁焦，带强烈动态模糊冲击效果，灵力渐强席卷全场，带动环境元素狂舞</td>
+<td>大范围灵力释放</td>
+</tr>
+<tr>
+<td>极缓拉镜转全景运镜→终极法阵光爆定格</td>
+<td>极缓拉镜转全景，终极法阵光爆定格，法阵化作千丈太古阵，元素神兽盘绕昂首嘶吼，元素流裹咒文如龙卷贯通天地，空间扭曲</td>
+<td>阵法类大招收尾</td>
+</tr>
+</tbody>
+</table>
+<p><strong>取值速拷（9 条 · 与上表逐字一致）</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>手部结印特写，核心结印动作锁焦，法阵如闪电流转，蓝光爆闪，元素粒子炸裂成万千寒光刃激射&lt;!--蕾--&gt;</span></span>
+<span class="line"><span>低仰角微推进，双手翻飞结印动作锁焦，指尖对应元素（金、水、火等，下同）符文流转，周身万道法阵点亮，符展示虚影，对应光效爆发</span></span>
+<span class="line"><span>360° 环绕 + 极速急推，双手结印动作锁焦，漫天元素粒子悬停，掌心对应元素法阵如龟裂大地蔓延，金光爆闪，元素粒子炸裂成亿万金刚砂刃激射</span></span>
+<span class="line"><span>跟随运镜 + 360° 恒定距离环绕，粒子凝聚全程锁焦，金色 （金、水、火等，下同）粒子逐步聚拢成型，同步生长服饰与肢体，周身浮动鎏金古文字符</span></span>
+<span class="line"><span>垂直俯拍加速下推，推镜缓停转小幅前推，上半身结印动作锁焦，指尖萦绕灵力微光，结印动作流畅自然</span></span>
+<span class="line"><span>镜头极速拉远至上帝视角，大范围法术展开全景锁焦，大地 （海洋）拔起数千米环形元素（水、图等）壁，主体身形渺小如芥子</span></span>
+<span class="line"><span>低仰角极速推进转半环绕，元素洪流全景锁焦，元素如暴雨倒灌天穹，本命元素绽放漫天虚影，元素罡气灼出焰尾轨迹</span></span>
+<span class="line"><span>极速反向拉远 + 广角拉升，全域灵力爆发全景锁焦，带强烈动态模糊冲击效果，灵力渐强席卷全场，带动环境元素狂舞</span></span>
+<span class="line"><span>极缓拉镜转全景，终极法阵光爆定格，法阵化作千丈太古阵，元素神兽盘绕昂首嘶吼，元素流裹咒文如龙卷贯通天地，空间扭曲</span></span></code></pre>
+<h2 id="打斗整合篇82组图解--组合条目动作运镜特效预绑定单槽取用">打斗整合篇（82组图解 · 组合条目：动作+运镜+特效预绑定，单槽取用）</h2>
+<h2 id="一快攻连招与轨迹跟拍15组">一、快攻连招与轨迹跟拍（15组）</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">3D CG国漫，暗黑玄幻风格，古装，硬核格斗美学，电影级UE5渲染，PBR物理材质，全局体积光照，高燃精准卡点，快节奏，8K超清高帧率，氛围感强，动作丝滑无穿模/崩坏/跳帧，时序精准匹配，动态模糊自然，光影统一，镜头逻辑连贯</span></span>
+<span class="line"><span style="color:#E1E4E8">0s-0.5s | ACT第三人称侧后方跟拍，微仰远景 | 红衣斗笠女子在客栈大厅旋身拔刀，短刀横劈格挡左侧袭来的长刀，刀锋碰撞迸发火星四溅，斗笠边缘剧烈颤抖，红色发绳与衣摆飞扬而起 0.5s-1s | 双体中心等距同步跟移运镜→对抗中线锁焦 | 女子反手挥刀划出半圆弧线，短刀刀锋掠过最近刺客咽喉，鲜血飞溅，刺客后仰倒地撞翻身后木桌，碗碟碎裂木屑飞溅 1s-1.5s | 贴地低仰角跟拍横移，ACT视角复位 | 女子矮身滑步，短刀横扫下盘，刀刃划破两名刺客小腿，布帛撕裂血线飙出，脚下木地板被踩出龟裂碎屑炸开 1.5s-2s | 俯冲推镜+攻击轨迹跟拍 | 二层两名刺客一跃而下长刀凌空劈落，女子后撤半步仰身闪避，刀锋擦过斗笠边缘削落一缕红绳，斗笠微微倾斜露出半张冷冽面容 2s-2.5s | 绕身极速圆周环移运镜→躯体核心锁焦 | 女子借后仰惯性旋身一转，速度瞬间爆发到极致，身形在烛火摇曳中拖出三四道红色残影重叠流动，右腿高抬开衩裙摆翻飞露出一整条腿，凌厉回旋踢正中左侧刺客面部，肌肉震颤五官挤压变形，刺客旋转飞出撞碎楼梯护栏 2.5s-3s | 碰撞点极速推镜→交缠点小半环绕锁焦 | 正面刺客长刀突刺而来，女子短刀反握上撩格挡，两刀交缠角力火星四溅，刀身摩擦发出刺耳金属尖啸，女子斗笠下眼神凌厉如刀 3s-3.5s | 攻击轨迹全程跟拍→攻击终点定点锁焦 | 女子借力旋身，短刀顺着长刀刀身滑斩而上，刃尖直削刺客握刀手指，刺客惨叫松手，长刀脱手旋转飞上半空，女子手腕翻转刀柄回磕其太阳穴 3.5s-4s | 低角度贴地跟拍横扫轨迹→横扫末端急停拉镜 | 女子俯身低姿大回旋扫刀，以腰为轴带动全身，短刀画出一道银白圆弧逼退周围三名刺客，刀锋斩断两根木柱，木屑横飞二楼屋檐微微塌陷 4s-4.5s | 攻击尖端极速跟拍→命中点微距锁焦 | 女子踏碎一块地板腾空跃起，半空中反握短刀居高临下刺入一名刺客肩胛，刀尖穿透皮肉从后背刺出，鲜血顺着刃尖滴落，斗笠翻飞露出完整面容 4.5s-5s | 垂直攻击轨迹跟拍→落地冲击俯角锁焦 | 女子拔刀落地顺势翻滚，短刀划出地面割裂轨迹，起身瞬间将短刀掷出，刀刃旋转飞射正中二楼刺客腹部，刺客跪倒在栏杆边 5s-5.5s | 固定机位锁焦→反击方向斜向推镜锁焦 | 女子赤手空拳面对最后两人围攻，侧身闪避两把长刀横扫，铁板桥后仰双手撑地，双腿上蹬踢飞刺客下巴，空中翻滚重新接住回收的短刀 5.5s-6s | ACT第三人称纵深式穿梭推进，微仰远景 | 女子身形猛然压低，脚下地面炸裂碎屑如子弹般向两侧飞开，整个人在瞬息之间化为一道红色残影拖曳着斗笠的黑色虚影向前冲刺，刀尖在地上刮出一线火星，朝客栈门外残敌猛追而去，身后客栈内烛火摇曳尸骸遍地</span></span></code></pre>
+<p>连续攻击，节奏感与速度感强，镜头紧密跟随攻击轨迹移动，多段打击在短时间内密集铺开，目不暇接</p>
+<table>
+<thead>
+<tr>
+<th><strong>序号</strong></th>
+<th><strong>名称</strong></th>
+<th><strong>Seedance 提示词</strong></th>
+<th><strong>使用场景</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>连环快斩</td>
+<td>连环快斩拖出交叉赤红刀芒，刀光交织成网状铺满画面，伴随密集红色光粒炸裂四溅，光粒亮度高且运动轨迹呈放射状。</td>
+<td>刀剑对决</td>
+</tr>
+<tr>
+<td>2</td>
+<td>轮指</td>
+<td>多道墨金色光矢暴雨般射出，每一道拖出独立半透明金色尾迹，尾迹交织成网状光效残留，光轨交叉处亮度叠加。</td>
+<td>远程压制、群战清场</td>
+</tr>
+<tr>
+<td>3</td>
+<td>连突</td>
+<td>身形化为残影，长矛在极短时间内高速连刺，矛尖炸裂成数十道银白星芒，每道刺痕拖曳纤细光丝交织成锥形雷暴场，伴随连绵雷鸣。</td>
+<td>枪矛连击、贴身快攻</td>
+</tr>
+<tr>
+<td>4</td>
+<td>扫弦</td>
+<td>指锋横抹过弦，迸射狭长弯月状墨金色弦刃，刃气边缘不断震颤出细密金色波纹，飞行路径洒落点点光屑。</td>
+<td>中距牵制</td>
+</tr>
+<tr>
+<td>5</td>
+<td>横扫</td>
+<td>横向挥鞭拖出扇形幽蓝火焰光幕，光幕由密集粒子流构成，边缘呈毛边状消散，照亮周围扬尘，光幕残留约2秒。</td>
+<td>群敌清场、范围压制</td>
+</tr>
+<tr>
+<td>6</td>
+<td>抽击</td>
+<td>鞭梢命中处炸开蓝银色球状光爆，环形冲击波向外扩散，溅射密集蓝白色火星粒子，光爆残留闪烁后消散。</td>
+<td>中距抽打</td>
+</tr>
+<tr>
+<td>7</td>
+<td>劈击</td>
+<td>长鞭如落雷竖直劈下，鞭身拖出笔直焰色光柱，命中时炸开十字状幽蓝光痕，大量蓝金色火星沿地面放射状溅射。</td>
+<td>重鞭劈砸、破防重击</td>
+</tr>
+<tr>
+<td>8</td>
+<td>旋刀</td>
+<td>旋刀划出完整圆形赤红烈焰刀光，刀光呈宽扇形拖尾，边缘火星溅落，圆形光痕残留约1秒缓慢消散。</td>
+<td>回旋斩击、近身清场</td>
+</tr>
+<tr>
+<td>9</td>
+<td>竖劈</td>
+<td>竖劈拖出垂直赤红烈焰刀芒，刀芒宽厚呈火焰形态，落地处斩出焦黑裂缝，裂缝中透出暗红火光。</td>
+<td>正面强攻、一刀两断</td>
+</tr>
+<tr>
+<td>10</td>
+<td>攻击轨迹跟拍</td>
+<td>攻击轨迹全程跟拍→攻击终点定点锁焦，武器寒光特效，挥击残影拖尾，气流撕裂动态模糊，高对比度。</td>
+<td>多段连斩、挥砍追击</td>
+</tr>
+<tr>
+<td>11</td>
+<td>密集连打</td>
+<td>多攻击点快速切换跟拍→最后一击定点定格，多段连续残影叠加，打击光效累积，时间切片效果。</td>
+<td>疾速快攻、多点打击</td>
+</tr>
+<tr>
+<td>12</td>
+<td>直线抽击跟拍</td>
+<td>直线抽击轨迹极速跟拍→命中点瞬间微距锁焦，破空音效可视化，皮肤撕裂血痕飞溅，慢动作高光。</td>
+<td>鞭索抽打、速攻突击</td>
+</tr>
+<tr>
+<td>13</td>
+<td>弹道追踪跟拍</td>
+<td>发射点极速推镜→飞行轨迹全程贴物跟拍，破风尾迹特效，空气扭曲动态模糊，高速运动残影。</td>
+<td>远程狙击、箭矢追镜</td>
+</tr>
+<tr>
+<td>14</td>
+<td>连珠发射</td>
+<td>极速连珠发射→多命中点快速切换锁焦，每箭精准贯穿，目标依次炸裂如烟花连爆，黑雾此起彼伏。</td>
+<td>连珠速射、多敌清场</td>
+</tr>
+<tr>
+<td>15</td>
+<td>横扫轨迹跟拍</td>
+<td>低角度贴地跟拍横扫轨迹→横扫末端急停拉镜，地面扬尘翻涌，气流冲击波扩散，大范围动态模糊，肢体受力特写。</td>
+<td>大范围横扫、扫腿扫兵</td>
+</tr>
+</tbody>
+</table>
+<p><strong>取值速拷（15 条 · 与上表逐字一致）</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>连环快斩拖出交叉赤红刀芒，刀光交织成网状铺满画面，伴随密集红色光粒炸裂四溅，光粒亮度高且运动轨迹呈放射状。</span></span>
+<span class="line"><span>多道墨金色光矢暴雨般射出，每一道拖出独立半透明金色尾迹，尾迹交织成网状光效残留，光轨交叉处亮度叠加。</span></span>
+<span class="line"><span>身形化为残影，长矛在极短时间内高速连刺，矛尖炸裂成数十道银白星芒，每道刺痕拖曳纤细光丝交织成锥形雷暴场，伴随连绵雷鸣。</span></span>
+<span class="line"><span>指锋横抹过弦，迸射狭长弯月状墨金色弦刃，刃气边缘不断震颤出细密金色波纹，飞行路径洒落点点光屑。</span></span>
+<span class="line"><span>横向挥鞭拖出扇形幽蓝火焰光幕，光幕由密集粒子流构成，边缘呈毛边状消散，照亮周围扬尘，光幕残留约2秒。</span></span>
+<span class="line"><span>鞭梢命中处炸开蓝银色球状光爆，环形冲击波向外扩散，溅射密集蓝白色火星粒子，光爆残留闪烁后消散。</span></span>
+<span class="line"><span>长鞭如落雷竖直劈下，鞭身拖出笔直焰色光柱，命中时炸开十字状幽蓝光痕，大量蓝金色火星沿地面放射状溅射。</span></span>
+<span class="line"><span>旋刀划出完整圆形赤红烈焰刀光，刀光呈宽扇形拖尾，边缘火星溅落，圆形光痕残留约1秒缓慢消散。</span></span>
+<span class="line"><span>竖劈拖出垂直赤红烈焰刀芒，刀芒宽厚呈火焰形态，落地处斩出焦黑裂缝，裂缝中透出暗红火光。</span></span>
+<span class="line"><span>攻击轨迹全程跟拍→攻击终点定点锁焦，武器寒光特效，挥击残影拖尾，气流撕裂动态模糊，高对比度。</span></span>
+<span class="line"><span>多攻击点快速切换跟拍→最后一击定点定格，多段连续残影叠加，打击光效累积，时间切片效果。</span></span>
+<span class="line"><span>直线抽击轨迹极速跟拍→命中点瞬间微距锁焦，破空音效可视化，皮肤撕裂血痕飞溅，慢动作高光。</span></span>
+<span class="line"><span>发射点极速推镜→飞行轨迹全程贴物跟拍，破风尾迹特效，空气扭曲动态模糊，高速运动残影。</span></span>
+<span class="line"><span>极速连珠发射→多命中点快速切换锁焦，每箭精准贯穿，目标依次炸裂如烟花连爆，黑雾此起彼伏。</span></span>
+<span class="line"><span>低角度贴地跟拍横扫轨迹→横扫末端急停拉镜，地面扬尘翻涌，气流冲击波扩散，大范围动态模糊，肢体受力特写。</span></span></code></pre>
+<h2 id="二身法走位与视角切换13组">二、身法走位与视角切换（13组）</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">视频内容：阴森恐怖的封魔渊底，手持长剑的冷艳白衣仙子立于血月暗空之下，用长剑击退了四面围攻她的白色骷髅阴兵。 3D CG国漫，暗黑玄幻风格，硬核格斗美学，电影级UE5渲染，PBR物理材质，全局体积光照，高燃精准卡点，快节奏，8K超清高帧率，氛围感强，动作丝滑无穿模/崩坏/跳帧，时序精准匹配，动态模糊自然，光影统一，镜头逻辑连贯，</span></span>
+<span class="line"><span style="color:#E1E4E8">0s-0.5s，双体中心等距同步跟移运镜，血月暗空下阴森封魔渊底，冷艳白衣仙子（裙摆开衩微露腿）持剑立于四只白色骷髅阴兵围攻中，旋身横剑格挡正面劈砍，剑刃碰撞火星四溅，裙摆翻飞、发丝烈烈飘扬， 0.5s-1s，碰撞点极速推镜，仙子长剑与正面骷髅兵刃高强度交格，剑刃摩擦迸射火花，骷髅被内力震退半步，地面碎石飞溅扬尘， 1s-1.5s，低角度贴地跟拍横扫轨迹→横扫末端急停拉镜，仙子趁势旋身一记横斩，剑光弧线扫过左侧两只骷髅，骸骨自腰部断裂碎散化为黑烟爆散， 1.5s-2s，镜头切换成第一视角，镜头即仙子的眼睛。画面中请勿出现仙子的脸和身体，只能出现她的手和剑，通过镜头的晃动来代表情绪和打斗的激烈程度。攻击轨迹全程跟拍→攻击终点定点锁焦，仙子反手斜撩一剑从右下至左上，右侧骷髅连剑带臂被斜劈裂开，残骸崩塌化为黑烟飘散， 2s-2.5s，镜头仍旧保持第一视角，镜头即仙子的眼睛。垂直攻击轨迹跟拍→落地冲击点俯角锁焦，仙子腾空跃起裙摆飞扬，长剑凌空垂直下劈，下方骷髅从头至脚被劈裂炸碎成黑烟，地面震裂碎石溅射， 2.5s-3s，从此时开始，镜头转化成常规视角。绕身极速圆周环移运镜，仙子落地借势360°回旋剑舞，剑光环绕周身呈环形扩散切割，逼近的两只骷髅被剑光拦腰斩中断裂化烟， 3s-3.5s，贴身平行极速横移运镜，仙子疾步前冲连斩，第一剑横削斩断骷髅脖颈，第二剑拦腰劈碎骸骨，碎裂骸骨飞散化黑烟， 3.5s-4s，攻击尖端极速跟拍→命中点微距锁焦，仙子一剑直刺，剑尖穿透骷髅胸膛核心，裂纹从剑点处蔓延全身，骷髅瞬间炸裂成黑烟弥漫， 4s-4.5s，格挡侧方极速横移→反击方向斜向推镜锁焦，左侧骷髅偷袭劈砍，仙子反手格挡震开剑刃，借转身惯性斜斩劈开骷髅半边躯体化黑烟， 4.5s-5s，俯冲贴脸极速推进→定点小半径360°极速环绕，最后两只骷髅同时左右夹击扑来，仙子俯身冲刺360°环绕剑光，环形斩同时将二者拦腰切断化黑烟， 5s-5.5s，碰撞点极速推镜，一只骷髅从黑烟中突出挥剑直刺，仙子侧身闪避剑锋擦肩而过，反手一剑从骷髅左肩斜劈至右肋，骸骨崩塌化烟， 5.5s-6s，贴身平行极速横移运镜，最后一只骷髅在烟尘中扑来，仙子不退反进一剑刺入骷髅面门随即抽剑横削，骷髅碎裂化黑烟弥漫四周，仙子剑尖在烟尘中划出一道凌厉寒光轨迹，衣袂与发丝在能量余波中剧烈翻飞不止。面骷髅骨架轰然崩塌如雪崩，白衣长发在惯性中飞扬，血月当空笼罩满地碎骨</span></span></code></pre>
+<p>突出角色空间位移与镜头视角的灵活切换，通过绕身、越肩、俯冲等多变视角展现身法飘逸与走位</p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>名称</th>
+<th>Seedance 提示词</th>
+<th>使用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>越肩跟拍闪避拆招</td>
+<td>越肩跟拍横移运镜，展示敌人攻击轨迹与主角精准走位，闪避瞬间衣袂翻飞，随即拆招反击衔接无缝。</td>
+<td>闪避反击、第三人称</td>
+</tr>
+<tr>
+<td>2</td>
+<td>破空甩镜，残影迷踪</td>
+<td>破空甩镜+残影跳切，镜头随主角高速位移猛甩，利用跳切将数道残影留在画面不同方位，让对手无法判断真身。</td>
+<td>瞬移身法</td>
+</tr>
+<tr>
+<td>3</td>
+<td>360°环绕急推</td>
+<td>360°环绕急推，从环境全景瞬间切入人物杀意眼神，对峙蓄势，风停叶止，氛围绷至极限。</td>
+<td>对峙开场</td>
+</tr>
+<tr>
+<td>4</td>
+<td>螺旋升镜，凌空压制</td>
+<td>螺旋升镜+环绕运镜，展示大范围剑气或群攻身法，身形旋转上升带起气旋，衣袍猎猎。</td>
+<td>群攻</td>
+</tr>
+<tr>
+<td>5</td>
+<td>疾速俯冲环绕，空中追击</td>
+<td>疾速俯冲环绕，从高处锁定地面目标发动突袭，致命连环出击，衣发逆风狂舞。</td>
+<td>突袭、追击</td>
+</tr>
+<tr>
+<td>6</td>
+<td>绕背环移·突袭反杀</td>
+<td>绕身极速圆周环移运镜→躯干核心动态锁焦，绕背突袭反杀，残影效果，武器反光，快速切换视角。</td>
+<td>背刺、反杀</td>
+</tr>
+<tr>
+<td>7</td>
+<td>贴地横移+高速攻防</td>
+<td>贴身平行极速横移运镜→躯干纵向锁焦跟拍，高速拳脚攻防，动态模糊，拳风特效。</td>
+<td>拳脚快攻、短兵相接</td>
+</tr>
+<tr>
+<td>8</td>
+<td>低仰角推进·蓄力重击</td>
+<td>低仰角贴脸渐进推进+收尾180°小半环绕运镜，发力点锁焦，重拳破防特写，肌肉紧绷，冲击波纹特效。</td>
+<td>蓄力一击、重拳</td>
+</tr>
+<tr>
+<td>9</td>
+<td>贴地跟移地面缠斗</td>
+<td>贴地同步跟移横滚运镜→地面核心动作锁焦，地面砸拳，尘土飞扬，血迹飞溅，低角度拍摄。</td>
+<td>地面翻滚、倒地追击</td>
+</tr>
+<tr>
+<td>10</td>
+<td>双体中线锁焦，内围角力</td>
+<td>双体中心等距同步跟移运镜→对抗中线锚点锁焦，内围缠抱角力，肌肉线条，汗水飞溅，动态张力。</td>
+<td>近身缠抱、摔跤角力</td>
+</tr>
+<tr>
+<td>11</td>
+<td>闪避冻结</td>
+<td>目标侧方预判式跟拍→闪避瞬间全局时间冻结，飞行物擦身而过特写，气流波动波纹，发丝衣物飘动。</td>
+<td>极限闪避</td>
+</tr>
+<tr>
+<td>12</td>
+<td>旋转中心环绕，起势蓄力</td>
+<td>旋转中心360°环绕跟拍→甩动起点定点锁焦，柔性物体旋转残影，离心力气流特效，金属反光。</td>
+<td>武器起手、蓄势待发</td>
+</tr>
+<tr>
+<td>13</td>
+<td>连招起手</td>
+<td>物体中心轴360°环绕跟拍→旋转终点急停锁焦，武器旋转残影拖尾，环形光效，高速动态模糊。</td>
+<td>旋转起势、连招前摇</td>
+</tr>
+</tbody>
+</table>
+<p><strong>取值速拷（13 条 · 与上表逐字一致）</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>越肩跟拍横移运镜，展示敌人攻击轨迹与主角精准走位，闪避瞬间衣袂翻飞，随即拆招反击衔接无缝。</span></span>
+<span class="line"><span>破空甩镜+残影跳切，镜头随主角高速位移猛甩，利用跳切将数道残影留在画面不同方位，让对手无法判断真身。</span></span>
+<span class="line"><span>360°环绕急推，从环境全景瞬间切入人物杀意眼神，对峙蓄势，风停叶止，氛围绷至极限。</span></span>
+<span class="line"><span>螺旋升镜+环绕运镜，展示大范围剑气或群攻身法，身形旋转上升带起气旋，衣袍猎猎。</span></span>
+<span class="line"><span>疾速俯冲环绕，从高处锁定地面目标发动突袭，致命连环出击，衣发逆风狂舞。</span></span>
+<span class="line"><span>绕身极速圆周环移运镜→躯干核心动态锁焦，绕背突袭反杀，残影效果，武器反光，快速切换视角。</span></span>
+<span class="line"><span>贴身平行极速横移运镜→躯干纵向锁焦跟拍，高速拳脚攻防，动态模糊，拳风特效。</span></span>
+<span class="line"><span>低仰角贴脸渐进推进+收尾180°小半环绕运镜，发力点锁焦，重拳破防特写，肌肉紧绷，冲击波纹特效。</span></span>
+<span class="line"><span>贴地同步跟移横滚运镜→地面核心动作锁焦，地面砸拳，尘土飞扬，血迹飞溅，低角度拍摄。</span></span>
+<span class="line"><span>双体中心等距同步跟移运镜→对抗中线锚点锁焦，内围缠抱角力，肌肉线条，汗水飞溅，动态张力。</span></span>
+<span class="line"><span>目标侧方预判式跟拍→闪避瞬间全局时间冻结，飞行物擦身而过特写，气流波动波纹，发丝衣物飘动。</span></span>
+<span class="line"><span>旋转中心360°环绕跟拍→甩动起点定点锁焦，柔性物体旋转残影，离心力气流特效，金属反光。</span></span>
+<span class="line"><span>物体中心轴360°环绕跟拍→旋转终点急停锁焦，武器旋转残影拖尾，环形光效，高速动态模糊。</span></span></code></pre>
+<h2 id="三终结爆发与绝杀慢镜12组">三、终结爆发与绝杀慢镜（12组）</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">3D CG 国漫暗黑玄幻风格，史诗级奇幻大片质感，Seedance 2.0 快节奏高清模式，虚幻引擎 5 极致画质，8K 超高清，高对比度暗调光影，赭金 + 墨黑主色调，高速沙粒流体无拖影，沙尘物理精度拉满，动态模糊自然，沉浸式第一人称景深，边缘锐利无闪烁，运镜丝滑无卡顿。 万里死寂的枯骨荒漠中心，头戴破旧竹编斗笠的玄衣女子伫立于沙暴之眼，斗笠边缘垂落的赭色布条与破碎衣袍在灼热狂风中烈烈狂舞，眼神枯寂如镇狱明王，引动荒芜之力天崩地裂。</span></span>
+<span class="line"><span style="color:#E1E4E8">0-2s 镜头围绕人物做 360° 环绕同时极速向前急推，她双手在胸前结狰狞地煞印，漫天悬浮的沙砾骤然停滞，胸口浮现暗金色锋利沙系法阵，纹路如龟裂大地般蔓延，金光爆闪的瞬间沙砾炸裂成亿万粒金刚砂刃向四周激射，竹编斗笠在冲击波中剧烈震颤，编织缝隙间透出刺目金芒；2-5s 镜头极速拉远至上帝视角，整片荒漠轰然拔起数千米高的环形沙尘暴壁，沙粒如烧红的铁砂灼烧空气，天地间只剩玄黑与炽金的极致吞噬，残阳在漫天黄沙下黯淡如死瞳，竹笠女子渺小如芥子悬浮于风暴中心；5-8s 女子猛地向前挥出双臂，遮天蔽日的灭世沙浪裹挟着断骨与飓风，以碎星沉陆之势直冲镜头，滚烫沙粒扑面而来，斗笠在狂风中几乎被掀飞又被死死压住，最终定格在沙浪巨口即将彻底吞噬镜头、竹笠边缘被沙粒擦出火星的窒息湮灭瞬间。 细节强化：沙粒带着焚金融铁的炽光，沙暴翻涌泛着地脉暗金纹，竹编斗笠的编织纹理、磨损毛边与被沙粒击打出的细微凹痕清晰可见，斗笠下飞扬的发丝与布条动态丝滑，沙暴的漩涡、坍缩与流沙肌理真实，热浪扭曲空气的折射波纹可见，飞沙走石撕扯衣袂发丝的动感自然，天塌地陷的沉沦倾覆感与寂灭压迫感拉满。</span></span></code></pre>
+<p>蓄力铺垫—爆发释放—慢镜定格，常用于招式收尾的地方，或者战斗高潮的地方</p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>名称</th>
+<th>Seedance 提示词</th>
+<th>使用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>终结横斩</td>
+<td>蓄力横斩拖出横贯全屏的烈焰刀光，刀光呈炽白到赤红渐变，边缘粒子拖尾极长，定格瞬间光效达到峰值亮度。</td>
+<td>一刀终结</td>
+</tr>
+<tr>
+<td>2</td>
+<td>齐弦爆发</td>
+<td>无数金色光矢如暴雨倾泻，每道光矢拖曳细长金色尾迹，尾迹密集覆盖画面，整体形成金色光雨残留效果。</td>
+<td>大招收尾</td>
+</tr>
+<tr>
+<td>3</td>
+<td>子弹时间</td>
+<td>升格子弹时间+碎片追镜，时间骤然放缓，镜头环绕主角同时追踪崩裂的冰晶、汗珠与碎甲，最终随敌人重重砸地。</td>
+<td>绝杀</td>
+</tr>
+<tr>
+<td>4</td>
+<td>急推定格+收招留白</td>
+<td>急推定格特写，收招，尘埃落定，强调侠客孤独感与胜利姿态，意境留白，衣摆缓落。</td>
+<td>战斗收尾</td>
+</tr>
+<tr>
+<td>5</td>
+<td>俯冲环绕+终结大招</td>
+<td>俯冲贴脸极速推进+定点小半径360°极速环绕运镜，双体中线锁焦，终结大招，慢动作高光。</td>
+<td>高光时刻</td>
+</tr>
+<tr>
+<td>6</td>
+<td>蓄力拉镜→爆发推镜</td>
+<td>蓄力阶段缓慢拉镜→攻击瞬间极速推镜跟拍，肌肉紧绷特写，物体蓄力震颤，爆发性冲击特效，慢动作高光。</td>
+<td>蓄力爆发、必杀一击</td>
+</tr>
+<tr>
+<td>7</td>
+<td>穿透慢镜</td>
+<td>穿透瞬间微距锁焦→多目标连续贯穿慢动作横摇，飞行残影拖尾，慢镜头依次炸裂，高反差戏剧光。</td>
+<td>连锁击杀</td>
+</tr>
+<tr>
+<td>8</td>
+<td>震地鞭·灼热裂域</td>
+<td>长鞭猛击地面，幽蓝火焰如流体注入大地，环形蓝焰冲击波扩散，裂隙喷涌蓝金色光粒，形成短暂灼热残留区域。</td>
+<td>鞭击地面、区域控制</td>
+</tr>
+<tr>
+<td>9</td>
+<td>震弦</td>
+<td>指尖扣弦骤放，弦身剧烈震颤，荡开层层墨色半透明涟漪音波，每道波环边缘嵌断续金色光斑，空气如水面褶皱。</td>
+<td>音波震荡、范围冲击</td>
+</tr>
+<tr>
+<td>10</td>
+<td>蓄力贯穿</td>
+<td>刀尖凝聚剧烈脉动炽白光核，突刺时化作赤红光束直线贯穿，光束周围锥形火星尾流喷射，命中产生岩浆爆裂光焰团。</td>
+<td>蓄力突刺、光束贯穿</td>
+</tr>
+<tr>
+<td>11</td>
+<td>环形扩散</td>
+<td>黑色半透明环形音波冲击波向外扩散，波峰带金色描边，环身附有细微发光粒子，所过之处空气扭曲。</td>
+<td>音波清场、冲击扩散</td>
+</tr>
+<tr>
+<td>12</td>
+<td>致命一击</td>
+<td>攻击尖端极速跟拍→命中点微距锁焦，破风音效可视化，血雾喷溅特效，慢动作高光，金属反光。</td>
+<td>致命绝杀、命中特写</td>
+</tr>
+</tbody>
+</table>
+<p><strong>取值速拷（12 条 · 与上表逐字一致）</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>蓄力横斩拖出横贯全屏的烈焰刀光，刀光呈炽白到赤红渐变，边缘粒子拖尾极长，定格瞬间光效达到峰值亮度。</span></span>
+<span class="line"><span>无数金色光矢如暴雨倾泻，每道光矢拖曳细长金色尾迹，尾迹密集覆盖画面，整体形成金色光雨残留效果。</span></span>
+<span class="line"><span>升格子弹时间+碎片追镜，时间骤然放缓，镜头环绕主角同时追踪崩裂的冰晶、汗珠与碎甲，最终随敌人重重砸地。</span></span>
+<span class="line"><span>急推定格特写，收招，尘埃落定，强调侠客孤独感与胜利姿态，意境留白，衣摆缓落。</span></span>
+<span class="line"><span>俯冲贴脸极速推进+定点小半径360°极速环绕运镜，双体中线锁焦，终结大招，慢动作高光。</span></span>
+<span class="line"><span>蓄力阶段缓慢拉镜→攻击瞬间极速推镜跟拍，肌肉紧绷特写，物体蓄力震颤，爆发性冲击特效，慢动作高光。</span></span>
+<span class="line"><span>穿透瞬间微距锁焦→多目标连续贯穿慢动作横摇，飞行残影拖尾，慢镜头依次炸裂，高反差戏剧光。</span></span>
+<span class="line"><span>长鞭猛击地面，幽蓝火焰如流体注入大地，环形蓝焰冲击波扩散，裂隙喷涌蓝金色光粒，形成短暂灼热残留区域。</span></span>
+<span class="line"><span>指尖扣弦骤放，弦身剧烈震颤，荡开层层墨色半透明涟漪音波，每道波环边缘嵌断续金色光斑，空气如水面褶皱。</span></span>
+<span class="line"><span>刀尖凝聚剧烈脉动炽白光核，突刺时化作赤红光束直线贯穿，光束周围锥形火星尾流喷射，命中产生岩浆爆裂光焰团。</span></span>
+<span class="line"><span>黑色半透明环形音波冲击波向外扩散，波峰带金色描边，环身附有细微发光粒子，所过之处空气扭曲。</span></span>
+<span class="line"><span>攻击尖端极速跟拍→命中点微距锁焦，破风音效可视化，血雾喷溅特效，慢动作高光，金属反光。</span></span></code></pre>
+<h2 id="四格挡相持与劲力对冲13组">四、格挡相持与劲力对冲（13组）</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">3D CG国漫，暗黑玄幻美学，硬核格斗美学高燃精准卡点，快节奏，8K超清高帧率，电影级UE5渲染，PBR物理材质，全局体积光照，氛围感强，动作丝滑无穿模/崩坏/跳帧，时序精准匹配，动态模糊自然，光影统一，镜头逻辑连贯 故事介绍：沙漠中，沙尘飞扬，场景中有破败的驿站。一位身穿红色仙袍弹着古筝在对抗一位穿蓑笠的男子，武器是剑的男子。 镜头提示词：</span></span>
+<span class="line"><span style="color:#E1E4E8">0s-0.5s | 碰撞点极速推镜，蓑笠男子从漫天沙尘中疾冲而出，手中长剑拖出冷冽寒光，剑尖直刺前方弹古筝的红衣女子，脚下沙地炸开两道扬尘轨迹，蓑衣草绳与破败驿站红帐剧烈向后飘飞。 0.5s-1s | 攻击轨迹全程跟拍→攻击终点定点锁焦，红衣女子指尖急速拨过最后一串音后双掌重击筝身，借反作用力腾空前翻离开原坐位，古筝在空中翻转，男子剑尖刺空刺入沙地炸开沙浪。 1s-1.5s | 俯冲极速推镜→落地点锁焦，女子空中翻转180度后单膝重重落地，红袖与长发被气浪向后翻涌，右手虚空一抓，古筝在空中划出一道弧线飞回她手中，男子拔剑转身横扫，剑气贴地斩来。 1.5s-2s | 绕身极速圆周环移运镜→躯体核心动态锁焦，女子怀抱古筝侧身滑步闪避，剑气擦身而过将身后驿站红帐拦腰斩断，红布飞卷，女子滑步急停脚底在沙地犁出长痕，左手托筝右手五指扣住琴弦蓄势待发。 2s-2.5s | 低仰角贴脸渐进推进→发力点锁焦，女子右手五指狠狠扫弦，一道扇形金色音波能量贴地横扫而出，男子纵身跃起，能量波从脚下掠过将身后破败驿站的木柱拦腰切断，断面燃烧炸裂。 2.5s-3s | 攻击尖端极速跟拍→命中点微距锁焦，男子空中翻转180度，长剑举过头顶全力下劈，剑刃裹挟黑色煞气气流，女子不退反进，双掌托筝迎上，筝身与剑刃正面碰撞炸出耀眼火花链。 3s-3.5s | 旋转中心环绕跟拍→旋转终点急停锁焦，巨大冲击力将女子震得向后滑退，她顺势旋身卸力，红裙翻飞如火焰，旋身过程中五指虚拉凭空凝聚五根金色光弦虚影，朝男子方向猛然弹射，五道金芒破空而去。 3.5s-4s | 俯冲贴脸极速推进→定点小半径360°极速环绕，男子挥剑格挡五道金弦攻击，每挡一道脚下深陷一步，沙尘呈环状连续爆炸，第五道金弦擦过男子脸颊划出一道血线，血珠在空中飞溅。 4s-4.5s | 碰撞点极速推镜→交缠点小半环绕锁焦，女子趁男子被震退间隙，凌空抱筝旋身，筝声化为一圈圈金色涟漪向四周扩散，男子持剑踏沙逆流而上，蓑衣被音波撕裂出数道裂口，碎布片与沙粒混合飞散。 4.5s-5s | 攻击尖端极速跟拍→命中点微距锁焦，男子人剑合一极速冲刺，剑尖凝聚黑色能量漩涡，沙粒被吸附卷入形成螺旋沙暴，女子将古筝横置身前，右手五指疾速扫过所有琴弦，一道巨大金色光柱从筝身喷涌而出。 5s-5.5s | 双体中心等距同步跟移运镜→对抗中线锁焦，金色光柱与黑色剑涡正面碰撞，两股能量在中点炸裂，冲击波360度环形扩散，沙地掀起滔天巨浪，驿站红帐全部撕裂飞向高空，天地昏暗。 5.5s-6s | 格挡侧方极速横移→反击方向斜向推镜锁焦，爆炸余波中男子被震退数米，剑尖插地滑行留下长痕，女子也被冲击波震得向后翻滚一圈后单膝跪地稳稳刹车，古筝弦身震颤不止，她抬眸嘴角勾笑，男子猛然抬头拔剑再次冲刺，剑锋直逼女子面门，画面在动态疾冲中持续推进。</span></span></code></pre>
+<p>捕捉兵器碰撞、内劲抗衡的张力瞬间，力量感强</p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>名称</th>
+<th>Seedance 提示词</th>
+<th>使用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>格挡反震</td>
+<td>横刀格挡瞬间，刀身炸开一圈环形赤红冲击波，冲击波边缘如岩浆翻涌，溅出粘稠火滴，将攻击与敌人一并弹退，地面留下灼烧圆环。</td>
+<td>防御反击、震退敌人</td>
+</tr>
+<tr>
+<td>2</td>
+<td>兵刃相持，呼吸推拉</td>
+<td>微距振镜+推拉呼吸，特写两把兵器咬合的豁口，随着双方劲力吞吐，镜头剧烈微颤并做窒息般的焦点推拉，将紧张感绷到极限。</td>
+<td>内力比拼、僵持角力</td>
+</tr>
+<tr>
+<td>3</td>
+<td>碰撞点推镜，近距僵持</td>
+<td>碰撞点极速推镜→交缠点小半环绕锁焦，金属碰撞火花四溅，武器震颤特效，慢动作高光。</td>
+<td>兵刃碰撞、胶着对峙</td>
+</tr>
+<tr>
+<td>4</td>
+<td>交缠拉镜+绞杀夺刃</td>
+<td>交缠点缓慢拉镜→分离瞬间极速推镜，金属摩擦火花，武器形变特写，动态模糊，高对比度。</td>
+<td>兵器绞缠、夺刃缴械</td>
+</tr>
+<tr>
+<td>5</td>
+<td>双体中线锁焦</td>
+<td>双体中心等距同步跟移运镜→对抗中线锁焦，剑刃与金属装甲紧密交格角力，火星持续飞溅，脚下地面龟裂塌陷。</td>
+<td>人机对抗、力量僵持</td>
+</tr>
+<tr>
+<td>6</td>
+<td>格挡碰撞</td>
+<td>格挡物正面极速推镜→碰撞瞬间微距锁焦，金属碰撞火花，飞行物碎裂飞溅，格挡震颤特效，慢动作高光。</td>
+<td>徒手接刃、正面封挡</td>
+</tr>
+<tr>
+<td>7</td>
+<td>固定定帧</td>
+<td>固定机位锁焦→核心动作点锚点，格挡瞬间时间冻结效果，粒子飘散，高对比度。</td>
+<td>格挡定格、生死一线</td>
+</tr>
+<tr>
+<td>8</td>
+<td>冷兵瞬杀，对峙横轨</td>
+<td>对峙静止瞬间横向爆发推轨运镜→刃锋切割点锚点锁焦，匕首突刺，时空切割光效，血雾粒子，收刀后摇慢镜。</td>
+<td>对峙拔刀、一刀瞬杀</td>
+</tr>
+<tr>
+<td>9</td>
+<td>碰撞点锁焦</td>
+<td>低机位仰角极速拉近→碰撞点锁焦特写，刀与臂碰撞冲击波震散雨滴为环形水雾，脚下积水同心圆爆裂溅起。</td>
+<td>雨中对撞、冲击特写</td>
+</tr>
+<tr>
+<td>10</td>
+<td>格挡横移，攻防快转</td>
+<td>格挡侧方极速横移运镜→反击方向斜向推镜锁焦，格挡碰撞火花，肌肉紧绷特写，反击残影，动态张力拉满。</td>
+<td>格挡反击、快速转换</td>
+</tr>
+<tr>
+<td>11</td>
+<td>抡琴横扫，近身格挡</td>
+<td>将古筝当武器抡圆横扫，琴身撞碎来袭刀刃，碎片飞溅，金属撞击声刺耳，裙摆翻飞中借势旋身。</td>
+<td>奇门兵器、近身防御</td>
+</tr>
+<tr>
+<td>12</td>
+<td>双剑架持+极限僵持</td>
+<td>双剑死死架住僵持，剑刃咬合处火星持续迸溅嗤嗤作响，两人面庞近在咫尺四目相对，金属颤音嗡鸣不止，画面定格在这一瞬。</td>
+<td>双剑互格、生死相持</td>
+</tr>
+<tr>
+<td>13</td>
+<td>两力对撞气场相持</td>
+<td>两股力量对撞爆开，空气扭曲出可见波纹，画面短暂过曝，双方被反作用力震退，地面犁出深沟。</td>
+<td>能量对冲、气浪碰撞</td>
+</tr>
+</tbody>
+</table>
+<p><strong>取值速拷（13 条 · 与上表逐字一致）</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>横刀格挡瞬间，刀身炸开一圈环形赤红冲击波，冲击波边缘如岩浆翻涌，溅出粘稠火滴，将攻击与敌人一并弹退，地面留下灼烧圆环。</span></span>
+<span class="line"><span>微距振镜+推拉呼吸，特写两把兵器咬合的豁口，随着双方劲力吞吐，镜头剧烈微颤并做窒息般的焦点推拉，将紧张感绷到极限。</span></span>
+<span class="line"><span>碰撞点极速推镜→交缠点小半环绕锁焦，金属碰撞火花四溅，武器震颤特效，慢动作高光。</span></span>
+<span class="line"><span>交缠点缓慢拉镜→分离瞬间极速推镜，金属摩擦火花，武器形变特写，动态模糊，高对比度。</span></span>
+<span class="line"><span>双体中心等距同步跟移运镜→对抗中线锁焦，剑刃与金属装甲紧密交格角力，火星持续飞溅，脚下地面龟裂塌陷。</span></span>
+<span class="line"><span>格挡物正面极速推镜→碰撞瞬间微距锁焦，金属碰撞火花，飞行物碎裂飞溅，格挡震颤特效，慢动作高光。</span></span>
+<span class="line"><span>固定机位锁焦→核心动作点锚点，格挡瞬间时间冻结效果，粒子飘散，高对比度。</span></span>
+<span class="line"><span>对峙静止瞬间横向爆发推轨运镜→刃锋切割点锚点锁焦，匕首突刺，时空切割光效，血雾粒子，收刀后摇慢镜。</span></span>
+<span class="line"><span>低机位仰角极速拉近→碰撞点锁焦特写，刀与臂碰撞冲击波震散雨滴为环形水雾，脚下积水同心圆爆裂溅起。</span></span>
+<span class="line"><span>格挡侧方极速横移运镜→反击方向斜向推镜锁焦，格挡碰撞火花，肌肉紧绷特写，反击残影，动态张力拉满。</span></span>
+<span class="line"><span>将古筝当武器抡圆横扫，琴身撞碎来袭刀刃，碎片飞溅，金属撞击声刺耳，裙摆翻飞中借势旋身。</span></span>
+<span class="line"><span>双剑死死架住僵持，剑刃咬合处火星持续迸溅嗤嗤作响，两人面庞近在咫尺四目相对，金属颤音嗡鸣不止，画面定格在这一瞬。</span></span>
+<span class="line"><span>两股力量对撞爆开，空气扭曲出可见波纹，画面短暂过曝，双方被反作用力震退，地面犁出深沟。</span></span></code></pre>
+<h2 id="五精准突刺与破防贯穿15组">五、精准突刺与破防贯穿（15组）</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">3D CG国漫，暗黑玄幻美学，硬核格斗美学，高燃精准卡点，快节奏，8K超清高帧率，电影级UE5渲染，PBR物理材质，全局体积光照，氛围感强，动作丝滑无穿模/崩坏/跳帧，时序精准匹配，动态模糊自然，光影统一，镜头逻辑连贯，</span></span>
+<span class="line"><span style="color:#E1E4E8">0s-0.5s, 长矛尖端极速跟拍→碰撞点微距锁焦，暴雨中蓝色劲装男子持长矛直线突刺，白衣女子拔剑横挡，剑矛首次碰撞火星炸裂，雨水被冲击波震成环形水雾，残破木桥剧烈震颤，桥下怒涛翻涌，0.5s-1s, 碰撞点极速推镜+交缠点小半环绕锁焦，剑身与矛杆交缠互格，火星连串迸溅，两人衣物被暴雨浸透紧贴身体，发丝甩出水珠，桥面雨水随脚步溅起半人高，1s-1.5s, 物体中心轴环绕跟拍→旋转终点急停锁焦，男子旋身180°挽枪花蓄力，矛杆划破雨幕拖出弧形水线，蓝色劲装下摆旋飞甩水，脚下木桥木板咯吱作响，1.5s-2s, 俯冲贴脸极速推进→闪避点锁焦，女子后仰下腰险险躲过横扫矛尖，矛风贴面而过震散雨滴成雾，她单掌撑地借势翻身，白色衣袂在暴雨中翻飞如蝶，2s-2.5s, 攻击轨迹全程跟拍→攻击终点锁焦，女子翻身未稳即挥剑反撩，剑光自下而上划出银色弧线斩向男子手腕，雨水被剑气劈开成两片水幕，2.5s-3s, 格挡侧方极速横移→反击方向斜向推镜锁焦，男子沉腕以矛杆下压格住剑锋，火星从接触点迸射，同时抬腿一记正蹬踹向女子腹部，桥面木板受重压翘起，3s-3.5s, 倒退式反向跟拍→核心动作点锁焦，女子双手托剑硬挡踹击，被震得向后滑退两步，鞋底在湿滑木桥上犁出两道水痕，剑尖点地稳住重心，雨水顺剑身流下，3.5s-4s, 长杆全程跟拍→前摇瞬间急停锁焦，男子不给她喘息机会，长矛连续三记突刺如毒蛇出洞，矛尖破雨击出三朵水花，女子疾退挥剑叮叮当当连挡三击，虎口震颤，4s-4.5s, 贴身平行极速横移运镜→躯干纵向锁焦，两人在窄桥上贴身缠斗，矛来剑往高频互格，金属碰撞声被雨声淹没，脚下木板不堪重负开始碎裂，木屑随雨水飞溅，4.5s-5s, 垂直攻击轨迹跟拍→落地冲击点俯角锁焦，男子跃起两米居高临下双手握矛垂直重砸，衣袂在空中甩出弧线水珠，女子咬紧牙关举剑过顶硬抗，冲击波将周围雨水炸开成环形水幕，脚下桥板轰然断裂塌陷，5s-5.5s, 低仰角贴脸渐进推进→发力点锁焦，两人在断裂倾斜的桥面上稳住身形，女子膝盖弯曲几乎跪地，剑身被矛杆压得嗡嗡作响逼近面门，她额前湿发贴着脸颊，眼中满是不屈，5.5s-6s, 攻击尖端极速跟拍→碰撞点微距锁焦，男子借力旋身卸力，矛尖贴地横扫划出半圆水弧斩向女子脚踝，女子纵身跃起避开，脚下最后一块完整桥板被矛杆拦腰打断，木桥彻底坍塌，两人随断裂木板向下坠落，暴雨倾盆，江涛咆哮吞没一切。</span></span></code></pre>
+<p>聚焦"点"的攻击——矛尖、剑锋、箭矢、鞭梢等攻击尖端，用高度集中的力量贯穿</p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>名称</th>
+<th>Seedance 提示词</th>
+<th>使用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>蓄力突刺</td>
+<td>刀尖凝聚一颗剧烈脉动的炽白光核，突刺时化作一道赤红光束直线贯穿，光束周围锥形火星尾流喷射，命中产生岩浆爆裂光焰。</td>
+<td>蓄力直刺、破甲贯穿</td>
+</tr>
+<tr>
+<td>3</td>
+<td>螺旋刺击，锥形破防</td>
+<td>鞭梢瞬间绷直如矛，前端凝聚一枚高速旋转的幽蓝光核，刺出时光核拖出螺旋粒子尾迹，刺中后爆发为锥形冲击波溅射蓝白星芒。</td>
+<td>旋转穿刺、破防打击</td>
+</tr>
+<tr>
+<td>4</td>
+<td>单弦</td>
+<td>琴弦颤动射出一道墨金色光矢，箭形光刃拖出细长半透明残影轨迹，光轨边缘泛淡金微光，残留约1秒后淡化。</td>
+<td>精准点射、远程打击</td>
+</tr>
+<tr>
+<td>5</td>
+<td>投掷</td>
+<td>投出的长矛化作银色陨星，矛头包裹炽白雷球，拖曳着长长雷霆尾迹划破空中，尾迹由电弧与光粒构成。</td>
+<td>武器投掷、远距击杀</td>
+</tr>
+<tr>
+<td>6</td>
+<td>矛尖蓄势</td>
+<td>矛尖凝聚银白色雷光，细碎电弧呈树枝状沿矛身向后爬升，雷光闪烁伴随微小电火花迸溅，周围尘埃被静电排斥向外飘散。</td>
+<td>战前蓄力、雷霆待发</td>
+</tr>
+<tr>
+<td>7</td>
+<td>握刀蓄势，熔岩震颤</td>
+<td>刀身震颤溅出细碎熔岩火星，赤红色光芒从刀格呈火焰状蔓延爬满整个锋刃，刀身亮度随蓄力增强。</td>
+<td>拔刀前摇、气势酝酿</td>
+</tr>
+<tr>
+<td>8</td>
+<td>穿透慢镜，多目标贯穿</td>
+<td>穿透瞬间微距锁焦→多目标连续贯穿慢动作横摇，飞行残影拖尾，慢镜头下目标依次炸裂，高反差戏剧光。</td>
+<td>一箭多雕、连锁击穿</td>
+</tr>
+<tr>
+<td>9</td>
+<td>抛物线暗袭，回手箭</td>
+<td>脱手瞬间微距锁焦→抛物线轨迹全程跟拍，物体旋转反光，隐蔽飞行残影，低亮度环境下的微光特效。</td>
+<td>暗器偷袭、曲线攻击</td>
+</tr>
+<tr>
+<td>10</td>
+<td>弧线弹道</td>
+<td>反手弧线弹道跟拍+命中点锁焦，箭矢划出诡异弧线绕后命中目标，瞬间雾化，头也不回。</td>
+<td>弧线射击、绕后打击</td>
+</tr>
+<tr>
+<td>11</td>
+<td>横扫</td>
+<td>长矛贴地横扫，锋刃割开空气划出银白扇形雷幕，雷幕边缘电弧如獠牙交错，空中留下持续两秒的弧形残光。</td>
+<td>低位横扫、割裂打击</td>
+</tr>
+<tr>
+<td>12</td>
+<td>关节破击</td>
+<td>贴地同步跟移运镜→地面核心动作点锁焦，贴地滑铲穿过敌人体下，武器横扫脚踝关节，地面犁出深沟。</td>
+<td>滑铲破防、攻击弱点</td>
+</tr>
+<tr>
+<td>13</td>
+<td>直线冲刺，关节精准直刺</td>
+<td>稳住身形骤然直线冲刺，剑尖精准直刺敌人关节缝隙，刺入瞬间金属裂痕扩散，火花爆射。</td>
+<td>弱点打击、精准破甲</td>
+</tr>
+<tr>
+<td>14</td>
+<td>跃起重劈，高空破甲</td>
+<td>跃起至半空双手握剑蓄力重劈，衣袍被风压掀起翻飞，剑刃砸中躯干，冲击波将四周沙尘震散环形扩散。</td>
+<td>跳劈破防、高空重击</td>
+</tr>
+<tr>
+<td>15</td>
+<td>贴地贯穿</td>
+<td>贴地窜至巨兽腹下，长矛从下自上撩刺，矛尖精准贯入腹部机械缝隙，爆出一蓬金属碎片与蓝白电弧火花。</td>
+<td>低位突袭、腹下破防</td>
+</tr>
+</tbody>
+</table>
+<p><strong>取值速拷（14 条 · 与上表逐字一致）</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>刀尖凝聚一颗剧烈脉动的炽白光核，突刺时化作一道赤红光束直线贯穿，光束周围锥形火星尾流喷射，命中产生岩浆爆裂光焰。</span></span>
+<span class="line"><span>鞭梢瞬间绷直如矛，前端凝聚一枚高速旋转的幽蓝光核，刺出时光核拖出螺旋粒子尾迹，刺中后爆发为锥形冲击波溅射蓝白星芒。</span></span>
+<span class="line"><span>琴弦颤动射出一道墨金色光矢，箭形光刃拖出细长半透明残影轨迹，光轨边缘泛淡金微光，残留约1秒后淡化。</span></span>
+<span class="line"><span>投出的长矛化作银色陨星，矛头包裹炽白雷球，拖曳着长长雷霆尾迹划破空中，尾迹由电弧与光粒构成。</span></span>
+<span class="line"><span>矛尖凝聚银白色雷光，细碎电弧呈树枝状沿矛身向后爬升，雷光闪烁伴随微小电火花迸溅，周围尘埃被静电排斥向外飘散。</span></span>
+<span class="line"><span>刀身震颤溅出细碎熔岩火星，赤红色光芒从刀格呈火焰状蔓延爬满整个锋刃，刀身亮度随蓄力增强。</span></span>
+<span class="line"><span>穿透瞬间微距锁焦→多目标连续贯穿慢动作横摇，飞行残影拖尾，慢镜头下目标依次炸裂，高反差戏剧光。</span></span>
+<span class="line"><span>脱手瞬间微距锁焦→抛物线轨迹全程跟拍，物体旋转反光，隐蔽飞行残影，低亮度环境下的微光特效。</span></span>
+<span class="line"><span>反手弧线弹道跟拍+命中点锁焦，箭矢划出诡异弧线绕后命中目标，瞬间雾化，头也不回。</span></span>
+<span class="line"><span>长矛贴地横扫，锋刃割开空气划出银白扇形雷幕，雷幕边缘电弧如獠牙交错，空中留下持续两秒的弧形残光。</span></span>
+<span class="line"><span>贴地同步跟移运镜→地面核心动作点锁焦，贴地滑铲穿过敌人体下，武器横扫脚踝关节，地面犁出深沟。</span></span>
+<span class="line"><span>稳住身形骤然直线冲刺，剑尖精准直刺敌人关节缝隙，刺入瞬间金属裂痕扩散，火花爆射。</span></span>
+<span class="line"><span>跃起至半空双手握剑蓄力重劈，衣袍被风压掀起翻飞，剑刃砸中躯干，冲击波将四周沙尘震散环形扩散。</span></span>
+<span class="line"><span>贴地窜至巨兽腹下，长矛从下自上撩刺，矛尖精准贯入腹部机械缝隙，爆出一蓬金属碎片与蓝白电弧火花。</span></span></code></pre>
+<h2 id="六缠控反制与攻防反转14组">六、缠控反制与攻防反转（14组）</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">3D CG国漫，暗黑玄幻美学，硬核格斗美学，电影级UE5渲染，PBR物理材质，全局体积光照，氛围感强，高燃精准卡点，快节奏，8K超清高帧率，动作丝滑无穿模/崩坏/跳帧，时序精准匹配，动态模糊自然，光影统一，镜头逻辑连贯。 视频内容：苗寨中，一名苗族女子在和一名红色劲装的女子打斗。苗族女子长发，有很多细碎的麻花辫，头上、身上各种银饰品，充满异域风情，挥舞长鞭。红衣女子使用流星锤，双马尾造型，身着红色劲装，裙摆高开衩露腿，古装侠女风范。 镜头提示词：</span></span>
+<span class="line"><span style="color:#E1E4E8">0s-0.5s, 攻击轨迹极速跟拍，红衣女子抖腕甩出流星锤直扑苗族女子面门，锤头铁刺破空带出气流轨迹，劲装裙摆高开衩翻飞双马尾甩动。 0.5s-1s, 直线抽击轨迹极速跟拍命中点微距锁焦，苗族女子偏头闪避流星锤同时扬鞭抽向红衣女子小腿，鞭梢突破音障爆裂，满头细碎麻花辫与银饰剧烈甩动。 1s-1.5s, 碰撞点极速推镜小半环绕锁焦，红衣女子腾空跃起躲过鞭击同时拉回流星锤借离心力从侧面轰向苗女，开衩裙摆空中猎猎展开。 1.5s-2s, 交缠点环绕锁焦，长鞭如黑蛇螺旋缠绕流星锤锁链两股软兵空中交缠绞拧，碰撞点火星四溅，锁链与鞭身摩擦迸出金属嘶鸣。 2s-2.5s, 双体中心等距同步跟移对抗中线锁焦，双方同时发力后拉兵器绷直锁死，苗族女子脚下青石板寸裂，红衣女子身体后倾重心下沉。 2.5s-3s, 旋转中心环绕跟拍，苗族女子旋身抖鞭从锁链上解缠回收在头顶划大圆周蓄力，银饰哗啦作响麻花辫在离心力下飞扬成弧。 3s-3.5s, 低角度贴地跟拍横扫轨迹，红衣女子疾步前突流星锤拖地横扫，锤头撞击青石板犁出火星轨迹碎石飞溅。 3.5s-4s, 格挡侧方极速横移交缠点锁焦，苗族女子急收鞭身横档，长鞭缠绕流星锤链条二次绞锁，碰撞点炸开气浪冲击波长发向后狂舞。 4s-4.5s, 攻击尖端极速跟拍命中点，红衣女子借力上甩流星锤从下往上钩击苗族女子下巴，锤头铁刺寒光一闪。 4.5s-5s, 垂直攻击轨迹跟拍闪避急停，苗族女子仰身后折腰堪堪避过锤头身体弯成拱桥，左手撑地借力右手甩鞭从地面角度反向抽向红衣女子腰侧。 5s-5.5s, 碰撞点极速推镜，红衣女子旋身甩动流星锤链条在身前织成防御网，鞭梢抽在锁链上炸出一串火星叮当声密集如雨。 5.5s-6s, 绕身极速圆周环移运镜躯体核心动态锁焦，两人疾步位移交换站位，长鞭与流星锤空中连续碰撞三次火星连环炸裂，银饰与双马尾同时画弧，错身而立兵器各自蓄势。</span></span></code></pre>
+<p>以柔克刚，镜头跟随柔性武器缠绕轨迹</p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>名称</th>
+<th>Seedance 提示词</th>
+<th>使用场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>缠绕</td>
+<td>鞭身火焰粒子向缠绕中心汇聚，形成高亮幽蓝光环紧箍目标，光环边缘逸出细碎光粒，收缩时光晕脉动增强。</td>
+<td>束缚控制、紧箍锁敌</td>
+</tr>
+<tr>
+<td>3</td>
+<td>过肩摔</td>
+<td>过顶抛甩弧线跟移运镜→翻转轴线重力锁焦，过肩摔/抱摔投技，天旋地转视角，地面炸裂，骨骼震波特效，慢动作触地。</td>
+<td>投技反制、摔投终结</td>
+</tr>
+<tr>
+<td>4</td>
+<td>螺旋缠绕</td>
+<td>螺旋缠绕轨迹全程跟拍→缠绕节点收紧瞬间锁焦，金属摩擦火花，肢体束缚特写，肌肉拉扯线条，动态张力拉满。</td>
+<td>绳索绞缠、勒紧控制</td>
+</tr>
+<tr>
+<td>5</td>
+<td>胜负转折</td>
+<td>脱手物体全程抛物线跟拍→落地瞬间时间冻结效果，武器旋转反光，粒子飘散，高对比度。</td>
+<td>缴械脱手、战局逆转</td>
+</tr>
+<tr>
+<td>6</td>
+<td>假动作反击</td>
+<td>物体回收轨迹全程跟拍→反击方向反向极速推镜锁焦，快速回收残影，突然爆发攻击特效，出其不意的动态转折。</td>
+<td>虚晃回收、声东击西</td>
+</tr>
+<tr>
+<td>7</td>
+<td>武器绞杀，缠械夺刃</td>
+<td>交缠点缓慢拉镜→分离瞬间极速推镜，金属摩擦火花，武器形变特写，动态模糊，高对比度。</td>
+<td>兵器锁绞、夺刃反制</td>
+</tr>
+<tr>
+<td>8</td>
+<td>二次折返</td>
+<td>回旋轨迹360°环绕跟拍→回收终点瞬间急停锁焦，环形飞行残影，反向加速特效，手部接物特写，动态张力拉满。</td>
+<td>回旋武器、折返打击</td>
+</tr>
+<tr>
+<td>9</td>
+<td>力量博弈</td>
+<td>格挡侧方极速横移运镜→交缠点小半环绕锁焦，碰撞火花四溅，物体绞缠特写，力量对抗震颤特效。</td>
+<td>兵器纠缠、角力博弈</td>
+</tr>
+<tr>
+<td>10</td>
+<td>锁链绞缠</td>
+<td>敌人抓住锁链回拉，角色借力旋身前冲，锁链在两人间绷直发出刺耳金属颤音，衣料因惯性紧贴腰身。</td>
+<td>借力打力、顺势反击</td>
+</tr>
+<tr>
+<td>11</td>
+<td>下盘缠绕，绊摔控制</td>
+<td>角色下盘低扫踢向敌人脚踝，同时链索顺势缠绕敌人小腿两圈骤然收紧勒入皮肉，敌人愤怒咆哮抬腿猛挣。</td>
+<td>下盘锁控、绊腿摔投</td>
+</tr>
+<tr>
+<td>12</td>
+<td>收刀，余烬归鞘</td>
+<td>手腕翻转纳刀归鞘，刀脊残留的火焰如呼吸般渐次缩入鞘口，最后几粒火星沿刀身滑落消散，鞘口飘出一缕青烟。</td>
+<td>收刀入鞘、战斗结束</td>
+</tr>
+<tr>
+<td>13</td>
+<td>收鞭</td>
+<td>手腕急振长鞭盘旋收回，散布四周的幽蓝粒子如时光倒流般向掌心坍缩，凝聚成一朵幽蓝火莲，随即化作星芒无声散尽。</td>
+<td>收鞭归位、余焰消散</td>
+</tr>
+<tr>
+<td>14</td>
+<td>箭雨</td>
+<td>高空俯角全景拉镜→落点区域慢动作全覆盖，漫天飞行尾迹纵横交错，地面弹坑碎石翻涌，冲击波扩散，尘土飞扬。</td>
+<td>箭雨清场、压制收尾</td>
+</tr>
+</tbody>
+</table>
+<p><strong>取值速拷（13 条 · 与上表逐字一致）</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>鞭身火焰粒子向缠绕中心汇聚，形成高亮幽蓝光环紧箍目标，光环边缘逸出细碎光粒，收缩时光晕脉动增强。</span></span>
+<span class="line"><span>过顶抛甩弧线跟移运镜→翻转轴线重力锁焦，过肩摔/抱摔投技，天旋地转视角，地面炸裂，骨骼震波特效，慢动作触地。</span></span>
+<span class="line"><span>螺旋缠绕轨迹全程跟拍→缠绕节点收紧瞬间锁焦，金属摩擦火花，肢体束缚特写，肌肉拉扯线条，动态张力拉满。</span></span>
+<span class="line"><span>脱手物体全程抛物线跟拍→落地瞬间时间冻结效果，武器旋转反光，粒子飘散，高对比度。</span></span>
+<span class="line"><span>物体回收轨迹全程跟拍→反击方向反向极速推镜锁焦，快速回收残影，突然爆发攻击特效，出其不意的动态转折。</span></span>
+<span class="line"><span>交缠点缓慢拉镜→分离瞬间极速推镜，金属摩擦火花，武器形变特写，动态模糊，高对比度。</span></span>
+<span class="line"><span>回旋轨迹360°环绕跟拍→回收终点瞬间急停锁焦，环形飞行残影，反向加速特效，手部接物特写，动态张力拉满。</span></span>
+<span class="line"><span>格挡侧方极速横移运镜→交缠点小半环绕锁焦，碰撞火花四溅，物体绞缠特写，力量对抗震颤特效。</span></span>
+<span class="line"><span>敌人抓住锁链回拉，角色借力旋身前冲，锁链在两人间绷直发出刺耳金属颤音，衣料因惯性紧贴腰身。</span></span>
+<span class="line"><span>角色下盘低扫踢向敌人脚踝，同时链索顺势缠绕敌人小腿两圈骤然收紧勒入皮肉，敌人愤怒咆哮抬腿猛挣。</span></span>
+<span class="line"><span>手腕翻转纳刀归鞘，刀脊残留的火焰如呼吸般渐次缩入鞘口，最后几粒火星沿刀身滑落消散，鞘口飘出一缕青烟。</span></span>
+<span class="line"><span>手腕急振长鞭盘旋收回，散布四周的幽蓝粒子如时光倒流般向掌心坍缩，凝聚成一朵幽蓝火莲，随即化作星芒无声散尽。</span></span>
+<span class="line"><span>高空俯角全景拉镜→落点区域慢动作全覆盖，漫天飞行尾迹纵横交错，地面弹坑碎石翻涌，冲击波扩散，尘土飞扬。</span></span></code></pre>
+<h2 id="高燃打斗运镜粒子光轨-47-组">高燃打斗运镜+粒子光轨 47 组</h2>
+<h2 id="近身搏斗拳短兵器-1">近身搏斗（拳、短兵器）</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">3D CG动画，国漫暗黑玄幻风格，史诗级奇幻大片质感，暗黑电影级极致色调，超写实 ，主体为头戴竹编斗笠、身着哑光正红劲装的女侠 VS 玄甲蒙面持双刃的刺客，倾盆大雨环境，劲装被雨水打湿后半透明紧贴身体，清晰勾勒手臂与背部肌肉线条，双人全程贴身近身肉搏，高燃攻防节奏拉满，打击感拉满，肢体碰撞物理反馈真实，肌肉收缩、青筋暴起、水珠飞溅细节拉满，雨水顺着斗笠檐边成串滴落、地面湿滑反光，武器碰撞物理效果真实，劲装布料摆动模拟自然，打斗光效残留顺滑，动态模糊完美适配运镜节奏。 0-1.5s 【极速横移转纵向推进复合运镜】：双人贴身短刃近身攻防快速互换，左右横闪躲避攻击后同步纵向突进反击，刀刃碰撞溅起水花与细碎火星交织，红色衣摆随动作翻飞，雨水随肢体动作向四周飞溅，运镜极速横移无缝衔接纵向推进，精准捕捉贴身肉搏的连招动态 1.5-3s 【极速甩镜转跟拍复合运镜】：主角格挡开对手双刃后，俯身快速滑步近身出拳反击，出拳时手臂青筋暴起、红色衣袖绷紧凸显肱二头肌轮廓，肢体碰撞产生明显物理形变与水花爆溅，雨水顺着绷紧的肌肉线条滑落，运镜极速甩镜衔接锁敌跟拍，丝滑跟随近身拳脚缠斗的快节奏位移，完整捕捉攻防衔接的动态细节 3-6s 【低角度仰拍极速推进转半环绕复合运镜】：主角蓄力旋身踢出重击，蓄力时背部肌肉线条紧绷隆起、红色劲装被肌肉撑起形成明显褶皱，踢击命中时水珠呈放射状炸裂，对手受击时雨水从玄甲上震落，精准命中对手躯干完成高光反杀，对手受击踉跄后退，运镜低角度仰拍极速推进，衔接半环绕运镜定格重击命中的高光瞬间，强化力量感与打斗张力 全程运镜流畅无卡顿，无过度动态模糊，无画面拉伸失真；严格遵循单段运镜时长禁令，同类型运镜无连续重复使用，仅聚焦打斗动作场景，无多余静态画面与无关叙事</span></span></code></pre>
+<table>
+<thead>
+<tr>
+<th><strong>运镜描述</strong></th>
+<th><strong>seedance2.0提示词</strong></th>
+<th><strong>适用场景</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>贴身平行极速横移运镜→主体躯干纵向锁焦跟拍</td>
+<td>贴身平行极速横移运镜，躯干纵向锁焦，高速拳脚攻防，动态模糊，拳风特效<!--蕾--></td>
+<td>拳脚 / 短兵器</td>
+</tr>
+<tr>
+<td>低仰角贴脸渐进推进 + 收尾 180° 小半环绕运镜</td>
+<td>低仰角贴脸渐进推进，收尾 180° 小半环绕，发力点锁焦，重拳破防特写，肌肉紧绷，冲击波纹特效</td>
+<td>蓄力重击</td>
+</tr>
+<tr>
+<td>俯冲贴脸极速推进 + 定点小半径 360° 极速环绕运镜</td>
+<td>俯冲贴脸极速推进，定点小半径 360° 极速环绕，双体中线锁焦，终结大招，慢动作高光</td>
+<td>终结大招</td>
+</tr>
+<tr>
+<td>固定机位锁焦→核心动作点锚点锁焦</td>
+<td>固定机位锁焦定格，核心动作点锚点，格挡瞬间，时间冻结效果，粒子飘散，高对比度</td>
+<td>全流程</td>
+</tr>
+<tr>
+<td>贴地同步跟移→地面主体核心动作点锚点锁焦跟拍</td>
+<td>贴地同步跟移横滚运镜，地面核心动作锁焦，地面砸拳，尘土飞扬，血迹飞溅，低角度拍摄</td>
+<td>全阶段地面缠斗、地面攻防转换</td>
+</tr>
+<tr>
+<td>双体中心等距同步跟移运镜→双体对抗中线锚点锁焦</td>
+<td>双体中心等距同步跟移，对抗中线锁焦，内围缠抱角力，肌肉线条，汗水飞溅，动态张力</td>
+<td>短兵器近身互格、距离僵持</td>
+</tr>
+<tr>
+<td>绕身极速圆周环移运镜→主体躯干核心动态锁焦跟拍</td>
+<td>绕身极速圆周环移运镜，躯干核心锁焦，绕背突袭反杀，残影效果，武器反光，快速切换视角</td>
+<td>绕背突袭反杀</td>
+</tr>
+</tbody>
+</table>
+<p><strong>取值速拷（7 条 · 与上表逐字一致）</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>贴身平行极速横移运镜，躯干纵向锁焦，高速拳脚攻防，动态模糊，拳风特效&lt;!--蕾--&gt;</span></span>
+<span class="line"><span>低仰角贴脸渐进推进，收尾 180° 小半环绕，发力点锁焦，重拳破防特写，肌肉紧绷，冲击波纹特效</span></span>
+<span class="line"><span>俯冲贴脸极速推进，定点小半径 360° 极速环绕，双体中线锁焦，终结大招，慢动作高光</span></span>
+<span class="line"><span>固定机位锁焦定格，核心动作点锚点，格挡瞬间，时间冻结效果，粒子飘散，高对比度</span></span>
+<span class="line"><span>贴地同步跟移横滚运镜，地面核心动作锁焦，地面砸拳，尘土飞扬，血迹飞溅，低角度拍摄</span></span>
+<span class="line"><span>双体中心等距同步跟移，对抗中线锁焦，内围缠抱角力，肌肉线条，汗水飞溅，动态张力</span></span>
+<span class="line"><span>绕身极速圆周环移运镜，躯干核心锁焦，绕背突袭反杀，残影效果，武器反光，快速切换视角</span></span></code></pre>
+<h2 id="兵器缠斗刀剑棍等-1">兵器缠斗（刀剑棍等）</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">3D CG动画，国漫顶级玄幻仙侠美学，史诗级奇幻质感，快节奏，UE5极致画质8K，动态模糊自然，电影级景深，漫天飞花的粉色桃花林，地面铺满粉色桃花花瓣，主体为身着通体白色飘飘纱质劲装、多层薄纱叠加裙摆与袖口、持长剑的女子，女子面部温婉清冷，自带出尘仙家气韵 VS 身着藏蓝色广袖仙侠劲装、衣摆垂坠深蓝色轻纱、持长剑的男子，双人全程在地面进行打斗，双脚始终接触地面，绝对禁止飞行、腾空、御剑、轻功，高燃攻防节奏拉满，打击感拉满，肢体与剑刃碰撞物理反馈真实，每一次蹬地都在地面留下浅浅的花瓣印记，发丝飞扬、花瓣纷飞、广袖翻飞细节拉满，桃花瓣被剑气轻拂着旋转飘散、广袖带起花瓣形成温柔的花浪，剑刃划过留下清晰的淡银白色兵器轨迹光效残留，光效边缘泛着柔和光晕，与纷飞桃花相互映衬，剑刃碰撞产生清脆金鸣与细碎火星，纱质与锦缎布料摆动模拟自然，光效残留顺滑无断层，动态模糊完美适配运镜节奏。 0-1.5s 【极速横移转纵向推进复合运镜】：双人贴身长剑近身攻防快速互换，左右横闪躲避刺击后同步纵向突进反击，银白色兵器轨迹光效交织缠绕，裹挟着纷飞桃花向四周轻柔扩散，每一次刺击与格挡都留下长短不一的淡银色光效残影，与翻飞的白色广袖、藏蓝色广袖交叠，纱质裙摆随动作轻盈飘动，花瓣随肢体与剑气如蝶翼般翩跹飞舞，运镜极速横移无缝衔接纵向推进，精准捕捉贴身剑术的连招动态与光效轨迹 1.5-3s 【极速甩镜转跟拍复合运镜】：白衣女子格挡开男子长剑后，俯身快速滑步近身旋剑反击，旋剑时划出一道流畅的银白色弧形光效轨迹，光效卷动周围桃花形成粉色花瓣漩涡，白色光效残留与藏蓝色广袖划过的淡银色光效残影交错，宽大的白色广袖随旋剑动作划出优美弧线，多层薄纱袖口随风展开，发丝与花瓣在银白交织的光效中轻盈飞扬，运镜极速甩镜衔接锁敌跟拍，丝滑跟随近身剑术缠斗的快节奏位移，完整捕捉攻防衔接的动态细节与光效流动 3-6s 【平视角度快速推进转半环绕复合运镜】：蓝衣男子蓄力旋身挥出横斩重击，蓄力时藏蓝色广袖向后扬起，衣摆深蓝色轻纱随风猎猎作响，双脚牢牢蹬住地面，挥剑时划出一道凌厉的银白色横斩光效，斩击命中时花瓣如星雨般四散飘落，银白色光效涟漪向四周温柔荡漾，白衣女子受击时广袖与多层纱裙剧烈翻飞，随即侧身快速闪避同时反手刺出致命一剑，剑尖拖着短短的淡银色光效完成高光反杀，剑尖直指男子咽喉，运镜平视角度快速推进，衔接半环绕运镜定格剑尖抵喉的高光瞬间，清晰捕捉银白色光效残留与漫天桃花、翻飞广袖重叠的绝美画面，强化力量感与打斗张力 细节：光效残留时长精准匹配剑刃挥砍速度；重点优化白色多层薄纱与藏蓝色锦缎面料的物理模拟，让布料摆动轻盈飘逸且不遮挡关键打斗动作，绝对禁止剑刃本身发光，仅保留剑刃快速划过空气产生的自然轨迹光效</span></span></code></pre>
+<table>
+<thead>
+<tr>
+<th><strong>运镜描述</strong></th>
+<th><strong>seedance2.0提示词</strong></th>
+<th><strong>适用场景</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>碰撞点极速推镜→交缠点小半环绕锁焦</td>
+<td>碰撞点极速推镜，交缠点 360° 小半环绕锁焦，金属碰撞火花，武器震颤特效，慢动作高光</td>
+<td>近距离僵持</td>
+</tr>
+<tr>
+<td>攻击轨迹全程跟拍→攻击终点定点锁焦</td>
+<td>攻击轨迹全程跟拍，攻击终点定点锁焦，武器寒光特效，挥击残影，气流撕裂动态模糊，高对比度</td>
+<td>连续挥击</td>
+</tr>
+<tr>
+<td>低角度贴地跟拍横扫轨迹→横扫末端急停拉镜</td>
+<td>低角度贴地跟拍横扫轨迹，横扫末端急停拉镜，地面扬尘，气流冲击波，大范围动态模糊，肢体受力特写</td>
+<td>大范围横扫</td>
+</tr>
+<tr>
+<td>攻击尖端极速跟拍<!--蕾-->→命中点微距锁焦</td>
+<td>攻击尖端极速跟拍，命中点微距锁焦，破风音效可视化，血雾喷溅特效，慢动作高光，金属反光</td>
+<td>致命终结一击</td>
+</tr>
+<tr>
+<td>脱手物体抛物线跟拍→落地瞬间时间冻结</td>
+<td>脱手物体全程抛物线跟拍，落地瞬间时间冻结效果，武器旋转反光，粒子飘散，高对比度</td>
+<td>胜负转折</td>
+</tr>
+<tr>
+<td>格挡侧方极速横移→反击方向斜向推镜锁焦</td>
+<td>格挡侧方极速横移运镜，反击方向斜向推镜锁焦，格挡碰撞火花，肌肉紧绷特写，反击残影，动态张力拉满</td>
+<td>攻防快速转换</td>
+</tr>
+<tr>
+<td>物体中心轴环绕跟拍→旋转终点急停锁焦</td>
+<td>物体中心轴 360° 环绕跟拍，旋转终点急停锁焦，武器旋转残影，环形光效，高速动态模糊，主体轮廓清晰</td>
+<td>起势、连招</td>
+</tr>
+<tr>
+<td>垂直攻击轨迹跟拍→落地冲击点俯角锁焦</td>
+<td>垂直攻击轨迹跟拍，落地冲击点俯角锁焦，地面裂纹特效，碎石飞溅，冲击波扩散，尘土飞扬</td>
+<td>重型武器下砸</td>
+</tr>
+<tr>
+<td>交缠点缓慢拉镜→分离瞬间极速推镜</td>
+<td>交缠点缓慢拉镜，分离瞬间极速推镜，金属摩擦火花，武器形变特写，动态模糊，高对比度</td>
+<td>武器绞杀、缠械夺刃</td>
+</tr>
+<tr>
+<td>长杆全程跟拍→前摇瞬间急停锁焦</td>
+<td>长杆全程跟拍，前摇瞬间急停锁焦，杆身震颤特效，肌肉蓄力特写，慢动作高光</td>
+<td>远距离精准打击</td>
+</tr>
+</tbody>
+</table>
+<p><strong>取值速拷（10 条 · 与上表逐字一致）</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>碰撞点极速推镜，交缠点 360° 小半环绕锁焦，金属碰撞火花，武器震颤特效，慢动作高光</span></span>
+<span class="line"><span>攻击轨迹全程跟拍，攻击终点定点锁焦，武器寒光特效，挥击残影，气流撕裂动态模糊，高对比度</span></span>
+<span class="line"><span>低角度贴地跟拍横扫轨迹，横扫末端急停拉镜，地面扬尘，气流冲击波，大范围动态模糊，肢体受力特写</span></span>
+<span class="line"><span>攻击尖端极速跟拍，命中点微距锁焦，破风音效可视化，血雾喷溅特效，慢动作高光，金属反光</span></span>
+<span class="line"><span>脱手物体全程抛物线跟拍，落地瞬间时间冻结效果，武器旋转反光，粒子飘散，高对比度</span></span>
+<span class="line"><span>格挡侧方极速横移运镜，反击方向斜向推镜锁焦，格挡碰撞火花，肌肉紧绷特写，反击残影，动态张力拉满</span></span>
+<span class="line"><span>物体中心轴 360° 环绕跟拍，旋转终点急停锁焦，武器旋转残影，环形光效，高速动态模糊，主体轮廓清晰</span></span>
+<span class="line"><span>垂直攻击轨迹跟拍，落地冲击点俯角锁焦，地面裂纹特效，碎石飞溅，冲击波扩散，尘土飞扬</span></span>
+<span class="line"><span>交缠点缓慢拉镜，分离瞬间极速推镜，金属摩擦火花，武器形变特写，动态模糊，高对比度</span></span>
+<span class="line"><span>长杆全程跟拍，前摇瞬间急停锁焦，杆身震颤特效，肌肉蓄力特写，慢动作高光</span></span></code></pre>
+<h2 id="中距离攻击鞭锁链流星锤绳镖伸缩武器-1">中距离攻击（鞭、锁链、流星锤、绳镖、伸缩武器）</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">3D CG 动画，国漫顶级玄幻仙侠美学，史诗级奇幻质感，UE5 极致画质 8K，动态模糊自然，电影级景深，强光影对比，肃杀高燃氛围。荒漠戈壁，满地残剑碎石，主体为身着异域风情，神态魅惑的皮草薄纱穿搭女子</span></span>
+<span class="line"><span style="color:#E1E4E8">图片1</span></span>
+<span class="line"><span style="color:#E1E4E8">，手持长鞭 VS 蓝色劲装手持长剑的男子</span></span>
+<span class="line"><span style="color:#E1E4E8">图片2</span></span>
+<span class="line"><span style="color:#E1E4E8">，双人全程在地面进行打斗，高燃攻防节奏拉满，打击感拉满，长鞭与剑刃碰撞物理反馈真实，每一次蹬地都引起沙土飞扬，发丝飞扬、广袖翻飞细节拉满，剑刃划过留下兵器轨迹光效残留，光效边缘泛着柔和光晕，与漫天飞沙相互映衬，剑刃碰撞产生清脆金鸣与细碎火星，纱质与锦缎布料摆动模拟自然，光效残留顺滑无断层，动态模糊完美适配运镜节奏。 0-0.5s 低角度仰拍极速推镜：黑衣长辫女子与持剑男子对峙瞬间，两人同时发力冲向对方，衣摆与长发被狂风扬起 0.5-1.5s 360° 极速环绕跟镜：两人展开高速近身缠斗，女子长鞭燃起幽蓝火焰带粒子拖影横扫，男子长剑划出银白色剑气格挡，沙尘在两人脚下翻涌 1.5-3s 希区柯克变焦 + 慢动作卡点：剑鞭正面碰撞，炸出耀眼蓝银双色光效，冲击波向四周扩散，碎石与沙尘被瞬间掀飞，动态模糊强化速度感 3-4s 极近景特写慢放：两人眼神凶狠对视，面部肌肉紧绷，女子嘴角勾起一抹冷笑，男子剑眉紧蹙，兵器仍死死抵在一起，火星在两人之间不断迸溅 4-6s 极速拉远仰拍定帧：两人被碰撞的反作用力同时弹开，各自向后滑出数米远，脚下划出两道深沟，随即稳稳落地摆出战斗姿态，剑气与火焰的余威在荒漠上空交织缠绕，形成震撼的视觉定格</span></span></code></pre>
+<table>
+<thead>
+<tr>
+<th><strong>运镜描述</strong></th>
+<th><strong>seedance2.0提示词</strong></th>
+<th><strong>适用场景</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>旋转中心环绕跟拍→甩动起点定点锁焦</td>
+<td>旋转中心 360° 环绕跟拍，甩动起点定点锁焦，柔性物体旋转残影，离心力气流特效，金属反光，高速动态模糊</td>
+<td>起势蓄力</td>
+</tr>
+<tr>
+<td>直线抽击轨迹极速跟拍→命中点瞬间微距锁焦</td>
+<td>直线抽击轨迹极速跟拍，命中点瞬间微距锁焦，破空音效可视化，皮肤撕裂特效，血痕飞溅，慢动作高光，高对比度</td>
+<td>快速抽击</td>
+</tr>
+<tr>
+<td>螺旋缠绕轨迹跟拍→缠绕节点收紧锁焦</td>
+<td>螺旋缠绕轨迹全程跟拍，缠绕节点收紧瞬间锁焦，金属摩擦火花，肢体束缚特写，肌肉拉扯线条，动态张力拉满</td>
+<td>缠绕束缚</td>
+</tr>
+<tr>
+<td>大范围圆周旋转跟拍→横扫末端急停拉镜</td>
+<td>大范围圆周旋转跟拍，横扫末端急停拉镜，旋转残影拖尾，气流漩涡特效，地面扬尘碎石，大范围动态模糊</td>
+<td>群战、逼退多名敌人</td>
+</tr>
+<tr>
+<td>多攻击点快速切换跟拍→最后一击定点定格</td>
+<td>多攻击点快速切换跟拍，<!--蕾-->最后一击定点定格，多段连续残影，打击光效叠加，时间切片效果，高对比度</td>
+<td>眼花缭乱快攻</td>
+</tr>
+<tr>
+<td>物体回收轨迹跟拍→反击方向反向推镜锁焦</td>
+<td>物体回收轨迹全程跟拍，反击方向反向极速推镜锁焦，快速回收残影，突然爆发攻击特效，出其不意的动态转折</td>
+<td>假动作、攻防瞬间转换</td>
+</tr>
+<tr>
+<td>格挡侧方极速横移→交缠点环绕锁焦</td>
+<td>格挡侧方极速横移运镜，交缠点 360° 小半环绕锁焦，碰撞火花四溅，物体绞缠特写，力量对抗震颤特效</td>
+<td>武器交缠</td>
+</tr>
+<tr>
+<td>蓄力阶段缓慢拉镜→攻击瞬间极速推镜跟拍</td>
+<td>蓄力阶段缓慢拉镜，攻击瞬间极速推镜跟拍，肌肉紧绷特写，物体蓄力震颤，爆发性冲击特效，慢动作高光</td>
+<td>强力终结招式</td>
+</tr>
+<tr>
+<td>俯角全程跟拍缠绕过程→最终束缚状态拉镜展示</td>
+<td>俯角全程跟拍缠绕过程，最终束缚状态缓慢拉镜展示，全身缠绕特写，无法挣脱的动态效果，终结光效</td>
+<td>胜负已定时刻</td>
+</tr>
+</tbody>
+</table>
+<p><strong>取值速拷（9 条 · 与上表逐字一致）</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>旋转中心 360° 环绕跟拍，甩动起点定点锁焦，柔性物体旋转残影，离心力气流特效，金属反光，高速动态模糊</span></span>
+<span class="line"><span>直线抽击轨迹极速跟拍，命中点瞬间微距锁焦，破空音效可视化，皮肤撕裂特效，血痕飞溅，慢动作高光，高对比度</span></span>
+<span class="line"><span>螺旋缠绕轨迹全程跟拍，缠绕节点收紧瞬间锁焦，金属摩擦火花，肢体束缚特写，肌肉拉扯线条，动态张力拉满</span></span>
+<span class="line"><span>大范围圆周旋转跟拍，横扫末端急停拉镜，旋转残影拖尾，气流漩涡特效，地面扬尘碎石，大范围动态模糊</span></span>
+<span class="line"><span>多攻击点快速切换跟拍，&lt;!--蕾--&gt;最后一击定点定格，多段连续残影，打击光效叠加，时间切片效果，高对比度</span></span>
+<span class="line"><span>物体回收轨迹全程跟拍，反击方向反向极速推镜锁焦，快速回收残影，突然爆发攻击特效，出其不意的动态转折</span></span>
+<span class="line"><span>格挡侧方极速横移运镜，交缠点 360° 小半环绕锁焦，碰撞火花四溅，物体绞缠特写，力量对抗震颤特效</span></span>
+<span class="line"><span>蓄力阶段缓慢拉镜，攻击瞬间极速推镜跟拍，肌肉紧绷特写，物体蓄力震颤，爆发性冲击特效，慢动作高光</span></span>
+<span class="line"><span>俯角全程跟拍缠绕过程，最终束缚状态缓慢拉镜展示，全身缠绕特写，无法挣脱的动态效果，终结光效</span></span></code></pre>
+<h2 id="远程攻击弓箭暗器飞镖-1">远程攻击（弓箭、暗器、飞镖）</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">【9s-11.5s 月光女仙变装】凤凰女仙落地前，镜头先极速下坠至脚部特写锁定足部；单脚落地微锁定格，双脚落地后镜头从脚部缓缓垂直升起，同步 360 度环绕跟镜，全程贴合水纹化裙生长动画，完整展示变身过程。人物双脚落于平静镜面水面，脚尖触水瞬间泛起冰蓝色月辉涟漪，水纹顺脚踝向上蔓延，同步化为冰蓝色清冷仙裙，变身过程中画面震荡，水粒子激荡，直至完整覆盖全身，人物背后是硕大的月亮；人物同步变身清冷月光女仙，白色长发，胸部挺拔，手持泛寒光的长弓正对镜头。水纹化裙全程伴随冰晶粒子与月辉流光生长动画，仙裙自带月辉边缘光，周身萦绕淡蓝冷调柔光，水面倒映人物与月华，色调清冷高级，与前序暖调形成强烈视觉反差。 【11.5s-13.5s 高潮段】先极速拉远至大全景（人物在画面中非常渺小），随即反向极速推镜，全程一镜到底无快切，推镜速度与冰箭飞行速度完全同步，速度感与张力拉满。镜头拉远同时，月光女仙搭弓拉弦朝镜头直射冰箭；冰箭直冲镜头而来，镜头同步极速贴近箭矢，最终定格于镜头正前方。冰箭飞行全程拖尾高密度冰蓝冰晶粒子与月辉流光，抵近镜头瞬间触发全屏冰纹蔓延特效，冰裂纹路从中心向画面边缘极速延展，伴随漫天冰晶飘散粒子，张力充足，完美贴合音乐高潮卡点。 【13.5s-15s 收尾闭环段】冰纹延展峰值瞬间，镜头极速拉远至人物全身全景；女仙缓缓收弓从容转身，镜头同步极速推镜 + 180 度环绕运镜，全程锁定人物主体，节奏从快转缓，最终落镜精准定格开篇机位，与开篇画面严丝合缝闭环。环绕推镜中，人物从月光女仙无缝变回开篇造型，最终落镜回归开篇场景：人物侧脸对镜头，双眼轻闭，身着黑色轻纱广袖衣衫，固定特写正对人物手，呈灵力起势状态。转身变装过程中，伴随冰蓝月辉与金色流光渐变融合特效；变装完成后，画面光影完美回归开篇柔和质感，黑色轻纱上的金色暗纹持续闪烁鎏金光效，首尾调性统一，形成无断层完美闭环。</span></span></code></pre>
+<table>
+<thead>
+<tr>
+<th><strong>运镜描述</strong></th>
+<th><strong>seedance2.0提示词</strong></th>
+<th><strong>适用场景</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>持握手侧方环绕跟拍→蓄力顶点急停锁焦</td>
+<td>持握手侧方 360° 小环绕跟拍，蓄力顶点瞬间急停锁焦，弓弦绷紧特写，肌肉线条紧绷，眼神专注瞄准，呼吸震颤特效</td>
+<td>远距离致命一击</td>
+</tr>
+<tr>
+<td>发射点极速推镜→飞行轨迹全程跟拍</td>
+<td>发射点极速推镜，飞行轨迹全程贴物跟拍，破风尾迹特效，空气扭曲动态模糊，高速运动残影，高对比度</td>
+<td>直线弹道攻击</td>
+</tr>
+<tr>
+<td>多发射点快速切换跟拍→齐发瞬间全景定格</td>
+<td>多发射点快速切镜跟拍，齐发瞬间全景定格，多道平行尾迹，弹幕式飞行效果，时间切片特效</td>
+<td>群战</td>
+</tr>
+<tr>
+<td>目标<!--蕾-->侧方预判跟拍→闪避瞬间时间冻结</td>
+<td>目标侧方预判式跟拍，闪避瞬间全局时间冻结，飞行物擦身而过特写，气流波动波纹，发丝衣物飘动，高对比度</td>
+<td>闪避、主角高光时刻</td>
+</tr>
+<tr>
+<td>脱手瞬间微距锁焦→抛物线轨迹全程跟拍</td>
+<td>脱手瞬间微距锁焦，抛物线轨迹全程跟拍，物体旋转反光，隐蔽飞行残影，低亮度环境下的微光特效</td>
+<td>偷袭、出其不意</td>
+</tr>
+<tr>
+<td>回旋轨迹环绕跟拍→回收终点急停锁焦</td>
+<td>回旋轨迹 360° 环绕跟拍，回收终点瞬间急停锁焦，环形飞行残影，反向加速特效，手部接物特写，动态张力拉满<!--蕾--></td>
+<td>回旋类武器二次折返</td>
+</tr>
+<tr>
+<td>俯角全景拉镜→落点区域慢动作覆盖</td>
+<td>高空俯角全景拉镜，落点区域慢动作全覆盖，漫天飞行尾迹，地面弹坑碎石，冲击波扩散特效，尘土飞扬</td>
+<td>箭雨</td>
+</tr>
+<tr>
+<td>格挡物正面推镜→碰撞瞬间微距锁焦</td>
+<td>格挡物正面极速推镜，碰撞瞬间微距锁焦，金属碰撞火花，飞行物碎裂飞溅，格挡震颤特效，慢动作高光</td>
+<td>徒手接名场面</td>
+</tr>
+</tbody>
+</table>
+<p><strong>取值速拷（8 条 · 与上表逐字一致）</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>持握手侧方 360° 小环绕跟拍，蓄力顶点瞬间急停锁焦，弓弦绷紧特写，肌肉线条紧绷，眼神专注瞄准，呼吸震颤特效</span></span>
+<span class="line"><span>发射点极速推镜，飞行轨迹全程贴物跟拍，破风尾迹特效，空气扭曲动态模糊，高速运动残影，高对比度</span></span>
+<span class="line"><span>多发射点快速切镜跟拍，齐发瞬间全景定格，多道平行尾迹，弹幕式飞行效果，时间切片特效</span></span>
+<span class="line"><span>目标侧方预判式跟拍，闪避瞬间全局时间冻结，飞行物擦身而过特写，气流波动波纹，发丝衣物飘动，高对比度</span></span>
+<span class="line"><span>脱手瞬间微距锁焦，抛物线轨迹全程跟拍，物体旋转反光，隐蔽飞行残影，低亮度环境下的微光特效</span></span>
+<span class="line"><span>回旋轨迹 360° 环绕跟拍，回收终点瞬间急停锁焦，环形飞行残影，反向加速特效，手部接物特写，动态张力拉满&lt;!--蕾--&gt;</span></span>
+<span class="line"><span>高空俯角全景拉镜，落点区域慢动作全覆盖，漫天飞行尾迹，地面弹坑碎石，冲击波扩散特效，尘土飞扬</span></span>
+<span class="line"><span>格挡物正面极速推镜，碰撞瞬间微距锁焦，金属碰撞火花，飞行物碎裂飞溅，格挡震颤特效，慢动作高光</span></span></code></pre>
+<h2 id="超远程攻击仙侠法术">超远程攻击（仙侠法术）</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">3D CG 国漫暗黑玄幻风格，史诗级奇幻大片质感，Seedance 2.0 快节奏高清模式，虚幻引擎 5 极致画质，8K 超高清，高对比度暗调光影，赭金 + 墨黑主色调，高速沙粒流体无拖影，沙尘物理精度拉满，动态模糊自然，沉浸式第一人称景深，边缘锐利无闪烁，运镜丝滑无卡顿。 万里死寂的枯骨荒漠中心，头戴破旧竹编斗笠的玄衣女子伫立于沙暴之眼，斗笠边缘垂落的赭色布条与破碎衣袍在灼热狂风中烈烈狂舞，眼神枯寂如镇狱明王，引动荒芜之力天崩地裂。0-2s 镜头围绕人物做 360° 环绕同时极速向前急推，她双手在胸前结狰狞地煞印，漫天悬浮的沙砾骤然停滞，胸口浮现暗金色锋利沙系法阵，纹路如龟裂大地般蔓延，金光爆闪的瞬间沙砾炸裂成亿万粒金刚砂刃向四周激射，竹编斗笠在冲击波中剧烈震颤，编织缝隙间透出刺目金芒；2-5s 镜头极速拉远至上帝视角，整片荒漠轰然拔起数千米高的环形沙尘暴壁，沙粒如烧红的铁砂灼烧空气，天地间只剩玄黑与炽金的极致吞噬，残阳在漫天黄沙下黯淡如死瞳，竹笠女子渺小如芥子悬浮于风暴中心；5-8s 女子猛地向前挥出双臂，遮天蔽日的灭世沙浪裹挟着断骨与飓风，以碎星沉陆之势直冲镜头，滚烫沙粒扑面而来，斗笠在狂风中几乎被掀飞又被死死压住，最终定格在沙浪巨口即将彻底吞噬镜头、竹笠边缘被沙粒擦出火星的窒息湮灭瞬间。 细节强化：沙粒带着焚金融铁的炽光，沙暴翻涌泛着地脉暗金纹，竹编斗笠的编织纹理、磨损毛边与被沙粒击打出的细微凹痕清晰可见，斗笠下飞扬的发丝与布条动态丝滑，沙暴的漩涡、坍缩与流沙肌理真实，热浪扭曲空气的折射波纹可见，飞沙走石撕扯衣袂发丝的动感自然，天塌地陷的沉沦倾覆感与寂灭压迫感拉满。</span></span></code></pre>
+<table>
+<thead>
+<tr>
+<th><strong>运镜描述</strong></th>
+<th><strong>seedance2.0提示词</strong></th>
+<th><strong>适用场景</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>手部结印特写运镜→核心结印动作锁焦</td>
+<td>手部结印特写，核心结印动作锁焦，法阵如闪电流转，蓝光爆闪，元素粒子炸裂成万千寒光刃激射<!--蕾--></td>
+<td>法术起手结印</td>
+</tr>
+<tr>
+<td>低仰角微推进运镜→双手结印动作锁焦</td>
+<td>低仰角微推进，双手翻飞结印动作锁焦，指尖对应元素（金、水、火等，下同）符文流转，周身万道法阵点亮，符展示虚影，对应光效爆发</td>
+<td>强攻系法术起手蓄力</td>
+</tr>
+<tr>
+<td>360° 环绕 + 极速急推运镜→双手结印动作锁焦</td>
+<td>360° 环绕 + 极速急推，双手结印动作锁焦，漫天元素粒子悬停，掌心对应元素法阵如龟裂大地蔓延，金光爆闪，元素粒子炸裂成亿万金刚砂刃激射</td>
+<td>爆发、荒漠、废墟</td>
+</tr>
+<tr>
+<td>跟随运镜→360° 恒定距离环绕运镜→粒子凝聚全程<!--蕾-->锁焦</td>
+<td>跟随运镜 + 360° 恒定距离环绕，粒子凝聚全程锁焦，金色 （金、水、火等，下同）粒子逐步聚拢成型，同步生长服饰与肢体，周身浮动鎏金古文字符</td>
+<td>光系粒子凝聚施法、法宝显形</td>
+</tr>
+<tr>
+<td>垂直俯拍加速下推运镜→推镜缓停转小幅前推→上半身结印动作锁焦</td>
+<td>垂直俯拍加速下推，推镜缓停转小幅前推，上半身结印动作锁焦，指尖萦绕灵力微光，结印动作流畅自然</td>
+<td>静谧环境施法</td>
+</tr>
+<tr>
+<td>镜头极速拉远至上帝视角运镜→大范围法术展开全景锁焦</td>
+<td>镜头极速拉远至上帝视角，大范围法术展开全景锁焦，大地 （海洋）拔起数千米环形元素（水、图等）壁，主体身形渺小如芥子</td>
+<td>超远程大范围法术展开</td>
+</tr>
+<tr>
+<td>低仰角极速推进转半环绕运镜→元素洪流全景锁焦</td>
+<td>低仰角极速推进转半环绕，元素洪流全景锁焦，元素如暴雨倒灌天穹，本命元素绽放漫天虚影，元素罡气灼出焰尾轨迹</td>
+<td>大范围洪流型法术展开</td>
+</tr>
+<tr>
+<td>极速反向拉远 + 广角拉升运镜→全域灵力爆发全景锁焦</td>
+<td>极速反向拉远 + 广角拉升，全域灵力爆发全景锁焦，带强烈动态模糊冲击效果，灵力渐强席卷全场，带动环境元素狂舞</td>
+<td>大范围灵力释放</td>
+</tr>
+<tr>
+<td>高空固定俯拍 + 同步镜头震动运镜→灵力冲击波爆发锁焦</td>
+<td>高空固定俯拍 + 同步镜头震动，灵力冲击波爆发锁焦，磅礴元素能量席卷整片区域，带动环境物体弯折震动，漫天元素粒子狂舞</td>
+<td>大范围冲击波法术</td>
+</tr>
+<tr>
+<td>直冲镜头运镜→定格攻击吞噬镜头瞬间</td>
+<td>主体元素（水、火、沙...）攻击直冲镜头，定格攻击吞噬镜头瞬间，元素粒子扑面而来，带窒息 / 湮灭压迫感</td>
+<td>第一人称冲击效果</td>
+</tr>
+<tr>
+<td>极缓拉镜转全景运镜→终极法阵光爆定格</td>
+<td>极缓拉镜转全景，终极法阵光爆定格，法阵化作千丈太古阵，元素神兽盘绕昂首嘶吼，元素流裹咒文如龙卷贯通天地，空间扭曲</td>
+<td>阵法类大招收尾</td>
+</tr>
+<tr>
+<td>环绕收尾运镜→小幅后拉锁焦→极速前推锁焦面部至眉心→特写定格</td>
+<td>环绕收尾 + 小幅后拉锁焦 + 极速前推锁焦面部至眉心，特写定格，角色闭目结古诀，身后逐帧勾勒多层嵌套圆形元素法阵，光效扩大放射金光，眉心印记闪过极致光芒，猛然睁眼眼瞳带细碎元素光效</td>
+<td>角色觉醒、力量解放瞬间</td>
+</tr>
+<tr>
+<td>高空机位极缓前推跟焦运镜→主体朝镜头极速飞来→近景定格</td>
+<td>高空机位极缓前推跟焦，主体朝镜头极速飞来近景定格，主角变身形态完整（变成什么需要自己补充下），光效随摆动流转，带漫天元素粒子与灵力尾迹</td>
+<td>变身形态高光</td>
+</tr>
+</tbody>
+</table>
+<p><strong>取值速拷（13 条 · 与上表逐字一致）</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>手部结印特写，核心结印动作锁焦，法阵如闪电流转，蓝光爆闪，元素粒子炸裂成万千寒光刃激射&lt;!--蕾--&gt;</span></span>
+<span class="line"><span>低仰角微推进，双手翻飞结印动作锁焦，指尖对应元素（金、水、火等，下同）符文流转，周身万道法阵点亮，符展示虚影，对应光效爆发</span></span>
+<span class="line"><span>360° 环绕 + 极速急推，双手结印动作锁焦，漫天元素粒子悬停，掌心对应元素法阵如龟裂大地蔓延，金光爆闪，元素粒子炸裂成亿万金刚砂刃激射</span></span>
+<span class="line"><span>跟随运镜 + 360° 恒定距离环绕，粒子凝聚全程锁焦，金色 （金、水、火等，下同）粒子逐步聚拢成型，同步生长服饰与肢体，周身浮动鎏金古文字符</span></span>
+<span class="line"><span>垂直俯拍加速下推，推镜缓停转小幅前推，上半身结印动作锁焦，指尖萦绕灵力微光，结印动作流畅自然</span></span>
+<span class="line"><span>镜头极速拉远至上帝视角，大范围法术展开全景锁焦，大地 （海洋）拔起数千米环形元素（水、图等）壁，主体身形渺小如芥子</span></span>
+<span class="line"><span>低仰角极速推进转半环绕，元素洪流全景锁焦，元素如暴雨倒灌天穹，本命元素绽放漫天虚影，元素罡气灼出焰尾轨迹</span></span>
+<span class="line"><span>极速反向拉远 + 广角拉升，全域灵力爆发全景锁焦，带强烈动态模糊冲击效果，灵力渐强席卷全场，带动环境元素狂舞</span></span>
+<span class="line"><span>高空固定俯拍 + 同步镜头震动，灵力冲击波爆发锁焦，磅礴元素能量席卷整片区域，带动环境物体弯折震动，漫天元素粒子狂舞</span></span>
+<span class="line"><span>主体元素（水、火、沙...）攻击直冲镜头，定格攻击吞噬镜头瞬间，元素粒子扑面而来，带窒息 / 湮灭压迫感</span></span>
+<span class="line"><span>极缓拉镜转全景，终极法阵光爆定格，法阵化作千丈太古阵，元素神兽盘绕昂首嘶吼，元素流裹咒文如龙卷贯通天地，空间扭曲</span></span>
+<span class="line"><span>环绕收尾 + 小幅后拉锁焦 + 极速前推锁焦面部至眉心，特写定格，角色闭目结古诀，身后逐帧勾勒多层嵌套圆形元素法阵，光效扩大放射金光，眉心印记闪过极致光芒，猛然睁眼眼瞳带细碎元素光效</span></span>
+<span class="line"><span>高空机位极缓前推跟焦，主体朝镜头极速飞来近景定格，主角变身形态完整（变成什么需要自己补充下），光效随摆动流转，带漫天元素粒子与灵力尾迹</span></span></code></pre>
+<h2 id="人物站位双人三人多人">人物站位（双人/三人/多人）</h2>
+<blockquote>
+<p>方法原理、模型边界与验收规则见：<a href="/prompt-archive-site/notes/short-drama-blocking-method/">🎬方法-AI短剧空间站位与镜头情绪控制</a>。本页保留2人、3人和多人场景的完整参考图与提示词案例。</p>
+</blockquote>
+<h2 id="双人">双人</h2>
+<p>用环绕镜头的方式切换到不同人物的正脸，非常稳，给环绕运镜设置一个比较快的时间，最后成片的效果就是切镜。</p>
+<blockquote>
+<p><strong>提示词关键词：镜头环绕至XX（人物）正面，XX面向镜头，做了啥啥啥</strong></p>
+</blockquote>
+<h3 id="参考图">参考图：</h3>
+<p>黑衣女子、白衣女子、背景环境</p>
+<h3 id="提示词">提示词：</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">视频风格：</span></span>
+<span class="line"><span style="color:#E1E4E8">3D，3D国漫，8K超清高帧率，电影级UE5渲染，PBR物理材质，全局体积光照，光影通透柔和，人物自然眨眼呼吸，表情生动写实，胸腔呼吸起伏自然真实 视频详情： </span></span>
+<span class="line"><span style="color:#E1E4E8">0.0-0.5s，固定使用首帧画面</span></span>
+<span class="line"><span style="color:#E1E4E8">0.5-2.5s，远景，固定运镜，暮色，封魔渊外围冷崖，九幽玄冰阵，漫天飞雪，灰白天地，苏念薇，在画面左侧，面向画面右前方，纹丝不动；顾长吟在画面右侧，背对镜头，朝向苏念薇。顾长吟手握剑柄，剑尖指向苏念薇，苏念薇双目微垂，睫毛凝霜，呼吸平稳[</span><span style="color:#DBEDFF;text-decoration:underline">寒风呼啸声</span><span style="color:#E1E4E8">] </span></span>
+<span class="line"><span style="color:#E1E4E8">2.5-4.0s，中景，推镜+镜头移动并环绕至顾长吟正面，顾长吟面向镜头，手握剑柄，她把手中的剑微抬，雪幕中，剑身泛幽蓝寒芒。顾长吟嘴唇轻启；苏念薇背对着镜头，面向顾长吟，顾长吟目光审视，瞳孔微缩，声音沉而清晰；[</span><span style="color:#DBEDFF;text-decoration:underline">风声中夹杂剑刃微颤，顾长吟:那一招……</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#E1E4E8">4.0-5.5s，近景，固定运镜，顾长吟手握剑柄，她把剑微微上挑，目光直逼苏念薇；苏念薇身体微绷，顾长吟眉骨微动，视线锁定，语气带审视；[</span><span style="color:#DBEDFF;text-decoration:underline">顾长吟:从何学来？</span><span style="color:#E1E4E8">] </span></span>
+<span class="line"><span style="color:#E1E4E8">5.5-6.5s，近景，180度镜头环绕+推镜，镜头环绕至苏念薇正面，苏念薇发丝沾雪，她面向镜头，一只手指按住太阳穴，声音沙哑；顾长吟背对着镜头，面向苏念薇，顾长吟手握剑柄，剑尖指向苏念薇。苏念薇眼中暗含挣扎，瞳孔微散，眉头紧锁，声音低沉；[</span><span style="color:#DBEDFF;text-decoration:underline">心跳声（微），苏念薇:……梦里，</span><span style="color:#E1E4E8">] </span></span>
+<span class="line"><span style="color:#E1E4E8">6.5-7.5s，特写，固定运镜+第一人称视角，镜头即顾长吟，暮色，封魔渊外围冷崖，雪花在苏念薇睫毛上融化，苏念薇面向镜头，抬眼直视顾长吟（即镜头方向）；苏念薇目光中带着倔强与一丝凄然，嘴角微微上扬，似笑非笑；[</span><span style="color:#DBEDFF;text-decoration:underline">静默中呼吸声，苏念薇:你信吗？</span><span style="color:#E1E4E8">] </span></span>
+<span class="line"><span style="color:#E1E4E8">7.5-8.5s，近景，固定运镜+第一人称视角，镜头即顾长吟。暮色，封魔渊外围冷崖，顾长吟（即镜头方向），看一眼手中的剑（镜头向下，看向手中的剑，又继续抬头看向苏念薇），苏念薇神色不变[</span><span style="color:#DBEDFF;text-decoration:underline">风啸声渐强，顾长吟:梦？</span><span style="color:#E1E4E8">] 8.5-10.5s，中景，环绕运镜+固定运镜，通过环绕运镜的方式让顾长吟和苏念薇同时1/2侧脸对着镜头，然后镜头固定住。顾长吟目光扫过漫天飞雪，手握剑柄，挥剑，让剑尖指向地面；苏念薇保持原先的姿势，顾长吟眼神幽深，语气沉缓，嘴角浮起冷笑；苏念薇呼吸微顿[</span><span style="color:#DBEDFF;text-decoration:underline">风声携尘埃飘落，顾长吟:封魔渊下镇压过的人，都说自己做了个梦。</span><span style="color:#E1E4E8">] 10.5-12s，近景，推镜，雪光照在顾长吟脸上，明暗分明，顾长吟，目光锐利如刀，剑尖再次抬起对着苏念薇；苏念薇嘴唇微抿，顾长吟眼中掠过失落与决绝，声音低沉有力；苏念薇睫毛轻颤[</span><span style="color:#DBEDFF;text-decoration:underline">剑刃与空气摩擦的细微嘶声，顾长吟:这千年的雪，也盖不住他们的谎言。</span><span style="color:#E1E4E8">] </span></span>
+<span class="line"><span style="color:#E1E4E8">12.0-14.0s，近景，环绕运镜+推镜，镜头转向苏念薇正面。暮色，封魔渊外围冷崖，苏念薇发丝间积雪闪烁，苏念薇，面向镜头，抬起下巴，嘴角扯出苍白弧度；顾长吟背对镜头面向苏念薇，顾长吟手中的剑尖纹丝不动，苏念薇眼神空洞却透着决绝，嘴唇颤抖后抿紧；[</span><span style="color:#DBEDFF;text-decoration:underline">心跳声渐响，苏念薇:那便杀了我啊。</span><span style="color:#E1E4E8">]</span></span></code></pre>
+<h2 id="三人">三人</h2>
+<p>把三角站位定死，画面中间的角作为桥梁，链接两边。画面中间的人物可以根据故事需要切换，有时候是A，有时候是B</p>
+<blockquote>
+<p><strong>提示词关键词：镜头随着A的眼神环绕至 B正面，B面向镜头，做了啥啥啥</strong></p>
+</blockquote>
+<h3 id="参考图-1">参考图：</h3>
+<p>黑衣女子、白衣女子、庭中男子+下方场景图（人物直接放进去的）</p>
+<h3 id="提示词-1">提示词：</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">视频风格：3D，3D国漫，8K超清高帧率，电影级UE5渲染，PBR物理材质，全局体积光照，光影通透柔和，人物自然眨眼呼吸，表情生动写实，胸腔呼吸起伏自然真实 视频详情： </span></span>
+<span class="line"><span style="color:#FFAB70">1.</span><span style="color:#E1E4E8"> 0.0-1.5s，近景，推镜，白天，湖心亭，石桌上的糕点散着甜香，苏念薇在画向镜头，腮帮鼓鼓的十分可爱的咀嚼口中的糕点，她俏皮的先看看坐在右侧的陆念元，再看看坐在画面左侧的顾长吟，眯着眼笑，十分幸福。[</span><span style="color:#DBEDFF;text-decoration:underline">吞咽声，衣料窸窣声，苏念薇:唔，好好吃！</span><span style="color:#E1E4E8">]； </span></span>
+<span class="line"><span style="color:#FFAB70">2.</span><span style="color:#E1E4E8"> 1.5-3.5s,镜头随着苏念薇的眼神环绕至画面左侧的顾长吟正面，顾长吟面对镜头，面向苏念薇。顾长吟拿着手帕朝着苏念薇的嘴角递去，准备为苏念薇擦去嘴角的糕点残渣。苏念薇背对镜头，面向顾长吟； </span></span>
+<span class="line"><span style="color:#FFAB70">3.</span><span style="color:#E1E4E8"> 3.5-5.0s，接着镜头转化成第一视角，镜头即顾长吟的眼睛，镜头带着轻微晃动，面向苏念薇的正面。顾长吟小心的用手给苏念薇擦去嘴角的糕点残渣，苏念薇又低头看了看手里咬剩板块的糕点，一脸幸福。请注意，画面中不需要出现顾长吟的脸或身体，只能出现她的手，所有情绪都要通过手的动作和镜头晃动来表现。[</span><span style="color:#DBEDFF;text-decoration:underline">顾长吟:慢慢吃，别噎着。</span><span style="color:#E1E4E8">] </span></span>
+<span class="line"><span style="color:#FFAB70">4.</span><span style="color:#E1E4E8"> 5.0-6.5s，忽然茶壶盖轻响，水声隐约，苏念薇的视线朝画面右下方看去，镜头跟随苏念薇视线环绕至桌面，镜头特写陆念元的手，陆念元正提茶壶为苏念薇倒茶，倒茶完毕后，将茶壶放下，一只手端着茶盏。[</span><span style="color:#DBEDFF;text-decoration:underline">茶水注入茶杯的淅沥声</span><span style="color:#E1E4E8">] 4. 6.5-8.0s，镜头从端着茶盏的手向上移动到陆念元正面，接着镜头接着镜头转化成第一视角，镜头即苏念薇的眼睛，陆念元面向镜头递去茶盏[</span><span style="color:#DBEDFF;text-decoration:underline">陆念元:喝口茶。</span><span style="color:#E1E4E8">] </span></span>
+<span class="line"><span style="color:#FFAB70">5.</span><span style="color:#E1E4E8"> 8.0-9.5s，镜头继续保持第一视角，镜头即苏念薇的眼睛，她双手接过茶盏。请注意，此时画面中不需要出现苏念薇的脸或身体，只能出现她的手，所有情绪都要通过手的动作和镜头晃动来表现。[</span><span style="color:#DBEDFF;text-decoration:underline">苏念薇:唔</span><span style="color:#E1E4E8">]；</span></span>
+<span class="line"><span style="color:#FFAB70">6.</span><span style="color:#E1E4E8"> 9.5s-12s，近景，白天，湖心亭，苏念薇喝下陆念元递来的茶，接着镜头拉至中景，三个人在湖心亭有说有笑，十分幸福。</span></span></code></pre>
+<h2 id="多人">多人</h2>
+<p>让需要说话的人都去中轴线，或者横轴线上</p>
+<h3 id="参考图-2">参考图</h3>
+<p>女魔图、白衣师傅、红衣手下、白胡子修士+下面两张场景图</p>
+<h3 id="提示词-2">提示词</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">视频风格：3D，3D国漫，8K超清高帧率，电影级UE5渲染，PBR物理材质，全局体积光照，光影通透柔和，人物自然眨眼呼吸，表情生动写实，胸腔呼吸起伏自然真实 视频详情： </span></span>
+<span class="line"><span style="color:#E1E4E8">0.0-0.2s，极速推镜至苏念薇正面，</span></span>
+<span class="line"><span style="color:#E1E4E8">0.2-1.0s，苏念薇面向镜头，眼神闪烁，睫毛轻颤，呼吸一滞，内心慌乱[</span><span style="color:#DBEDFF;text-decoration:underline">心跳声，苏念薇:师傅…</span><span style="color:#E1E4E8">] </span></span>
+<span class="line"><span style="color:#E1E4E8">1.0-2.5s，镜环绕至阿念及顾长吟（白衣男子）正面，中景，确保两人正脸可以同时入镜。阿念面向镜头，用手往镜头方向猛推了一把顾长吟（白衣男子），顾长吟踉跄前倾，瞳仁微颤，但仍旧保持着高傲和清冷[</span><span style="color:#DBEDFF;text-decoration:underline">衣袍破空声，踉跄脚步声</span><span style="color:#E1E4E8">] </span></span>
+<span class="line"><span style="color:#E1E4E8">2.5-4.0s，镜头平移至阿念正面，特写阿念面部表情。他邪魅一笑，充满邀功的感觉[</span><span style="color:#DBEDFF;text-decoration:underline">衣料摩挲声，阿念:此人已擒，听候魔尊发落</span><span style="color:#E1E4E8">] </span></span>
+<span class="line"><span style="color:#E1E4E8">4.0-6.0s，镜头环绕至苏念薇正面，苏念薇睫毛抖动，眉头微皱，手指无意识地攥紧裙摆，十分紧张的样子，此时殿上传来一声“尊上”[</span><span style="color:#DBEDFF;text-decoration:underline">白胡修士:尊上</span><span style="color:#E1E4E8">] </span></span>
+<span class="line"><span style="color:#E1E4E8">6.0-7.5s，苏念薇一惊，头和眼神转向画面左下方。镜头跟随苏念薇眼神，环绕至镜头右侧列队的黑衣修士处。此时白胡修士从修士队列中走出，镜头跟随白胡子修士移动至魔宫大殿的中央红毯上，白胡子修士面向镜头，身后是阿念和顾长吟虚化的形象阿念、顾长吟面向镜头），站定后中气十足的说：“此人当诛”[</span><span style="color:#DBEDFF;text-decoration:underline">白胡修士:此人当诛</span><span style="color:#E1E4E8">] </span></span>
+<span class="line"><span style="color:#E1E4E8">7.5-9.0s，镜头环绕至苏念薇正面，苏年薇面向镜头，眉头紧锁，目光游移，额角渗出细汗，忽然大殿远处再次传来一声“尊上”[</span><span style="color:#DBEDFF;text-decoration:underline">年轻修士:尊上</span><span style="color:#E1E4E8">] </span></span>
+<span class="line"><span style="color:#E1E4E8">9.0s-11.0s，镜头转化成第一视角，镜头即苏念薇的眼睛，镜头扫过阿念及顾长吟看向殿外，画面中央，此时一位年轻的黑衣修士在殿外，面朝镜头向着大殿走来</span></span></code></pre>
+<h2 id="多动作衔接快切">多动作衔接快切</h2>
+<h1 id="方法-多动作衔接快切提示词模板">🎬方法-多动作衔接快切提示词模板</h1>
+<blockquote>
+<p>从安歌镜头语言01原文提炼的可复用模板。核心原则一句话：<strong>切镜点放在动作中间，让两个景别被一个连续动作衔接</strong>。</p>
+</blockquote>
+<h2 id="模板骨架慢镜头动作衔接">模板骨架（慢镜头动作衔接）</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>【风格句】古风浪漫唯美真人短剧（换成自己的题材风格）</span></span>
+<span class="line"><span>【场景&amp;光影】&lt;场景描述&gt;，浅景深，背景虚化，&lt;主光方向+色温&gt;，&lt;人物光：轮廓光/发丝光&gt;。</span></span>
+<span class="line"><span>【切镜声明】快速切镜，动作连续。          ← 改进版关键句，问题版没有这句</span></span>
+<span class="line"><span>【分段分镜·时间戳】</span></span>
+<span class="line"><span>0~2s &lt;景别&gt;，&lt;机位角度&gt;，&lt;角色A动作：启动态&gt;。表情：&lt;具体表情&gt;。&lt;前景层描述&gt;；</span></span>
+<span class="line"><span>2~4s &lt;景别&gt;，&lt;机位&gt;，接上一镜，&lt;承接动作：上一镜动作的完成态&gt;。&lt;前景层&gt;，&lt;后景层&gt;；</span></span></code></pre>
+<p><strong>两条铁律</strong>（来自原文原则）：</p>
+<ol>
+<li>同一地点的连续动作，要切景别，必须"动作中间切镜"——镜头 A 拍动作启动，镜头 B 承接同一动作完成。静态切静态 = 情绪卡在嗓子眼。</li>
+<li>稍大场景人物移动，不拍全程，只拎出表达情绪的关键动作做快切。</li>
+</ol>
+<h2 id="对照示例悲伤场景问题版-vs-改进版">对照示例：悲伤场景（问题版 vs 改进版）</h2>
+<p>唯一差异证明模板有效——<strong>改两处</strong>：加"快速切镜，动作连续" + 第二段改"接上一镜"并让动作跨越切点。</p>
+<p><strong>问题版</strong>（景别切换突兀，动态→静态硬切）：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>古风浪漫唯美真人短剧</span></span>
+<span class="line"><span>场景&amp;光影：阴湿的冷宫，浅景深，背景虚化，冷白丁达尔光从右上角窗户射入，人物自带冷调轮廓光，发丝光。</span></span>
+<span class="line"><span>0~2s 特写，低角度仰拍，女主【@图片1】半趴在冷宫地上，沾满血污的手努力伸向镜头，但无力，迅速垂落。表情：眼神暗淡，挣扎，心如死灰。前景左侧透明白色破损虚化纱帐，随风飘荡时隐时现；</span></span>
+<span class="line"><span>2~4s 中景，俯视镜头，女主衣衫褴褛倒在冷宫冰冷的青石板上，慢慢闭上眼睛；前景白色透明破损虚化纱帐在左侧1/3处随风飘荡，时而遮挡女主半张脸，时而露出女主，后景狭小窗户，冷白丁达尔光束投射女主身上；</span></span></code></pre>
+<p><strong>改进版</strong>（手垂落跨越切点，动态衔接动态）：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>古风浪漫唯美真人短剧</span></span>
+<span class="line"><span>场景&amp;光影：阴湿的冷宫，浅景深，背景虚化，冷白丁达尔光从右上角窗户射入，人物自带冷调轮廓光，发丝光。</span></span>
+<span class="line"><span>快速切镜，动作连续。</span></span>
+<span class="line"><span>0~2s 特写，低角度仰拍，女主【@图片1】半趴在冷宫地上，沾满血污的手努力伸向镜头，但无力，迅速垂落。表情：眼神暗淡，挣扎，心如死灰。前景左侧透明白色破损虚化纱帐，随风飘荡时隐时现；</span></span>
+<span class="line"><span>2~4s 中景，俯视镜头，接上一镜，女主伸出的手迅速垂落地面，衣衫褴褛倒在冷宫冰冷的青石板上，眼睛缓缓闭上。前景白色透明破损虚化纱帐在左侧1/3处随风飘荡，时而遮挡女主半张脸，时而露出女主，后景狭小窗户，冷白丁达尔光束投射女主身上；</span></span></code></pre>
+<h2 id="快节奏动作衔接模板">快节奏动作衔接模板</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>【情绪拆解】先确定这段要传递的情绪 → 把动作按镜头一个个拆出来</span></span>
+<span class="line"><span>【时长控制】一般 1 个动作 1 秒内；有快有慢；分镜里设计了运镜的，要加上运镜时间估算总时长</span></span>
+<span class="line"><span>【分镜表述】</span></span>
+<span class="line"><span>&lt;N&gt;s &lt;景别+机位&gt;：&lt;单动作1&gt;；</span></span>
+<span class="line"><span>&lt;N&gt;s &lt;景别+机位&gt;：&lt;单动作2&gt;；</span></span>
+<span class="line"><span>...</span></span></code></pre>
+<p><strong>关键动作库</strong>（按情绪提取，不拍全程）：</p>
+<table>
+<thead>
+<tr>
+<th>情绪</th>
+<th>关键动作组合（雀跃案例）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>雀跃/急切</td>
+<td>提裙摆下楼梯 → 脚步特写 → 奔跑时脸上的激动 → 眼眶微红</td>
+</tr>
+<tr>
+<td>悲伤</td>
+<td>伸手够 → 手臂垂落 → 身体失去支撑 → 瘫倒</td>
+</tr>
+</tbody>
+</table>
+<h2 id="雀跃场景完整脚本骨架15s-多机位快切慢镜跟拍">雀跃场景完整脚本骨架（15s 多机位快切+慢镜跟拍）</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>【风格总述】&lt;题材&gt;，&lt;摄影风格：胶片摄影/lomo/淡彩/极繁主义&gt;。&lt;质感：侧逆光/柔光镜/金色轮廓光/发丝光/衣服流光/浅景深&gt;。不要字幕，不要背景音乐，保留环境音效。</span></span>
+<span class="line"><span>【角色与场景设定】</span></span>
+<span class="line"><span>• 女主：参考【图1】，初始位置参考线稿图【图4】，运动轨迹遵循设计稿【图3】的&lt;颜色&gt;箭头，&lt;起终点&gt;。</span></span>
+<span class="line"><span>• 男二：参考【图2】，初始位置参考线稿图【图4】，&lt;位置状态&gt;。</span></span>
+<span class="line"><span>• 场景：参考【图5】&lt;全景图描述&gt;，&lt;路人安排&gt;，浅景深，背景虚化，&lt;光线&gt;。</span></span>
+<span class="line"><span>【分镜叙事】多机位快切镜头结合慢镜头跟拍，展示&lt;情绪&gt;。</span></span>
+<span class="line"><span>1）远景：&lt;全景调度+人物启动动作+参考图锚点&gt;；</span></span>
+<span class="line"><span>2）中景跟拍：&lt;移动路径&gt;；</span></span>
+<span class="line"><span>3）脚步特写跟拍：&lt;关键动作&gt;；</span></span>
+<span class="line"><span>4）面部特写跟拍：&lt;表情细节&gt;。</span></span>
+<span class="line"><span>【音频】仅保留&lt;场景&gt;环境音效：&lt;列举&gt;，无背景音乐。</span></span></code></pre>
+<blockquote>
+<p>配套控制资产：站位/动线用线稿图（【图4】）+ 彩色箭头设计稿（【图3】）表达，不靠文字硬描述——见 <a href="/prompt-archive-site/notes/short-drama-blocking-method/">🎬方法-AI短剧空间站位与镜头情绪控制</a> §六。</p>
+</blockquote>
+<h2 id="关联">关联</h2>
+<ul>
+<li>方法体系：<a href="/prompt-archive-site/notes/short-drama-blocking-method/">🎬方法-AI短剧空间站位与镜头情绪控制</a>（§七 多动作衔接）</li>
+<li>原文档案：<code>raw/articles/feishu-安歌-AI短剧镜头语言01-多动作衔接.md</code></li>
+<li>走位控制：<code>raw/articles/feishu-安歌-场景穿越-走位站位固定.md</code>（三段式分段生成，与本模板的快切互补）</li>
+</ul>
+</div></div></div></div></main><footer class="site-footer" data-astro-cid-tq46r5sz><div class="container" data-astro-cid-tq46r5sz><div class="footer-grid" data-astro-cid-tq46r5sz><div class="footer-brand" data-astro-cid-tq46r5sz><a class="brand" href="/prompt-archive-site/" data-astro-cid-tq46r5sz><span class="brand-glyph" data-astro-cid-tq46r5sz>PA</span><span class="brand-name" data-astro-cid-tq46r5sz>AI 提示词档案馆</span></a><p class="footer-desc" data-astro-cid-tq46r5sz>可浏览、可检索、可复制的 AI 图像与视频提示词案例库。每个完整案例一个独立页面，提示词与 Wiki 原文逐字一致。</p></div><nav class="footer-col" aria-label="页脚导航" data-astro-cid-tq46r5sz><p class="footer-label" data-astro-cid-tq46r5sz>浏览</p><a href="/prompt-archive-site/images/" data-astro-cid-tq46r5sz>图像案例</a><a href="/prompt-archive-site/videos/" data-astro-cid-tq46r5sz>视频案例</a><a href="/prompt-archive-site/notes/" data-astro-cid-tq46r5sz>方法笔记</a><a href="/prompt-archive-site/cases/" data-astro-cid-tq46r5sz>全站搜索</a></nav><div class="footer-col" data-astro-cid-tq46r5sz><p class="footer-label" data-astro-cid-tq46r5sz>本馆收录</p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>案例</span><b data-astro-cid-tq46r5sz>105</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>附实测成片</span><b data-astro-cid-tq46r5sz>2</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>方法笔记</span><b data-astro-cid-tq46r5sz>60</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>合集</span><b data-astro-cid-tq46r5sz>11</b></p></div></div><div class="footer-bottom" data-astro-cid-tq46r5sz><p data-astro-cid-tq46r5sz>「作者称已测试」表示来源声明，本站未复测。</p><p data-astro-cid-tq46r5sz>PA·ARCHIVE © 2026</p></div></div></footer></body><script type="module">function e(){document.querySelectorAll(`[data-masonry]`).forEach(e=>{let t=Array.from(e.querySelectorAll(`:scope > .m-cols > .m-col > *, :scope > *:not(.m-cols)`));if(e.querySelectorAll(`.m-cols`).forEach(e=>e.remove()),t.length===0)return;let n=window.matchMedia(`(max-width: 767px)`).matches?1:window.matchMedia(`(max-width: 1199px)`).matches?2:3,r=document.createElement(`div`);r.className=`m-cols`;let i=Array.from({length:n},()=>{let e=document.createElement(`div`);return e.className=`m-col`,e});t.forEach((e,t)=>i[t%n].appendChild(e)),e.appendChild(r),i.forEach(e=>r.appendChild(e))})}window.refreshMasonry=e,e();var t;window.addEventListener(`resize`,()=>{clearTimeout(t),t=setTimeout(e,150)});</script><script type="module">(()=>{let e=`.case-card, .note-card, .note-list-card`,t=window.matchMedia(`(prefers-reduced-motion: reduce)`),n=null,r=null,i=0;t.addEventListener?.(`change`,()=>{t.matches&&a()});function a(){if(!n)return;let e=n;e.classList.remove(`tilt-active`),e.classList.add(`tilt-return`),e.style.transform=``,clearTimeout(i),i=setTimeout(()=>e.classList.remove(`tilt-return`),320),n=null,r=null}document.addEventListener(`pointermove`,i=>{if(i.pointerType!==`mouse`||!i.isPrimary||t.matches)return;let o=i.target instanceof Element?i.target.closest(e):null;if(o!==n){if(a(),!o)return;n=o,r=n.getBoundingClientRect(),n.classList.add(`tilt-active`),n.classList.remove(`tilt-return`)}if(!n||!r)return;let s=(i.clientX-r.left)/r.width-.5,c=(i.clientY-r.top)/r.height-.5,l=Math.max(-1,Math.min(1,s*2))*4.5,u=Math.max(-1,Math.min(1,c*2))*-4.5;n.style.transform=`perspective(1100px) rotateX(${u.toFixed(3)}deg) rotateY(${l.toFixed(3)}deg) translateY(-3px)`},{passive:!0}),document.addEventListener(`pointerleave`,()=>a()),document.addEventListener(`pointerdown`,t=>{(t.target instanceof Element?t.target.closest(e):null)!==n&&a()},{passive:!0}),window.addEventListener(`blur`,()=>a()),window.addEventListener(`scroll`,()=>a(),{passive:!0})})();</script></html><script type="module">function e(){document.querySelectorAll(`.prose pre`).forEach(e=>{if(e.closest(`.code-panel`))return;let t=e.querySelector(`code`),n=(t??e).textContent??``,r=t?.className.match(/language-([\w+-]+)/)?.[1]??`text`,i=n.replace(/\n$/,``).split(`
+`).length,a=Array.from(n.matchAll(/`{3,}/g)).map(e=>e[0].length),o=a.length?Math.max(3,Math.max(...a)+1):3,s="`".repeat(o)+`markdown
+`+(n.endsWith(`
+`)?n:n+`
+`)+"`".repeat(o),c=document.createElement(`figure`);c.className=`code-panel`;let l=document.createElement(`figcaption`);l.className=`code-panel-head`;let u=document.createElement(`span`);u.className=`code-lang`,u.textContent=r;let d=document.createElement(`span`);d.className=`code-lines`,d.textContent=`${i} 行`;let f=document.createElement(`span`);f.className=`copy-feedback`,f.setAttribute(`aria-live`,`polite`);let p=document.createElement(`button`);p.type=`button`,p.className=`copy-btn`,p.textContent=`复制本块`,l.append(u,d,f,p),e.replaceWith(c),c.append(l,e);let m;p.addEventListener(`click`,async()=>{let e=!1;try{await navigator.clipboard.writeText(s),e=!0}catch{try{let t=document.createElement(`textarea`);t.value=s,t.style.position=`fixed`,t.style.opacity=`0`,document.body.appendChild(t),t.select(),e=document.execCommand(`copy`),t.remove()}catch{e=!1}}f.textContent=e?`已复制本块`:`复制失败，请手动选取`,p.textContent=e?`已复制`:`复制本块`,clearTimeout(m),m=setTimeout(()=>{f.textContent=``,p.textContent=`复制本块`},3e3)})})}e();</script>

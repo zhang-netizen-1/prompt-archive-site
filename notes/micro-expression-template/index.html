@@ -1,0 +1,431 @@
+<!DOCTYPE html><html lang="zh-CN" data-astro-cid-tq46r5sz><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="微表情特写提示词模板：用生理变量与时间轴控制克制向表演。"><link rel="icon" href="/prompt-archive-site/favicon.svg" type="image/svg+xml"><title>微表情特写模板 · 方法笔记</title><link rel="stylesheet" href="/prompt-archive-site/_astro/SiteLayout.DYPNTGRP.css"><style>.note-header[data-astro-cid-vex5zuxs]{max-width:calc(var(--note-width) + 280px);margin:0 auto;padding:40px 24px 0}
+</style></head><body data-astro-cid-tq46r5sz><a class="skip-link" href="#main" data-astro-cid-tq46r5sz>跳到主要内容</a><div class="announce" data-astro-cid-tq46r5sz><a href="/prompt-archive-site/cases/" data-astro-cid-tq46r5sz>PA·ARCHIVE — 每个完整案例一个独立页面，提示词与 Wiki 原文逐字一致 ↗</a></div><header class="site-header" data-astro-cid-tq46r5sz><div class="container" data-astro-cid-tq46r5sz><a class="brand" href="/prompt-archive-site/" data-astro-cid-tq46r5sz><span class="brand-glyph" data-astro-cid-tq46r5sz>PA</span><span class="brand-name" data-astro-cid-tq46r5sz>AI 提示词档案馆</span></a><nav class="site-nav" aria-label="主导航" data-astro-cid-tq46r5sz><a href="/prompt-archive-site/images/" data-astro-cid-tq46r5sz>图像案例<span class="nav-no" data-astro-cid-tq46r5sz>01</span></a><a href="/prompt-archive-site/videos/" data-astro-cid-tq46r5sz>视频案例<span class="nav-no" data-astro-cid-tq46r5sz>02</span></a><a href="/prompt-archive-site/notes/" aria-current="page" data-astro-cid-tq46r5sz>方法笔记<span class="nav-no" data-astro-cid-tq46r5sz>03</span></a></nav><div class="header-cta" data-astro-cid-tq46r5sz><a class="header-search-link" href="/prompt-archive-site/cases/" aria-label="全站搜索案例" data-astro-cid-tq46r5sz><span class="icon" style="width:15px;height:15px" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="6.1"/><line x1="13.6" y1="13.6" x2="18" y2="18"/></svg></span><span data-astro-cid-tq46r5sz>搜索</span><span class="nav-no" data-astro-cid-tq46r5sz>04</span></a></div></div></header><main id="main" data-astro-cid-tq46r5sz><div class="note-page" data-astro-cid-vex5zuxs><div class="note-header" data-astro-cid-vex5zuxs><nav class="breadcrumbs" aria-label="面包屑" data-astro-cid-vex5zuxs><a href="/prompt-archive-site/" data-astro-cid-vex5zuxs>首页</a><span aria-hidden="true" data-astro-cid-vex5zuxs>/</span><a href="/prompt-archive-site/notes/" data-astro-cid-vex5zuxs>方法笔记</a><span aria-hidden="true" data-astro-cid-vex5zuxs>/</span><span aria-current="page" data-astro-cid-vex5zuxs>微表情特写模板</span></nav><h1 style="font-size:32px" data-astro-cid-vex5zuxs>微表情特写模板</h1><p class="note-meta" data-astro-cid-vex5zuxs><span class="medium-chip" data-astro-cid-vex5zuxs>模板</span><span data-astro-cid-vex5zuxs>视频</span><span data-astro-cid-vex5zuxs>源资料：模板-微表情特写（visual-prompt-system）</span></p><p class="note-summary" data-astro-cid-vex5zuxs>微表情特写提示词模板：用生理变量与时间轴控制克制向表演。</p></div><div class="note-layout" data-astro-cid-vex5zuxs><aside class="note-toc" aria-label="目录" data-astro-cid-vex5zuxs><p class="toc-title" data-astro-cid-vex5zuxs>目录</p><a href="#变量清单" data-astro-cid-vex5zuxs>变量清单</a><a href="#高频取值包10条80常用档完整库见变量清单指向" data-astro-cid-vex5zuxs>高频取值包（10条·80%常用档，完整库见变量清单指向）</a><a href="#使用流程" data-astro-cid-vex5zuxs>使用流程</a><a href="#模板结构" data-astro-cid-vex5zuxs>模板结构</a><a href="#组装规则" data-astro-cid-vex5zuxs>组装规则</a><a href="#案例" data-astro-cid-vex5zuxs>案例</a><a href="#哭--倔强压抑破碎释然" class="depth-3" data-astro-cid-vex5zuxs>哭 · 倔强压抑→破碎释然</a><a href="#笑--娇羞的笑" class="depth-3" data-astro-cid-vex5zuxs>笑 · 娇羞的笑</a><a href="#综合--悲伤" class="depth-3" data-astro-cid-vex5zuxs>综合 · 悲伤</a><a href="#哭--不想相信悲伤落泪" class="depth-3" data-astro-cid-vex5zuxs>哭 · 不想相信→悲伤落泪</a></aside><div class="note-main" data-astro-cid-vex5zuxs><div class="prose" data-astro-cid-vex5zuxs><blockquote>
+<p>面部特写的逐拍情绪表演。适用于哭/笑/情绪转变的近景特写，Seedance 2.0。</p>
+</blockquote>
+<h2 id="变量清单">变量清单</h2>
+<table>
+<thead>
+<tr>
+<th>变量</th>
+<th>取值来源</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>{情绪链}</td>
+<td><a href="/prompt-archive-site/notes/performance-variables/">表演变量库</a></td>
+</tr>
+<tr>
+<td>{人物设定}</td>
+<td><a href="/prompt-archive-site/notes/character-style-variables/">角色造型变量库</a></td>
+</tr>
+<tr>
+<td>{场景氛围}</td>
+<td><a href="/prompt-archive-site/notes/scene-variables/">场景变量库</a></td>
+</tr>
+<tr>
+<td>{总时长}</td>
+<td>—按链内时长合计</td>
+</tr>
+</tbody>
+</table>
+<h2 id="高频取值包10条80常用档完整库见变量清单指向">高频取值包（10条·80%常用档，完整库见变量清单指向）</h2>
+<blockquote>
+<p>规则见库定义规范§三点七：≤15条/≤12KB，逐字复制，同源同步。深度需求去变量库查全量。</p>
+</blockquote>
+<p><strong>哭 · 情绪链</strong>（表演变量库·节选 4 条）</p>
+<table>
+<thead>
+<tr>
+<th><strong>情绪</strong></th>
+<th><strong>seedance2.0提示词</strong></th>
+<th><strong>时长（s）</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>失焦转聚拢</td>
+<td>原本失焦的双眼骤然聚拢</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td>瞳孔扩散</td>
+<td>瞳孔微微扩散<!-- v:xmv272 --></td>
+<td>0.5</td>
+</tr>
+<tr>
+<td>眼睑颤动</td>
+<td>下眼睑轻轻颤动</td>
+<td>0.5s</td>
+</tr>
+</tbody>
+</table>
+<p><strong>取值速拷（3 条 · 与上表逐字一致）</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>原本失焦的双眼骤然聚拢</span></span>
+<span class="line"><span>瞳孔微微扩散&lt;!-- v:xmv272 --&gt;</span></span>
+<span class="line"><span>下眼睑轻轻颤动</span></span></code></pre>
+<p><strong>笑 · 情绪链</strong>（表演变量库·节选 3 条）</p>
+<table>
+<thead>
+<tr>
+<th><strong>表情/情绪变化</strong></th>
+<th><strong>seedance2.0提示词</strong></th>
+<th><strong>时长（s）</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>惊讶</td>
+<td>呼吸骤然一屏，眼眸微微圆睁，瞳孔轻轻扩散</td>
+<td>1.5</td>
+</tr>
+<tr>
+<td>眼眸柔弯</td>
+<td>眼眸瞬间柔弯，一抹压抑不住的欢喜自眼底深处暖暖漾开</td>
+<td>0.5s</td>
+</tr>
+</tbody>
+</table>
+<p><strong>取值速拷（2 条 · 与上表逐字一致）</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>呼吸骤然一屏，眼眸微微圆睁，瞳孔轻轻扩散</span></span>
+<span class="line"><span>眼眸瞬间柔弯，一抹压抑不住的欢喜自眼底深处暖暖漾开</span></span></code></pre>
+<p><strong>眼神表达 · 场景句</strong>（表演变量库·节选 3 条）</p>
+<table>
+<thead>
+<tr>
+<th><strong>隐忍笃定</strong></th>
+<th>眉头微蹙，下颌紧绷，眼神从悲悯渐变为临危不乱的笃定</th>
+<th>国风武侠、朝堂剧情、人物高光出场</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>克制悲愤</strong></td>
+<td>眼尾泛红，唇线紧抿，<!--Ray-->眼神藏着克制的悲愤与绝不低头的倔强</td>
+<td>蒙冤、逆境坚守特写</td>
+</tr>
+<tr>
+<td><strong>克制隐忍</strong></td>
+<td>下颌紧绷，喉结重滚，眼神里是翻涌的情绪与强撑的体面克制</td>
+<td>职场博弈、隐忍剧情、情绪压抑特写</td>
+</tr>
+</tbody>
+</table>
+<p><strong>取值速拷（2 条 · 与上表逐字一致）</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>蒙冤、逆境坚守特写</span></span>
+<span class="line"><span>职场博弈、隐忍剧情、情绪压抑特写</span></span></code></pre>
+<h2 id="使用流程">使用流程</h2>
+<ol>
+<li>明确任务→在变量清单确认需要的变量类；</li>
+<li>到对应变量库按选档规则取值（整条搬用）；</li>
+<li>填入下方模板结构；</li>
+<li>对照组合规则检查冲突；</li>
+<li>生成后按示例库同型案例核对。</li>
+</ol>
+<h2 id="模板结构">模板结构</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>电影级超近面部特写，固定镜头/固定机位，【场景光线描述】。【人物设定：发型/妆容/服饰，来自角色造型库】。全段无台词，所有表演完全凝聚在眼神与微表情之中。【叙事前提一句话】。</span></span>
+<span class="line"><span>0至{t1}秒：{情绪链第1拍}。</span></span>
+<span class="line"><span>{t1}至{t2}秒：{情绪链第2拍}。</span></span>
+<span class="line"><span>……</span></span>
+<span class="line"><span>{tn-1}至{tn}秒：{情绪链末拍}。</span></span></code></pre>
+<h2 id="组装规则">组装规则</h2>
+<ol>
+<li>从表演变量库选「起点情绪→终点情绪」匹配的情绪链，逐拍搬运（含时长列）；</li>
+<li>各拍时长相加=总时长，5–9 秒为宜；拍数 5–10 拍；</li>
+<li>叙事前提一句话交代动机（为心上人倾尽所有后却被抛弃），不展开故事；</li>
+<li>「全段无台词」与表演凝集是此类镜头的成功关键，不添加对白；</li>
+<li>逐拍之间要有因果承接（震惊→冷笑→强笑→崩溃），不叠加互不相关的表情。</li>
+</ol>
+<h2 id="案例">案例</h2>
+<h3 id="哭--倔强压抑破碎释然">哭 · 倔强压抑→破碎释然</h3>
+<table>
+<thead>
+<tr>
+<th><strong>情绪</strong></th>
+<th><strong>seedance2.0提示词</strong></th>
+<th><strong>时长（s）</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>决绝后的恍惚</td>
+<td>中景，角色正对镜头，下颌微微收紧，嘴唇轻抿成线，眼神涣散失焦，视线落于虚空，神情淡漠而孤绝，像刚做完一个重大决定后的放空状态。</td>
+<td>1.5</td>
+</tr>
+<tr>
+<td>惊觉聚焦</td>
+<td>面部特写，角色的眼神猛然收拢变锐，<!-- v:xmv272 -->瞳孔轻轻收缩，睫毛微不可见地一颤，嘴唇略微张开一条细缝，犹如突然认出眼前之人，略带惊愕。</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td>脆弱裂痕</td>
+<td>特写，眼神保持聚焦，但下唇开始不受控制地轻微颤抖，目光中划过一丝慌乱与破碎感，仿佛坚硬的伪装正浮现一道裂痕。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>垂眸压制</td>
+<td>近景，角色迅速垂下眼帘，目光刻意躲向下侧，睫毛急促地连续眨动，嘴唇再次抿紧，一副拼命把情绪往下压的克制模样。</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td>静止屏息</td>
+<td>面部特写，角色保持垂眸静止，睫毛不再眨动，嘴唇轻轻抿住，微不可察地屏住呼吸，像是内心在做最后的挣扎与蓄力。</td>
+<td>0.5s</td>
+</tr>
+<tr>
+<td>含泪强笑</td>
+<td>特写，角色重新缓缓抬起眼帘，眼眶已微微泛红，眸中浮起一层薄泪，嘴角却努力向上一弯，扯出一个还在轻轻发抖的微笑。</td>
+<td>1</td>
+</tr>
+<tr>
+<td>泪光凝视</td>
+<td>面部特写，角色毫不闪躲地深深凝视镜头，泪水在眼眶中越蓄越满、轻轻打着转，微笑固执地维持在嘴角，甚至又勉强加深了一点点，眼波里却藏不住委屈。</td>
+<td>1.5</td>
+</tr>
+<tr>
+<td>虔诚的含泪微笑</td>
+<td>近景，角色纹丝不动地保持含泪微笑，微风拂起一丝碎发掠过湿润的眼角，泪珠在眼眶边缘轻颤却始终未落，笑意在水光中变得模糊而虔诚。</td>
+<td>1.5s</td>
+</tr>
+</tbody>
+</table>
+<p><strong>取值速拷（8 条 · 与上表逐字一致）</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>中景，角色正对镜头，下颌微微收紧，嘴唇轻抿成线，眼神涣散失焦，视线落于虚空，神情淡漠而孤绝，像刚做完一个重大决定后的放空状态。</span></span>
+<span class="line"><span>面部特写，角色的眼神猛然收拢变锐，&lt;!-- v:xmv272 --&gt;瞳孔轻轻收缩，睫毛微不可见地一颤，嘴唇略微张开一条细缝，犹如突然认出眼前之人，略带惊愕。</span></span>
+<span class="line"><span>特写，眼神保持聚焦，但下唇开始不受控制地轻微颤抖，目光中划过一丝慌乱与破碎感，仿佛坚硬的伪装正浮现一道裂痕。</span></span>
+<span class="line"><span>近景，角色迅速垂下眼帘，目光刻意躲向下侧，睫毛急促地连续眨动，嘴唇再次抿紧，一副拼命把情绪往下压的克制模样。</span></span>
+<span class="line"><span>面部特写，角色保持垂眸静止，睫毛不再眨动，嘴唇轻轻抿住，微不可察地屏住呼吸，像是内心在做最后的挣扎与蓄力。</span></span>
+<span class="line"><span>特写，角色重新缓缓抬起眼帘，眼眶已微微泛红，眸中浮起一层薄泪，嘴角却努力向上一弯，扯出一个还在轻轻发抖的微笑。</span></span>
+<span class="line"><span>面部特写，角色毫不闪躲地深深凝视镜头，泪水在眼眶中越蓄越满、轻轻打着转，微笑固执地维持在嘴角，甚至又勉强加深了一点点，眼波里却藏不住委屈。</span></span>
+<span class="line"><span>近景，角色纹丝不动地保持含泪微笑，微风拂起一丝碎发掠过湿润的眼角，泪珠在眼眶边缘轻颤却始终未落，笑意在水光中变得模糊而虔诚。</span></span></code></pre>
+<p>提示词</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">写实电影摄影质感，古装,塞外，暮色，8K超高清，面部稳定不变形，五官清晰，人体结构正常，动作自然流畅，无模糊无闪烁无抖动。固定机位，超近面部特写，镜头完全静止无抖动。镜头即心上人，她的所有眼神与微表情都直面镜头演绎。 角色：一位古代年轻女子。发型：素朴的低挽发髻，仅以一枚旧木簪绾住，长发散落，几缕挣脱的碎发被旷野的风吹得轻轻拂过脸颊，&lt;!-- V:xmv272 --&gt;发丝根根分明。妆容：素颜，眼眶周围因疲惫与情绪而泛着极浅的红晕，自然野生眉，睫毛根根分明。服饰：粗布红衣，领口微松，布面有细微的褶皱与风尘痕迹，袖口磨损处露出几丝线头。 背景：她静立塞外，身后是苍莽的黄土山塬与渐沉的暮色。她一动不动地望着镜头的方向。 0至1.5秒： 她站在镜头前，下颌紧绷，嘴唇微抿，眼神沉在某种思绪里，没有完全聚焦。那是刚刚独自做完一个艰难决定后的余韵——倔强、孤绝，还带着一丝尚未散尽的恍惚。她虽然面朝你，却尚未真正“看见”你。 1.5至3秒： 她涣散的目光忽然收拢，眼神猛地聚焦在你身上，&lt;!-- v:xmv272 --&gt;仿佛终于从自己的决心里惊醒。瞳孔极轻微地一缩，睫毛微微一颤——她认出了你，认出了这个她拼命想忍住不去想念的人。那层坚硬的倔强外壳瞬间出现一丝转瞬即逝的裂纹，下唇开始难以察觉地轻颤。 3至5秒： 她怕被你看穿这汹涌的伤心，眼神下意识地往下一躲，垂眸盯着下方，睫毛急促地眨动，像要把什么东西死死压回去。随即，她又鼓起勇气，重新抬起眼帘，目光柔柔地落回到你身上。就在这一垂一抬之间，她的眼眶已经微微泛红，眼波里浮起一层薄泪。可与此同时，她的嘴角却拼尽全力向上一弯，扯出一个浅浅的、还在轻轻发抖的微笑。那样子分明在说：你看，我真的想通了，我没有难过。 5至6.5秒： 她就这样直直地、深深地望着你，目光再也不躲了。泪水在眼眶中越蓄越满，晶莹地打着转，映着天边最后一缕昏黄的暮光，将坠未坠。而她那个硬撑出来的微笑却固执地维持在嘴角，甚至还又勉强加深了一点点，像是努力要让你放心。可眼底那藏不住的破碎与委屈，早已把一切真心都捧到了你面前。 6.5至8秒： 她保持着这含泪微笑的姿态，一动不动地凝视着你。风掀乱她鬓边一丝碎发，拂过湿润的眼角。泪水就在眼眶边缘轻颤，始终倔强地没有滴落。最后两秒，她的笑意在水光里变得模糊而虔诚——那是一个明明在哭、却偏要笑着告诉你“我很好”的女孩，把她所有的倔强、伤心与深情，都搁在了你眼前。</span></span></code></pre>
+<h3 id="笑--娇羞的笑">笑 · 娇羞的笑</h3>
+<table>
+<thead>
+<tr>
+<th><strong>表情/情绪变化</strong></th>
+<th><strong>seedance2.0提示词</strong></th>
+<th><strong>时长（s）</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>惊讶</td>
+<td>呼吸骤然一屏，眼眸微微圆睁，瞳孔轻轻扩散</td>
+<td>1.5</td>
+</tr>
+<tr>
+<td>眼眸柔弯</td>
+<td>眼眸瞬间柔弯，一抹压抑不住的欢喜自眼底深处暖暖漾开</td>
+<td>0.5s</td>
+</tr>
+<tr>
+<td>娇羞</td>
+<td>忍不住抬起眼睑，含羞带怯地直接望向镜头，嘴角不受控制地上翘</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>脸红</td>
+<td>两颊飞起淡淡的霞色<!-- v:xmv272 --></td>
+<td>0.5</td>
+</tr>
+<tr>
+<td>含羞抬眼</td>
+<td>忍不住抬起眼睑，含羞带怯地直接望向镜头，嘴角不受控制地上翘</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>压笑成浅笑</td>
+<td>拼命想把笑意往下压，最终却凝成一个羞怯至极、甜中带怯的浅笑，下巴微微内收</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td>被发现心事的娇羞</td>
+<td>眼神惊慌地从镜头上弹开，左右飘忽，不敢再看心上人，将脸偏向一侧，耳根与脖颈因极度的害羞而泛起潮红</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>抿唇咽口水</td>
+<td>嘴唇紧紧抿住，喉间极轻地滚动了一下，头微微低垂</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td>羞怯的抬头</td>
+<td>怯怯地再次抬起眼睛，绵长而温柔地直视镜头（或人物），睫毛狂颤，鼻翼微翕</td>
+<td>1.0</td>
+</tr>
+<tr>
+<td>释然微笑</td>
+<td>双唇缓缓放松，满心隐秘的甜蜜与忐忑的期待，尽在这一抹面对心上人、恍惚而动人的微笑中静静晕开，久久凝视</td>
+<td>1.0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>取值速拷（10 条 · 与上表逐字一致）</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>呼吸骤然一屏，眼眸微微圆睁，瞳孔轻轻扩散</span></span>
+<span class="line"><span>眼眸瞬间柔弯，一抹压抑不住的欢喜自眼底深处暖暖漾开</span></span>
+<span class="line"><span>忍不住抬起眼睑，含羞带怯地直接望向镜头，嘴角不受控制地上翘</span></span>
+<span class="line"><span>两颊飞起淡淡的霞色&lt;!-- v:xmv272 --&gt;</span></span>
+<span class="line"><span>忍不住抬起眼睑，含羞带怯地直接望向镜头，嘴角不受控制地上翘</span></span>
+<span class="line"><span>拼命想把笑意往下压，最终却凝成一个羞怯至极、甜中带怯的浅笑，下巴微微内收</span></span>
+<span class="line"><span>眼神惊慌地从镜头上弹开，左右飘忽，不敢再看心上人，将脸偏向一侧，耳根与脖颈因极度的害羞而泛起潮红</span></span>
+<span class="line"><span>嘴唇紧紧抿住，喉间极轻地滚动了一下，头微微低垂</span></span>
+<span class="line"><span>怯怯地再次抬起眼睛，绵长而温柔地直视镜头（或人物），睫毛狂颤，鼻翼微翕</span></span>
+<span class="line"><span>双唇缓缓放松，满心隐秘的甜蜜与忐忑的期待，尽在这一抹面对心上人、恍惚而动人的微笑中静静晕开，久久凝视</span></span></code></pre>
+<p>视频提示词</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">写实电影摄影质感，阳光柔和的午后，4K超高清，面部稳定不变形，五官清晰，人体结构正常，动作自然流畅，无模糊无闪烁无抖动。 固定机位，超近面部特写，镜头完全静止无抖动。全程无台词，无第二人。镜头即心上人的眼睛，少女全程与镜头深情互动，所有情绪皆向镜头倾吐。 角色：刚采完花的古代少女，怀中捧着一束刚摘的野花，花束自画面下方微微入镜，衬托脸庞。 妆容：素面朝天，几乎无妆感。肌肤呈现天然冷白皮，保留真实肤质纹理，微微透出隐约的绒毛感。眉形是未经修饰的自然细眉，睫毛纤长但不夸张，眼眸清澈水灵。脸颊因劳动而透着若有若无的天然红晕，她的鼻尖和一侧脸颊蹭着淡淡的泥，是采花时不经意抹上的，带着刚劳作完的鲜活生气。 发型：乌黑长发半挽，仅以一支简朴木簪松松簪住，余发自然垂落肩头。发丝蓬松而微微凌乱，几缕碎发被风吹散，若有若无地拂过面颊与颈侧，毫无刻意感。 服装：素色交领衣衫，&lt;!-- v:xmv272 --&gt;本色棉麻质感，面料柔软但已微微揉皱。 0-2秒·惊鸿回首： 起始时她微侧着脸，半边面容被垂落的碎发半遮，正低头含笑整理怀中花束。几乎在第0秒，她似有所感，倏地转头直面镜头。 松散的发丝因动作轻轻扬起又落下，鼻尖上那抹花泥瞬间清晰。她抬眸的刹那，一双清澈眼眸直直撞进镜头，仿若撞进心上人的眼底，眼神里是未经修饰的意外与惊喜。 2-4.5秒·灵眸诉情： 她完全正对镜头，眼中骤然亮起，瞳孔因认出心上人而微微扩散，清澈的眼底漾开纯粹的欢喜。睫毛轻颤如蝶翼，眉梢眼角全是毫不设防的情意，仿佛在用眼睛轻轻说：“你来了呀。” 4.5-6.5秒·歪头藏笑： 情意正浓时，她忽而将头俏皮地向右微微歪过，几缕凌乱碎发随之拂过面颊。双唇轻轻抿合，嘴角不受控制地向上扬起，绽开一个完全不露齿的、带着少女羞意的甜甜笑容。就在笑意漫开的同一瞬，两颊立时陷出浅浅的梨涡，甜如蜜糖。鼻上那痕花泥衬得这笑愈发真实动人——不是精心设计的美，而是浑然天成的、妩媚天真而不自知的瞬间。 6.5-8秒·甜笑定格： 笑意层层加深，梨涡愈发分明，眸光却越发温柔，仿佛要把满心依恋都融进这抹笑里。拂面的碎发微微黏在颊边，那枚素银小锁在颈间轻轻晃动，闪着细碎微光。她就这么定定地向着镜头笑着，梨涡里盛着春日的风和蜜，满心满眼只有眼前的心上人。画面最终温柔定格——不是画中仙，而是一个沾着花泥、发丝微乱、正坠入爱河的真实的古代少女。</span></span></code></pre>
+<h3 id="综合--悲伤">综合 · 悲伤</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">电影级超近面部特写，一位年轻女子，固定镜头，柔和的自然窗光在脸上投下淡淡阴影。&lt;!-- v:xmv272 --&gt;古代素色衣裳，简朴发簪，发丝微微凌乱。她怔怔地望着前方虚空，眼神空洞，仿佛刚从一场大梦中惊醒。所有表演完全凝聚在眼神与微表情之中，无台词，无肢体动作，讲述一个为心上人倾尽所有、供其考取功名后却被抛弃的故事。 0至1.5秒：她原本失焦的双眼骤然聚拢，瞳孔微微扩散，下眼睑轻轻颤动——那是纯粹的震惊与不敢相信，仿佛心底最害怕的猜想终于落到了实处。 1.5至2.5秒：震惊慢慢凝固成一层冷意。嘴角左侧挑起一丝极淡的、近乎嘲讽的冷笑，笑意完全未达眼底。她的目光向下一垂，随即又抬起，眼中多了一份自嘲与疲倦的了然——一种无声的“果然如此”。 2.5至4秒：那一丝冷笑渐渐加深，化成一个安静而微微发颤的微笑，像是在努力维持最后的体面。但眼眶开始泛红，泪水在下睫毛处晶莹闪动，聚满却不落下。笑意变得脆弱如纸，倔强与伤心同时写在眼底。 4至6秒：微笑彻底瓦解。双唇紧抿，然后开始抑制不住地轻颤。眼神彻底失焦，空洞地望向前方，仿佛所有的光都灭了。蓄满的泪水终于大颗滚落，沿着面颊流淌。她缓缓垂下眼帘，下巴微微抖动，在最后一秒，发出一声无声的、哽咽的抽息——所有的伪装尽数碎裂，只剩下彻底的悲伤。</span></span></code></pre>
+<table>
+<thead>
+<tr>
+<th><strong>表情/情绪变化</strong></th>
+<th><strong>seedance2.0提示词</strong></th>
+<th><strong>时长（s）</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>失焦转聚拢</td>
+<td>原本失焦的双眼骤然聚拢</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td>瞳孔扩散</td>
+<td>瞳孔微微扩散<!-- v:xmv272 --></td>
+<td>0.5</td>
+</tr>
+<tr>
+<td>眼睑颤动</td>
+<td>下眼睑轻轻颤动</td>
+<td>0.5s</td>
+</tr>
+<tr>
+<td>冷笑</td>
+<td>嘴角左侧挑起一丝极淡的、近乎嘲讽的冷笑，笑意完全未达眼底</td>
+<td>0.5s</td>
+</tr>
+<tr>
+<td>目光回避转抬起</td>
+<td>角色目光向下一垂，随即又抬起，眼中多了一份自嘲与疲倦的了然</td>
+<td>0.75s</td>
+</tr>
+<tr>
+<td>冷笑加深</td>
+<td>一丝冷笑渐渐加深，化成一个安静而微微发颤的微笑</td>
+<td>0.5s</td>
+</tr>
+<tr>
+<td>眼睛红，出现泪水</td>
+<td>眼眶开始泛红，泪水在下睫毛处晶莹闪动，聚满却不落下</td>
+<td>1.0s</td>
+</tr>
+<tr>
+<td>嘴部动作</td>
+<td>微笑彻底瓦解，双唇紧抿，然后开始抑制不住地轻颤</td>
+<td>1.5s</td>
+</tr>
+<tr>
+<td>眼神失焦</td>
+<td>眼神彻底失焦，空洞地望向前方，仿佛所有的光都灭了</td>
+<td>0.5s</td>
+</tr>
+<tr>
+<td>终点：泪水滚落</td>
+<td>蓄满的泪水终于大颗滚落，沿着面颊流淌</td>
+<td>0.5s</td>
+</tr>
+</tbody>
+</table>
+<p><strong>取值速拷（10 条 · 与上表逐字一致）</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>原本失焦的双眼骤然聚拢</span></span>
+<span class="line"><span>瞳孔微微扩散&lt;!-- v:xmv272 --&gt;</span></span>
+<span class="line"><span>下眼睑轻轻颤动</span></span>
+<span class="line"><span>嘴角左侧挑起一丝极淡的、近乎嘲讽的冷笑，笑意完全未达眼底</span></span>
+<span class="line"><span>角色目光向下一垂，随即又抬起，眼中多了一份自嘲与疲倦的了然</span></span>
+<span class="line"><span>一丝冷笑渐渐加深，化成一个安静而微微发颤的微笑</span></span>
+<span class="line"><span>眼眶开始泛红，泪水在下睫毛处晶莹闪动，聚满却不落下</span></span>
+<span class="line"><span>微笑彻底瓦解，双唇紧抿，然后开始抑制不住地轻颤</span></span>
+<span class="line"><span>眼神彻底失焦，空洞地望向前方，仿佛所有的光都灭了</span></span>
+<span class="line"><span>蓄满的泪水终于大颗滚落，沿着面颊流淌</span></span></code></pre>
+<h3 id="哭--不想相信悲伤落泪">哭 · 不想相信→悲伤落泪</h3>
+<table>
+<thead>
+<tr>
+<th><strong>情绪</strong></th>
+<th><strong>seedance2.0提示词</strong></th>
+<th><strong>时长（s）</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>失焦转聚拢</td>
+<td>原本失焦的双眼骤然聚拢</td>
+<td>0.5</td>
+</tr>
+<tr>
+<td>瞳孔扩散</td>
+<td>瞳孔微微扩散<!-- v:xmv272 --></td>
+<td>0.5</td>
+</tr>
+<tr>
+<td>眼睑颤动</td>
+<td>下眼睑轻轻颤动</td>
+<td>0.5s</td>
+</tr>
+<tr>
+<td>冷笑</td>
+<td>嘴角左侧挑起一丝极淡的、近乎嘲讽的冷笑，笑意完全未达眼底</td>
+<td>0.5s</td>
+</tr>
+<tr>
+<td>目光回避转抬起</td>
+<td>角色目光向下一垂，随即又抬起，眼中多了一份自嘲与疲倦的了然</td>
+<td>0.75s</td>
+</tr>
+<tr>
+<td>冷笑加深</td>
+<td>一丝冷笑渐渐加深，化成一个安静而微微发颤的微笑</td>
+<td>0.5s</td>
+</tr>
+<tr>
+<td>眼睛红，出现泪水</td>
+<td>眼眶开始泛红，泪水在下睫毛处晶莹闪动，聚满却不落下</td>
+<td>1.0s</td>
+</tr>
+<tr>
+<td>嘴部动作</td>
+<td>微笑彻底瓦解，双唇紧抿，然后开始抑制不住地轻颤</td>
+<td>1.5s</td>
+</tr>
+<tr>
+<td>眼神失焦</td>
+<td>眼神彻底失焦，空洞地望向前方，仿佛所有的光都灭了</td>
+<td>0.5s</td>
+</tr>
+<tr>
+<td>终点：泪水滚落</td>
+<td>蓄满的泪水终于大颗滚落，沿着面颊流淌</td>
+<td>0.5s</td>
+</tr>
+</tbody>
+</table>
+<p><strong>取值速拷（10 条 · 与上表逐字一致）</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>原本失焦的双眼骤然聚拢</span></span>
+<span class="line"><span>瞳孔微微扩散&lt;!-- v:xmv272 --&gt;</span></span>
+<span class="line"><span>下眼睑轻轻颤动</span></span>
+<span class="line"><span>嘴角左侧挑起一丝极淡的、近乎嘲讽的冷笑，笑意完全未达眼底</span></span>
+<span class="line"><span>角色目光向下一垂，随即又抬起，眼中多了一份自嘲与疲倦的了然</span></span>
+<span class="line"><span>一丝冷笑渐渐加深，化成一个安静而微微发颤的微笑</span></span>
+<span class="line"><span>眼眶开始泛红，泪水在下睫毛处晶莹闪动，聚满却不落下</span></span>
+<span class="line"><span>微笑彻底瓦解，双唇紧抿，然后开始抑制不住地轻颤</span></span>
+<span class="line"><span>眼神彻底失焦，空洞地望向前方，仿佛所有的光都灭了</span></span>
+<span class="line"><span>蓄满的泪水终于大颗滚落，沿着面颊流淌</span></span></code></pre>
+<p>提示词</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">电影级超近面部特写，一位年轻女子，固定镜头，柔和的自然窗光在脸上投下淡淡阴影。古代素色衣裳，简朴发簪，发丝微微凌乱。她怔怔地望着前方虚空，眼神空洞，仿佛刚从一场大梦中惊醒。全段无台词，前6秒无肢体动作，所有表演完全凝聚在眼神与微表情之中，&lt;!-- v:xmv272 --&gt;讲述一个为心上人倾尽所有、供其考取功名后却被抛弃的故事。 0至1.5秒：她原本失焦的双眼骤然聚拢，瞳孔微微扩散，下眼睑轻轻颤动——那是纯粹的震惊与不敢相信，仿佛心底最害怕的猜想终于落到了实处。 1.5至2.5秒：震惊慢慢凝固成一层冷意。嘴角左侧挑起一丝极淡的、近乎嘲讽的冷笑，笑意完全未达眼底。她的目光向下一垂，随即又抬起，眼中多了一份自嘲与疲倦的了然：一种无声的“果然如此”。 2.5至4秒：那一丝冷笑渐渐加深，化成一个安静而微微发颤的微笑，像是在努力维持最后的体面。但眼眶开始泛红，泪水在下睫毛处晶莹闪动，聚满却不落下。笑意变得脆弱如纸，倔强与伤心同时写在眼底。 4至6秒：微笑彻底瓦解。双唇紧抿，然后开始抑制不住地轻颤。眼神彻底失焦，空洞地望向前方，仿佛所有的光都灭了。蓄满的泪水终于大颗滚落，沿着面颊流淌。她缓缓垂下眼帘，下巴微微抖动，在最后一秒，发出一声无声的、哽咽的抽息——所有的伪装尽数碎裂，只剩下彻底的悲伤。 6至7秒：那声抽息的余韵未散，她缓缓低下头，下巴轻收，从胸腔深处逸出一声极轻极缓的叹息，肩膀随之微微塌下，如卸下&lt;!-- V:xmv272 --&gt;最后一层硬撑的力气。叹息几乎无声，却比任何恸哭都沉重。 7至8秒：她深吸一口气，用力重新抬起头来。双唇奋力向上弯起，牵扯出一抹颤巍巍的微笑。那笑意温柔、虔诚，像是隔空为远方的心上人贺喜，又像在用这个笑容亲手将过往埋葬。泪痕未干，眼底却强撑出一丝清透的释然，仿佛正努力说服自己：该放下了。 8至9秒：她颤抖着抬起一只手，用指背小心翼翼地去擦眼泪。可就在手触碰眼泪的瞬间，压抑的抽泣猛然反扑，她的肩膀不受控制地抽动，刚刚撑起的微笑在泪水里变得失真。新的泪水夺眶而出，顺着指缝滑落，无声的呜咽将她吞没。她再也分不清什么才是真的放下。</span></span></code></pre>
+</div><section class="note-related" aria-label="关联案例" data-astro-cid-vex5zuxs><h2 class="section-title" style="font-size:20px" data-astro-cid-vex5zuxs><span class="icon" style="width:18px;height:18px" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 11.5a4 4 0 0 1 0-5.6l1.4-1.4a4 4 0 0 1 5.6 5.6l-1.4 1.4"/><path d="M11.5 8.5a4 4 0 0 1 0 5.6l-1.4 1.4a4 4 0 0 1-5.6-5.6l1.4-1.4"/></svg></span> 应用这些写法的案例</h2><div class="grid-cases" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr));margin-top:16px" data-astro-cid-vex5zuxs><a class="case-card" href="/prompt-archive-site/cases/restrained-micro-expression/" data-medium="video" data-topic="微表情" data-evidence="author-tested" data-search="克制微表情五段情绪递进 微表情 15 秒固定机位微表情短片：全程禁止眼泪流出，面部肌肉位移以毫米计，五段情绪从幸福递进到意难平，附源文的撰写表达方式分析。纯文字案例。 微表情 表演控制 负面提示词 固定机位 无台词"><div class="card-media"><div class="photo"><div class="media-cover"><span class="cover-kind">VIDEO PROMPT</span><span class="cover-title">克制微表情五段情绪递进</span><span class="cover-note">暂无成片 · 提示词可复制</span></div></div></div><div class="card-holes" aria-hidden="true"></div><div class="card-body"><div class="card-meta"><span>PA-004</span><span>视频</span><span class="status warn">作者称已测试 · 未附成片</span></div><h3 class="card-title">克制微表情五段情绪递进</h3><p class="card-summary">15 秒固定机位微表情短片：全程禁止眼泪流出，面部肌肉位移以毫米计，五段情绪从幸福递进到意难平，附源文的撰写表达方式分析。纯文字案例。</p><div class="card-tags"><span class="tag">微表情</span><span class="tag">微表情</span><span class="tag">表演控制</span></div></div></a><a class="case-card" href="/prompt-archive-site/cases/tear-control-15s/" data-medium="video" data-topic="哭戏与眼神" data-evidence="author-tested" data-search="眼泪控制｜15秒室内怀疑与崩溃 哭戏与眼神 室内哭戏对峙：从「原来你怀疑我了啊」的错愕到崩溃痛哭的连续情绪线，台词与微表情逐段推进。纯文字案例。 哭戏 台词 正反打 室内 韩剧质感"><div class="card-media"><div class="photo"><div class="media-cover"><span class="cover-kind">VIDEO PROMPT</span><span class="cover-title">眼泪控制｜15秒室内怀疑与崩溃</span><span class="cover-note">暂无成片 · 提示词可复制</span></div></div></div><div class="card-holes" aria-hidden="true"></div><div class="card-body"><div class="card-meta"><span>PA-005</span><span>视频</span><span class="status warn">作者称已测试 · 未附成片</span></div><h3 class="card-title">眼泪控制｜15秒室内怀疑与崩溃</h3><p class="card-summary">室内哭戏对峙：从「原来你怀疑我了啊」的错愕到崩溃痛哭的连续情绪线，台词与微表情逐段推进。纯文字案例。</p><div class="card-tags"><span class="tag">哭戏与眼神</span><span class="tag">哭戏</span><span class="tag">台词</span></div></div></a><a class="case-card" href="/prompt-archive-site/cases/crying-monologue-15s/" data-medium="video" data-topic="一镜到底表演" data-evidence="author-tested" data-search="哭戏独白｜15秒室内一镜到底 一镜到底表演 固定中近景一镜到底的哭戏独白：情绪由压抑递进至崩溃再归于失望沉默，台词「你让我自己一个人……」贯穿全段。纯文字案例。 一镜到底 哭戏 独白 固定机位"><div class="card-media"><div class="photo"><div class="media-cover"><span class="cover-kind">VIDEO PROMPT</span><span class="cover-title">哭戏独白｜15秒室内一镜到底</span><span class="cover-note">暂无成片 · 提示词可复制</span></div></div></div><div class="card-holes" aria-hidden="true"></div><div class="card-body"><div class="card-meta"><span>PA-006</span><span>视频</span><span class="status warn">作者称已测试 · 未附成片</span></div><h3 class="card-title">哭戏独白｜15秒室内一镜到底</h3><p class="card-summary">固定中近景一镜到底的哭戏独白：情绪由压抑递进至崩溃再归于失望沉默，台词「你让我自己一个人……」贯穿全段。纯文字案例。</p><div class="card-tags"><span class="tag">一镜到底表演</span><span class="tag">一镜到底</span><span class="tag">哭戏</span></div></div></a><a class="case-card" href="/prompt-archive-site/cases/father-daughter-hallway/" data-medium="video" data-topic="亲情短剧" data-evidence="author-tested" data-search="父女亲情｜居家玄关崩溃安慰六镜 亲情短剧 居家玄关的父女对手戏六镜：女儿含泪蹲下崩溃，父亲从错愕到下蹲安慰，「对不起，爸爸，我可能……并没有那么坚强」。纯文字案例。 亲情 哭戏 居家 六镜"><div class="card-media"><div class="photo"><div class="media-cover"><span class="cover-kind">VIDEO PROMPT</span><span class="cover-title">父女亲情｜居家玄关崩溃安慰六镜</span><span class="cover-note">暂无成片 · 提示词可复制</span></div></div></div><div class="card-holes" aria-hidden="true"></div><div class="card-body"><div class="card-meta"><span>PA-011</span><span>视频</span><span class="status warn">作者称已测试 · 未附成片</span></div><h3 class="card-title">父女亲情｜居家玄关崩溃安慰六镜</h3><p class="card-summary">居家玄关的父女对手戏六镜：女儿含泪蹲下崩溃，父亲从错愕到下蹲安慰，「对不起，爸爸，我可能……并没有那么坚强」。纯文字案例。</p><div class="card-tags"><span class="tag">亲情短剧</span><span class="tag">亲情</span><span class="tag">哭戏</span></div></div></a><a class="case-card" href="/prompt-archive-site/cases/daddy-minguo-heiress-phone/" data-medium="video" data-topic="亲情短剧" data-evidence="author-tested" data-search="daddy啊｜民国大小姐电话撒娇四镜 亲情短剧 民国复古洋房客厅，娇俏大小姐坐在沙发上与电话那头的父亲撒娇周旋。四个半身近景递进：娇喊「daddy啊」、替穷小子辩解、被反对后跺脚宣称「我就是要嫁给他呀」、赌气挂电话又偷偷展露笑意。要求微表情丰富、口型精准匹配中文台词，无 bgm 无字幕。 民国大小姐 电话撒娇 复古洋房 微表情 无bgm"><div class="card-media"><div class="photo"><div class="media-cover"><span class="cover-kind">VIDEO PROMPT</span><span class="cover-title">Daddy啊｜民国大小姐电话撒娇四镜</span><span class="cover-note">暂无成片 · 提示词可复制</span></div></div></div><div class="card-holes" aria-hidden="true"></div><div class="card-body"><div class="card-meta"><span>PA-018</span><span>视频</span><span class="status warn">作者称已测试 · 未附成片</span></div><h3 class="card-title">Daddy啊｜民国大小姐电话撒娇四镜</h3><p class="card-summary">民国复古洋房客厅，娇俏大小姐坐在沙发上与电话那头的父亲撒娇周旋。四个半身近景递进：娇喊「Daddy啊」、替穷小子辩解、被反对后跺脚宣称「我就是要嫁给他呀」、赌气挂电话又偷偷展露笑意。要求微表情丰富、口型精准匹配中文台词，无 BGM 无字幕。</p><div class="card-tags"><span class="tag">亲情短剧</span><span class="tag">民国大小姐</span><span class="tag">电话撒娇</span></div></div></a><a class="case-card" href="/prompt-archive-site/cases/bilingual-night-crying-two-shots/" data-medium="video" data-topic="哭戏与眼神" data-evidence="author-tested" data-search="两种语言切换｜夜晚室内哭诉双镜 哭戏与眼神 夜晚昏暗室内，两组面部特写：男生以日语质问，女生以韩语哭诉回应。镜头二按起始、中段、后段刻画女生从含泪控诉到闭眼仰头痛哭的崩溃递进，a24 写实风格、冷暖对冲弱光、50mm 极浅景深。 哭诉 日语台词 韩语台词 a24 面部特写"><div class="card-media"><div class="photo"><div class="media-cover"><span class="cover-kind">VIDEO PROMPT</span><span class="cover-title">两种语言切换｜夜晚室内哭诉双镜</span><span class="cover-note">暂无成片 · 提示词可复制</span></div></div></div><div class="card-holes" aria-hidden="true"></div><div class="card-body"><div class="card-meta"><span>PA-023</span><span>视频</span><span class="status warn">作者称已测试 · 未附成片</span></div><h3 class="card-title">两种语言切换｜夜晚室内哭诉双镜</h3><p class="card-summary">夜晚昏暗室内，两组面部特写：男生以日语质问，女生以韩语哭诉回应。镜头二按起始、中段、后段刻画女生从含泪控诉到闭眼仰头痛哭的崩溃递进，A24 写实风格、冷暖对冲弱光、50mm 极浅景深。</p><div class="card-tags"><span class="tag">哭戏与眼神</span><span class="tag">哭诉</span><span class="tag">日语台词</span></div></div></a><a class="case-card" href="/prompt-archive-site/cases/our-memories-15s-scarf/" data-medium="video" data-topic="微表情" data-evidence="author-tested" data-search="念念相忘｜15秒围巾微表情 微表情 固定50mm机位的单镜近景，禁止眼泪流出与镜头移动，以毫米级参数量化面部肌肉与视线落点，按0–15秒六段时序跳接情绪：幸福、藏得意、瞬生委屈、沉入沉思、彻底释怀，末段定格在眼眶积泪、硬挤「我没事」笑容的临界点。 微表情 单镜固定机位 忍泪 逐段时序 毫米级量化"><div class="card-media"><div class="photo"><div class="media-cover"><span class="cover-kind">VIDEO PROMPT</span><span class="cover-title">念念相忘｜15秒围巾微表情</span><span class="cover-note">暂无成片 · 提示词可复制</span></div></div></div><div class="card-holes" aria-hidden="true"></div><div class="card-body"><div class="card-meta"><span>PA-041</span><span>视频</span><span class="status warn">作者称已测试 · 未附成片</span></div><h3 class="card-title">念念相忘｜15秒围巾微表情</h3><p class="card-summary">固定50mm机位的单镜近景，禁止眼泪流出与镜头移动，以毫米级参数量化面部肌肉与视线落点，按0–15秒六段时序跳接情绪：幸福、藏得意、瞬生委屈、沉入沉思、彻底释怀，末段定格在眼眶积泪、硬挤「我没事」笑容的临界点。</p><div class="card-tags"><span class="tag">微表情</span><span class="tag">微表情</span><span class="tag">单镜固定机位</span></div></div></a><a class="case-card" href="/prompt-archive-site/cases/autumn-forest-farewell-10s/" data-medium="video" data-topic="哭戏与眼神" data-evidence="author-tested" data-search="我要走了｜10秒秋日树林含泪告别 哭戏与眼神 秋日落叶树林的过肩双人近景，按10秒时间线分三镜：男生手掌托住女生脸颊为她擦泪，女生无声落泪后说「我要走了」，男生不舍地答「嗯嗯」，末镜女生含泪破涕为笑。要求情绪转折全部由微表情与眼神驱动，男生不可流泪。 哭戏 告别 过肩镜头 微表情 虐心"><div class="card-media"><div class="photo"><div class="media-cover"><span class="cover-kind">VIDEO PROMPT</span><span class="cover-title">我要走了｜10秒秋日树林含泪告别</span><span class="cover-note">暂无成片 · 提示词可复制</span></div></div></div><div class="card-holes" aria-hidden="true"></div><div class="card-body"><div class="card-meta"><span>PA-043</span><span>视频</span><span class="status warn">作者称已测试 · 未附成片</span></div><h3 class="card-title">我要走了｜10秒秋日树林含泪告别</h3><p class="card-summary">秋日落叶树林的过肩双人近景，按10秒时间线分三镜：男生手掌托住女生脸颊为她擦泪，女生无声落泪后说「我要走了」，男生不舍地答「嗯嗯」，末镜女生含泪破涕为笑。要求情绪转折全部由微表情与眼神驱动，男生不可流泪。</p><div class="card-tags"><span class="tag">哭戏与眼神</span><span class="tag">哭戏</span><span class="tag">告别</span></div></div></a><a class="case-card" href="/prompt-archive-site/cases/dagougun-prison-father-daughter/" data-medium="video" data-topic="亲情短剧" data-evidence="author-tested" data-search="打狗棍｜民国牢房父女对峙 亲情短剧 以国产年代抗战剧实拍风格描写民国牢房中的父女对峙：被铐住双手的女儿逐一质问身为汉奸的父亲，情绪从愤慨递进到决绝，父亲则由威严走向溃败。按正反打近景与双人中景分镜给出走位、台词与语气标注。 民国剧 父女对峙 牢房 台词质问 抗战"><div class="card-media"><div class="photo"><div class="media-cover"><span class="cover-kind">VIDEO PROMPT</span><span class="cover-title">打狗棍｜民国牢房父女对峙</span><span class="cover-note">暂无成片 · 提示词可复制</span></div></div></div><div class="card-holes" aria-hidden="true"></div><div class="card-body"><div class="card-meta"><span>PA-048</span><span>视频</span><span class="status warn">作者称已测试 · 未附成片</span></div><h3 class="card-title">打狗棍｜民国牢房父女对峙</h3><p class="card-summary">以国产年代抗战剧实拍风格描写民国牢房中的父女对峙：被铐住双手的女儿逐一质问身为汉奸的父亲，情绪从愤慨递进到决绝，父亲则由威严走向溃败。按正反打近景与双人中景分镜给出走位、台词与语气标注。</p><div class="card-tags"><span class="tag">亲情短剧</span><span class="tag">民国剧</span><span class="tag">父女对峙</span></div></div></a><a class="case-card" href="/prompt-archive-site/cases/queen-of-tears-dusk/" data-medium="video" data-topic="哭戏与眼神" data-evidence="author-tested" data-search="眼泪女王｜黄昏含泪对视五镜 哭戏与眼神 韩剧电影质感的黄昏户外含泪对视五镜：固定机位正反打胸像特写，女主以韩语轻声诉说不舍，男主含泪凝视始终不闪躲，泪水将落未落。强调眼神拉扯、台词间停顿与两侧暖金冷青的光线设计。 韩剧 含泪对视 正反打 韩语台词"><div class="card-media"><div class="photo"><div class="media-cover"><span class="cover-kind">VIDEO PROMPT</span><span class="cover-title">眼泪女王｜黄昏含泪对视五镜</span><span class="cover-note">暂无成片 · 提示词可复制</span></div></div></div><div class="card-holes" aria-hidden="true"></div><div class="card-body"><div class="card-meta"><span>PA-057</span><span>视频</span><span class="status warn">作者称已测试 · 未附成片</span></div><h3 class="card-title">眼泪女王｜黄昏含泪对视五镜</h3><p class="card-summary">韩剧电影质感的黄昏户外含泪对视五镜：固定机位正反打胸像特写，女主以韩语轻声诉说不舍，男主含泪凝视始终不闪躲，泪水将落未落。强调眼神拉扯、台词间停顿与两侧暖金冷青的光线设计。</p><div class="card-tags"><span class="tag">哭戏与眼神</span><span class="tag">韩剧</span><span class="tag">含泪对视</span></div></div></a><a class="case-card" href="/prompt-archive-site/cases/smile-worse-than-crying-15s/" data-medium="video" data-topic="微表情" data-evidence="author-tested" data-search="笑比哭难看｜15秒围巾微表情 微表情 15 秒围巾女生微表情时序脚本：50mm 定焦固定机位，面部肌肉位移限制在毫米级，依次演幸福笑、藏得意、瞬生委屈、沉入沉思、释怀，最后硬撑出安抚对方的「我没事」假笑。全程禁止流泪，情绪切换为 0.1 秒级瞬变。 微表情 围巾 忍泪 固定机位"><div class="card-media"><div class="photo"><div class="media-cover"><span class="cover-kind">VIDEO PROMPT</span><span class="cover-title">笑比哭难看｜15秒围巾微表情</span><span class="cover-note">暂无成片 · 提示词可复制</span></div></div></div><div class="card-holes" aria-hidden="true"></div><div class="card-body"><div class="card-meta"><span>PA-059</span><span>视频</span><span class="status warn">作者称已测试 · 未附成片</span></div><h3 class="card-title">笑比哭难看｜15秒围巾微表情</h3><p class="card-summary">15 秒围巾女生微表情时序脚本：50mm 定焦固定机位，面部肌肉位移限制在毫米级，依次演幸福笑、藏得意、瞬生委屈、沉入沉思、释怀，最后硬撑出安抚对方的「我没事」假笑。全程禁止流泪，情绪切换为 0.1 秒级瞬变。</p><div class="card-tags"><span class="tag">微表情</span><span class="tag">微表情</span><span class="tag">围巾</span></div></div></a><a class="case-card" href="/prompt-archive-site/cases/drunk-truths-night-platform/" data-medium="video" data-topic="哭戏与眼神" data-evidence="author-tested" data-search="醉酒真心话｜夜晚高台对话十一镜 哭戏与眼神 夜晚高台露营场景的韩语情感戏十一镜：喝醉的女生坐在高台崩溃哭喊质问男生为什么总跟着她，边哭边捶打对方肩膀，最后把头埋进男生肩头，男生轻声道歉安抚。按 0-18 秒时间线分镜，含韩语台词原文。 韩剧氛围 醉酒哭戏 韩语台词 十一镜"><div class="card-media"><div class="photo"><div class="media-cover"><span class="cover-kind">VIDEO PROMPT</span><span class="cover-title">醉酒真心话｜夜晚高台对话十一镜</span><span class="cover-note">暂无成片 · 提示词可复制</span></div></div></div><div class="card-holes" aria-hidden="true"></div><div class="card-body"><div class="card-meta"><span>PA-062</span><span>视频</span><span class="status warn">作者称已测试 · 未附成片</span></div><h3 class="card-title">醉酒真心话｜夜晚高台对话十一镜</h3><p class="card-summary">夜晚高台露营场景的韩语情感戏十一镜：喝醉的女生坐在高台崩溃哭喊质问男生为什么总跟着她，边哭边捶打对方肩膀，最后把头埋进男生肩头，男生轻声道歉安抚。按 0-18 秒时间线分镜，含韩语台词原文。</p><div class="card-tags"><span class="tag">哭戏与眼神</span><span class="tag">韩剧氛围</span><span class="tag">醉酒哭戏</span></div></div></a><a class="case-card" href="/prompt-archive-site/cases/korean-acting-two-versions/" data-medium="video" data-topic="微表情" data-evidence="author-tested" data-search="韩式演技｜女生与男生双版本情绪表演 微表情 同一条围栏内保存「女生版」「男生版」两段表演提示词：女生版为过肩定机位 0-12 秒含泪质问的连续微表情时序，量化眼睑开合与泪珠等级；男生版为三个镜头的冷痞少年表演，含叼烟点烟动作与韩语挑衅台词。附负面提示词。 韩式演技 微表情 双版本 韩语台词 虐恋"><div class="card-media"><div class="photo"><div class="media-cover"><span class="cover-kind">VIDEO PROMPT</span><span class="cover-title">韩式演技｜女生与男生双版本情绪表演</span><span class="cover-note">暂无成片 · 提示词可复制</span></div></div></div><div class="card-holes" aria-hidden="true"></div><div class="card-body"><div class="card-meta"><span>PA-063</span><span>视频</span><span class="status warn">作者称已测试 · 未附成片</span></div><h3 class="card-title">韩式演技｜女生与男生双版本情绪表演</h3><p class="card-summary">同一条围栏内保存「女生版」「男生版」两段表演提示词：女生版为过肩定机位 0-12 秒含泪质问的连续微表情时序，量化眼睑开合与泪珠等级；男生版为三个镜头的冷痞少年表演，含叼烟点烟动作与韩语挑衅台词。附负面提示词。</p><div class="card-tags"><span class="tag">微表情</span><span class="tag">韩式演技</span><span class="tag">微表情</span></div></div></a></div><p style="font-size:14px;margin-top:12px" data-astro-cid-vex5zuxs><a href="/prompt-archive-site/videos/" data-astro-cid-vex5zuxs>浏览视频案例 →</a></p></section></div></div></div></main><footer class="site-footer" data-astro-cid-tq46r5sz><div class="container" data-astro-cid-tq46r5sz><div class="footer-grid" data-astro-cid-tq46r5sz><div class="footer-brand" data-astro-cid-tq46r5sz><a class="brand" href="/prompt-archive-site/" data-astro-cid-tq46r5sz><span class="brand-glyph" data-astro-cid-tq46r5sz>PA</span><span class="brand-name" data-astro-cid-tq46r5sz>AI 提示词档案馆</span></a><p class="footer-desc" data-astro-cid-tq46r5sz>可浏览、可检索、可复制的 AI 图像与视频提示词案例库。每个完整案例一个独立页面，提示词与 Wiki 原文逐字一致。</p></div><nav class="footer-col" aria-label="页脚导航" data-astro-cid-tq46r5sz><p class="footer-label" data-astro-cid-tq46r5sz>浏览</p><a href="/prompt-archive-site/images/" data-astro-cid-tq46r5sz>图像案例</a><a href="/prompt-archive-site/videos/" data-astro-cid-tq46r5sz>视频案例</a><a href="/prompt-archive-site/notes/" data-astro-cid-tq46r5sz>方法笔记</a><a href="/prompt-archive-site/cases/" data-astro-cid-tq46r5sz>全站搜索</a></nav><div class="footer-col" data-astro-cid-tq46r5sz><p class="footer-label" data-astro-cid-tq46r5sz>本馆收录</p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>案例</span><b data-astro-cid-tq46r5sz>105</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>附实测成片</span><b data-astro-cid-tq46r5sz>2</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>方法笔记</span><b data-astro-cid-tq46r5sz>60</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>合集</span><b data-astro-cid-tq46r5sz>11</b></p></div></div><div class="footer-bottom" data-astro-cid-tq46r5sz><p data-astro-cid-tq46r5sz>「作者称已测试」表示来源声明，本站未复测。</p><p data-astro-cid-tq46r5sz>PA·ARCHIVE © 2026</p></div></div></footer></body><script type="module">function e(){document.querySelectorAll(`[data-masonry]`).forEach(e=>{let t=Array.from(e.querySelectorAll(`:scope > .m-cols > .m-col > *, :scope > *:not(.m-cols)`));if(e.querySelectorAll(`.m-cols`).forEach(e=>e.remove()),t.length===0)return;let n=window.matchMedia(`(max-width: 767px)`).matches?1:window.matchMedia(`(max-width: 1199px)`).matches?2:3,r=document.createElement(`div`);r.className=`m-cols`;let i=Array.from({length:n},()=>{let e=document.createElement(`div`);return e.className=`m-col`,e});t.forEach((e,t)=>i[t%n].appendChild(e)),e.appendChild(r),i.forEach(e=>r.appendChild(e))})}window.refreshMasonry=e,e();var t;window.addEventListener(`resize`,()=>{clearTimeout(t),t=setTimeout(e,150)});</script><script type="module">(()=>{let e=`.case-card, .note-card, .note-list-card`,t=window.matchMedia(`(prefers-reduced-motion: reduce)`),n=null,r=null,i=0;t.addEventListener?.(`change`,()=>{t.matches&&a()});function a(){if(!n)return;let e=n;e.classList.remove(`tilt-active`),e.classList.add(`tilt-return`),e.style.transform=``,clearTimeout(i),i=setTimeout(()=>e.classList.remove(`tilt-return`),320),n=null,r=null}document.addEventListener(`pointermove`,i=>{if(i.pointerType!==`mouse`||!i.isPrimary||t.matches)return;let o=i.target instanceof Element?i.target.closest(e):null;if(o!==n){if(a(),!o)return;n=o,r=n.getBoundingClientRect(),n.classList.add(`tilt-active`),n.classList.remove(`tilt-return`)}if(!n||!r)return;let s=(i.clientX-r.left)/r.width-.5,c=(i.clientY-r.top)/r.height-.5,l=Math.max(-1,Math.min(1,s*2))*4.5,u=Math.max(-1,Math.min(1,c*2))*-4.5;n.style.transform=`perspective(1100px) rotateX(${u.toFixed(3)}deg) rotateY(${l.toFixed(3)}deg) translateY(-3px)`},{passive:!0}),document.addEventListener(`pointerleave`,()=>a()),document.addEventListener(`pointerdown`,t=>{(t.target instanceof Element?t.target.closest(e):null)!==n&&a()},{passive:!0}),window.addEventListener(`blur`,()=>a()),window.addEventListener(`scroll`,()=>a(),{passive:!0})})();</script></html><script type="module">function e(){document.querySelectorAll(`.prose pre`).forEach(e=>{if(e.closest(`.code-panel`))return;let t=e.querySelector(`code`),n=(t??e).textContent??``,r=t?.className.match(/language-([\w+-]+)/)?.[1]??`text`,i=n.replace(/\n$/,``).split(`
+`).length,a=Array.from(n.matchAll(/`{3,}/g)).map(e=>e[0].length),o=a.length?Math.max(3,Math.max(...a)+1):3,s="`".repeat(o)+`markdown
+`+(n.endsWith(`
+`)?n:n+`
+`)+"`".repeat(o),c=document.createElement(`figure`);c.className=`code-panel`;let l=document.createElement(`figcaption`);l.className=`code-panel-head`;let u=document.createElement(`span`);u.className=`code-lang`,u.textContent=r;let d=document.createElement(`span`);d.className=`code-lines`,d.textContent=`${i} 行`;let f=document.createElement(`span`);f.className=`copy-feedback`,f.setAttribute(`aria-live`,`polite`);let p=document.createElement(`button`);p.type=`button`,p.className=`copy-btn`,p.textContent=`复制本块`,l.append(u,d,f,p),e.replaceWith(c),c.append(l,e);let m;p.addEventListener(`click`,async()=>{let e=!1;try{await navigator.clipboard.writeText(s),e=!0}catch{try{let t=document.createElement(`textarea`);t.value=s,t.style.position=`fixed`,t.style.opacity=`0`,document.body.appendChild(t),t.select(),e=document.execCommand(`copy`),t.remove()}catch{e=!1}}f.textContent=e?`已复制本块`:`复制失败，请手动选取`,p.textContent=e?`已复制`:`复制本块`,clearTimeout(m),m=setTimeout(()=>{f.textContent=``,p.textContent=`复制本块`},3e3)})})}e();</script>

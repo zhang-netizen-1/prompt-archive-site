@@ -1,0 +1,68 @@
+<!DOCTYPE html><html lang="zh-CN" data-astro-cid-tq46r5sz><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="库的核心机制：有限正本（验证过的固定描述）＋无限生成（写法规则＝组合公式）＋有门槛回流（质量门禁）的飞轮，及三环节职责与落地位置。"><link rel="icon" href="/prompt-archive-site/favicon.svg" type="image/svg+xml"><title>起飞点：有限正本＋无限生成＋有门槛回流 · 方法笔记</title><link rel="stylesheet" href="/prompt-archive-site/_astro/SiteLayout.DYPNTGRP.css"><style>.note-header[data-astro-cid-vex5zuxs]{max-width:calc(var(--note-width) + 280px);margin:0 auto;padding:40px 24px 0}
+</style></head><body data-astro-cid-tq46r5sz><a class="skip-link" href="#main" data-astro-cid-tq46r5sz>跳到主要内容</a><div class="announce" data-astro-cid-tq46r5sz><a href="/prompt-archive-site/cases/" data-astro-cid-tq46r5sz>PA·ARCHIVE — 每个完整案例一个独立页面，提示词与 Wiki 原文逐字一致 ↗</a></div><header class="site-header" data-astro-cid-tq46r5sz><div class="container" data-astro-cid-tq46r5sz><a class="brand" href="/prompt-archive-site/" data-astro-cid-tq46r5sz><span class="brand-glyph" data-astro-cid-tq46r5sz>PA</span><span class="brand-name" data-astro-cid-tq46r5sz>AI 提示词档案馆</span></a><nav class="site-nav" aria-label="主导航" data-astro-cid-tq46r5sz><a href="/prompt-archive-site/images/" data-astro-cid-tq46r5sz>图像案例<span class="nav-no" data-astro-cid-tq46r5sz>01</span></a><a href="/prompt-archive-site/videos/" data-astro-cid-tq46r5sz>视频案例<span class="nav-no" data-astro-cid-tq46r5sz>02</span></a><a href="/prompt-archive-site/notes/" aria-current="page" data-astro-cid-tq46r5sz>方法笔记<span class="nav-no" data-astro-cid-tq46r5sz>03</span></a></nav><div class="header-cta" data-astro-cid-tq46r5sz><a class="header-search-link" href="/prompt-archive-site/cases/" aria-label="全站搜索案例" data-astro-cid-tq46r5sz><span class="icon" style="width:15px;height:15px" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="6.1"/><line x1="13.6" y1="13.6" x2="18" y2="18"/></svg></span><span data-astro-cid-tq46r5sz>搜索</span><span class="nav-no" data-astro-cid-tq46r5sz>04</span></a></div></div></header><main id="main" data-astro-cid-tq46r5sz><div class="note-page" data-astro-cid-vex5zuxs><div class="note-header" data-astro-cid-vex5zuxs><nav class="breadcrumbs" aria-label="面包屑" data-astro-cid-vex5zuxs><a href="/prompt-archive-site/" data-astro-cid-vex5zuxs>首页</a><span aria-hidden="true" data-astro-cid-vex5zuxs>/</span><a href="/prompt-archive-site/notes/" data-astro-cid-vex5zuxs>方法笔记</a><span aria-hidden="true" data-astro-cid-vex5zuxs>/</span><span aria-current="page" data-astro-cid-vex5zuxs>起飞点：有限正本＋无限生成＋有门槛回流</span></nav><h1 style="font-size:32px" data-astro-cid-vex5zuxs>起飞点：有限正本＋无限生成＋有门槛回流</h1><p class="note-meta" data-astro-cid-vex5zuxs><span class="medium-chip" data-astro-cid-vex5zuxs>方法</span><span data-astro-cid-vex5zuxs>图像＋视频共用</span><span data-astro-cid-vex5zuxs>源资料：起飞点-有限正本无限生成有门槛回流（visual-prompt-system）</span></p><p class="note-summary" data-astro-cid-vex5zuxs>库的核心机制：有限正本（验证过的固定描述）＋无限生成（写法规则＝组合公式）＋有门槛回流（质量门禁）的飞轮，及三环节职责与落地位置。</p></div><div class="note-layout" data-astro-cid-vex5zuxs><aside class="note-toc" aria-label="目录" data-astro-cid-vex5zuxs><p class="toc-title" data-astro-cid-vex5zuxs>目录</p><a href="#核心机制原文" data-astro-cid-vex5zuxs>核心机制（原文）</a><a href="#三个环节各自的职责" data-astro-cid-vex5zuxs>三个环节各自的职责</a><a href="#为什么这是起飞点" data-astro-cid-vex5zuxs>为什么这是&quot;起飞点&quot;</a><a href="#飞轮运转动线" data-astro-cid-vex5zuxs>飞轮运转动线</a><a href="#落地位置" data-astro-cid-vex5zuxs>落地位置</a><a href="#关联" data-astro-cid-vex5zuxs>关联</a></aside><div class="note-main" data-astro-cid-vex5zuxs><div class="prose" data-astro-cid-vex5zuxs><h1 id="起飞点有限正本--无限生成--有门槛回流">起飞点：有限正本 + 无限生成 + 有门槛回流</h1>
+<blockquote>
+<p>2026-09-04，志光亲述并定型："变量应该怎么从已验证的有限固定描述变成无限"——这个提问本身是视觉提示词系统从「素材收藏」跃迁为「生产系统」的临界点。志光原话：<strong>"这是我们起飞的起点。"</strong></p>
+</blockquote>
+<h2 id="核心机制原文">核心机制（原文）</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>精确表述：不是"变成无限"，是"有限的正本 + 无限的生成 + 有门槛的回流"</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>有限（正本）              无限（生成端）                有限但增长（库存）</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>┌──────────────┐   ┌─────────────────────────┐   ┌──────────────────────────┐</span></span>
+<span class="line"><span>│ 验证过的固定描述 │ → │ 写法规则（公式/路由/参数化）│ → │ 新条目 → 志光确认 → 回流入库 │</span></span>
+<span class="line"><span>│ = 质量锚点     │   │ 组合空间 = 天文数字        │   │ = 库渐进长大，规则越来越准   │</span></span>
+<span class="line"><span>└──────────────┘   └─────────────────────────┘   └──────────────────────────┘</span></span>
+<span class="line"><span>        ↑____________________飞轮____________________↓</span></span></code></pre>
+<h2 id="三个环节各自的职责">三个环节各自的职责</h2>
+<table>
+<thead>
+<tr>
+<th>环节</th>
+<th>是什么</th>
+<th>不是什么</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>固定描述（正本）</strong></td>
+<td>训练数据、质量锚点——有限、验证过、一字不动（零号条款）</td>
+<td>不是天花板，是地基</td>
+</tr>
+<tr>
+<td><strong>写法规则（模型）</strong></td>
+<td>组合公式保结构下限、条件路由定选档、参数化开变体空间</td>
+<td>不是撒手生成——规则保证的是下限不是上限</td>
+</tr>
+<tr>
+<td><strong>志光确认（门禁）</strong></td>
+<td>质量判断——决定什么回流、什么丢弃</td>
+<td>不是流程负担，是复利来源</td>
+</tr>
+</tbody>
+</table>
+<p><strong>缺任何一个环节都只是排列组合，不叫举一反三。</strong></p>
+<h2 id="为什么这是起飞点">为什么这是"起飞点"</h2>
+<p>此前的系统状态：变量库=跑过的固定描述（能复用，不能举一反三）。瓶颈被志光一语点破后，补上写法规则库（组合公式 5 套 + 条件路由 5 张 + 参数化条目 3 类），系统从「检索复用」升级为「生成-验证-回流」的飞轮。</p>
+<p><strong>这是 Keep 分享玩法经验的显式命名</strong>：当年 16 个玩法不是一次设计出来的，是"素材+规则→生成→上线验证→好的留下来"滚出来的。当时是无意识的工作习惯，现在是命名的系统能力——习惯变制度，才可复制、可交接、可跨人执行。</p>
+<h2 id="飞轮运转动线">飞轮运转动线</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>接到没做过的画面需求</span></span>
+<span class="line"><span>→ 写法规则库选组合公式（定骨架）</span></span>
+<span class="line"><span>→ 变量库/高频包取值（填料，验证过的质感）</span></span>
+<span class="line"><span>→ 生成 → 好 → 志光点头 → 回流入库（正本+1，规则再验证）</span></span>
+<span class="line"><span>→ 库越用越厚，规则越用越准</span></span></code></pre>
+<h2 id="落地位置">落地位置</h2>
+<ul>
+<li>写法规则库：<a href="/prompt-archive-site/notes/writing-rules/">写法规则库</a>（引言已固化本机制）</li>
+<li>宪法保障：<a href="/prompt-archive-site/notes/library-spec/">库定义规范</a> §零（原文不变式）/ §零点五（写法规则库定位）</li>
+<li>本机制的定义权在志光——"无限"的方向与边界由需求方定义，不由工具定义。</li>
+</ul>
+<h2 id="关联">关联</h2>
+<ul>
+<li><a href="/prompt-archive-site/notes/library-spec/">库定义规范</a> · <a href="/prompt-archive-site/notes/writing-rules/">写法规则库</a> · 域导航</li>
+<li>前史：Keep 分享玩法笔记格式（~/Downloads/玩法/笔记格式.md）——本机制的原始形态</li>
+</ul>
+</div></div></div></div></main><footer class="site-footer" data-astro-cid-tq46r5sz><div class="container" data-astro-cid-tq46r5sz><div class="footer-grid" data-astro-cid-tq46r5sz><div class="footer-brand" data-astro-cid-tq46r5sz><a class="brand" href="/prompt-archive-site/" data-astro-cid-tq46r5sz><span class="brand-glyph" data-astro-cid-tq46r5sz>PA</span><span class="brand-name" data-astro-cid-tq46r5sz>AI 提示词档案馆</span></a><p class="footer-desc" data-astro-cid-tq46r5sz>可浏览、可检索、可复制的 AI 图像与视频提示词案例库。每个完整案例一个独立页面，提示词与 Wiki 原文逐字一致。</p></div><nav class="footer-col" aria-label="页脚导航" data-astro-cid-tq46r5sz><p class="footer-label" data-astro-cid-tq46r5sz>浏览</p><a href="/prompt-archive-site/images/" data-astro-cid-tq46r5sz>图像案例</a><a href="/prompt-archive-site/videos/" data-astro-cid-tq46r5sz>视频案例</a><a href="/prompt-archive-site/notes/" data-astro-cid-tq46r5sz>方法笔记</a><a href="/prompt-archive-site/cases/" data-astro-cid-tq46r5sz>全站搜索</a></nav><div class="footer-col" data-astro-cid-tq46r5sz><p class="footer-label" data-astro-cid-tq46r5sz>本馆收录</p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>案例</span><b data-astro-cid-tq46r5sz>105</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>附实测成片</span><b data-astro-cid-tq46r5sz>2</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>方法笔记</span><b data-astro-cid-tq46r5sz>60</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>合集</span><b data-astro-cid-tq46r5sz>11</b></p></div></div><div class="footer-bottom" data-astro-cid-tq46r5sz><p data-astro-cid-tq46r5sz>「作者称已测试」表示来源声明，本站未复测。</p><p data-astro-cid-tq46r5sz>PA·ARCHIVE © 2026</p></div></div></footer></body><script type="module">function e(){document.querySelectorAll(`[data-masonry]`).forEach(e=>{let t=Array.from(e.querySelectorAll(`:scope > .m-cols > .m-col > *, :scope > *:not(.m-cols)`));if(e.querySelectorAll(`.m-cols`).forEach(e=>e.remove()),t.length===0)return;let n=window.matchMedia(`(max-width: 767px)`).matches?1:window.matchMedia(`(max-width: 1199px)`).matches?2:3,r=document.createElement(`div`);r.className=`m-cols`;let i=Array.from({length:n},()=>{let e=document.createElement(`div`);return e.className=`m-col`,e});t.forEach((e,t)=>i[t%n].appendChild(e)),e.appendChild(r),i.forEach(e=>r.appendChild(e))})}window.refreshMasonry=e,e();var t;window.addEventListener(`resize`,()=>{clearTimeout(t),t=setTimeout(e,150)});</script><script type="module">(()=>{let e=`.case-card, .note-card, .note-list-card`,t=window.matchMedia(`(prefers-reduced-motion: reduce)`),n=null,r=null,i=0;t.addEventListener?.(`change`,()=>{t.matches&&a()});function a(){if(!n)return;let e=n;e.classList.remove(`tilt-active`),e.classList.add(`tilt-return`),e.style.transform=``,clearTimeout(i),i=setTimeout(()=>e.classList.remove(`tilt-return`),320),n=null,r=null}document.addEventListener(`pointermove`,i=>{if(i.pointerType!==`mouse`||!i.isPrimary||t.matches)return;let o=i.target instanceof Element?i.target.closest(e):null;if(o!==n){if(a(),!o)return;n=o,r=n.getBoundingClientRect(),n.classList.add(`tilt-active`),n.classList.remove(`tilt-return`)}if(!n||!r)return;let s=(i.clientX-r.left)/r.width-.5,c=(i.clientY-r.top)/r.height-.5,l=Math.max(-1,Math.min(1,s*2))*4.5,u=Math.max(-1,Math.min(1,c*2))*-4.5;n.style.transform=`perspective(1100px) rotateX(${u.toFixed(3)}deg) rotateY(${l.toFixed(3)}deg) translateY(-3px)`},{passive:!0}),document.addEventListener(`pointerleave`,()=>a()),document.addEventListener(`pointerdown`,t=>{(t.target instanceof Element?t.target.closest(e):null)!==n&&a()},{passive:!0}),window.addEventListener(`blur`,()=>a()),window.addEventListener(`scroll`,()=>a(),{passive:!0})})();</script></html><script type="module">function e(){document.querySelectorAll(`.prose pre`).forEach(e=>{if(e.closest(`.code-panel`))return;let t=e.querySelector(`code`),n=(t??e).textContent??``,r=t?.className.match(/language-([\w+-]+)/)?.[1]??`text`,i=n.replace(/\n$/,``).split(`
+`).length,a=Array.from(n.matchAll(/`{3,}/g)).map(e=>e[0].length),o=a.length?Math.max(3,Math.max(...a)+1):3,s="`".repeat(o)+`markdown
+`+(n.endsWith(`
+`)?n:n+`
+`)+"`".repeat(o),c=document.createElement(`figure`);c.className=`code-panel`;let l=document.createElement(`figcaption`);l.className=`code-panel-head`;let u=document.createElement(`span`);u.className=`code-lang`,u.textContent=r;let d=document.createElement(`span`);d.className=`code-lines`,d.textContent=`${i} 行`;let f=document.createElement(`span`);f.className=`copy-feedback`,f.setAttribute(`aria-live`,`polite`);let p=document.createElement(`button`);p.type=`button`,p.className=`copy-btn`,p.textContent=`复制本块`,l.append(u,d,f,p),e.replaceWith(c),c.append(l,e);let m;p.addEventListener(`click`,async()=>{let e=!1;try{await navigator.clipboard.writeText(s),e=!0}catch{try{let t=document.createElement(`textarea`);t.value=s,t.style.position=`fixed`,t.style.opacity=`0`,document.body.appendChild(t),t.select(),e=document.execCommand(`copy`),t.remove()}catch{e=!1}}f.textContent=e?`已复制本块`:`复制失败，请手动选取`,p.textContent=e?`已复制`:`复制本块`,clearTimeout(m),m=setTimeout(()=>{f.textContent=``,p.textContent=`复制本块`},3e3)})})}e();</script>

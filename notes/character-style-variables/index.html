@@ -1,0 +1,835 @@
+<!DOCTYPE html><html lang="zh-CN" data-astro-cid-tq46r5sz><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="发型、妆容、服装等造型要素的取值集合；关联的图像资料仍在公开审核中。"><link rel="icon" href="/prompt-archive-site/favicon.svg" type="image/svg+xml"><title>角色造型变量库 · 方法笔记</title><link rel="stylesheet" href="/prompt-archive-site/_astro/SiteLayout.DYPNTGRP.css"><style>.note-header[data-astro-cid-vex5zuxs]{max-width:calc(var(--note-width) + 280px);margin:0 auto;padding:40px 24px 0}
+</style></head><body data-astro-cid-tq46r5sz><a class="skip-link" href="#main" data-astro-cid-tq46r5sz>跳到主要内容</a><div class="announce" data-astro-cid-tq46r5sz><a href="/prompt-archive-site/cases/" data-astro-cid-tq46r5sz>PA·ARCHIVE — 每个完整案例一个独立页面，提示词与 Wiki 原文逐字一致 ↗</a></div><header class="site-header" data-astro-cid-tq46r5sz><div class="container" data-astro-cid-tq46r5sz><a class="brand" href="/prompt-archive-site/" data-astro-cid-tq46r5sz><span class="brand-glyph" data-astro-cid-tq46r5sz>PA</span><span class="brand-name" data-astro-cid-tq46r5sz>AI 提示词档案馆</span></a><nav class="site-nav" aria-label="主导航" data-astro-cid-tq46r5sz><a href="/prompt-archive-site/images/" data-astro-cid-tq46r5sz>图像案例<span class="nav-no" data-astro-cid-tq46r5sz>01</span></a><a href="/prompt-archive-site/videos/" data-astro-cid-tq46r5sz>视频案例<span class="nav-no" data-astro-cid-tq46r5sz>02</span></a><a href="/prompt-archive-site/notes/" aria-current="page" data-astro-cid-tq46r5sz>方法笔记<span class="nav-no" data-astro-cid-tq46r5sz>03</span></a></nav><div class="header-cta" data-astro-cid-tq46r5sz><a class="header-search-link" href="/prompt-archive-site/cases/" aria-label="全站搜索案例" data-astro-cid-tq46r5sz><span class="icon" style="width:15px;height:15px" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="6.1"/><line x1="13.6" y1="13.6" x2="18" y2="18"/></svg></span><span data-astro-cid-tq46r5sz>搜索</span><span class="nav-no" data-astro-cid-tq46r5sz>04</span></a></div></div></header><main id="main" data-astro-cid-tq46r5sz><div class="note-page" data-astro-cid-vex5zuxs><div class="note-header" data-astro-cid-vex5zuxs><nav class="breadcrumbs" aria-label="面包屑" data-astro-cid-vex5zuxs><a href="/prompt-archive-site/" data-astro-cid-vex5zuxs>首页</a><span aria-hidden="true" data-astro-cid-vex5zuxs>/</span><a href="/prompt-archive-site/notes/" data-astro-cid-vex5zuxs>方法笔记</a><span aria-hidden="true" data-astro-cid-vex5zuxs>/</span><span aria-current="page" data-astro-cid-vex5zuxs>角色造型变量库</span></nav><h1 style="font-size:32px" data-astro-cid-vex5zuxs>角色造型变量库</h1><p class="note-meta" data-astro-cid-vex5zuxs><span class="medium-chip" data-astro-cid-vex5zuxs>变量库</span><span data-astro-cid-vex5zuxs>图像</span><span data-astro-cid-vex5zuxs>源资料：角色造型变量库（visual-prompt-system）</span></p><p class="note-summary" data-astro-cid-vex5zuxs>发型、妆容、服装等造型要素的取值集合；关联的图像资料仍在公开审核中。</p></div><div class="note-layout" data-astro-cid-vex5zuxs><aside class="note-toc" aria-label="目录" data-astro-cid-vex5zuxs><p class="toc-title" data-astro-cid-vex5zuxs>目录</p><a href="#使用规则" data-astro-cid-vex5zuxs>使用规则</a><a href="#目录" data-astro-cid-vex5zuxs>目录</a><a href="#人物设定图-4-类" data-astro-cid-vex5zuxs>人物设定图 4 类</a><a href="#使用方式" data-astro-cid-vex5zuxs>使用方式：</a><a href="#固定话术人物描述视图类型提示词" class="depth-3" data-astro-cid-vex5zuxs>固定话术+人物描述+视图类型提示词</a><a href="#基础三视图" data-astro-cid-vex5zuxs>基础三视图</a><a href="#效果" class="depth-3" data-astro-cid-vex5zuxs>效果</a><a href="#视图类型提示词" class="depth-3" data-astro-cid-vex5zuxs>视图类型提示词：</a><a href="#完整模版" class="depth-3" data-astro-cid-vex5zuxs>完整模版</a><a href="#标准角色设定图" data-astro-cid-vex5zuxs>标准角色设定图</a><a href="#效果-1" class="depth-3" data-astro-cid-vex5zuxs>效果</a><a href="#视图类型提示词-1" class="depth-3" data-astro-cid-vex5zuxs>视图类型提示词：</a><a href="#完整模版-1" class="depth-3" data-astro-cid-vex5zuxs>完整模版</a><a href="#完整角色设定图" data-astro-cid-vex5zuxs>完整角色设定图</a><a href="#效果及模型建议" class="depth-3" data-astro-cid-vex5zuxs>效果及模型建议</a><a href="#具体提示词" class="depth-3" data-astro-cid-vex5zuxs>具体提示词</a><a href="#道具设定图" data-astro-cid-vex5zuxs>道具设定图</a><a href="#效果及模型建议-1" class="depth-3" data-astro-cid-vex5zuxs>效果及模型建议</a><a href="#具体提示词-1" class="depth-3" data-astro-cid-vex5zuxs>具体提示词</a><a href="#道具六视图增强版盛唐资产包回流-2026-09-04-志光确认" data-astro-cid-vex5zuxs>道具六视图（增强版·盛唐资产包回流 2026-09-04 志光确认）</a><a href="#人物造型-5-类" data-astro-cid-vex5zuxs>人物造型 5 类</a><a href="#提示词模版" data-astro-cid-vex5zuxs>提示词模版</a><a href="#女子" data-astro-cid-vex5zuxs>女子</a><a href="#男子" data-astro-cid-vex5zuxs>男子</a><a href="#女孩" data-astro-cid-vex5zuxs>女孩</a><a href="#男孩" data-astro-cid-vex5zuxs>男孩</a><a href="#老人" data-astro-cid-vex5zuxs>老人</a><a href="#二次元人设风格-7-类" data-astro-cid-vex5zuxs>二次元人设风格 7 类</a><a href="#次世代cg风" data-astro-cid-vex5zuxs>次世代CG风</a><a href="#80年代手绘风" data-astro-cid-vex5zuxs>80年代手绘风</a><a href="#复古少女漫" data-astro-cid-vex5zuxs>复古少女漫</a><a href="#新中式水彩风" data-astro-cid-vex5zuxs>新中式水彩风</a><a href="#矢量风" data-astro-cid-vex5zuxs>矢量风</a><a href="#吉卜力" data-astro-cid-vex5zuxs>吉卜力</a><a href="#新海诚" data-astro-cid-vex5zuxs>新海诚</a><a href="#3d人设风格-4-类" data-astro-cid-vex5zuxs>3D人设风格 4 类</a><a href="#妖冶阴柔风" data-astro-cid-vex5zuxs>妖冶阴柔风</a><a href="#效果-2" class="depth-3" data-astro-cid-vex5zuxs>效果</a><a href="#风格提示词" class="depth-3" data-astro-cid-vex5zuxs>风格提示词</a><a href="#美式皮克斯风" data-astro-cid-vex5zuxs>美式皮克斯风</a><a href="#效果-3" class="depth-3" data-astro-cid-vex5zuxs>效果</a><a href="#风格提示词-1" class="depth-3" data-astro-cid-vex5zuxs>风格提示词</a><a href="#3d国漫风" data-astro-cid-vex5zuxs>3D国漫风</a><a href="#效果-4" class="depth-3" data-astro-cid-vex5zuxs>效果</a><a href="#风格提示词-2" class="depth-3" data-astro-cid-vex5zuxs>风格提示词</a><a href="#真人" data-astro-cid-vex5zuxs>真人</a><a href="#效果-5" class="depth-3" data-astro-cid-vex5zuxs>效果</a><a href="#风格提示词-3" class="depth-3" data-astro-cid-vex5zuxs>风格提示词</a><a href="#学院百褶裙套装-12-套" data-astro-cid-vex5zuxs>学院百褶裙套装 12 套</a><a href="#第1套黑白熊猫海军领短卫衣百褶裙套装-️视觉转录" data-astro-cid-vex5zuxs>第1套｜黑白熊猫海军领短卫衣百褶裙套装 ⚠️视觉转录</a><a href="#第2套白紫运动印花短袖百褶裙套装-️视觉转录" data-astro-cid-vex5zuxs>第2套｜白紫运动印花短袖百褶裙套装 ⚠️视觉转录</a><a href="#第3套粉色露肩绑带衬衫黑色哥特荷叶裙套装" data-astro-cid-vex5zuxs>第3套｜粉色露肩绑带衬衫黑色哥特荷叶裙套装</a><a href="#第4套紫色星云短夹克符文百褶裙套装" data-astro-cid-vex5zuxs>第4套｜紫色星云短夹克符文百褶裙套装</a><a href="#第5套淡紫拼色卡通熊露肩卫衣黑色百褶裙套装" data-astro-cid-vex5zuxs>第5套｜淡紫拼色卡通熊露肩卫衣黑色百褶裙套装</a><a href="#第6套白色蕾丝v领衬衫黑色金纹皮裙套装" data-astro-cid-vex5zuxs>第6套｜白色蕾丝V领衬衫黑色金纹皮裙套装</a><a href="#第7套白色荷叶边衬衫黑粉格纹束腰裙套装" data-astro-cid-vex5zuxs>第7套｜白色荷叶边衬衫黑粉格纹束腰裙套装</a><a href="#第8套白色海军红领巾黑色百褶裙制服套装" data-astro-cid-vex5zuxs>第8套｜白色海军红领巾黑色百褶裙制服套装</a><a href="#第9套白色字母短卫衣冰蓝拼粉百褶裙套装" data-astro-cid-vex5zuxs>第9套｜白色字母短卫衣冰蓝拼粉百褶裙套装</a><a href="#第10套粉色荷叶边露肩衬衫白色玫瑰裙裤套装" data-astro-cid-vex5zuxs>第10套｜粉色荷叶边露肩衬衫白色玫瑰裙裤套装</a><a href="#第11套冰蓝渐变透明机车夹克粉色百褶裙套装" data-astro-cid-vex5zuxs>第11套｜冰蓝渐变透明机车夹克粉色百褶裙套装</a><a href="#第12套黑色蕾丝露肩上衣孔雀蓝格纹百褶裙套装" data-astro-cid-vex5zuxs>第12套｜黑色蕾丝露肩上衣孔雀蓝格纹百褶裙套装</a><a href="#关联" data-astro-cid-vex5zuxs>关联</a><a href="#宫格分镜图" data-astro-cid-vex5zuxs>宫格分镜图</a><a href="#只有故事梗概" data-astro-cid-vex5zuxs>只有故事梗概</a><a href="#有完整故事" data-astro-cid-vex5zuxs>有完整故事</a></aside><div class="note-main" data-astro-cid-vex5zuxs><div class="prose" data-astro-cid-vex5zuxs><blockquote>
+<p>模板库中 {角色} {造型} 类变量的取值来源。人设图有「固定话术+人物描述+视图类型」三段式结构；image2 玩法包已按库定义移至模板层（模板-image2玩法包）。</p>
+</blockquote>
+<h2 id="使用规则">使用规则</h2>
+<p>变量取值<strong>整条搬用，不自行改写</strong>。人设图固定话术（"放在一张图上，请不要分图绘制"）是防分图关键指令，原文保留。</p>
+<h2 id="目录">目录</h2>
+<table>
+<thead>
+<tr>
+<th>节</th>
+<th>条目数</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>人物设定图 4 类</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>使用方式：</td>
+<td>0</td>
+<td>1️⃣固定话术：帮我生成一组人设图，注意请将人物设定图中要求的内容放在一张图</td>
+</tr>
+<tr>
+<td>基础三视图</td>
+<td>2</td>
+<td>正交三视图，同一人物的正面视图、正侧面视图、背面视图，三图等宽等高并排拼接，</td>
+</tr>
+<tr>
+<td>标准角色设定图</td>
+<td>2</td>
+<td>人物角色设计表，角色转面表，同一人物的正面视图、正侧面视图、背面视图，三图等</td>
+</tr>
+<tr>
+<td>完整角色设定图</td>
+<td>1</td>
+<td>！！！需使用seedream5.0-lite模型，4.6容易生成大兵（训练数</td>
+</tr>
+<tr>
+<td>道具设定图</td>
+<td>1</td>
+<td>需使用seedream5.0-lite模型，推荐16:9和4:3两个比例。效</td>
+</tr>
+<tr>
+<td>人物造型 5 类</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>提示词模版</td>
+<td>1</td>
+<td>此处是所有的人物设定图提示词格式，下方是每种类型的人物提示词，推荐使用ima</td>
+</tr>
+<tr>
+<td>女子</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td>男子</td>
+<td>9</td>
+<td></td>
+</tr>
+<tr>
+<td>女孩</td>
+<td>7</td>
+<td></td>
+</tr>
+<tr>
+<td>男孩</td>
+<td>9</td>
+<td></td>
+</tr>
+<tr>
+<td>老人</td>
+<td>9</td>
+<td></td>
+</tr>
+<tr>
+<td>二次元人设风格 7 类</td>
+<td>0</td>
+<td>下方内容是图片中的人物风格哈，对应的人物设定去掉提示词中关于光影、服装部分即</td>
+</tr>
+<tr>
+<td>次世代CG风</td>
+<td>1</td>
+<td>{</td>
+</tr>
+<tr>
+<td>80年代手绘风</td>
+<td>1</td>
+<td><!--80年代复古漫画--></td>
+</tr>
+<tr>
+<td>复古少女漫</td>
+<td>1</td>
+<td><!--复古少女漫--></td>
+</tr>
+<tr>
+<td>新中式水彩风</td>
+<td>1</td>
+<td><!--新中式水彩风--></td>
+</tr>
+<tr>
+<td>矢量风</td>
+<td>1</td>
+<td><!--矢量风格--></td>
+</tr>
+<tr>
+<td>吉卜力</td>
+<td>1</td>
+<td><!--吉卜力风格--></td>
+</tr>
+<tr>
+<td>新海诚</td>
+<td>1</td>
+<td><!--新海诚风格--></td>
+</tr>
+<tr>
+<td>3D人设风格 4 类</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>妖冶阴柔风</td>
+<td>1</td>
+<td>1、如需人物精致，可以从发饰、着装上入手，测试下来发现如果增加“纱”、“皮毛</td>
+</tr>
+<tr>
+<td>美式皮克斯风</td>
+<td>1</td>
+<td>测试发现，不能简单的写“皮克斯风格”，否则出现的东西很容易千篇一律没有特色。</td>
+</tr>
+<tr>
+<td>3D国漫风</td>
+<td>1</td>
+<td>女生不要加入关于“睫毛”的描述，不然结合中式丹凤眼，很容易出现卡姿兰根根分明</td>
+</tr>
+<tr>
+<td>真人</td>
+<td>1</td>
+<td>{真人写实人像摄影，8K超高清原生画质，电影级柔和自然光影，无畸变广角，还原</td>
+</tr>
+<tr>
+<td>学院百褶裙套装 12 套</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>第1套｜黑白熊猫海军领短卫衣百褶裙套装 ⚠️视觉转录</td>
+<td>1</td>
+<td>黑白熊猫配色可爱机能风套装，上衣为白色短款套头卫衣式海军领上装，宽松落肩长袖</td>
+</tr>
+<tr>
+<td>第2套｜白紫运动印花短袖百褶裙套装 ⚠️视觉转录</td>
+<td>1</td>
+<td>白紫撞色清新运动风套装，上衣为白色宽松短袖T恤，圆领与领内使用紫色包边，袖口</td>
+</tr>
+<tr>
+<td>第3套｜粉色露肩绑带衬衫黑色哥特荷叶裙套装</td>
+<td>1</td>
+<td>粉黑配色甜酷哥特套装，上衣为粉色修身露肩长袖衬衫，胸前采用心形领线与细密粉色</td>
+</tr>
+<tr>
+<td>第4套｜紫色星云短夹克符文百褶裙套装</td>
+<td>1</td>
+<td>深紫星云纹幻想机能套装，外层为修身短款长袖夹克，紫黑色面料布满薄粉紫色星云、</td>
+</tr>
+<tr>
+<td>第5套｜淡紫拼色卡通熊露肩卫衣黑色百褶裙套装</td>
+<td>1</td>
+<td>淡紫、浅蓝与粉色拼色的可爱街头套装，上衣为宽松露肩针织卫衣，内搭黑色圆领无袖</td>
+</tr>
+<tr>
+<td>第6套｜白色蕾丝V领衬衫黑色金纹皮裙套装</td>
+<td>1</td>
+<td>黑白金配色复古暗黑套装，上衣为白色宽松V领长袖衬衫，前后V形领口均镶宽幅白色</td>
+</tr>
+<tr>
+<td>第7套｜白色荷叶边衬衫黑粉格纹束腰裙套装</td>
+<td>1</td>
+<td>黑白粉配色洛丽塔学院风套装，上衣为白色高领长袖衬衫，立领和前胸育克环绕密集荷</td>
+</tr>
+<tr>
+<td>第8套｜白色海军红领巾黑色百褶裙制服套装</td>
+<td>1</td>
+<td>黑白红配色海军制服套装，上衣为白色修身短款长袖衬衫，面料平滑并带轻微光泽，深</td>
+</tr>
+<tr>
+<td>第9套｜白色字母短卫衣冰蓝拼粉百褶裙套装</td>
+<td>1</td>
+<td>清新糖果色街头套装，上衣为纯白色宽松短款圆领卫衣，落肩设计，衣身呈桶形轮廓，</td>
+</tr>
+<tr>
+<td>第10套｜粉色荷叶边露肩衬衫白色玫瑰裙裤套装</td>
+<td>1</td>
+<td>粉白配色甜美复古套装，上衣为粉色修身露肩衬衫，黑色花边细肩带连接衣身，宽幅一</td>
+</tr>
+<tr>
+<td>第11套｜冰蓝渐变透明机车夹克粉色百褶裙套装</td>
+<td>1</td>
+<td>未来感三件式服装套装，外层为冰蓝至半透明浅紫渐变的短款机车夹克，宽松落肩轮廓</td>
+</tr>
+<tr>
+<td>第12套｜黑色蕾丝露肩上衣孔雀蓝格纹百褶裙套装</td>
+<td>1</td>
+<td>黑色与孔雀蓝配色的复古华丽套装，上衣为黑色露肩长袖衬衫，宽松垂坠衣身搭配细肩</td>
+</tr>
+<tr>
+<td>关联</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>宫格分镜图</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>只有故事梗概</td>
+<td>1</td>
+<td>根据故事描述，帮我生成一张{{[5X5]}}宫格分镜图，每个宫格都是一张完整</td>
+</tr>
+<tr>
+<td>有完整故事</td>
+<td>1</td>
+<td>严格按照镜头顺序帮我生成一张{{[aXa]}}宫格分镜图</td>
+</tr>
+</tbody>
+</table>
+<h2 id="人物设定图-4-类">人物设定图 4 类</h2>
+<h2 id="使用方式">使用方式：</h2>
+<h3 id="固定话术人物描述视图类型提示词">固定话术+人物描述+视图类型提示词</h3>
+<p><strong>1️⃣固定话术</strong>：帮我生成一组人设图，注意请将人物设定图中要求的内容放在一张图上，请不要分图绘制：</p>
+<p>**2️⃣人物描述：**自己写，人物的五官发型之类的</p>
+<p>3️⃣**视图类型提示词：**见下方</p>
+<h2 id="基础三视图">基础三视图</h2>
+<h3 id="效果">效果</h3>
+<h3 id="视图类型提示词">视图类型提示词：</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">正交三视图，同一人物的正面视图、正侧面视图、背面视图，三图等宽等高并排拼接，统一人物，统一服装配饰，统一光影，统一比例，无透视畸变，标准中立自然站立姿势，全身完整入镜，身体挺直，双脚自然分开与肩同宽，双臂自然垂于身体两侧，无多余动作，无多余物体，无场景道具，白色背景，高精度，细节拉满</span></span></code></pre>
+<h3 id="完整模版">完整模版</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">帮我生成一组人设图，注意请将人物设定图中要求的内容放在一张图上，请不要分图绘制：</span></span>
+<span class="line"><span style="color:#E1E4E8">{{[</span><span style="color:#DBEDFF;text-decoration:underline">这里填角色描述</span><span style="color:#E1E4E8">]}}</span></span>
+<span class="line"><span style="color:#6A737D">&lt;!--所需的设定类型--&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">人物设定图要求如下：</span></span>
+<span class="line"><span style="color:#FFAB70">-</span><span style="color:#E1E4E8"> 正交三视图，同一人物的正面视图、正侧面视图、背面视图，三图等宽等高并排拼接，统一人物，统一服装配饰，统一光影，统一比例，无透视畸变，标准中立自然站立姿势，全身完整入镜，身体挺直，双脚自然分开与肩同宽，双臂自然垂于身体两侧，无多余动作，无多余物体，无场景道具，白色背景，高精度，细节拉满</span></span></code></pre>
+<h2 id="标准角色设定图">标准角色设定图</h2>
+<h3 id="效果-1">效果</h3>
+<h3 id="视图类型提示词-1">视图类型提示词：</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">人物角色设计表，角色转面表，同一人物的正面视图、正侧面视图、背面视图，三图等宽等高并排拼接，统一人物，统一服装配饰，统一光影，统一比例，无透视畸变，标准中立自然站立姿势，全身完整入镜，身体挺直，双脚自然分开与肩同宽，双臂自然垂于身体两侧，无多余动作，无多余物体，画面右侧附带1张正面视图的微笑表情面部特写，同一角色，面部特征统一连贯，纯白色背景，统一柔和光照，高精度，细节拉满</span></span></code></pre>
+<h3 id="完整模版-1">完整模版</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">帮我生成一组人设图，注意请将人物设定图中要求的内容放在一张图上，请不要分图绘制：</span></span>
+<span class="line"><span style="color:#E1E4E8">{{[</span><span style="color:#DBEDFF;text-decoration:underline">这里填角色描述</span><span style="color:#E1E4E8">]}}</span></span>
+<span class="line"><span style="color:#6A737D">&lt;!--所需的设定类型--&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">人物设定图要求如下：</span></span>
+<span class="line"><span style="color:#FFAB70">-</span><span style="color:#E1E4E8"> 人物角色设计表，角色转面表，同一人物的正面视图、正侧面视图、背面视图，三图等宽等高并排拼接，统一人物，统一服装配饰，统一光影，统一比例，无透视畸变，标准中立自然站立姿势，全身完整入镜，身体挺直，双脚自然分开与肩同宽，双臂自然垂于身体两侧，无多余动作，无多余物体，画面右侧附带1张正面视图的微笑表情面部特写，同一角色，面部特征统一连贯，纯白色背景，统一柔和光照，高精度，细节拉满</span></span></code></pre>
+<h2 id="完整角色设定图">完整角色设定图</h2>
+<h3 id="效果及模型建议">效果及模型建议</h3>
+<p>**！！！**需使用seedream5.0-lite模型，4.6容易生成大兵（训练数据导致）。</p>
+<p>本提示词效果如下，推荐16:9和4:3两个比例：</p>
+<h3 id="具体提示词">具体提示词</h3>
+<p>因为训练数据的原因，这种类型的角色图很容易被生成美国大兵，所以需要直接使用完整的下方提示词，将<strong>橙色部分替换成自己需要的即可</strong></p>
+<ul>
+<li>
+<p>**角色：**这个人物的简称，比如唐朝女子、古代女子、摩托车手；</p>
+</li>
+<li>
+<p>**角色描述：**这个人物的面容、着装</p>
+</li>
+<li>
+<p>参考图可有可无</p>
+</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#6A737D">&lt;!--人物角色设定图--&gt;</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># 任务</span></span>
+<span class="line"><span style="color:#E1E4E8">请帮我生成人物设定图[</span><span style="color:#DBEDFF;text-decoration:underline">绝对禁止生成士兵、盔甲、戎装、铠甲等元素</span><span style="color:#E1E4E8">]:</span></span>
+<span class="line"><span style="color:#FFAB70">1.</span><span style="color:#E1E4E8"> 角色描述如下</span></span>
+<span class="line"><span style="color:#FFAB70">   -</span><span style="color:#E1E4E8">  {{[</span><span style="color:#DBEDFF;text-decoration:underline">角色描述</span><span style="color:#E1E4E8">]}}</span></span>
+<span class="line"><span style="color:#FFAB70">2.</span><span style="color:#E1E4E8"> 该人物设定图需包含下方模块，同时所有模块无重叠、无裁切、布局清晰规范：</span></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 头部细节组：同一人物的无配饰头部正视图、正侧视图，佩戴全套服装配饰的头部正视图、正侧视图，所有头部视图五官、肤色、比例100%统一，无透视畸变</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 全身正交转面组：同一人物的正面视图、前45度侧视图、正侧面视图、后45度侧视图、背面视图，共5个全身视图，全部等宽等高并排排布，统一人物、统一服装配饰、统一光影、统一比例，完全正交无透视畸变，标准中立自然站立姿势，全身完整入镜，双臂自然垂于身体两侧，无多余动作</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 补充视角组：同一人物的半侧身视图、俯视顶视图、仰视底视图，人物、服装、比例与主视图完全统一</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 材质细节特写组：服装面料、鞋靴等关键部位的超近距离特写，清晰展示材质纹理、质感等细节</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#FFAB70">    -</span><span style="color:#E1E4E8"> 全图所有模块的同一角色，五官、身高、体型、服装、配饰、光影、材质100%完全一致，无任何差异，画面比例16:9，高精度，细节拉满，符合影视级动画角色设定标准</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># 要求：</span></span>
+<span class="line"><span style="color:#E1E4E8">人设图具体要求如下：</span></span>
+<span class="line"><span style="color:#FFAB70">-</span><span style="color:#E1E4E8"> 影视级角色设定全览表，影视级角色转面参考图，8K超高清，超精细细节，全局统一柔和漫射光照，无强烈明暗对比，无阴影遮挡结构，纯净浅灰色或白色背景，无任何场景、道具、杂物、特效</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># 注意：</span></span>
+<span class="line"><span style="color:#E1E4E8">绝对禁止生成士兵、盔甲、戎装、铠甲等元素，全程无任何硬朗轮廓、男性化特征。</span></span></code></pre>
+<h2 id="道具设定图">道具设定图</h2>
+<h3 id="效果及模型建议-1">效果及模型建议</h3>
+<p>需使用seedream5.0-lite模型，推荐16:9和4:3两个比例。效果如下：</p>
+<h3 id="具体提示词-1">具体提示词</h3>
+<p>提示词如下：</p>
+<ul>
+<li>
+<p>**道具：**这个道具的简称，比如摩托车、汽车、头盔</p>
+</li>
+<li>
+<p>**道具描述：**这个道具的具体描述，比如黑色、金属质感，大前灯等</p>
+</li>
+<li>
+<p>参考图可有可无</p>
+</li>
+</ul>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#79B8FF;font-weight:bold"># 任务</span></span>
+<span class="line"><span style="color:#E1E4E8">请帮我生成一张道具设定图，道具描述如下：</span></span>
+<span class="line"><span style="color:#FFAB70">-</span><span style="color:#E1E4E8"> {{[</span><span style="color:#DBEDFF;text-decoration:underline">道具描述</span><span style="color:#E1E4E8">]}}</span></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># 要求</span></span>
+<span class="line"><span style="color:#FFAB70">1.</span><span style="color:#E1E4E8"> 道具设定图要求如下：</span></span>
+<span class="line"><span style="color:#FFAB70">-</span><span style="color:#E1E4E8"> 工业设计三视图, 纯白色纯平背景, 无任何多余元素:1.4, 正面视图, 侧面视图, 背面视图, 三等分横向均匀排版,产品设计稿, complete body, no cropping, no missing parts, fully visible，高清8K, 光影均匀, 无人物, 无场景, 无背景杂物, 无环境光</span></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># 注意</span></span>
+<span class="line"><span style="color:#E1E4E8">所有内容必须整合在同一张画布内，禁止分图生成</span></span></code></pre>
+<h2 id="道具六视图增强版盛唐资产包回流-2026-09-04-志光确认">道具六视图（增强版·盛唐资产包回流 2026-09-04 志光确认）</h2>
+<p>在原「道具设定图」基础上增加的精确规格，生产级道具资产按此产出：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>道具名称：X，[用途一句话]。</span></span>
+<span class="line"><span>描述：总尺寸（总长/部件尺寸）+ 六视图逐视图说明（绝对正前方视图展示…；绝对正后方视图展示…；绝对左侧/右侧视图展示…；绝对正上方俯拍视图展示…；绝对正下方仰拍视图展示…）+ 材质（主材质/辅材质/连接件材质）。</span></span>
+<span class="line"><span>特征：使用痕迹 1–2 处（灰尘/汗渍氧化/磨损）——道具的年龄感，让道具带叙事。</span></span>
+<span class="line"><span>构图规范：高质量写实道具多角度展示图，横向构图，2 行 3 列网格，六个极正视图（正/后/左/右/俯/仰）。纯白背景，专业产品影棚摄影。超长焦/移轴效果，透视降到最低，接近平行边缘保持平行、接近正交投影。每视图居中、无倾斜旋转畸变。禁人物/手脚/场景/其他道具/文字水印logo。</span></span>
+<span class="line"><span>[视觉风格：全片统一尾缀]</span></span></code></pre>
+<p>完整范例见 <a href="/prompt-archive-site/notes/shengtang-assets/">范例-盛唐资产包-角色场景道具设定图</a>（电脑/大刀两份逐字原文）。</p>
+<h2 id="人物造型-5-类">人物造型 5 类</h2>
+<h2 id="提示词模版">提示词模版</h2>
+<p>此处是所有的人物设定图提示词格式，下方是每种类型的人物提示词，推荐使用image2（人设图提示词可使用小工具直出）</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#79B8FF;font-weight:bold"># 任务</span></span>
+<span class="line"><span style="color:#E1E4E8">帮我生成一组人设图，注意请将人物设定图中要求的内容放在一张图上，请不要分图绘制： </span></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># 人物描述</span></span>
+<span class="line"><span style="color:#6A737D">&lt;!-- 人物描述的部分可自由替换 --&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">古风男子，写实的人体皮肤肌理，贴合光线方向的超精细毛孔细节，面部细软绒毛，脸颊细微毛细血管</span></span>
+<span class="line"><span style="color:#FFAB70">-</span><span style="color:#E1E4E8"> 身份：为仙风道骨武林隐士</span></span>
+<span class="line"><span style="color:#FFAB70">-</span><span style="color:#E1E4E8"> 气质：肤色冷白肤质通透，体型清瘦高挑</span></span>
+<span class="line"><span style="color:#FFAB70">-</span><span style="color:#E1E4E8"> 妆容、发型、服饰：服装为纯白色丝绸长袍，衣领银线云纹提花，衣袖淡彩仙鹤刺绣，腰系白色绸带，外罩白色透明纱衣，面料轻灵飘逸，发型银白长发半披散，发髻插白玉簪，几缕碎发随风轻扬，脚穿白色布履，人物自带古典故事感，服化道精准还原国风织锦、刺绣、纱质面料的细腻质感，发丝根根分明，皮肤纹理自然真实，材质表现细腻 </span></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># 排版要求</span></span>
+<span class="line"><span style="color:#E1E4E8">人物设定图要求如下： - 人物角色设计表，角色转面表，同一人物的正面视图、正侧面视图、背面视图，三图等宽等高并排拼接，统一人物，统一服装配饰，统一光影，统一比例，无透视畸变，标准中立自然站立姿势，全身完整入镜，身体挺直，双脚自然分开与肩同宽，双臂自然垂于身体两侧，无多余动作，无多余物体，画面左侧附带1张正面视图的微笑表情面部特写，同一角色，面部特征统一连贯，纯白色背景，统一柔和光照，高精度，细节拉满，画面干净、阴影平滑自然，画面精细，无噪点、瑕疵，避免油腻高光或塑料质感</span></span></code></pre>
+<h2 id="女子">女子</h2>
+<table>
+<thead>
+<tr>
+<th>气质</th>
+<th>妆容</th>
+<th>发型</th>
+<th>服饰</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>飘逸，灵动</td>
+<td>清透底妆，肤色白皙透亮；写实肌理带细软绒毛与毛细血管</td>
+<td>乌黑长发梳双丫髻，饰蓝色珠花、流苏，碎发飘动</td>
+<td>蓝色锦缎劲装，衣领提花，淡彩刺绣；纱质袖口飘逸，足踏蓝色绣花鞋</td>
+</tr>
+<tr>
+<td>端庄温婉</td>
+<td>素雅底妆，肤色雪白细腻；保留绒毛与毛细血管的真实肤感</td>
+<td>乌黑长发梳惊鸿髻，插点翠步摇、粉色珠花，碎发拂面</td>
+<td>粉红广袖长裙，衣领提花，淡彩刺绣；纱质披帛飘逸，足踏粉色绣花鞋</td>
+</tr>
+<tr>
+<td>英气，洒脱</td>
+<td>近素颜妆感，肤色白皙；面部绒毛与毛细血管清晰自然</td>
+<td>乌黑长发高束马尾，束青色发带，插玉簪，碎发飞扬</td>
+<td>青色侠客服，衣领提花，刺绣云纹；纱质下摆飘逸，足踏青色软靴</td>
+</tr>
+<tr>
+<td>妩媚</td>
+<td>白皙如雪底妆，匀净细腻；可见面部绒毛与细微血管</td>
+<td>乌黑长发梳堕马髻，插金步摇、红色绒花，碎发垂肩</td>
+<td>大红纱裙，衣领提花，刺绣牡丹；薄纱外罩飘逸，足踏红色绣花鞋</td>
+</tr>
+<tr>
+<td>清冷，寒气逼人</td>
+<td>苍白冷白底妆，妆感极淡；肤质写实，绒毛与血管清晰</td>
+<td>乌黑长发披散，仅以白色发带束一缕，碎发清冷</td>
+<td>白色劲装，衣领银提花，刺绣冰纹；雪纺缎面飘逸，足踏白色靴子</td>
+</tr>
+<tr>
+<td>神秘灵动，野性清纯</td>
+<td>自然裸妆，肤色如蜜泛光；绒毛与微血管带出健康生机感</td>
+<td>乌黑长发编多股细辫，饰银质花冠、彩色琉璃珠，碎发自由散落</td>
+<td>靛蓝蜡染百褶裙，满绣蝴蝶图腾；银质项圈腰链叠戴，赤足系银铃</td>
+</tr>
+<tr>
+<td>温婉，素手纤纤</td>
+<td>淡雅薄妆，肤色白净透粉；肤质细腻，绒毛与毛细血管若隐若现</td>
+<td>乌黑长发挽随云髻，斜插白玉兰花簪，几缕碎发垂于耳畔</td>
+<td>月白棉麻襦裙，衣缘绣折枝花卉；腰系碧色丝绦垂流苏，足踏素缎软底鞋</td>
+</tr>
+<tr>
+<td>坚毅，傲骨铮铮</td>
+<td>浅淡妆容，肤色偏暖呈浅蜜色；毛孔与绒毛质感真实分明</td>
+<td>乌黑长发全束顶髻，戴银质束冠无赘饰，鬓发利落紧贴</td>
+<td>玄色锦缎战袍，红边镶饰，护肩錾刻兽纹；革带束腰，足踏玄色登云靴</td>
+</tr>
+</tbody>
+</table>
+<h2 id="男子">男子</h2>
+<table>
+<thead>
+<tr>
+<th>气质</th>
+<th>妆容</th>
+<th>发型</th>
+<th>服饰</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>豪迈、粗犷</td>
+<td>古铜肤色，肤质粗犷，写实肌理，超精细毛孔，面部细软绒毛</td>
+<td>黑色短发束成发髻，鬓角碎发凌乱</td>
+<td>深蓝色粗麻布劲装，肩部兽皮护甲，胸襟猛虎刺绣，腰系宽皮带配铁扣，外罩蓝灰色厚重披风，脚穿黑色皮革长靴</td>
+</tr>
+<tr>
+<td>清冷</td>
+<td>冷白肤色，肤质通透，写实肌理，超精细毛孔，面部细软绒毛</td>
+<td>银白长发半披散，发髻插白玉簪，几缕碎发轻扬</td>
+<td>纯白色丝绸长袍，衣领银线云纹提花，衣袖仙鹤刺绣，腰系白色绸带，外罩白色透明纱衣，脚穿白色布履</td>
+</tr>
+<tr>
+<td>英武</td>
+<td>小麦肤色，肤质紧致，写实肌理，超精细毛孔，面部细软绒毛</td>
+<td>黑色浓密头发束成高髻，系青色布带，碎发利落</td>
+<td>青蓝色棉麻短打劲装，胸口藤蔓刺绣，袖口扎紧，腰系棕色皮质腰带，外罩青灰色短披风，脚穿黑色布鞋绑腿</td>
+</tr>
+<tr>
+<td>儒雅温润</td>
+<td>白皙肤色，肤质细腻，写实肌理，超精细毛孔，面部细软绒毛</td>
+<td>墨色长发半束，头戴白玉发冠，余发垂于背后</td>
+<td>月白色交领广袖长衫，衣襟墨竹刺绣，腰佩环形玉佩，足蹬云头锦履</td>
+</tr>
+<tr>
+<td>邪魅狷狂</td>
+<td>苍白肤色，眼下微青，写实肌理，超精细毛孔，面部细软绒毛</td>
+<td>暗红长发披散，额前两缕银丝挑染，仅以细红绳束住一缕</td>
+<td>玄色暗纹锦袍，右肩饰以银丝盘蛇护甲，腰系三指宽皮革束带，足踏黑金长靴</td>
+</tr>
+<tr>
+<td>沉毅、威严</td>
+<td>麦色肤色，眉头微痕，写实肌理，超精细毛孔，面部细软绒毛</td>
+<td>黑发一丝不苟束于金冠之中，额前无碎发</td>
+<td>玄黑织金螭纹曳撒，肩覆金色饕餮肩甲，腰悬玉具剑，下着黑革战靴</td>
+</tr>
+<tr>
+<td>洒脱</td>
+<td>健康蜜色，肤质光滑，写实肌理，超精细毛孔，面部细软绒毛</td>
+<td>深棕色卷发散乱披肩，以几根彩色细绳编成小辫混于其间</td>
+<td>靛蓝色扎染布衣，领口随意敞开，下着灰色绑腿长裤，腰挂酒葫芦，赤足缠绑带踩草鞋</td>
+</tr>
+<tr>
+<td>冷峻孤傲</td>
+<td>肤色微暗，下颌线利落，写实肌理，超精细毛孔，面部细软绒毛</td>
+<td>灰白长发高束成马尾，以乌金环扣固定，发梢如剑齐平</td>
+<td>墨灰劲装，肩臂处覆乌藤编织轻甲，双手佩戴玄铁护腕，背负无鞘阔剑，足蹬蝠纹薄底快靴</td>
+</tr>
+<tr>
+<td>风流</td>
+<td>肤色粉白，薄唇含笑，写实肌理，超精细毛孔，面部细软绒毛</td>
+<td>檀木色长发松松拢于一侧，以鎏金缠枝发扣坠住，几缕发丝拂过锁骨</td>
+<td>绛紫绛纱广袖锦袍，领袖以金线满绣流云牡丹，腰佩错金香囊，手执泥金折扇，足踏粉底皂靴</td>
+</tr>
+</tbody>
+</table>
+<h2 id="女孩">女孩</h2>
+<table>
+<thead>
+<tr>
+<th>气质</th>
+<th>妆容</th>
+<th>发型</th>
+<th>服饰</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>沉静</td>
+<td>写实皮肤肌理，贴合光线方向的超精细毛孔细节，面部细软绒毛，脸颊细微毛细血管，肤色白皙透亮。</td>
+<td>乌发梳成堕马髻，斜插点翠凤尾步摇，额前碎发轻扬，发丝根根分明。</td>
+<td>身着月白色苏绣缎面交领襦裙，外罩淡紫色轻纱大袖衫，衣领提花缠枝莲纹，裙摆淡彩刺绣蝶恋花，腰间系白玉双环佩。脚穿绣花弓鞋。</td>
+</tr>
+<tr>
+<td>灵秀、温婉</td>
+<td>写实皮肤肌理，贴合光线方向的超精细毛孔细节，面部细软绒毛，脸颊细微毛细血管，肤色暖白。</td>
+<td>发髻为双鬟望仙髻，簪珊瑚珠花与流苏银簪，碎发拂过耳畔，发丝根根分明。</td>
+<td>着藕荷色暗纹锦缎齐胸襦裙，外披葱绿色薄绸披帛，领口金线绣折枝海棠，裙身散绣粉色桃花瓣，袖口滚银边。足蹬云头锦履。</td>
+</tr>
+<tr>
+<td>文静</td>
+<td>写实皮肤肌理，贴合光线方向的超精细毛孔细节，面部细软绒毛，脸颊细微毛细血管，肤色莹白如瓷。</td>
+<td>梳垂挂髻，髻上缠绕浅紫丝带与细小珠花，耳边留一缕鬓发，发丝柔亮顺滑。</td>
+<td>上穿水蓝色交领短襦，外罩月白素纱半臂，下着黛青色百褶长裙。领口绣淡色兰草纹，袖口镶细银边，腰束素色锦带，垂一枚小青玉环。脚蹬如意头布履。</td>
+</tr>
+<tr>
+<td>烂漫天真</td>
+<td>写实皮肤肌理，贴合光线方向的超精细毛孔细节，面部细软绒毛，脸颊细微毛细血管，粉白肤色。</td>
+<td>头发扎双丫髻，各绑红绳并缀绒球，额前刘海细碎，发丝根根分明。</td>
+<td>穿鹅黄色绫罗短襦，配翠蓝色印花长裙，外罩月白纱背心，衣领缀珍珠纽扣，裙边绣小雏菊，腰带系蝴蝶结。脚着软底绣花布鞋。</td>
+</tr>
+<tr>
+<td>质朴</td>
+<td>写实皮肤肌理，贴合光线方向的超精细毛孔细节，面部细软绒毛，脸颊细微毛细血管，肤色奶白偏粉。</td>
+<td>梳双平髻，髻根扎靛蓝粗布头巾，耳边碎发微卷，发丝略蓬松带着自然气息。</td>
+<td>身穿本色粗麻交领短衣，外罩靛蓝印花半臂，下配灰粉色细褶长裤。衣襟绣简单麦穗纹，裤脚收口缀小木珠，腰系绞编麻绳挂一枚桃木如意扣。脚穿蒲草编凉履。</td>
+</tr>
+<tr>
+<td>娇俏、灵动</td>
+<td>写实皮肤肌理，贴合光线方向的超精细毛孔细节，面部细软绒毛，脸颊细微毛细血管，肤色乳白。</td>
+<td>梳丱发，左右各扎小圆髻，插彩色琉璃珠簪，碎发蓬松，发丝根根分明。</td>
+<td>着石榴红绫袄，下配豆绿褶裙，外罩金线织花比甲，领口镶兔毛边，前胸绣福字纹，裙摆滚一圈小花边。脚蹬虎头棉鞋。</td>
+</tr>
+<tr>
+<td>秀气，讨喜</td>
+<td>写实皮肤肌理，贴合光线方向的超精细毛孔细节，面部细软绒毛，脸颊细微毛细血管，肤色蜜合色。</td>
+<td>头顶总角，以红绳结双环，环上挂小银铃，余发披于肩背，柔软细亮。</td>
+<td>着杏红绫短袄，下穿秋香绿百褶纱裙，外罩金茶色织锦比甲。领口绣缠枝葡萄纹，裙门缀葡萄形琉璃小坠，袖口滚橘色边。脚蹬软缎蝴蝶履。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="男孩">男孩</h2>
+<table>
+<thead>
+<tr>
+<th>气质</th>
+<th>妆容</th>
+<th>发型</th>
+<th>服饰</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>儒雅，挺拔</td>
+<td>写实肌理，毛孔与绒毛可见，脸颊微血管；肤色温润如玉</td>
+<td>发髻高束，插白玉簪，鬓角碎发微扬</td>
+<td>月白色交领长袍，外罩浅青纱衣，领口带暗纹提花。袖口饰淡墨竹叶刺绣，腰佩玉坠流苏，衣袂飘逸。脚穿玄色布靴。</td>
+</tr>
+<tr>
+<td>清瘦有骨感</td>
+<td>写实肌理，可见毛孔、绒毛与毛细血管；肤色白皙细腻</td>
+<td>发髻简单束起，额前碎发随意散落</td>
+<td>靛蓝色交领短褐，外罩浅灰半臂。领口有小朵梅花刺绣，袖口滚边细纹，衣摆飘逸。脚穿青布鞋。</td>
+</tr>
+<tr>
+<td>圆润结实，神气</td>
+<td>写实肌理，保留毛孔、绒毛与毛细血管；肤色稍显红润</td>
+<td>发髻歪斜，几缕碎发翘起</td>
+<td>赭红色圆领短袍，袖口扎起，衣襟带不规则褶皱。腰系黄色布带，衣料有轻微磨损感，整体飘逸灵动。脚穿灰布鞋。</td>
+</tr>
+<tr>
+<td>乖巧斯文</td>
+<td>写实肌理，可见毛孔、绒毛与毛细血管；肤色白净柔和</td>
+<td>发髻整齐，用青色布巾束起，额前碎发轻垂</td>
+<td>竹青色交领长衫，外罩月白纱褂。领口饰淡蓝绣纹，袖口缀有细碎珠花，衣摆垂顺飘逸。脚穿白袜青鞋。</td>
+</tr>
+<tr>
+<td>矮小，稚气灵动</td>
+<td>写实肌理，保留毛孔、绒毛与毛细血管；肤色粉嫩通透</td>
+<td>发髻扎成双丫髻，各系一枚小铃铛，碎发毛茸茸</td>
+<td>鹅黄色半臂短衣，下配浅绿裤子。衣襟绣有小花，腰间系红绳，衣料柔软飘逸。脚穿软底布鞋。</td>
+</tr>
+<tr>
+<td>活泼调皮</td>
+<td>写实肌理，保留毛孔、绒毛与毛细血管；肤色微深，带晒痕</td>
+<td>总角发型，用红绳随意扎成两束，碎发乱翘</td>
+<td>洗旧的橙色交领短褐，外罩深褐色补丁坎肩，衣角沾有墨点。袖口挽至手肘，腰间用麻绳系一个竹编蛐蛐笼。脚穿沾泥草鞋。</td>
+</tr>
+<tr>
+<td>骄矜自持</td>
+<td>写实肌理，可见毛孔与绒毛；肤白如瓷，唇色红润</td>
+<td>头戴嵌宝紫金小冠，发丝一丝不苟</td>
+<td>绛紫色云锦交领长袍，领口袖口以金线绣如意云纹，外罩一层流光暗花纱衣。腰间系着豆绿色宫绦，上挂羊脂白玉环佩。脚穿厚底皂靴。</td>
+</tr>
+<tr>
+<td>柔弱</td>
+<td>写实肌理，唇色淡白，眼下微青；肤色苍白，额有薄汗</td>
+<td>发髻松挽，用一根木簪固定，额前散发微湿</td>
+<td>素白色棉麻交领长衫，外罩一件淡蓝色宽大氅衣，衣料柔软轻薄。腰间系着同色系的丝绦，垂着一枚小小的平安扣。脚穿厚白布袜及软底棉鞋。</td>
+</tr>
+<tr>
+<td>英气</td>
+<td>写实肌理，剑眉星目；肤色为健康蜜色</td>
+<td>高束马尾，用皮质束环扎紧，额角干净利落</td>
+<td>玄色窄袖劲装短褐，领口微敞，露出内里的一抹朱红中衣。腕戴皮质护腕，腰束巴掌宽的牛皮腰带，身姿飒爽。脚蹬黑色薄底快靴。</td>
+</tr>
+</tbody>
+</table>
+<h2 id="老人">老人</h2>
+<table>
+<thead>
+<tr>
+<th>气质</th>
+<th>妆容</th>
+<th>发型</th>
+<th>服饰</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>飘逸</td>
+<td>肤色古铜偏黄，面布岁月皱纹，长眉雪白垂落</td>
+<td>白发简髻，银丝轻扬</td>
+<td>一袭月白色素纱长袍，衣领提花暗纹，袖口淡色刺绣云纹，腰间流苏玉带，衣袂飘飘，足蹬灰布云履</td>
+</tr>
+<tr>
+<td>锐利深沉</td>
+<td>肤色黝黑粗糙，鹰钩鼻突出，眼神锐利</td>
+<td>花白高髻，插乌木簪</td>
+<td>玄色暗纹锦袍，领口金线绣蟠龙，肩部皮质护甲镶铜钉，腰束革带挂玉佩，衣摆宽大，脚踏黑色翘头皂靴</td>
+</tr>
+<tr>
+<td>慈祥</td>
+<td>肤色暖白带黄，面颊饱满，皱纹柔和</td>
+<td>花白银丝圆髻，簪点翠步摇与珠花，额前碎发轻摆</td>
+<td>藕荷色织锦襦裙，交领提花牡丹纹，外罩淡粉色纱衣，袖口绣蝶恋花，裙摆流苏珍珠串，足穿绣花翘头履</td>
+</tr>
+<tr>
+<td>冷峻、孤清</td>
+<td>肤色白皙微蜡，面部线条硬朗，眼神冷峻</td>
+<td>灰白高髻，仅插一根银簪，利落无饰</td>
+<td>墨绿色暗纹云锦长袄，立领镶玄色织金边，衣襟绣寒梅，肩披素色披帛，腰系玉带，脚穿黑色缎面弓鞋</td>
+</tr>
+<tr>
+<td>儒雅</td>
+<td>肤色微黄细腻，眼角含笑纹，三缕灰白长须</td>
+<td>银发束于脑后，以青玉冠固定</td>
+<td>天青色广袖深衣，交领镶素白绢边，衣身暗织竹叶纹，腰束绦带系白玉环，足蹬青布软底履</td>
+</tr>
+<tr>
+<td>深谋远虑</td>
+<td>肤色蜡黄暗沉，颧骨高耸，眼眶深陷</td>
+<td>稀疏白发以麻绳束成细辫</td>
+<td>灰褐色粗麻道袍，外罩玄色纱衣，领口露本色毛边，腰系草绳悬葫芦，脚穿芒鞋</td>
+</tr>
+<tr>
+<td>威猛凛冽</td>
+<td>紫膛面色，横肉虬结，一道旧疤斜贯左眉</td>
+<td>灰白寸头，根根竖立如钢针</td>
+<td>深褐色劲装武服，外披虎纹大氅，肩部皮甲缀铁环，腕束牛皮护手，腰缠铁链，足蹬过膝皮靴</td>
+</tr>
+<tr>
+<td>雍容华贵</td>
+<td>肤色雪白微透，保养得当，细纹浅淡</td>
+<td>白发盘成望仙髻，簪赤金九凤衔珠钗，金丝编发</td>
+<td>绛紫色织金凤纹对襟大袖衫，内衬素白抹胸，肩披金线绣云霞披帛，曳地长裙镶珍珠滚边，足穿金缕鞋</td>
+</tr>
+<tr>
+<td>佝偻、阴鸷</td>
+<td>肤色灰败，老年斑密布，眼神阴冷浑浊</td>
+<td>花白乱发半披半束，枯草般干燥</td>
+<td>鸦青色旧绸长袍，袖口磨损露线，外罩蛇纹暗花褙子，颈挂骨质念珠，腰别铜烟杆，脚穿黑布旧靴</td>
+</tr>
+</tbody>
+</table>
+<h2 id="二次元人设风格-7-类">二次元人设风格 7 类</h2>
+<p>下方内容是图片中的人物风格哈，对应的人物设定去掉提示词中关于光影、服装部分即可</p>
+<h2 id="次世代cg风">次世代CG风</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#E1E4E8">    "core_character_style": "日系二次元清新写实动漫风格，融合吉卜力柔和质感与美式卡通圆润五官，青春治愈向，全造型无尖锐棱角，线条柔和流畅",</span></span>
+<span class="line"><span style="color:#E1E4E8">    "character_shape": "圆润柔和面部轮廓，大而灵动的棕色杏眼搭配纤长睫毛，浅雀斑点缀脸颊，中长微卷深棕卷发，发丝层次轻盈蓬松，身形纤细匀称，体态自然松弛",</span></span>
+<span class="line"><span style="color:#E1E4E8">    "brush_technique": "平涂结合细腻渐变，无明显笔触感，边缘顺滑柔和，细节精致不繁琐，做风格化简化处理",</span></span>
+<span class="line"><span style="color:#E1E4E8">    "texture_performance": "皮肤通透细腻，发丝富有空气感，布料柔软自然，配饰与饮品容器质感写实柔和，不同材质区分清晰",</span></span>
+<span class="line"><span style="color:#E1E4E8">    "rendering_style": "三渲二卡通渲染，基于PBR物理渲染做二次元风格化优化，全局光照柔和自然",</span></span>
+<span class="line"><span style="color:#E1E4E8">    "lighting_method": "侧逆光+逆光暖金色主光源，人物边缘形成柔和轮廓光，面部受光均匀，明暗过渡柔和，低对比软阴影，高光细腻，无死黑区域，光影通透治愈"</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h2 id="80年代手绘风">80年代手绘风</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#6A737D">&lt;!--80年代复古漫画--&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#E1E4E8">    "core_character_style": "90年代日系复古赛璐璐动漫风格，吉卜力式清新治愈质感，线条干净利落，人物神态灵动柔和，带昭和复古少女氛围感",</span></span>
+<span class="line"><span style="color:#E1E4E8">    "character_shape": "圆润柔和脸型，幼态灵动五官比例，大眼眸高光细腻，眉形柔和，五官线条流畅；蓬松双马尾碎发，发丝层次分明；身形纤细匀称，比例自然写实",</span></span>
+<span class="line"><span style="color:#E1E4E8">    "color_application": "暖调白皙肤色配淡粉腮红，深棕发色带暖调高光，暖棕通透瞳色；服饰低饱和柔和配色，白、蓝、棕、暖橙为主，色彩过渡自然",</span></span>
+<span class="line"><span style="color:#E1E4E8">    "texture_performance": "皮肤哑光细腻平滑，发丝蓬松柔软，棉T恤柔软质感、牛仔硬挺质感均通过简约明暗区分，平涂带轻微肌理，无过度写实纹理",</span></span>
+<span class="line"><span style="color:#E1E4E8">    "clothing_style_processing": "短款修身T恤图案扁平化复古设计，高腰牛仔短裤版型利落，腰带细节简约写实；服饰褶皱贴合身形，线条简化不繁琐",</span></span>
+<span class="line"><span style="color:#E1E4E8">    "rendering_style": "赛璐璐平涂为主，辅以柔和渐变过渡，线条清晰边缘干净，低对比度柔和渲染，复古动漫印刷质感，无强烈质感堆砌",</span></span>
+<span class="line"><span style="color:#E1E4E8">    "lighting_method": "侧前方柔和漫射自然光，明暗对比弱，阴影过渡柔和，暖调肤色反光，光影层次简约通透，无硬阴影，轻微逆光突出柔和质感"</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h2 id="复古少女漫">复古少女漫</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#6A737D">&lt;!--复古少女漫--&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#E1E4E8">    "core_character_style": "90年代日系正统少女漫画华丽唯美画风，线条干净利落，人物气质适配各类人设，五官精致写实，经典少女漫俊男美女氛围感风格",</span></span>
+<span class="line"><span style="color:#E1E4E8">    "character_shape": "面部轮廓适配男女不同人设，五官精致规整，符合经典少女漫标准头身比，人物比例协调自然",</span></span>
+<span class="line"><span style="color:#E1E4E8">    "color_application": "高饱和度平涂为主，肤色通透白皙，瞳色层次丰富，唇色自然柔和，色彩过渡顺滑，整体色调和谐统一，适配不同人设色彩搭配",</span></span>
+<span class="line"><span style="color:#E1E4E8">    "texture_performance": "皮肤细腻通透，基础阴影塑造立体感，面料质感表现清晰自然，线条边缘干净顺滑",</span></span>
+<span class="line"><span style="color:#E1E4E8">    "clothing_style_processing": "服饰线条工整规范，纹样细节精致清晰，适配各类人设服饰的风格化绘制，无固定款式限制",</span></span>
+<span class="line"><span style="color:#E1E4E8">    "rendering_style": "平涂结合柔和渐变的赛璐璐渲染，线条清晰流畅，边缘干净，明暗层次柔和，无噪点，带复古少女漫印刷质感",</span></span>
+<span class="line"><span style="color:#E1E4E8">    "lighting_method": "均匀柔和的基础光影，无强烈明暗对比，主光均匀覆盖人物主体，仅用基础明暗塑造立体感，适配多场景光影调整"</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h2 id="新中式水彩风">新中式水彩风</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#6A737D">&lt;!--新中式水彩风--&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#E1E4E8">    "core_character_style": "二次元日系平涂融合国风工笔的新中式古风插画，清宫少女人设，线条干净利落，造型柔美灵动，兼具动漫精致感与传统国画雅致感",</span></span>
+<span class="line"><span style="color:#E1E4E8">    "character_shape": "瓜子脸，杏眼细眉，面部线条柔和，二次元少女头身比，身形纤细，五官精致扁平化，暖棕瞳色，神态温婉沉静",</span></span>
+<span class="line"><span style="color:#E1E4E8">    "color_application": "主色正红、墨黑、牙白，点缀石青、湖蓝、鎏金，高饱和撞色和谐，肤色通透白皙，固有色明确，冷暖对比柔和，无过度渐变",</span></span>
+<span class="line"><span style="color:#E1E4E8">    "texture_performance": "平涂为主，局部低饱和渐变塑体积，丝绸顺滑质感，刺绣纹样清晰，金属饰品质感细腻，发丝线条流畅，无厚重肌理，整体干净通透",</span></span>
+<span class="line"><span style="color:#E1E4E8">    "clothing_style_processing": "清宫旗装造型，传统缠枝花卉刺绣，滚边工整，衣褶线条简洁概括，旗头、流苏、团扇等配饰细节精致，国风纹样符号化，造型规整",</span></span>
+<span class="line"><span style="color:#E1E4E8">    "rendering_style": "二次元平涂薄涂渲染，线条清晰流畅，无厚涂肌理，边缘干净利落，色彩过渡柔和，画面通透干净，兼具动漫质感与工笔细腻度",</span></span>
+<span class="line"><span style="color:#E1E4E8">    "lighting_method": "柔和正面漫射光，光影对比弱，无强烈明暗交界线，仅衣褶、轮廓处做低对比度阴影，光影均匀通透，无硬阴影"</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h2 id="矢量风">矢量风</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#6A737D">&lt;!--矢量风格--&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8">{</span></span>
+<span class="line"><span style="color:#E1E4E8">    "core_character_style": "东方新中式扁平矢量插画风格，几何化极简塑造，兼具古典东方气韵与现代设计感，人物神态英气温婉，线条干净利落",</span></span>
+<span class="line"><span style="color:#E1E4E8">    "character_shape": "面部轮廓流畅柔和，鹅蛋脸形，五官修长写意，丹凤眼线条锐利上扬，眉形纤细舒展，唇形饱满精致；发髻高束利落，发丝以极简流线概括，无细碎写实细节",</span></span>
+<span class="line"><span style="color:#E1E4E8">    "color_application": "人物主色为高饱和墨黑、深翠绿、暖橘红，肤色为低饱和暖杏色；色彩块面分明，平涂为主，同色系深浅区分层次，无多余渐变杂色，撞色和谐",</span></span>
+<span class="line"><span style="color:#E1E4E8">    "texture_performance": "纯平涂矢量质感，无写实纹理、笔刷肌理与噪点，仅通过色块边界与流线塑造体积，画面极致干净平滑",</span></span>
+<span class="line"><span style="color:#E1E4E8">    "clothing_style_processing": "服饰以大几何块面切割，衣褶用极简流线色块概括，领口、系带等细节高度符号化，无写实面料纹理，飘带以流畅弧形色块表现动态，装饰纹样极简精致",</span></span>
+<span class="line"><span style="color:#E1E4E8">    "rendering_style": "纯矢量扁平渲染，块面化平涂为主，仅用同色系深浅色块做极简体积区分，无明显描边，整体干净利落，现代设计感强",</span></span>
+<span class="line"><span style="color:#E1E4E8">    "lighting_method": "平面化极简光影，无明确写实光源，仅用低饱和同色系色块做面部与服饰的暗部过渡，无投影与高光反射，光影服务于块面造型，整体均匀柔和"</span></span>
+<span class="line"><span style="color:#E1E4E8">}</span></span></code></pre>
+<h2 id="吉卜力">吉卜力</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#6A737D">&lt;!--吉卜力风格--&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8"> {吉卜力工作室动画风格，宫崎骏经典手绘动画人设，昭和复古质感，治愈系日式2D手绘动画，角色设定原画，无3D渲染质感 } </span></span></code></pre>
+<h2 id="新海诚">新海诚</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#6A737D">&lt;!--新海诚风格--&gt;</span></span>
+<span class="line"><span style="color:#E1E4E8"> { 新海诚风格，《你的名字》/《天气之子》/《铃芽户缔》动画原画质感，日系剧场版动画人设，写实向二次元画风，赛璐璐渲染结合写实光影，京都动画级精细线稿，电影原画级精度 }</span></span></code></pre>
+<h2 id="3d人设风格-4-类">3D人设风格 4 类</h2>
+<h2 id="妖冶阴柔风">妖冶阴柔风</h2>
+<p>1、如需人物精致，可以从发饰、着装上入手，测试下来发现如果增加“纱”、“皮毛”的质感，人物会显得精致很多</p>
+<p>2、这种风格用即梦生成基础3视图比较容易，但是需要标准3视图，可以移步香蕉，或者放大后自行拼接</p>
+<h3 id="效果-2">效果</h3>
+<h3 id="风格提示词">风格提示词</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">{OC渲染次世代CG写实角色，妖冶阴柔的破碎魅惑气质，写实风格，真实质感，瓷白冷白皮自带通透柔光质感，超逼真还原细腻皮肤纹理、毛孔与细碎绒毛，精致瓜子脸，狭长眼尾上挑，眉眼锐利含情，发丝丝缕分明，材质质感真实细腻}</span></span></code></pre>
+<h2 id="美式皮克斯风">美式皮克斯风</h2>
+<p>测试发现，不能简单的写“皮克斯风格”，否则出现的东西很容易千篇一律没有特色。一定要加入质感的描述，但是记得控制下字数</p>
+<h3 id="效果-3">效果</h3>
+<h3 id="风格提示词-1">风格提示词</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">{美式皮克斯风格3D卡通角色，造型夸张富有故事感,低饱和度复古配色，主色沉稳，高对比撞色点缀，色彩层次丰富，明暗过渡自然,PBR物理级材质还原，精准呈现布料磨损做旧、毛发纤维、皮肤纹理、道具材质质感，哑光材质为主，高光自然克制}</span></span></code></pre>
+<h2 id="3d国漫风">3D国漫风</h2>
+<p>女生不要加入关于“睫毛”的描述，不然结合中式丹凤眼，很容易出现卡姿兰根根分明眼睫毛</p>
+<h3 id="效果-4">效果</h3>
+<h3 id="风格提示词-2">风格提示词</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">{新中式3D国漫角色，融合英式动画的柔和质感与东方古典审美，极具东方温婉气韵，虚拟引擎5超高清渲染，8K极致精度。线条流畅灵动，五官精致舒展，自带古典故事感，光影柔和通透，色彩雅致高级。精准还原国风织锦、刺绣、纱质面料的细腻质感，发丝根根分明，皮肤纹理自然真实，材质表现细腻，整体画面唯美大气}</span></span></code></pre>
+<h2 id="真人">真人</h2>
+<h3 id="效果-5">效果</h3>
+<h3 id="风格提示词-3">风格提示词</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">{真人写实人像摄影，8K超高清原生画质，电影级柔和自然光影，无畸变广角，还原真实人像质感。皮通透细腻，精准呈现肌肤的次表面散射，自带自然原生的珠光光泽，超逼真还原皮肤纹理、原生毛孔、面部细碎绒毛等细节，五官立体精致，画面干净通透，光影过渡自然，整体真实有呼吸感，细节拉满}</span></span></code></pre>
+<h2 id="学院百褶裙套装-12-套">学院百褶裙套装 12 套</h2>
+<blockquote>
+<p>来源：抖音视频「学院百褶裙 提示词」系列（用户 2026-09-02 截图 13 张，其中 1 张为系列封面）
+转录方式：10 套为用户随图提供的原文逐字稿（与图内文字核对一致）；2 套（熊猫/运动）图内无文字稿，由 qwen3-vl 视觉转录生成描述，<strong>非逐字原文，使用前建议先出图验证再调优</strong>
+原图存档：<code>raw/assets/ai-video/college-pleated-skirt-00-cover.png</code>（封面）+ <code>01~12.png</code>（12 套）
+版权注记：原作者声明内容为原创；本条目仅入库为个人内部视频制作的工作素材。</p>
+<p><strong>这套系列的共同公式</strong>（拆解自 12 套文本结构）：</p>
+<ol>
+<li>配色定位层：开头一句锁定 2~3 色主配色 + 风格定位词（甜酷哥特/幻想机能/洛丽塔学院/清新糖果/未来东方机能/暗黑复古…）</li>
+<li>上衣层：领型（心形领/V领/一字领/海军领/立领/露肩）→ 袖型（灯笼袖/蓬袖/落肩/露肩长袖）→ 面料（针织/丝缎/漆皮/皮革/蕾丝）→ 装饰（荷叶边/交叉绑带/蝴蝶结/蕾丝/刺绣/徽章）</li>
+<li>腰部层：宽腰封 / 高束腰封 / 腰带扣件（金属方扣、孔眼交叉系带、双搭扣）</li>
+<li>下装层：<strong>高腰短款百褶裙是系列锚定单品</strong>——变化发生在褶裥与表面（刀褶/宽褶/放射褶/格纹/拼片/网纱叠加/印纹）</li>
+<li>配饰层：缎带/链条/挂件/孔眼/徽章/流苏，点睛不抢主体</li>
+<li>收尾层：整体质感词（细腻微亮/挺括哑光/漆皮反光/层次丰富）</li>
+</ol>
+<p><strong>复用要点</strong>：换装=换 1/2/4/5 层，第 4 层百褶裙骨架（高腰+短款+百褶+质感词）保持不动即是系列感；单套拿来即用可直接复制 text 块。</p>
+</blockquote>
+<hr>
+<h2 id="第1套黑白熊猫海军领短卫衣百褶裙套装-️视觉转录">第1套｜黑白熊猫海军领短卫衣百褶裙套装 ⚠️视觉转录</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>黑白熊猫配色可爱机能风套装，上衣为白色短款套头卫衣式海军领上装，宽松落肩长袖，柔软厚实针织质感；海军领饰双道白色滚边，前胸配黑色领巾与黑白熊猫头像贴饰，背部方形领片中央带小型熊猫徽章；袖外侧贯穿粗黑条纹带，袖口白色罗纹收口。下装为黑色高腰短款百褶裙，宽腰头、密集硬挺刀褶、不对称双层裙摆，裙身带熊猫图案贴饰与侧边拉链装饰；银色粗链腰饰、金属挂环、锁形吊坠垂挂腰侧，搭配腿部细带，整体可爱与机能元素结合的层次感。</span></span></code></pre>
+<h2 id="第2套白紫运动印花短袖百褶裙套装-️视觉转录">第2套｜白紫运动印花短袖百褶裙套装 ⚠️视觉转录</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>白紫撞色清新运动风套装，上衣为白色宽松短袖T恤，圆领与领内使用紫色包边，袖口紫色宽边并饰两道白色平行条纹；胸前印紫色徽章、月桂图案与大幅英文字母印花，袖部带紫色盾形徽章，衣摆前侧打结形成短款收腰效果，面料轻薄顺滑带柔光光泽。下装为亮紫色高腰短款百褶裙，宽腰头、均匀深刀褶、外扩裙摆，裙摆边缘饰白色双条纹；腰侧悬紫色蝴蝶造型挂件（缀珠串与流苏），整体清新且富有青春活力。</span></span></code></pre>
+<h2 id="第3套粉色露肩绑带衬衫黑色哥特荷叶裙套装">第3套｜粉色露肩绑带衬衫黑色哥特荷叶裙套装</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>粉黑配色甜酷哥特套装，上衣为粉色修身露肩长袖衬衫，胸前采用心形领线与细密粉色荷叶滚边，肩部以宽粉色荷叶带和黑色细吊带连接，内搭白色高立领荷叶边，领部系黑色缎面大蝴蝶结与圆形宝石扣。粉色长袖宽松蓬起，袖外侧以黑色缎带进行连续交叉绑带并点缀黑色蝴蝶结，袖口叠加粉色双层荷叶边。腰部为黑色亮面双搭扣宽腰封，背面采用金属孔眼交叉系带。下装为黑色高腰不对称短裙，伞形裙摆带多层波浪荷叶边，前侧设银色交叉绑带拼片，并以低调灰色十字纹样装饰，面料细腻微亮、层次丰富。</span></span></code></pre>
+<h2 id="第4套紫色星云短夹克符文百褶裙套装">第4套｜紫色星云短夹克符文百褶裙套装</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>深紫星云纹幻想机能套装，外层为修身短款长袖夹克，紫黑色面料布满薄粉紫色星云、水洗斑驳和零星花朵纹理，窄翻领、肩袢、银色徽章纽扣和盾形胸章构成军装式细节，领口、袖口及结构线以深藏蓝拼接包边，袖部带黑色数字臂章，衣身具有柔亮皮革般质感。内搭为黑色短款吊带上衣，胸前有深紫条纹和交叉银链。下装为同色星云纹高腰短款百褶裙，硬挺刀褶叠加半透明灰紫网纱层，裙面印有大幅浅紫色抽象符文；腰部搭配宽幅银色浮雕方牌腰带、链条和垂挂皮革书本饰件，裙侧延伸多条带金属扣与圆环的黑色细带，整体神秘、华丽且带轻机能风。</span></span></code></pre>
+<h2 id="第5套淡紫拼色卡通熊露肩卫衣黑色百褶裙套装">第5套｜淡紫拼色卡通熊露肩卫衣黑色百褶裙套装</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>淡紫、浅蓝与粉色拼色的可爱街头套装，上衣为宽松露肩针织卫衣，内搭黑色圆领无袖背心，外层采用大幅斜向露肩罗纹领口；衣身以淡紫为主，胸腰部横向拼接柔粉和浅蓝色块，前胸装饰立体黑紫色卡通熊玩偶、兔子小配饰以及白底黑色交叉缝线圆形贴片。长袖宽松蓬起，袖外侧设置超大黑色金属孔眼和交叉绑带，点缀黑色蝴蝶结，罗纹袖口及下摆收束。下装为黑色短款百褶裙，宽而整齐的刀褶形成外扩轮廓，面料挺括哑光，整体呈软萌与暗黑元素结合的层次感。</span></span></code></pre>
+<h2 id="第6套白色蕾丝v领衬衫黑色金纹皮裙套装">第6套｜白色蕾丝V领衬衫黑色金纹皮裙套装</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>黑白金配色复古暗黑套装，上衣为白色宽松V领长袖衬衫，前后V形领口均镶宽幅白色花卉蕾丝，衣身柔软垂坠并带丝缎般细腻光泽；落肩长袖逐渐形成灯笼袖，袖口收束并拼接多层白色蕾丝荷叶边。下装为黑色高腰短款伞形皮裙，亮面皮革质感，腰部以宽黑色孔眼皮带和金色方扣收紧，裙身通过均匀褶裥展开，正中设金色拉链及流苏坠饰，裙摆印有连续金色对称花卉纹样，底层露出黑色镂空蕾丝边；腰间辅以金色链条、圆环和小型金属吊坠，整体华丽利落。</span></span></code></pre>
+<h2 id="第7套白色荷叶边衬衫黑粉格纹束腰裙套装">第7套｜白色荷叶边衬衫黑粉格纹束腰裙套装</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>黑白粉配色洛丽塔学院风套装，上衣为白色高领长袖衬衫，立领和前胸育克环绕密集荷叶褶边，肩部带竖向荷叶飞边，前襟使用粉色小圆纽扣并搭配黑色缎面大蝴蝶结；长袖呈饱满灯笼袖，手腕收束后展开白色荷叶袖口，面料细腻平滑并具有轻柔光泽。腰部搭配黑色高束腰封，正面为波浪上缘并装饰粉色心形扣和双侧粉色缎带蝴蝶结，背面采用金属孔眼交叉系带收紧。下装为黑底粉色格纹高腰伞形短裙，规则褶裥形成蓬松外扩轮廓，裙摆叠加白色荷叶边，整体剪裁精致、甜美而具有束腰结构感。</span></span></code></pre>
+<h2 id="第8套白色海军红领巾黑色百褶裙制服套装">第8套｜白色海军红领巾黑色百褶裙制服套装</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>黑白红配色海军制服套装，上衣为白色修身短款长袖衬衫，面料平滑并带轻微光泽，深藏蓝色宽大海军领从前颈延伸至背部方形披肩，领缘饰双道白色细条纹；胸前系鲜红色缎面领巾，结体饱满，双尾下垂，肩部带红色徽章贴饰。长袖略宽松，肘部形成自然褶皱，深袖口同样饰双道白纹。下装为黑色高腰短款百褶裙，腰头平整，密集刀褶向外展开，面料挺括并带细腻哑光，形成利落的学院制服轮廓。</span></span></code></pre>
+<h2 id="第9套白色字母短卫衣冰蓝拼粉百褶裙套装">第9套｜白色字母短卫衣冰蓝拼粉百褶裙套装</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>清新糖果色街头套装，上衣为纯白色宽松短款圆领卫衣，落肩设计，衣身呈桶形轮廓，长袖宽大并在手腕处以罗纹袖口收束，柔软针织面料具有轻微光滑感；前胸印有粉色、淡紫、冰蓝渐变的圆润手写体字母图案，后背保持纯白简洁设计。下装为水蓝色高腰短款百褶裙，宽腰头配粉色圆形纽扣，挺括亮面材质呈漆皮般反光，均匀宽褶向下展开，正侧面及后侧嵌入粉色和白色纵向拼片，形成冰蓝、粉、白三色清晰块面，整体超酷且富有未来感。</span></span></code></pre>
+<h2 id="第10套粉色荷叶边露肩衬衫白色玫瑰裙裤套装">第10套｜粉色荷叶边露肩衬衫白色玫瑰裙裤套装</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>粉白配色甜美复古套装，上衣为粉色修身露肩衬衫，黑色花边细肩带连接衣身，宽幅一字领荷叶边环绕肩部，荷叶边采用波浪扇贝轮廓并饰白色镂空小花刺绣；前襟为同色小圆纽扣门襟，胸腰部带纵向省道，长袖宽松蓬起，袖口收束后叠加刺绣荷叶边，领口中央配粉色缎面蝴蝶结。下装为白色高腰阔腿短裤，宽腰头贴合腰部，前后设立体褶裥与分片结构，面料挺括、表面平滑，裤脚形成褶皱般外扩轮廓；下缘印有连续粉色玫瑰线描花边，并叠加黑色镂空蕾丝雪纺边，整体细腻柔美。</span></span></code></pre>
+<h2 id="第11套冰蓝渐变透明机车夹克粉色百褶裙套装">第11套｜冰蓝渐变透明机车夹克粉色百褶裙套装</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>未来感三件式服装套装，外层为冰蓝至半透明浅紫渐变的短款机车夹克，宽松落肩轮廓，夸张蓬松长袖，翻领与剑门门襟结构，领片、袖口和衣摆采用亮面冰蓝包边，衣身呈透明薄膜般的高光漆面质感；袖部带银色花形金属饰件与流苏，衣摆及背部装饰浅蓝色对称云纹和花纹。内搭为藏蓝色修身短款无袖上衣，表面带亮蓝色对称东方花纹，领口及胸前配银色花盘扣、珠链和细长流苏。下装为亮粉色高腰短款百褶裙，硬挺放射状褶裥，漆皮般光滑反光，搭配宽腰带、方形银色带扣、金属孔眼、链条、挂环及蓝粉拼色袋饰，整体具有未来东方机能风格。</span></span></code></pre>
+<h2 id="第12套黑色蕾丝露肩上衣孔雀蓝格纹百褶裙套装">第12套｜黑色蕾丝露肩上衣孔雀蓝格纹百褶裙套装</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>黑色与孔雀蓝配色的复古华丽套装，上衣为黑色露肩长袖衬衫，宽松垂坠衣身搭配细肩带，领口环绕宽幅波浪花边蕾丝，前胸形成深V形蕾丝拼接；肩部采用镂空系带结构与小蝴蝶结，长袖为蓬松灯笼袖，袖口收束并叠加大面积黑色花卉蕾丝荷叶边。下装为孔雀蓝、墨蓝相间的高腰短款百褶裙，宽腰封结构，面料挺括并带细腻光泽，裙身布满纤细金色格纹线，裙摆叠加黑色花卉蕾丝边和低调蓝色曲线纹样；腰部搭配孔雀蓝缎带、金色环扣链饰、白色立体花朵及流苏坠饰，呈精致暗黑复古质感。</span></span></code></pre>
+<hr>
+<h2 id="关联">关联</h2>
+<ul>
+<li><a href="/prompt-archive-site/notes/character-styling-5/">👀图片-人物造型-5类</a> → 同为服装/造型向图片提示词素材，本条专攻「学院百褶裙」系列化套装</li>
+<li>👀图片-吉卜力幻想工业机械-8组 → 同为抖音截图逐字转录入库的提示词组，结构公式拆解方法一致</li>
+</ul>
+<h2 id="宫格分镜图">宫格分镜图</h2>
+<blockquote>
+<p>即梦需要抽卡，非常不稳定</p>
+</blockquote>
+<h1 id="宫格分镜图-1">宫格分镜图</h1>
+<h2 id="只有故事梗概">只有故事梗概</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#79B8FF;font-weight:bold"># 任务 </span></span>
+<span class="line"><span style="color:#E1E4E8">根据故事描述，帮我生成一张{{[</span><span style="color:#DBEDFF;text-decoration:underline">5X5</span><span style="color:#E1E4E8">]}}宫格分镜图，每个宫格都是一张完整的图 </span></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># 注意 </span></span>
+<span class="line"><span style="color:#FFAB70">1.</span><span style="color:#E1E4E8"> 所有内容必须整合在同一张画布内，禁止分图生成，图片上不要出现文字。</span></span>
+<span class="line"><span style="color:#FFAB70">2.</span><span style="color:#E1E4E8"> 所有宫格的尺寸严格保持一致</span></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># 故事 </span></span>
+<span class="line"><span style="color:#E1E4E8">{{[</span><span style="color:#DBEDFF;text-decoration:underline">简单描述</span><span style="color:#E1E4E8">]}} </span></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># 人物特征 </span></span>
+<span class="line"><span style="color:#E1E4E8">人物需严格遵守如下特征，保持角色一致性：</span></span>
+<span class="line"><span style="color:#FFAB70">1.</span><span style="color:#E1E4E8"> 角色1@</span></span>
+<span class="line"><span style="color:#FFAB70">2.</span><span style="color:#E1E4E8"> 角色2@</span></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># 要求</span></span>
+<span class="line"><span style="color:#FFAB70">1.</span><span style="color:#E1E4E8"> 分镜图需含有丰富的运镜，包括单不限于远景、全景、中景、特写。请合理分配这些镜头</span></span>
+<span class="line"><span style="color:#FFAB70">2.</span><span style="color:#E1E4E8"> 所有分镜图必须整合在同一张画布内，禁止分图生成，图片上不要出现文字 </span></span>
+<span class="line"><span style="color:#FFAB70">3.</span><span style="color:#E1E4E8"> 所有分镜图[</span><span style="color:#DBEDFF;text-decoration:underline">即宫格</span><span style="color:#E1E4E8">]的尺寸需严格保持一致</span></span></code></pre>
+<h2 id="有完整故事">有完整故事</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#79B8FF;font-weight:bold"># 任务</span></span>
+<span class="line"><span style="color:#E1E4E8">严格按照镜头顺序帮我生成一张{{[</span><span style="color:#DBEDFF;text-decoration:underline">aXa</span><span style="color:#E1E4E8">]}}宫格分镜图</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># 注意</span></span>
+<span class="line"><span style="color:#FFAB70">1.</span><span style="color:#E1E4E8"> 所有内容必须整合在同一张画布内，禁止分图生成，图片上不要出现文字</span></span>
+<span class="line"><span style="color:#FFAB70">2.</span><span style="color:#E1E4E8"> 所有宫格的尺寸严格保持一致</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># 镜头</span></span>
+<span class="line"><span style="color:#FFAB70">1.</span><span style="color:#E1E4E8"> 镜头1：[</span><span style="color:#DBEDFF;text-decoration:underline">景别</span><span style="color:#E1E4E8">]+[</span><span style="color:#DBEDFF;text-decoration:underline">@角色1与动作，@角色2与动作</span><span style="color:#E1E4E8">]+[</span><span style="color:#DBEDFF;text-decoration:underline">场景@场景</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#FFAB70">2.</span><span style="color:#E1E4E8"> 镜头2：[</span><span style="color:#DBEDFF;text-decoration:underline">景别</span><span style="color:#E1E4E8">]+[</span><span style="color:#DBEDFF;text-decoration:underline">角色与动作</span><span style="color:#E1E4E8">]+[</span><span style="color:#DBEDFF;text-decoration:underline">场景</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#FFAB70">3.</span><span style="color:#E1E4E8"> 镜头3：[</span><span style="color:#DBEDFF;text-decoration:underline">景别</span><span style="color:#E1E4E8">]+[</span><span style="color:#DBEDFF;text-decoration:underline">角色与动作</span><span style="color:#E1E4E8">]+[</span><span style="color:#DBEDFF;text-decoration:underline">场景</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#E1E4E8">...</span></span>
+<span class="line"><span style="color:#FFAB70">4.</span><span style="color:#E1E4E8"> 镜头25：[</span><span style="color:#DBEDFF;text-decoration:underline">景别</span><span style="color:#E1E4E8">]+[</span><span style="color:#DBEDFF;text-decoration:underline">主体与动作</span><span style="color:#E1E4E8">]+[</span><span style="color:#DBEDFF;text-decoration:underline">场景</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># 要求</span></span>
+<span class="line"><span style="color:#FFAB70">1.</span><span style="color:#E1E4E8"> 所有分镜图必须整合在同一张画布内，禁止分图生成，图片上不要出现文字</span></span>
+<span class="line"><span style="color:#FFAB70">2.</span><span style="color:#E1E4E8"> 所有分镜图[</span><span style="color:#DBEDFF;text-decoration:underline">即每个宫格</span><span style="color:#E1E4E8">]的尺寸需严格保持一致</span></span></code></pre>
+</div></div></div></div></main><footer class="site-footer" data-astro-cid-tq46r5sz><div class="container" data-astro-cid-tq46r5sz><div class="footer-grid" data-astro-cid-tq46r5sz><div class="footer-brand" data-astro-cid-tq46r5sz><a class="brand" href="/prompt-archive-site/" data-astro-cid-tq46r5sz><span class="brand-glyph" data-astro-cid-tq46r5sz>PA</span><span class="brand-name" data-astro-cid-tq46r5sz>AI 提示词档案馆</span></a><p class="footer-desc" data-astro-cid-tq46r5sz>可浏览、可检索、可复制的 AI 图像与视频提示词案例库。每个完整案例一个独立页面，提示词与 Wiki 原文逐字一致。</p></div><nav class="footer-col" aria-label="页脚导航" data-astro-cid-tq46r5sz><p class="footer-label" data-astro-cid-tq46r5sz>浏览</p><a href="/prompt-archive-site/images/" data-astro-cid-tq46r5sz>图像案例</a><a href="/prompt-archive-site/videos/" data-astro-cid-tq46r5sz>视频案例</a><a href="/prompt-archive-site/notes/" data-astro-cid-tq46r5sz>方法笔记</a><a href="/prompt-archive-site/cases/" data-astro-cid-tq46r5sz>全站搜索</a></nav><div class="footer-col" data-astro-cid-tq46r5sz><p class="footer-label" data-astro-cid-tq46r5sz>本馆收录</p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>案例</span><b data-astro-cid-tq46r5sz>105</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>附实测成片</span><b data-astro-cid-tq46r5sz>2</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>方法笔记</span><b data-astro-cid-tq46r5sz>60</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>合集</span><b data-astro-cid-tq46r5sz>11</b></p></div></div><div class="footer-bottom" data-astro-cid-tq46r5sz><p data-astro-cid-tq46r5sz>「作者称已测试」表示来源声明，本站未复测。</p><p data-astro-cid-tq46r5sz>PA·ARCHIVE © 2026</p></div></div></footer></body><script type="module">function e(){document.querySelectorAll(`[data-masonry]`).forEach(e=>{let t=Array.from(e.querySelectorAll(`:scope > .m-cols > .m-col > *, :scope > *:not(.m-cols)`));if(e.querySelectorAll(`.m-cols`).forEach(e=>e.remove()),t.length===0)return;let n=window.matchMedia(`(max-width: 767px)`).matches?1:window.matchMedia(`(max-width: 1199px)`).matches?2:3,r=document.createElement(`div`);r.className=`m-cols`;let i=Array.from({length:n},()=>{let e=document.createElement(`div`);return e.className=`m-col`,e});t.forEach((e,t)=>i[t%n].appendChild(e)),e.appendChild(r),i.forEach(e=>r.appendChild(e))})}window.refreshMasonry=e,e();var t;window.addEventListener(`resize`,()=>{clearTimeout(t),t=setTimeout(e,150)});</script><script type="module">(()=>{let e=`.case-card, .note-card, .note-list-card`,t=window.matchMedia(`(prefers-reduced-motion: reduce)`),n=null,r=null,i=0;t.addEventListener?.(`change`,()=>{t.matches&&a()});function a(){if(!n)return;let e=n;e.classList.remove(`tilt-active`),e.classList.add(`tilt-return`),e.style.transform=``,clearTimeout(i),i=setTimeout(()=>e.classList.remove(`tilt-return`),320),n=null,r=null}document.addEventListener(`pointermove`,i=>{if(i.pointerType!==`mouse`||!i.isPrimary||t.matches)return;let o=i.target instanceof Element?i.target.closest(e):null;if(o!==n){if(a(),!o)return;n=o,r=n.getBoundingClientRect(),n.classList.add(`tilt-active`),n.classList.remove(`tilt-return`)}if(!n||!r)return;let s=(i.clientX-r.left)/r.width-.5,c=(i.clientY-r.top)/r.height-.5,l=Math.max(-1,Math.min(1,s*2))*4.5,u=Math.max(-1,Math.min(1,c*2))*-4.5;n.style.transform=`perspective(1100px) rotateX(${u.toFixed(3)}deg) rotateY(${l.toFixed(3)}deg) translateY(-3px)`},{passive:!0}),document.addEventListener(`pointerleave`,()=>a()),document.addEventListener(`pointerdown`,t=>{(t.target instanceof Element?t.target.closest(e):null)!==n&&a()},{passive:!0}),window.addEventListener(`blur`,()=>a()),window.addEventListener(`scroll`,()=>a(),{passive:!0})})();</script></html><script type="module">function e(){document.querySelectorAll(`.prose pre`).forEach(e=>{if(e.closest(`.code-panel`))return;let t=e.querySelector(`code`),n=(t??e).textContent??``,r=t?.className.match(/language-([\w+-]+)/)?.[1]??`text`,i=n.replace(/\n$/,``).split(`
+`).length,a=Array.from(n.matchAll(/`{3,}/g)).map(e=>e[0].length),o=a.length?Math.max(3,Math.max(...a)+1):3,s="`".repeat(o)+`markdown
+`+(n.endsWith(`
+`)?n:n+`
+`)+"`".repeat(o),c=document.createElement(`figure`);c.className=`code-panel`;let l=document.createElement(`figcaption`);l.className=`code-panel-head`;let u=document.createElement(`span`);u.className=`code-lang`,u.textContent=r;let d=document.createElement(`span`);d.className=`code-lines`,d.textContent=`${i} 行`;let f=document.createElement(`span`);f.className=`copy-feedback`,f.setAttribute(`aria-live`,`polite`);let p=document.createElement(`button`);p.type=`button`,p.className=`copy-btn`,p.textContent=`复制本块`,l.append(u,d,f,p),e.replaceWith(c),c.append(l,e);let m;p.addEventListener(`click`,async()=>{let e=!1;try{await navigator.clipboard.writeText(s),e=!0}catch{try{let t=document.createElement(`textarea`);t.value=s,t.style.position=`fixed`,t.style.opacity=`0`,document.body.appendChild(t),t.select(),e=document.execCommand(`copy`),t.remove()}catch{e=!1}}f.textContent=e?`已复制本块`:`复制失败，请手动选取`,p.textContent=e?`已复制`:`复制本块`,clearTimeout(m),m=setTimeout(()=>{f.textContent=``,p.textContent=`复制本块`},3e3)})})}e();</script>

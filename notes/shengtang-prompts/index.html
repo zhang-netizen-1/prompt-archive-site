@@ -1,0 +1,773 @@
+<!DOCTYPE html><html lang="zh-CN" data-astro-cid-tq46r5sz><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="全流程第三环存档：14 镜逐字生成提示词，每镜含资产锚定（{{Mixed N}} 引用资产图）、出场角色、前镜衔接、分段时段提示词与输出约束，文末附通用结构模板。"><link rel="icon" href="/prompt-archive-site/favicon.svg" type="image/svg+xml"><title>范例存档：《盛唐》分镜 1–14 提示词全量 · 方法笔记</title><link rel="stylesheet" href="/prompt-archive-site/_astro/SiteLayout.DYPNTGRP.css"><style>.note-header[data-astro-cid-vex5zuxs]{max-width:calc(var(--note-width) + 280px);margin:0 auto;padding:40px 24px 0}
+</style></head><body data-astro-cid-tq46r5sz><a class="skip-link" href="#main" data-astro-cid-tq46r5sz>跳到主要内容</a><div class="announce" data-astro-cid-tq46r5sz><a href="/prompt-archive-site/cases/" data-astro-cid-tq46r5sz>PA·ARCHIVE — 每个完整案例一个独立页面，提示词与 Wiki 原文逐字一致 ↗</a></div><header class="site-header" data-astro-cid-tq46r5sz><div class="container" data-astro-cid-tq46r5sz><a class="brand" href="/prompt-archive-site/" data-astro-cid-tq46r5sz><span class="brand-glyph" data-astro-cid-tq46r5sz>PA</span><span class="brand-name" data-astro-cid-tq46r5sz>AI 提示词档案馆</span></a><nav class="site-nav" aria-label="主导航" data-astro-cid-tq46r5sz><a href="/prompt-archive-site/images/" data-astro-cid-tq46r5sz>图像案例<span class="nav-no" data-astro-cid-tq46r5sz>01</span></a><a href="/prompt-archive-site/videos/" data-astro-cid-tq46r5sz>视频案例<span class="nav-no" data-astro-cid-tq46r5sz>02</span></a><a href="/prompt-archive-site/notes/" aria-current="page" data-astro-cid-tq46r5sz>方法笔记<span class="nav-no" data-astro-cid-tq46r5sz>03</span></a></nav><div class="header-cta" data-astro-cid-tq46r5sz><a class="header-search-link" href="/prompt-archive-site/cases/" aria-label="全站搜索案例" data-astro-cid-tq46r5sz><span class="icon" style="width:15px;height:15px" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="6.1"/><line x1="13.6" y1="13.6" x2="18" y2="18"/></svg></span><span data-astro-cid-tq46r5sz>搜索</span><span class="nav-no" data-astro-cid-tq46r5sz>04</span></a></div></div></header><main id="main" data-astro-cid-tq46r5sz><div class="note-page" data-astro-cid-vex5zuxs><div class="note-header" data-astro-cid-vex5zuxs><nav class="breadcrumbs" aria-label="面包屑" data-astro-cid-vex5zuxs><a href="/prompt-archive-site/" data-astro-cid-vex5zuxs>首页</a><span aria-hidden="true" data-astro-cid-vex5zuxs>/</span><a href="/prompt-archive-site/notes/" data-astro-cid-vex5zuxs>方法笔记</a><span aria-hidden="true" data-astro-cid-vex5zuxs>/</span><span aria-current="page" data-astro-cid-vex5zuxs>范例存档：《盛唐》分镜 1–14 提示词全量</span></nav><h1 style="font-size:32px" data-astro-cid-vex5zuxs>范例存档：《盛唐》分镜 1–14 提示词全量</h1><p class="note-meta" data-astro-cid-vex5zuxs><span class="medium-chip" data-astro-cid-vex5zuxs>范例</span><span data-astro-cid-vex5zuxs>视频</span><span data-astro-cid-vex5zuxs>源资料：范例-盛唐分镜提示词-1至14镜全量（visual-prompt-system）</span></p><p class="note-summary" data-astro-cid-vex5zuxs>全流程第三环存档：14 镜逐字生成提示词，每镜含资产锚定（{{Mixed N}} 引用资产图）、出场角色、前镜衔接、分段时段提示词与输出约束，文末附通用结构模板。</p></div><div class="note-layout" data-astro-cid-vex5zuxs><aside class="note-toc" aria-label="目录" data-astro-cid-vex5zuxs><p class="toc-title" data-astro-cid-vex5zuxs>目录</p><a href="#通用结构模板14-镜反推" data-astro-cid-vex5zuxs>通用结构模板（14 镜反推）</a><a href="#参考图使用规则通用块14-镜逐字复用" data-astro-cid-vex5zuxs>参考图使用规则（通用块，14 镜逐字复用）</a><a href="#镜头清单资产锚定速览" data-astro-cid-vex5zuxs>镜头清单（资产锚定速览）</a><a href="#分镜-1-提示词" data-astro-cid-vex5zuxs>分镜 1-提示词</a><a href="#分镜-2-提示词" data-astro-cid-vex5zuxs>分镜 2-提示词</a><a href="#分镜-3-提示词" data-astro-cid-vex5zuxs>分镜 3-提示词</a><a href="#分镜-4-提示词" data-astro-cid-vex5zuxs>分镜 4-提示词</a><a href="#分镜-5-提示词" data-astro-cid-vex5zuxs>分镜 5-提示词</a><a href="#分镜-6-提示词" data-astro-cid-vex5zuxs>分镜 6-提示词</a><a href="#分镜-7-提示词" data-astro-cid-vex5zuxs>分镜 7-提示词</a><a href="#分镜-8-提示词" data-astro-cid-vex5zuxs>分镜 8-提示词</a><a href="#分镜-9-提示词" data-astro-cid-vex5zuxs>分镜 9-提示词</a><a href="#分镜-10-提示词" data-astro-cid-vex5zuxs>分镜 10-提示词</a><a href="#分镜-11-提示词" data-astro-cid-vex5zuxs>分镜 11-提示词</a><a href="#分镜-12-提示词" data-astro-cid-vex5zuxs>分镜 12-提示词</a><a href="#分镜-13-提示词" data-astro-cid-vex5zuxs>分镜 13-提示词</a><a href="#分镜-14-提示词" data-astro-cid-vex5zuxs>分镜 14-提示词</a><a href="#提炼逐镜提示词的写法要点供-写法规则库-扩展" data-astro-cid-vex5zuxs>提炼：逐镜提示词的写法要点（供 [[写法规则库]] 扩展）</a></aside><div class="note-main" data-astro-cid-vex5zuxs><div class="prose" data-astro-cid-vex5zuxs><blockquote>
+<p>全流程第三环：分镜表 + 资产图 → <strong>逐镜生成提示词</strong>。14 镜逐字存档（志光提供，AI 工具产出）。每镜含：资产锚定（{{Mixed N}} 引用上一环的资产图）→ 出场角色/场景 → 参考图使用规则 → 前镜衔接描述 → 时段提示词（画面/禁止/约束/站位朝向/运镜/音效/简述）→ 输出约束。配套提炼见文末。</p>
+</blockquote>
+<h2 id="通用结构模板14-镜反推">通用结构模板（14 镜反推）</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>分镜N-提示词：</span></span>
+<span class="line"><span>【资产锚定】角色X参考图={{Mixed 1}} 道具Y={{Mixed 2}}…</span></span>
+<span class="line"><span>【出场角色】名字+身高</span></span>
+<span class="line"><span>【背景场景】场景名+室内外+光影基调+空间尺度（高度X米）</span></span>
+<span class="line"><span>【参考图使用规则】角色/场景/道具三类的"只参考…不参考…"约束（逐字复用，见下方通用块）</span></span>
+<span class="line"><span>【衔接】首镜="当前分镜为故事开篇"；其余="前一个分镜描述：…（上镜末态复述）"</span></span>
+<span class="line"><span>【时段】0-Xs：画面(主体+动作+光线+景别) / 禁止(5条) / 约束(5-6条) / 站位与朝向 / 运镜 / 音效 / 简述</span></span>
+<span class="line"><span>【输出约束】6条全镜统一性清单（服装一致/道具逻辑/口型/光影/禁杂项/氛围）</span></span></code></pre>
+<h2 id="参考图使用规则通用块14-镜逐字复用">参考图使用规则（通用块，14 镜逐字复用）</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>角色参考图：只参考此图中的角色形象；不参考角度、构图、姿势、表情；若此参考图是角色多视图，则必须确保角色不能重复出现（除非明确要求角色分身）。</span></span>
+<span class="line"><span>场景参考图：只参考此图中的场景位置、大小、形状、结构关系；不参考角度、构图、多角色站位；氛围、色调、光影、元素风格等根据剧情内容来酌情参考；若此参考图是场景多视图或全景多视图，则必须确保场景的空间结构合理，且符合客观逻辑，不允许出现镜像或复制等视觉效果。</span></span>
+<span class="line"><span>道具参考图：只参考此图中的道具大小、形状、结构；不参考角度、构图、位置；若此参考图是道具多视图，则必须确保与角色/场景的关联是符合客观逻辑的，特别是书/信/手机/显示器/电脑/门窗/贴纸/壁画等所有具有正反面或多角度差异的道具或物品，需要符合正反面逻辑，尽量从多视图中提取正面或反面或角度图来适配客观逻辑。</span></span></code></pre>
+<h2 id="镜头清单资产锚定速览">镜头清单（资产锚定速览）</h2>
+<table>
+<thead>
+<tr>
+<th>镜</th>
+<th>时长</th>
+<th>出场</th>
+<th>锚定资产</th>
+<th>核心事件</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>6s</td>
+<td>现代沈昭昭</td>
+<td>现代沈昭昭+办公电脑</td>
+<td>面无表情敲键盘</td>
+</tr>
+<tr>
+<td>2</td>
+<td>7s</td>
+<td>现代沈昭昭</td>
+<td>同上</td>
+<td>手机亮起→头砸键盘→切黑</td>
+</tr>
+<tr>
+<td>3</td>
+<td>8s</td>
+<td>唐代沈昭昭</td>
+<td>唐+现沈昭昭+金銮殿+大殿+电脑</td>
+<td>俯冲降落，跪殿睁眼</td>
+</tr>
+<tr>
+<td>4</td>
+<td>7s</td>
+<td>大臣+唐沈</td>
+<td>大臣+唐沈+金銮殿+大殿</td>
+<td>大臣跨步怒斥</td>
+</tr>
+<tr>
+<td>5</td>
+<td>6s</td>
+<td>唐沈</td>
+<td>唐沈+大臣+金銮殿+大殿</td>
+<td>瞳孔剧震+喃喃"这是唐朝？"</td>
+</tr>
+<tr>
+<td>6</td>
+<td>8s</td>
+<td>皇帝</td>
+<td>皇帝+唐沈+大殿+龙椅</td>
+<td>龙椅下通牒</td>
+</tr>
+<tr>
+<td>7</td>
+<td>8s</td>
+<td>侍卫+唐沈</td>
+<td>侍卫+唐沈+皇帝+大殿+大刀+龙椅</td>
+<td>双刀架颈+瞳孔映刀光</td>
+</tr>
+<tr>
+<td>8</td>
+<td>12s</td>
+<td>唐沈</td>
+<td>唐沈+皇帝+侍卫+大殿+盛唐+大刀</td>
+<td>刀下起身+内心独白</td>
+</tr>
+<tr>
+<td>9</td>
+<td>10s</td>
+<td>唐沈</td>
+<td>唐沈+大殿+盛唐+大刀</td>
+<td>拂袖逆光爆开+高声吟诗</td>
+</tr>
+<tr>
+<td>10</td>
+<td>7s</td>
+<td>群臣</td>
+<td>群臣+唐沈+大殿</td>
+<td>群臣震撼骚动</td>
+</tr>
+<tr>
+<td>11</td>
+<td>8s</td>
+<td>皇帝</td>
+<td>皇帝+群臣+大殿+龙椅</td>
+<td>皇帝拍案而起</td>
+</tr>
+<tr>
+<td>12</td>
+<td>8s</td>
+<td>无</td>
+<td>皇帝+盛唐+大殿+龙椅</td>
+<td>飞出殿外+画外音"当传万世"</td>
+</tr>
+<tr>
+<td>13</td>
+<td>8s</td>
+<td>唐沈</td>
+<td>唐沈+皇帝+大殿</td>
+<td>金边逆光+微笑立誓</td>
+</tr>
+<tr>
+<td>14</td>
+<td>12s</td>
+<td>无</td>
+<td>唐沈+盛唐+大殿</td>
+<td>极速拉远史诗定格</td>
+</tr>
+</tbody>
+</table>
+<hr>
+<h2 id="分镜-1-提示词">分镜 1-提示词</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>资产图锚定：</span></span>
+<span class="line"><span>角色 现代沈昭昭 的参考图是 {{Mixed 1}} </span></span>
+<span class="line"><span>道具 办公电脑 的参考图是 {{Mixed 2}} </span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>出场角色：</span></span>
+<span class="line"><span>现代沈昭昭，身高 1.65 米</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>背景场景：</span></span>
+<span class="line"><span>办公室，室内深夜，冷蓝色调光影，空间高度约 3 米</span></span>
+<span class="line"><span>办公电脑，高度约 45 厘米</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>参考图使用规则：（通用块，见上）</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>当前分镜为故事开篇</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>0-3 秒：</span></span>
+<span class="line"><span>画面：现代沈昭昭坐在办公桌前，面向正前方的办公电脑显示器，冷蓝色屏幕光打在她的脸上。她面无表情，双手在纯黑色键盘上快速敲击。机位固定，浅景深聚焦于她苍白憔悴的脸部特写。</span></span>
+<span class="line"><span>禁止：禁止角色出现笑容，禁止屏幕光变成暖色，禁止背景过亮，禁止出现空间跳变，禁止画面构图倾斜。</span></span>
+<span class="line"><span>约束：保持面部疲惫特征清晰，保持双手敲击动作流畅，保持电脑屏幕的正面发光，约束冷蓝色调光影不突变，约束角色的衣着和发型严格一致。</span></span>
+<span class="line"><span>站位与朝向：现代沈昭昭坐在电脑前，正对电脑屏幕。</span></span>
+<span class="line"><span>运镜：固定机位。</span></span>
+<span class="line"><span>音效：急促而单调的键盘敲击声。</span></span>
+<span class="line"><span>简述：现代沈昭昭面无表情敲击键盘。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>3-6 秒：</span></span>
+<span class="line"><span>画面：现代沈昭昭依然面无表情，双手继续快速敲打键盘，眼皮因极度疲惫而微微下垂，眼神显得空洞。屏幕的冷蓝光线轻微闪烁，映照着她明显的黑眼圈。</span></span>
+<span class="line"><span>禁止：禁止角色离开座位，禁止镜头剧烈晃动，禁止键盘消失，禁止角色闭上双眼，禁止产生其他光源。</span></span>
+<span class="line"><span>约束：保持敲击动作与前面连贯，保持疲惫的眼神变化细节，确保办公电脑位置不跳变，维持浅景深特写，保持画面压抑寂静的氛围。</span></span>
+<span class="line"><span>站位与朝向：现代沈昭昭保持原位，面朝正前方。</span></span>
+<span class="line"><span>运镜：固定机位，极其缓慢推进聚焦眼神。</span></span>
+<span class="line"><span>音效：急促单调的键盘声继续，伴随沉重呼吸声。</span></span>
+<span class="line"><span>简述：现代沈昭昭眼神空洞继续打字。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>输出约束：</span></span>
+<span class="line"><span>1. 保持现代沈昭昭的白色衬衫和疲惫面容一致。</span></span>
+<span class="line"><span>2. 办公电脑显示器必须保持正面发光。</span></span>
+<span class="line"><span>3. 确保角色手部敲击动作自然，手指无畸形。</span></span>
+<span class="line"><span>4. 环境光线必须保持压抑的冷蓝暗调。</span></span>
+<span class="line"><span>5. 禁止出现其他角色或无关道具。</span></span>
+<span class="line"><span>6. 整体画面不应有过多的景物干扰，突出人物的憔悴。</span></span></code></pre>
+<h2 id="分镜-2-提示词">分镜 2-提示词</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>资产图锚定：</span></span>
+<span class="line"><span>角色 现代沈昭昭 的参考图是 {{Mixed 1}} </span></span>
+<span class="line"><span>道具 办公电脑 的参考图是 {{Mixed 2}} </span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>出场角色：</span></span>
+<span class="line"><span>现代沈昭昭，身高 1.65 米</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>背景场景：</span></span>
+<span class="line"><span>办公室，室内深夜，冷光频闪至全黑，空间高度约 3 米</span></span>
+<span class="line"><span>办公电脑，高度约 45 厘米</span></span>
+<span class="line"><span>智能手机，长度约 15 厘米</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>参考图使用规则：（通用块，见上）</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>前一个分镜描述：深夜昏暗的办公室中，现代沈昭昭面容憔悴、双眼布满黑眼圈，她身穿白色衬衫，正面对着散发冷蓝色光芒的办公电脑屏幕，面无表情且机械地快速敲击着键盘，环境充满压抑与死寂的气氛。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>0-3 秒：</span></span>
+<span class="line"><span>画面：办公桌上的智能手机突然高亮闪烁。现代沈昭昭停下敲击键盘的手，头部微微向手机方向转动，目光刚落向高亮的手机屏幕，她的双眼迅速半闭，眼神变得极其涣散迷离。镜头快速推进，伴随轻微眩晕晃动。</span></span>
+<span class="line"><span>禁止：禁止手机屏幕不发光，禁止角色突然站起，禁止画面色彩变暖，禁止道具位置发生跳变，禁止现代沈昭昭精神抖擞。</span></span>
+<span class="line"><span>约束：保持转头动作迟缓无力，约束手机屏幕正面朝上高亮，维持服装与上一镜完全一致，约束眩晕感的画面抖动节奏，保持环境黑暗。</span></span>
+<span class="line"><span>站位与朝向：现代沈昭昭坐在办公电脑前，头部向桌面一侧的手机微转。</span></span>
+<span class="line"><span>运镜：快速推镜头，伴随轻微主观视角晃动。</span></span>
+<span class="line"><span>音效：刺耳连续的手机提示音。</span></span>
+<span class="line"><span>简述：智能手机亮起，现代沈昭昭转头看屏幕，视线模糊。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>3-7 秒：</span></span>
+<span class="line"><span>画面：现代沈昭昭彻底失去力气，身体猛然前倾，头部重重地砸向桌面上办公电脑的纯黑色键盘。随着她的头砸下，镜头剧烈震动并猛然切黑，画面陷入彻底的死寂与黑暗之中。</span></span>
+<span class="line"><span>禁止：禁止角色用手支撑身体，禁止动作缓慢拖沓，禁止切黑不干脆，禁止键盘凭空消失，禁止出现多余光源。</span></span>
+<span class="line"><span>约束：保持头部砸向键盘的速度感和无力感，约束最后画面的绝对黑屏，确保动作符合重力物理逻辑，保持切黑时的视觉冲击力，约束音画同步。</span></span>
+<span class="line"><span>站位与朝向：现代沈昭昭从坐姿向前倒伏在键盘上。</span></span>
+<span class="line"><span>运镜：继续推镜头并剧烈下沉，随后猛然切黑。</span></span>
+<span class="line"><span>音效：沉闷的撞击声，紧接着伴随尖锐的耳鸣效声切断。</span></span>
+<span class="line"><span>简述：现代沈昭昭头部猛砸向电脑键盘，画面切黑。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>输出约束：</span></span>
+<span class="line"><span>1. 保持现代沈昭昭的服装和发型与前镜一致。</span></span>
+<span class="line"><span>2. 办公电脑的键盘必须置于角色正前方的桌面上。</span></span>
+<span class="line"><span>3. 智能手机的高光必须明显，照亮角色的侧脸。</span></span>
+<span class="line"><span>4. 头部砸下的动作必须连贯，带有沉重的物理质感。</span></span>
+<span class="line"><span>5. 黑屏过渡必须干净利落，无任何残留画面。</span></span>
+<span class="line"><span>6. 避免任何超出办公室场景的无关元素出现。</span></span></code></pre>
+<h2 id="分镜-3-提示词">分镜 3-提示词</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>资产图锚定：</span></span>
+<span class="line"><span>角色 唐代沈昭昭 的参考图是 {{Mixed 1}} </span></span>
+<span class="line"><span>角色 现代沈昭昭 的参考图是 {{Mixed 2}} </span></span>
+<span class="line"><span>场景 金銮殿 的参考图是 {{Mixed 3}} </span></span>
+<span class="line"><span>场景 大殿 的参考图是 {{Mixed 4}} </span></span>
+<span class="line"><span>道具 办公电脑 的参考图是 {{Mixed 5}} </span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>出场角色：</span></span>
+<span class="line"><span>唐代沈昭昭，身高 1.65 米</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>背景场景：</span></span>
+<span class="line"><span>金銮殿，室内日间，高饱和暖金丁达尔光，空间高度约 20 米</span></span>
+<span class="line"><span>大殿，室内日间，宏大威严</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>参考图使用规则：（通用块，见上）</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>前一个分镜描述：现代沈昭昭在深夜的办公室里极度疲惫，当她的智能手机突然亮起时，她转头看去，视线瞬间模糊，随后无力地将头猛然砸向办公电脑的键盘上，画面伴随沉闷的撞击声和耳鸣声陷入了彻底的黑暗死寂。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>0-4 秒：</span></span>
+<span class="line"><span>画面：镜头从金銮殿极高处的屋顶俯视，缓缓向下方宽阔的大殿中央降落。强烈的暖金色丁达尔光束犹如利剑般穿透而下，打在空旷大殿中央一个渺小的人影身上。唐代沈昭昭身穿青色官服，双手被押在身后，双膝重重跪地。她身体剧烈抽搐了一下。</span></span>
+<span class="line"><span>禁止：禁止场景光线昏暗，禁止大殿显得狭窄，禁止出现现代物品，禁止唐代沈昭昭站立，禁止光束偏移。</span></span>
+<span class="line"><span>约束：保持光束的强烈逆光感，约束唐代沈昭昭被押跪地的姿态稳定，确保金銮殿环境的宏大视角，约束运镜平滑降落，保持氛围的极高压迫感。</span></span>
+<span class="line"><span>站位与朝向：唐代沈昭昭跪在金銮殿中央，面朝高处玉阶方向。</span></span>
+<span class="line"><span>运镜：从高处俯视缓缓降落并向前推进。</span></span>
+<span class="line"><span>音效：震耳欲聋的隆隆大鼓声猛然响起。</span></span>
+<span class="line"><span>简述：镜头俯冲而下，光束笼罩跪在殿中央的唐代沈昭昭。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>4-8 秒：</span></span>
+<span class="line"><span>画面：唐代沈昭昭猛然倒吸一口气，紧闭的双眼瞬间睁大，瞳孔剧烈震动，露出极度震惊与茫然的神情。她跪在盘龙金柱之间的空旷地面上，被迫维持着双手背押的屈辱姿势，胸口因急促呼吸而剧烈起伏。</span></span>
+<span class="line"><span>禁止：禁止角色轻易站起，禁止手部动作解开，禁止表情平静，禁止服饰特征跳变，禁止大殿背景消失。</span></span>
+<span class="line"><span>约束：保持双眼猛然睁开的爆发力，保持呼吸急促的身体起伏，精准呈现唐代官服和黑色幞头，约束瞳孔震动的微表情，维持环境强逆光效果。</span></span>
+<span class="line"><span>站位与朝向：唐代沈昭昭维持跪姿，面朝正前方。</span></span>
+<span class="line"><span>运镜：继续缓慢向前推进，拉近至全景，交代角色面部反应。</span></span>
+<span class="line"><span>音效：空旷大殿内的回音与急促倒吸气声。</span></span>
+<span class="line"><span>简述：唐代沈昭昭猛然睁眼，满脸震惊。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>输出约束：</span></span>
+<span class="line"><span>1. 必须严格遵循唐代沈昭昭的青色官服和黑色幞头造型。</span></span>
+<span class="line"><span>2. 金銮殿的空间必须极其宏大，盘龙金柱和玉阶细节清晰。</span></span>
+<span class="line"><span>3. 强烈的丁达尔暖金光束必须作为核心光源打在角色身上。</span></span>
+<span class="line"><span>4. 双手被押在身后的跪姿必须准确，且动作连贯。</span></span>
+<span class="line"><span>5. 画面绝不能出现现代服装或电脑、手机等道具。</span></span>
+<span class="line"><span>6. 保持强烈的压迫感与神圣感对比氛围。</span></span></code></pre>
+<h2 id="分镜-4-提示词">分镜 4-提示词</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>资产图锚定：</span></span>
+<span class="line"><span>角色 大臣 的参考图是 {{Mixed 1}} </span></span>
+<span class="line"><span>角色 唐代沈昭昭 的参考图是 {{Mixed 2}} </span></span>
+<span class="line"><span>场景 金銮殿 的参考图是 {{Mixed 3}} </span></span>
+<span class="line"><span>场景 大殿 的参考图是 {{Mixed 4}} </span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>出场角色：</span></span>
+<span class="line"><span>大臣，身高 1.7 米</span></span>
+<span class="line"><span>唐代沈昭昭，身高 1.65 米</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>背景场景：</span></span>
+<span class="line"><span>金銮殿，室内日间，强光与阴影对比，空间高度约 20 米</span></span>
+<span class="line"><span>大殿，室内日间，宏大威严</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>参考图使用规则：（通用块，见上）</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>前一个分镜描述：宏大威严的金銮殿内，震天的鼓声回荡。强烈的暖金色丁达尔光束穿透屋顶打在殿中央。原本在现代的沈昭昭在此刻猛然睁开双眼，惊恐地发现自己已经穿越，身穿青色官服，双手被押，双膝重重跪在大殿中央，显得极为渺小和震撼。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>0-3 秒：</span></span>
+<span class="line"><span>画面：金銮殿的一侧，群臣肃立。一名身穿深青色官服的大臣面带极致的愤怒，突然从整齐的队伍中跨出半步，衣袍随着动作剧烈抖动。他怒目圆睁，目光死死盯向下方跪地的唐代沈昭昭。</span></span>
+<span class="line"><span>禁止：禁止大臣表情平静，禁止大臣穿戴现代服饰，禁止跨步动作软弱无力，禁止画面光线扁平无阴影，禁止群臣阵型散乱。</span></span>
+<span class="line"><span>约束：保持大臣的微胖体型和花白头发特征，约束跨出半步的动作带有强烈的爆发力，确保官服材质细节，约束侧光产生凌厉阴影，保持剑拔弩张的氛围。</span></span>
+<span class="line"><span>站位与朝向：大臣站在群臣队列最前方，面朝侧下方的唐代沈昭昭方向。</span></span>
+<span class="line"><span>运镜：轻微的手持感晃动，伴随短推镜头，强化紧张节奏。</span></span>
+<span class="line"><span>音效：衣袍抖动的剧烈摩擦声。</span></span>
+<span class="line"><span>简述：大臣愤怒地从人群中跨出半步。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>3-7 秒：</span></span>
+<span class="line"><span>画面：大臣身体前倾，右手猛然抬起，手指狠狠地指着画面外下方的唐代沈昭昭方向。他咬牙切齿，疾言厉色地张大嘴巴怒吼呵斥，脸部皱纹因愤怒和侧光照射而显得极具压迫感。大臣大声呵斥："大逆不道！假称诗才惊世，欺君罔上，当斩！"</span></span>
+<span class="line"><span>禁止：禁止大臣手指向天，禁止嘴巴闭合，禁止光影失去对比度，禁止手部比例畸形，禁止角色台词未讲出。</span></span>
+<span class="line"><span>约束：必须让大臣完整讲出对白，保持指向动作的绝对坚定与狠厉，约束面部扭曲的怒气表情，维持手持摇晃的运镜感，保证声音口型对应。</span></span>
+<span class="line"><span>站位与朝向：保持前倾姿态，手指指向下方。</span></span>
+<span class="line"><span>运镜：手持感晃动继续，锁定大臣半身景，强化质感。</span></span>
+<span class="line"><span>音效：厚重且布满回音的怒喝声。</span></span>
+<span class="line"><span>简述：大臣手指唐代沈昭昭，疾言厉色地大声呵斥。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>输出约束：</span></span>
+<span class="line"><span>1. 大臣的深青色官服和黑色展角幞头必须准确无误。</span></span>
+<span class="line"><span>2. 确保大臣脸上的皱纹和怒目圆睁的表情极具威慑力。</span></span>
+<span class="line"><span>3. 必须让对应角色讲出对白台词，口型严丝合缝。</span></span>
+<span class="line"><span>4. 保持金銮殿内强光与阴影的凌厉质感，符合剑拔弩张的氛围。</span></span>
+<span class="line"><span>5. 摄影机要有明显的手持晃动感以增加冲突张力。</span></span>
+<span class="line"><span>6. 手指指引的方向必须朝向跪在地上的角色位置。</span></span></code></pre>
+<h2 id="分镜-5-提示词">分镜 5-提示词</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>资产图锚定：</span></span>
+<span class="line"><span>角色 唐代沈昭昭 的参考图是 {{Mixed 1}} </span></span>
+<span class="line"><span>角色 大臣 的参考图是 {{Mixed 2}} </span></span>
+<span class="line"><span>场景 金銮殿 的参考图是 {{Mixed 3}} </span></span>
+<span class="line"><span>场景 大殿 的参考图是 {{Mixed 4}} </span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>出场角色：</span></span>
+<span class="line"><span>唐代沈昭昭，身高 1.65 米</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>背景场景：</span></span>
+<span class="line"><span>金銮殿，室内日间，暖金反光，空间高度约 20 米</span></span>
+<span class="line"><span>大殿，室内环境虚化</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>参考图使用规则：（通用块，见上）</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>前一个分镜描述：金銮殿内气氛剑拔弩张，一名花白头发、身穿深青色官服的大臣怒目圆睁，猛地从群臣队列中跨出半步。他手指狠狠指向跪在地上的唐代沈昭昭，厉声怒喝她欺君罔上、理应处斩，声音在大殿内久久回荡。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>0-3 秒：</span></span>
+<span class="line"><span>画面：唐代沈昭昭脸部大特写，她面色苍白，眼神惊恐，瞳孔在眼眶中剧烈震动。一滴冷汗从她的额角缓缓滑落，顺着脸颊流下。她的呼吸极为急促，胸口微微起伏。</span></span>
+<span class="line"><span>禁止：禁止角色闭上眼睛，禁止冷汗消失，禁止表情变得轻松，禁止头部剧烈晃动，禁止画面过亮。</span></span>
+<span class="line"><span>约束：保持瞳孔放大的细微表情，约束冷汗滑落的物理真实感，确保面部苍白色调突出，维持大特写的极浅景深，表现急促呼吸感。</span></span>
+<span class="line"><span>站位与朝向：唐代沈昭昭跪在原地，头部正对镜头。</span></span>
+<span class="line"><span>运镜：极缓慢推近面部，捕捉细微的神态变化。</span></span>
+<span class="line"><span>音效：心脏剧烈的砰砰跳动声，角色急促的喘息声。</span></span>
+<span class="line"><span>简述：唐代沈昭昭瞳孔剧震，额角滑落冷汗。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>3-6 秒：</span></span>
+<span class="line"><span>画面：唐代沈昭昭满脸不可置信，头部微微缓慢转动，视线茫然地掠过画面外宏大华丽的金銮殿陈设。她的瞳孔内反射出殿内金碧辉煌的反光。她嘴唇微启，颤抖着低声喃喃自语："这是……唐朝？"</span></span>
+<span class="line"><span>禁止：禁止转头动作过快，禁止背景出现现代物品，禁止嘴巴紧闭，禁止台词漏念，禁止瞳孔反光消失。</span></span>
+<span class="line"><span>约束：必须让角色讲出对白，保持瞳孔内反射金銮殿光芒的细节，约束低声喃喃时的嘴唇颤抖，保持转头动作的迟滞感，维持环境高压氛围。</span></span>
+<span class="line"><span>站位与朝向：唐代沈昭昭头部微转，目光扫视周围。</span></span>
+<span class="line"><span>运镜：继续缓慢推近至大特写，强化人物极度恐惧的心境。</span></span>
+<span class="line"><span>音效：低声喃喃自语的微弱声音。</span></span>
+<span class="line"><span>简述：唐代沈昭昭微转头视察四周并喃喃自语。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>输出约束：</span></span>
+<span class="line"><span>1. 必须聚焦于唐代沈昭昭的面部特写，黑色幞头边缘可见。</span></span>
+<span class="line"><span>2. 确保瞳孔震动和冷汗滑落的细节表现生动。</span></span>
+<span class="line"><span>3. 必须让对应角色讲出对白台词，口型需对齐。</span></span>
+<span class="line"><span>4. 面部光线需平滑，但瞳孔要有明确的金銮殿反光。</span></span>
+<span class="line"><span>5. 背景需虚化但保持暖金与阴冷交织的极强反差氛围。</span></span>
+<span class="line"><span>6. 动作必须缓慢，呈现极度惊吓后的迟钝感。</span></span></code></pre>
+<h2 id="分镜-6-提示词">分镜 6-提示词</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>资产图锚定：</span></span>
+<span class="line"><span>角色 皇帝 的参考图是 {{Mixed 1}} </span></span>
+<span class="line"><span>角色 唐代沈昭昭 的参考图是 {{Mixed 2}} </span></span>
+<span class="line"><span>场景 大殿 的参考图是 {{Mixed 3}} </span></span>
+<span class="line"><span>道具 龙椅 的参考图是 {{Mixed 4}} </span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>出场角色：</span></span>
+<span class="line"><span>皇帝，身高 1.8 米</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>背景场景：</span></span>
+<span class="line"><span>大殿，室内日间，高明度暖光，空间高度约 20 米</span></span>
+<span class="line"><span>龙椅，高度约 1.5 米，宽约 2 米</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>参考图使用规则：（通用块，见上）</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>前一个分镜描述：唐代沈昭昭处于极度恐惧中，面色苍白，冷汗滑落。她双眼瞳孔剧震，难以置信地缓缓转头打量周围金碧辉煌的宫殿，最终颤抖着嘴唇喃喃自语确认自己竟然穿越到了唐朝。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>0-4 秒：</span></span>
+<span class="line"><span>画面：大殿玉阶高处，皇帝端坐于金光璀璨的龙椅上，双手平稳地放置在龙头扶手上。他魁梧的身躯稳如泰山，强烈的顶光勾勒出他身穿明黄色暗纹龙袍的强悍轮廓。龙椅上的金丝楠木雕刻反射出刺眼光芒。</span></span>
+<span class="line"><span>禁止：禁止皇帝表现出软弱，禁止龙椅失去光泽，禁止背景杂乱，禁止镜头平视，禁止光线平庸。</span></span>
+<span class="line"><span>约束：保持皇帝端坐的威严姿态，约束顶光对轮廓的精准勾勒，确保龙椅的龙头扶手细节清晰，维持低角度仰拍视角，约束画面色调的华丽感。</span></span>
+<span class="line"><span>站位与朝向：皇帝坐在龙椅上，居高临下正视前方。</span></span>
+<span class="line"><span>运镜：极缓慢的低角度仰拍推镜头，彰显绝对高压。</span></span>
+<span class="line"><span>音效：空旷大殿中低沉压抑的呼吸声。</span></span>
+<span class="line"><span>简述：皇帝端坐在璀璨的龙椅上。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>4-8 秒：</span></span>
+<span class="line"><span>画面：皇帝身子微微前倾，国字脸上的眉头深深锁紧。他目光如刀，透出极度冷酷的杀意，俯视着玉阶下方的大殿。他嘴唇微动，声音低沉且充满威压地开口："既言才华盖世，当殿作诗。若不能——斩。"</span></span>
+<span class="line"><span>禁止：禁止皇帝动作轻浮，禁止失去仰拍视角，禁止出现笑容，禁止口型不对，禁止眼神柔和。</span></span>
+<span class="line"><span>约束：必须让皇帝讲出对白，保持目光的俯视和不可侵犯感，约束前倾动作的压迫力，确保台词节奏充满杀意，维持金光璀璨的背景环境。</span></span>
+<span class="line"><span>站位与朝向：皇帝保持前倾坐姿，目光向下俯视。</span></span>
+<span class="line"><span>运镜：继续缓慢仰拍推近，锁定皇帝充满杀意的眼神。</span></span>
+<span class="line"><span>音效：威严的回荡感音效配合低沉浑厚的人声。</span></span>
+<span class="line"><span>简述：皇帝前倾身体，眼神如刀俯视大殿并下达命令。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>输出约束：</span></span>
+<span class="line"><span>1. 皇帝的明黄色龙袍和黑色幞头必须精确。</span></span>
+<span class="line"><span>2. 龙椅必须通体鎏金且带有龙头扶手细节。</span></span>
+<span class="line"><span>3. 必须让对应角色讲出对白台词。</span></span>
+<span class="line"><span>4. 始终保持极缓慢的低角度仰拍推镜，凸显皇权高压。</span></span>
+<span class="line"><span>5. 顶光必须强烈，在皇帝面部和肩膀形成凌厉轮廓。</span></span>
+<span class="line"><span>6. 龙椅的光泽反射要刺眼但不破坏整体暖调。</span></span></code></pre>
+<h2 id="分镜-7-提示词">分镜 7-提示词</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>资产图锚定：</span></span>
+<span class="line"><span>角色 侍卫 的参考图是 {{Mixed 1}} </span></span>
+<span class="line"><span>角色 唐代沈昭昭 的参考图是 {{Mixed 2}} </span></span>
+<span class="line"><span>角色 皇帝 的参考图是 {{Mixed 3}} </span></span>
+<span class="line"><span>场景 大殿 的参考图是 {{Mixed 4}} </span></span>
+<span class="line"><span>道具 大刀 的参考图是 {{Mixed 5}} </span></span>
+<span class="line"><span>道具 龙椅 的参考图是 {{Mixed 6}} </span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>出场角色：</span></span>
+<span class="line"><span>侍卫，身高 1.85 米</span></span>
+<span class="line"><span>唐代沈昭昭，身高 1.65 米</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>背景场景：</span></span>
+<span class="line"><span>大殿，室内日间，局部冷光闪过，空间高度约 20 米</span></span>
+<span class="line"><span>大刀，长度约 1.2 米</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>参考图使用规则：（通用块，见上）</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>前一个分镜描述：高高的玉阶上，大唐皇帝端坐在金光璀璨的龙椅中。他身子前倾，目光如刀般俯视下方，带着不怒自威的冷酷杀意，下达了冰冷的命令：若不能当殿作诗，便立刻处斩，皇权的高压笼罩全场。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>0-4 秒：</span></span>
+<span class="line"><span>画面：两名身穿暗红色战袍与黄铜重甲的魁梧侍卫，面容冷酷，迅速从大殿两侧跨大步走上前。他们双手紧握长柄大刀的木质刀柄，动作整齐划一地猛然拔出大刀。冰冷的铁质刀刃在空气中划出两道锐利的弧线。</span></span>
+<span class="line"><span>禁止：禁止侍卫动作迟缓，禁止大刀短小，禁止光线完全变暖，禁止画面出现错位，禁止侍卫装备错误。</span></span>
+<span class="line"><span>约束：保持侍卫跨步和拔刀动作的雷厉风行，约束大刀的金属质感与长度，确保双手握刀姿势标准，强调武器的冷光效果，保证动作整齐同步。</span></span>
+<span class="line"><span>站位与朝向：两名侍卫从两侧向画面中央的唐代沈昭昭逼近。</span></span>
+<span class="line"><span>运镜：快速短切推镜头，跟随拔刀动作。</span></span>
+<span class="line"><span>音效：极其清脆的金属拔刀声（锵——）。</span></span>
+<span class="line"><span>简述：两名侍卫跨步上前猛然拔出大刀。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>4-8 秒：</span></span>
+<span class="line"><span>画面：两把闪着冷光的大刀瞬间交叉，刀刃死死地架在跪地仰头的唐代沈昭昭白皙脖颈上。镜头特写锁定这一危险瞬间，唐代沈昭昭因极度震惊而双眼无限放大，她漆黑的瞳孔中清晰地倒映出锋利冷厉的刀光。</span></span>
+<span class="line"><span>禁止：禁止刀刃远离脖颈，禁止瞳孔反光消失，禁止人物闭眼，禁止刀身透明化，禁止失去冷暖对比。</span></span>
+<span class="line"><span>约束：保持刀刃贴紧脖颈的压迫感，约束瞳孔内刀光倒影的清晰度，表现因仰头而紧绷的脖颈线条，维持唐代沈昭昭极为惊骇的面部特写，确保大刀的正反面逻辑无误。</span></span>
+<span class="line"><span>站位与朝向：侍卫在两侧持刀，刀刃交叉于唐代沈昭昭脖颈，唐代沈昭昭被迫仰头。</span></span>
+<span class="line"><span>运镜：快速推近，定格在刀刃与脖颈、瞳孔反光的极致特写上。</span></span>
+<span class="line"><span>音效：刀刃摩擦产生的铮鸣余音。</span></span>
+<span class="line"><span>简述：大刀交叉架在唐代沈昭昭脖颈上，瞳孔倒映刀光。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>输出约束：</span></span>
+<span class="line"><span>1. 侍卫的黄铜色重甲、尖顶兜鍪和大刀必须符合设定。</span></span>
+<span class="line"><span>2. 唐代沈昭昭的青色官服领口必须清晰可见。</span></span>
+<span class="line"><span>3. 大刀的冷色反光必须与大殿的暖色调形成强烈对比。</span></span>
+<span class="line"><span>4. 确保刀架在脖子上的动作具有极强的死亡威胁感。</span></span>
+<span class="line"><span>5. 瞳孔中倒映出刀光的细节必须显式刻画。</span></span>
+<span class="line"><span>6. 侍卫和唐代沈昭昭的体型比例必须协调，凸显力量悬殊。</span></span></code></pre>
+<h2 id="分镜-8-提示词">分镜 8-提示词</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>资产图锚定：</span></span>
+<span class="line"><span>角色 唐代沈昭昭 的参考图是 {{Mixed 1}} </span></span>
+<span class="line"><span>角色 皇帝 的参考图是 {{Mixed 2}} </span></span>
+<span class="line"><span>角色 侍卫 的参考图是 {{Mixed 3}} </span></span>
+<span class="line"><span>场景 大殿 的参考图是 {{Mixed 4}} </span></span>
+<span class="line"><span>场景 盛唐 的参考图是 {{Mixed 5}} </span></span>
+<span class="line"><span>道具 大刀 的参考图是 {{Mixed 6}} </span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>出场角色：</span></span>
+<span class="line"><span>唐代沈昭昭，身高 1.65 米</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>背景场景：</span></span>
+<span class="line"><span>大殿，室内日间，坚定逆光暖色调，空间高度约 20 米</span></span>
+<span class="line"><span>大刀，长度约 1.2 米</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>参考图使用规则：（通用块，见上）</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>前一个分镜描述：随着皇帝冰冷的命令下达，两名全副武装的魁梧侍卫瞬间跨步上前，猛然拔出长柄大刀。冷厉的刀刃交叉着死死架在跪在地上的唐代沈昭昭脖颈上，冰冷的刀光直接倒映在她因极度震惊而放大的瞳孔中，死亡危机一触即发。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>0-4 秒：</span></span>
+<span class="line"><span>画面：两把大刀依然紧紧架在脖颈上。唐代沈昭昭胸口剧烈起伏后呼吸逐渐变得平稳，她紧绷的双肩微微放松下沉。她缓缓闭上双眼，胸腔深吸一口长气，脸上的惊恐神色渐渐平息，脸部阴影开始褪去。</span></span>
+<span class="line"><span>禁止：禁止刀刃移开，禁止唐代沈昭昭突然剧烈挣扎，禁止光线变暗，禁止刀身变形，禁止角色张嘴。</span></span>
+<span class="line"><span>约束：保持大刀架颈的危机状态，约束深呼吸动作的沉重感与平稳感，确保肩膀下沉动作清晰可见，维持面部特写表现力，保持背景大殿空间一致。</span></span>
+<span class="line"><span>站位与朝向：唐代沈昭昭保持跪姿，双刀架在脖子上，面朝正前方。</span></span>
+<span class="line"><span>运镜：俯角镜头微推，聚焦人物闭眼深呼吸的动作。</span></span>
+<span class="line"><span>音效：沉重且拖长的深呼吸声。</span></span>
+<span class="line"><span>简述：唐代沈昭昭在刀刃下平复呼吸并闭上双眼。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>4-8 秒：</span></span>
+<span class="line"><span>画面：唐代沈昭昭紧闭双眼，顶着架在脖子两侧的大刀，双膝发力，极其缓慢但极为坚决地从地上站了起来。随着她的起身，一缕从大殿正门漏进来的暖色前侧光洒在她的脸上，驱散了所有的阴影。</span></span>
+<span class="line"><span>禁止：禁止起身动作过快，禁止侍卫的大刀掉落，禁止光线偏冷，禁止身躯佝偻，禁止动作脱节。</span></span>
+<span class="line"><span>约束：保持起身过程中的力量感，约束光影从阴暗到明亮的变化连贯，确保刀刃始终随她起身紧贴脖颈，维持青色官服的垂坠质感，保持运镜过渡平滑。</span></span>
+<span class="line"><span>站位与朝向：唐代沈昭昭从跪姿缓慢转为站立，面朝高阶。</span></span>
+<span class="line"><span>运镜：随角色起身，从俯角缓慢抬升过渡为平视镜头，主导权转移。</span></span>
+<span class="line"><span>音效：衣袍起伏的剧烈摩擦音。</span></span>
+<span class="line"><span>简述：唐代沈昭昭顶着架在脖子上的刀缓缓站起。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>8-12 秒：</span></span>
+<span class="line"><span>画面：唐代沈昭昭完全站直身躯，挺起胸膛。她猛然睁开双眼，目光中再无一丝惊恐，化作前所未有的凌厉与坚定。她昂首平视着高阶，眼神如炬。画外音响起她坚定的内心独白："既来盛唐……便与盛唐争一争。"</span></span>
+<span class="line"><span>禁止：禁止低头退缩，禁止眼神游移，禁止画外音丢失，禁止大刀消失，禁止背景虚化过度。</span></span>
+<span class="line"><span>约束：必须让角色讲出旁白，保持睁眼瞬间的极度坚定气场，确保目光平视的傲骨姿态，约束光照使脸部明亮无瑕，维持大殿背景的宏大。</span></span>
+<span class="line"><span>站位与朝向：唐代沈昭昭傲然挺立，目光直视高处。</span></span>
+<span class="line"><span>运镜：平视镜头锁定唐代沈昭昭坚毅的面部特写。</span></span>
+<span class="line"><span>音效：激昂音乐的前奏隐隐作响。</span></span>
+<span class="line"><span>简述：唐代沈昭昭睁开双眼，目光坚定平视高阶并念出内心独白。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>输出约束：</span></span>
+<span class="line"><span>1. 必须始终保持两把大刀架在唐代沈昭昭脖颈处的危险状态。</span></span>
+<span class="line"><span>2. 确保唐代沈昭昭站立后的青色官服笔挺垂落。</span></span>
+<span class="line"><span>3. 必须包含角色的画外音（内心独白）且情感饱满。</span></span>
+<span class="line"><span>4. 镜头运镜必须跟随角色的起身动作，实现从俯视到平视的过渡。</span></span>
+<span class="line"><span>5. 光线需随着起身动作，让前侧暖光照亮角色的脸庞。</span></span>
+<span class="line"><span>6. 动作节奏必须沉稳，彰显出绝地反击的宁折不弯。</span></span></code></pre>
+<h2 id="分镜-9-提示词">分镜 9-提示词</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>资产图锚定：</span></span>
+<span class="line"><span>角色 唐代沈昭昭 的参考图是 {{Mixed 1}} </span></span>
+<span class="line"><span>场景 大殿 的参考图是 {{Mixed 2}} </span></span>
+<span class="line"><span>场景 盛唐 的参考图是 {{Mixed 3}} </span></span>
+<span class="line"><span>道具 大刀 的参考图是 {{Mixed 4}} </span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>出场角色：</span></span>
+<span class="line"><span>唐代沈昭昭，身高 1.65 米</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>背景场景：</span></span>
+<span class="line"><span>大殿，室内日间，极致高饱和逆光光晕，空间高度约 20 米</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>参考图使用规则：（通用块，见上）</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>前一个分镜描述：面对脖颈上架着的两把冰冷大刀，唐代沈昭昭深吸一口气，顶着致命的威胁缓缓从地上站直了身躯。她睁开双眼，目光中彻底退去惊恐，转为前所未有的坚毅，昂首平视着高阶，在内心立下了与盛唐一争高下的誓言，暖色光芒照亮了她的脸庞。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>0-3 秒：</span></span>
+<span class="line"><span>画面：唐代沈昭昭挺拔站立，双臂猛然向外大幅度伸展，双手用力向后一拂宽大的青色衣袖，宽阔的衣摆在空气中猎猎翻飞。同时，她猛然高高仰起头，面容神采飞扬，眼中光芒四射。极致的高饱和逆光光晕在她的身后瞬间爆开，照亮四周。</span></span>
+<span class="line"><span>禁止：禁止动作软绵无力，禁止衣袖贴紧身体，禁止逆光特效缺失，禁止角色闭眼，禁止大殿背景消失。</span></span>
+<span class="line"><span>约束：保持拂袖仰头动作的极致爆发力，约束光晕爆开带来的强大气场，确保青色官服衣料翻飞效果自然，维持面部自信神采，保持身姿挺拔。</span></span>
+<span class="line"><span>站位与朝向：唐代沈昭昭立于大殿中央，仰面朝向大殿穹顶。</span></span>
+<span class="line"><span>运镜：伴随她甩袖仰头的动作，镜头极速拉远变焦。</span></span>
+<span class="line"><span>音效：衣袖剧烈甩动的破空声。</span></span>
+<span class="line"><span>简述：唐代沈昭昭猛然仰头拂袖，身后逆光爆开。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>3-6 秒：</span></span>
+<span class="line"><span>画面：唐代沈昭昭保持双臂伸展的姿态，胸腔剧烈震动，深吸一口气蓄力准备吟诵。暖金逆光为她的发丝和身躯镀上一层耀眼的金边，赛璐璐线条张力拉满，能量场急剧攀升。</span></span>
+<span class="line"><span>禁止：禁止身体佝偻，禁止金边光效消失，禁止张力不足，禁止场景跳跃，禁止动作停滞。</span></span>
+<span class="line"><span>约束：保持蓄力的身体紧绷感，约束金边光效对轮廓的绝美勾勒，强化线条质感，表现蓄势待发的气势，维持镜头拉远的节奏。</span></span>
+<span class="line"><span>站位与朝向：保持仰头蓄力的挺拔姿态。</span></span>
+<span class="line"><span>运镜：镜头继续拉远，展现她释放出的巨大能量场。</span></span>
+<span class="line"><span>音效：短促的深吸气声与激昂古风音乐的鼓点前奏。</span></span>
+<span class="line"><span>简述：唐代沈昭昭蓄力准备高声吟诵。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>6-10 秒：</span></span>
+<span class="line"><span>画面：唐代沈昭昭神采飞扬地张大嘴巴，用尽全部的力气，对着高旷的大殿穹顶高声吼出："君不见黄河之水天上来——"，清越激昂的声音如惊雷一般劈开死寂的大殿。画面充满极强的视觉张力与热血感。</span></span>
+<span class="line"><span>禁止：禁止角色闭嘴，禁止表情平淡，禁止光线变暗，禁止台词遗漏，禁止口型不符。</span></span>
+<span class="line"><span>约束：必须让角色讲出对白台词，保持高声吟诵时的绝对自信与张狂，约束面部夸张但不扭曲的张力，保证光晕持续高亮，维持宏大背景。</span></span>
+<span class="line"><span>站位与朝向：继续保持仰头高歌姿态。</span></span>
+<span class="line"><span>运镜：镜头快速拉远至大殿宏大视角，充满视觉张力。</span></span>
+<span class="line"><span>音效：极具爆发力与穿透力的人声，伴随激昂宏大的古风音乐全面渐入。</span></span>
+<span class="line"><span>简述：唐代沈昭昭高声吟诵出千古绝句，声音震荡大殿。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>输出约束：</span></span>
+<span class="line"><span>1. 唐代沈昭昭的青色官服和黑色幞头必须在强光下清晰可见。</span></span>
+<span class="line"><span>2. 拂袖的动作必须有夸张的衣料翻飞物理效果。</span></span>
+<span class="line"><span>3. 必须让对应角色讲出对白台词，口型需最大程度张开。</span></span>
+<span class="line"><span>4. 极致的高饱和暖金逆光必须在角色身后爆发，形成耀眼金边。</span></span>
+<span class="line"><span>5. 镜头的极速拉远变焦必须配合角色的能量爆发，节奏契合。</span></span>
+<span class="line"><span>6. 画面的赛璐璐线条感需在这一刻强化，突出二次元热血张力。</span></span></code></pre>
+<h2 id="分镜-10-提示词">分镜 10-提示词</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>资产图锚定：</span></span>
+<span class="line"><span>角色 群臣 的参考图是 {{Mixed 1}} </span></span>
+<span class="line"><span>角色 唐代沈昭昭 的参考图是 {{Mixed 2}} </span></span>
+<span class="line"><span>场景 大殿 的参考图是 {{Mixed 3}} </span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>出场角色：</span></span>
+<span class="line"><span>群臣，身高各异</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>背景场景：</span></span>
+<span class="line"><span>大殿，室内日间，斑驳动荡的光影，空间高度约 20 米</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>参考图使用规则：（通用块，见上）</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>前一个分镜描述：大殿中央，唐代沈昭昭犹如脱胎换骨。她猛然仰头，双手用力一拂宽大的青色衣袖，在身后爆开的极致暖金逆光中，她用尽全身力气，高声吟诵出"君不见黄河之水天上来——"，那清越激昂的声音如惊雷般直接炸响在空旷的穹顶。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>0-3 秒：</span></span>
+<span class="line"><span>画面：随着绝句在大殿回荡，两侧整齐排列的群臣队列瞬间僵住。镜头快速扫过，身穿各色（红紫青绿）官服的百官们纷纷抬起头，原本肃穆的面容瞬间瓦解，取而代之的是难以掩饰的极度震撼。光线在他们身上投下斑驳阴影。</span></span>
+<span class="line"><span>禁止：禁止群臣面无表情，禁止队伍保持死寂，禁止光线静止，禁止出现现代服饰，禁止服饰色彩单一。</span></span>
+<span class="line"><span>约束：保持百官服装的多样性和统一的黑色展角幞头，约束震撼反应的同步爆发，确保大殿背景真实，维持光线的斑驳动荡感，保持镜头平稳移动。</span></span>
+<span class="line"><span>站位与朝向：群臣在大殿两侧列队，纷纷将目光投向大殿中央。</span></span>
+<span class="line"><span>运镜：横向平移摇镜头，快速起步。</span></span>
+<span class="line"><span>音效：成百上千人齐刷刷倒吸凉气的倒抽声。</span></span>
+<span class="line"><span>简述：群臣队列僵住，百官纷纷露出震惊之色。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>3-7 秒：</span></span>
+<span class="line"><span>画面：阵型开始出现轻微的骚动。镜头继续平移，捕捉到具体的细节反应：一名老臣瞪圆双眼身体后倾，一名官员张大嘴巴满脸错愕，还有些人激动地互相对视，衣袍在肢体动作中簌簌摩擦。殿内光影斑驳动荡，彻底打破死寂。</span></span>
+<span class="line"><span>禁止：禁止动作幅度过大变成混乱奔逃，禁止画面模糊不清，禁止失去焦点，禁止人物穿模，禁止动作重复机械。</span></span>
+<span class="line"><span>约束：保持骚动的克制与真实感，约束光影动态与群体情绪的契合，生动刻画瞪眼张嘴等细节微表情，确保衣袍摩擦带来的物理连贯，维持摇镜头速度。</span></span>
+<span class="line"><span>站位与朝向：群臣在原位上身体晃动，互相交互视线。</span></span>
+<span class="line"><span>运镜：横向平移摇镜头，快速扫过人群夸张的震惊反应。</span></span>
+<span class="line"><span>音效：衣袍簌簌的惊慌摩擦声和低微的惊呼声。</span></span>
+<span class="line"><span>简述：群臣阵型发生轻微骚动，各种震惊神态尽显。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>输出约束：</span></span>
+<span class="line"><span>1. 群臣必须身着各色唐代圆领官服，头戴黑色展角幞头。</span></span>
+<span class="line"><span>2. 确保群臣的动作和表情（瞪眼、张嘴倒吸气）夸张但符合情境。</span></span>
+<span class="line"><span>3. 横向平移摇镜头必须平滑且具有速度感，掠过众多角色。</span></span>
+<span class="line"><span>4. 大殿背景需保持宏大的空间透视，尽管焦点在人群。</span></span>
+<span class="line"><span>5. 动荡斑驳的光影需投射在群臣身上，增加画面的动态张力。</span></span>
+<span class="line"><span>6. 禁止出现主角，完全聚焦于旁观者的群体震撼反应。</span></span></code></pre>
+<h2 id="分镜-11-提示词">分镜 11-提示词</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>资产图锚定：</span></span>
+<span class="line"><span>角色 皇帝 的参考图是 {{Mixed 1}} </span></span>
+<span class="line"><span>角色 群臣 的参考图是 {{Mixed 2}} </span></span>
+<span class="line"><span>场景 大殿 的参考图是 {{Mixed 3}} </span></span>
+<span class="line"><span>道具 龙椅 的参考图是 {{Mixed 4}} </span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>出场角色：</span></span>
+<span class="line"><span>皇帝，身高 1.8 米</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>背景场景：</span></span>
+<span class="line"><span>大殿，室内日间，强烈高饱和亮光，空间高度约 20 米</span></span>
+<span class="line"><span>龙椅，高度约 1.5 米，宽约 2 米</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>参考图使用规则：（通用块，见上）</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>前一个分镜描述：随着那句磅礴至极的绝世诗句在大殿内轰然炸响，两侧原本肃穆列阵的群臣瞬间被彻底震撼。官员们纷纷瞪大双眼、张开嘴巴倒吸凉气，死寂的阵型掀起了一阵惊涛骇浪般的骚动，所有人都在这股才华的冲击下失态。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>0-4 秒：</span></span>
+<span class="line"><span>画面：玉阶高处，端坐在鎏金龙椅上的皇帝双手猛然死死紧扣住龙头扶手，手背青筋暴起。他魁梧的身躯带着巨大的力量，竟猛地从龙椅上直接站了起来，明黄色的暗纹龙袍因剧烈的动作而在空气中翻卷。</span></span>
+<span class="line"><span>禁止：禁止皇帝动作慢吞吞，禁止龙椅翻倒，禁止龙袍不飘动，禁止镜头固定不动，禁止光线昏暗。</span></span>
+<span class="line"><span>约束：保持起身动作的突然性与爆发力，约束双手紧扣扶手的细节，确保龙椅的正反面逻辑及鎏金质感，强调龙袍在空中的翻转感，配合运镜凸显力量。</span></span>
+<span class="line"><span>站位与朝向：皇帝在龙椅前站起，身躯猛然前倾，面朝阶下。</span></span>
+<span class="line"><span>运镜：跟随皇帝起身的动作，镜头猛然上扬推近至头肩部。</span></span>
+<span class="line"><span>音效：厚重的身躯猛然站起产生的风声。</span></span>
+<span class="line"><span>简述：皇帝双手紧扣扶手猛地从龙椅上站起。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>4-8 秒：</span></span>
+<span class="line"><span>画面：皇帝的身体重重地向前倾，正面的强烈高光瞬间驱散了他脸上的阴影。他一向冷酷的国字脸上威严全无，双眼中满是极度的震撼、狂热与不可置信。他死死地盯着视线下方，嘴唇微微颤抖。</span></span>
+<span class="line"><span>禁止：禁止皇帝眼神移开，禁止表情恢复平静，禁止光线黯淡，禁止五官比例失调，禁止画面模糊。</span></span>
+<span class="line"><span>约束：保持极其震撼的夸张表情刻画，约束正面强光的冲击力瞬间照亮脸部，维持死死盯视的视线方向，突出微微颤抖的嘴唇细节，确保面部特征准确。</span></span>
+<span class="line"><span>站位与朝向：皇帝保持前倾站立，目光死死盯向下方的阶下。</span></span>
+<span class="line"><span>运镜：镜头锁定皇帝充满震撼的面部特写，微微震动。</span></span>
+<span class="line"><span>音效：玉佩剧烈撞击的清脆响声，急促的呼吸声。</span></span>
+<span class="line"><span>简述：皇帝身体前倾，满眼震撼地死死盯着阶下。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>输出约束：</span></span>
+<span class="line"><span>1. 皇帝的明黄色龙袍和黑色短须特征必须一致。</span></span>
+<span class="line"><span>2. 龙椅的龙头扶手必须在画面中清晰可见，体现皇帝的借力动作。</span></span>
+<span class="line"><span>3. 皇帝起身的动作必须有极强的动态张力，龙袍需有飞舞效果。</span></span>
+<span class="line"><span>4. 运镜需上扬并推近，强调皇帝情绪的骤变。</span></span>
+<span class="line"><span>5. 正面强光必须瞬间照亮皇帝的脸部，打破之前的阴影笼罩。</span></span>
+<span class="line"><span>6. 不得出现其他角色，画面核心在于皇权的极度失态与震惊。</span></span></code></pre>
+<h2 id="分镜-12-提示词">分镜 12-提示词</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>资产图锚定：</span></span>
+<span class="line"><span>角色 皇帝 的参考图是 {{Mixed 1}} </span></span>
+<span class="line"><span>场景 盛唐 的参考图是 {{Mixed 2}} </span></span>
+<span class="line"><span>场景 大殿 的参考图是 {{Mixed 3}} </span></span>
+<span class="line"><span>道具 龙椅 的参考图是 {{Mixed 4}} </span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>出场角色：</span></span>
+<span class="line"><span>皇帝，身高 1.8 米</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>背景场景：</span></span>
+<span class="line"><span>盛唐，室外日间，极高饱和度暖调阳光万里，空间高度无限制</span></span>
+<span class="line"><span>大殿，室内门槛边缘</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>参考图使用规则：（通用块，见上）</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>前一个分镜描述：大殿之上，高高在上的大唐皇帝被绝世诗句彻底震撼。他双手紧扣鎏金龙椅的扶手，猛地站直了魁梧的身躯，身体前倾，冷酷的面具被击碎，双眼满是极度震撼与不可置信地死死盯着阶下，玉佩剧烈撞击发出清脆响声。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>0-4 秒：</span></span>
+<span class="line"><span>画面：镜头从大殿内部幽暗威严的门槛边缘起步，平滑地由内向外穿透而出。随着视角的飞出，画面骤然开阔，刺眼的灿烂阳光铺面而来。天空中阳光万里，微风卷舒着几朵白云，豁然开朗的室外景象瞬间取代了压抑的室内。</span></span>
+<span class="line"><span>禁止：禁止视角受阻，禁止阳光黯淡，禁止天空阴沉，禁止画面卡顿，禁止保留过多阴影。</span></span>
+<span class="line"><span>约束：保持穿透式推镜头的极度平滑，约束室内外光线的强烈明暗对比过渡，强调破空而出的豁然开朗感，维持天空的湛蓝与白云细节，确保阳光的暖金明媚感。</span></span>
+<span class="line"><span>站位与朝向：镜头从室内朝向室外广阔天地移动。</span></span>
+<span class="line"><span>运镜：平滑的由内向外的穿透式推镜头。</span></span>
+<span class="line"><span>音效：悠扬悠长的风声渐起。</span></span>
+<span class="line"><span>简述：镜头越过门槛飞出殿外，阳光万里铺面而来。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>4-8 秒：</span></span>
+<span class="line"><span>画面：宏伟辽阔的长安街市全景在视线下方延展。连绵不绝的唐代木制建筑在暖金色的阳光下熠熠生辉，屋檐下悬挂的各色灯笼在微风中轻轻摇曳。整个画面空灵辽阔，充满盛世气象。画外音响起皇帝激动而深沉的回荡声："此诗，当传万世。"</span></span>
+<span class="line"><span>禁止：禁止画外音缺失，禁止城市建筑呈现现代风格，禁止灯笼静止不动，禁止建筑透视畸形，禁止画面拥挤逼仄。</span></span>
+<span class="line"><span>约束：必须让画外音准确响起，约束长安街市建筑的宏大与古风细节，保持灯笼随风摇摆的自然物理动效，维持极高饱和度暖色调，突出史诗感。</span></span>
+<span class="line"><span>站位与朝向：镜头俯瞰广阔的长安街市。</span></span>
+<span class="line"><span>运镜：继续平稳向前推进，视野越来越开阔。</span></span>
+<span class="line"><span>音效：悠远的风声夹杂着远方市井的微弱喧嚣音，以及带有回音的浑厚画外音。</span></span>
+<span class="line"><span>简述：长安街市在阳光下铺展，皇帝深沉的评价响彻天际。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>输出约束：</span></span>
+<span class="line"><span>1. 本镜头无角色实体出现，必须聚焦于宏大的长安街市场景。</span></span>
+<span class="line"><span>2. 长安建筑需符合唐代风格，飞檐翘角和摇曳的灯笼细节需清晰。</span></span>
+<span class="line"><span>3. 必须包含皇帝的画外音，声音需带有跨越空间的深沉回音感。</span></span>
+<span class="line"><span>4. 镜头运动必须绝对平滑，展现由内向外的豁然开朗感。</span></span>
+<span class="line"><span>5. 整体色调必须是极高饱和度的明媚暖金色，展现盛世气象。</span></span>
+<span class="line"><span>6. 避免画面中出现任何具体的行人面部，保持场景的空灵感。</span></span></code></pre>
+<h2 id="分镜-13-提示词">分镜 13-提示词</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>资产图锚定：</span></span>
+<span class="line"><span>角色 唐代沈昭昭 的参考图是 {{Mixed 1}} </span></span>
+<span class="line"><span>角色 皇帝 的参考图是 {{Mixed 2}} </span></span>
+<span class="line"><span>场景 大殿 的参考图是 {{Mixed 3}} </span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>出场角色：</span></span>
+<span class="line"><span>唐代沈昭昭，身高 1.65 米</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>背景场景：</span></span>
+<span class="line"><span>大殿，室内日间，迎向大门的暖金明亮光辉，空间高度约 20 米</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>参考图使用规则：（通用块，见上）</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>前一个分镜描述：镜头越过大殿高高的门槛飞向室外，万里无云的暖金色阳光洒满宏伟的长安街市，飞檐下的灯笼随风摇曳，画面豁然开朗且空灵。伴随这壮丽盛世画卷，皇帝那句"此诗，当传万世"的极度赞叹声如雷音般回荡在整个天际。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>0-4 秒：</span></span>
+<span class="line"><span>画面：唐代沈昭昭傲然挺立在大殿内，面朝大开的殿门方向。门外倾泻进来的灿烂阳光如瀑布般洒在她的脸庞上。唯美的暖金色侧逆光为她的黑色幞头和几缕散落的发丝镀上了一层耀眼的金边。她的眼底闪烁着熠熠生辉的光芒，目光清澈而深邃。</span></span>
+<span class="line"><span>禁止：禁止面部处于阴影中，禁止眼神涣散，禁止唐代沈昭昭低头，禁止金边光效消失，禁止光线偏冷。</span></span>
+<span class="line"><span>约束：保持侧逆光对人物面部和发丝的绝美勾勒，约束她傲然挺立的姿态，刻画眼底生辉的微小神态，保持面容的明亮无瑕，确保大殿背景的虚化唯美。</span></span>
+<span class="line"><span>站位与朝向：唐代沈昭昭立于大殿内，面朝光亮的殿外方向。</span></span>
+<span class="line"><span>运镜：极其稳定的侧前方面部特写缓慢推移。</span></span>
+<span class="line"><span>音效：背景音乐推至高潮前的情绪积蓄阶段。</span></span>
+<span class="line"><span>简述：唐代沈昭昭迎着阳光傲然挺立，眼中闪烁光芒。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>4-8 秒：</span></span>
+<span class="line"><span>画面：唐代沈昭昭嘴角微微上扬，绽放出一抹极度自信、张扬且充满豪情的微笑，昔日的疲惫与惊恐荡然无存。她红唇轻启，眼神中满是壮志凌云，低声却字字铿锵地吐露心声："既然来了……那便写尽三万里长安。"</span></span>
+<span class="line"><span>禁止：禁止笑容猥琐或苦涩，禁止闭口不言，禁止画面光线突然变暗，禁止产生剧烈抖动，禁止台词遗漏。</span></span>
+<span class="line"><span>约束：必须让角色完整讲出对白，保持那抹自信张扬的脱胎换骨式微笑，约束口型的准确对齐，维持推移镜头的绝对平稳，强化壮志凌云的气场。</span></span>
+<span class="line"><span>站位与朝向：保持面向阳光的方向。</span></span>
+<span class="line"><span>运镜：继续极其稳定地推移，定格在她光彩夺目的笑容上。</span></span>
+<span class="line"><span>音效：低声但充满力量的人声对白，音乐积蓄至爆发边缘。</span></span>
+<span class="line"><span>简述：唐代沈昭昭嘴角扬起自信微笑，低声吐露豪情壮志。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>输出约束：</span></span>
+<span class="line"><span>1. 唐代沈昭昭的青色官服和黑色幞头必须在强光下质感清晰。</span></span>
+<span class="line"><span>2. 唯美的暖金侧逆光必须形成明显的"金边"效果。</span></span>
+<span class="line"><span>3. 必须让对应角色讲出对白台词，口型需对齐。</span></span>
+<span class="line"><span>4. 角色的微笑必须充满自信、张扬与脱胎换骨的豪情。</span></span>
+<span class="line"><span>5. 摄影机运动必须极其平稳，不要任何晃动，以突显内心坚定。</span></span>
+<span class="line"><span>6. 背景应是虚化的大殿，重点凸显角色迎向光明的意境。</span></span></code></pre>
+<h2 id="分镜-14-提示词">分镜 14-提示词</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>资产图锚定：</span></span>
+<span class="line"><span>角色 唐代沈昭昭 的参考图是 {{Mixed 1}} </span></span>
+<span class="line"><span>场景 盛唐 的参考图是 {{Mixed 2}} </span></span>
+<span class="line"><span>场景 大殿 的参考图是 {{Mixed 3}} </span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>出场角色：</span></span>
+<span class="line"><span>无</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>背景场景：</span></span>
+<span class="line"><span>盛唐，室外日间，高对比度暖金光辉与云霞，空间高度无限制</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>参考图使用规则：（通用块，见上）</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>前一个分镜描述：阳光倾泻的大殿内，脱胎换骨的唐代沈昭昭迎着灿烂的光辉傲然挺立。唯美的暖金色侧逆光为她镀上金边。她嘴角扬起自信张扬的微笑，眼底闪烁着光芒，低声却铿锵有力地吐露了"既然来了……那便写尽三万里长安"的凌云壮志。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>0-4 秒：</span></span>
+<span class="line"><span>画面：镜头从皇宫上方极速拔高并向后飞速拉远，越过无数华丽的飞檐翘角和金碧辉煌的宫廷建筑。建筑群在暖金色的阳光下极速向后退去，视野成倍扩大。</span></span>
+<span class="line"><span>禁止：禁止镜头移动缓慢，禁止天空灰暗，禁止建筑出现现代元素，禁止画面掉帧，禁止构图歪斜。</span></span>
+<span class="line"><span>约束：保持极速拔高后退的航拍感，约束皇宫建筑群的壮观密度，表现出强烈的向后飞行速度感，维持高对比度暖金光效，确保盛唐大气的视觉体验。</span></span>
+<span class="line"><span>站位与朝向：镜头朝向远方地平线高速倒退升空。</span></span>
+<span class="line"><span>运镜：极速升空拉远，大视野全景航拍感展开。</span></span>
+<span class="line"><span>音效：史诗般宏大热血的管弦乐全面爆发。</span></span>
+<span class="line"><span>简述：镜头极速拔高越过飞檐翘角的皇宫。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>4-8 秒：</span></span>
+<span class="line"><span>画面：天空中云霞翻滚，万丈霞光铺满整个屏幕，画面展现出极致的史诗级厚重感。随着镜头继续极速升空拉远，远方连绵不绝的青翠山川与辽阔蜿蜒的壮丽大江逐渐显现在天际线下，延展无垠。</span></span>
+<span class="line"><span>禁止：禁止云霞静止不动，禁止山川大江干涸，禁止霞光黯淡，禁止失去空间纵深感，禁止画面被截断。</span></span>
+<span class="line"><span>约束：保持霞光万丈的壮观视觉效果，约束云海翻腾的物理动态，呈现连绵山川的气势磅礴，维持整体的暖金色调，保证镜头拉远的一致性。</span></span>
+<span class="line"><span>站位与朝向：镜头处于高空，俯瞰无垠江山。</span></span>
+<span class="line"><span>运镜：继续高速升空拉远，视野达到极限。</span></span>
+<span class="line"><span>音效：管弦乐激荡澎湃，充满力量感。</span></span>
+<span class="line"><span>简述：云霞翻滚，极速拉远展现大好河山。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>8-12 秒：</span></span>
+<span class="line"><span>画面：镜头达到极高的高空，展现出一幅恢弘无尽的盛唐画卷。满屏的高对比度暖金光辉将江山社稷映照得波澜壮阔，宣告着新篇章的彻底拉开。画面在绝美的国风大远景上缓缓定格。</span></span>
+<span class="line"><span>禁止：禁止山川江河比例失调，禁止画面戛然而止，禁止缺乏空间层次，禁止镜头突然摇晃，禁止色调变暗。</span></span>
+<span class="line"><span>约束：保持盛唐全景的磅礴浩大，约束最终定格画面的辽阔深远，确保云海与山川的构图完美，维持最终大远景的平稳悬停，保证光辉灿烂不减。</span></span>
+<span class="line"><span>站位与朝向：镜头悬停极高空，直视远方。</span></span>
+<span class="line"><span>运镜：升空拉远速度减缓，最终缓缓悬停，展现壮丽全景。</span></span>
+<span class="line"><span>音效：管弦乐达到最高潮后缓缓留下余音绕梁的回响。</span></span>
+<span class="line"><span>简述：镜头悬停定格在恢弘无尽的盛唐画卷上。</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>输出约束：</span></span>
+<span class="line"><span>1. 本镜头无角色出现，必须全景展现盛唐江山建筑。</span></span>
+<span class="line"><span>2. 皇宫的建筑风格必须是正统的唐代飞檐翘角。</span></span>
+<span class="line"><span>3. 满屏必须充满高对比度的暖金光辉与云霞，氛围极其宏大。</span></span>
+<span class="line"><span>4. 镜头的极速升空拉远运动必须连贯且具有强烈的航拍视觉冲击力。</span></span>
+<span class="line"><span>5. 背景的山川大江需有丰富的层次感，不能显得平面化。</span></span>
+<span class="line"><span>6. 画面必须传达出国风大片质感与史诗般的开阔感，作为完美的结尾。</span></span></code></pre>
+<hr>
+<h2 id="提炼逐镜提示词的写法要点供-写法规则库-扩展">提炼：逐镜提示词的写法要点（供 <a href="/prompt-archive-site/notes/writing-rules/">写法规则库</a> 扩展）</h2>
+<ol>
+<li><strong>资产锚定是 {{Mixed N}} 槽位</strong>——生成时把上一环的资产图按序填入；每镜只锚定本镜出场的资产，不相关的图不挂（防止参考污染）；</li>
+<li><strong>三段式时段结构</strong>——每时段七字段：画面（主体+动作+光线+景别）/ 禁止×5 / 约束×5-6 / 站位与朝向 / 运镜 / 音效 / 简述；禁止与约束分工：禁止=防跑偏红线，约束=保质量底线；</li>
+<li><strong>前镜衔接描述</strong>——每镜开头复述上镜末态（约 80 字），这是跨镜一致性的文本机制：模型靠它延续服装/道具/情绪状态；</li>
+<li><strong>运镜写"类型+速度+目的"</strong>（"极缓慢的低角度仰拍推镜头，彰显绝对高压"），与本域运镜库口径一致；</li>
+<li><strong>台词三保险</strong>——时段画面里写台词全文 + 禁止"台词未讲出/漏念" + 输出约束"口型严丝合缝"；</li>
+<li><strong>输出约束 = 全镜统一性清单</strong>——服装/道具逻辑/口型/光影基调/禁杂项/氛围六条，跨时段生效；</li>
+<li><strong>光影跟随情绪曲线</strong>（与拆解分镜规则的光影叙事路由一致）：镜1-2冷蓝→镜3-7威压逆光→镜8暗转明→镜9-11暖金爆发→镜14史诗收尾；</li>
+<li><strong>画外音/内心独白</strong>也是台词——同样上三保险（镜8内心独白、镜12画外音）。</li>
+</ol>
+</div></div></div></div></main><footer class="site-footer" data-astro-cid-tq46r5sz><div class="container" data-astro-cid-tq46r5sz><div class="footer-grid" data-astro-cid-tq46r5sz><div class="footer-brand" data-astro-cid-tq46r5sz><a class="brand" href="/prompt-archive-site/" data-astro-cid-tq46r5sz><span class="brand-glyph" data-astro-cid-tq46r5sz>PA</span><span class="brand-name" data-astro-cid-tq46r5sz>AI 提示词档案馆</span></a><p class="footer-desc" data-astro-cid-tq46r5sz>可浏览、可检索、可复制的 AI 图像与视频提示词案例库。每个完整案例一个独立页面，提示词与 Wiki 原文逐字一致。</p></div><nav class="footer-col" aria-label="页脚导航" data-astro-cid-tq46r5sz><p class="footer-label" data-astro-cid-tq46r5sz>浏览</p><a href="/prompt-archive-site/images/" data-astro-cid-tq46r5sz>图像案例</a><a href="/prompt-archive-site/videos/" data-astro-cid-tq46r5sz>视频案例</a><a href="/prompt-archive-site/notes/" data-astro-cid-tq46r5sz>方法笔记</a><a href="/prompt-archive-site/cases/" data-astro-cid-tq46r5sz>全站搜索</a></nav><div class="footer-col" data-astro-cid-tq46r5sz><p class="footer-label" data-astro-cid-tq46r5sz>本馆收录</p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>案例</span><b data-astro-cid-tq46r5sz>105</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>附实测成片</span><b data-astro-cid-tq46r5sz>2</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>方法笔记</span><b data-astro-cid-tq46r5sz>60</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>合集</span><b data-astro-cid-tq46r5sz>11</b></p></div></div><div class="footer-bottom" data-astro-cid-tq46r5sz><p data-astro-cid-tq46r5sz>「作者称已测试」表示来源声明，本站未复测。</p><p data-astro-cid-tq46r5sz>PA·ARCHIVE © 2026</p></div></div></footer></body><script type="module">function e(){document.querySelectorAll(`[data-masonry]`).forEach(e=>{let t=Array.from(e.querySelectorAll(`:scope > .m-cols > .m-col > *, :scope > *:not(.m-cols)`));if(e.querySelectorAll(`.m-cols`).forEach(e=>e.remove()),t.length===0)return;let n=window.matchMedia(`(max-width: 767px)`).matches?1:window.matchMedia(`(max-width: 1199px)`).matches?2:3,r=document.createElement(`div`);r.className=`m-cols`;let i=Array.from({length:n},()=>{let e=document.createElement(`div`);return e.className=`m-col`,e});t.forEach((e,t)=>i[t%n].appendChild(e)),e.appendChild(r),i.forEach(e=>r.appendChild(e))})}window.refreshMasonry=e,e();var t;window.addEventListener(`resize`,()=>{clearTimeout(t),t=setTimeout(e,150)});</script><script type="module">(()=>{let e=`.case-card, .note-card, .note-list-card`,t=window.matchMedia(`(prefers-reduced-motion: reduce)`),n=null,r=null,i=0;t.addEventListener?.(`change`,()=>{t.matches&&a()});function a(){if(!n)return;let e=n;e.classList.remove(`tilt-active`),e.classList.add(`tilt-return`),e.style.transform=``,clearTimeout(i),i=setTimeout(()=>e.classList.remove(`tilt-return`),320),n=null,r=null}document.addEventListener(`pointermove`,i=>{if(i.pointerType!==`mouse`||!i.isPrimary||t.matches)return;let o=i.target instanceof Element?i.target.closest(e):null;if(o!==n){if(a(),!o)return;n=o,r=n.getBoundingClientRect(),n.classList.add(`tilt-active`),n.classList.remove(`tilt-return`)}if(!n||!r)return;let s=(i.clientX-r.left)/r.width-.5,c=(i.clientY-r.top)/r.height-.5,l=Math.max(-1,Math.min(1,s*2))*4.5,u=Math.max(-1,Math.min(1,c*2))*-4.5;n.style.transform=`perspective(1100px) rotateX(${u.toFixed(3)}deg) rotateY(${l.toFixed(3)}deg) translateY(-3px)`},{passive:!0}),document.addEventListener(`pointerleave`,()=>a()),document.addEventListener(`pointerdown`,t=>{(t.target instanceof Element?t.target.closest(e):null)!==n&&a()},{passive:!0}),window.addEventListener(`blur`,()=>a()),window.addEventListener(`scroll`,()=>a(),{passive:!0})})();</script></html><script type="module">function e(){document.querySelectorAll(`.prose pre`).forEach(e=>{if(e.closest(`.code-panel`))return;let t=e.querySelector(`code`),n=(t??e).textContent??``,r=t?.className.match(/language-([\w+-]+)/)?.[1]??`text`,i=n.replace(/\n$/,``).split(`
+`).length,a=Array.from(n.matchAll(/`{3,}/g)).map(e=>e[0].length),o=a.length?Math.max(3,Math.max(...a)+1):3,s="`".repeat(o)+`markdown
+`+(n.endsWith(`
+`)?n:n+`
+`)+"`".repeat(o),c=document.createElement(`figure`);c.className=`code-panel`;let l=document.createElement(`figcaption`);l.className=`code-panel-head`;let u=document.createElement(`span`);u.className=`code-lang`,u.textContent=r;let d=document.createElement(`span`);d.className=`code-lines`,d.textContent=`${i} 行`;let f=document.createElement(`span`);f.className=`copy-feedback`,f.setAttribute(`aria-live`,`polite`);let p=document.createElement(`button`);p.type=`button`,p.className=`copy-btn`,p.textContent=`复制本块`,l.append(u,d,f,p),e.replaceWith(c),c.append(l,e);let m;p.addEventListener(`click`,async()=>{let e=!1;try{await navigator.clipboard.writeText(s),e=!0}catch{try{let t=document.createElement(`textarea`);t.value=s,t.style.position=`fixed`,t.style.opacity=`0`,document.body.appendChild(t),t.select(),e=document.execCommand(`copy`),t.remove()}catch{e=!1}}f.textContent=e?`已复制本块`:`复制失败，请手动选取`,p.textContent=e?`已复制`:`复制本块`,clearTimeout(m),m=setTimeout(()=>{f.textContent=``,p.textContent=`复制本块`},3e3)})})}e();</script>

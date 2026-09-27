@@ -1,0 +1,541 @@
+<!DOCTYPE html><html lang="zh-CN" data-astro-cid-tq46r5sz><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="场景要素的变量与取值集合：按 Wiki《库定义规范》原文收录，网站不改动取值。"><link rel="icon" href="/prompt-archive-site/favicon.svg" type="image/svg+xml"><title>场景变量库 · 方法笔记</title><link rel="stylesheet" href="/prompt-archive-site/_astro/SiteLayout.DYPNTGRP.css"><style>.note-header[data-astro-cid-vex5zuxs]{max-width:calc(var(--note-width) + 280px);margin:0 auto;padding:40px 24px 0}
+</style></head><body data-astro-cid-tq46r5sz><a class="skip-link" href="#main" data-astro-cid-tq46r5sz>跳到主要内容</a><div class="announce" data-astro-cid-tq46r5sz><a href="/prompt-archive-site/cases/" data-astro-cid-tq46r5sz>PA·ARCHIVE — 每个完整案例一个独立页面，提示词与 Wiki 原文逐字一致 ↗</a></div><header class="site-header" data-astro-cid-tq46r5sz><div class="container" data-astro-cid-tq46r5sz><a class="brand" href="/prompt-archive-site/" data-astro-cid-tq46r5sz><span class="brand-glyph" data-astro-cid-tq46r5sz>PA</span><span class="brand-name" data-astro-cid-tq46r5sz>AI 提示词档案馆</span></a><nav class="site-nav" aria-label="主导航" data-astro-cid-tq46r5sz><a href="/prompt-archive-site/images/" data-astro-cid-tq46r5sz>图像案例<span class="nav-no" data-astro-cid-tq46r5sz>01</span></a><a href="/prompt-archive-site/videos/" data-astro-cid-tq46r5sz>视频案例<span class="nav-no" data-astro-cid-tq46r5sz>02</span></a><a href="/prompt-archive-site/notes/" aria-current="page" data-astro-cid-tq46r5sz>方法笔记<span class="nav-no" data-astro-cid-tq46r5sz>03</span></a></nav><div class="header-cta" data-astro-cid-tq46r5sz><a class="header-search-link" href="/prompt-archive-site/cases/" aria-label="全站搜索案例" data-astro-cid-tq46r5sz><span class="icon" style="width:15px;height:15px" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="6.1"/><line x1="13.6" y1="13.6" x2="18" y2="18"/></svg></span><span data-astro-cid-tq46r5sz>搜索</span><span class="nav-no" data-astro-cid-tq46r5sz>04</span></a></div></div></header><main id="main" data-astro-cid-tq46r5sz><div class="note-page" data-astro-cid-vex5zuxs><div class="note-header" data-astro-cid-vex5zuxs><nav class="breadcrumbs" aria-label="面包屑" data-astro-cid-vex5zuxs><a href="/prompt-archive-site/" data-astro-cid-vex5zuxs>首页</a><span aria-hidden="true" data-astro-cid-vex5zuxs>/</span><a href="/prompt-archive-site/notes/" data-astro-cid-vex5zuxs>方法笔记</a><span aria-hidden="true" data-astro-cid-vex5zuxs>/</span><span aria-current="page" data-astro-cid-vex5zuxs>场景变量库</span></nav><h1 style="font-size:32px" data-astro-cid-vex5zuxs>场景变量库</h1><p class="note-meta" data-astro-cid-vex5zuxs><span class="medium-chip" data-astro-cid-vex5zuxs>变量库</span><span data-astro-cid-vex5zuxs>图像＋视频共用</span><span data-astro-cid-vex5zuxs>源资料：场景变量库（visual-prompt-system）</span></p><p class="note-summary" data-astro-cid-vex5zuxs>场景要素的变量与取值集合：按 Wiki《库定义规范》原文收录，网站不改动取值。</p></div><div class="note-layout" data-astro-cid-vex5zuxs><aside class="note-toc" aria-label="目录" data-astro-cid-vex5zuxs><p class="toc-title" data-astro-cid-vex5zuxs>目录</p><a href="#使用规则" data-astro-cid-vex5zuxs>使用规则</a><a href="#目录" data-astro-cid-vex5zuxs>目录</a><a href="#场景设定-4-类媒介图" data-astro-cid-vex5zuxs>场景设定 4 类（媒介：图）</a><a href="#场景设定图" data-astro-cid-vex5zuxs>场景设定图</a><a href="#宏大场景" data-astro-cid-vex5zuxs>宏大场景</a><a href="#-可以看到三个面" class="depth-3" data-astro-cid-vex5zuxs>-可以看到三个面</a><a href="#全景图" class="depth-3" data-astro-cid-vex5zuxs>全景图</a><a href="#完整场景" data-astro-cid-vex5zuxs>完整场景</a><a href="#必须要香蕉模型别的全部出错" class="depth-3" data-astro-cid-vex5zuxs>必须要香蕉模型，别的全部出错：</a><a href="#场景正反打" data-astro-cid-vex5zuxs>场景正反打</a><a href="#方法1" class="depth-3" data-astro-cid-vex5zuxs>方法1:</a><a href="#方法2" class="depth-3" data-astro-cid-vex5zuxs>方法2</a><a href="#复刻图片及视频风格媒介图视频" data-astro-cid-vex5zuxs>复刻图片及视频风格（媒介：图+视频）</a><a href="#视频风格复刻" data-astro-cid-vex5zuxs>视频风格复刻</a><a href="#效果" class="depth-3" data-astro-cid-vex5zuxs>效果</a><a href="#具体提示词" class="depth-3" data-astro-cid-vex5zuxs>具体提示词</a><a href="#图片风格复刻" data-astro-cid-vex5zuxs>图片风格复刻</a><a href="#效果模型及步骤" class="depth-3" data-astro-cid-vex5zuxs>效果、模型及步骤</a><a href="#步骤1提取画面特征" class="depth-3" data-astro-cid-vex5zuxs>步骤1，提取画面特征</a><a href="#步骤2整合新提示词" class="depth-3" data-astro-cid-vex5zuxs>步骤2，整合新提示词</a><a href="#宋式田园美学媒介图" data-astro-cid-vex5zuxs>宋式田园美学（媒介：图）</a><a href="#视觉样片" data-astro-cid-vex5zuxs>视觉样片</a><a href="#审美定位" data-astro-cid-vex5zuxs>审美定位</a><a href="#系列场景母题" data-astro-cid-vex5zuxs>系列场景母题</a><a href="#视觉控制规则" data-astro-cid-vex5zuxs>视觉控制规则</a><a href="#色彩" class="depth-3" data-astro-cid-vex5zuxs>色彩</a><a href="#服饰与人物" class="depth-3" data-astro-cid-vex5zuxs>服饰与人物</a><a href="#场景与光影" class="depth-3" data-astro-cid-vex5zuxs>场景与光影</a><a href="#镜头质感" class="depth-3" data-astro-cid-vex5zuxs>镜头质感</a><a href="#发布文案" data-astro-cid-vex5zuxs>发布文案</a><a href="#完整提示词" data-astro-cid-vex5zuxs>完整提示词</a><a href="#提示词结构拆解" data-astro-cid-vex5zuxs>提示词结构拆解</a><a href="#可复用方法" data-astro-cid-vex5zuxs>可复用方法</a><a href="#吉卜力幻想工业机械-8-组媒介图" data-astro-cid-vex5zuxs>吉卜力幻想工业机械 8 组（媒介：图）</a><a href="#第1组-spherical-机甲碾过地中海村落imax-正面" data-astro-cid-vex5zuxs>第1组｜ spherical 机甲碾过地中海村落（IMAX 正面）</a><a href="#第2组白色多足机甲穿过山坡石屋村落" data-astro-cid-vex5zuxs>第2组｜白色多足机甲穿过山坡石屋村落</a><a href="#第3组蒸汽机甲岛屿石头村落在机甲上生长" data-astro-cid-vex5zuxs>第3组｜蒸汽机甲岛屿：石头村落在机甲上生长</a><a href="#第4组残破机甲挂在混凝土高架桥上" data-astro-cid-vex5zuxs>第4组｜残破机甲挂在混凝土高架桥上</a><a href="#第5组吊装中的重型机械臂工业机库" data-astro-cid-vex5zuxs>第5组｜吊装中的重型机械臂（工业机库）</a><a href="#第6组蟹式八足移动工业平台荒漠沙尘暴" data-astro-cid-vex5zuxs>第6组｜蟹式八足移动工业平台（荒漠沙尘暴）</a><a href="#第7组吊桥奔跑燃烧机甲残骸后视角追逐" data-astro-cid-vex5zuxs>第7组｜吊桥奔跑×燃烧机甲残骸（后视角追逐）</a><a href="#第8组越野摩托骑手步行巨型机甲宽画幅" data-astro-cid-vex5zuxs>第8组｜越野摩托骑手×步行巨型机甲（宽画幅）</a><a href="#复用要点供二次创作时抽取" data-astro-cid-vex5zuxs>复用要点（供二次创作时抽取）</a></aside><div class="note-main" data-astro-cid-vex5zuxs><div class="prose" data-astro-cid-vex5zuxs><blockquote>
+<p>模板库中 {场景} 与 {风格} 类变量的取值来源。场景设定图按用途分四类；美学风格包（宋式/吉卜力等）含完整视觉协议，整包取用。</p>
+</blockquote>
+<h2 id="使用规则">使用规则</h2>
+<p>变量取值<strong>整条搬用，不自行改写</strong>——条目已按对应模型特性调优。同一情绪/动作有多个档位时按「情绪起点→终点」的叙事位置选择，不叠加多条。</p>
+<h2 id="目录">目录</h2>
+<table>
+<thead>
+<tr>
+<th>节</th>
+<th>媒介</th>
+<th>条目数</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>场景设定 4 类</td>
+<td>image</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>场景设定图</td>
+<td>—</td>
+<td>1</td>
+<td><!--场景设定图--></td>
+</tr>
+<tr>
+<td>宏大场景</td>
+<td>—</td>
+<td>2</td>
+<td>{{[3D国漫风格]}}，{{[寺庙]}}，等距柱状全景图，360度环绕展示</td>
+</tr>
+<tr>
+<td>完整场景</td>
+<td>—</td>
+<td>1</td>
+<td>360° equirectangular panorama, spheric</td>
+</tr>
+<tr>
+<td>场景正反打</td>
+<td>—</td>
+<td>3</td>
+<td>用seedance2.0生成360度环绕视频，然后截图</td>
+</tr>
+<tr>
+<td>复刻图片及视频风格</td>
+<td>mixed</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>视频风格复刻</td>
+<td>—</td>
+<td>1</td>
+<td>下面是两个视频的首尾帧截图。第一行是首帧，第二行是尾帧，右侧为生成。</td>
+</tr>
+<tr>
+<td>图片风格复刻</td>
+<td>—</td>
+<td>2</td>
+<td>图片风格复刻需要分2步，效果图下，左边带水印的是原图，右边是生成的：</td>
+</tr>
+<tr>
+<td>宋式田园美学</td>
+<td>image</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>视觉样片</td>
+<td>—</td>
+<td>0</td>
+<td>三联画用三个生活片段建立完整的田园叙事：</td>
+</tr>
+<tr>
+<td>审美定位</td>
+<td>—</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>系列场景母题</td>
+<td>—</td>
+<td>8</td>
+<td></td>
+</tr>
+<tr>
+<td>视觉控制规则</td>
+<td>—</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>发布文案</td>
+<td>—</td>
+<td>0</td>
+<td>一直很向往宋画里那种“采菊东篱下”的田园生活，于是用 Skill 生成的提示</td>
+</tr>
+<tr>
+<td>完整提示词</td>
+<td>—</td>
+<td>1</td>
+<td>Summer afternoon, young woman in plain</td>
+</tr>
+<tr>
+<td>提示词结构拆解</td>
+<td>—</td>
+<td>10</td>
+<td></td>
+</tr>
+<tr>
+<td>可复用方法</td>
+<td>—</td>
+<td>0</td>
+<td>系列化扩展时，应优先替换前三层，而不是推翻整条视觉协议：</td>
+</tr>
+<tr>
+<td>吉卜力幻想工业机械 8 组</td>
+<td>image</td>
+<td>0</td>
+<td></td>
+</tr>
+<tr>
+<td>第1组｜ spherical 机甲碾过地中海村落（IMAX 正面）</td>
+<td>—</td>
+<td>1</td>
+<td>概念艺术，油画厚涂笔刷质感，吉卜力幻想工业画风，柴油朋克风格占主导，广角低角</td>
+</tr>
+<tr>
+<td>第2组｜白色多足机甲穿过山坡石屋村落</td>
+<td>—</td>
+<td>1</td>
+<td>概念艺术，油画厚涂笔刷质感，吉卜力幻想工业画风，柴油朋克风格占主导，低角度广</td>
+</tr>
+<tr>
+<td>第3组｜蒸汽机甲岛屿：石头村落在机甲上生长</td>
+<td>—</td>
+<td>1</td>
+<td>概念艺术，油画厚涂笔刷质感，吉卜力幻想工业画风，低角度镜头，一座漂浮在大海之</td>
+</tr>
+<tr>
+<td>第4组｜残破机甲挂在混凝土高架桥上</td>
+<td>—</td>
+<td>1</td>
+<td>广角概念艺术，油画厚涂笔刷质感，吉卜力幻想工业画风，低角度拍摄，一尊残破巨大</td>
+</tr>
+<tr>
+<td>第5组｜吊装中的重型机械臂（工业机库）</td>
+<td>—</td>
+<td>1</td>
+<td>概念艺术，油画厚涂笔刷质感，吉卜力幻想工业画风，柴油朋克风格占主导，低角度仰</td>
+</tr>
+<tr>
+<td>第6组｜蟹式八足移动工业平台（荒漠沙尘暴）</td>
+<td>—</td>
+<td>1</td>
+<td>广角概念艺术，油画厚涂笔刷质感，吉卜力幻想工业美学，巨型柴油朋克多足移动工业</td>
+</tr>
+<tr>
+<td>第7组｜吊桥奔跑×燃烧机甲残骸（后视角追逐）</td>
+<td>—</td>
+<td>1</td>
+<td>概念艺术，油画厚涂笔刷质感，吉卜力幻想工业画风，柴油朋克混合蒸汽朋克，低角度</td>
+</tr>
+<tr>
+<td>第8组｜越野摩托骑手×步行巨型机甲（宽画幅）</td>
+<td>—</td>
+<td>1</td>
+<td>宽画幅，概念艺术，油画厚涂笔刷质感，吉卜力幻想工业画风，柴油朋克混合蒸汽朋克</td>
+</tr>
+<tr>
+<td>复用要点（供二次创作时抽取）</td>
+<td>—</td>
+<td>4</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="场景设定-4-类媒介图">场景设定 4 类（媒介：图）</h2>
+<h2 id="场景设定图">场景设定图</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#6A737D">&lt;!--场景设定图--&gt;</span></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># 任务 </span></span>
+<span class="line"><span style="color:#E1E4E8">请帮我生成{{[</span><span style="color:#DBEDFF;text-decoration:underline">3D国漫</span><span style="color:#E1E4E8">]}}的{{[</span><span style="color:#DBEDFF;text-decoration:underline">古代小院子</span><span style="color:#E1E4E8">]}}的场景设定图: </span></span>
+<span class="line"><span style="color:#FFAB70">1.</span><span style="color:#E1E4E8"> 场景描述如下 - {{[</span><span style="color:#DBEDFF;text-decoration:underline">古风</span><span style="color:#E1E4E8">]}} </span></span>
+<span class="line"><span style="color:#FFAB70">2.</span><span style="color:#E1E4E8"> 该场景设定图需包含下方模块，同时所有模块无重叠、无裁切、布局清晰规范： </span></span>
+<span class="line"><span style="color:#FFAB70">-</span><span style="color:#E1E4E8"> 场景分区细节组：同一完整场景内的核心功能分区，每个分区的无多余杂物正视图、正侧视图，完整呈现分区内的结构、陈设、布局，所有分区视图的空间比例、材质、光影、风格100%统一，完全正交无透视畸变 </span></span>
+<span class="line"><span style="color:#FFAB70">-</span><span style="color:#E1E4E8"> 全局场景正交转面组：同一完整场景的正面视图、前45度轴测视图、正侧面视图、后45度轴测视图、背面视图、俯视顶视图，共6个全局视图，全部等宽等高规范排布，统一场景结构、统一陈设布局、统一光影、统一空间比例，完全正交无透视畸变，场景完整边界全部入镜，无任何结构裁切</span></span>
+<span class="line"><span style="color:#FFAB70">-</span><span style="color:#E1E4E8"> 补充视角氛围组：同一完整场景的人视主视角、半鸟瞰视角、仰视空间视角，以及同一场景的固定时段光影氛围视图（如清晨、黄昏、夜间），场景结构、陈设、比例与全局主视图100%完全统一，无任何结构差异 </span></span>
+<span class="line"><span style="color:#FFAB70">-</span><span style="color:#E1E4E8"> 材质细节特写组：场景内核心陈设、建筑构件、地面墙面、植被装饰、面料织物等关键部位的超近距离特写，清晰展示材质纹理、质感、肌理、光影反射等细节</span></span>
+<span class="line"><span style="color:#FFAB70"> -</span><span style="color:#E1E4E8"> 全图所有模块的同一场景，空间结构、陈设布局、材质质感、光影氛围、色彩风格100%完全一致，无任何差异，画面比例16:9，高精度，细节拉满，符合影视级动画/游戏场景设定标准 </span></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"> # 要求： </span></span>
+<span class="line"><span style="color:#E1E4E8"> 场景设定图具体要求如下： </span></span>
+<span class="line"><span style="color:#FFAB70"> -</span><span style="color:#E1E4E8"> 影视级场景设定全览表，影视级场景正交转面参考图，{{[图片风格，记得和第一个变量保持一致，例如3D CG动画风格，OC渲染，PBR物理级材质，次世代高精度场景资产]}}，8K超高清，超精细细节，全局统一柔和漫射光照，无强烈明暗对比，无阴影遮挡核心结构，纯净浅灰色或白色背景，无任何多余场景、无关道具、杂物、特效、人物元素 </span></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"> # 注意： </span></span>
+<span class="line"><span style="color:#E1E4E8"> 全程无过度硬朗的工业/军事风尖锐轮廓，无杂乱冗余元素，所有模块严格遵循正交无透视规则，无结构错乱、比例失调问题</span></span></code></pre>
+<h2 id="宏大场景">宏大场景</h2>
+<h3 id="-可以看到三个面">-可以看到三个面</h3>
+<h4 id="开启智能比例模式">开启智能比例模式</h4>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">{{[</span><span style="color:#DBEDFF;text-decoration:underline">3D国漫风格</span><span style="color:#E1E4E8">]}}，{{[</span><span style="color:#DBEDFF;text-decoration:underline">寺庙</span><span style="color:#E1E4E8">]}}，等距柱状全景图，360度环绕展示场景，宽高比为4:1</span></span></code></pre>
+<h3 id="全景图">全景图</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">{{[</span><span style="color:#DBEDFF;text-decoration:underline">3D国漫风格</span><span style="color:#E1E4E8">]}}，{{[</span><span style="color:#DBEDFF;text-decoration:underline">寺庙</span><span style="color:#E1E4E8">]}}，全景底图，场景丰富</span></span></code></pre>
+<h2 id="完整场景">完整场景</h2>
+<h3 id="必须要香蕉模型别的全部出错">必须要香蕉模型，别的全部出错：</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">360° equirectangular panorama, spherical panorama, VR ready, seamless stitching, full 360-degree view, 2:1 aspect ratio，{{这里是场景里有的东西}}</span></span></code></pre>
+<h2 id="场景正反打">场景正反打</h2>
+<h3 id="方法1">方法1:</h3>
+<p>用seedance2.0生成360度环绕视频，然后截图</p>
+<h3 id="方法2">方法2</h3>
+<ol>
+<li>
+<p>使用提示词，前提，正面需要是水平视角，且无透视的面，否则会出错。</p>
+</li>
+<li>
+<p>要抽卡</p>
+</li>
+</ol>
+<p>第一个面如下：</p>
+<h4 id="顺时针顺时针转45度角逆时针同理">顺时针，顺时针转45度角（逆时针同理）：</h4>
+<p>以首图为参考，输入下方内容：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">以上传的图片为参考，保持原有的画风，生成摄像沿水平X轴顺时针旋转45度后的院场景，{{[</span><span style="color:#DBEDFF;text-decoration:underline">这里填写你的要求，画面希望有什么，不甜月形，它会自己想</span><span style="color:#E1E4E8">]}}</span></span></code></pre>
+<h4 id="纯右侧面左右同理">纯右侧面（左右同理）</h4>
+<p>以首图为参考，输入下方内容：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">保持相同的透视和画风，帮我生成摄像头水平右侧的场景，{{[</span><span style="color:#DBEDFF;text-decoration:underline">这里填写你的要求，画面希望有什么，不甜月形，它会自己想</span><span style="color:#E1E4E8">]}}</span></span></code></pre>
+<h4 id="背面">背面</h4>
+<p>以首图为参考，输入下方内容（背面需要用即梦<strong>agent模式</strong>去生成图）</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#E1E4E8">以上传的图片为参考，保持原有的画风，帮我生成摄像头背后的场景，{{[</span><span style="color:#DBEDFF;text-decoration:underline">这里填写你的要求，画面希望有什么，不甜月形，它会自己想</span><span style="color:#E1E4E8">]}}</span></span></code></pre>
+<h2 id="复刻图片及视频风格媒介图视频">复刻图片及视频风格（媒介：图+视频）</h2>
+<h2 id="视频风格复刻">视频风格复刻</h2>
+<h3 id="效果">效果</h3>
+<p>下面是两个视频的首尾帧截图。第一行是首帧，第二行是尾帧，右侧为生成。</p>
+<p>在哪复刻：</p>
+<p>火山引擎，火山方舟，找到下图模型</p>
+<h3 id="具体提示词">具体提示词</h3>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#79B8FF;font-weight:bold"># 角色</span></span>
+<span class="line"><span style="color:#E1E4E8">你是专业的视频风格拆解师，精通文生视频模型的关键词逻辑</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># 任务</span></span>
+<span class="line"><span style="color:#FFAB70">1.</span><span style="color:#E1E4E8"> 请基于我提供的视频信息，精准拆解视频的全维度风格参数，输出的内容必须可直接用于即梦视频生成，拒绝空泛形容词，所有描述都要具象化、可落地。</span></span>
+<span class="line"><span style="color:#FFAB70">2.</span><span style="color:#E1E4E8"> 基于你的分析为我生成一条适合{{[</span><span style="color:#DBEDFF;text-decoration:underline">平台</span><span style="color:#E1E4E8">]}}文生成视频的提示词。</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># 要求</span></span>
+<span class="line"><span style="color:#FFAB70">1.</span><span style="color:#E1E4E8"> 分析纬度如下：</span></span>
+<span class="line"><span style="color:#FFAB70">-</span><span style="color:#E1E4E8"> 镜头语言与运镜：景别、镜头运动方式、镜头切换节奏、速度、视角类型。这部分内容极其重要，请重点分析</span></span>
+<span class="line"><span style="color:#FFAB70">-</span><span style="color:#E1E4E8"> 光影与色调：主光源类型、光影氛围、色调整体偏向、色彩搭配逻辑</span></span>
+<span class="line"><span style="color:#FFAB70">-</span><span style="color:#E1E4E8"> 核心主题与主体：视频核心内容、核心主体、核心动作/叙事线</span></span>
+<span class="line"><span style="color:#FFAB70">-</span><span style="color:#E1E4E8"> 场景与环境细节：场景空间、环境氛围、道具细节、画面层次</span></span>
+<span class="line"><span style="color:#FFAB70">-</span><span style="color:#E1E4E8"> 节奏与时长：镜头切换速度、画面快慢节奏</span></span>
+<span class="line"><span style="color:#FFAB70">-</span><span style="color:#E1E4E8"> 避坑负面提示词：列出该风格下需要规避的画面问题，适配{{[</span><span style="color:#DBEDFF;text-decoration:underline">平台</span><span style="color:#E1E4E8">]}}负面词逻辑</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># 注意</span></span>
+<span class="line"><span style="color:#FFAB70">1.</span><span style="color:#E1E4E8"> 请勿分析视频中和字幕、水印相关的内容，并在给即梦的提示词中明确要求不带字幕</span></span>
+<span class="line"><span style="color:#FFAB70">2.</span><span style="color:#E1E4E8"> 不管所分析视频分辨率如何，视频生成提示词一律写明[</span><span style="color:#DBEDFF;text-decoration:underline">8K高清，影视级画面效果，细节清晰</span><span style="color:#E1E4E8">]</span></span>
+<span class="line"><span style="color:#FFAB70">3.</span><span style="color:#E1E4E8"> 仅输入我需要的提示词即可，请不要给我我没做要求的内容</span></span>
+<span class="line"></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># 输出</span></span>
+<span class="line"><span style="color:#E1E4E8">提示词，提示词小于700字</span></span></code></pre>
+<h2 id="图片风格复刻">图片风格复刻</h2>
+<h3 id="效果模型及步骤">效果、模型及步骤</h3>
+<p>图片风格复刻需要分2步，效果图下，左边带水印的是原图，右边是生成的：</p>
+<ol>
+<li>
+<p>让豆包（思考或专家模式）分析原图片风格，并生成对应json代码</p>
+</li>
+<li>
+<p>把上述步骤生成的代码和提示词5-2结合，生成新的提示词再粘贴给即梦</p>
+</li>
+</ol>
+<h3 id="步骤1提取画面特征">步骤1，提取画面特征</h3>
+<p>需上传想模仿的图片给豆包作为参考，并上传下方提示词：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#6A737D">&lt;!--步骤1--&gt;</span></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># 任务</span></span>
+<span class="line"><span style="color:#FFAB70">1.</span><span style="color:#E1E4E8"> 请你充分理解这幅画</span></span>
+<span class="line"><span style="color:#FFAB70">2.</span><span style="color:#E1E4E8"> 基于你的理解，拆分出风格和场景</span></span>
+<span class="line"><span style="color:#FFAB70">3.</span><span style="color:#E1E4E8"> 分析这幅画面中和风格相关的内容，如色彩、构图、色调、氛围等，但请勿分析画面中的具体内容，例如人物、场景</span></span>
+<span class="line"><span style="color:#FFAB70">4.</span><span style="color:#E1E4E8"> 基于你的分析，以json结构化数据的形式提取这幅图的画风，作为我后续创作的视觉参考</span></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold">#  要求</span></span>
+<span class="line"><span style="color:#FFAB70">1.</span><span style="color:#E1E4E8"> 输出为json对象，请严格按照json的格式输出，不要有额外的解释和注释</span></span>
+<span class="line"><span style="color:#FFAB70">2.</span><span style="color:#E1E4E8"> 仅输出json代码，请勿直接帮我生成图片</span></span></code></pre>
+<h3 id="步骤2整合新提示词">步骤2，整合新提示词</h3>
+<p>将步骤1生成的代码替换下方变量并给即梦。参考图可有可无</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="markdown"><code><span class="line"><span style="color:#79B8FF;font-weight:bold"># 任务</span></span>
+<span class="line"><span style="color:#E1E4E8">讲我想要的画面内容和绘画风格相结合，为我输出一张符合我需要的图</span></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># 画面内容</span></span>
+<span class="line"><span style="color:#FFAB70">1.</span><span style="color:#E1E4E8"> 画面主题:{{[</span><span style="color:#DBEDFF;text-decoration:underline">输入主题</span><span style="color:#E1E4E8">]}}</span></span>
+<span class="line"><span style="color:#FFAB70">2.</span><span style="color:#E1E4E8"> 画面元素：{{[</span><span style="color:#DBEDFF;text-decoration:underline">输入元素</span><span style="color:#E1E4E8">]}}</span></span>
+<span class="line"><span style="color:#79B8FF;font-weight:bold"># 绘画风格</span></span>
+<span class="line"><span style="color:#E1E4E8">{{[</span><span style="color:#DBEDFF;text-decoration:underline">步骤1的json提示词</span><span style="color:#E1E4E8">]}}</span></span></code></pre>
+<h2 id="宋式田园美学媒介图">宋式田园美学（媒介：图）</h2>
+<h1 id="宋式田园美学skill制造出的人间烟火">宋式田园美学｜Skill制造出的人间烟火</h1>
+<blockquote>
+<p>这组内容不是单纯复刻宋制服饰，而是用日常劳作、克制色彩与自然光影，把普通生活转译成宋画式田园叙事。</p>
+</blockquote>
+<h2 id="视觉样片">视觉样片</h2>
+<p>三联画用三个生活片段建立完整的田园叙事：</p>
+<ul>
+<li><strong>上帧｜荷塘劳作</strong>：女子坐在荷叶环绕的木船中处理莲蓬，后方人物撑船；水滴、微风和前景虚化让劳动场景保有流动感。</li>
+<li><strong>中帧｜庭院日常</strong>：人物在白墙前倾倒陶器中的清水，面部处在暖色侧光中；近景遮挡与浅景深将普通动作拍成安静的电影瞬间。</li>
+<li><strong>下帧｜田间协作</strong>：两人俯身整理田间植物与禾秆，动作自然，没有摆拍式姿态；前景草叶虚化强化了置身田野的观看感。</li>
+</ul>
+<p>画面统一使用素白、灰蓝与草木绿，暖金色低角度阳光落在人物面部和发丝上。三帧都以近距离观察日常劳动为核心，没有宫廷陈设和华丽服饰，直接支撑“把日子过成诗，把烟火熬成画”的内容主张。</p>
+<h2 id="审美定位">审美定位</h2>
+<ul>
+<li><strong>生活母题</strong>：对“采菊东篱下”式田园生活的想象。</li>
+<li><strong>核心气质</strong>：不张扬、不刻意，以缓慢、安静、克制的日常呈现诗意。</li>
+<li><strong>视觉语言</strong>：素衣、竹器、白墙黑瓦、漫山青绿，以及穿过树叶的暖金色自然光。</li>
+<li><strong>情绪目标</strong>：松弛、治愈、含蓄、有人间烟火，但不喧闹。</li>
+</ul>
+<h2 id="系列场景母题">系列场景母题</h2>
+<table>
+<thead>
+<tr>
+<th>时间／空间</th>
+<th>人物行动</th>
+<th>画面意象</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>晨光山野</td>
+<td>背着竹篓上山采茶</td>
+<td>薄雾、竹篓、茶山、初升暖光</td>
+</tr>
+<tr>
+<td>午后荷塘</td>
+<td>坐在小船上摘莲蓬</td>
+<td>荷叶、木船、水面柔光</td>
+</tr>
+<tr>
+<td>院墙边</td>
+<td>晾布</td>
+<td>白墙、素布、微风、树影</td>
+</tr>
+<tr>
+<td>晒谷场</td>
+<td>扬谷</td>
+<td>谷物、木器、逆光尘粒</td>
+</tr>
+<tr>
+<td>溪边</td>
+<td>洗菜</td>
+<td>溪水、青石、竹篮、绿植</td>
+</tr>
+<tr>
+<td>灶前</td>
+<td>炒菜</td>
+<td>柴火、铁锅、蒸汽、暖色火光</td>
+</tr>
+<tr>
+<td>石磨旁</td>
+<td>磨豆浆</td>
+<td>石磨、豆子、陶碗、乳白豆浆</td>
+</tr>
+<tr>
+<td>黄昏树下</td>
+<td>与姐妹喝茶闲谈</td>
+<td>树荫、粗陶茶具、晚风、闲坐</td>
+</tr>
+</tbody>
+</table>
+<h2 id="视觉控制规则">视觉控制规则</h2>
+<h3 id="色彩">色彩</h3>
+<ul>
+<li>明亮通透，但保持<strong>低对比、低饱和</strong>。</li>
+<li>主色为素白、翡翠绿、木色和植物青绿。</li>
+<li>避免浓墨重彩与过度艳丽的古装视觉。</li>
+</ul>
+<h3 id="服饰与人物">服饰与人物</h3>
+<ul>
+<li>宋式夏季汉服，以素白和翡翠绿叠穿。</li>
+<li>交领内搭、宽松外袍、自然垂落的长裙。</li>
+<li>棉麻材质，褶皱自然，不追求华丽装饰。</li>
+<li>半挽黑发，保留被风吹起的碎发；神态温和、姿态松弛。</li>
+</ul>
+<h3 id="场景与光影">场景与光影</h3>
+<ul>
+<li>白墙黑瓦、木窗、竹器、粗陶器皿与自然绿植构成生活环境。</li>
+<li>暖色窗光或树叶间的斑驳光影落在人物与桌面上。</li>
+<li>前景可用窗格、植物虚化遮挡，背景保持柔和虚焦。</li>
+<li>用蒸汽、发丝和树影表现轻微空气流动，让静态画面保有呼吸感。</li>
+</ul>
+<h3 id="镜头质感">镜头质感</h3>
+<ul>
+<li>轻微低机位的电影构图。</li>
+<li>85mm 人像镜头、浅景深、奶油散景。</li>
+<li>人脸清晰对焦，背景柔化。</li>
+<li>写实材质、细微胶片颗粒，呈现中国古装电影剧照质感。</li>
+</ul>
+<h2 id="发布文案">发布文案</h2>
+<p>一直很向往宋画里那种“采菊东篱下”的田园生活，于是用 Skill 生成的提示词，把想象中的画面一帧帧描绘了出来。</p>
+<p>晨光里背着竹篓上山采茶，午后坐在荷塘小船上摘莲蓬，院墙边晾布、晒谷场上扬谷，溪边洗菜、灶前炒菜，石磨旁磨一碗新鲜的豆浆，傍晚和姐妹围坐在树下喝茶闲谈……</p>
+<p>没有浓墨重彩，只有素衣、竹器、白墙黑瓦和漫山的绿。暖金色的光穿过树叶落在脸上，风把头发吹乱，一切都慢了下来。</p>
+<p>宋式的美大概就是这样——不张扬，不刻意，把日子过成诗，把烟火熬成画。</p>
+<h2 id="完整提示词">完整提示词</h2>
+<blockquote>
+<p>对应画面：夏日午后，宋式着装的年轻女子坐在木窗边倒茶。</p>
+</blockquote>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>Summer afternoon, young woman in plain white loose Song style Hanfu sits by a wooden window pouring tea, wispy white steam rising from a rough ceramic teapot. Bright, translucent, low contrast, low saturation palette, ethereal healing atmosphere. Warm window light casts dappled tree shadows on wooden tabletop. A few hair strands drift in a gentle cross breeze. Blurred window lattice and green plants in foreground, soft bokeh whitewashed wall background. Elegantly layered Song style summer garments: plain white and emerald green, cross collar inner top, loose outer robe, long flowing skirt, naturally falling cotton linen folds. Gentle soft smile, half up black hair, relaxed posture. Porcelain fair skin, face sharply in focus. Serene, poetic, pastoral, romantic, healing mood. Slightly low angle cinematic composition, Canon EOS R5, RF 85mm f/1.4, shallow depth of field, creamy bokeh, realistic textures, subtle film grain, clean high definition Chinese period costume film still.</span></span></code></pre>
+<h2 id="提示词结构拆解">提示词结构拆解</h2>
+<table>
+<thead>
+<tr>
+<th>模块</th>
+<th>原提示词承担的功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>时间与主体动作</td>
+<td>夏日午后，年轻女子在木窗边倒茶</td>
+</tr>
+<tr>
+<td>动态细节</td>
+<td>茶壶白色蒸汽、微风吹动碎发</td>
+</tr>
+<tr>
+<td>色彩与氛围</td>
+<td>明亮通透、低对比、低饱和、空灵治愈</td>
+</tr>
+<tr>
+<td>光影</td>
+<td>暖色窗光、桌面斑驳树影</td>
+</tr>
+<tr>
+<td>空间层次</td>
+<td>前景窗格与绿植虚化，背景白墙柔焦</td>
+</tr>
+<tr>
+<td>服饰结构</td>
+<td>素白与翡翠绿叠穿、交领、宽袍、长裙、棉麻褶皱</td>
+</tr>
+<tr>
+<td>人物状态</td>
+<td>轻柔微笑、半挽黑发、松弛坐姿、面部清晰对焦</td>
+</tr>
+<tr>
+<td>情绪关键词</td>
+<td>宁静、诗意、田园、浪漫、治愈</td>
+</tr>
+<tr>
+<td>摄影参数</td>
+<td>轻微低机位、85mm、浅景深、奶油散景、胶片颗粒</td>
+</tr>
+<tr>
+<td>成片质感</td>
+<td>写实材质、高清中国古装电影剧照</td>
+</tr>
+</tbody>
+</table>
+<p><strong>取值速拷（10 条 · 与上表逐字一致）</strong></p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>夏日午后，年轻女子在木窗边倒茶</span></span>
+<span class="line"><span>茶壶白色蒸汽、微风吹动碎发</span></span>
+<span class="line"><span>明亮通透、低对比、低饱和、空灵治愈</span></span>
+<span class="line"><span>暖色窗光、桌面斑驳树影</span></span>
+<span class="line"><span>前景窗格与绿植虚化，背景白墙柔焦</span></span>
+<span class="line"><span>素白与翡翠绿叠穿、交领、宽袍、长裙、棉麻褶皱</span></span>
+<span class="line"><span>轻柔微笑、半挽黑发、松弛坐姿、面部清晰对焦</span></span>
+<span class="line"><span>宁静、诗意、田园、浪漫、治愈</span></span>
+<span class="line"><span>轻微低机位、85mm、浅景深、奶油散景、胶片颗粒</span></span>
+<span class="line"><span>写实材质、高清中国古装电影剧照</span></span></code></pre>
+<h2 id="可复用方法">可复用方法</h2>
+<p>系列化扩展时，应优先替换前三层，而不是推翻整条视觉协议：</p>
+<ol>
+<li><strong>替换人物行动</strong>：倒茶 → 采茶／摘莲蓬／扬谷／洗菜／磨豆浆。</li>
+<li><strong>替换场景道具</strong>：木窗与陶壶 → 茶山竹篓／荷塘木船／晒谷场木器／溪边竹篮／石磨陶碗。</li>
+<li><strong>替换时间光线</strong>：夏日午后窗光 → 清晨薄雾／正午水面反光／黄昏树下暖光。</li>
+<li><strong>保持风格协议稳定</strong>：低饱和、素白与青绿、棉麻宋服、自然风、浅景深、写实电影剧照质感。</li>
+</ol>
+<h2 id="吉卜力幻想工业机械-8-组媒介图">吉卜力幻想工业机械 8 组（媒介：图）</h2>
+<blockquote>
+<p>来源：抖音 @奥利oli《第15集｜别看！别学！我怕你不到一分钟就GET到「吉卜力…」》AI提示词合集（作者声明：内容由 AI 生成）
+抓取方式：2026-08-27 从 8 张截图逐字 OCR 转录，已与原文逐一核对
+原图存档：<code>raw/assets/ai-video/ghibli-dieselpunk-mech-01.jpg</code> ~ <code>08.jpg</code>
+版权注记：原作者声明所有画面提示词均为原创、未经许可禁止转载；本条目仅入库为个人内部使用的工作素材。</p>
+<p><strong>这套设定的共同公式</strong>（拆解自 8 组原文）：</p>
+<ol>
+<li>定调层：概念艺术 + 油画厚涂笔刷质感 + 吉卜力幻想工业画风 + 柴油朋克/蒸汽朋克混合</li>
+<li>镜头层：低角度仰拍 / 广角低角度 / 戏剧化虫仰拍，制造尺度反差</li>
+<li>主体层：一台体量庞大的老旧机甲（球形/圆穹头部 + 铆钉装甲 + 弯管管线 + 烟囱黑烟），细节必须落在"锈迹、油污、凹陷、剥落漆面"</li>
+<li>反差层：渺小人物或车队的体型衬托（孩子仰望、工人抬头、摩托车骑手）</li>
+<li>叙事层：环境讲完整故事（废墟村庄/工厂机库/高架桥/海面岛屿）+ 宏大环境叙事收尾</li>
+<li>光影材质层：柔和漫射电影光 + 明确列出材质清单（锈蚀钢板/风化旧木/黄铜舷窗…）</li>
+</ol>
+</blockquote>
+<hr>
+<h2 id="第1组-spherical-机甲碾过地中海村落imax-正面">第1组｜ spherical 机甲碾过地中海村落（IMAX 正面）</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>概念艺术，油画厚涂笔刷质感，吉卜力幻想工业画风，柴油朋克风格占主导，广角低角度仰拍构图。体型无比庞大的圆滚滚蒸汽自动机甲，圆穹形头部，四只巨大的散发暖黄色光晕的舷窗眼睛，铆钉铆接铁制装甲，腐蚀生锈的铜质金属外壳，外露管线，压力表，烟囱正喷涌浓密黑色浓烟。巨型机械大手正在摧毁一座迷你古老地中海石头村落的郊外，红瓦房屋与遍地废墟，一名十岁左右衣着朴素的小女孩独自站在碎石小路上抬头仰望，压倒性的体型尺度，末日逼近的毁灭氛围，强烈明暗对比光影，深邃阴影，滚滚翻腾的浓烟，黑暗幻想蒸汽朋克氛围，超精细金属材质纹理，IMAX级视觉冲击力，宏大环境叙事，锐利对焦，体积雾霾，真实空间空气纵深</span></span></code></pre>
+<h2 id="第2组白色多足机甲穿过山坡石屋村落">第2组｜白色多足机甲穿过山坡石屋村落</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>概念艺术，油画厚涂笔刷质感，吉卜力幻想工业画风，柴油朋克风格占主导，低角度广角电影感构图。一台体型极其庞大的古老机甲正迈步穿过荒凉多岩的地中海山坡村落，巨大而风化的白色圆穹形头部上有四只醒目的暖黄色发光眼睛，身体结构复杂，拥有多段式机械手臂、精密机械关节、巨型可活动机械腿，金属装甲表面腐蚀、磨损、风化，带有厚重锈迹、旧油漆剥落、凹陷痕迹和复杂管线。机甲尺度巨大，像一座移动的远古工业遗迹压迫着村庄。崎岖地形上散落着小石屋与红瓦屋顶，一条蜿蜒古老的石板小路从前景一直延伸到机甲脚下，形成强烈纵深和引导线。天空云层厚重，充满戏剧感，黑鸟零星飞过，自然光线从云隙洒下，暖黄色阳光与蓝灰色阴影交织，空气里有轻薄尘雾。画面强调宏大尺度、荒凉山村、古老机械巨物、压迫感与冒险感，丰富的锈蚀金属、岩石、红瓦、旧石材与机械纹理细节，宏大环境叙事，幻想工业写实质感。</span></span></code></pre>
+<h2 id="第3组蒸汽机甲岛屿石头村落在机甲上生长">第3组｜蒸汽机甲岛屿：石头村落在机甲上生长</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>概念艺术，油画厚涂笔刷质感，吉卜力幻想工业画风，低角度镜头，一座漂浮在大海之上的巨型蒸汽朋克机甲岛屿，庞大的铆接球形金属机甲主体半浮于海面，厚重锈蚀蓝绿色钢板，铜锈斑驳的粗大弯管管线缠绕机体，圆形黄铜舷窗透出暖黄色微光。机甲外壳缝隙间疯狂生长茂密古老森林，粗壮虬结树根缠绕齿轮、老旧管线与磨损线缆。机甲躯体岩壁上层层叠叠修建石头村落，陶土红瓦石砌房屋，悬空木质阳台、石头阶梯与隐秘庭院，渺小村民在屋舍与步道之间活动。机甲厚重圆形金属基座破开海面，激起白色海浪浪花，海面弥漫轻薄的雾霭，成群海鸟在多云天空盘旋。古老机械与蓬勃自然共生共存，震撼宏大的尺度，被遗忘的神秘史诗氛围。柔和通透的电影日光，体积光束，厚重大气雾霭，自然柔和的配色，丰富绘画材质：锈蚀钢板、风化铜器、苔藓树皮、翻涌海浪泡沫，宏大环境叙事，幻想工业写实质感。</span></span></code></pre>
+<h2 id="第4组残破机甲挂在混凝土高架桥上">第4组｜残破机甲挂在混凝土高架桥上</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>广角概念艺术，油画厚涂笔刷质感，吉卜力幻想工业画风，低角度拍摄，一尊残破巨大的柴油-蒸汽朋克巨型机器人巨构挂在庞大混凝土高架路桥上方，扭曲沉重的机械肢体缠绕在混凝土桥墩之间，磨损粗大钢缆松垮垂落，巨大凹陷布满锈迹的金属机体，粗大压力管道与排气烟囱翻涌滚滚黑烟，腐蚀老化金属表面布满涂鸦与褪色剥落漆面。损毁的巨型机械被挤压在弯曲高架路桥之下，一只巨型机械手臂向下暴垂，部分残骸倒伏在下方杂草丛生的草坡上。前景沥青路边停着一台复古老爷轿车，在高耸残破机甲的衬托下显得格外渺小。阴沉压抑的多云天空，荒芜干草，零星低矮灌木丛，废弃城郊公路场景，柔和漫射阴天电影光影，厚重大气雾霭，体积感烟尘云团，材质细节丰富：风化混凝土、锈蚀钢材、褪色涂鸦、磨损柏油路面，强烈尺度反差，末日忧郁氛围，宏大环境叙事，幻想工业写实风格。</span></span></code></pre>
+<h2 id="第5组吊装中的重型机械臂工业机库">第5组｜吊装中的重型机械臂（工业机库）</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>概念艺术，油画厚涂笔刷质感，吉卜力幻想工业画风，柴油朋克风格占主导，低角度仰拍视角。巨型厚重金属机械臂被大量钢缆、麻绳与铁链从顶部多处吊点悬吊在空中，手臂完全松弛无力，手掌朝下五指自然松开。机械臂满身柴油引擎组件、粗大排气管、燃油管线，金属外壳布满油污、黑煤烟、锈斑与撞击凹痕，关节不断溢出黑灰色浓烟。宏大粗犷的大型工业机库内部，钢架结构、脚手架、检修平台四处蔓延，墙壁与金属构件布满潦草喷漆涂鸦、手绘警示符号、剥落的工业海报。高窗透进柔和漫射光线，空间内漂浮油雾烟尘。地面上一群穿着破旧工装、安全帽、劳保靴的工人，部分戴着护目镜，手拿维修工具，集体抬头仰望悬在空中的庞大机械臂，人物体型十分渺小，和机械臂形成极具冲击力的大小对比。粗粝充满冒险感的工业氛围，丰富的材质细节，锈蚀钢板、老旧铁链绳索、磨损工装、喷漆涂鸦、油迹斑驳地面，宏大环境叙事，幻想工业写实质感。</span></span></code></pre>
+<h2 id="第6组蟹式八足移动工业平台荒漠沙尘暴">第6组｜蟹式八足移动工业平台（荒漠沙尘暴）</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>广角概念艺术，油画厚涂笔刷质感，吉卜力幻想工业美学，巨型柴油朋克多足移动工业平台，庞大巨蟹式装甲机械朝观者驶来，圆润风化钢制机体，旋转火炮炮塔，散发微光的琥珀色舷窗眼，巨型液压活塞，外露齿轮，可活动铰接机械腿，沾满污垢的关节、油污与锈迹包浆，沉重金属巨足陷进湿沙与开裂土地，高耸烟囱涌出大团体积感滚滚黑烟。渺小的荒漠车队行驶在它巨大的阴影之下。泥泞荒漠皮土，狂暴沙尘暴，纷乱橙调风暴天空，翻涌厚重沙尘云，远方地平线被遮蔽，极具冲击力的尺度反差，戏剧化低位虫仰拍，动感电影构图，压迫感正面视角，幻想工业写实质感，强烈明暗对比光影，机器暖琥珀色光源，深邃大气景深，宏大环境叙事，丰富绘画笔触材质，画面里不要有LOGO和水印。</span></span></code></pre>
+<h2 id="第7组吊桥奔跑燃烧机甲残骸后视角追逐">第7组｜吊桥奔跑×燃烧机甲残骸（后视角追逐）</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>概念艺术，油画厚涂笔刷质感，吉卜力幻想工业画风，柴油朋克混合蒸汽朋克，低角度后视角，两名身穿破旧磨损连体工装的人物背对镜头，正在摇晃的老旧木质吊吊桥上向前奔跑，吊桥绳索老化起毛。画面左侧矗立着一尊体量无比庞大的残破巨型机甲头颅，机甲头部偏向吊桥方向，如同默默注视桥上奔跑的人，厚重铆钉装甲外壳，表面坑洼凹陷，厚厚锈迹与油污斑驳，多组封闭式复古舷窗，粗大弯折的工业管道盘绕在机甲头部外侧，机甲缝隙窜出熊熊明火，厚重黑色浓烟向上翻滚升腾。吊桥向画面右侧延伸，不会通向机甲内部。四周是杂乱辽阔的巨型机械废墟，散落巨大齿轮、扭曲钢板、断裂管线，渺小人物和巨型机甲形成强烈压迫的尺度反差，昏暗躁动的末世废墟氛围，柔和电影漫射光影，厚重弥漫的大气雾霭，丰富绘画材质，锈蚀钢板、风化旧木、磨损粗绳索、跳动燃烧火光，宏大环境叙事。</span></span></code></pre>
+<h2 id="第8组越野摩托骑手步行巨型机甲宽画幅">第8组｜越野摩托骑手×步行巨型机甲（宽画幅）</h2>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>宽画幅，概念艺术，油画厚涂笔刷质感，吉卜力幻想工业画风，柴油朋克混合蒸汽朋克，低角度镜头，前景一名身穿橘红色破旧工装、戴着磨损白色越野头盔护目镜的骑手，正骑着复古越野摩托腾空跃起，摩托车扬起滚滚土黄色沙尘。背景远处一尊体型无比庞大的步行巨型机甲，机甲与骑车人物朝向完全一致，同时向前行进，庞大铆钉锈蚀金属机体，多层钢架平台、悬空栈道与铁皮小屋机舱安装在机甲躯体上。机甲前部肩部和大腿部分布着大量柴油发动机船、高耸烟囱、粗大排气管、齿轮、传动链条和液压管线，多根烟囱正在猛烈喷吐厚厚黑灰色浓烟，黑烟沿着机甲行进方向翻卷，形成大面积弥漫烟柱；发动机舱周围有煤烟沉积、油污渗漏、锈迹斑驳和燃烧不完整的暗橙色火光。机甲粗壮的机械巨脚迈步踏过荒漠大地，地面扬起漫天尘土。荒凉开阔的戈壁荒漠，明朗淡蓝色天空，渺小的骑手与巨型行走机甲形成强烈尺度反差，动感激烈的动态画面，柔和明亮的电影漫射日光，空气中弥漫浓厚沙尘雾霭与黑烟层云，丰富绘画材质，锈蚀旧钢板、风化沙土、磨损机车金属、粗糙帆布工装、煤烟痕迹、油污与锈迹，宏大环境叙事，幻想工业写实质感。</span></span></code></pre>
+<hr>
+<h2 id="复用要点供二次创作时抽取">复用要点（供二次创作时抽取）</h2>
+<table>
+<thead>
+<tr>
+<th>要改的槽位</th>
+<th>可替换项</th>
+<th>保持不变</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>场景</td>
+<td>海面岛屿 / 高架桥 / 机库 / 荒漠 / 村落 / 吊桥</td>
+<td>尺度反差句式</td>
+</tr>
+<tr>
+<td>人物</td>
+<td>小女孩 / 工人群 / 骑手 / 车队 / 无人物</td>
+<td>"渺小 X 在 Y 衬托下格外渺小"</td>
+</tr>
+<tr>
+<td>机械形态</td>
+<td>圆球滚动 / 多足蟹式 / 吊装臂 / 步行者</td>
+<td>铆钉+管线+烟囱三件套</td>
+</tr>
+<tr>
+<td>情绪</td>
+<td>史诗共生 / 末日毁灭 / 冒险躁动 / 明亮奔驰</td>
+<td>柔和漫射光 + 材质清单收尾</td>
+</tr>
+</tbody>
+</table>
+</div></div></div></div></main><footer class="site-footer" data-astro-cid-tq46r5sz><div class="container" data-astro-cid-tq46r5sz><div class="footer-grid" data-astro-cid-tq46r5sz><div class="footer-brand" data-astro-cid-tq46r5sz><a class="brand" href="/prompt-archive-site/" data-astro-cid-tq46r5sz><span class="brand-glyph" data-astro-cid-tq46r5sz>PA</span><span class="brand-name" data-astro-cid-tq46r5sz>AI 提示词档案馆</span></a><p class="footer-desc" data-astro-cid-tq46r5sz>可浏览、可检索、可复制的 AI 图像与视频提示词案例库。每个完整案例一个独立页面，提示词与 Wiki 原文逐字一致。</p></div><nav class="footer-col" aria-label="页脚导航" data-astro-cid-tq46r5sz><p class="footer-label" data-astro-cid-tq46r5sz>浏览</p><a href="/prompt-archive-site/images/" data-astro-cid-tq46r5sz>图像案例</a><a href="/prompt-archive-site/videos/" data-astro-cid-tq46r5sz>视频案例</a><a href="/prompt-archive-site/notes/" data-astro-cid-tq46r5sz>方法笔记</a><a href="/prompt-archive-site/cases/" data-astro-cid-tq46r5sz>全站搜索</a></nav><div class="footer-col" data-astro-cid-tq46r5sz><p class="footer-label" data-astro-cid-tq46r5sz>本馆收录</p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>案例</span><b data-astro-cid-tq46r5sz>105</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>附实测成片</span><b data-astro-cid-tq46r5sz>2</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>方法笔记</span><b data-astro-cid-tq46r5sz>60</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>合集</span><b data-astro-cid-tq46r5sz>11</b></p></div></div><div class="footer-bottom" data-astro-cid-tq46r5sz><p data-astro-cid-tq46r5sz>「作者称已测试」表示来源声明，本站未复测。</p><p data-astro-cid-tq46r5sz>PA·ARCHIVE © 2026</p></div></div></footer></body><script type="module">function e(){document.querySelectorAll(`[data-masonry]`).forEach(e=>{let t=Array.from(e.querySelectorAll(`:scope > .m-cols > .m-col > *, :scope > *:not(.m-cols)`));if(e.querySelectorAll(`.m-cols`).forEach(e=>e.remove()),t.length===0)return;let n=window.matchMedia(`(max-width: 767px)`).matches?1:window.matchMedia(`(max-width: 1199px)`).matches?2:3,r=document.createElement(`div`);r.className=`m-cols`;let i=Array.from({length:n},()=>{let e=document.createElement(`div`);return e.className=`m-col`,e});t.forEach((e,t)=>i[t%n].appendChild(e)),e.appendChild(r),i.forEach(e=>r.appendChild(e))})}window.refreshMasonry=e,e();var t;window.addEventListener(`resize`,()=>{clearTimeout(t),t=setTimeout(e,150)});</script><script type="module">(()=>{let e=`.case-card, .note-card, .note-list-card`,t=window.matchMedia(`(prefers-reduced-motion: reduce)`),n=null,r=null,i=0;t.addEventListener?.(`change`,()=>{t.matches&&a()});function a(){if(!n)return;let e=n;e.classList.remove(`tilt-active`),e.classList.add(`tilt-return`),e.style.transform=``,clearTimeout(i),i=setTimeout(()=>e.classList.remove(`tilt-return`),320),n=null,r=null}document.addEventListener(`pointermove`,i=>{if(i.pointerType!==`mouse`||!i.isPrimary||t.matches)return;let o=i.target instanceof Element?i.target.closest(e):null;if(o!==n){if(a(),!o)return;n=o,r=n.getBoundingClientRect(),n.classList.add(`tilt-active`),n.classList.remove(`tilt-return`)}if(!n||!r)return;let s=(i.clientX-r.left)/r.width-.5,c=(i.clientY-r.top)/r.height-.5,l=Math.max(-1,Math.min(1,s*2))*4.5,u=Math.max(-1,Math.min(1,c*2))*-4.5;n.style.transform=`perspective(1100px) rotateX(${u.toFixed(3)}deg) rotateY(${l.toFixed(3)}deg) translateY(-3px)`},{passive:!0}),document.addEventListener(`pointerleave`,()=>a()),document.addEventListener(`pointerdown`,t=>{(t.target instanceof Element?t.target.closest(e):null)!==n&&a()},{passive:!0}),window.addEventListener(`blur`,()=>a()),window.addEventListener(`scroll`,()=>a(),{passive:!0})})();</script></html><script type="module">function e(){document.querySelectorAll(`.prose pre`).forEach(e=>{if(e.closest(`.code-panel`))return;let t=e.querySelector(`code`),n=(t??e).textContent??``,r=t?.className.match(/language-([\w+-]+)/)?.[1]??`text`,i=n.replace(/\n$/,``).split(`
+`).length,a=Array.from(n.matchAll(/`{3,}/g)).map(e=>e[0].length),o=a.length?Math.max(3,Math.max(...a)+1):3,s="`".repeat(o)+`markdown
+`+(n.endsWith(`
+`)?n:n+`
+`)+"`".repeat(o),c=document.createElement(`figure`);c.className=`code-panel`;let l=document.createElement(`figcaption`);l.className=`code-panel-head`;let u=document.createElement(`span`);u.className=`code-lang`,u.textContent=r;let d=document.createElement(`span`);d.className=`code-lines`,d.textContent=`${i} 行`;let f=document.createElement(`span`);f.className=`copy-feedback`,f.setAttribute(`aria-live`,`polite`);let p=document.createElement(`button`);p.type=`button`,p.className=`copy-btn`,p.textContent=`复制本块`,l.append(u,d,f,p),e.replaceWith(c),c.append(l,e);let m;p.addEventListener(`click`,async()=>{let e=!1;try{await navigator.clipboard.writeText(s),e=!0}catch{try{let t=document.createElement(`textarea`);t.value=s,t.style.position=`fixed`,t.style.opacity=`0`,document.body.appendChild(t),t.select(),e=document.execCommand(`copy`),t.remove()}catch{e=!1}}f.textContent=e?`已复制本块`:`复制失败，请手动选取`,p.textContent=e?`已复制`:`复制本块`,clearTimeout(m),m=setTimeout(()=>{f.textContent=``,p.textContent=`复制本块`},3e3)})})}e();</script>
