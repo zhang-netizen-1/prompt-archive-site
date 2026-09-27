@@ -1,5 +1,7 @@
 # AI 提示词档案馆
 
+在线访问：[AI 提示词档案馆](https://zhang-netizen-1.github.io/prompt-archive-site/)
+
 面向公众的 AI 图像与视频提示词案例静态网站：每个完整案例一个独立页面，提示词保持 Wiki 原文，
 生成结果、实测成片与输入参考图分别标注。规划与设计文档见 `docs/`。
 
