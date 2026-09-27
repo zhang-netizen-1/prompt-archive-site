@@ -17,7 +17,8 @@ test('公开门禁：public 导出仅含 approvedForPublic 条目且可复核', 
     path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../content/catalog.json'),
     path.join(projectRoot, 'content/catalog.json'),
   );
-  const report = await exportWiki({ wikiRoot: WIKI_ROOT, projectRoot, mode: 'public' });
+  // 此处只验证公开门禁；视频转码由 media-optimization.test.mjs 单独验证。
+  const report = await exportWiki({ wikiRoot: WIKI_ROOT, projectRoot, mode: 'public', optimizeMedia: false });
 
   const cases = JSON.parse(fs.readFileSync(path.join(projectRoot, 'src/generated/cases.json'), 'utf8')).cases;
   const notes = JSON.parse(fs.readFileSync(path.join(projectRoot, 'src/generated/notes.json'), 'utf8')).notes;

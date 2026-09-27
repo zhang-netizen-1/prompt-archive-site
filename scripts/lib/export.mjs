@@ -4,7 +4,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import crypto from 'node:crypto';
-import { execFile } from 'node:child_process';
+import { execFile, execFileSync } from 'node:child_process';
 import { promisify } from 'node:util';
 import GithubSlugger from 'github-slugger';
 import { readSource, findFencedBlock } from './source.mjs';
@@ -20,6 +20,7 @@ const execFileAsync = promisify(execFile);
 
 const MEDIA_URL_BASE = '/media';
 const VIDEO_EXTENSIONS = new Set(['.mp4', '.mov', '.webm', '.m4v', '.ogv']);
+const PUBLIC_VIDEO_PROFILE = 'h264-720p-v1';
 const VALID_MEDIUMS = new Set(['image', 'video', 'mixed']);
 const CASE_MEDIUMS = new Set(['image', 'video']);
 const VALID_EVIDENCE = new Set([
@@ -29,15 +30,49 @@ const VALID_EVIDENCE = new Set([
 const VALID_MEDIA_ROLES = new Set(['result', 'reference', 'example']);
 const VALID_MEDIA_KINDS = new Set(['image', 'video']);
 
-/** 复制一个媒体文件到 public/media，文件名 = 内容哈希 + 扩展名。 */
-function copyMedia(absPath, mediaDir, copied) {
+/** 公开版视频压缩到适合网页播放的 H.264 MP4；缓存位于导出目录之外。 */
+function optimizedVideo(absPath, hash, cacheDir) {
+  fs.mkdirSync(cacheDir, { recursive: true });
+  const cached = path.join(cacheDir, `${hash}-${PUBLIC_VIDEO_PROFILE}.mp4`);
+  if (fs.existsSync(cached) && fs.statSync(cached).size > 0) return cached;
+  const tempDir = fs.mkdtempSync(path.join(cacheDir, '.encode-'));
+  const output = path.join(tempDir, 'video.mp4');
+  try {
+    execFileSync('ffmpeg', [
+      '-hide_banner', '-loglevel', 'error', '-nostdin', '-y', '-i', absPath,
+      '-map', '0:v:0', '-map', '0:a:0?',
+      '-vf', 'scale=1280:720:force_original_aspect_ratio=decrease:force_divisible_by=2',
+      '-c:v', 'libx264', '-preset', 'veryfast', '-crf', '27',
+      '-maxrate', '1800k', '-bufsize', '3600k', '-pix_fmt', 'yuv420p',
+      '-c:a', 'aac', '-b:a', '96k', '-movflags', '+faststart', output,
+    ], { stdio: 'pipe', maxBuffer: 1024 * 1024 });
+    if (!fs.existsSync(output) || fs.statSync(output).size === 0) {
+      throw new Error(`视频压缩产物为空：${absPath}`);
+    }
+    fs.renameSync(output, cached);
+    return cached;
+  } catch (error) {
+    throw new Error(`视频压缩失败：${absPath}（${error.message}）`, { cause: error });
+  } finally {
+    fs.rmSync(tempDir, { recursive: true, force: true });
+  }
+}
+
+/** 复制媒体到 public/media；公开版仅压缩视频，原始 Wiki 文件保持不变。 */
+export function copyMedia(absPath, mediaDir, copied, { optimizeMedia = false, cacheDir } = {}) {
   const buf = fs.readFileSync(absPath);
   const hash = crypto.createHash('sha256').update(buf).digest('hex').slice(0, 16);
   const ext = path.extname(absPath).toLowerCase() || '.bin';
-  const name = `${hash}${ext}`;
+  const isVideo = VIDEO_EXTENSIONS.has(ext);
+  const compressed = optimizeMedia && isVideo
+    ? optimizedVideo(absPath, hash, cacheDir)
+    : null;
+  const useCompressed = compressed && (ext !== '.mp4' || fs.statSync(compressed).size < buf.length);
+  const name = useCompressed ? `${hash}-${PUBLIC_VIDEO_PROFILE}.mp4` : `${hash}${ext}`;
   if (!copied.has(name)) {
-    fs.writeFileSync(path.join(mediaDir, name), buf);
-    copied.set(name, { absPath, bytes: buf.length });
+    if (useCompressed) fs.copyFileSync(compressed, path.join(mediaDir, name));
+    else fs.writeFileSync(path.join(mediaDir, name), buf);
+    copied.set(name, { absPath, sourceBytes: buf.length, bytes: fs.statSync(path.join(mediaDir, name)).size });
   }
   return `${MEDIA_URL_BASE}/${name}`;
 }
@@ -63,7 +98,7 @@ async function makeVideoPoster(absPath, mediaDir, hashName) {
 
 /** 案例：抽取提示词原文块，解析媒体。 */
 async function exportCase(entry, ctx) {
-  const { wikiRoot, index, mediaDir, copied, report, mode } = ctx;
+  const { wikiRoot, index, mediaDir, copied, report, mode, mediaOptions } = ctx;
   const absSource = path.join(wikiRoot, entry.source);
   if (!fs.existsSync(absSource)) {
     report.errors.push({ type: 'missing-source', message: `源文件不存在：${entry.source}`, entry: entry.slug });
@@ -103,7 +138,7 @@ async function exportCase(entry, ctx) {
       });
       continue;
     }
-    const url = copyMedia(resolution.absPath, mediaDir, copied);
+    const url = copyMedia(resolution.absPath, mediaDir, copied, mediaOptions);
     const item = { role: m.role, kind: m.kind, label: m.label, url };
     if (m.kind === 'video') {
       item.poster = await makeVideoPoster(resolution.absPath, mediaDir, url);
@@ -143,7 +178,7 @@ async function exportCase(entry, ctx) {
 
 /** 逐行转换笔记正文：跳过围栏，重写 Obsidian 链接与媒体引用。 */
 function convertNoteMarkdown(body, noteAbs, ctx, linkMap, anchorIndex) {
-  const { index, mediaDir, copied, report } = ctx;
+  const { index, mediaDir, copied, report, mediaOptions } = ctx;
   const slug = ctx.slug;
   const lines = body.split('\n');
   const out = [];
@@ -181,7 +216,7 @@ function convertNoteMarkdown(body, noteAbs, ctx, linkMap, anchorIndex) {
       if (embed === '!') {
         const resolution = resolveObsidianMedia(index, target);
         if (resolution.status === 'ok') {
-          const url = copyMedia(resolution.absPath, mediaDir, copied);
+          const url = copyMedia(resolution.absPath, mediaDir, copied, mediaOptions);
           if (VIDEO_EXTENSIONS.has(path.extname(resolution.absPath).toLowerCase())) {
             return `<video controls preload="metadata" src="${url}"></video>`;
           }
@@ -219,7 +254,7 @@ function convertNoteMarkdown(body, noteAbs, ctx, linkMap, anchorIndex) {
       if (/^(https?:)?\/\//i.test(ref) || ref.startsWith('/') || ref.startsWith('/media/')) return whole;
       const resolution = resolveRelativeMediaInWiki(index, noteAbs, ref);
       if (resolution.status === 'ok') {
-        const url = copyMedia(resolution.absPath, mediaDir, copied);
+        const url = copyMedia(resolution.absPath, mediaDir, copied, mediaOptions);
         if (VIDEO_EXTENSIONS.has(path.extname(resolution.absPath).toLowerCase())) {
           return `<video controls preload="metadata" src="${url}"></video>`;
         }
@@ -374,7 +409,7 @@ export function normalizeValueTables(markdown) {
 }
 
 /**
- * @param {{ wikiRoot: string, projectRoot: string, mode: 'preview'|'public' }} options
+ * @param {{ wikiRoot: string, projectRoot: string, mode: 'preview'|'public', optimizeMedia?: boolean }} options
  */
 export async function exportWiki(options) {
   const { wikiRoot, projectRoot, mode } = options;
@@ -384,6 +419,10 @@ export async function exportWiki(options) {
   const generatedDir = path.join(projectRoot, 'src/generated');
   const generatedNotesDir = path.join(generatedDir, 'notes');
   const mediaDir = path.join(projectRoot, 'public/media');
+  const mediaOptions = {
+    optimizeMedia: options.optimizeMedia ?? mode === 'public',
+    cacheDir: path.join(projectRoot, '.cache/media'),
+  };
   for (const dir of [generatedDir, generatedNotesDir, mediaDir]) {
     fs.rmSync(dir, { recursive: true, force: true });
     fs.mkdirSync(dir, { recursive: true });
@@ -459,7 +498,7 @@ export async function exportWiki(options) {
       continue;
     }
     caseSeq += 1;
-    const exported = await exportCase(entry, { wikiRoot, index, mediaDir, copied, report, mode });
+    const exported = await exportCase(entry, { wikiRoot, index, mediaDir, copied, report, mode, mediaOptions });
     if (exported) {
       exported.archiveNo = `PA-${String(caseSeq).padStart(3, '0')}`;
       cases.push(exported);
@@ -519,7 +558,7 @@ export async function exportWiki(options) {
   for (const entry of noteEntries) {
     const pre = precomputed.get(entry.slug);
     if (!pre) continue;
-    const converted0 = convertNoteMarkdown(stripDuplicateH1(pre.source.body, entry.title), pre.absSource, { wikiRoot, index, mediaDir, copied, report, mode, slug: entry.slug }, linkMap, anchorIndex);
+    const converted0 = convertNoteMarkdown(stripDuplicateH1(pre.source.body, entry.title), pre.absSource, { wikiRoot, index, mediaDir, copied, report, mode, mediaOptions, slug: entry.slug }, linkMap, anchorIndex);
     const norm = normalizeValueTables(converted0.markdown);
     // 公开站点不携带本机绝对路径：正文中的路径引用做显示层脱敏（提示词围栏内容不受影响）
     const converted = { markdown: norm.markdown.replaceAll('/Users/zhiguang', '~'), unresolved: converted0.unresolved };
@@ -581,6 +620,10 @@ export async function exportWiki(options) {
   }
 
   report.counts = { cases: cases.length, notes: notes.length, media: copied.size, collections: collections.length, valueCopyBlocks: valueCopyBlocksTotal };
+  report.mediaBytes = {
+    source: [...copied.values()].reduce((sum, item) => sum + item.sourceBytes, 0),
+    exported: [...copied.values()].reduce((sum, item) => sum + item.bytes, 0),
+  };
 
   // 生成结构化数据
   fs.writeFileSync(path.join(generatedDir, 'cases.json'), JSON.stringify({ mode, cases }, null, 2));

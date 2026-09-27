@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "astro dev",
     "build": "npm run export:wiki && astro build",
+    "build:pages": "PUBLIC_SITE_BASE_PATH=/prompt-archive-site SITE_MODE=public npm run build && node scripts/prepare-pages.mjs",
     "preview": "astro preview",
     "export:wiki": "node scripts/export-wiki.mjs",
     "test": "node --test \"tests/*.test.mjs\""

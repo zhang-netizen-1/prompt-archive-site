@@ -34,12 +34,22 @@ npm install            # 安装依赖
 npm run dev            # 开发预览（http://localhost:4321）
 npm test               # 运行测试（原文抽取 / 链接解析 / 导出与公开门禁）
 npm run build          # 默认 preview 模式：导出 Wiki 内容 + 构建静态站点到 dist/
-SITE_MODE=public npm run build   # 公开门禁模式：仅导出 approvedForPublic: true 的条目
+SITE_MODE=public npm run build   # 公开门禁模式：仅导出获准条目，并压缩视频到 720p H.264 MP4
+npm run build:pages    # 公开构建 + 生成适配 GitHub Pages 项目路径的 pages-dist/
 npm run preview        # 预览 dist/（需先 build）
 ```
 
-环境变量：`WIKI_ROOT`（默认 `/Users/zhiguang/wiki`）。
+环境变量：`WIKI_ROOT`（默认 `/Users/zhiguang/wiki`）。公开构建需安装 `ffmpeg`；
+首次构建会转码视频，后续复用 `.cache/media/` 中以源内容哈希命名的压缩副本。
+原始 Wiki 视频与图片不被修改；图片目前保持原格式，以免降低含文字的截图清晰度。
+`src/generated/report.json` 的 `mediaBytes` 记录原始和导出的媒体体积。
 本仓库不包含 Wiki 原文、导出的内容与媒体文件；本地构建需要另行提供 `WIKI_ROOT` 指向的源资料。
+
+## GitHub Pages 发布
+
+发布源为 `gh-pages` 分支的根目录，内容取自本机 `npm run build:pages` 生成的 `pages-dist/`。
+源码仓库不包含 Wiki 原文，GitHub Actions 无法独立重建完整站点；更新内容时需要在有 Wiki
+源资料的本机重新构建并更新发布分支。`pages-dist/` 和转码缓存均不提交到 `main`。
 
 ## 目录结构
 

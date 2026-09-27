@@ -1,5 +1,7 @@
 node_modules/
 dist/
+pages-dist/
+.cache/
 .astro/
 src/generated/
 public/media/

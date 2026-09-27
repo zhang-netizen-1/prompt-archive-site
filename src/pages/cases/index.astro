@@ -82,7 +82,7 @@ const items: SearchItem[] = cases.map((c) => {
     </div>
   </div>
 
-  <template data-card-template>
+  <template data-card-template data-base-path={import.meta.env.PUBLIC_SITE_BASE_PATH ?? ''}>
     <a class="case-card search-card">
       <div class="card-media">
         <div class="photo">
@@ -162,6 +162,7 @@ const items: SearchItem[] = cases.map((c) => {
     const empty = document.querySelector<HTMLElement>('[data-empty]')!;
     const count = document.querySelector<HTMLElement>('[data-result-count]')!;
     const template = document.querySelector<HTMLTemplateElement>('[data-card-template]')!;
+    const basePath = template.dataset.basePath ?? '';
 
     const statusLabel = (item: SearchItem) => {
       const isVideo = item.medium === 'video';
@@ -177,12 +178,12 @@ const items: SearchItem[] = cases.map((c) => {
 
     function buildCard(item: SearchItem): HTMLElement {
       const node = template.content.firstElementChild!.cloneNode(true) as HTMLElement;
-      node.setAttribute('href', `/cases/${item.slug}/`);
+      node.setAttribute('href', `${basePath}/cases/${item.slug}/`);
       const img = node.querySelector<HTMLImageElement>('.card-media img')!;
       const cover = node.querySelector<HTMLElement>('.card-media .media-cover')!;
       const badge = node.querySelector<HTMLElement>('.card-badge')!;
       if (item.cover) {
-        img.src = item.cover;
+        img.src = `${basePath}${item.cover}`;
         img.alt = `${item.title}${item.coverKind === 'poster' ? ' 实测成片画面' : ' 媒体图'}`;
         img.hidden = false;
         badge.hidden = false;
