@@ -1,5 +1,5 @@
-<!DOCTYPE html><html lang="zh-CN" data-astro-cid-tq46r5sz><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="视频提示词的统一拆解结构：全局设定＋参考图（可选）＋多个镜头；每个镜头由「镜头」与「拍摄内容」组成。"><link rel="icon" href="/prompt-archive-site/favicon.svg" type="image/svg+xml"><title>视频提示词总结构 · 方法笔记</title><link rel="stylesheet" href="/prompt-archive-site/_astro/SiteLayout.Bi1ecxQQ.css"><style>.note-header[data-astro-cid-vex5zuxs]{max-width:calc(var(--note-width) + 280px);margin:0 auto;padding:40px 24px 0}
-</style></head><body data-astro-cid-tq46r5sz><a class="skip-link" href="#main" data-astro-cid-tq46r5sz>跳到主要内容</a><header class="site-header" data-astro-cid-tq46r5sz><div class="container" data-astro-cid-tq46r5sz><a class="brand" href="/prompt-archive-site/" data-astro-cid-tq46r5sz><span class="brand-glyph" data-astro-cid-tq46r5sz>PA</span><span class="brand-name" data-astro-cid-tq46r5sz>AI 提示词档案馆</span></a><nav class="site-nav" aria-label="主导航" data-astro-cid-tq46r5sz><a href="/prompt-archive-site/images/" data-astro-cid-tq46r5sz>图像案例<span class="nav-no" data-astro-cid-tq46r5sz>01</span></a><a href="/prompt-archive-site/videos/" data-astro-cid-tq46r5sz>视频案例<span class="nav-no" data-astro-cid-tq46r5sz>02</span></a><a href="/prompt-archive-site/notes/" aria-current="page" data-astro-cid-tq46r5sz>方法笔记<span class="nav-no" data-astro-cid-tq46r5sz>03</span></a></nav><div class="header-cta" data-astro-cid-tq46r5sz><a class="header-search-link" href="/prompt-archive-site/cases/" aria-label="全站搜索案例" data-astro-cid-tq46r5sz><span class="icon" style="width:15px;height:15px" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="6.1"/><line x1="13.6" y1="13.6" x2="18" y2="18"/></svg></span><span data-astro-cid-tq46r5sz>搜索</span><span class="nav-no" data-astro-cid-tq46r5sz>04</span></a></div></div></header><main id="main" data-astro-cid-tq46r5sz><div class="note-page" data-astro-cid-vex5zuxs><div class="note-header" data-astro-cid-vex5zuxs><nav class="breadcrumbs" aria-label="面包屑" data-astro-cid-vex5zuxs><a href="/prompt-archive-site/" data-astro-cid-vex5zuxs>首页</a><span aria-hidden="true" data-astro-cid-vex5zuxs>/</span><a href="/prompt-archive-site/notes/" data-astro-cid-vex5zuxs>方法笔记</a><span aria-hidden="true" data-astro-cid-vex5zuxs>/</span><span aria-current="page" data-astro-cid-vex5zuxs>视频提示词总结构</span></nav><h1 style="font-size:32px" data-astro-cid-vex5zuxs>视频提示词总结构</h1><p class="note-meta" data-astro-cid-vex5zuxs><span class="medium-chip" data-astro-cid-vex5zuxs>模板</span><span data-astro-cid-vex5zuxs>视频</span><span data-astro-cid-vex5zuxs>源资料：模板-视频提示词总结构（visual-prompt-system）</span></p><p class="note-summary" data-astro-cid-vex5zuxs>视频提示词的统一拆解结构：全局设定＋参考图（可选）＋多个镜头；每个镜头由「镜头」与「拍摄内容」组成。</p></div><div class="note-layout" data-astro-cid-vex5zuxs><aside class="note-toc" aria-label="目录" data-astro-cid-vex5zuxs><p class="toc-title" data-astro-cid-vex5zuxs>目录</p><a href="#一总公式" data-astro-cid-vex5zuxs>一、总公式</a><a href="#二字段定义与构成" data-astro-cid-vex5zuxs>二、字段定义与构成</a><a href="#镜头字段的内部组装规则" class="depth-3" data-astro-cid-vex5zuxs>“镜头”字段的内部组装规则</a><a href="#参考资产的前置生产公式" class="depth-3" data-astro-cid-vex5zuxs>参考资产的前置生产公式</a><a href="#参考图的图片n标注规则" class="depth-3" data-astro-cid-vex5zuxs>参考图的“@图片N”标注规则</a><a href="#三标准模板" data-astro-cid-vex5zuxs>三、标准模板</a><a href="#四旧提示词的拆解方式" data-astro-cid-vex5zuxs>四、旧提示词的拆解方式</a><a href="#五与现有提示词库的关系" data-astro-cid-vex5zuxs>五、与现有提示词库的关系</a><a href="#六当前缺口" data-astro-cid-vex5zuxs>六、当前缺口</a><a href="#七完整示例深夜餐馆表白" data-astro-cid-vex5zuxs>七、完整示例：深夜餐馆表白</a><a href="#八结构化案例" data-astro-cid-vex5zuxs>八、结构化案例</a><a href="#案例一咖啡店的猫" class="depth-3" data-astro-cid-vex5zuxs>案例一：咖啡店的猫</a><a href="#案例二女生偶遇暗恋对象" class="depth-3" data-astro-cid-vex5zuxs>案例二：女生偶遇暗恋对象</a><a href="#案例三深夜拉面广告" class="depth-3" data-astro-cid-vex5zuxs>案例三：深夜拉面广告</a><a href="#实测案例全文另存独立笔记" class="depth-3" data-astro-cid-vex5zuxs>实测案例（全文另存独立笔记）</a><a href="#九相关笔记" data-astro-cid-vex5zuxs>九、相关笔记</a><a href="#来源" data-astro-cid-vex5zuxs>来源</a></aside><div class="note-main" data-astro-cid-vex5zuxs><div class="prose" data-astro-cid-vex5zuxs><blockquote>
+<!DOCTYPE html><html lang="zh-CN" data-astro-cid-tq46r5sz><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="视频提示词的统一拆解结构：全局设定＋参考图（可选）＋多个镜头；每个镜头由「镜头」与「拍摄内容」组成。"><link rel="icon" href="/prompt-archive-site/favicon.svg" type="image/svg+xml"><title>视频提示词总结构 · 方法笔记</title><link rel="stylesheet" href="/prompt-archive-site/_astro/SiteLayout.CsJqGSoe.css"><style>.note-header[data-astro-cid-vex5zuxs]{max-width:calc(var(--note-width) + 280px);padding:var(--sp-32) var(--sp-24) 0;margin:0 auto}
+</style></head><body data-astro-cid-tq46r5sz><a class="skip-link" href="#main" data-astro-cid-tq46r5sz>跳到主要内容</a><header class="site-header" data-astro-cid-tq46r5sz><div class="container" data-astro-cid-tq46r5sz><a class="brand" href="/prompt-archive-site/" data-astro-cid-tq46r5sz><span class="brand-glyph" data-astro-cid-tq46r5sz>PA</span><span class="brand-name" data-astro-cid-tq46r5sz>AI 提示词档案馆</span></a><nav class="site-nav" aria-label="主导航" data-astro-cid-tq46r5sz><a href="/prompt-archive-site/images/" data-astro-cid-tq46r5sz>图像案例<span class="nav-no" data-astro-cid-tq46r5sz>01</span></a><a href="/prompt-archive-site/videos/" data-astro-cid-tq46r5sz>视频案例<span class="nav-no" data-astro-cid-tq46r5sz>02</span></a><a href="/prompt-archive-site/notes/" aria-current="page" data-astro-cid-tq46r5sz>方法笔记<span class="nav-no" data-astro-cid-tq46r5sz>03</span></a></nav><div class="header-cta" data-astro-cid-tq46r5sz><a class="header-search-link" href="/prompt-archive-site/cases/" aria-label="全站搜索案例" data-astro-cid-tq46r5sz><span class="icon" style="width:15px;height:15px" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="6.1"/><line x1="13.6" y1="13.6" x2="18" y2="18"/></svg></span><span data-astro-cid-tq46r5sz>搜索</span><span class="nav-no" data-astro-cid-tq46r5sz>04</span></a></div></div></header><main id="main" data-astro-cid-tq46r5sz><div class="note-page" data-astro-cid-vex5zuxs><div class="note-header" data-astro-cid-vex5zuxs><nav class="breadcrumbs" aria-label="面包屑" data-astro-cid-vex5zuxs><a href="/prompt-archive-site/" data-astro-cid-vex5zuxs>首页</a><span aria-hidden="true" data-astro-cid-vex5zuxs>/</span><a href="/prompt-archive-site/notes/" data-astro-cid-vex5zuxs>方法笔记</a><span aria-hidden="true" data-astro-cid-vex5zuxs>/</span><span aria-current="page" data-astro-cid-vex5zuxs>视频提示词总结构</span></nav><h1 style="font-size:var(--fs-28)" data-astro-cid-vex5zuxs>视频提示词总结构</h1><p class="note-meta" data-astro-cid-vex5zuxs><span class="medium-chip" data-astro-cid-vex5zuxs>模板</span><span data-astro-cid-vex5zuxs>视频</span><span data-astro-cid-vex5zuxs>源资料：模板-视频提示词总结构（visual-prompt-system）</span></p><p class="note-summary" data-astro-cid-vex5zuxs>视频提示词的统一拆解结构：全局设定＋参考图（可选）＋多个镜头；每个镜头由「镜头」与「拍摄内容」组成。</p></div><div class="note-layout" data-astro-cid-vex5zuxs><aside class="note-toc" aria-label="目录" data-astro-cid-vex5zuxs><p class="toc-title" data-astro-cid-vex5zuxs>目录</p><a href="#一总公式" data-astro-cid-vex5zuxs>一、总公式</a><a href="#二字段定义与构成" data-astro-cid-vex5zuxs>二、字段定义与构成</a><a href="#镜头字段的内部组装规则" class="depth-3" data-astro-cid-vex5zuxs>“镜头”字段的内部组装规则</a><a href="#参考资产的前置生产公式" class="depth-3" data-astro-cid-vex5zuxs>参考资产的前置生产公式</a><a href="#参考图的图片n标注规则" class="depth-3" data-astro-cid-vex5zuxs>参考图的“@图片N”标注规则</a><a href="#三标准模板" data-astro-cid-vex5zuxs>三、标准模板</a><a href="#四旧提示词的拆解方式" data-astro-cid-vex5zuxs>四、旧提示词的拆解方式</a><a href="#五与现有提示词库的关系" data-astro-cid-vex5zuxs>五、与现有提示词库的关系</a><a href="#六当前缺口" data-astro-cid-vex5zuxs>六、当前缺口</a><a href="#七完整示例深夜餐馆表白" data-astro-cid-vex5zuxs>七、完整示例：深夜餐馆表白</a><a href="#八结构化案例" data-astro-cid-vex5zuxs>八、结构化案例</a><a href="#案例一咖啡店的猫" class="depth-3" data-astro-cid-vex5zuxs>案例一：咖啡店的猫</a><a href="#案例二女生偶遇暗恋对象" class="depth-3" data-astro-cid-vex5zuxs>案例二：女生偶遇暗恋对象</a><a href="#案例三深夜拉面广告" class="depth-3" data-astro-cid-vex5zuxs>案例三：深夜拉面广告</a><a href="#实测案例全文另存独立笔记" class="depth-3" data-astro-cid-vex5zuxs>实测案例（全文另存独立笔记）</a><a href="#九相关笔记" data-astro-cid-vex5zuxs>九、相关笔记</a><a href="#来源" data-astro-cid-vex5zuxs>来源</a></aside><div class="note-main" data-astro-cid-vex5zuxs><div class="prose" data-astro-cid-vex5zuxs><blockquote>
 <p>视频提示词的统一拆解结构：<strong>全局设定 + 参考图（可选）+ 多个镜头</strong>。参考图不是只有用户提供才使用：当视频依赖跨镜头角色、场景或道具一致性而又没有现成素材时，应先生产参考资产，再写入“参考图”；确实不需要视觉锚定时才省略。每个镜头由“镜头”和“拍摄内容”组成；其中“拍摄内容”就是该镜头具体用于生成的视频提示词。</p>
 </blockquote>
 <h2 id="一总公式">一、总公式</h2>
@@ -31,7 +31,7 @@
 <li>每个 <code>Shot</code> 内的“镜头”字段，指摄影机如何拍摄。</li>
 </ul>
 <h2 id="二字段定义与构成">二、字段定义与构成</h2>
-<table>
+<div class="table-scroll"><table>
 <thead>
 <tr>
 <th>字段</th>
@@ -84,7 +84,7 @@
 <td>这一镜具体生成什么？</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <p>关键边界：</p>
 <pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="text"><code><span class="line"><span>镜头 = 摄影机怎么拍</span></span>
 <span class="line"><span>拍摄内容 = 这一镜具体生成什么</span></span></code></pre>
@@ -196,7 +196,7 @@
 </ol>
 <h2 id="五与现有提示词库的关系">五、与现有提示词库的关系</h2>
 <p>当前库已经有较多提示词成品与部分变量，但尚未完全按这套总结构对齐。</p>
-<table>
+<div class="table-scroll"><table>
 <thead>
 <tr>
 <th>结构字段</th>
@@ -236,7 +236,7 @@
 <td>已有大量成品，后续按 Shot 归位即可</td>
 </tr>
 </tbody>
-</table>
+</table></div>
 <h2 id="六当前缺口">六、当前缺口</h2>
 <p>当前主要缺的不是更多完整提示词，而是与总结构一一对应、可查表取值的关键词索引：</p>
 <ol>
@@ -351,7 +351,611 @@
 <li>2026-09-16：案例五（白底变装旋转，10秒7镜）经志光实测验收通过（反馈：效果与节奏俱佳）；参考图八张（模特四视图＋七套造型平铺图）与实测成片（<code>实测成片.mp4</code>）存 <code>raw/assets/visual-prompt-system/白底变装旋转/</code>。</li>
 <li>2026-09-16：实测案例（案例四、五）正文迁出至独立笔记 <a href="/prompt-archive-site/cases/christmas-snow-chase/">案例-圣诞夜雪街追逐</a>、<a href="/prompt-archive-site/cases/white-bg-outfit-spin/">案例-白底变装旋转</a>，模板内改为索引——防正文膨胀（志光指示）；<code>库定义规范</code>、<code>域导航</code> 同步调整。</li>
 </ul>
-</div><section class="note-related" aria-label="关联案例" data-astro-cid-vex5zuxs><h2 class="section-title" style="font-size:20px" data-astro-cid-vex5zuxs><span class="icon" style="width:18px;height:18px" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 11.5a4 4 0 0 1 0-5.6l1.4-1.4a4 4 0 0 1 5.6 5.6l-1.4 1.4"/><path d="M11.5 8.5a4 4 0 0 1 0 5.6l-1.4 1.4a4 4 0 0 1-5.6-5.6l1.4-1.4"/></svg></span> 应用这些写法的案例</h2><div class="grid-cases" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr));margin-top:16px" data-astro-cid-vex5zuxs><a class="case-card" href="/prompt-archive-site/cases/christmas-snow-chase/" data-medium="video" data-topic="叙事短片" data-evidence="film-attached" data-search="圣诞夜雪街追逐 叙事短片 五镜圣诞夜雪街追逐：看似惊险的追逐实为圣诞礼物降临，用子弹时间放大魔法瞬间，收束在女孩自拍杆的 vlog 质感。附两张输入参考图与实测成片。 追逐 圣诞 反转 多镜头 参考图锚定"><div class="card-media"><div class="photo"><img src="/prompt-archive-site/media/d0046d3a9c1a05e6-h264-720p-v1-poster.png" alt="圣诞夜雪街追逐 实测成片画面" loading="lazy"></div><span class="card-badge"><span class="icon" style="width:12px;height:12px" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4.8v10.4a.6.6 0 0 0 .92.5l8.1-5.2a.6.6 0 0 0 0-1L7.92 4.3a.6.6 0 0 0-.92.5z"/></svg></span>实测成片</span></div><div class="card-holes" aria-hidden="true"></div><div class="card-body"><div class="card-meta"><span>PA-001</span><span>视频</span><span class="status ok">附实测成片</span></div><h3 class="card-title">圣诞夜雪街追逐</h3><p class="card-summary">五镜圣诞夜雪街追逐：看似惊险的追逐实为圣诞礼物降临，用子弹时间放大魔法瞬间，收束在女孩自拍杆的 Vlog 质感。附两张输入参考图与实测成片。</p><div class="card-tags"><span class="tag">叙事短片</span><span class="tag">追逐</span><span class="tag">圣诞</span></div></div></a><a class="case-card" href="/prompt-archive-site/cases/white-bg-outfit-spin/" data-medium="video" data-topic="变装与图像锚定" data-evidence="film-attached" data-search="白底变装旋转 变装与图像锚定 白色影棚中的七套造型变装短片：模特原地「定格亮相＋旋身 360°」，换装在旋转中完成，机位全程不动。八张输入参考图锚定模特与各套造型，附实测成片。 变装 影棚 多套造型 图像锚定 固定机位"><div class="card-media"><div class="photo"><img src="/prompt-archive-site/media/18f907e2923216c6-h264-720p-v1-poster.png" alt="白底变装旋转 实测成片画面" loading="lazy"></div><span class="card-badge"><span class="icon" style="width:12px;height:12px" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4.8v10.4a.6.6 0 0 0 .92.5l8.1-5.2a.6.6 0 0 0 0-1L7.92 4.3a.6.6 0 0 0-.92.5z"/></svg></span>实测成片</span></div><div class="card-holes" aria-hidden="true"></div><div class="card-body"><div class="card-meta"><span>PA-002</span><span>视频</span><span class="status ok">附实测成片</span></div><h3 class="card-title">白底变装旋转</h3><p class="card-summary">白色影棚中的七套造型变装短片：模特原地「定格亮相＋旋身 360°」，换装在旋转中完成，机位全程不动。八张输入参考图锚定模特与各套造型，附实测成片。</p><div class="card-tags"><span class="tag">变装与图像锚定</span><span class="tag">变装</span><span class="tag">影棚</span></div></div></a><a class="case-card" href="/prompt-archive-site/cases/forty-three-sunsets/" data-medium="video" data-topic="多段成片" data-evidence="author-tested" data-search="一天四十三次日落 多段成片 外星小王子 × 地球女生的六段对谈短片：随问题推进从人行道走到江边日落。作者实测判定「勉强及格」，身高差、时间跨度与段落收尾三项问题及预改方向随案例记录；未附成片文件。 对谈 多段生成 竖幅 参考图锚定 实测复盘"><div class="card-media"><div class="photo"><img src="/prompt-archive-site/media/427ba9769f10f349.png" alt="一天四十三次日落 输入参考图" loading="lazy"></div><span class="card-badge mute"><span class="icon" style="width:12px;height:12px" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="14" height="12" rx="1.5"/><circle cx="7.4" cy="8.4" r="1.4"/><path d="M3 13.2l3.8-3.4 3.2 2.8 2.6-2.2 4.4 3.6"/></svg></span>参考图</span></div><div class="card-holes" aria-hidden="true"></div><div class="card-body"><div class="card-meta"><span>PA-003</span><span>视频</span><span class="status warn">作者称已测试 · 未附成片</span></div><h3 class="card-title">一天四十三次日落</h3><p class="card-summary">外星小王子 × 地球女生的六段对谈短片：随问题推进从人行道走到江边日落。作者实测判定「勉强及格」，身高差、时间跨度与段落收尾三项问题及预改方向随案例记录；未附成片文件。</p><div class="card-tags"><span class="tag">多段成片</span><span class="tag">对谈</span><span class="tag">多段生成</span></div></div></a><a class="case-card" href="/prompt-archive-site/cases/cat-launch-28s/" data-medium="video" data-topic="产品片" data-evidence="author-tested" data-search="小猫发布会｜28秒英短蓝白产品片 产品片 白色摄影棚里的英短蓝白「产品发布片」：微距材质展示、悬浮旋转与四句广告文案的完整时间轴。纯文字案例。 产品片 广告文案 静音 宠物"><div class="card-media"><div class="photo"><div class="media-cover"><span class="cover-kind">VIDEO PROMPT</span><span class="cover-title">小猫发布会｜28秒英短蓝白产品片</span><span class="cover-note">暂无成片 · 提示词可复制</span></div></div></div><div class="card-holes" aria-hidden="true"></div><div class="card-body"><div class="card-meta"><span>PA-009</span><span>视频</span><span class="status warn">作者称已测试 · 未附成片</span></div><h3 class="card-title">小猫发布会｜28秒英短蓝白产品片</h3><p class="card-summary">白色摄影棚里的英短蓝白「产品发布片」：微距材质展示、悬浮旋转与四句广告文案的完整时间轴。纯文字案例。</p><div class="card-tags"><span class="tag">产品片</span><span class="tag">产品片</span><span class="tag">广告文案</span></div></div></a><a class="case-card" href="/prompt-archive-site/cases/cool-walk-two-leads/" data-medium="video" data-topic="人物出场" data-evidence="author-tested" data-search="酷飒走路｜雨后停机坪双人出场五镜 人物出场 深夜雨后停机坪的双人出场五镜：舷梯而下、点烟回望、并肩前行到背影虚化，冷灰暗调的反派气质出场。纯文字案例。 出场 双人 3d动漫风 无台词"><div class="card-media"><div class="photo"><div class="media-cover"><span class="cover-kind">VIDEO PROMPT</span><span class="cover-title">酷飒走路｜雨后停机坪双人出场五镜</span><span class="cover-note">暂无成片 · 提示词可复制</span></div></div></div><div class="card-holes" aria-hidden="true"></div><div class="card-body"><div class="card-meta"><span>PA-010</span><span>视频</span><span class="status warn">作者称已测试 · 未附成片</span></div><h3 class="card-title">酷飒走路｜雨后停机坪双人出场五镜</h3><p class="card-summary">深夜雨后停机坪的双人出场五镜：舷梯而下、点烟回望、并肩前行到背影虚化，冷灰暗调的反派气质出场。纯文字案例。</p><div class="card-tags"><span class="tag">人物出场</span><span class="tag">出场</span><span class="tag">双人</span></div></div></a><a class="case-card" href="/prompt-archive-site/cases/tvb-retro-terrace-banter/" data-medium="video" data-topic="都市叙事" data-evidence="author-tested" data-search="港风tvb大小姐｜复古露台对话六镜 都市叙事 90年代tvb老港剧ccd复古质感的露台甜宠对话：女主以「大小姐」姿态娇嗔提要求，男主温柔追问「那我要怎么哄」，六镜正反打完成端架子、提要求、被接住、反击出招的俏皮弧线。附人物造型、光影与整体节奏提示。 港风 tvb 甜宠对话 大小姐 复古"><div class="card-media"><div class="photo"><div class="media-cover"><span class="cover-kind">VIDEO PROMPT</span><span class="cover-title">港风TVB大小姐｜复古露台对话六镜</span><span class="cover-note">暂无成片 · 提示词可复制</span></div></div></div><div class="card-holes" aria-hidden="true"></div><div class="card-body"><div class="card-meta"><span>PA-051</span><span>视频</span><span class="status warn">作者称已测试 · 未附成片</span></div><h3 class="card-title">港风TVB大小姐｜复古露台对话六镜</h3><p class="card-summary">90年代TVB老港剧CCD复古质感的露台甜宠对话：女主以「大小姐」姿态娇嗔提要求，男主温柔追问「那我要怎么哄」，六镜正反打完成端架子、提要求、被接住、反击出招的俏皮弧线。附人物造型、光影与整体节奏提示。</p><div class="card-tags"><span class="tag">都市叙事</span><span class="tag">港风</span><span class="tag">TVB</span></div></div></a><a class="case-card" href="/prompt-archive-site/cases/drift-bridge-and-engagement/" data-medium="video" data-topic="叙事短片" data-evidence="author-tested" data-search="漂移拦截｜夜桥失控车＋订婚宴（双段） 叙事短片 同一条围栏内先后保存两段独立提示词：前段为 3d 动漫风格的夜桥追车短片，女主刹车失灵靠摩擦护栏降速，男主驾车漂移拦截，十七个分镜至逼停收束；后段为 2010 年代台偶质感的订婚宴求婚八镜正反打，含台湾腔台词。两段之间原文未另设标题。 追车戏 漂移 3d动漫风 订婚宴求婚 双段"><div class="card-media"><div class="photo"><div class="media-cover"><span class="cover-kind">VIDEO PROMPT</span><span class="cover-title">漂移拦截｜夜桥失控车＋订婚宴（双段）</span><span class="cover-note">暂无成片 · 提示词可复制</span></div></div></div><div class="card-holes" aria-hidden="true"></div><div class="card-body"><div class="card-meta"><span>PA-052</span><span>视频</span><span class="status warn">作者称已测试 · 未附成片</span></div><h3 class="card-title">漂移拦截｜夜桥失控车＋订婚宴（双段）</h3><p class="card-summary">同一条围栏内先后保存两段独立提示词：前段为 3D 动漫风格的夜桥追车短片，女主刹车失灵靠摩擦护栏降速，男主驾车漂移拦截，十七个分镜至逼停收束；后段为 2010 年代台偶质感的订婚宴求婚八镜正反打，含台湾腔台词。两段之间原文未另设标题。</p><div class="card-tags"><span class="tag">叙事短片</span><span class="tag">追车戏</span><span class="tag">漂移</span></div></div></a></div><p style="font-size:14px;margin-top:12px" data-astro-cid-vex5zuxs><a href="/prompt-archive-site/videos/" data-astro-cid-vex5zuxs>浏览视频案例 →</a></p></section></div></div></div></main><footer class="site-footer" data-astro-cid-tq46r5sz><div class="container" data-astro-cid-tq46r5sz><div class="footer-grid" data-astro-cid-tq46r5sz><div class="footer-brand" data-astro-cid-tq46r5sz><a class="brand" href="/prompt-archive-site/" data-astro-cid-tq46r5sz><span class="brand-glyph" data-astro-cid-tq46r5sz>PA</span><span class="brand-name" data-astro-cid-tq46r5sz>AI 提示词档案馆</span></a><p class="footer-desc" data-astro-cid-tq46r5sz>可浏览、可检索、可复制的 AI 图像与视频提示词案例库。每个完整案例一个独立页面，提示词与 Wiki 原文逐字一致。</p></div><nav class="footer-col" aria-label="页脚导航" data-astro-cid-tq46r5sz><p class="footer-label" data-astro-cid-tq46r5sz>浏览</p><a href="/prompt-archive-site/images/" data-astro-cid-tq46r5sz>图像案例</a><a href="/prompt-archive-site/videos/" data-astro-cid-tq46r5sz>视频案例</a><a href="/prompt-archive-site/notes/" data-astro-cid-tq46r5sz>方法笔记</a><a href="/prompt-archive-site/cases/" data-astro-cid-tq46r5sz>全站搜索</a></nav><div class="footer-col" data-astro-cid-tq46r5sz><p class="footer-label" data-astro-cid-tq46r5sz>本馆收录</p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>案例</span><b data-astro-cid-tq46r5sz>105</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>附实测成片</span><b data-astro-cid-tq46r5sz>2</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>方法笔记</span><b data-astro-cid-tq46r5sz>60</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>合集</span><b data-astro-cid-tq46r5sz>11</b></p></div></div><div class="footer-bottom" data-astro-cid-tq46r5sz><p data-astro-cid-tq46r5sz>「作者称已测试」表示来源声明，本站未复测。</p><p data-astro-cid-tq46r5sz>PA·ARCHIVE © 2026</p></div></div></footer></body><script type="module">function e(){document.querySelectorAll(`[data-masonry]`).forEach(e=>{let t=Array.from(e.querySelectorAll(`:scope > .m-cols > .m-col > *, :scope > *:not(.m-cols)`));if(e.querySelectorAll(`.m-cols`).forEach(e=>e.remove()),t.length===0)return;let n=window.matchMedia(`(max-width: 767px)`).matches?1:window.matchMedia(`(max-width: 1199px)`).matches?2:3,r=document.createElement(`div`);r.className=`m-cols`;let i=Array.from({length:n},()=>{let e=document.createElement(`div`);return e.className=`m-col`,e});t.forEach((e,t)=>i[t%n].appendChild(e)),e.appendChild(r),i.forEach(e=>r.appendChild(e))})}window.refreshMasonry=e,e();var t;window.addEventListener(`resize`,()=>{clearTimeout(t),t=setTimeout(e,150)});</script><script type="module">(()=>{let e=`.case-card, .note-card, .note-list-card`,t=window.matchMedia(`(prefers-reduced-motion: reduce)`),n=null,r=null,i=0;t.addEventListener?.(`change`,()=>{t.matches&&a()});function a(){if(!n)return;let e=n;e.classList.remove(`tilt-active`),e.classList.add(`tilt-return`),e.style.transform=``,clearTimeout(i),i=setTimeout(()=>e.classList.remove(`tilt-return`),320),n=null,r=null}document.addEventListener(`pointermove`,i=>{if(i.pointerType!==`mouse`||!i.isPrimary||t.matches)return;let o=i.target instanceof Element?i.target.closest(e):null;if(o!==n){if(a(),!o)return;n=o,r=n.getBoundingClientRect(),n.classList.add(`tilt-active`),n.classList.remove(`tilt-return`)}if(!n||!r)return;let s=(i.clientX-r.left)/r.width-.5,c=(i.clientY-r.top)/r.height-.5,l=Math.max(-1,Math.min(1,s*2))*4.5,u=Math.max(-1,Math.min(1,c*2))*-4.5;n.style.transform=`perspective(1100px) rotateX(${u.toFixed(3)}deg) rotateY(${l.toFixed(3)}deg) translateY(-3px)`},{passive:!0}),document.addEventListener(`pointerleave`,()=>a()),document.addEventListener(`pointerdown`,t=>{(t.target instanceof Element?t.target.closest(e):null)!==n&&a()},{passive:!0}),window.addEventListener(`blur`,()=>a()),window.addEventListener(`scroll`,()=>a(),{passive:!0})})();</script></html><script type="module">function e(){document.querySelectorAll(`.prose pre`).forEach(e=>{if(e.closest(`.code-panel`))return;let t=e.querySelector(`code`),n=(t??e).textContent??``,r=t?.className.match(/language-([\w+-]+)/)?.[1]??`text`,i=n.replace(/\n$/,``).split(`
+</div><section class="note-related" aria-label="关联案例" data-astro-cid-vex5zuxs><h2 class="section-title" style="font-size:var(--fs-20)" data-astro-cid-vex5zuxs><span class="icon" style="width:18px;height:18px" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 11.5a4 4 0 0 1 0-5.6l1.4-1.4a4 4 0 0 1 5.6 5.6l-1.4 1.4"/><path d="M11.5 8.5a4 4 0 0 1 0 5.6l-1.4 1.4a4 4 0 0 1-5.6-5.6l1.4-1.4"/></svg></span> 应用这些写法的案例</h2><div class="grid-cases" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr));margin-top:var(--sp-16)" data-astro-cid-vex5zuxs><article class="case-card" data-copy-context data-medium="video" data-topic="叙事短片" data-evidence="film-attached" data-search="圣诞夜雪街追逐
+叙事短片
+五镜圣诞夜雪街追逐：看似惊险的追逐实为圣诞礼物降临，用子弹时间放大魔法瞬间，收束在女孩自拍杆的 vlog 质感。附两张输入参考图与实测成片。
+附实测成片
+追逐 圣诞 反转 多镜头 参考图锚定
+【全局设定】
+
+核心风格：超写实真人奇幻短片，电影感画质，35mm胶片颗粒质感，浅景深，雪花与灯串光斑细节丰富。
+
+影片基调：惊险追逐反转为温暖惊喜，圣诞魔法奇遇感，轻快而不失幽默。
+
+光线设计：圣诞夜街道，两侧圣诞树彩灯与市集摊位、橱窗的暖黄光为主，夜蓝天空与雪地冷蓝反光为辅，冷蓝环境与暖黄装饰交织，雪花在灯光中呈现亮斑。
+
+导演意图：一场看似惊险的追逐实为圣诞礼物的降临——用子弹时间放大魔法瞬间，收束在女孩用自拍杆记录此刻的vlog质感上，传递“惊喜会追上你”的圣诞情绪。
+
+
+【参考图】
+
+图片1作为女孩的视觉锚定：20岁中国女性，深棕色头发盘成高圆形发髻、额前无厚重刘海、脸颊两侧留细碎发丝，戴蓝色空顶运动遮阳帽，穿白色宽松连帽卫衣（胸前印黑色字母与勾形图案、腹部大口袋、袖口下摆罗纹收口）、黑色紧身运动长裤、白色中筒运动袜、米白色厚底运动鞋；只参考图片1中人物的五官、发型、服装与配色，不参考图片中的多视图排列、白色背景与站立姿势。
+
+图片2作为雪夜街道与追逐瞬间的视觉锚定：夜晚雪地街道，两侧圣诞树挂满彩色灯串、红球与树顶星星，木制市集摊位透出暖黄灯光，背景处有零星穿冬装的行人；空中飘着大雪，地面积雪上有车辙与杂乱足迹；红色雪橇带金色包边与弯曲金色滑橇、侧面有白色雪花纹样，两只棕白毛色驯鹿鹿角分叉、佩戴红色挽具、腾空时昂首张嘴；圣诞老人穿红袍白边、戴红帽与白长胡坐在雪橇内。只参考场景环境与雪橇、驯鹿、圣诞老人的造型和配色；女孩形象一律以图片1为准、不参考本图中的女孩；不采用图中的图形化雪花与鱼眼畸变。
+
+
+【镜头】
+
+shot 01（0–2.5秒）
+
+镜头：35mm全景，摄影机位于女孩前方约3米、肩部高度，随她倒退移动跟拍，与她的距离和高度保持不变；女孩位于画面中央，积雪街道与两侧圣诞灯串向画面深处延伸。起幅：大全景，女孩从街道深处跑向镜头；落幅：中景，女孩面部清晰，她身后的街道深处亮起圣诞车灯光。
+
+拍摄内容：故事开篇。图片2锚定的雪夜街道场景：两侧的圣诞树挂满彩色灯串与红球、树顶亮着星星，木制市集摊位透出暖黄灯光，背景处有零星穿冬装的行人；天空降着大雪，路面覆盖厚积雪，雪面上有车辙印与杂乱的脚印。图片1锚定的女孩右手持黑色自拍杆，沿街道向镜头方向慢跑，呼出白色哈气。她身后的街道深处，两鹿拉着的圣诞车车灯亮起，正向她的方向疾驰逼近。环境音：轻快圣诞音乐、踩雪声、由远及近的鹿铃。
+
+
+shot 02（2.5–4.5秒）
+
+镜头：35mm中景，摄影机位于女孩侧前方，随她移动跟拍；起幅：女孩侧面中景；落幅：她已转回身、身体前倾加速奔跑的中景。
+
+拍摄内容：承接上一镜，鹿铃与雪橇滑行声从她身后骤近。图片1锚定的女孩边跑边回头看向身后的圣诞车，眼睛睁大、嘴微张，满脸惊讶；随即转回身发力向前奔跑，手臂摆幅加大，脚下溅起雪沫，自拍杆始终握在右手。环境音：急促鹿铃、急促踩雪声与呼吸声。
+
+
+shot 03（4.5–9.5秒）
+
+镜头：24mm广角。前半镜为正常速度：摄影机贴近疾驰的圣诞车侧面，拍摄圣诞老人微笑驾绳、两鹿蹬雪跃起；两鹿跃起的瞬间时间膨胀为超慢动作，摄影机随之以腾空的圣诞车为中心缓慢环绕，雪花在空中近乎静止悬浮，环绕中心与半径保持恒定。起幅：圣诞老人与两鹿同框的中近景（正常速度）；落幅：圣诞老人掷出礼物袋、袋子刚离开手沿缓慢抛物线飞出的瞬间（超慢动作）。
+
+拍摄内容：承接上一镜，圣诞车追至女孩身后（雪橇、驯鹿与圣诞老人的造型与图片2锚定一致）。圣诞老人微微一笑，双手紧握缰绳，他前方的两只驯鹿头微低、四肢蹬起雪雾，连车带鹿从女孩身后腾空跃起；时间随即膨胀为超慢动作，连车带鹿从女孩头顶上方低空飞越，鹿蹄与车身掠过处雪花悬停，车底铃铛与缰绳在慢动作中轻微浮动；子弹时间中，圣诞老人从左手边拿起红色礼物袋，自空中车上向女孩方向掷出，礼物袋袋口微微张开。图片1锚定的女孩位于画面边缘，发丝与卫衣抽绳细微浮动。环境音：起幅为风声、鹿铃与雪橇木架的吱呀声，跃起后声音随慢动作低沉拉长、几近静止。
+
+
+shot 04（9.5–11.5秒）
+
+镜头：50mm中近景，摄影机位于女孩侧前方、与她视线等高，机位固定，超慢动作贯穿全镜；起幅：女孩缓慢抬头、目光迎向从头顶上方缓缓落下的红色礼物袋；落幅：礼物袋落入她怀中、她双臂收拢抱住。
+
+拍摄内容：承接上一镜，红色礼物袋从女孩头顶上方的空中沿缓慢的弧线落下。超慢动作中，图片1锚定的女孩缓慢抬起头，惊讶地望向从上方缓缓落下的红色礼物袋；袋子落入她怀中，她双臂顺势收拢抱住，布袋在怀里轻轻下坠又回弹，细雪在肩头与帽檐缓慢积落。环境音：低沉放慢的心跳声、布料轻响。
+
+
+shot 05（11.5–15秒）
+
+镜头：35mm全景，摄影机位于街道侧面、与女孩等高，位置固定；起幅：圣诞车带着雪雾从空中落下、砸进雪面；落幅：女孩举起自拍杆对准自己与身后飘雪的街道，画面定格。
+
+拍摄内容：承接上一镜，圣诞车快速落在女孩前方数米的街道上，鹿蹄落地刨起雪雾，随即继续向前疾驰，车影与灯光在雪雾中快速缩小远去。图片1锚定的女孩怀抱礼物袋站在原地，低头看袋，眼神从惊吓渐渐转为惊喜，嘴角上扬露出微笑；她举起手中自拍杆对准自己和身后飘雪的圣诞街道，拍下这个时刻，呼出一口白气。环境音：落地闷响、鹿铃远去、轻快圣诞音乐渐起。
+"><div class="card-media"><div class="photo"><img src="/prompt-archive-site/media/d0046d3a9c1a05e6-h264-720p-v1-poster.png" alt="圣诞夜雪街追逐 实测成片画面" loading="lazy"></div></div><div class="card-holes" aria-hidden="true"></div><div class="card-body"><div class="card-meta"><span>PA-001</span><span>视频</span><span class="evidence-badge evidence-attached"><span class="icon" style="width:12px;height:12px" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4.8v10.4a.6.6 0 0 0 .92.5l8.1-5.2a.6.6 0 0 0 0-1L7.92 4.3a.6.6 0 0 0-.92.5z"/></svg></span>附实测成片</span></div><h3 class="card-title" title="圣诞夜雪街追逐"><a class="card-detail-link" href="/prompt-archive-site/cases/christmas-snow-chase/"><span class="card-title-text">圣诞夜雪街追逐</span></a></h3><p class="card-summary">五镜圣诞夜雪街追逐：看似惊险的追逐实为圣诞礼物降临，用子弹时间放大魔法瞬间，收束在女孩自拍杆的 Vlog 质感。附两张输入参考图与实测成片。</p><div class="card-tags"><span class="tag">叙事短片</span><span class="tag">追逐</span><span class="tag">圣诞</span></div><div class="card-copy-row"><button class="copy-btn" type="button" data-copy-button data-copy-source="card-prompt-christmas-snow-chase" data-copy-slug="christmas-snow-chase" data-copy-title="圣诞夜雪街追逐" data-copy-href="/prompt-archive-site/cases/christmas-snow-chase/"><span class="icon" style="width:16px;height:16px" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="10.5" height="10.5" rx="1.5"/><path d="M5.5 13.5h-.7A1.8 1.8 0 0 1 3 11.7V4.8A1.8 1.8 0 0 1 4.8 3h6.9a1.8 1.8 0 0 1 1.8 1.8v.7"/></svg></span><span data-copy-text>复制提示词</span></button><span class="copy-feedback" data-copy-feedback aria-live="polite"></span></div></div><script type="application/json" id="card-prompt-christmas-snow-chase">"【全局设定】\n\n核心风格：超写实真人奇幻短片，电影感画质，35mm胶片颗粒质感，浅景深，雪花与灯串光斑细节丰富。\n\n影片基调：惊险追逐反转为温暖惊喜，圣诞魔法奇遇感，轻快而不失幽默。\n\n光线设计：圣诞夜街道，两侧圣诞树彩灯与市集摊位、橱窗的暖黄光为主，夜蓝天空与雪地冷蓝反光为辅，冷蓝环境与暖黄装饰交织，雪花在灯光中呈现亮斑。\n\n导演意图：一场看似惊险的追逐实为圣诞礼物的降临——用子弹时间放大魔法瞬间，收束在女孩用自拍杆记录此刻的Vlog质感上，传递“惊喜会追上你”的圣诞情绪。\n\n\n【参考图】\n\n图片1作为女孩的视觉锚定：20岁中国女性，深棕色头发盘成高圆形发髻、额前无厚重刘海、脸颊两侧留细碎发丝，戴蓝色空顶运动遮阳帽，穿白色宽松连帽卫衣（胸前印黑色字母与勾形图案、腹部大口袋、袖口下摆罗纹收口）、黑色紧身运动长裤、白色中筒运动袜、米白色厚底运动鞋；只参考图片1中人物的五官、发型、服装与配色，不参考图片中的多视图排列、白色背景与站立姿势。\n\n图片2作为雪夜街道与追逐瞬间的视觉锚定：夜晚雪地街道，两侧圣诞树挂满彩色灯串、红球与树顶星星，木制市集摊位透出暖黄灯光，背景处有零星穿冬装的行人；空中飘着大雪，地面积雪上有车辙与杂乱足迹；红色雪橇带金色包边与弯曲金色滑橇、侧面有白色雪花纹样，两只棕白毛色驯鹿鹿角分叉、佩戴红色挽具、腾空时昂首张嘴；圣诞老人穿红袍白边、戴红帽与白长胡坐在雪橇内。只参考场景环境与雪橇、驯鹿、圣诞老人的造型和配色；女孩形象一律以图片1为准、不参考本图中的女孩；不采用图中的图形化雪花与鱼眼畸变。\n\n\n【镜头】\n\nShot 01（0–2.5秒）\n\n镜头：35mm全景，摄影机位于女孩前方约3米、肩部高度，随她倒退移动跟拍，与她的距离和高度保持不变；女孩位于画面中央，积雪街道与两侧圣诞灯串向画面深处延伸。起幅：大全景，女孩从街道深处跑向镜头；落幅：中景，女孩面部清晰，她身后的街道深处亮起圣诞车灯光。\n\n拍摄内容：故事开篇。图片2锚定的雪夜街道场景：两侧的圣诞树挂满彩色灯串与红球、树顶亮着星星，木制市集摊位透出暖黄灯光，背景处有零星穿冬装的行人；天空降着大雪，路面覆盖厚积雪，雪面上有车辙印与杂乱的脚印。图片1锚定的女孩右手持黑色自拍杆，沿街道向镜头方向慢跑，呼出白色哈气。她身后的街道深处，两鹿拉着的圣诞车车灯亮起，正向她的方向疾驰逼近。环境音：轻快圣诞音乐、踩雪声、由远及近的鹿铃。\n\n\nShot 02（2.5–4.5秒）\n\n镜头：35mm中景，摄影机位于女孩侧前方，随她移动跟拍；起幅：女孩侧面中景；落幅：她已转回身、身体前倾加速奔跑的中景。\n\n拍摄内容：承接上一镜，鹿铃与雪橇滑行声从她身后骤近。图片1锚定的女孩边跑边回头看向身后的圣诞车，眼睛睁大、嘴微张，满脸惊讶；随即转回身发力向前奔跑，手臂摆幅加大，脚下溅起雪沫，自拍杆始终握在右手。环境音：急促鹿铃、急促踩雪声与呼吸声。\n\n\nShot 03（4.5–9.5秒）\n\n镜头：24mm广角。前半镜为正常速度：摄影机贴近疾驰的圣诞车侧面，拍摄圣诞老人微笑驾绳、两鹿蹬雪跃起；两鹿跃起的瞬间时间膨胀为超慢动作，摄影机随之以腾空的圣诞车为中心缓慢环绕，雪花在空中近乎静止悬浮，环绕中心与半径保持恒定。起幅：圣诞老人与两鹿同框的中近景（正常速度）；落幅：圣诞老人掷出礼物袋、袋子刚离开手沿缓慢抛物线飞出的瞬间（超慢动作）。\n\n拍摄内容：承接上一镜，圣诞车追至女孩身后（雪橇、驯鹿与圣诞老人的造型与图片2锚定一致）。圣诞老人微微一笑，双手紧握缰绳，他前方的两只驯鹿头微低、四肢蹬起雪雾，连车带鹿从女孩身后腾空跃起；时间随即膨胀为超慢动作，连车带鹿从女孩头顶上方低空飞越，鹿蹄与车身掠过处雪花悬停，车底铃铛与缰绳在慢动作中轻微浮动；子弹时间中，圣诞老人从左手边拿起红色礼物袋，自空中车上向女孩方向掷出，礼物袋袋口微微张开。图片1锚定的女孩位于画面边缘，发丝与卫衣抽绳细微浮动。环境音：起幅为风声、鹿铃与雪橇木架的吱呀声，跃起后声音随慢动作低沉拉长、几近静止。\n\n\nShot 04（9.5–11.5秒）\n\n镜头：50mm中近景，摄影机位于女孩侧前方、与她视线等高，机位固定，超慢动作贯穿全镜；起幅：女孩缓慢抬头、目光迎向从头顶上方缓缓落下的红色礼物袋；落幅：礼物袋落入她怀中、她双臂收拢抱住。\n\n拍摄内容：承接上一镜，红色礼物袋从女孩头顶上方的空中沿缓慢的弧线落下。超慢动作中，图片1锚定的女孩缓慢抬起头，惊讶地望向从上方缓缓落下的红色礼物袋；袋子落入她怀中，她双臂顺势收拢抱住，布袋在怀里轻轻下坠又回弹，细雪在肩头与帽檐缓慢积落。环境音：低沉放慢的心跳声、布料轻响。\n\n\nShot 05（11.5–15秒）\n\n镜头：35mm全景，摄影机位于街道侧面、与女孩等高，位置固定；起幅：圣诞车带着雪雾从空中落下、砸进雪面；落幅：女孩举起自拍杆对准自己与身后飘雪的街道，画面定格。\n\n拍摄内容：承接上一镜，圣诞车快速落在女孩前方数米的街道上，鹿蹄落地刨起雪雾，随即继续向前疾驰，车影与灯光在雪雾中快速缩小远去。图片1锚定的女孩怀抱礼物袋站在原地，低头看袋，眼神从惊吓渐渐转为惊喜，嘴角上扬露出微笑；她举起手中自拍杆对准自己和身后飘雪的圣诞街道，拍下这个时刻，呼出一口白气。环境音：落地闷响、鹿铃远去、轻快圣诞音乐渐起。\n"</script></article><article class="case-card" data-copy-context data-medium="video" data-topic="变装与图像锚定" data-evidence="film-attached" data-search="白底变装旋转
+变装与图像锚定
+白色影棚中的七套造型变装短片：模特原地「定格亮相＋旋身 360°」，换装在旋转中完成，机位全程不动。八张输入参考图锚定模特与各套造型，附实测成片。
+附实测成片
+变装 影棚 多套造型 图像锚定 固定机位
+【全局设定】
+
+核心风格：超写实时尚影棚变装短片，杂志大片质感；高调纯白无缝背景，除模特与随身配饰外画面中无任何其他人物与元素，服装面料、材质纹理与配饰细节清晰锐利，皮肤与发丝质感真实，画面干净通透、颗粒细腻。
+
+影片基调：冷感高级的甜酷能量——模特气质清冷、笃定、不好惹，全程不笑；节奏轻快利落，造型从清新到锋利层层递进，七次亮相各不相同。
+
+光线设计：高调影棚布光——大面积柔光从正前方均匀照亮模特，白色无缝背景被均匀打亮至接近纯白；人物脚下保留极淡的接触影以稳定重心；面部由正面柔光塑造，无强烈明暗对比，妆面、发丝与服装材质细节清晰。
+
+导演意图：机位与构图全程不变——模特站在原地，用&quot;定格亮相＋原地旋身&quot;的连续循环完成七套造型更替：每一次360°旋身都在旋转过程之中完成整套换装，观众看到的是不间断的变装魔法；每一套造型配一个专属姿势与完整配饰，冷感表情贯穿始终。
+
+【参考图】
+
+图片1（对应文件：`~/downloads/chatgpt image 2026年9月16日 21_02_29.png`）作为模特的视觉锚定：年轻东亚女性模特，肤色白皙，鹅蛋脸，五官清秀，深棕色头发盘成高丸子头（头顶蓬松、额前与鬓角留自然碎发），砖红色唇妆，神情冷淡疏离；身高约168cm，身材纤细匀称。只参考图片1中人物的五官、脸型、肤色、发型与身材比例，不参考图中的多视图排列、白色背景与直立站姿；以下七套造型图仅用于服装、鞋包与配饰的锚定，不参考其平铺排列方式，人物上身效果一律以图片1为准。
+
+图片2（对应文件：`~/downloads/image (6).png`）作为第1套造型（灰夹克泡泡裙）的视觉锚定：浅灰色翻领拉链夹克（落肩宽松、银色拉链），内搭白色圆领t恤；白色泡泡短裙（腰部平整、下摆收褶蓬起）；棕色麂皮复古低帮板鞋（白色细条纹、生胶色鞋底）；深棕色编织纹理单肩包；金色小圈耳环。全套单品与配色以图片2为准。
+
+图片3（对应文件：`~/downloads/image (2).png`）作为第2套造型（黑白极简）的视觉锚定：黑色圆领短袖t恤（宽松微落肩）；米白色抽绳束脚长裤（宽松直筒、膝部横向拼接缝线）；黑白横条纹编织托特包（双肩带、手工编织纹理）；黑色大方框墨镜（深灰渐变镜片）；金色粗圈耳环、金色叠戴手镯；黑色人字拖。全套单品与配色以图片3为准。
+
+图片4（对应文件：`~/downloads/image (10).png`）作为第3套造型（海滨浅蓝）的视觉锚定：浅蓝色粗针织开衫（麻花纹理、银色纽扣），内搭白色修身背心；米白色高腰阔腿长裤（松紧腰、垂坠感面料）；黄色棒球帽（正面红白蓝配色鱼形贴布与字母刺绣）；彩色横条纹钩针托特包（红黄蓝绿粉与米白相间）；黑色人字拖。全套单品与配色以图片4为准。
+
+图片5（对应文件：`~/downloads/image (1).png`）作为第4套造型（酒红运动）的视觉锚定：米白底酒红与灰褐细横条纹翻领polo衫（藏青色纯色翻领）；深棕色运动短裤（侧面白色细条纹、裤脚小标）；酒红色麂皮复古低帮运动鞋（奶油色细条纹与金色侧标、生胶色鞋底）；深红色棒球帽（正面白色字母刺绣）；玳瑁椭圆框墨镜（深色镜片）；金色链带腕表（圆形白盘）；驼色麂皮大号单肩包。全套单品与配色以图片5为准。
+
+图片6（对应文件：`~/downloads/image (9).png`）作为第5套造型（蓝白条纹）的视觉锚定：蓝白细横条纹翻领polo衫（纯蓝色领口）；白色高腰阔腿牛仔裤；浅蓝色麂皮低帮板鞋（白色细条纹、生胶色鞋底）；金色大圈耳环；米色手提包（打结式手柄）。全套单品与配色以图片6为准。
+
+图片7（对应文件：`~/downloads/image (8).png`）作为第6套造型（牛仔叠穿）的视觉锚定：浅蓝水洗牛仔衬衫（敞穿、银色纽扣、胸前贴袋）；白色基础款t恤；印花真丝方巾（米白、浅蓝与橙棕复古纹样，系于颈间）；黑色垂坠长半裙；玳瑁粗框方形墨镜；棕色编织托特包（双细提手）；棕色网眼编织平底鞋（金属链条珠饰搭扣）。全套单品与配色以图片7为准。
+
+图片8（对应文件：`~/downloads/image (3).png`）作为第7套造型（黑西装）的视觉锚定：黑色宽松直筒西装外套（立体垫肩、宽平驳领、敞开穿）；白色基础款t恤；浅灰蓝色水洗直筒牛仔裤；深棕色麂皮运动板鞋（白色细条纹、生胶色鞋底）；深棕色打孔皮革水桶包（金色链条与链条流苏、正面金色标志）；金丝框茶色镜片墨镜；金色粗圈耳环。全套单品与配色以图片8为准。
+
+【镜头】
+
+shot 01（0–1.5秒）
+
+镜头：50mm全身固定机位：摄影机位于模特正前方约4米，机位高度约与模特腰部齐平，镜头保持水平；模特全身居中，头顶与脚下留出均匀留白，全身全程完整入画；机位位置、朝向与高度全程固定，无任何推拉摇移或变焦。起幅：模特以第1套造型（灰夹克泡泡裙）的定格姿态正面站定；落幅：旋身完成，以第2套造型（黑白极简）正面落定。
+
+拍摄内容：白色无缝影棚。@图片1锚定的模特身穿第1套造型（浅灰拉链夹克、白t、白色泡泡短裙、棕色麂皮板鞋、深棕色编织单肩包挎于肩侧、金色小圈耳环；细节以@图片2为准）：右手虎口卡在腰侧、左臂自然下垂，重心落在右腿、左腿微前点地，肩线放松，下巴微抬，表情冷感、目光锐利直视镜头、不笑。保持约0.7秒后，她以左脚为轴、原地向自身左侧轻盈旋身360°（约0.8秒完成）：起步轻快、转速在转体中段达到峰值，泡泡裙裙摆随转体扬起又落下，转体带轻微动态模糊；整套换装在旋身过程之中完成，旋转的动势自然掩蔽切换；旋身届满收势落定，正面朝向镜头，已换为第2套造型（黑色t恤、米白束脚裤、黑白条纹托特包、墨镜；细节以@图片3为准）。环境音：轻快电子音乐贯穿、点地声与衣料轻响。
+
+shot 02（1.5–3.0秒）
+
+镜头：与 shot 01 完全相同的固定机位与构图（正前方约4米、与腰部齐平、镜头水平、全身居中、全程无任何运动）。起幅：模特以第2套造型（黑白极简）的定格姿态正面站定；落幅：旋身完成，以第3套造型（海滨浅蓝）正面落定。
+
+拍摄内容：同一白色影棚、同一机位。模特身穿第2套造型（黑色t恤、米白束脚长裤、黑白条纹托特包挎在右肩、黑色大方框墨镜、金色耳环与手镯；细节以@图片3为准）：双臂在胸前交叉抱臂，头微微向右侧倾约5°，隔着墨镜直视镜头，表情冷感、不笑。保持约0.7秒后，以左脚为轴、原地向自身左侧旋身360°（约0.8秒完成）：起步轻快、转速中段达到峰值，束脚裤裤脚随转体轻摆，转体带轻微动态模糊；整套换装在旋身过程之中完成，旋转的动势自然掩蔽切换；旋身届满收势落定，正面朝向镜头，已换为第3套造型（浅蓝针织开衫、白背心、米白阔腿裤、黄色棒球帽；细节以@图片4为准）。环境音：轻快电子音乐贯穿、点地声与衣料轻响。
+
+shot 03（3.0–4.5秒）
+
+镜头：与 shot 01 完全相同的固定机位与构图（正前方约4米、与腰部齐平、镜头水平、全身居中、全程无任何运动）。起幅：模特以第3套造型（海滨浅蓝）的定格姿态正面站定；落幅：旋身完成，以第4套造型（酒红运动）正面落定。
+
+拍摄内容：同一白色影棚、同一机位。模特身穿第3套造型（浅蓝针织开衫、白色背心、米白阔腿长裤、黄色棒球帽、彩色条纹钩针托特包挎于肩侧、黑色人字拖；细节以@图片4为准）：右手抬起、指尖轻扶黄色棒球帽帽檐，左手插进阔腿裤口袋，髋部微微向右侧顶出，眼神从帽檐下平静看向镜头，表情冷感、不笑。保持约0.7秒后，以左脚为轴、原地向自身左侧旋身360°（约0.8秒完成）：阔腿裤脚与开衫下摆随转体轻摆，转体带轻微动态模糊；整套换装在旋身过程之中完成，旋转的动势自然掩蔽切换；旋身届满收势落定，正面朝向镜头，已换为第4套造型（条纹polo衫、深棕运动短裤、酒红运动鞋、深红棒球帽、玳瑁墨镜；细节以@图片5为准）。环境音：轻快电子音乐贯穿、点地声与衣料轻响。
+
+shot 04（4.5–6.0秒）
+
+镜头：与 shot 01 完全相同的固定机位与构图（正前方约4米、与腰部齐平、镜头水平、全身居中、全程无任何运动）。起幅：模特以第4套造型（酒红运动）的定格姿态正面站定；落幅：旋身完成，以第5套造型（蓝白条纹）正面落定。
+
+拍摄内容：同一白色影棚、同一机位。模特身穿第4套造型（酒红与灰褐细条纹翻领polo衫、深棕运动短裤、酒红麂皮运动鞋、深红棒球帽、玳瑁墨镜、驼色麂皮单肩包挎于肩侧；细节以@图片5为准）：双手拇指勾在运动短裤裤腰两侧、双臂自然弯曲外张，重心后移成松弛站姿，隔着玳瑁墨镜直视镜头，下巴微抬，表情冷感、不笑。保持约0.7秒后，以左脚为轴、原地向自身左侧旋身360°（约0.8秒完成）：帽檐下缘与发丝随转体轻动，转体带轻微动态模糊；整套换装在旋身过程之中完成，旋转的动势自然掩蔽切换；旋身届满收势落定，正面朝向镜头，已换为第5套造型（条纹polo衫、白色阔腿牛仔裤、浅蓝板鞋、米色手提包；细节以@图片6为准）。环境音：轻快电子音乐贯穿、点地声与衣料轻响。
+
+shot 05（6.0–7.5秒）
+
+镜头：与 shot 01 完全相同的固定机位与构图（正前方约4米、与腰部齐平、镜头水平、全身居中、全程无任何运动）。起幅：模特以第5套造型（蓝白条纹）的定格姿态正面站定；落幅：旋身完成，以第6套造型（牛仔叠穿）正面落定。
+
+拍摄内容：同一白色影棚、同一机位。模特身穿第5套造型（蓝白细条纹翻领polo衫、白色高腰阔腿牛仔裤、浅蓝麂皮板鞋、金色大圈耳环；细节以@图片6为准）：右手将米色手提包自然拎在身侧，左手插进牛仔裤前袋，右肩微沉、肩线一高一低，头微侧，表情冷感、目光平静直视镜头、不笑。保持约0.7秒后，以左脚为轴、原地向自身左侧旋身360°（约0.8秒完成）：直筒牛仔裤脚轻摆，转体带轻微动态模糊；整套换装在旋身过程之中完成，旋转的动势自然掩蔽切换；旋身届满收势落定，正面朝向镜头，已换为第6套造型（牛仔衬衫、白t、印花丝巾、黑色长半裙、棕编织托特包；细节以@图片7为准）。环境音：轻快电子音乐贯穿、点地声与衣料轻响。
+
+shot 06（7.5–9.0秒）
+
+镜头：与 shot 01 完全相同的固定机位与构图（正前方约4米、与腰部齐平、镜头水平、全身居中、全程无任何运动）。起幅：模特以第6套造型（牛仔叠穿）的定格姿态正面站定；落幅：旋身完成，以第7套造型（黑西装）正面落定。
+
+拍摄内容：同一白色影棚、同一机位。模特身穿第6套造型（敞穿牛仔衬衫、白t、颈间印花丝巾、黑色垂坠长半裙、棕色编织托特包挎于肩侧、棕色网眼平底鞋、玳瑁墨镜；细节以@图片7为准）：右手拇指与食指轻捏墨镜框下沿、将墨镜微微下拉，眼睛越过镜框直视镜头；左手自然垂放、指尖轻贴裙侧；头微侧，表情冷感、不笑。保持约0.7秒后，以左脚为轴、原地向自身左侧旋身360°（约0.8秒完成）：黑色长半裙裙摆随转体大幅扬起、呈离心弧线展开，转体带轻微动态模糊；整套换装在旋身过程之中完成，旋转的动势自然掩蔽切换；旋身届满收势落定，正面朝向镜头，已换为第7套造型（黑色西装外套、白t、浅灰蓝牛仔裤、深棕色麂皮板鞋、深棕皮革水桶包；细节以@图片8为准）。环境音：轻快电子音乐贯穿、点地声与衣料轻响。
+
+shot 07（9.0–10.0秒）
+
+镜头：与 shot 01 完全相同的固定机位与构图（正前方约4米、与腰部齐平、镜头水平、全身居中、全程无任何运动）。起幅：模特以第7套造型（黑西装）的定格姿态正面站定；落幅：维持最终定格，画面在静止中收尾。
+
+拍摄内容：同一白色影棚、同一机位。模特身穿第7套造型（黑色垫肩西装外套敞开、白t、浅灰蓝水洗直筒牛仔裤、深棕色麂皮板鞋、深棕色打孔皮革水桶包挎于肩侧、金丝框墨镜、金色粗圈耳环；细节以@图片8为准）：右手插进牛仔裤口袋，左手指尖轻捏西装前襟向外一拢、呈敞襟姿态，重心微沉，下巴微抬，表情冷感、目光锐利直视镜头、不笑，西装敞襟随呼吸轻微起伏。她维持这一最终亮相的定格（约1.0秒），下巴略微再抬、眼神更冷定，直至画面结束。环境音：音乐落定收尾、衣料轻响。
+"><div class="card-media"><div class="photo"><img src="/prompt-archive-site/media/18f907e2923216c6-h264-720p-v1-poster.png" alt="白底变装旋转 实测成片画面" loading="lazy"></div></div><div class="card-holes" aria-hidden="true"></div><div class="card-body"><div class="card-meta"><span>PA-002</span><span>视频</span><span class="evidence-badge evidence-attached"><span class="icon" style="width:12px;height:12px" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M7 4.8v10.4a.6.6 0 0 0 .92.5l8.1-5.2a.6.6 0 0 0 0-1L7.92 4.3a.6.6 0 0 0-.92.5z"/></svg></span>附实测成片</span></div><h3 class="card-title" title="白底变装旋转"><a class="card-detail-link" href="/prompt-archive-site/cases/white-bg-outfit-spin/"><span class="card-title-text">白底变装旋转</span></a></h3><p class="card-summary">白色影棚中的七套造型变装短片：模特原地「定格亮相＋旋身 360°」，换装在旋转中完成，机位全程不动。八张输入参考图锚定模特与各套造型，附实测成片。</p><div class="card-tags"><span class="tag">变装与图像锚定</span><span class="tag">变装</span><span class="tag">影棚</span></div><div class="card-copy-row"><button class="copy-btn" type="button" data-copy-button data-copy-source="card-prompt-white-bg-outfit-spin" data-copy-slug="white-bg-outfit-spin" data-copy-title="白底变装旋转" data-copy-href="/prompt-archive-site/cases/white-bg-outfit-spin/"><span class="icon" style="width:16px;height:16px" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="10.5" height="10.5" rx="1.5"/><path d="M5.5 13.5h-.7A1.8 1.8 0 0 1 3 11.7V4.8A1.8 1.8 0 0 1 4.8 3h6.9a1.8 1.8 0 0 1 1.8 1.8v.7"/></svg></span><span data-copy-text>复制提示词</span></button><span class="copy-feedback" data-copy-feedback aria-live="polite"></span></div></div><script type="application/json" id="card-prompt-white-bg-outfit-spin">"【全局设定】\n\n核心风格：超写实时尚影棚变装短片，杂志大片质感；高调纯白无缝背景，除模特与随身配饰外画面中无任何其他人物与元素，服装面料、材质纹理与配饰细节清晰锐利，皮肤与发丝质感真实，画面干净通透、颗粒细腻。\n\n影片基调：冷感高级的甜酷能量——模特气质清冷、笃定、不好惹，全程不笑；节奏轻快利落，造型从清新到锋利层层递进，七次亮相各不相同。\n\n光线设计：高调影棚布光——大面积柔光从正前方均匀照亮模特，白色无缝背景被均匀打亮至接近纯白；人物脚下保留极淡的接触影以稳定重心；面部由正面柔光塑造，无强烈明暗对比，妆面、发丝与服装材质细节清晰。\n\n导演意图：机位与构图全程不变——模特站在原地，用\"定格亮相＋原地旋身\"的连续循环完成七套造型更替：每一次360°旋身都在旋转过程之中完成整套换装，观众看到的是不间断的变装魔法；每一套造型配一个专属姿势与完整配饰，冷感表情贯穿始终。\n\n【参考图】\n\n图片1（对应文件：`~/Downloads/ChatGPT Image 2026年9月16日 21_02_29.png`）作为模特的视觉锚定：年轻东亚女性模特，肤色白皙，鹅蛋脸，五官清秀，深棕色头发盘成高丸子头（头顶蓬松、额前与鬓角留自然碎发），砖红色唇妆，神情冷淡疏离；身高约168cm，身材纤细匀称。只参考图片1中人物的五官、脸型、肤色、发型与身材比例，不参考图中的多视图排列、白色背景与直立站姿；以下七套造型图仅用于服装、鞋包与配饰的锚定，不参考其平铺排列方式，人物上身效果一律以图片1为准。\n\n图片2（对应文件：`~/Downloads/image (6).png`）作为第1套造型（灰夹克泡泡裙）的视觉锚定：浅灰色翻领拉链夹克（落肩宽松、银色拉链），内搭白色圆领T恤；白色泡泡短裙（腰部平整、下摆收褶蓬起）；棕色麂皮复古低帮板鞋（白色细条纹、生胶色鞋底）；深棕色编织纹理单肩包；金色小圈耳环。全套单品与配色以图片2为准。\n\n图片3（对应文件：`~/Downloads/image (2).png`）作为第2套造型（黑白极简）的视觉锚定：黑色圆领短袖T恤（宽松微落肩）；米白色抽绳束脚长裤（宽松直筒、膝部横向拼接缝线）；黑白横条纹编织托特包（双肩带、手工编织纹理）；黑色大方框墨镜（深灰渐变镜片）；金色粗圈耳环、金色叠戴手镯；黑色人字拖。全套单品与配色以图片3为准。\n\n图片4（对应文件：`~/Downloads/image (10).png`）作为第3套造型（海滨浅蓝）的视觉锚定：浅蓝色粗针织开衫（麻花纹理、银色纽扣），内搭白色修身背心；米白色高腰阔腿长裤（松紧腰、垂坠感面料）；黄色棒球帽（正面红白蓝配色鱼形贴布与字母刺绣）；彩色横条纹钩针托特包（红黄蓝绿粉与米白相间）；黑色人字拖。全套单品与配色以图片4为准。\n\n图片5（对应文件：`~/Downloads/image (1).png`）作为第4套造型（酒红运动）的视觉锚定：米白底酒红与灰褐细横条纹翻领Polo衫（藏青色纯色翻领）；深棕色运动短裤（侧面白色细条纹、裤脚小标）；酒红色麂皮复古低帮运动鞋（奶油色细条纹与金色侧标、生胶色鞋底）；深红色棒球帽（正面白色字母刺绣）；玳瑁椭圆框墨镜（深色镜片）；金色链带腕表（圆形白盘）；驼色麂皮大号单肩包。全套单品与配色以图片5为准。\n\n图片6（对应文件：`~/Downloads/image (9).png`）作为第5套造型（蓝白条纹）的视觉锚定：蓝白细横条纹翻领Polo衫（纯蓝色领口）；白色高腰阔腿牛仔裤；浅蓝色麂皮低帮板鞋（白色细条纹、生胶色鞋底）；金色大圈耳环；米色手提包（打结式手柄）。全套单品与配色以图片6为准。\n\n图片7（对应文件：`~/Downloads/image (8).png`）作为第6套造型（牛仔叠穿）的视觉锚定：浅蓝水洗牛仔衬衫（敞穿、银色纽扣、胸前贴袋）；白色基础款T恤；印花真丝方巾（米白、浅蓝与橙棕复古纹样，系于颈间）；黑色垂坠长半裙；玳瑁粗框方形墨镜；棕色编织托特包（双细提手）；棕色网眼编织平底鞋（金属链条珠饰搭扣）。全套单品与配色以图片7为准。\n\n图片8（对应文件：`~/Downloads/image (3).png`）作为第7套造型（黑西装）的视觉锚定：黑色宽松直筒西装外套（立体垫肩、宽平驳领、敞开穿）；白色基础款T恤；浅灰蓝色水洗直筒牛仔裤；深棕色麂皮运动板鞋（白色细条纹、生胶色鞋底）；深棕色打孔皮革水桶包（金色链条与链条流苏、正面金色标志）；金丝框茶色镜片墨镜；金色粗圈耳环。全套单品与配色以图片8为准。\n\n【镜头】\n\nShot 01（0–1.5秒）\n\n镜头：50mm全身固定机位：摄影机位于模特正前方约4米，机位高度约与模特腰部齐平，镜头保持水平；模特全身居中，头顶与脚下留出均匀留白，全身全程完整入画；机位位置、朝向与高度全程固定，无任何推拉摇移或变焦。起幅：模特以第1套造型（灰夹克泡泡裙）的定格姿态正面站定；落幅：旋身完成，以第2套造型（黑白极简）正面落定。\n\n拍摄内容：白色无缝影棚。@图片1锚定的模特身穿第1套造型（浅灰拉链夹克、白T、白色泡泡短裙、棕色麂皮板鞋、深棕色编织单肩包挎于肩侧、金色小圈耳环；细节以@图片2为准）：右手虎口卡在腰侧、左臂自然下垂，重心落在右腿、左腿微前点地，肩线放松，下巴微抬，表情冷感、目光锐利直视镜头、不笑。保持约0.7秒后，她以左脚为轴、原地向自身左侧轻盈旋身360°（约0.8秒完成）：起步轻快、转速在转体中段达到峰值，泡泡裙裙摆随转体扬起又落下，转体带轻微动态模糊；整套换装在旋身过程之中完成，旋转的动势自然掩蔽切换；旋身届满收势落定，正面朝向镜头，已换为第2套造型（黑色T恤、米白束脚裤、黑白条纹托特包、墨镜；细节以@图片3为准）。环境音：轻快电子音乐贯穿、点地声与衣料轻响。\n\nShot 02（1.5–3.0秒）\n\n镜头：与 Shot 01 完全相同的固定机位与构图（正前方约4米、与腰部齐平、镜头水平、全身居中、全程无任何运动）。起幅：模特以第2套造型（黑白极简）的定格姿态正面站定；落幅：旋身完成，以第3套造型（海滨浅蓝）正面落定。\n\n拍摄内容：同一白色影棚、同一机位。模特身穿第2套造型（黑色T恤、米白束脚长裤、黑白条纹托特包挎在右肩、黑色大方框墨镜、金色耳环与手镯；细节以@图片3为准）：双臂在胸前交叉抱臂，头微微向右侧倾约5°，隔着墨镜直视镜头，表情冷感、不笑。保持约0.7秒后，以左脚为轴、原地向自身左侧旋身360°（约0.8秒完成）：起步轻快、转速中段达到峰值，束脚裤裤脚随转体轻摆，转体带轻微动态模糊；整套换装在旋身过程之中完成，旋转的动势自然掩蔽切换；旋身届满收势落定，正面朝向镜头，已换为第3套造型（浅蓝针织开衫、白背心、米白阔腿裤、黄色棒球帽；细节以@图片4为准）。环境音：轻快电子音乐贯穿、点地声与衣料轻响。\n\nShot 03（3.0–4.5秒）\n\n镜头：与 Shot 01 完全相同的固定机位与构图（正前方约4米、与腰部齐平、镜头水平、全身居中、全程无任何运动）。起幅：模特以第3套造型（海滨浅蓝）的定格姿态正面站定；落幅：旋身完成，以第4套造型（酒红运动）正面落定。\n\n拍摄内容：同一白色影棚、同一机位。模特身穿第3套造型（浅蓝针织开衫、白色背心、米白阔腿长裤、黄色棒球帽、彩色条纹钩针托特包挎于肩侧、黑色人字拖；细节以@图片4为准）：右手抬起、指尖轻扶黄色棒球帽帽檐，左手插进阔腿裤口袋，髋部微微向右侧顶出，眼神从帽檐下平静看向镜头，表情冷感、不笑。保持约0.7秒后，以左脚为轴、原地向自身左侧旋身360°（约0.8秒完成）：阔腿裤脚与开衫下摆随转体轻摆，转体带轻微动态模糊；整套换装在旋身过程之中完成，旋转的动势自然掩蔽切换；旋身届满收势落定，正面朝向镜头，已换为第4套造型（条纹Polo衫、深棕运动短裤、酒红运动鞋、深红棒球帽、玳瑁墨镜；细节以@图片5为准）。环境音：轻快电子音乐贯穿、点地声与衣料轻响。\n\nShot 04（4.5–6.0秒）\n\n镜头：与 Shot 01 完全相同的固定机位与构图（正前方约4米、与腰部齐平、镜头水平、全身居中、全程无任何运动）。起幅：模特以第4套造型（酒红运动）的定格姿态正面站定；落幅：旋身完成，以第5套造型（蓝白条纹）正面落定。\n\n拍摄内容：同一白色影棚、同一机位。模特身穿第4套造型（酒红与灰褐细条纹翻领Polo衫、深棕运动短裤、酒红麂皮运动鞋、深红棒球帽、玳瑁墨镜、驼色麂皮单肩包挎于肩侧；细节以@图片5为准）：双手拇指勾在运动短裤裤腰两侧、双臂自然弯曲外张，重心后移成松弛站姿，隔着玳瑁墨镜直视镜头，下巴微抬，表情冷感、不笑。保持约0.7秒后，以左脚为轴、原地向自身左侧旋身360°（约0.8秒完成）：帽檐下缘与发丝随转体轻动，转体带轻微动态模糊；整套换装在旋身过程之中完成，旋转的动势自然掩蔽切换；旋身届满收势落定，正面朝向镜头，已换为第5套造型（条纹Polo衫、白色阔腿牛仔裤、浅蓝板鞋、米色手提包；细节以@图片6为准）。环境音：轻快电子音乐贯穿、点地声与衣料轻响。\n\nShot 05（6.0–7.5秒）\n\n镜头：与 Shot 01 完全相同的固定机位与构图（正前方约4米、与腰部齐平、镜头水平、全身居中、全程无任何运动）。起幅：模特以第5套造型（蓝白条纹）的定格姿态正面站定；落幅：旋身完成，以第6套造型（牛仔叠穿）正面落定。\n\n拍摄内容：同一白色影棚、同一机位。模特身穿第5套造型（蓝白细条纹翻领Polo衫、白色高腰阔腿牛仔裤、浅蓝麂皮板鞋、金色大圈耳环；细节以@图片6为准）：右手将米色手提包自然拎在身侧，左手插进牛仔裤前袋，右肩微沉、肩线一高一低，头微侧，表情冷感、目光平静直视镜头、不笑。保持约0.7秒后，以左脚为轴、原地向自身左侧旋身360°（约0.8秒完成）：直筒牛仔裤脚轻摆，转体带轻微动态模糊；整套换装在旋身过程之中完成，旋转的动势自然掩蔽切换；旋身届满收势落定，正面朝向镜头，已换为第6套造型（牛仔衬衫、白T、印花丝巾、黑色长半裙、棕编织托特包；细节以@图片7为准）。环境音：轻快电子音乐贯穿、点地声与衣料轻响。\n\nShot 06（7.5–9.0秒）\n\n镜头：与 Shot 01 完全相同的固定机位与构图（正前方约4米、与腰部齐平、镜头水平、全身居中、全程无任何运动）。起幅：模特以第6套造型（牛仔叠穿）的定格姿态正面站定；落幅：旋身完成，以第7套造型（黑西装）正面落定。\n\n拍摄内容：同一白色影棚、同一机位。模特身穿第6套造型（敞穿牛仔衬衫、白T、颈间印花丝巾、黑色垂坠长半裙、棕色编织托特包挎于肩侧、棕色网眼平底鞋、玳瑁墨镜；细节以@图片7为准）：右手拇指与食指轻捏墨镜框下沿、将墨镜微微下拉，眼睛越过镜框直视镜头；左手自然垂放、指尖轻贴裙侧；头微侧，表情冷感、不笑。保持约0.7秒后，以左脚为轴、原地向自身左侧旋身360°（约0.8秒完成）：黑色长半裙裙摆随转体大幅扬起、呈离心弧线展开，转体带轻微动态模糊；整套换装在旋身过程之中完成，旋转的动势自然掩蔽切换；旋身届满收势落定，正面朝向镜头，已换为第7套造型（黑色西装外套、白T、浅灰蓝牛仔裤、深棕色麂皮板鞋、深棕皮革水桶包；细节以@图片8为准）。环境音：轻快电子音乐贯穿、点地声与衣料轻响。\n\nShot 07（9.0–10.0秒）\n\n镜头：与 Shot 01 完全相同的固定机位与构图（正前方约4米、与腰部齐平、镜头水平、全身居中、全程无任何运动）。起幅：模特以第7套造型（黑西装）的定格姿态正面站定；落幅：维持最终定格，画面在静止中收尾。\n\n拍摄内容：同一白色影棚、同一机位。模特身穿第7套造型（黑色垫肩西装外套敞开、白T、浅灰蓝水洗直筒牛仔裤、深棕色麂皮板鞋、深棕色打孔皮革水桶包挎于肩侧、金丝框墨镜、金色粗圈耳环；细节以@图片8为准）：右手插进牛仔裤口袋，左手指尖轻捏西装前襟向外一拢、呈敞襟姿态，重心微沉，下巴微抬，表情冷感、目光锐利直视镜头、不笑，西装敞襟随呼吸轻微起伏。她维持这一最终亮相的定格（约1.0秒），下巴略微再抬、眼神更冷定，直至画面结束。环境音：音乐落定收尾、衣料轻响。\n"</script></article><article class="case-card" data-copy-context data-medium="video" data-topic="多段成片" data-evidence="author-tested" data-search="一天四十三次日落
+多段成片
+外星小王子 × 地球女生的六段对谈短片：随问题推进从人行道走到江边日落。作者实测判定「勉强及格」，身高差、时间跨度与段落收尾三项问题及预改方向随案例记录；未附成片文件。
+作者称已测
+对谈 多段生成 竖幅 参考图锚定 实测复盘
+【全局设定】
+
+核心风格：写实摄影影像——真实场景与真人质感，电影级自然光影，真实的皮肤、发丝与织物细节，轻微胶片颗粒；竖幅9:16电影感构图。全片唯一的非写实元素是来自外星球的小王子：他保持3d卡通、潮玩ip手办质感，以实拍合成的方式存在于写实世界里，两种质感互不污染。
+
+影片基调：温柔、天真，带一点都市的疲惫感；轻幽默，不煽情。
+
+光线设计：清晨的城市，冷调自然光为主，楼宇之间透出淡金色晨光；人脸上是清冷的自然光与手机屏幕的反光。
+
+导演意图：先用脚步的空镜压出&quot;被推着走&quot;的拥挤感；她一边走一边问，问题像自言自语；把小王子的回答放在她停下来的那一刻——她第一次抬起头，这是全片的第一个转折。她一路举着手机在录音——这场「访谈」是她自己发起的。
+
+
+【参考图】
+
+图片1（对应文件：~/downloads/jimeng-2026-09-15-4427.png）作为外星小王子的视觉锚定：头大身小的q版比例，身高约90厘米（站在她身边只到她的髋部），焦糖色蓬松卷发，翠绿大眼带星星状高光，脸颊腮红，头顶悬浮着一枚倾斜45度的透明卫星环（透明水晶质感，边缘有玻璃般的白色高光与折射，可以透过它看到后面的头发），蓝色毛呢外套配同色圆纽扣与胸前贴袋，姜黄色粗针织围巾，藏青色短裤，白色短袜，白色短靴（靴口一圈橙色、橙色鞋底）；只继承人物的五官、发型、服装、配色与3d卡通潮玩质感，不继承原图中的纯黑背景、三视图排列与站立姿势。
+
+图片2（对应文件：~/downloads/chatgpt image 2026年9月17日 12_28_26.png）作为地球女生的视觉锚定：20–25岁东亚女性，圆润鹅蛋脸、面颊饱满，深棕色大眼睛（双眼皮、卧蚕）、棕色平缓一字眉、鼻头小巧、饱满唇形配正红偏橘红口红，伪素颜妆容，白皙偏冷调的皮肤；深棕色头发在头顶盘成蓬松丸子头，额前与脸颊两侧留自然碎发，黑色大框太阳镜架在头顶；纤细苗条身材，黑色oversized圆领短袖t恤（落肩、衣长过臀），米白色抽绳阔腿休闲裤（裤脚在脚踝自然堆积），黑色人字拖；金色小圆环耳环、细金锁骨链、右腕金色宽手镯，棕白横条纹草编托特包单肩挎在右肩；只继承人物的五官、发型、服装、配饰、配色与真实人物质感，不继承原图中的纯白背景、四视图排列与站立姿势。
+
+图片3（对应文件：~/downloads/hermes-output/场景参考图/场景一早高峰人行道-1.jpg）作为本段早高峰人行道的空间锚定：两侧高层楼体夹出的一线天空（楼缝）、地铁出入口的台阶与护栏、行道树与停放的单车、雨后微微反光的石板地面；只继承空间的位置、尺度、形状与结构关系，不继承原图中的四宫格排版、机位角度与构图；原图为暖色低角度光，本段不继承该光线时刻，按本段的清晨冷调自然光与薄晨雾执行；场景底图为多视角拼图，生成时不得出现镜像或复制效果。
+
+图片2的女生与全部场景按写实摄影呈现；图片1的小王子保持3d卡通潮玩质感，是这个写实世界里唯一的非写实角色，两种质感互不污染。两张参考图的棚拍背景与视图排列均不继承；小王子身高约90厘米，与女生的身高差在每一镜中都保持一致。
+
+
+【镜头】
+
+shot 01（0–1.5秒）
+
+镜头：竖幅大特写空镜，35mm手持，机位贴近地面、略低角度，轻微晃动；画面里没有人物上半身，只有一双双快速走过的鞋与裤脚；起幅脚步从画面下方涌入，落幅保持同一景别。
+
+拍摄内容：清晨的城市人行道（@图片3），逆光里浮着薄薄的晨雾，晨光在反光的地面上拉出长条光斑，一双双鞋踩着光斑快速走过。环境音：密集的脚步声、远处的车流、地铁口的风。
+
+shot 02（1.5–5.5秒）
+
+镜头：竖幅中景，35mm手持侧后跟拍，与被摄者同速移动、轻微晃动；两人位于画面中下部，上方留出楼宇与一线天空；起幅两人背影入画，落幅保持同一构图继续跟移。
+
+拍摄内容：@图片3的清晨人行道上，@图片2锚定的女生与@图片1锚定的小王子在人流中向前走；她一手端着咖啡杯，一手把手机举在两人之间、对着他，手机正在录音；小王子身高约90厘米、只到她的髋部，抱着自己长长的围巾小跑着跟上，她放慢了步子配合他的步频。她的话从画面外进来（背对镜头，画外念白、不露口型，语气像自言自语）：&quot;你们星球的人，也每天赶着上班吗？&quot;环境音：密集脚步、街口的车流、地铁口的风。
+
+shot 03（5.5–7秒）
+
+镜头：竖幅微距特写插入镜，50mm浅景深、焦点锁定手机屏幕；机位固定、略微俯视；起幅屏幕上的录音波形，落幅波形又长了一截、计时跳了一格。
+
+拍摄内容：@图片2锚定女生的手扶着手机侧面，屏幕上是正在走动的录音界面——一条随时间延伸的波形和一个跳动的计时，冷白的光打在她握手机的手指上；她的问句尾音继续从画外传来，声音与画面分离。环境音：脚步、街口的车流声，人声变得模糊。
+
+shot 04（7–12.5秒）
+
+镜头：竖幅近景，50mm浅景深、焦点锁定小王子的脸；摄影机降到与小王子视线等高的低位（约80厘米高）、轻微仰角，机位固定；起幅她停步、他仰起脸，落幅他说完。
+
+拍摄内容：@图片3的人行道上，她停下脚步，低头看着小王子；小王子仰起脸才能看到她的脸，头顶倾斜45度的透明卫星环轻轻晃了一下，他认真地、一字一句地说（对口型，口型与语音对齐，台词完整念出）：&quot;我们不叫上班。我们照顾一朵花，和它说话。&quot;她的身影虚化在画面上缘，没有说话；画面下方他身后，低头看手机的人流继续涌过。环境音：人流声、一声鸟叫。
+
+shot 05（12.5–14.5秒）
+
+镜头：竖幅中远景仰拍空镜，35mm，机位在她身侧偏低处、朝向天空缓慢上仰；画面里没有人物；起幅两侧楼宇夹着的一小片灰色天空，落幅一只鸟掠过、天光亮了一点。
+
+拍摄内容：她抬头望向的方向——两侧高楼之间的一小片天空（@图片3的楼缝），晨光在云层边缘亮起来，一只鸟快速掠过楼缝。环境音：人流声退远、风声、鸟叫。
+
+【全局设定】
+
+核心风格：写实摄影影像——真实场景与真人质感，电影级自然光影，真实的皮肤、发丝与织物细节，轻微胶片颗粒；竖幅9:16电影感构图。全片唯一的非写实元素是来自外星球的小王子：他保持3d卡通、潮玩ip手办质感，以实拍合成的方式存在于写实世界里，两种质感互不污染。
+
+影片基调：秩序感与疏离感——冷、快、有礼貌的距离。
+
+光线设计：大堂的冷白人工光与玻璃幕墙的镜面反射，光线平整、没有温度；人物在幕墙上留下淡淡的倒影。
+
+导演意图：玻璃幕墙是这一段的第二主角——把人和倒影并置；她问&quot;时间&quot;，他答&quot;花&quot;；收在她看自己倒影的一刻：她第一次意识到自己正被什么东西推着走。
+
+
+【参考图】
+
+图片1（对应文件：~/downloads/jimeng-2026-09-15-4427.png）作为外星小王子的视觉锚定：头大身小的q版比例，身高约90厘米（站在她身边只到她的髋部），焦糖色蓬松卷发，翠绿大眼带星星状高光，脸颊腮红，头顶悬浮着一枚倾斜45度的透明卫星环（透明水晶质感，边缘有玻璃般的白色高光与折射，可以透过它看到后面的头发），蓝色毛呢外套配同色圆纽扣与胸前贴袋，姜黄色粗针织围巾，藏青色短裤，白色短袜，白色短靴（靴口一圈橙色、橙色鞋底）；只继承人物的五官、发型、服装、配色与3d卡通潮玩质感，不继承原图中的纯黑背景、三视图排列与站立姿势。
+
+图片2（对应文件：~/downloads/chatgpt image 2026年9月17日 12_28_26.png）作为地球女生的视觉锚定：20–25岁东亚女性，圆润鹅蛋脸、面颊饱满，深棕色大眼睛（双眼皮、卧蚕）、棕色平缓一字眉、鼻头小巧、饱满唇形配正红偏橘红口红，伪素颜妆容，白皙偏冷调的皮肤；深棕色头发在头顶盘成蓬松丸子头，额前与脸颊两侧留自然碎发，黑色大框太阳镜架在头顶；纤细苗条身材，黑色oversized圆领短袖t恤（落肩、衣长过臀），米白色抽绳阔腿休闲裤（裤脚在脚踝自然堆积），黑色人字拖；金色小圆环耳环、细金锁骨链、右腕金色宽手镯，棕白横条纹草编托特包单肩挎在右肩；只继承人物的五官、发型、服装、配饰、配色与真实人物质感，不继承原图中的纯白背景、四视图排列与站立姿势。
+
+图片4（对应文件：~/downloads/hermes-output/场景参考图/场景二写字楼幕墙-1.jpg）作为本段写字楼大堂幕墙通道的空间锚定：整面通高玻璃幕墙、金属包饰的圆柱、旋转门、电梯厅与车门上方的小型楼层显示屏、抛光大理石地面的倒影；只继承空间的位置、尺度、形状与结构关系，不继承原图中的四宫格排版、机位角度与构图，光影按本段的冷白人工光执行；场景底图为多视角拼图，生成时不得出现镜像或复制效果。
+
+图片2的女生与全部场景按写实摄影呈现；图片1的小王子保持3d卡通潮玩质感，是这个写实世界里唯一的非写实角色，两种质感互不污染。两张参考图的棚拍背景与视图排列均不继承；小王子身高约90厘米，与女生的身高差在每一镜中都保持一致。
+
+
+【镜头】
+
+shot 01（0–2秒）
+
+镜头：竖幅远景空镜，35mm，机位固定、微微仰角，对着整面玻璃幕墙；画面里没有清晰的人物面孔，只有倒影与反光；起幅倒影里西装人流匆匆流过，落幅旋转门转过一格、反光抖动了一下。
+
+拍摄内容：写字楼外的整面玻璃幕墙（@图片4），冷白晨光打在玻璃上；倒影里全是被拉长、走快的西装人影与公文包，谁也看不清脸。旋转门一格一格地转。环境音：旋转门声、皮鞋脚步声、大堂里传来的广播。
+
+shot 02（2–6秒）
+
+镜头：竖幅中景，35mm侧后跟拍，与两人同速移动、略微俯角；画面上半部是幕墙的镜面与倒影，两人在画面下半部；起幅两人走进幕墙通道，落幅保持同一构图继续跟移。
+
+拍摄内容：@图片4的幕墙通道里，@图片2锚定的女生与@图片1锚定的小王子并肩沿着幕墙走，镜面玻璃里一高一矮两个影子跟着他们移动。她侧过脸问（侧脸，画外念白、不露口型）：&quot;那你们的时间怎么算？会迟到吗？&quot;西装人流在倒影里匆匆走过，没有一个人抬头；小王子跟着她的影子走，抬头看倒影里的一格云。环境音：旋转门声、皮鞋脚步声。
+
+shot 03（6–7.5秒）
+
+镜头：竖幅特写插入镜，50mm浅景深，焦点锁定电梯上方的楼层数字；机位固定、微微仰角；起幅数字停在某个楼层，落幅数字飞快往下跳。
+
+拍摄内容：大堂电梯上方的楼层显示屏，红色数字一格一格往下跳；楼层数字的跳动投在抛光的大理石地面上，反光里有一个模糊的、站着不动的倒影轮廓。环境音：电梯到站提示音、鞋跟敲击大理石的声音。
+
+shot 04（7.5–12秒）
+
+镜头：竖幅近景，50mm浅景深、焦点锁定小王子的脸；摄影机在两人侧面、与小王子视线等高的低位（约80厘米高）固定，轻微仰角；起幅他仰头开口，落幅他说完。
+
+拍摄内容：电梯口（@图片4）。@图片2锚定的女生停下脚步，@图片1锚定的小王子仰头看她，认真地说（对口型，口型与语音对齐，台词完整念出）：&quot;我们的时间只有两种：花开和等花开。&quot;她的身影虚化在画面上缘，没有接话；电梯厅的冷光落在他脸上。环境音：电梯提示音、空调低鸣。
+
+shot 05（12–14.5秒）
+
+镜头：竖幅特写情绪镜，50mm浅景深、焦点落在幕墙玻璃上的倒影；机位固定；起幅她的倒影占画面中央，落幅她低下头、手把手机翻过来扣在掌心，倒影里的背景人流仍不停。
+
+拍摄内容：@图片4的玻璃幕墙上@图片2锚定女生的模糊倒影——她站在那儿看着自己，倒影的背景里人流继续快速走过；她的手指在咖啡杯上收紧了一下，低下头，把手机翻过来扣在掌心（录音还在继续），杯口冒着一缕白气。环境音：脚步、广播、空调低鸣。
+
+【全局设定】
+
+核心风格：写实摄影影像——真实场景与真人质感，电影级自然光影，真实的皮肤、发丝与织物细节，轻微胶片颗粒；竖幅9:16电影感构图。全片唯一的非写实元素是来自外星球的小王子：他保持3d卡通、潮玩ip手办质感，以实拍合成的方式存在于写实世界里，两种质感互不污染。
+
+影片基调：沉闷、安静——拥挤里的孤独。
+
+光线设计：车厢冷白荧光灯，车窗外面是隧道一格格掠过的黑；灯光在人物脸上硬而平，手机屏幕反着冷光。
+
+导演意图：先给一排低下的头，再给她压低的声音；他的回答前半句是&quot;不吵&quot;，后半句才是刀；收在车窗倒影上——她完整、他只有半截，身高差第一次成为隐喻。
+
+
+【参考图】
+
+图片1（对应文件：~/downloads/jimeng-2026-09-15-4427.png）作为外星小王子的视觉锚定：头大身小的q版比例，身高约90厘米（站在她身边只到她的髋部），焦糖色蓬松卷发，翠绿大眼带星星状高光，脸颊腮红，头顶悬浮着一枚倾斜45度的透明卫星环（透明水晶质感，边缘有玻璃般的白色高光与折射，可以透过它看到后面的头发），蓝色毛呢外套配同色圆纽扣与胸前贴袋，姜黄色粗针织围巾，藏青色短裤，白色短袜，白色短靴（靴口一圈橙色、橙色鞋底）；只继承人物的五官、发型、服装、配色与3d卡通潮玩质感，不继承原图中的纯黑背景、三视图排列与站立姿势。
+
+图片2（对应文件：~/downloads/chatgpt image 2026年9月17日 12_28_26.png）作为地球女生的视觉锚定：20–25岁东亚女性，圆润鹅蛋脸、面颊饱满，深棕色大眼睛（双眼皮、卧蚕）、棕色平缓一字眉、鼻头小巧、饱满唇形配正红偏橘红口红，伪素颜妆容，白皙偏冷调的皮肤；深棕色头发在头顶盘成蓬松丸子头，额前与脸颊两侧留自然碎发，黑色大框太阳镜架在头顶；纤细苗条身材，黑色oversized圆领短袖t恤（落肩、衣长过臀），米白色抽绳阔腿休闲裤（裤脚在脚踝自然堆积），黑色人字拖；金色小圆环耳环、细金锁骨链、右腕金色宽手镯，棕白横条纹草编托特包单肩挎在右肩；只继承人物的五官、发型、服装、配饰、配色与真实人物质感，不继承原图中的纯白背景、四视图排列与站立姿势。
+
+图片5（对应文件：~/downloads/hermes-output/场景参考图/场景三地铁车厢.jpg）作为本段地铁车厢的空间锚定：顶部一整排冷白灯管与成排吊环、车门旁的立柱与扶手横杆、带大玻璃窗的双开滑动门、沿车壁连续的长条座椅、车厢尽头的连通门；只继承空间的位置、尺度、形状与结构关系，不继承原图中的四宫格排版、机位角度与构图，光影按本段的冷白荧光执行；场景底图为多视角拼图，生成时不得出现镜像或复制效果。
+
+图片2的女生与全部场景按写实摄影呈现；图片1的小王子保持3d卡通潮玩质感，是这个写实世界里唯一的非写实角色，两种质感互不污染。两张参考图的棚拍背景与视图排列均不继承；小王子身高约90厘米，与女生的身高差在每一镜中都保持一致。
+
+
+【镜头】
+
+shot 01（0–1.5秒）
+
+镜头：竖幅仰拍近景空镜，35mm，机位在车厢中部、镜头朝上；画面里没有人物，只有车厢顶部一排晃动的吊环与冷白灯管；起幅吊环随车身轻晃，落幅隧道灯光一道一道掠过车顶。
+
+拍摄内容：地铁车厢的顶部（@图片5），一排灰色吊环随着行驶轻轻摆动，冷白灯管一格一格亮着；车窗外的天正在由灰白转成深蓝、还没全黑，沿线的灯已经亮起、一格一格掠过。环境音：轨道摩擦声、车厢的低频嗡鸣。
+
+shot 02（1.5–4.5秒）
+
+镜头：竖幅中近景，35mm，机位在车厢内、位于两人侧前方一步远、约1.2米高度、轻微俯角，随行驶轻微晃动；她全身与他全身同框，画面上半部是对面成排低头的乘客；起幅两人站定，落幅保持同一构图。
+
+拍摄内容：下班高峰的地铁车厢（@图片5），冷白荧光灯。@图片2锚定的女生和@图片1锚定的小王子并排站在车门边；小王子踮起脚也够不到头顶的横杆，一只手抓着她的衣角，仰头看她。车厢里所有人低着头看手机，一片安静。她压低声音问（侧脸，画外念白、不露口型）：&quot;人这么多，你不觉得吵吗？&quot;环境音：轨道声、报站广播。
+
+shot 03（4.5–6秒）
+
+镜头：竖幅特写插入镜，35mm，机位固定、略低角度，横向扫过；画面里只有手与下巴，没有人脸；起幅一排垂下的手和亮着的手机屏幕，落幅镜头滑到最后一个空着的手。
+
+拍摄内容：@图片5的车厢里，一排低着的头和垂下的手，屏幕的冷光打在一个个下巴上，没有人说话，也没有人抬头；到站提示灯闪了一下，没有人动。环境音：报站广播、衣服摩擦声、列车进站的刹车声。
+
+shot 04（6–11.5秒）
+
+镜头：竖幅近景，50mm浅景深、焦点锁定小王子的脸；摄影机下降到与小王子视线等高的低位（约80厘米高）、轻微仰角，机位固定；起幅他仰头开口，落幅他说完。
+
+拍摄内容：@图片5的车厢里，@图片1锚定的小王子在冷白光下仰起脸，头顶倾斜45度的透明卫星环映着车厢的灯管，认真地说（对口型，口型与语音对齐，台词完整念出）：&quot;不吵。吵的是你们心里那个一直在响的东西。&quot;她的身影虚化在画面上缘，没有回答。环境音：轨道声、轻微的刹车声。
+
+shot 05（11.5–13.5秒）
+
+镜头：竖幅中景情绪镜，35mm，机位在两人斜后侧、越过他们虚化的肩线拍向车窗玻璃；画面主体是黑玻璃上的反射；起幅玻璃里两个人的倒影，落幅隧道灯光掠过玻璃、倒影忽明忽暗。
+
+拍摄内容：@图片5的车窗黑玻璃上，@图片2锚定的女生与@图片1锚定的小王子的倒影并排出现——她的倒影是完整的，他只有半截，刚够到她的倒影的髋部；她的倒影慢慢扫过车厢里一个个低着的头，手指无意识地把手机在掌心转了半圈；隧道灯光一道道掠过玻璃，两个倒影忽明忽暗。环境音：轨道声、风从车门缝里挤进来的声音。
+
+【全局设定】
+
+核心风格：写实摄影影像——真实场景与真人质感，电影级自然光影，真实的皮肤、发丝与织物细节，轻微胶片颗粒；竖幅9:16电影感构图。全片唯一的非写实元素是来自外星球的小王子：他保持3d卡通、潮玩ip手办质感，以实拍合成的方式存在于写实世界里，两种质感互不污染。
+
+影片基调：开阔一点，也孤单一点；黄昏的风把话吹散一半。
+
+光线设计：黄昏的金色低角度光，逆光勾出人物轮廓，城市在脚下开始亮灯，天台上一切都被染成暖黄色。
+
+导演意图：先用天空与风的空镜把节奏放慢；他踮脚扒栏杆的插入镜是这一段唯一的笑点，笑完立刻给出&quot;以后&quot;；收在她别碎发、夕阳沉了一格——沉默比台词更长。
+
+
+【参考图】
+
+图片1（对应文件：~/downloads/jimeng-2026-09-15-4427.png）作为外星小王子的视觉锚定：头大身小的q版比例，身高约90厘米（站在她身边只到她的髋部），焦糖色蓬松卷发，翠绿大眼带星星状高光，脸颊腮红，头顶悬浮着一枚倾斜45度的透明卫星环（透明水晶质感，边缘有玻璃般的白色高光与折射，可以透过它看到后面的头发），蓝色毛呢外套配同色圆纽扣与胸前贴袋，姜黄色粗针织围巾，藏青色短裤，白色短袜，白色短靴（靴口一圈橙色、橙色鞋底）；只继承人物的五官、发型、服装、配色与3d卡通潮玩质感，不继承原图中的纯黑背景、三视图排列与站立姿势。
+
+图片2（对应文件：~/downloads/chatgpt image 2026年9月17日 12_28_26.png）作为地球女生的视觉锚定：20–25岁东亚女性，圆润鹅蛋脸、面颊饱满，深棕色大眼睛（双眼皮、卧蚕）、棕色平缓一字眉、鼻头小巧、饱满唇形配正红偏橘红口红，伪素颜妆容，白皙偏冷调的皮肤；深棕色头发在头顶盘成蓬松丸子头，额前与脸颊两侧留自然碎发，黑色大框太阳镜架在头顶；纤细苗条身材，黑色oversized圆领短袖t恤（落肩、衣长过臀），米白色抽绳阔腿休闲裤（裤脚在脚踝自然堆积），黑色人字拖；金色小圆环耳环、细金锁骨链、右腕金色宽手镯，棕白横条纹草编托特包单肩挎在右肩；只继承人物的五官、发型、服装、配饰、配色与真实人物质感，不继承原图中的纯白背景、四视图排列与站立姿势。
+
+图片6（对应文件：~/downloads/hermes-output/场景参考图/场景四天台-1.jpg）作为本段天台的空间锚定：水泥地面的天台、四周的女儿墙与墙顶管状金属栏杆（含顶部横档）、锈蚀的肘形排风管与空调外机、远处的城市天际线；只继承空间的位置、尺度、形状与结构关系，不继承原图中的四宫格排版、机位角度与构图；本段光影与它一致（黄昏金色低角度光、太阳贴近天际线），生成时不得出现镜像或复制效果。
+
+图片2的女生与全部场景按写实摄影呈现；图片1的小王子保持3d卡通潮玩质感，是这个写实世界里唯一的非写实角色，两种质感互不污染。两张参考图的棚拍背景与视图排列均不继承；小王子身高约90厘米，与女生的身高差在每一镜中都保持一致。
+
+
+【镜头】
+
+shot 01（0–1.5秒）
+
+镜头：竖幅中远景空镜，35mm，机位固定、对着天台边缘；画面里没有人物，只有天台的水泥围栏、生锈的排风管与远处层层叠叠的城市天际线；起幅云从画面左侧快速掠过楼顶，落幅天际线的灯开始亮起来。
+
+拍摄内容：黄昏的写字楼天台（@图片6），风很大，云走得很快；天台的水泥围栏顶部是一根通长的金属横档，旁边的排风管上搭着一根不知道谁留下的旧绳头，远处整座城市在暮色里铺开，落日正贴着天际线往下沉，零星亮起几盏灯。环境音：风声、远处若有若无的车流声。
+
+shot 02（1.5–5秒）
+
+镜头：竖幅中景，35mm，机位在两人侧后方、与两人同速缓缓向前跟移，略低机位；两人在画面下半部、背对镜头朝栏杆方向走，前方是黄昏的天空与城市天际线，两人被夕阳勾出一圈暖色轮廓；起幅两人走上天台，落幅保持同一构图跟移。
+
+拍摄内容：@图片6的天台上，@图片2锚定的女生和@图片1锚定的小王子并肩向前走，她的碎发被风掀起，小王子双手护着自己长长的围巾，走两步就要停顿一下才跟得上。她侧头问（侧脸，画外念白、不露口型）：&quot;你会想家吗？那里回得去吗？&quot;环境音：风声、远处城市车流声。
+
+shot 03（5–6.5秒）
+
+镜头：竖幅特写插入镜，50mm浅景深、焦点锁定他的透明卫星环与手；机位压到与栏杆齐平的低位、轻微仰角；起幅他踮脚的手，落幅他够到横档、头顶的透明卫星环露出小半截。
+
+拍摄内容：@图片6的天台围栏顶部的金属横档比@图片1锚定的小王子还高；他一手护着自己的围巾、一手扒住横档往上够，踮起脚时头顶倾斜45度的透明卫星环只露出小半截，晃了一下，环的边缘折着夕阳的光，在金属横档上留下一小点亮斑。环境音：风把金属围栏吹出轻微的嗡响。
+
+shot 04（6.5–13秒）
+
+镜头：竖幅近景，50mm浅景深、焦点锁定小王子的脸；摄影机在两人侧面、与小王子视线等高的低位（约80厘米高）固定，逆着夕阳、轻微仰角，人物边缘有一圈金色轮廓光；起幅他望向远处的地平线开口，落幅他说完。
+
+拍摄内容：天台栏杆边（@图片6）。@图片1锚定的小王子踮着脚扒住横档，下巴刚好搭在栏杆上，望向远处的地平线，认真地说（对口型，口型与语音对齐，台词完整念出）：&quot;想。它一直在那儿。可你们地球人总说的'以后'，我从来没找到过。&quot;她的身影虚化在画面上缘；画面里只有他仰着的脸和身后正在下沉的天际线。环境音：风声渐强、远处城市声。
+
+shot 05（13–15秒）
+
+镜头：竖幅特写情绪镜，50mm浅景深、焦点落在她的侧脸；机位固定、逆光、略微仰角；起幅她的侧脸与飞起的碎发，落幅碎发被别到耳后、背景的夕阳又沉下去一格。
+
+拍摄内容：@图片6的天台上，@图片2锚定女生的侧脸在逆光里，她愣住，慢慢转头看向正在下落的太阳；风把碎发吹到眼前又吹开，她抬手把碎发别到耳后，眼睛一直没有离开天边。背景里，夕阳又沉下去一格，天台的边缘亮成一条金线。环境音：风声、城市的声音变得很远。
+
+【全局设定】
+
+核心风格：写实摄影影像——真实场景与真人质感，电影级自然光影，真实的皮肤、发丝与织物细节，轻微胶片颗粒；竖幅9:16电影感构图。全片唯一的非写实元素是来自外星球的小王子：他保持3d卡通、潮玩ip手办质感，以实拍合成的方式存在于写实世界里，两种质感互不污染。
+
+影片基调：安静、温柔、释然；与提示词⑥同为全片节奏最慢的两段，情绪落点。
+
+光线设计：日落暖橙逆光，江面反着碎金一样的光，人物与影子都被拉长，边缘有一圈暖色轮廓光。
+
+导演意图：整段只做一件事——让时间慢下来；她问得很轻，他的答案更轻；答案由画面给出（呼吸、转头、江面反光），不由台词给出。本段到&quot;她的呼吸慢下来&quot;结束，落点在紧接的提示词⑥。
+
+
+【参考图】
+
+图片1（对应文件：~/downloads/jimeng-2026-09-15-4427.png）作为外星小王子的视觉锚定：头大身小的q版比例，身高约90厘米（站在她身边只到她的髋部），焦糖色蓬松卷发，翠绿大眼带星星状高光，脸颊腮红，头顶悬浮着一枚倾斜45度的透明卫星环（透明水晶质感，边缘有玻璃般的白色高光与折射，可以透过它看到后面的头发），蓝色毛呢外套配同色圆纽扣与胸前贴袋，姜黄色粗针织围巾，藏青色短裤，白色短袜，白色短靴（靴口一圈橙色、橙色鞋底）；只继承人物的五官、发型、服装、配色与3d卡通潮玩质感，不继承原图中的纯黑背景、三视图排列与站立姿势。
+
+图片2（对应文件：~/downloads/chatgpt image 2026年9月17日 12_28_26.png）作为地球女生的视觉锚定：20–25岁东亚女性，圆润鹅蛋脸、面颊饱满，深棕色大眼睛（双眼皮、卧蚕）、棕色平缓一字眉、鼻头小巧、饱满唇形配正红偏橘红口红，伪素颜妆容，白皙偏冷调的皮肤；深棕色头发在头顶盘成蓬松丸子头，额前与脸颊两侧留自然碎发，黑色大框太阳镜架在头顶；纤细苗条身材，黑色oversized圆领短袖t恤（落肩、衣长过臀），米白色抽绳阔腿休闲裤（裤脚在脚踝自然堆积），黑色人字拖；金色小圆环耳环、细金锁骨链、右腕金色宽手镯，棕白横条纹草编托特包单肩挎在右肩；只继承人物的五官、发型、服装、配饰、配色与真实人物质感，不继承原图中的纯白背景、四视图排列与站立姿势。
+
+图片7（对应文件：~/downloads/hermes-output/场景参考图/场景五江边日落.jpg）作为本段江边步道的空间锚定：沿江的通长金属栏杆、灰色石材铺装的步道、江面与对岸城市天际线、正在下沉的落日与暖橙色逆光；只继承空间的位置、尺度、形状与结构关系，不继承原图中的四宫格排版、机位角度与构图；落日方位以江面正前方为准，本段光影与它一致（暖橙日落逆光），生成时不得出现镜像或复制效果。
+
+图片2的女生与全部场景按写实摄影呈现；图片1的小王子保持3d卡通潮玩质感，是这个写实世界里唯一的非写实角色，两种质感互不污染。两张参考图的棚拍背景与视图排列均不继承；小王子身高约90厘米，与女生的身高差在每一镜中都保持一致。
+
+
+【镜头】
+
+shot 01（0–1.5秒）
+
+镜头：竖幅中景空镜，35mm，机位固定、接近水面高度；画面里没有人物；起幅江面被夕阳烧成金红色、波纹晃动，落幅一只水鸟贴水掠过、把倒影划开。
+
+拍摄内容：傍晚的江面（@图片7的江面与落日方向），落日把整片水染成金红色，波光晃动；一只水鸟贴着水面掠过，划开一道长长的倒影。环境音：江水轻拍岸边的声音、风声。
+
+shot 02（1.5–5.5秒）
+
+镜头：竖幅中远景，35mm，机位在两人正后方约三米、齐腰高度，与两人同速缓缓向前跟移；落日位于画面上方三分之一处，两人的影子拉在画面下半部；起幅两人的背影与落日同框，落幅保持同一构图继续跟移。
+
+拍摄内容：江边步道（@图片7），夕阳正落。@图片2锚定的女生和@图片1锚定的小王子并肩向前走，两人的影子被夕阳拉得很长——一长一短。她望着前面的落日，轻声问（背对镜头，画外念白、不露口型）：&quot;那……你们星球的人，一天都做什么？&quot;小王子抱着围巾小步快跑着跟上。环境音：江风、水声、远处城市的声音。
+
+shot 03（5.5–7秒）
+
+镜头：竖幅特写插入镜，35mm，机位贴近地面、与步道齐平，焦点落在被夕阳拉长的两道影子上；画面里只有地面的影子，没有人的身体；起幅两道一长一短的影子并排向前移动，落幅影子的边缘被江面的反光扫过。
+
+拍摄内容：江边步道的铺装地面上（@图片7），@图片2锚定的女生与@图片1锚定的小王子的影子被夕阳拉得很长——一道长、一道短，并排着向前移动，长的那道偶尔会慢下来等一等短的那道。她的问句尾音继续从画外传来，声音与画面分离。环境音：江风、水声、两个人的脚步声。
+
+shot 04（7–10.5秒）
+
+镜头：竖幅近景，50mm浅景深、焦点锁定小王子的脸；摄影机绕到两人侧前方、降到与小王子视线等高的低位（约80厘米高），逆光、轻微仰角，机位固定；起幅两人停下脚步，落幅他说完。
+
+拍摄内容：江边栏杆前（@图片7）。@图片2锚定的女生停下脚步，@图片1锚定的小王子仰头看她，逆光把他头顶倾斜45度的透明卫星环照得透亮，他认真地回答（对口型，口型与语音对齐，台词完整念出）：&quot;看日落。一天，四十三次。&quot;她的身影虚化在画面上缘，先是没听懂。环境音：江风、水声。
+
+shot 05（10.5–13秒）
+
+镜头：竖幅特写情绪镜，50mm浅景深、焦点落在她的眼睛；机位固定、微仰角，落日的余光从画面右侧打进来；起幅她的脸在余光里，落幅她的呼吸慢下来、眼睛亮起来，慢慢转向天边。
+
+拍摄内容：@图片7的江边，@图片2锚定女生的脸在落日余光里，她先是没听懂、慢慢转头看向他，又转头望向天边；她呼吸慢了下来，眼睛里映着一点碎金一样的光——像第一次看清什么东西。这一镜没有台词，环境音只剩江风与水声。
+
+【全局设定】
+
+核心风格：写实摄影影像——真实场景与真人质感，电影级自然光影，真实的皮肤、发丝与织物细节，轻微胶片颗粒；竖幅9:16电影感构图。全片唯一的非写实元素是来自外星球的小王子：他保持3d卡通、潮玩ip手办质感，以实拍合成的方式存在于写实世界里，两种质感互不污染。
+
+影片基调：安静、温柔、释然；与提示词⑤同为全片节奏最慢的两段，情绪落点由本段收束。
+
+光线设计：日落暖橙逆光，江面反着碎金一样的光，人物与影子都被拉长，边缘有一圈暖色轮廓光。
+
+导演意图：本段是提示词⑤的直接延续——同一场景、同一光线、同一时刻，起幅是她的侧脸。整段只做一件事：把&quot;慢下来&quot;收完。她轻声问出&quot;我上一次看日落是什么时候&quot;，答案不由台词给出，由画面给出（半蹲平视、递围巾、关掉录音、升镜、定格）。这场访谈由她开始，也由她亲手结束。
+
+
+【参考图】
+
+图片1（对应文件：~/downloads/jimeng-2026-09-15-4427.png）作为外星小王子的视觉锚定：头大身小的q版比例，身高约90厘米（站在她身边只到她的髋部），焦糖色蓬松卷发，翠绿大眼带星星状高光，脸颊腮红，头顶悬浮着一枚倾斜45度的透明卫星环（透明水晶质感，边缘有玻璃般的白色高光与折射，可以透过它看到后面的头发），蓝色毛呢外套配同色圆纽扣与胸前贴袋，姜黄色粗针织围巾，藏青色短裤，白色短袜，白色短靴（靴口一圈橙色、橙色鞋底）；只继承人物的五官、发型、服装、配色与3d卡通潮玩质感，不继承原图中的纯黑背景、三视图排列与站立姿势。
+
+图片2（对应文件：~/downloads/chatgpt image 2026年9月17日 12_28_26.png）作为地球女生的视觉锚定：20–25岁东亚女性，圆润鹅蛋脸、面颊饱满，深棕色大眼睛（双眼皮、卧蚕）、棕色平缓一字眉、鼻头小巧、饱满唇形配正红偏橘红口红，伪素颜妆容，白皙偏冷调的皮肤；深棕色头发在头顶盘成蓬松丸子头，额前与脸颊两侧留自然碎发，黑色大框太阳镜架在头顶；纤细苗条身材，黑色oversized圆领短袖t恤（落肩、衣长过臀），米白色抽绳阔腿休闲裤（裤脚在脚踝自然堆积），黑色人字拖；金色小圆环耳环、细金锁骨链、右腕金色宽手镯，棕白横条纹草编托特包单肩挎在右肩；只继承人物的五官、发型、服装、配饰、配色与真实人物质感，不继承原图中的纯白背景、四视图排列与站立姿势。
+
+图片7（对应文件：~/downloads/hermes-output/场景参考图/场景五江边日落.jpg）作为本段江边步道（与提示词⑤同一场景、同一时刻）的空间锚定：沿江的通长金属栏杆、灰色石材铺装的步道、江面与对岸城市天际线、正在下沉的落日与暖橙色逆光；只继承空间的位置、尺度、形状与结构关系，不继承原图中的四宫格排版、机位角度与构图；落日方位以江面正前方为准，本段光影与它一致（暖橙日落逆光），生成时不得出现镜像或复制效果。
+
+图片2的女生与全部场景按写实摄影呈现；图片1的小王子保持3d卡通潮玩质感，是这个写实世界里唯一的非写实角色，两种质感互不污染。两张参考图的棚拍背景与视图排列均不继承；小王子身高约90厘米，与女生的身高差在每一镜中都保持一致。
+
+
+【镜头】
+
+shot 01（0–3.5秒）
+
+镜头：竖幅近景，50mm浅景深、焦点落在她的侧脸；机位在两人侧后方、齐腰高度固定，逆光，落日的余光从画面右侧打进来；起幅她的侧脸在余光里，落幅她说完、下巴微微收起。
+
+拍摄内容：江边栏杆前（@图片7）。@图片2锚定的女生望着江面，轻声说（画外念白、不露口型，几乎像自语）：&quot;我上一次看日落……是什么时候？&quot;她的碎发被风掀起。环境音：江风、水声、远处城市的声音。
+
+shot 02（3.5–5秒）
+
+镜头：竖幅中景，35mm，机位在两人侧前方、与她的站立视线等高；起幅她站在那儿，落幅她弯下腰、半蹲下来，视线与@图片1锚定的小王子齐平。
+
+拍摄内容：@图片7的江边，@图片2锚定的女生在栏杆前弯下腰、半蹲下来，把视线降到和@图片1锚定的小王子一样高；小王子仰头看她，两个人第一次真正平视。环境音：江风、水声。
+
+shot 03（5–6.5秒）
+
+镜头：竖幅近景，50mm浅景深、焦点落在两只手之间；机位略低、轻微仰角；起幅小王子的手把围巾的一端举起来，落幅围巾的一端落到她的掌心里。
+
+拍摄内容：@图片7的江边，@图片1锚定的小王子把自己姜黄色围巾的一端举起来，递到@图片2锚定女生的手边——他的手很小，只够握住围巾的一端；她摊开手掌接住围巾。环境音：江风、水声、布料摩擦声。
+
+shot 04（6.5–8秒）
+
+镜头：竖幅特写，50mm浅景深、焦点锁定手机屏幕；机位固定、略微俯视；起幅屏幕上走动的录音波形，落幅波形停住、计时定在原地。
+
+拍摄内容：@图片2锚定女生的手抬起来，拇指在手机屏幕上按了一下录音键——录音界面的波形停住，计时停在原地；屏幕的光在她指尖上暗下去。环境音：一声轻响、江风、水声。
+
+shot 05（8–11秒）
+
+镜头：竖幅中远景，35mm，机位在两人身后，位置缓慢升高并轻微拉远（升镜头），升起过程中始终保持两人在画面下半部、落日与晚霞在画面上方；起幅两人并排站定的背影，落幅定格在两人的背影与整轮落日同框，画面最后1.5秒完全静止。
+
+拍摄内容：江边（@图片7）。两个人并排站着，一起看着正在沉入江面的太阳，她的碎发和小王子的围巾被风吹动；江面上的反光碎成一片金色，夕阳把两个人一高一矮的影子一起拉长，投在步道上。环境音：江风、水声、远处城市的声音渐轻。
+"><div class="card-media"><div class="photo"><img src="/prompt-archive-site/media/427ba9769f10f349.png" alt="一天四十三次日落 输入参考图" loading="lazy"></div></div><div class="card-holes" aria-hidden="true"></div><div class="card-body"><div class="card-meta"><span>PA-003</span><span>视频</span><span class="evidence-badge evidence-author"><span class="icon" style="width:12px;height:12px" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l4.4 4.4L19.5 6.3"/></svg></span>作者称已测</span></div><h3 class="card-title" title="一天四十三次日落"><a class="card-detail-link" href="/prompt-archive-site/cases/forty-three-sunsets/"><span class="card-title-text">一天四十三次日落</span></a></h3><p class="card-summary">外星小王子 × 地球女生的六段对谈短片：随问题推进从人行道走到江边日落。作者实测判定「勉强及格」，身高差、时间跨度与段落收尾三项问题及预改方向随案例记录；未附成片文件。</p><div class="card-tags"><span class="tag">多段成片</span><span class="tag">对谈</span><span class="tag">多段生成</span></div><div class="card-copy-row"><a class="card-segments" href="/prompt-archive-site/cases/forty-three-sunsets/" tabindex="-1">分 6 段 · 查看并复制</a><span class="copy-feedback" data-copy-feedback aria-live="polite"></span></div></div></article><article class="case-card" data-copy-context data-medium="video" data-topic="产品片" data-evidence="author-tested" data-search="小猫发布会｜28秒英短蓝白产品片
+产品片
+白色摄影棚里的英短蓝白「产品发布片」：微距材质展示、悬浮旋转与四句广告文案的完整时间轴。纯文字案例。
+作者称已测
+产品片 广告文案 静音 宠物
+时长约 28 秒，16:9 横屏，极简科技产品发布片风格，白色无缝摄影棚，大面积留白，微距材质展示，平滑悬浮旋转，利落剪辑与整齐的产品排列。全片静音，不生成音乐、音效、人声或旁白。 
+【产品】本体：，英短蓝白，圆脸短吻，蓝灰 + 白色短毛，白色胸口四肢，圆润大眼。 
+【摄影与文字】白至浅灰背景与地面连成一体，无明显地平线。前上方大柔光，侧后方轮廓光、浅灰接触阴影。蓝灰毛发主体与背景分离，保留毛发暗部纹理。全镜采用中长焦透视，微距浅景深，运镜起止明确、减速柔和。广告文字采用接近苹果黑中的无衬线字体，中等偏粗，规整紧凑，低饱和紫蓝至青绿横向渐变，尽量单行，字高约画面 3%–4%，留白充足，不遮挡主体。整句淡入淡出，无描边、阴影、发光或逐字动画，仅在指定时段显示文案。 
+【时间轴】 
+0–0.5 秒：英短蓝白幼猫本体头顶绒毛与圆弧轮廓极近特写，局部满框，不完整露脸，侧后光勾勒毛边。 
+0.5–1.3 秒：切猫耳朵微距，镜头沿耳朵横移，焦点从前景绒毛移至头部边缘，亮光随轮廓移动显露。 
+1.3–4.4 秒：切稍宽构图，连续拉远，依次揭示圆头、五官、白色胸毛、手臂和白色猫爪与白色双脚，最终正面全身居中，脚下柔影。 
+4.4–5.5 秒：轻微继续拉远，本体静止。头顶上方居中淡入 “英短蓝白，大有可玩。”，结束前淡出。 
+5.5–6.7 秒：本体低空悬浮，向后轻仰，白色猫爪短暂朝向镜头，再转至四分之三侧面，身体完整同步转动，毛发轻微滞后。
+ 6.7–8 秒：转至侧面，展示头部厚度、腹部颜色和白色猫爪，保持竖直向右横移，末尾移出画面。
+ 8–8.7 秒：白色空场，中央淡入 “可爱，也有质感。”。 
+8.7–10 秒：文字平滑移至左侧中部，本体从右上斜向进入右侧微距构图，镜头扫过蓝灰绒毛、眼睛和小猫嘴巴，文字不遮挡产品。10 秒前淡出。 
+10–11.3 秒：微距继续扫过猫脸嘴，沿躯干移身体与脚部，局部允许出框。 
+11.3–12.7 秒：白底，人物腰胯局部位于右侧，一只手捏住本体躯干，从宽松外套口袋向上取出，头部先露出，再露躯干和双脚，手臂轻摆，左侧淡入 “把好心情，随身带。”。 
+12.7–14 秒：近景，本体由一只手托在右下方，另一只手从额头向头顶轻抚一次，绒毛倒伏后恢复，五官固定。左侧文案保持，14 秒前淡出。 
+14–15.7 秒：5 只一样，只是穿搭不同的的英短蓝白幼猫从右侧纵向向左移动到中间位置，上方居中淡入 “英国短毛猫，蓝白款。”。 
+15.7–17.5 秒：五只英短蓝白幼猫再整体移向左侧，绕下方共同中心沿独立视线展开成扇形，不穿透融合。上方文案保持，结束前淡出。
+17.5–18 秒：白色空场，短暂停顿。 
+18–19.5 秒：本体从左、和从右进入，四分之三朝向彼此，水平靠近，以身体侧面轻柔碰一次，绒毛压缩后柔和回弹，小猫耳朵动一下。
+ 19.5–20.7 秒：两只沿来路退至左右边缘外，中央恢复留白，镜头固定。
+ 20.7–22.4 秒：五只英短蓝白幼猫悬浮在不同位置与浅层纵深，小幅倾斜、自转，再向中央收拢为交错群组，遮挡关系清晰。 
+22.4–23 秒：五只英短蓝白幼猫调整正立、排成一行，轻拍下落地，各轻微压缩回弹一次后站稳。 
+23–24.3 秒：五只英短蓝白幼猫并排，部分略向左右倾斜，支撑稳定，镜头轻拉远展示全貌与阴影。 
+24.3–25.8 秒：五只幼猫下端靠近下方中央，身体向不同方向展开成扇形，脸部毛发细节可辨。下方居中淡入 “每一款，都有偏爱。”，结束前淡出。 
+25.8–28 秒：直接切到中央单只英短蓝白幼猫，高约画面十分之一，轻微侧身转动后停稳，周围大面积白色留白，无文字。
+"><div class="card-media"><div class="photo"><div class="media-cover media-cover-video"><span class="cover-note">仅提示词 · 可复制</span><span class="cover-excerpt">时长约 28 秒，16:9 横屏，极简科技产品发布片风格，白色无缝摄影棚，大面积留白，微距材质展示，平滑悬浮旋转，利落剪辑与整齐的产品排列。全片静音，不生成音乐、音效、人声或旁白。 
+【产品】本体：，英短蓝白，圆脸短吻，蓝灰 + 白色短毛，白色胸口四肢，圆润大眼。 
+【摄影与文字】白至浅灰背景与地面连成一体，无明显地平线。前上方大柔光，侧后方轮廓光、浅灰接触阴影。蓝灰毛发主体与背景分离，保留毛发暗</span></div></div></div><div class="card-holes" aria-hidden="true"></div><div class="card-body"><div class="card-meta"><span>PA-009</span><span>视频</span><span class="evidence-badge evidence-author"><span class="icon" style="width:12px;height:12px" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l4.4 4.4L19.5 6.3"/></svg></span>作者称已测</span></div><h3 class="card-title" title="小猫发布会｜28秒英短蓝白产品片"><a class="card-detail-link" href="/prompt-archive-site/cases/cat-launch-28s/"><span class="card-title-text">小猫发布会｜28秒英短蓝白产品片</span></a></h3><p class="card-summary">白色摄影棚里的英短蓝白「产品发布片」：微距材质展示、悬浮旋转与四句广告文案的完整时间轴。纯文字案例。</p><div class="card-tags"><span class="tag">产品片</span><span class="tag">产品片</span><span class="tag">广告文案</span></div><div class="card-copy-row"><button class="copy-btn" type="button" data-copy-button data-copy-source="card-prompt-cat-launch-28s" data-copy-slug="cat-launch-28s" data-copy-title="小猫发布会｜28秒英短蓝白产品片" data-copy-href="/prompt-archive-site/cases/cat-launch-28s/"><span class="icon" style="width:16px;height:16px" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="10.5" height="10.5" rx="1.5"/><path d="M5.5 13.5h-.7A1.8 1.8 0 0 1 3 11.7V4.8A1.8 1.8 0 0 1 4.8 3h6.9a1.8 1.8 0 0 1 1.8 1.8v.7"/></svg></span><span data-copy-text>复制提示词</span></button><span class="copy-feedback" data-copy-feedback aria-live="polite"></span></div></div><script type="application/json" id="card-prompt-cat-launch-28s">"时长约 28 秒，16:9 横屏，极简科技产品发布片风格，白色无缝摄影棚，大面积留白，微距材质展示，平滑悬浮旋转，利落剪辑与整齐的产品排列。全片静音，不生成音乐、音效、人声或旁白。 \n【产品】本体：，英短蓝白，圆脸短吻，蓝灰 + 白色短毛，白色胸口四肢，圆润大眼。 \n【摄影与文字】白至浅灰背景与地面连成一体，无明显地平线。前上方大柔光，侧后方轮廓光、浅灰接触阴影。蓝灰毛发主体与背景分离，保留毛发暗部纹理。全镜采用中长焦透视，微距浅景深，运镜起止明确、减速柔和。广告文字采用接近苹果黑中的无衬线字体，中等偏粗，规整紧凑，低饱和紫蓝至青绿横向渐变，尽量单行，字高约画面 3%–4%，留白充足，不遮挡主体。整句淡入淡出，无描边、阴影、发光或逐字动画，仅在指定时段显示文案。 \n【时间轴】 \n0–0.5 秒：英短蓝白幼猫本体头顶绒毛与圆弧轮廓极近特写，局部满框，不完整露脸，侧后光勾勒毛边。 \n0.5–1.3 秒：切猫耳朵微距，镜头沿耳朵横移，焦点从前景绒毛移至头部边缘，亮光随轮廓移动显露。 \n1.3–4.4 秒：切稍宽构图，连续拉远，依次揭示圆头、五官、白色胸毛、手臂和白色猫爪与白色双脚，最终正面全身居中，脚下柔影。 \n4.4–5.5 秒：轻微继续拉远，本体静止。头顶上方居中淡入 “英短蓝白，大有可玩。”，结束前淡出。 \n5.5–6.7 秒：本体低空悬浮，向后轻仰，白色猫爪短暂朝向镜头，再转至四分之三侧面，身体完整同步转动，毛发轻微滞后。\n 6.7–8 秒：转至侧面，展示头部厚度、腹部颜色和白色猫爪，保持竖直向右横移，末尾移出画面。\n 8–8.7 秒：白色空场，中央淡入 “可爱，也有质感。”。 \n8.7–10 秒：文字平滑移至左侧中部，本体从右上斜向进入右侧微距构图，镜头扫过蓝灰绒毛、眼睛和小猫嘴巴，文字不遮挡产品。10 秒前淡出。 \n10–11.3 秒：微距继续扫过猫脸嘴，沿躯干移身体与脚部，局部允许出框。 \n11.3–12.7 秒：白底，人物腰胯局部位于右侧，一只手捏住本体躯干，从宽松外套口袋向上取出，头部先露出，再露躯干和双脚，手臂轻摆，左侧淡入 “把好心情，随身带。”。 \n12.7–14 秒：近景，本体由一只手托在右下方，另一只手从额头向头顶轻抚一次，绒毛倒伏后恢复，五官固定。左侧文案保持，14 秒前淡出。 \n14–15.7 秒：5 只一样，只是穿搭不同的的英短蓝白幼猫从右侧纵向向左移动到中间位置，上方居中淡入 “英国短毛猫，蓝白款。”。 \n15.7–17.5 秒：五只英短蓝白幼猫再整体移向左侧，绕下方共同中心沿独立视线展开成扇形，不穿透融合。上方文案保持，结束前淡出。\n17.5–18 秒：白色空场，短暂停顿。 \n18–19.5 秒：本体从左、和从右进入，四分之三朝向彼此，水平靠近，以身体侧面轻柔碰一次，绒毛压缩后柔和回弹，小猫耳朵动一下。\n 19.5–20.7 秒：两只沿来路退至左右边缘外，中央恢复留白，镜头固定。\n 20.7–22.4 秒：五只英短蓝白幼猫悬浮在不同位置与浅层纵深，小幅倾斜、自转，再向中央收拢为交错群组，遮挡关系清晰。 \n22.4–23 秒：五只英短蓝白幼猫调整正立、排成一行，轻拍下落地，各轻微压缩回弹一次后站稳。 \n23–24.3 秒：五只英短蓝白幼猫并排，部分略向左右倾斜，支撑稳定，镜头轻拉远展示全貌与阴影。 \n24.3–25.8 秒：五只幼猫下端靠近下方中央，身体向不同方向展开成扇形，脸部毛发细节可辨。下方居中淡入 “每一款，都有偏爱。”，结束前淡出。 \n25.8–28 秒：直接切到中央单只英短蓝白幼猫，高约画面十分之一，轻微侧身转动后停稳，周围大面积白色留白，无文字。\n"</script></article><article class="case-card" data-copy-context data-medium="video" data-topic="人物出场" data-evidence="author-tested" data-search="酷飒走路｜雨后停机坪双人出场五镜
+人物出场
+深夜雨后停机坪的双人出场五镜：舷梯而下、点烟回望、并肩前行到背影虚化，冷灰暗调的反派气质出场。纯文字案例。
+作者称已测
+出场 双人 3d动漫风 无台词
+3d 动漫风格暗黑系禁欲电影短片，低饱和冷灰暗调胶片质感，阴郁疏离反派主角氛围，全程无台词，写实冷感电影画质，哑光雾面质感，电影级景深调度，超现实冷峻色调。
+人物与场景：
+背景为深夜雨后的军用停机坪，地面湿润倒映冷白灯光，远处停靠黑色哑光大型运输机，雾气弥漫，冷风微拂。
+穿黑色丝绒垂坠宽松开衫外套，袖口拼接黑色长毛皮草；内搭黑色蕾丝花边透视吊带；戴细款黑色金属链条锁骨项链
+浅白金柔顺过肩长直发，空气偏分轻薄碎发修饰脸颊
+穿 oversize 灰色立领毛呢大衣，内搭宽松白色翻领衬衫，系黑灰横条纹领带；下身黑色垂感阔腿休闲长裤
+光影氛围：
+冷灰低饱和电影调色，阴郁冷感氛围，雾气混合冷白探照灯光，湿润地面反射光影，哑光胶片颗粒质感，无多余字幕水印，深沉克制反派出场氛围。镜头一： 平视跟拍飞机舷梯口全身中景。前景雾气弥漫，角色 a 率先从机舱门走出，沿舷梯缓步向下，黑色丝绒开衫衣摆随风微动，步伐沉稳冷酷，眼神直视前方；角色 b 紧随其后，左手插在大衣口袋，右手自然垂落，两人间隔两步距离，冷白灯光从头顶打下，在地面拉出锋利阴影。
+镜头二： 平视侧拍双人胸部以上近景。角色 a 走完舷梯后停下脚步，转头朝右后方回望，眼神冷淡疏离；角色 b 同步走至角色 a 右侧并排站立，随即从大衣口袋掏出香烟含在嘴角，低头按动金属打火机，火苗瞬间照亮侧脸，吐出一缕青白烟雾，动作流畅利落。
+镜头三： 低角度仰拍跟拍双人全身远景。两人并肩同步迈步离开停机坪区域，阔腿裤与开衫衣摆因行走产生自然垂坠摆动，步伐节奏一致，步幅大而有力，飒爽利落，冷雾在两人腿部周围缠绕流动，身后飞机灯光逐渐虚化。
+镜头四： 俯拍特写脚下近景。镜头固定低角度拍摄湿漉地面，两双黑色皮靴交替踏入积水倒影，步伐坚定利落，水花轻微溅起，地面倒映出两人模糊身影与冷白灯光，踩过画面中央的水洼形成一圈圈扩散涟漪。
+镜头五： 平视背面跟拍双人全身中景，跟随步伐稳定向前平移。两人并肩从画面中心走向纵深远处，背影逐渐被冷雾与暗调吞噬，衣摆与发丝在风中轻微扬起，只留下两个高挑冷峻的背影轮廓逐渐虚化消失。
+"><div class="card-media"><div class="photo"><div class="media-cover media-cover-video"><span class="cover-note">仅提示词 · 可复制</span><span class="cover-excerpt">3D 动漫风格暗黑系禁欲电影短片，低饱和冷灰暗调胶片质感，阴郁疏离反派主角氛围，全程无台词，写实冷感电影画质，哑光雾面质感，电影级景深调度，超现实冷峻色调。
+人物与场景：
+背景为深夜雨后的军用停机坪，地面湿润倒映冷白灯光，远处停靠黑色哑光大型运输机，雾气弥漫，冷风微拂。
+穿黑色丝绒垂坠宽松开衫外套，袖口拼接黑色长毛皮草；内搭黑色蕾丝花边透视吊带；戴细款黑色金属链条锁骨项链
+浅白金柔顺过肩长直发，空</span></div></div></div><div class="card-holes" aria-hidden="true"></div><div class="card-body"><div class="card-meta"><span>PA-010</span><span>视频</span><span class="evidence-badge evidence-author"><span class="icon" style="width:12px;height:12px" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l4.4 4.4L19.5 6.3"/></svg></span>作者称已测</span></div><h3 class="card-title" title="酷飒走路｜雨后停机坪双人出场五镜"><a class="card-detail-link" href="/prompt-archive-site/cases/cool-walk-two-leads/"><span class="card-title-text">酷飒走路｜雨后停机坪双人出场五镜</span></a></h3><p class="card-summary">深夜雨后停机坪的双人出场五镜：舷梯而下、点烟回望、并肩前行到背影虚化，冷灰暗调的反派气质出场。纯文字案例。</p><div class="card-tags"><span class="tag">人物出场</span><span class="tag">出场</span><span class="tag">双人</span></div><div class="card-copy-row"><button class="copy-btn" type="button" data-copy-button data-copy-source="card-prompt-cool-walk-two-leads" data-copy-slug="cool-walk-two-leads" data-copy-title="酷飒走路｜雨后停机坪双人出场五镜" data-copy-href="/prompt-archive-site/cases/cool-walk-two-leads/"><span class="icon" style="width:16px;height:16px" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="10.5" height="10.5" rx="1.5"/><path d="M5.5 13.5h-.7A1.8 1.8 0 0 1 3 11.7V4.8A1.8 1.8 0 0 1 4.8 3h6.9a1.8 1.8 0 0 1 1.8 1.8v.7"/></svg></span><span data-copy-text>复制提示词</span></button><span class="copy-feedback" data-copy-feedback aria-live="polite"></span></div></div><script type="application/json" id="card-prompt-cool-walk-two-leads">"3D 动漫风格暗黑系禁欲电影短片，低饱和冷灰暗调胶片质感，阴郁疏离反派主角氛围，全程无台词，写实冷感电影画质，哑光雾面质感，电影级景深调度，超现实冷峻色调。\n人物与场景：\n背景为深夜雨后的军用停机坪，地面湿润倒映冷白灯光，远处停靠黑色哑光大型运输机，雾气弥漫，冷风微拂。\n穿黑色丝绒垂坠宽松开衫外套，袖口拼接黑色长毛皮草；内搭黑色蕾丝花边透视吊带；戴细款黑色金属链条锁骨项链\n浅白金柔顺过肩长直发，空气偏分轻薄碎发修饰脸颊\n穿 Oversize 灰色立领毛呢大衣，内搭宽松白色翻领衬衫，系黑灰横条纹领带；下身黑色垂感阔腿休闲长裤\n光影氛围：\n冷灰低饱和电影调色，阴郁冷感氛围，雾气混合冷白探照灯光，湿润地面反射光影，哑光胶片颗粒质感，无多余字幕水印，深沉克制反派出场氛围。镜头一： 平视跟拍飞机舷梯口全身中景。前景雾气弥漫，角色 A 率先从机舱门走出，沿舷梯缓步向下，黑色丝绒开衫衣摆随风微动，步伐沉稳冷酷，眼神直视前方；角色 B 紧随其后，左手插在大衣口袋，右手自然垂落，两人间隔两步距离，冷白灯光从头顶打下，在地面拉出锋利阴影。\n镜头二： 平视侧拍双人胸部以上近景。角色 A 走完舷梯后停下脚步，转头朝右后方回望，眼神冷淡疏离；角色 B 同步走至角色 A 右侧并排站立，随即从大衣口袋掏出香烟含在嘴角，低头按动金属打火机，火苗瞬间照亮侧脸，吐出一缕青白烟雾，动作流畅利落。\n镜头三： 低角度仰拍跟拍双人全身远景。两人并肩同步迈步离开停机坪区域，阔腿裤与开衫衣摆因行走产生自然垂坠摆动，步伐节奏一致，步幅大而有力，飒爽利落，冷雾在两人腿部周围缠绕流动，身后飞机灯光逐渐虚化。\n镜头四： 俯拍特写脚下近景。镜头固定低角度拍摄湿漉地面，两双黑色皮靴交替踏入积水倒影，步伐坚定利落，水花轻微溅起，地面倒映出两人模糊身影与冷白灯光，踩过画面中央的水洼形成一圈圈扩散涟漪。\n镜头五： 平视背面跟拍双人全身中景，跟随步伐稳定向前平移。两人并肩从画面中心走向纵深远处，背影逐渐被冷雾与暗调吞噬，衣摆与发丝在风中轻微扬起，只留下两个高挑冷峻的背影轮廓逐渐虚化消失。\n"</script></article><article class="case-card" data-copy-context data-medium="video" data-topic="都市叙事" data-evidence="author-tested" data-search="港风tvb大小姐｜复古露台对话六镜
+都市叙事
+90年代tvb老港剧ccd复古质感的露台甜宠对话：女主以「大小姐」姿态娇嗔提要求，男主温柔追问「那我要怎么哄」，六镜正反打完成端架子、提要求、被接住、反击出招的俏皮弧线。附人物造型、光影与整体节奏提示。
+作者称已测
+港风 tvb 甜宠对话 大小姐 复古
+摄影风格：ccd港风复古，90年代tvb老港剧质感，柔和胶片颗粒，低对比度暖调色彩，轻微柔化磨皮。暖黄色墙面背景，复古港式室内露台场景，sony venice拍摄风格。画面温润怀旧。
+场景：复古露台，明黄色纯色墙面做背景，木质雕花靠背椅与圆小边几相对摆放。黄色花瓶里插着橙黄色小花，桌上散落旧报纸，木质栏杆围合出怀旧氛围。
+人物设定
+女主：年轻港风女生，盘发，黑色针织圆顶小礼帽，黑色带黑色羽毛花边的复古长裙。眉眼精致，港式挑眉妆容，淡腮红，红调口红。气质娇俏灵动，带着大小姐的俏皮傲娇感，连指尖都透着“被宠惯了”的底气。
+男主：年轻男生，黑色长款上衣，气质沉静，坐于女主对面。
+光影：柔和漫射自然光，正面柔光铺满面部，阴影柔和细腻。暖黄色环境光烘托氛围，墙面在人物身后投下淡淡的椅子轮廓阴影，无硬边阴影，整幅画面温软如蜜。
+镜头规则：正反打切换，近景面部特写与双人全景交替，固定机位平稳切换，无剧烈推拉，重点捕捉人物细微神态与身体小动作，音频同步人物台词，甜宠氛围贯穿始终。
+【镜头1｜女主近景特写·正打】
+女主电话听筒贴在耳边，然后她慢悠悠将电话听筒移离耳边，动作带着一种“不跟对方计较了”的娇矜。电话听筒被自然抬到下巴位置停住，她顺势微微扬起下巴，嘴角翘起一个浅浅的娇俏弧度——不是大笑，是那种“你知道我什么脾气”的笃定小得意。眼神灵动地转了半圈才落回镜头，声音里带着理所当然的娇气（港风腔调）：“你都叫我大小姐了——那我自然是娇生惯养的。”尾音拖了半拍，像在说“不然呢”。
+【镜头2｜女主近景特写·正打】
+她可爱地轻轻歪了一下头，幅度不大，像只审视主人的小猫。眼睛直直看向镜头，但目光里没有挑衅，全是“你得让着我”的俏皮笃定。她说完还轻轻眨了一下眼（港风腔调，语气轻快上扬）：“我做事情可是要人家哄着的——”说完自己先抿了一下嘴，像是觉得这个要求提得理直气壮，连自己都有点想笑。
+【镜头3｜双人中景·正反打】
+镜头拉开，男女主隔着圆桌相对而坐。暖黄墙面上印着两人淡淡的座椅轮廓影。男主看向对面的女主，眼神温柔得像化开的蜜，嘴角带着淡淡的宠溺笑意。他开口时声音放得很轻，尾音微微上扬——问得认真，但眼底藏着“我早就猜到”的了然（轻声）：“吃饭也要哄？”
+【镜头4｜女主近景特写·正打】
+镜头切回女主，她听到这句话后先是微微一怔，随即俏皮地挑了一下右边眉毛——那个挑眉像是提前写好台词的开关。她微微抬起下巴，带着“当然啦这还用问”的神气（语气笃定又娇俏）：“那当然了。”说完嘴角压不住地翘了一下，像是在说“你这不是明知故问嘛”。
+【镜头5｜双人中景·正反打】
+镜头再次拉至双人。男主身体微微前倾，指尖搭在桌沿，脸上笑意加深了几分，语气里带着“我宠你但我也想知道答案”的温柔好奇（嗓音低沉温柔）：“那我要怎么哄？”他的目光始终没离开她的脸，专注得像在等一个特别重要的答案。
+【镜头6｜女主近景特写·正打】
+女主听到问题后，眼珠轻轻向右上方转动，做出“正在认真思考”的可爱模样——但那个思考只维持了不到两秒，她眼睛倏地一亮，像是按到了什么开关。随即她整个人微微前倾，下巴轻轻抬起，带着“我可抓到你了”的俏皮笑容（语气轻快带笑）：“我问你一个问题，你答对了，我就吃。”说完她目光亮晶晶地盯着镜头，嘴角带着狡黠又笃定的笑意，像一只计谋得逞的小猫。
+整体节奏提示
+六个镜头形成完整的“端架子→提要求→被追问→理直气壮→被温柔接住→反击出招”的俏皮弧线。女主的娇俏在每个镜头中有不同层次：第一镜的笃定小得意，第二镜的歪头撒娇，第四镜的挑眉神气，第六镜的眼珠一转计上心来——层层递进但不重复，让“大小姐”形象立体又鲜活。男主的温柔则作为恒定底色，在双人景别中稳稳托住女主的灵动。
+"><div class="card-media"><div class="photo"><div class="media-cover media-cover-video"><span class="cover-note">仅提示词 · 可复制</span><span class="cover-excerpt">摄影风格：CCD港风复古，90年代TVB老港剧质感，柔和胶片颗粒，低对比度暖调色彩，轻微柔化磨皮。暖黄色墙面背景，复古港式室内露台场景，Sony Venice拍摄风格。画面温润怀旧。
+场景：复古露台，明黄色纯色墙面做背景，木质雕花靠背椅与圆小边几相对摆放。黄色花瓶里插着橙黄色小花，桌上散落旧报纸，木质栏杆围合出怀旧氛围。
+人物设定
+女主：年轻港风女生，盘发，黑色针织圆顶小礼帽，黑色带黑色羽毛花边的</span></div></div></div><div class="card-holes" aria-hidden="true"></div><div class="card-body"><div class="card-meta"><span>PA-051</span><span>视频</span><span class="evidence-badge evidence-author"><span class="icon" style="width:12px;height:12px" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l4.4 4.4L19.5 6.3"/></svg></span>作者称已测</span></div><h3 class="card-title" title="港风TVB大小姐｜复古露台对话六镜"><a class="card-detail-link" href="/prompt-archive-site/cases/tvb-retro-terrace-banter/"><span class="card-title-text">港风TVB大小姐｜复古露台对话六镜</span></a></h3><p class="card-summary">90年代TVB老港剧CCD复古质感的露台甜宠对话：女主以「大小姐」姿态娇嗔提要求，男主温柔追问「那我要怎么哄」，六镜正反打完成端架子、提要求、被接住、反击出招的俏皮弧线。附人物造型、光影与整体节奏提示。</p><div class="card-tags"><span class="tag">都市叙事</span><span class="tag">港风</span><span class="tag">TVB</span></div><div class="card-copy-row"><button class="copy-btn" type="button" data-copy-button data-copy-source="card-prompt-tvb-retro-terrace-banter" data-copy-slug="tvb-retro-terrace-banter" data-copy-title="港风TVB大小姐｜复古露台对话六镜" data-copy-href="/prompt-archive-site/cases/tvb-retro-terrace-banter/"><span class="icon" style="width:16px;height:16px" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="10.5" height="10.5" rx="1.5"/><path d="M5.5 13.5h-.7A1.8 1.8 0 0 1 3 11.7V4.8A1.8 1.8 0 0 1 4.8 3h6.9a1.8 1.8 0 0 1 1.8 1.8v.7"/></svg></span><span data-copy-text>复制提示词</span></button><span class="copy-feedback" data-copy-feedback aria-live="polite"></span></div></div><script type="application/json" id="card-prompt-tvb-retro-terrace-banter">"摄影风格：CCD港风复古，90年代TVB老港剧质感，柔和胶片颗粒，低对比度暖调色彩，轻微柔化磨皮。暖黄色墙面背景，复古港式室内露台场景，Sony Venice拍摄风格。画面温润怀旧。\n场景：复古露台，明黄色纯色墙面做背景，木质雕花靠背椅与圆小边几相对摆放。黄色花瓶里插着橙黄色小花，桌上散落旧报纸，木质栏杆围合出怀旧氛围。\n人物设定\n女主：年轻港风女生，盘发，黑色针织圆顶小礼帽，黑色带黑色羽毛花边的复古长裙。眉眼精致，港式挑眉妆容，淡腮红，红调口红。气质娇俏灵动，带着大小姐的俏皮傲娇感，连指尖都透着“被宠惯了”的底气。\n男主：年轻男生，黑色长款上衣，气质沉静，坐于女主对面。\n光影：柔和漫射自然光，正面柔光铺满面部，阴影柔和细腻。暖黄色环境光烘托氛围，墙面在人物身后投下淡淡的椅子轮廓阴影，无硬边阴影，整幅画面温软如蜜。\n镜头规则：正反打切换，近景面部特写与双人全景交替，固定机位平稳切换，无剧烈推拉，重点捕捉人物细微神态与身体小动作，音频同步人物台词，甜宠氛围贯穿始终。\n【镜头1｜女主近景特写·正打】\n女主电话听筒贴在耳边，然后她慢悠悠将电话听筒移离耳边，动作带着一种“不跟对方计较了”的娇矜。电话听筒被自然抬到下巴位置停住，她顺势微微扬起下巴，嘴角翘起一个浅浅的娇俏弧度——不是大笑，是那种“你知道我什么脾气”的笃定小得意。眼神灵动地转了半圈才落回镜头，声音里带着理所当然的娇气（港风腔调）：“你都叫我大小姐了——那我自然是娇生惯养的。”尾音拖了半拍，像在说“不然呢”。\n【镜头2｜女主近景特写·正打】\n她可爱地轻轻歪了一下头，幅度不大，像只审视主人的小猫。眼睛直直看向镜头，但目光里没有挑衅，全是“你得让着我”的俏皮笃定。她说完还轻轻眨了一下眼（港风腔调，语气轻快上扬）：“我做事情可是要人家哄着的——”说完自己先抿了一下嘴，像是觉得这个要求提得理直气壮，连自己都有点想笑。\n【镜头3｜双人中景·正反打】\n镜头拉开，男女主隔着圆桌相对而坐。暖黄墙面上印着两人淡淡的座椅轮廓影。男主看向对面的女主，眼神温柔得像化开的蜜，嘴角带着淡淡的宠溺笑意。他开口时声音放得很轻，尾音微微上扬——问得认真，但眼底藏着“我早就猜到”的了然（轻声）：“吃饭也要哄？”\n【镜头4｜女主近景特写·正打】\n镜头切回女主，她听到这句话后先是微微一怔，随即俏皮地挑了一下右边眉毛——那个挑眉像是提前写好台词的开关。她微微抬起下巴，带着“当然啦这还用问”的神气（语气笃定又娇俏）：“那当然了。”说完嘴角压不住地翘了一下，像是在说“你这不是明知故问嘛”。\n【镜头5｜双人中景·正反打】\n镜头再次拉至双人。男主身体微微前倾，指尖搭在桌沿，脸上笑意加深了几分，语气里带着“我宠你但我也想知道答案”的温柔好奇（嗓音低沉温柔）：“那我要怎么哄？”他的目光始终没离开她的脸，专注得像在等一个特别重要的答案。\n【镜头6｜女主近景特写·正打】\n女主听到问题后，眼珠轻轻向右上方转动，做出“正在认真思考”的可爱模样——但那个思考只维持了不到两秒，她眼睛倏地一亮，像是按到了什么开关。随即她整个人微微前倾，下巴轻轻抬起，带着“我可抓到你了”的俏皮笑容（语气轻快带笑）：“我问你一个问题，你答对了，我就吃。”说完她目光亮晶晶地盯着镜头，嘴角带着狡黠又笃定的笑意，像一只计谋得逞的小猫。\n整体节奏提示\n六个镜头形成完整的“端架子→提要求→被追问→理直气壮→被温柔接住→反击出招”的俏皮弧线。女主的娇俏在每个镜头中有不同层次：第一镜的笃定小得意，第二镜的歪头撒娇，第四镜的挑眉神气，第六镜的眼珠一转计上心来——层层递进但不重复，让“大小姐”形象立体又鲜活。男主的温柔则作为恒定底色，在双人景别中稳稳托住女主的灵动。\n"</script></article><article class="case-card" data-copy-context data-medium="video" data-topic="叙事短片" data-evidence="author-tested" data-search="漂移拦截｜夜桥失控车＋订婚宴（双段）
+叙事短片
+同一条围栏内先后保存两段独立提示词：前段为 3d 动漫风格的夜桥追车短片，女主刹车失灵靠摩擦护栏降速，男主驾车漂移拦截，十七个分镜至逼停收束；后段为 2010 年代台偶质感的订婚宴求婚八镜正反打，含台湾腔台词。两段之间原文未另设标题。
+作者称已测
+追车戏 漂移 3d动漫风 订婚宴求婚 双段
+3d 动漫风格暗黑系禁欲电影短片，低饱和冷灰暗调胶片质感，阴郁疏离反派主角氛围，全程无台词，写实冷感电影画质，哑光雾面质感，电影级景深调度，超现实冷峻色调。韩国高级都市氛围感，电影级质感，轻微镜头抖动，运动模糊，车内刹车失灵危机场景
+情景：女主遭人陷害导致刹车失灵，只能通过撞击摩擦来降速，一路不断摩擦出火花，女主全程死死握住方向盘，稳住方向，男主开着黑色超跑从旁边提速追上，开到前面来帮忙降速，桥已经到了尽头，男主直接漂移过去拦截。一阵猛烈的撞击，成功逼停失控的车。
+人物：
+女生：年轻东亚女性，黑色长发，额前碎发，银色环形耳饰，黑色带钻上衣。
+镜头一：女主坐在跑车驾驶座，双手握紧方向盘，用力向左摆，眉头紧皱，嘴唇微抿，昏暗车内环境，暗调冷灰光影，局部面光，强烈明暗对比，85mm定焦镜头，近景
+镜头二：夜晚公路，红色跑车车头局部特写，车辆高速飞驰，与桥栏杆摩擦，强烈横向运动拖影，大幅度动态模糊。暗灰色路面，车道标线，冷灰低饱和色调，24mm广角镜头，高速跟拍，镜头轻微抖动
+镜头三：高空俯拍，夜晚跨江大桥，宽阔沥青桥面，金属护栏，一排冷蓝色路灯，红色跑车在桥面高速飞驰，与金属护栏摩擦出火花，车辆带有红色尾灯拖影，强烈动态运动模糊，远处灯光散景光斑，冷蓝暗调夜景，28mm广角镜头，大远景，固定机位摇镜头，跟随着红色跑车的运动摇镜头
+镜头四：低机位仰拍，夜晚斜拉索大桥，红色跑车车尾，车身摩擦金属护栏，大量橙黄色火花飞溅，红色贯穿式尾灯亮起，冷白色路灯，深色沥青桥面，斜拉钢索背景，35mm镜头，中近景，轻微镜头抖动，少量运动模糊
+镜头五：夜晚，从车外透过车窗拍摄，女主坐在跑车驾驶座，双手紧握方向盘，神情紧张慌乱，车窗右侧大量橙黄色金属摩擦火花飞溅，暗调环境，冷光勾勒人脸，暖橙色火花高光，冷暖强烈对比，35mm镜头，中近景。
+镜头六：跑车圆形液晶仪表盘特写，黑色表盘，银色外圈，白色指针，指针在小幅度晃动，屏幕显示d挡，数字车速126 km/h，冷蓝色发光数字刻度，车内昏暗环境，仪表自发光，高对比度，24mm镜头，特写
+镜头七：夜晚跑车内，侧拍视角，女生双手用力紧握方向盘，手臂紧绷，侧脸，眉头紧皱，嘴唇紧抿，神情紧张挣扎，侧逆光，窗外暖橙色路灯光斑，车内大面积暗阴影，强烈明暗对比，35mm镜头，中近景
+镜头八：夜晚城市高架路，横向跟拍，红色跑车紧贴金属护栏高速滑行，车身和护栏接触处持续飞溅大量暖金色火花，长长的动态光轨拖影，背景是夜晚城市高楼建筑群，城市路灯散景光斑，35mm镜头，中远景，强烈横向运动模糊。
+镜头九：夜晚城市高架，高空斜向俯拍，红色跑车紧贴金属护栏高速滑行，车身摩擦处不断飞溅暖金色火花，灰色沥青路面，黄色车道标线，35mm镜头，远景，镜头轻微晃动，运动模糊，冷调夜间环境，路面微弱反光。
+镜头十：夜晚城市高架道路，侧面跟拍机位，灰色超跑从红色超跑右侧加速追上红色超跑，两车并排高速行驶到灰色超跑超过红色超跑，多层银色金属护栏，背景是夜晚城市高楼、树木、虚化路灯光斑，35mm镜头，全景，镜头横向平移，强烈横向运动模糊。
+镜头十一：，夜晚城市高架道路，红色超跑车内视角，灰色车尾后方跟拍机位，灰色超跑车尾，尾灯亮着浓烈红光，红色光晕漫射，镜头眩光，左侧银色护栏，背景是夜晚城市楼宇与虚化路灯光斑，35mm镜头，中景，轻微径向运动模糊。
+镜头十二：夜晚城市高架，低角度正面机位，24mm广角镜头，红色超跑车头与金属护栏摩擦，车头摩擦位置燃起火星，升腾白色浓烟，左侧黑色跑车，跑车大灯亮白光，路面反射灯光，远处虚化路灯光斑，强烈明暗对比，橙红火光，轻微动态运动模糊。
+镜头十三：夜晚城市跨海大桥，斜侧俯拍广角镜头，灰色跑车在画面右前方行驶，左后方红色超跑车头破损，车身冒出白色烟雾，桥面银色多层护栏，远处城市楼宇灯火，车辆大灯亮白光，沥青桥面，强烈横向运动模糊，高速跟拍。
+镜头十四：夜晚城市市政弯道公路，35mm镜头，侧面跟拍，灰色双门超跑打算紧急拦截于是漂移侧停，最后侧身面对镜头停住，轮胎摩擦地面扬起大量白色烟雾，红色尾灯亮起，沥青路面，道路两侧草坪与行道树，远处高层城市楼宇，路灯冷白光，城市夜景，动态运动模糊。
+镜头十五：另一个机位拍摄灰车漂移刹车，35mm镜头，灰色双门跑车，明亮红色尾灯，右侧红色超跑刚好猛烈撞上黑色跑车的侧身，路灯形成长条光轨，强烈横向运动模糊，高速追车。
+镜头十六：全景，夜晚城市沥青弯道公路，24mm广角镜头，高空俯拍视角，灰色跑车横向卡位，红色超跑笔直撞向灰色超跑侧身，移出几米，然后成功逼停红色超跑，地面弥漫大量白色刹车烟尘，红色超跑贯穿式尾灯亮起亮红色光带，路面反光，路边绿化带，远处路灯圆形散景光斑，轻微动态拖影
+镜头十七：夜晚环境，85mm定焦人像镜头，面部大头特写，黑色超跑男主左侧脸颊带擦伤，血痕沿侧脸缓缓流下眼神沉静隐忍，均匀呼吸，看向女主，略带疲惫，嘴唇自然轻合，柔和漫射冷调面光，低对比度，朦胧薄雾质感，背景圆形路灯散景光斑，极浅景深。
+摄影风格：2010年代台湾偶像剧画质，柔和室内综艺打光，高清电视剧实拍质感，轻微胶片颗粒。色彩饱和度偏高，暖调柔光，sony venice拍摄，真实皮肤纹理，人物妆容精致。宴会厅室内场景，背景宾客人群虚化，氛围在惊喜与忐忑之间拉扯，甜而不腻，是“他真的要求婚了吗”的心跳加速感。
+场景：室内订婚宴会大厅，白色吊顶筒灯洒下柔和光幕，中式木雕摆件点缀其间，背景站立围观的宾客虚化成热闹的暖色斑块。环境明亮柔和，像被幸福泡过的空气。
+人物设定
+女主：年轻东亚女生，精致鹅蛋脸，深棕头发盘成高丸子头，佩戴银色钻石皇冠，随动作微微闪光。星形闪钻耳钉，多层细银项链，红色细吊带裙衬得锁骨线条纤细。眼妆精致，纤长睫毛，唇色粉嫩。神情在惊讶、迟疑、无措与幸福之间层层过渡，像一只被突然捧到聚光灯下的小猫。
+男主：年轻东亚男生，灰紫色西装外套内搭黑色衬衫。情绪温柔笃定，深情宠溺，笑容真挚，眼神坚定，充满郑重的爱意——他不是在演浪漫，他是真的觉得眼前这个人值得全世界。
+镜头1【正打·女主近景】
+女主位于画面左侧，男主虚焦于画面右下角。她眼睛倏地睁大，嘴唇微张，像被什么烫到一样愣住了半秒——那个“喂”字卡在喉咙里先变成了一个短促的气音，才带着不可置信的笑意溢出来（台湾腔，语气上扬带颤）：
+“喂——你真的要娶我啊？”
+说话时她肩膀轻轻缩了一下，画面右侧露出男主局部背影，背景是虚化的宴会人群，热闹的暖光在她脸上流动，发丝边缘被勾勒出一圈柔和轮廓光，高饱和的柔和色彩，每一帧都像电视剧剧照。
+镜头2【反打·男主近景】
+男主位于画面右侧，身体微侧向画面左方，正对面前女生。女生局部头部出现在画面左侧前景，虚化成一抹暖色。两人近距离面对面，呼吸几乎交叠。男主眼神温柔沉静，目光稳稳落在她脸上，没有笑场，没有夸张，只是认真地看着她——然后，边说话边轻轻点了一下头（台湾腔，语气笃定而轻）：
+“嗯。”
+那个“嗯”字短促却稳重，说完他嘴角几不可察地弯了一下，像在说“这有什么好怀疑的”。眼神里还带着一丝无辜的不解：你为什么会觉得我不娶你？
+镜头3【正打·女主近景】
+女主位于画面左侧，男主虚焦于画面右下角。她眉头轻轻蹙了一下又松开，像在消化一个过于巨大的惊喜。她对着男主边说话边歪了一下头——那个歪头带着少女式的撒娇与不确定（台湾腔，语速放缓，尾音拖长）：
+“可是我有很多缺点的——”
+说到“缺点”时她目光微微下移又抬回来，像在提前给他一个反悔的机会，但眼里那点期待藏不住。
+镜头4【反打·男主近景】
+男主位于画面右侧，身体微侧向画面左方，正对面前女生。女生局部头部出现在画面左侧前景。他听到“缺点”两个字时，先是被逗笑了——不是大笑，是那种“我家小猫又在挠人了”的宠溺笑意从眼底漫上来，嘴角自然上扬。他满脸温柔地看着她，语气轻而坚定，一字一句像在给她盖章（台湾腔）：
+“没关系，我喜欢你。连你的缺点，我也会喜欢。”
+说完他目光依旧深情又宠溺地盯着她，眼神像在说“你再说一个缺点试试”。
+镜头5【双人中景·腰部以上】
+双人同框，男主位于画面右侧，身体侧对女主，低头含笑，主动牵住女生的手——不是用力拉，是手指轻轻扣进她指缝，带着一种“跟我来”的温柔笃定。女主微微睁大眼睛，神情惊讶又无措，脚步被他带着向前，情绪带着一丝恍惚，像踩在云上。周围宾客的虚影与暖光在背景里流动，两人像被世界围观，但目光只落在彼此身上。
+镜头6【双人中景·腰部截取】
+双人并排同框，男主位于画面右侧，女主在画面左侧，两人并肩站立，身体略微靠近。男主嘴角微扬，神情舒展从容，笃定自信，浑身洋溢着“要娶到心爱之人”的幸福光晕。女主侧着脸看着男主说话，眼神还是有点迷茫——那种“这一切是真的吗”的恍惚——但更多的是幸福和开心，安静地望向他。男主对着宴会宾客，边说边左右微微点头示意，大方又幸福地宣布（台湾腔，声音清亮）：
+“我和晴川，要在大家的见证下举行婚礼了。”
+说到“举行婚礼”时，他转向女主，从西装口袋中取出戒指，动作郑重，切换到镜头7。
+镜头7【正打·女主脸部特写】
+聚焦女主面部神态，女主居于画面中心，正面朝向镜头。男性的手从画面下方伸入，靠近她耳部——展现男主第一视角的求婚画面。她有些无措，嘴唇微张，睫毛颤了颤，但更多的是开心和幸福。眼睛里慢慢泛起幸福的泪花，泪光在筒灯下闪闪发亮，像碎钻落进眼底。她没有躲，只是站在原地，被这一刻的重量轻轻压住。
+镜头8【反打·男主近景】
+男主位于画面右侧，身体微侧向画面左方，正对面前女生。女生局部头部出现在画面左侧前景。他嘴角带着浅浅温柔笑意，眼神深情专注，目光望向对面女主，笃定又充满爱意。他眼睛里也泛着幸福的泪花——但没有流泪，只是让那层水光在眼眶里亮着，像把所有的爱意都盛在里面，端到她面前。
+整体运镜节奏
+正反打平稳交替，镜头在近景与双人中景之间自然切换。镜头5与镜头6从双人近景缓慢拉至中景，形成“两人从对话走向宣布”的连贯动线。镜头7切入女主特写时，男主的手从画面下方自然进入，让“第一视角求婚”的沉浸感一气呵成。整体运镜流畅不卡顿，每一次切换都卡在人物情绪转折的呼吸点上。暖光始终包裹两人，背景宾客虚化，色彩饱和度偏高却不刺眼——是2010年代台湾偶像剧那种“全世界都在发光”的浪漫。
+"><div class="card-media"><div class="photo"><div class="media-cover media-cover-video"><span class="cover-note">仅提示词 · 可复制</span><span class="cover-excerpt">3D 动漫风格暗黑系禁欲电影短片，低饱和冷灰暗调胶片质感，阴郁疏离反派主角氛围，全程无台词，写实冷感电影画质，哑光雾面质感，电影级景深调度，超现实冷峻色调。韩国高级都市氛围感，电影级质感，轻微镜头抖动，运动模糊，车内刹车失灵危机场景
+情景：女主遭人陷害导致刹车失灵，只能通过撞击摩擦来降速，一路不断摩擦出火花，女主全程死死握住方向盘，稳住方向，男主开着黑色超跑从旁边提速追上，开到前面来帮忙降速，桥已</span></div></div></div><div class="card-holes" aria-hidden="true"></div><div class="card-body"><div class="card-meta"><span>PA-052</span><span>视频</span><span class="evidence-badge evidence-author"><span class="icon" style="width:12px;height:12px" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l4.4 4.4L19.5 6.3"/></svg></span>作者称已测</span></div><h3 class="card-title" title="漂移拦截｜夜桥失控车＋订婚宴（双段）"><a class="card-detail-link" href="/prompt-archive-site/cases/drift-bridge-and-engagement/"><span class="card-title-text">漂移拦截｜夜桥失控车＋订婚宴（双段）</span></a></h3><p class="card-summary">同一条围栏内先后保存两段独立提示词：前段为 3D 动漫风格的夜桥追车短片，女主刹车失灵靠摩擦护栏降速，男主驾车漂移拦截，十七个分镜至逼停收束；后段为 2010 年代台偶质感的订婚宴求婚八镜正反打，含台湾腔台词。两段之间原文未另设标题。</p><div class="card-tags"><span class="tag">叙事短片</span><span class="tag">追车戏</span><span class="tag">漂移</span></div><div class="card-copy-row"><button class="copy-btn" type="button" data-copy-button data-copy-source="card-prompt-drift-bridge-and-engagement" data-copy-slug="drift-bridge-and-engagement" data-copy-title="漂移拦截｜夜桥失控车＋订婚宴（双段）" data-copy-href="/prompt-archive-site/cases/drift-bridge-and-engagement/"><span class="icon" style="width:16px;height:16px" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="10.5" height="10.5" rx="1.5"/><path d="M5.5 13.5h-.7A1.8 1.8 0 0 1 3 11.7V4.8A1.8 1.8 0 0 1 4.8 3h6.9a1.8 1.8 0 0 1 1.8 1.8v.7"/></svg></span><span data-copy-text>复制提示词</span></button><span class="copy-feedback" data-copy-feedback aria-live="polite"></span></div></div><script type="application/json" id="card-prompt-drift-bridge-and-engagement">"3D 动漫风格暗黑系禁欲电影短片，低饱和冷灰暗调胶片质感，阴郁疏离反派主角氛围，全程无台词，写实冷感电影画质，哑光雾面质感，电影级景深调度，超现实冷峻色调。韩国高级都市氛围感，电影级质感，轻微镜头抖动，运动模糊，车内刹车失灵危机场景\n情景：女主遭人陷害导致刹车失灵，只能通过撞击摩擦来降速，一路不断摩擦出火花，女主全程死死握住方向盘，稳住方向，男主开着黑色超跑从旁边提速追上，开到前面来帮忙降速，桥已经到了尽头，男主直接漂移过去拦截。一阵猛烈的撞击，成功逼停失控的车。\n人物：\n女生：年轻东亚女性，黑色长发，额前碎发，银色环形耳饰，黑色带钻上衣。\n镜头一：女主坐在跑车驾驶座，双手握紧方向盘，用力向左摆，眉头紧皱，嘴唇微抿，昏暗车内环境，暗调冷灰光影，局部面光，强烈明暗对比，85mm定焦镜头，近景\n镜头二：夜晚公路，红色跑车车头局部特写，车辆高速飞驰，与桥栏杆摩擦，强烈横向运动拖影，大幅度动态模糊。暗灰色路面，车道标线，冷灰低饱和色调，24mm广角镜头，高速跟拍，镜头轻微抖动\n镜头三：高空俯拍，夜晚跨江大桥，宽阔沥青桥面，金属护栏，一排冷蓝色路灯，红色跑车在桥面高速飞驰，与金属护栏摩擦出火花，车辆带有红色尾灯拖影，强烈动态运动模糊，远处灯光散景光斑，冷蓝暗调夜景，28mm广角镜头，大远景，固定机位摇镜头，跟随着红色跑车的运动摇镜头\n镜头四：低机位仰拍，夜晚斜拉索大桥，红色跑车车尾，车身摩擦金属护栏，大量橙黄色火花飞溅，红色贯穿式尾灯亮起，冷白色路灯，深色沥青桥面，斜拉钢索背景，35mm镜头，中近景，轻微镜头抖动，少量运动模糊\n镜头五：夜晚，从车外透过车窗拍摄，女主坐在跑车驾驶座，双手紧握方向盘，神情紧张慌乱，车窗右侧大量橙黄色金属摩擦火花飞溅，暗调环境，冷光勾勒人脸，暖橙色火花高光，冷暖强烈对比，35mm镜头，中近景。\n镜头六：跑车圆形液晶仪表盘特写，黑色表盘，银色外圈，白色指针，指针在小幅度晃动，屏幕显示D挡，数字车速126 Km/h，冷蓝色发光数字刻度，车内昏暗环境，仪表自发光，高对比度，24mm镜头，特写\n镜头七：夜晚跑车内，侧拍视角，女生双手用力紧握方向盘，手臂紧绷，侧脸，眉头紧皱，嘴唇紧抿，神情紧张挣扎，侧逆光，窗外暖橙色路灯光斑，车内大面积暗阴影，强烈明暗对比，35mm镜头，中近景\n镜头八：夜晚城市高架路，横向跟拍，红色跑车紧贴金属护栏高速滑行，车身和护栏接触处持续飞溅大量暖金色火花，长长的动态光轨拖影，背景是夜晚城市高楼建筑群，城市路灯散景光斑，35mm镜头，中远景，强烈横向运动模糊。\n镜头九：夜晚城市高架，高空斜向俯拍，红色跑车紧贴金属护栏高速滑行，车身摩擦处不断飞溅暖金色火花，灰色沥青路面，黄色车道标线，35mm镜头，远景，镜头轻微晃动，运动模糊，冷调夜间环境，路面微弱反光。\n镜头十：夜晚城市高架道路，侧面跟拍机位，灰色超跑从红色超跑右侧加速追上红色超跑，两车并排高速行驶到灰色超跑超过红色超跑，多层银色金属护栏，背景是夜晚城市高楼、树木、虚化路灯光斑，35mm镜头，全景，镜头横向平移，强烈横向运动模糊。\n镜头十一：，夜晚城市高架道路，红色超跑车内视角，灰色车尾后方跟拍机位，灰色超跑车尾，尾灯亮着浓烈红光，红色光晕漫射，镜头眩光，左侧银色护栏，背景是夜晚城市楼宇与虚化路灯光斑，35mm镜头，中景，轻微径向运动模糊。\n镜头十二：夜晚城市高架，低角度正面机位，24mm广角镜头，红色超跑车头与金属护栏摩擦，车头摩擦位置燃起火星，升腾白色浓烟，左侧黑色跑车，跑车大灯亮白光，路面反射灯光，远处虚化路灯光斑，强烈明暗对比，橙红火光，轻微动态运动模糊。\n镜头十三：夜晚城市跨海大桥，斜侧俯拍广角镜头，灰色跑车在画面右前方行驶，左后方红色超跑车头破损，车身冒出白色烟雾，桥面银色多层护栏，远处城市楼宇灯火，车辆大灯亮白光，沥青桥面，强烈横向运动模糊，高速跟拍。\n镜头十四：夜晚城市市政弯道公路，35mm镜头，侧面跟拍，灰色双门超跑打算紧急拦截于是漂移侧停，最后侧身面对镜头停住，轮胎摩擦地面扬起大量白色烟雾，红色尾灯亮起，沥青路面，道路两侧草坪与行道树，远处高层城市楼宇，路灯冷白光，城市夜景，动态运动模糊。\n镜头十五：另一个机位拍摄灰车漂移刹车，35mm镜头，灰色双门跑车，明亮红色尾灯，右侧红色超跑刚好猛烈撞上黑色跑车的侧身，路灯形成长条光轨，强烈横向运动模糊，高速追车。\n镜头十六：全景，夜晚城市沥青弯道公路，24mm广角镜头，高空俯拍视角，灰色跑车横向卡位，红色超跑笔直撞向灰色超跑侧身，移出几米，然后成功逼停红色超跑，地面弥漫大量白色刹车烟尘，红色超跑贯穿式尾灯亮起亮红色光带，路面反光，路边绿化带，远处路灯圆形散景光斑，轻微动态拖影\n镜头十七：夜晚环境，85mm定焦人像镜头，面部大头特写，黑色超跑男主左侧脸颊带擦伤，血痕沿侧脸缓缓流下眼神沉静隐忍，均匀呼吸，看向女主，略带疲惫，嘴唇自然轻合，柔和漫射冷调面光，低对比度，朦胧薄雾质感，背景圆形路灯散景光斑，极浅景深。\n摄影风格：2010年代台湾偶像剧画质，柔和室内综艺打光，高清电视剧实拍质感，轻微胶片颗粒。色彩饱和度偏高，暖调柔光，Sony Venice拍摄，真实皮肤纹理，人物妆容精致。宴会厅室内场景，背景宾客人群虚化，氛围在惊喜与忐忑之间拉扯，甜而不腻，是“他真的要求婚了吗”的心跳加速感。\n场景：室内订婚宴会大厅，白色吊顶筒灯洒下柔和光幕，中式木雕摆件点缀其间，背景站立围观的宾客虚化成热闹的暖色斑块。环境明亮柔和，像被幸福泡过的空气。\n人物设定\n女主：年轻东亚女生，精致鹅蛋脸，深棕头发盘成高丸子头，佩戴银色钻石皇冠，随动作微微闪光。星形闪钻耳钉，多层细银项链，红色细吊带裙衬得锁骨线条纤细。眼妆精致，纤长睫毛，唇色粉嫩。神情在惊讶、迟疑、无措与幸福之间层层过渡，像一只被突然捧到聚光灯下的小猫。\n男主：年轻东亚男生，灰紫色西装外套内搭黑色衬衫。情绪温柔笃定，深情宠溺，笑容真挚，眼神坚定，充满郑重的爱意——他不是在演浪漫，他是真的觉得眼前这个人值得全世界。\n镜头1【正打·女主近景】\n女主位于画面左侧，男主虚焦于画面右下角。她眼睛倏地睁大，嘴唇微张，像被什么烫到一样愣住了半秒——那个“喂”字卡在喉咙里先变成了一个短促的气音，才带着不可置信的笑意溢出来（台湾腔，语气上扬带颤）：\n“喂——你真的要娶我啊？”\n说话时她肩膀轻轻缩了一下，画面右侧露出男主局部背影，背景是虚化的宴会人群，热闹的暖光在她脸上流动，发丝边缘被勾勒出一圈柔和轮廓光，高饱和的柔和色彩，每一帧都像电视剧剧照。\n镜头2【反打·男主近景】\n男主位于画面右侧，身体微侧向画面左方，正对面前女生。女生局部头部出现在画面左侧前景，虚化成一抹暖色。两人近距离面对面，呼吸几乎交叠。男主眼神温柔沉静，目光稳稳落在她脸上，没有笑场，没有夸张，只是认真地看着她——然后，边说话边轻轻点了一下头（台湾腔，语气笃定而轻）：\n“嗯。”\n那个“嗯”字短促却稳重，说完他嘴角几不可察地弯了一下，像在说“这有什么好怀疑的”。眼神里还带着一丝无辜的不解：你为什么会觉得我不娶你？\n镜头3【正打·女主近景】\n女主位于画面左侧，男主虚焦于画面右下角。她眉头轻轻蹙了一下又松开，像在消化一个过于巨大的惊喜。她对着男主边说话边歪了一下头——那个歪头带着少女式的撒娇与不确定（台湾腔，语速放缓，尾音拖长）：\n“可是我有很多缺点的——”\n说到“缺点”时她目光微微下移又抬回来，像在提前给他一个反悔的机会，但眼里那点期待藏不住。\n镜头4【反打·男主近景】\n男主位于画面右侧，身体微侧向画面左方，正对面前女生。女生局部头部出现在画面左侧前景。他听到“缺点”两个字时，先是被逗笑了——不是大笑，是那种“我家小猫又在挠人了”的宠溺笑意从眼底漫上来，嘴角自然上扬。他满脸温柔地看着她，语气轻而坚定，一字一句像在给她盖章（台湾腔）：\n“没关系，我喜欢你。连你的缺点，我也会喜欢。”\n说完他目光依旧深情又宠溺地盯着她，眼神像在说“你再说一个缺点试试”。\n镜头5【双人中景·腰部以上】\n双人同框，男主位于画面右侧，身体侧对女主，低头含笑，主动牵住女生的手——不是用力拉，是手指轻轻扣进她指缝，带着一种“跟我来”的温柔笃定。女主微微睁大眼睛，神情惊讶又无措，脚步被他带着向前，情绪带着一丝恍惚，像踩在云上。周围宾客的虚影与暖光在背景里流动，两人像被世界围观，但目光只落在彼此身上。\n镜头6【双人中景·腰部截取】\n双人并排同框，男主位于画面右侧，女主在画面左侧，两人并肩站立，身体略微靠近。男主嘴角微扬，神情舒展从容，笃定自信，浑身洋溢着“要娶到心爱之人”的幸福光晕。女主侧着脸看着男主说话，眼神还是有点迷茫——那种“这一切是真的吗”的恍惚——但更多的是幸福和开心，安静地望向他。男主对着宴会宾客，边说边左右微微点头示意，大方又幸福地宣布（台湾腔，声音清亮）：\n“我和晴川，要在大家的见证下举行婚礼了。”\n说到“举行婚礼”时，他转向女主，从西装口袋中取出戒指，动作郑重，切换到镜头7。\n镜头7【正打·女主脸部特写】\n聚焦女主面部神态，女主居于画面中心，正面朝向镜头。男性的手从画面下方伸入，靠近她耳部——展现男主第一视角的求婚画面。她有些无措，嘴唇微张，睫毛颤了颤，但更多的是开心和幸福。眼睛里慢慢泛起幸福的泪花，泪光在筒灯下闪闪发亮，像碎钻落进眼底。她没有躲，只是站在原地，被这一刻的重量轻轻压住。\n镜头8【反打·男主近景】\n男主位于画面右侧，身体微侧向画面左方，正对面前女生。女生局部头部出现在画面左侧前景。他嘴角带着浅浅温柔笑意，眼神深情专注，目光望向对面女主，笃定又充满爱意。他眼睛里也泛着幸福的泪花——但没有流泪，只是让那层水光在眼眶里亮着，像把所有的爱意都盛在里面，端到她面前。\n整体运镜节奏\n正反打平稳交替，镜头在近景与双人中景之间自然切换。镜头5与镜头6从双人近景缓慢拉至中景，形成“两人从对话走向宣布”的连贯动线。镜头7切入女主特写时，男主的手从画面下方自然进入，让“第一视角求婚”的沉浸感一气呵成。整体运镜流畅不卡顿，每一次切换都卡在人物情绪转折的呼吸点上。暖光始终包裹两人，背景宾客虚化，色彩饱和度偏高却不刺眼——是2010年代台湾偶像剧那种“全世界都在发光”的浪漫。\n"</script></article></div><p style="font-size:var(--fs-14);margin-top:var(--sp-12)" data-astro-cid-vex5zuxs><a href="/prompt-archive-site/videos/" data-astro-cid-vex5zuxs>浏览视频案例 →</a></p></section></div></div></div></main><footer class="site-footer" data-astro-cid-tq46r5sz><div class="container" data-astro-cid-tq46r5sz><div class="footer-grid" data-astro-cid-tq46r5sz><div class="footer-brand" data-astro-cid-tq46r5sz><a class="brand" href="/prompt-archive-site/" data-astro-cid-tq46r5sz><span class="brand-glyph" data-astro-cid-tq46r5sz>PA</span><span class="brand-name" data-astro-cid-tq46r5sz>AI 提示词档案馆</span></a><p class="footer-desc" data-astro-cid-tq46r5sz>可浏览、可检索、可复制的 AI 图像与视频提示词案例库。每个完整案例一个独立页面，提示词与 Wiki 原文逐字一致。</p></div><nav class="footer-col" aria-label="页脚导航" data-astro-cid-tq46r5sz><p class="footer-label" data-astro-cid-tq46r5sz>浏览</p><a href="/prompt-archive-site/images/" data-astro-cid-tq46r5sz>图像案例</a><a href="/prompt-archive-site/videos/" data-astro-cid-tq46r5sz>视频案例</a><a href="/prompt-archive-site/notes/" data-astro-cid-tq46r5sz>方法笔记</a><a href="/prompt-archive-site/cases/" data-astro-cid-tq46r5sz>全站搜索</a></nav><div class="footer-col" data-astro-cid-tq46r5sz><p class="footer-label" data-astro-cid-tq46r5sz>本馆收录</p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>案例</span><b data-astro-cid-tq46r5sz>105</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>附实测成片</span><b data-astro-cid-tq46r5sz>2</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>方法笔记</span><b data-astro-cid-tq46r5sz>30</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>合集</span><b data-astro-cid-tq46r5sz>11</b></p></div></div><div class="footer-bottom" data-astro-cid-tq46r5sz><p data-astro-cid-tq46r5sz>「作者称已测」表示来源声明，本站未复测。</p><p data-astro-cid-tq46r5sz>PA·ARCHIVE © 2026</p></div></div></footer></body><script type="module">var e=`pa:recent-copies`;function t(e){return e&&typeof e.slug==`string`&&e.slug.length>0&&typeof e.title==`string`&&e.title.length>0&&typeof e.href==`string`&&/^\/(?!\/)/.test(e.href)&&!/[\\\s]/.test(e.href)&&Number.isFinite(e.t)}function n(e){let n=new Set;return e.filter(t).toSorted((e,t)=>t.t-e.t).filter(e=>!n.has(e.slug)&&(n.add(e.slug),!0)).slice(0,8).map(({slug:e,title:t,href:n,t:r})=>({slug:e,title:t,href:n,t:r}))}function r(e){try{let r=JSON.parse(e);return Array.isArray(r)&&r.every(t)?n(r):[]}catch{return[]}}function i(e,t){return n([t,...e.filter(e=>e.slug!==t.slug)])}function a(t){try{let n=t??window.localStorage,i=n.getItem(e),a=r(i);return i!==null&&a.length===0&&n.removeItem(e),a}catch{return null}}function o(t,n){try{let r=t??window.localStorage,o=a(r);if(o===null)return null;let s=i(o,n);return r.setItem(e,JSON.stringify(s)),s}catch{return null}}function s(t){try{return(t??window.localStorage).removeItem(e),!0}catch{return!1}}async function c(e){try{return await navigator.clipboard.writeText(e),!0}catch{let t,n=document.activeElement;try{return t=document.createElement(`textarea`),t.value=e,t.style.position=`fixed`,t.style.opacity=`0`,document.body.appendChild(t),t.select(),document.execCommand(`copy`)}catch{return!1}finally{t?.remove(),n?.focus({preventScroll:!0})}}}function l(){document.querySelectorAll(`[data-copy-button]`).forEach(e=>{let t,n=e.querySelector(`[data-copy-text]`),r=n?.textContent??`复制`,i=e.closest(`[data-copy-context]`)?.querySelector(`[data-copy-feedback]`);e.addEventListener(`click`,async()=>{e.disabled=!0,clearTimeout(t);let a=!1;try{let t=document.getElementById(e.dataset.copySource),n=JSON.parse(t.textContent??`null`);typeof n==`string`&&(a=await c(n))}catch{}e.disabled=!1,n&&(n.textContent=a?`已复制`:r),e.classList.toggle(`copied`,a),i&&(i.textContent=a?`已复制`:`复制失败，请手动选取`,i.classList.toggle(`error`,!a)),a&&(o(void 0,{slug:e.dataset.copySlug,title:e.dataset.copyTitle,href:e.dataset.copyHref,t:Date.now()}),window.dispatchEvent(new Event(`pa:recent-copies-changed`))),t=setTimeout(()=>{n&&(n.textContent=r),e.classList.remove(`copied`),i&&(i.textContent=``,i.classList.remove(`error`))},2e3)})})}function u(){document.querySelectorAll(`[data-recent-copies]`).forEach(e=>{let t=e.querySelector(`[data-recent-links]`);function n(){let n=a();e.hidden=!n?.length,t.replaceChildren(...(n??[]).map(e=>{let t=document.createElement(`a`);return t.className=`recent-link`,t.href=e.href,t.title=e.title,t.textContent=e.title,t}))}e.querySelector(`[data-recent-clear]`)?.addEventListener(`click`,()=>{s(),e.hidden=!0,window.dispatchEvent(new Event(`pa:recent-copies-changed`))}),window.addEventListener(`pa:recent-copies-changed`,n),window.addEventListener(`storage`,e=>{(e.key===`pa:recent-copies`||e.key===null)&&n()}),window.addEventListener(`pageshow`,n),n()})}l(),u();</script><script type="module">var e=new WeakMap;function t(){document.querySelectorAll(`[data-masonry]`).forEach(t=>{let n=e.get(t)??Array.from(t.children);if(e.set(t,n),t.querySelectorAll(`.m-cols`).forEach(e=>e.remove()),n.length===0)return;let r=window.matchMedia(`(max-width: 767px)`).matches?1:window.matchMedia(`(max-width: 1199px)`).matches?2:3,i=document.createElement(`div`);i.className=`m-cols`;let a=Array.from({length:r},()=>{let e=document.createElement(`div`);return e.className=`m-col`,e}),o=0;n.forEach(e=>{let t=e.hasAttribute(`hidden`)?0:o++%r;a[t].appendChild(e)}),t.appendChild(i),a.forEach(e=>i.appendChild(e))})}window.refreshMasonry=t,t();var n;window.addEventListener(`resize`,()=>{clearTimeout(n),n=setTimeout(t,150)});</script><script type="module">(()=>{let e=`.case-card, .note-card, .note-list-card`,t=window.matchMedia(`(prefers-reduced-motion: reduce)`),n=null,r=null,i=0;t.addEventListener?.(`change`,()=>{t.matches&&a()});function a(){if(!n)return;let e=n;e.classList.remove(`tilt-active`),e.classList.add(`tilt-return`),e.style.transform=``,clearTimeout(i),i=setTimeout(()=>e.classList.remove(`tilt-return`),320),n=null,r=null}document.addEventListener(`pointermove`,i=>{if(i.pointerType!==`mouse`||!i.isPrimary||t.matches)return;let o=i.target instanceof Element?i.target.closest(e):null;if(o!==n){if(a(),!o)return;n=o,r=n.getBoundingClientRect(),n.classList.add(`tilt-active`),n.classList.remove(`tilt-return`)}if(!n||!r)return;let s=(i.clientX-r.left)/r.width-.5,c=(i.clientY-r.top)/r.height-.5,l=Math.max(-1,Math.min(1,s*2))*4.5,u=Math.max(-1,Math.min(1,c*2))*-4.5;n.style.transform=`perspective(1100px) rotateX(${u.toFixed(3)}deg) rotateY(${l.toFixed(3)}deg) translateY(-3px)`},{passive:!0}),document.addEventListener(`pointerleave`,()=>a()),document.addEventListener(`pointerdown`,t=>{(t.target instanceof Element?t.target.closest(e):null)!==n&&a()},{passive:!0}),window.addEventListener(`blur`,()=>a()),window.addEventListener(`scroll`,()=>a(),{passive:!0})})();</script></html><script type="module">function e(){document.querySelectorAll(`.prose pre`).forEach(e=>{if(e.closest(`.code-panel`))return;let t=e.querySelector(`code`),n=(t??e).textContent??``,r=t?.className.match(/language-([\w+-]+)/)?.[1]??`text`,i=n.replace(/\n$/,``).split(`
 `).length,a=Array.from(n.matchAll(/`{3,}/g)).map(e=>e[0].length),o=a.length?Math.max(3,Math.max(...a)+1):3,s="`".repeat(o)+`markdown
 `+(n.endsWith(`
 `)?n:n+`

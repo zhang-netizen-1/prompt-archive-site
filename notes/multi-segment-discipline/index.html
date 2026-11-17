@@ -1,5 +1,5 @@
-<!DOCTYPE html><html lang="zh-CN" data-astro-cid-tq46r5sz><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="多段成片的分段纪律：段间切点、转场三法与全片光线轴的处理规则。"><link rel="icon" href="/prompt-archive-site/favicon.svg" type="image/svg+xml"><title>多段成片的分段纪律与连续性 · 方法笔记</title><link rel="stylesheet" href="/prompt-archive-site/_astro/SiteLayout.Bi1ecxQQ.css"><style>.note-header[data-astro-cid-vex5zuxs]{max-width:calc(var(--note-width) + 280px);margin:0 auto;padding:40px 24px 0}
-</style></head><body data-astro-cid-tq46r5sz><a class="skip-link" href="#main" data-astro-cid-tq46r5sz>跳到主要内容</a><header class="site-header" data-astro-cid-tq46r5sz><div class="container" data-astro-cid-tq46r5sz><a class="brand" href="/prompt-archive-site/" data-astro-cid-tq46r5sz><span class="brand-glyph" data-astro-cid-tq46r5sz>PA</span><span class="brand-name" data-astro-cid-tq46r5sz>AI 提示词档案馆</span></a><nav class="site-nav" aria-label="主导航" data-astro-cid-tq46r5sz><a href="/prompt-archive-site/images/" data-astro-cid-tq46r5sz>图像案例<span class="nav-no" data-astro-cid-tq46r5sz>01</span></a><a href="/prompt-archive-site/videos/" data-astro-cid-tq46r5sz>视频案例<span class="nav-no" data-astro-cid-tq46r5sz>02</span></a><a href="/prompt-archive-site/notes/" aria-current="page" data-astro-cid-tq46r5sz>方法笔记<span class="nav-no" data-astro-cid-tq46r5sz>03</span></a></nav><div class="header-cta" data-astro-cid-tq46r5sz><a class="header-search-link" href="/prompt-archive-site/cases/" aria-label="全站搜索案例" data-astro-cid-tq46r5sz><span class="icon" style="width:15px;height:15px" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="6.1"/><line x1="13.6" y1="13.6" x2="18" y2="18"/></svg></span><span data-astro-cid-tq46r5sz>搜索</span><span class="nav-no" data-astro-cid-tq46r5sz>04</span></a></div></div></header><main id="main" data-astro-cid-tq46r5sz><div class="note-page" data-astro-cid-vex5zuxs><div class="note-header" data-astro-cid-vex5zuxs><nav class="breadcrumbs" aria-label="面包屑" data-astro-cid-vex5zuxs><a href="/prompt-archive-site/" data-astro-cid-vex5zuxs>首页</a><span aria-hidden="true" data-astro-cid-vex5zuxs>/</span><a href="/prompt-archive-site/notes/" data-astro-cid-vex5zuxs>方法笔记</a><span aria-hidden="true" data-astro-cid-vex5zuxs>/</span><span aria-current="page" data-astro-cid-vex5zuxs>多段成片的分段纪律与连续性</span></nav><h1 style="font-size:32px" data-astro-cid-vex5zuxs>多段成片的分段纪律与连续性</h1><p class="note-meta" data-astro-cid-vex5zuxs><span class="medium-chip" data-astro-cid-vex5zuxs>方法</span><span data-astro-cid-vex5zuxs>视频</span><span data-astro-cid-vex5zuxs>源资料：多段成片的分段纪律与连续性（visual-prompt-system）</span></p><p class="note-summary" data-astro-cid-vex5zuxs>多段成片的分段纪律：段间切点、转场三法与全片光线轴的处理规则。</p></div><div class="note-layout" data-astro-cid-vex5zuxs><aside class="note-toc" aria-label="目录" data-astro-cid-vex5zuxs><p class="toc-title" data-astro-cid-vex5zuxs>目录</p><a href="#〇工作流分镜头脚本--撰写提示词--分段三步顺序不可颠倒" data-astro-cid-vex5zuxs>〇、工作流：分镜头脚本 → 撰写提示词 → 分段（三步，顺序不可颠倒）</a><a href="#一第一原则段是连续段落不是独立短片" data-astro-cid-vex5zuxs>一、第一原则：段是「连续段落」，不是「独立短片」</a><a href="#二写作顺序先一条时间轴最后才切" data-astro-cid-vex5zuxs>二、写作顺序：先一条时间轴，最后才切</a><a href="#三段内只有接着上一镜往下" data-astro-cid-vex5zuxs>三、段内只有&quot;接着上一镜往下&quot;</a><a href="#四场景不变时光线也不能推进" data-astro-cid-vex5zuxs>四、场景不变时，光线也不能推进</a><a href="#五连带的三条硬规则同一案例得出" data-astro-cid-vex5zuxs>五、连带的三条硬规则（同一案例得出）</a><a href="#六验收清单交付前逐条过" data-astro-cid-vex5zuxs>六、验收清单（交付前逐条过）</a><a href="#七对白长度一镜到底按最长一次连续说话算不按总时长算" data-astro-cid-vex5zuxs>七、对白长度：一镜到底按「最长一次连续说话」算，不按总时长算</a><a href="#八审片清单镜头语言层面最常犯的六类问题" data-astro-cid-vex5zuxs>八、审片清单：镜头语言层面最常犯的六类问题</a><a href="#九沉默怎么拍在跟拍镜里沉默不要切空镜" data-astro-cid-vex5zuxs>九、沉默怎么拍：在跟拍镜里沉默，不要切空镜</a><a href="#十对话驱动型短片每一镜都在对话的节奏里" data-astro-cid-vex5zuxs>十、对话驱动型短片：每一镜都在对话的节奏里</a><a href="#十一转场只用三种而且声音不断" data-astro-cid-vex5zuxs>十一、转场：只用三种，而且声音不断</a><a href="#十二规范写在哪儿工作文件里不进生成文件" data-astro-cid-vex5zuxs>十二、规范写在哪儿：工作文件里，不进生成文件</a><a href="#十三相关" data-astro-cid-vex5zuxs>十三、相关</a></aside><div class="note-main" data-astro-cid-vex5zuxs><div class="prose" data-astro-cid-vex5zuxs><blockquote>
+<!DOCTYPE html><html lang="zh-CN" data-astro-cid-tq46r5sz><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="多段成片的分段纪律：段间切点、转场三法与全片光线轴的处理规则。"><link rel="icon" href="/prompt-archive-site/favicon.svg" type="image/svg+xml"><title>多段成片的分段纪律与连续性 · 方法笔记</title><link rel="stylesheet" href="/prompt-archive-site/_astro/SiteLayout.CsJqGSoe.css"><style>.note-header[data-astro-cid-vex5zuxs]{max-width:calc(var(--note-width) + 280px);padding:var(--sp-32) var(--sp-24) 0;margin:0 auto}
+</style></head><body data-astro-cid-tq46r5sz><a class="skip-link" href="#main" data-astro-cid-tq46r5sz>跳到主要内容</a><header class="site-header" data-astro-cid-tq46r5sz><div class="container" data-astro-cid-tq46r5sz><a class="brand" href="/prompt-archive-site/" data-astro-cid-tq46r5sz><span class="brand-glyph" data-astro-cid-tq46r5sz>PA</span><span class="brand-name" data-astro-cid-tq46r5sz>AI 提示词档案馆</span></a><nav class="site-nav" aria-label="主导航" data-astro-cid-tq46r5sz><a href="/prompt-archive-site/images/" data-astro-cid-tq46r5sz>图像案例<span class="nav-no" data-astro-cid-tq46r5sz>01</span></a><a href="/prompt-archive-site/videos/" data-astro-cid-tq46r5sz>视频案例<span class="nav-no" data-astro-cid-tq46r5sz>02</span></a><a href="/prompt-archive-site/notes/" aria-current="page" data-astro-cid-tq46r5sz>方法笔记<span class="nav-no" data-astro-cid-tq46r5sz>03</span></a></nav><div class="header-cta" data-astro-cid-tq46r5sz><a class="header-search-link" href="/prompt-archive-site/cases/" aria-label="全站搜索案例" data-astro-cid-tq46r5sz><span class="icon" style="width:15px;height:15px" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="9" r="6.1"/><line x1="13.6" y1="13.6" x2="18" y2="18"/></svg></span><span data-astro-cid-tq46r5sz>搜索</span><span class="nav-no" data-astro-cid-tq46r5sz>04</span></a></div></div></header><main id="main" data-astro-cid-tq46r5sz><div class="note-page" data-astro-cid-vex5zuxs><div class="note-header" data-astro-cid-vex5zuxs><nav class="breadcrumbs" aria-label="面包屑" data-astro-cid-vex5zuxs><a href="/prompt-archive-site/" data-astro-cid-vex5zuxs>首页</a><span aria-hidden="true" data-astro-cid-vex5zuxs>/</span><a href="/prompt-archive-site/notes/" data-astro-cid-vex5zuxs>方法笔记</a><span aria-hidden="true" data-astro-cid-vex5zuxs>/</span><span aria-current="page" data-astro-cid-vex5zuxs>多段成片的分段纪律与连续性</span></nav><h1 style="font-size:var(--fs-28)" data-astro-cid-vex5zuxs>多段成片的分段纪律与连续性</h1><p class="note-meta" data-astro-cid-vex5zuxs><span class="medium-chip" data-astro-cid-vex5zuxs>方法</span><span data-astro-cid-vex5zuxs>视频</span><span data-astro-cid-vex5zuxs>源资料：多段成片的分段纪律与连续性（visual-prompt-system）</span></p><p class="note-summary" data-astro-cid-vex5zuxs>多段成片的分段纪律：段间切点、转场三法与全片光线轴的处理规则。</p></div><div class="note-layout" data-astro-cid-vex5zuxs><aside class="note-toc" aria-label="目录" data-astro-cid-vex5zuxs><p class="toc-title" data-astro-cid-vex5zuxs>目录</p><a href="#〇工作流分镜头脚本--撰写提示词--分段三步顺序不可颠倒" data-astro-cid-vex5zuxs>〇、工作流：分镜头脚本 → 撰写提示词 → 分段（三步，顺序不可颠倒）</a><a href="#一第一原则段是连续段落不是独立短片" data-astro-cid-vex5zuxs>一、第一原则：段是「连续段落」，不是「独立短片」</a><a href="#二写作顺序先一条时间轴最后才切" data-astro-cid-vex5zuxs>二、写作顺序：先一条时间轴，最后才切</a><a href="#三段内只有接着上一镜往下" data-astro-cid-vex5zuxs>三、段内只有&quot;接着上一镜往下&quot;</a><a href="#四场景不变时光线也不能推进" data-astro-cid-vex5zuxs>四、场景不变时，光线也不能推进</a><a href="#五连带的三条硬规则同一案例得出" data-astro-cid-vex5zuxs>五、连带的三条硬规则（同一案例得出）</a><a href="#六验收清单交付前逐条过" data-astro-cid-vex5zuxs>六、验收清单（交付前逐条过）</a><a href="#七对白长度一镜到底按最长一次连续说话算不按总时长算" data-astro-cid-vex5zuxs>七、对白长度：一镜到底按「最长一次连续说话」算，不按总时长算</a><a href="#八审片清单镜头语言层面最常犯的六类问题" data-astro-cid-vex5zuxs>八、审片清单：镜头语言层面最常犯的六类问题</a><a href="#九沉默怎么拍在跟拍镜里沉默不要切空镜" data-astro-cid-vex5zuxs>九、沉默怎么拍：在跟拍镜里沉默，不要切空镜</a><a href="#十对话驱动型短片每一镜都在对话的节奏里" data-astro-cid-vex5zuxs>十、对话驱动型短片：每一镜都在对话的节奏里</a><a href="#十一转场只用三种而且声音不断" data-astro-cid-vex5zuxs>十一、转场：只用三种，而且声音不断</a><a href="#十二规范写在哪儿工作文件里不进生成文件" data-astro-cid-vex5zuxs>十二、规范写在哪儿：工作文件里，不进生成文件</a><a href="#十三相关" data-astro-cid-vex5zuxs>十三、相关</a></aside><div class="note-main" data-astro-cid-vex5zuxs><div class="prose" data-astro-cid-vex5zuxs><blockquote>
 <p>适用：任何"一次生成装不下、必须分段生成再拼接"的成片（对话走场、叙事短片、MV 等）。
 来源：2026-09-17 案例《一天四十三次日落》三轮实测迭代与志光逐条纠正（原话保留在第四节与第六节）。</p>
 </blockquote>
@@ -115,7 +115,335 @@
 <li><a href="/prompt-archive-site/notes/video-prompt-structure/">模板-视频提示词总结构</a> — 单份提示词的字段结构</li>
 <li><a href="/prompt-archive-site/notes/shot-breakdown-rules/">拆解分镜规则</a> — 故事到分镜表的拆解</li>
 </ul>
-</div><section class="note-related" aria-label="关联案例" data-astro-cid-vex5zuxs><h2 class="section-title" style="font-size:20px" data-astro-cid-vex5zuxs><span class="icon" style="width:18px;height:18px" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 11.5a4 4 0 0 1 0-5.6l1.4-1.4a4 4 0 0 1 5.6 5.6l-1.4 1.4"/><path d="M11.5 8.5a4 4 0 0 1 0 5.6l-1.4 1.4a4 4 0 0 1-5.6-5.6l1.4-1.4"/></svg></span> 应用这些写法的案例</h2><div class="grid-cases" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr));margin-top:16px" data-astro-cid-vex5zuxs><a class="case-card" href="/prompt-archive-site/cases/forty-three-sunsets/" data-medium="video" data-topic="多段成片" data-evidence="author-tested" data-search="一天四十三次日落 多段成片 外星小王子 × 地球女生的六段对谈短片：随问题推进从人行道走到江边日落。作者实测判定「勉强及格」，身高差、时间跨度与段落收尾三项问题及预改方向随案例记录；未附成片文件。 对谈 多段生成 竖幅 参考图锚定 实测复盘"><div class="card-media"><div class="photo"><img src="/prompt-archive-site/media/427ba9769f10f349.png" alt="一天四十三次日落 输入参考图" loading="lazy"></div><span class="card-badge mute"><span class="icon" style="width:12px;height:12px" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="14" height="12" rx="1.5"/><circle cx="7.4" cy="8.4" r="1.4"/><path d="M3 13.2l3.8-3.4 3.2 2.8 2.6-2.2 4.4 3.6"/></svg></span>参考图</span></div><div class="card-holes" aria-hidden="true"></div><div class="card-body"><div class="card-meta"><span>PA-003</span><span>视频</span><span class="status warn">作者称已测试 · 未附成片</span></div><h3 class="card-title">一天四十三次日落</h3><p class="card-summary">外星小王子 × 地球女生的六段对谈短片：随问题推进从人行道走到江边日落。作者实测判定「勉强及格」，身高差、时间跨度与段落收尾三项问题及预改方向随案例记录；未附成片文件。</p><div class="card-tags"><span class="tag">多段成片</span><span class="tag">对谈</span><span class="tag">多段生成</span></div></div></a></div><p style="font-size:14px;margin-top:12px" data-astro-cid-vex5zuxs><a href="/prompt-archive-site/videos/" data-astro-cid-vex5zuxs>浏览视频案例 →</a></p></section></div></div></div></main><footer class="site-footer" data-astro-cid-tq46r5sz><div class="container" data-astro-cid-tq46r5sz><div class="footer-grid" data-astro-cid-tq46r5sz><div class="footer-brand" data-astro-cid-tq46r5sz><a class="brand" href="/prompt-archive-site/" data-astro-cid-tq46r5sz><span class="brand-glyph" data-astro-cid-tq46r5sz>PA</span><span class="brand-name" data-astro-cid-tq46r5sz>AI 提示词档案馆</span></a><p class="footer-desc" data-astro-cid-tq46r5sz>可浏览、可检索、可复制的 AI 图像与视频提示词案例库。每个完整案例一个独立页面，提示词与 Wiki 原文逐字一致。</p></div><nav class="footer-col" aria-label="页脚导航" data-astro-cid-tq46r5sz><p class="footer-label" data-astro-cid-tq46r5sz>浏览</p><a href="/prompt-archive-site/images/" data-astro-cid-tq46r5sz>图像案例</a><a href="/prompt-archive-site/videos/" data-astro-cid-tq46r5sz>视频案例</a><a href="/prompt-archive-site/notes/" data-astro-cid-tq46r5sz>方法笔记</a><a href="/prompt-archive-site/cases/" data-astro-cid-tq46r5sz>全站搜索</a></nav><div class="footer-col" data-astro-cid-tq46r5sz><p class="footer-label" data-astro-cid-tq46r5sz>本馆收录</p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>案例</span><b data-astro-cid-tq46r5sz>105</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>附实测成片</span><b data-astro-cid-tq46r5sz>2</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>方法笔记</span><b data-astro-cid-tq46r5sz>60</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>合集</span><b data-astro-cid-tq46r5sz>11</b></p></div></div><div class="footer-bottom" data-astro-cid-tq46r5sz><p data-astro-cid-tq46r5sz>「作者称已测试」表示来源声明，本站未复测。</p><p data-astro-cid-tq46r5sz>PA·ARCHIVE © 2026</p></div></div></footer></body><script type="module">function e(){document.querySelectorAll(`[data-masonry]`).forEach(e=>{let t=Array.from(e.querySelectorAll(`:scope > .m-cols > .m-col > *, :scope > *:not(.m-cols)`));if(e.querySelectorAll(`.m-cols`).forEach(e=>e.remove()),t.length===0)return;let n=window.matchMedia(`(max-width: 767px)`).matches?1:window.matchMedia(`(max-width: 1199px)`).matches?2:3,r=document.createElement(`div`);r.className=`m-cols`;let i=Array.from({length:n},()=>{let e=document.createElement(`div`);return e.className=`m-col`,e});t.forEach((e,t)=>i[t%n].appendChild(e)),e.appendChild(r),i.forEach(e=>r.appendChild(e))})}window.refreshMasonry=e,e();var t;window.addEventListener(`resize`,()=>{clearTimeout(t),t=setTimeout(e,150)});</script><script type="module">(()=>{let e=`.case-card, .note-card, .note-list-card`,t=window.matchMedia(`(prefers-reduced-motion: reduce)`),n=null,r=null,i=0;t.addEventListener?.(`change`,()=>{t.matches&&a()});function a(){if(!n)return;let e=n;e.classList.remove(`tilt-active`),e.classList.add(`tilt-return`),e.style.transform=``,clearTimeout(i),i=setTimeout(()=>e.classList.remove(`tilt-return`),320),n=null,r=null}document.addEventListener(`pointermove`,i=>{if(i.pointerType!==`mouse`||!i.isPrimary||t.matches)return;let o=i.target instanceof Element?i.target.closest(e):null;if(o!==n){if(a(),!o)return;n=o,r=n.getBoundingClientRect(),n.classList.add(`tilt-active`),n.classList.remove(`tilt-return`)}if(!n||!r)return;let s=(i.clientX-r.left)/r.width-.5,c=(i.clientY-r.top)/r.height-.5,l=Math.max(-1,Math.min(1,s*2))*4.5,u=Math.max(-1,Math.min(1,c*2))*-4.5;n.style.transform=`perspective(1100px) rotateX(${u.toFixed(3)}deg) rotateY(${l.toFixed(3)}deg) translateY(-3px)`},{passive:!0}),document.addEventListener(`pointerleave`,()=>a()),document.addEventListener(`pointerdown`,t=>{(t.target instanceof Element?t.target.closest(e):null)!==n&&a()},{passive:!0}),window.addEventListener(`blur`,()=>a()),window.addEventListener(`scroll`,()=>a(),{passive:!0})})();</script></html><script type="module">function e(){document.querySelectorAll(`.prose pre`).forEach(e=>{if(e.closest(`.code-panel`))return;let t=e.querySelector(`code`),n=(t??e).textContent??``,r=t?.className.match(/language-([\w+-]+)/)?.[1]??`text`,i=n.replace(/\n$/,``).split(`
+</div><section class="note-related" aria-label="关联案例" data-astro-cid-vex5zuxs><h2 class="section-title" style="font-size:var(--fs-20)" data-astro-cid-vex5zuxs><span class="icon" style="width:18px;height:18px" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 11.5a4 4 0 0 1 0-5.6l1.4-1.4a4 4 0 0 1 5.6 5.6l-1.4 1.4"/><path d="M11.5 8.5a4 4 0 0 1 0 5.6l-1.4 1.4a4 4 0 0 1-5.6-5.6l1.4-1.4"/></svg></span> 应用这些写法的案例</h2><div class="grid-cases" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr));margin-top:var(--sp-16)" data-astro-cid-vex5zuxs><article class="case-card" data-copy-context data-medium="video" data-topic="多段成片" data-evidence="author-tested" data-search="一天四十三次日落
+多段成片
+外星小王子 × 地球女生的六段对谈短片：随问题推进从人行道走到江边日落。作者实测判定「勉强及格」，身高差、时间跨度与段落收尾三项问题及预改方向随案例记录；未附成片文件。
+作者称已测
+对谈 多段生成 竖幅 参考图锚定 实测复盘
+【全局设定】
+
+核心风格：写实摄影影像——真实场景与真人质感，电影级自然光影，真实的皮肤、发丝与织物细节，轻微胶片颗粒；竖幅9:16电影感构图。全片唯一的非写实元素是来自外星球的小王子：他保持3d卡通、潮玩ip手办质感，以实拍合成的方式存在于写实世界里，两种质感互不污染。
+
+影片基调：温柔、天真，带一点都市的疲惫感；轻幽默，不煽情。
+
+光线设计：清晨的城市，冷调自然光为主，楼宇之间透出淡金色晨光；人脸上是清冷的自然光与手机屏幕的反光。
+
+导演意图：先用脚步的空镜压出&quot;被推着走&quot;的拥挤感；她一边走一边问，问题像自言自语；把小王子的回答放在她停下来的那一刻——她第一次抬起头，这是全片的第一个转折。她一路举着手机在录音——这场「访谈」是她自己发起的。
+
+
+【参考图】
+
+图片1（对应文件：~/downloads/jimeng-2026-09-15-4427.png）作为外星小王子的视觉锚定：头大身小的q版比例，身高约90厘米（站在她身边只到她的髋部），焦糖色蓬松卷发，翠绿大眼带星星状高光，脸颊腮红，头顶悬浮着一枚倾斜45度的透明卫星环（透明水晶质感，边缘有玻璃般的白色高光与折射，可以透过它看到后面的头发），蓝色毛呢外套配同色圆纽扣与胸前贴袋，姜黄色粗针织围巾，藏青色短裤，白色短袜，白色短靴（靴口一圈橙色、橙色鞋底）；只继承人物的五官、发型、服装、配色与3d卡通潮玩质感，不继承原图中的纯黑背景、三视图排列与站立姿势。
+
+图片2（对应文件：~/downloads/chatgpt image 2026年9月17日 12_28_26.png）作为地球女生的视觉锚定：20–25岁东亚女性，圆润鹅蛋脸、面颊饱满，深棕色大眼睛（双眼皮、卧蚕）、棕色平缓一字眉、鼻头小巧、饱满唇形配正红偏橘红口红，伪素颜妆容，白皙偏冷调的皮肤；深棕色头发在头顶盘成蓬松丸子头，额前与脸颊两侧留自然碎发，黑色大框太阳镜架在头顶；纤细苗条身材，黑色oversized圆领短袖t恤（落肩、衣长过臀），米白色抽绳阔腿休闲裤（裤脚在脚踝自然堆积），黑色人字拖；金色小圆环耳环、细金锁骨链、右腕金色宽手镯，棕白横条纹草编托特包单肩挎在右肩；只继承人物的五官、发型、服装、配饰、配色与真实人物质感，不继承原图中的纯白背景、四视图排列与站立姿势。
+
+图片3（对应文件：~/downloads/hermes-output/场景参考图/场景一早高峰人行道-1.jpg）作为本段早高峰人行道的空间锚定：两侧高层楼体夹出的一线天空（楼缝）、地铁出入口的台阶与护栏、行道树与停放的单车、雨后微微反光的石板地面；只继承空间的位置、尺度、形状与结构关系，不继承原图中的四宫格排版、机位角度与构图；原图为暖色低角度光，本段不继承该光线时刻，按本段的清晨冷调自然光与薄晨雾执行；场景底图为多视角拼图，生成时不得出现镜像或复制效果。
+
+图片2的女生与全部场景按写实摄影呈现；图片1的小王子保持3d卡通潮玩质感，是这个写实世界里唯一的非写实角色，两种质感互不污染。两张参考图的棚拍背景与视图排列均不继承；小王子身高约90厘米，与女生的身高差在每一镜中都保持一致。
+
+
+【镜头】
+
+shot 01（0–1.5秒）
+
+镜头：竖幅大特写空镜，35mm手持，机位贴近地面、略低角度，轻微晃动；画面里没有人物上半身，只有一双双快速走过的鞋与裤脚；起幅脚步从画面下方涌入，落幅保持同一景别。
+
+拍摄内容：清晨的城市人行道（@图片3），逆光里浮着薄薄的晨雾，晨光在反光的地面上拉出长条光斑，一双双鞋踩着光斑快速走过。环境音：密集的脚步声、远处的车流、地铁口的风。
+
+shot 02（1.5–5.5秒）
+
+镜头：竖幅中景，35mm手持侧后跟拍，与被摄者同速移动、轻微晃动；两人位于画面中下部，上方留出楼宇与一线天空；起幅两人背影入画，落幅保持同一构图继续跟移。
+
+拍摄内容：@图片3的清晨人行道上，@图片2锚定的女生与@图片1锚定的小王子在人流中向前走；她一手端着咖啡杯，一手把手机举在两人之间、对着他，手机正在录音；小王子身高约90厘米、只到她的髋部，抱着自己长长的围巾小跑着跟上，她放慢了步子配合他的步频。她的话从画面外进来（背对镜头，画外念白、不露口型，语气像自言自语）：&quot;你们星球的人，也每天赶着上班吗？&quot;环境音：密集脚步、街口的车流、地铁口的风。
+
+shot 03（5.5–7秒）
+
+镜头：竖幅微距特写插入镜，50mm浅景深、焦点锁定手机屏幕；机位固定、略微俯视；起幅屏幕上的录音波形，落幅波形又长了一截、计时跳了一格。
+
+拍摄内容：@图片2锚定女生的手扶着手机侧面，屏幕上是正在走动的录音界面——一条随时间延伸的波形和一个跳动的计时，冷白的光打在她握手机的手指上；她的问句尾音继续从画外传来，声音与画面分离。环境音：脚步、街口的车流声，人声变得模糊。
+
+shot 04（7–12.5秒）
+
+镜头：竖幅近景，50mm浅景深、焦点锁定小王子的脸；摄影机降到与小王子视线等高的低位（约80厘米高）、轻微仰角，机位固定；起幅她停步、他仰起脸，落幅他说完。
+
+拍摄内容：@图片3的人行道上，她停下脚步，低头看着小王子；小王子仰起脸才能看到她的脸，头顶倾斜45度的透明卫星环轻轻晃了一下，他认真地、一字一句地说（对口型，口型与语音对齐，台词完整念出）：&quot;我们不叫上班。我们照顾一朵花，和它说话。&quot;她的身影虚化在画面上缘，没有说话；画面下方他身后，低头看手机的人流继续涌过。环境音：人流声、一声鸟叫。
+
+shot 05（12.5–14.5秒）
+
+镜头：竖幅中远景仰拍空镜，35mm，机位在她身侧偏低处、朝向天空缓慢上仰；画面里没有人物；起幅两侧楼宇夹着的一小片灰色天空，落幅一只鸟掠过、天光亮了一点。
+
+拍摄内容：她抬头望向的方向——两侧高楼之间的一小片天空（@图片3的楼缝），晨光在云层边缘亮起来，一只鸟快速掠过楼缝。环境音：人流声退远、风声、鸟叫。
+
+【全局设定】
+
+核心风格：写实摄影影像——真实场景与真人质感，电影级自然光影，真实的皮肤、发丝与织物细节，轻微胶片颗粒；竖幅9:16电影感构图。全片唯一的非写实元素是来自外星球的小王子：他保持3d卡通、潮玩ip手办质感，以实拍合成的方式存在于写实世界里，两种质感互不污染。
+
+影片基调：秩序感与疏离感——冷、快、有礼貌的距离。
+
+光线设计：大堂的冷白人工光与玻璃幕墙的镜面反射，光线平整、没有温度；人物在幕墙上留下淡淡的倒影。
+
+导演意图：玻璃幕墙是这一段的第二主角——把人和倒影并置；她问&quot;时间&quot;，他答&quot;花&quot;；收在她看自己倒影的一刻：她第一次意识到自己正被什么东西推着走。
+
+
+【参考图】
+
+图片1（对应文件：~/downloads/jimeng-2026-09-15-4427.png）作为外星小王子的视觉锚定：头大身小的q版比例，身高约90厘米（站在她身边只到她的髋部），焦糖色蓬松卷发，翠绿大眼带星星状高光，脸颊腮红，头顶悬浮着一枚倾斜45度的透明卫星环（透明水晶质感，边缘有玻璃般的白色高光与折射，可以透过它看到后面的头发），蓝色毛呢外套配同色圆纽扣与胸前贴袋，姜黄色粗针织围巾，藏青色短裤，白色短袜，白色短靴（靴口一圈橙色、橙色鞋底）；只继承人物的五官、发型、服装、配色与3d卡通潮玩质感，不继承原图中的纯黑背景、三视图排列与站立姿势。
+
+图片2（对应文件：~/downloads/chatgpt image 2026年9月17日 12_28_26.png）作为地球女生的视觉锚定：20–25岁东亚女性，圆润鹅蛋脸、面颊饱满，深棕色大眼睛（双眼皮、卧蚕）、棕色平缓一字眉、鼻头小巧、饱满唇形配正红偏橘红口红，伪素颜妆容，白皙偏冷调的皮肤；深棕色头发在头顶盘成蓬松丸子头，额前与脸颊两侧留自然碎发，黑色大框太阳镜架在头顶；纤细苗条身材，黑色oversized圆领短袖t恤（落肩、衣长过臀），米白色抽绳阔腿休闲裤（裤脚在脚踝自然堆积），黑色人字拖；金色小圆环耳环、细金锁骨链、右腕金色宽手镯，棕白横条纹草编托特包单肩挎在右肩；只继承人物的五官、发型、服装、配饰、配色与真实人物质感，不继承原图中的纯白背景、四视图排列与站立姿势。
+
+图片4（对应文件：~/downloads/hermes-output/场景参考图/场景二写字楼幕墙-1.jpg）作为本段写字楼大堂幕墙通道的空间锚定：整面通高玻璃幕墙、金属包饰的圆柱、旋转门、电梯厅与车门上方的小型楼层显示屏、抛光大理石地面的倒影；只继承空间的位置、尺度、形状与结构关系，不继承原图中的四宫格排版、机位角度与构图，光影按本段的冷白人工光执行；场景底图为多视角拼图，生成时不得出现镜像或复制效果。
+
+图片2的女生与全部场景按写实摄影呈现；图片1的小王子保持3d卡通潮玩质感，是这个写实世界里唯一的非写实角色，两种质感互不污染。两张参考图的棚拍背景与视图排列均不继承；小王子身高约90厘米，与女生的身高差在每一镜中都保持一致。
+
+
+【镜头】
+
+shot 01（0–2秒）
+
+镜头：竖幅远景空镜，35mm，机位固定、微微仰角，对着整面玻璃幕墙；画面里没有清晰的人物面孔，只有倒影与反光；起幅倒影里西装人流匆匆流过，落幅旋转门转过一格、反光抖动了一下。
+
+拍摄内容：写字楼外的整面玻璃幕墙（@图片4），冷白晨光打在玻璃上；倒影里全是被拉长、走快的西装人影与公文包，谁也看不清脸。旋转门一格一格地转。环境音：旋转门声、皮鞋脚步声、大堂里传来的广播。
+
+shot 02（2–6秒）
+
+镜头：竖幅中景，35mm侧后跟拍，与两人同速移动、略微俯角；画面上半部是幕墙的镜面与倒影，两人在画面下半部；起幅两人走进幕墙通道，落幅保持同一构图继续跟移。
+
+拍摄内容：@图片4的幕墙通道里，@图片2锚定的女生与@图片1锚定的小王子并肩沿着幕墙走，镜面玻璃里一高一矮两个影子跟着他们移动。她侧过脸问（侧脸，画外念白、不露口型）：&quot;那你们的时间怎么算？会迟到吗？&quot;西装人流在倒影里匆匆走过，没有一个人抬头；小王子跟着她的影子走，抬头看倒影里的一格云。环境音：旋转门声、皮鞋脚步声。
+
+shot 03（6–7.5秒）
+
+镜头：竖幅特写插入镜，50mm浅景深，焦点锁定电梯上方的楼层数字；机位固定、微微仰角；起幅数字停在某个楼层，落幅数字飞快往下跳。
+
+拍摄内容：大堂电梯上方的楼层显示屏，红色数字一格一格往下跳；楼层数字的跳动投在抛光的大理石地面上，反光里有一个模糊的、站着不动的倒影轮廓。环境音：电梯到站提示音、鞋跟敲击大理石的声音。
+
+shot 04（7.5–12秒）
+
+镜头：竖幅近景，50mm浅景深、焦点锁定小王子的脸；摄影机在两人侧面、与小王子视线等高的低位（约80厘米高）固定，轻微仰角；起幅他仰头开口，落幅他说完。
+
+拍摄内容：电梯口（@图片4）。@图片2锚定的女生停下脚步，@图片1锚定的小王子仰头看她，认真地说（对口型，口型与语音对齐，台词完整念出）：&quot;我们的时间只有两种：花开和等花开。&quot;她的身影虚化在画面上缘，没有接话；电梯厅的冷光落在他脸上。环境音：电梯提示音、空调低鸣。
+
+shot 05（12–14.5秒）
+
+镜头：竖幅特写情绪镜，50mm浅景深、焦点落在幕墙玻璃上的倒影；机位固定；起幅她的倒影占画面中央，落幅她低下头、手把手机翻过来扣在掌心，倒影里的背景人流仍不停。
+
+拍摄内容：@图片4的玻璃幕墙上@图片2锚定女生的模糊倒影——她站在那儿看着自己，倒影的背景里人流继续快速走过；她的手指在咖啡杯上收紧了一下，低下头，把手机翻过来扣在掌心（录音还在继续），杯口冒着一缕白气。环境音：脚步、广播、空调低鸣。
+
+【全局设定】
+
+核心风格：写实摄影影像——真实场景与真人质感，电影级自然光影，真实的皮肤、发丝与织物细节，轻微胶片颗粒；竖幅9:16电影感构图。全片唯一的非写实元素是来自外星球的小王子：他保持3d卡通、潮玩ip手办质感，以实拍合成的方式存在于写实世界里，两种质感互不污染。
+
+影片基调：沉闷、安静——拥挤里的孤独。
+
+光线设计：车厢冷白荧光灯，车窗外面是隧道一格格掠过的黑；灯光在人物脸上硬而平，手机屏幕反着冷光。
+
+导演意图：先给一排低下的头，再给她压低的声音；他的回答前半句是&quot;不吵&quot;，后半句才是刀；收在车窗倒影上——她完整、他只有半截，身高差第一次成为隐喻。
+
+
+【参考图】
+
+图片1（对应文件：~/downloads/jimeng-2026-09-15-4427.png）作为外星小王子的视觉锚定：头大身小的q版比例，身高约90厘米（站在她身边只到她的髋部），焦糖色蓬松卷发，翠绿大眼带星星状高光，脸颊腮红，头顶悬浮着一枚倾斜45度的透明卫星环（透明水晶质感，边缘有玻璃般的白色高光与折射，可以透过它看到后面的头发），蓝色毛呢外套配同色圆纽扣与胸前贴袋，姜黄色粗针织围巾，藏青色短裤，白色短袜，白色短靴（靴口一圈橙色、橙色鞋底）；只继承人物的五官、发型、服装、配色与3d卡通潮玩质感，不继承原图中的纯黑背景、三视图排列与站立姿势。
+
+图片2（对应文件：~/downloads/chatgpt image 2026年9月17日 12_28_26.png）作为地球女生的视觉锚定：20–25岁东亚女性，圆润鹅蛋脸、面颊饱满，深棕色大眼睛（双眼皮、卧蚕）、棕色平缓一字眉、鼻头小巧、饱满唇形配正红偏橘红口红，伪素颜妆容，白皙偏冷调的皮肤；深棕色头发在头顶盘成蓬松丸子头，额前与脸颊两侧留自然碎发，黑色大框太阳镜架在头顶；纤细苗条身材，黑色oversized圆领短袖t恤（落肩、衣长过臀），米白色抽绳阔腿休闲裤（裤脚在脚踝自然堆积），黑色人字拖；金色小圆环耳环、细金锁骨链、右腕金色宽手镯，棕白横条纹草编托特包单肩挎在右肩；只继承人物的五官、发型、服装、配饰、配色与真实人物质感，不继承原图中的纯白背景、四视图排列与站立姿势。
+
+图片5（对应文件：~/downloads/hermes-output/场景参考图/场景三地铁车厢.jpg）作为本段地铁车厢的空间锚定：顶部一整排冷白灯管与成排吊环、车门旁的立柱与扶手横杆、带大玻璃窗的双开滑动门、沿车壁连续的长条座椅、车厢尽头的连通门；只继承空间的位置、尺度、形状与结构关系，不继承原图中的四宫格排版、机位角度与构图，光影按本段的冷白荧光执行；场景底图为多视角拼图，生成时不得出现镜像或复制效果。
+
+图片2的女生与全部场景按写实摄影呈现；图片1的小王子保持3d卡通潮玩质感，是这个写实世界里唯一的非写实角色，两种质感互不污染。两张参考图的棚拍背景与视图排列均不继承；小王子身高约90厘米，与女生的身高差在每一镜中都保持一致。
+
+
+【镜头】
+
+shot 01（0–1.5秒）
+
+镜头：竖幅仰拍近景空镜，35mm，机位在车厢中部、镜头朝上；画面里没有人物，只有车厢顶部一排晃动的吊环与冷白灯管；起幅吊环随车身轻晃，落幅隧道灯光一道一道掠过车顶。
+
+拍摄内容：地铁车厢的顶部（@图片5），一排灰色吊环随着行驶轻轻摆动，冷白灯管一格一格亮着；车窗外的天正在由灰白转成深蓝、还没全黑，沿线的灯已经亮起、一格一格掠过。环境音：轨道摩擦声、车厢的低频嗡鸣。
+
+shot 02（1.5–4.5秒）
+
+镜头：竖幅中近景，35mm，机位在车厢内、位于两人侧前方一步远、约1.2米高度、轻微俯角，随行驶轻微晃动；她全身与他全身同框，画面上半部是对面成排低头的乘客；起幅两人站定，落幅保持同一构图。
+
+拍摄内容：下班高峰的地铁车厢（@图片5），冷白荧光灯。@图片2锚定的女生和@图片1锚定的小王子并排站在车门边；小王子踮起脚也够不到头顶的横杆，一只手抓着她的衣角，仰头看她。车厢里所有人低着头看手机，一片安静。她压低声音问（侧脸，画外念白、不露口型）：&quot;人这么多，你不觉得吵吗？&quot;环境音：轨道声、报站广播。
+
+shot 03（4.5–6秒）
+
+镜头：竖幅特写插入镜，35mm，机位固定、略低角度，横向扫过；画面里只有手与下巴，没有人脸；起幅一排垂下的手和亮着的手机屏幕，落幅镜头滑到最后一个空着的手。
+
+拍摄内容：@图片5的车厢里，一排低着的头和垂下的手，屏幕的冷光打在一个个下巴上，没有人说话，也没有人抬头；到站提示灯闪了一下，没有人动。环境音：报站广播、衣服摩擦声、列车进站的刹车声。
+
+shot 04（6–11.5秒）
+
+镜头：竖幅近景，50mm浅景深、焦点锁定小王子的脸；摄影机下降到与小王子视线等高的低位（约80厘米高）、轻微仰角，机位固定；起幅他仰头开口，落幅他说完。
+
+拍摄内容：@图片5的车厢里，@图片1锚定的小王子在冷白光下仰起脸，头顶倾斜45度的透明卫星环映着车厢的灯管，认真地说（对口型，口型与语音对齐，台词完整念出）：&quot;不吵。吵的是你们心里那个一直在响的东西。&quot;她的身影虚化在画面上缘，没有回答。环境音：轨道声、轻微的刹车声。
+
+shot 05（11.5–13.5秒）
+
+镜头：竖幅中景情绪镜，35mm，机位在两人斜后侧、越过他们虚化的肩线拍向车窗玻璃；画面主体是黑玻璃上的反射；起幅玻璃里两个人的倒影，落幅隧道灯光掠过玻璃、倒影忽明忽暗。
+
+拍摄内容：@图片5的车窗黑玻璃上，@图片2锚定的女生与@图片1锚定的小王子的倒影并排出现——她的倒影是完整的，他只有半截，刚够到她的倒影的髋部；她的倒影慢慢扫过车厢里一个个低着的头，手指无意识地把手机在掌心转了半圈；隧道灯光一道道掠过玻璃，两个倒影忽明忽暗。环境音：轨道声、风从车门缝里挤进来的声音。
+
+【全局设定】
+
+核心风格：写实摄影影像——真实场景与真人质感，电影级自然光影，真实的皮肤、发丝与织物细节，轻微胶片颗粒；竖幅9:16电影感构图。全片唯一的非写实元素是来自外星球的小王子：他保持3d卡通、潮玩ip手办质感，以实拍合成的方式存在于写实世界里，两种质感互不污染。
+
+影片基调：开阔一点，也孤单一点；黄昏的风把话吹散一半。
+
+光线设计：黄昏的金色低角度光，逆光勾出人物轮廓，城市在脚下开始亮灯，天台上一切都被染成暖黄色。
+
+导演意图：先用天空与风的空镜把节奏放慢；他踮脚扒栏杆的插入镜是这一段唯一的笑点，笑完立刻给出&quot;以后&quot;；收在她别碎发、夕阳沉了一格——沉默比台词更长。
+
+
+【参考图】
+
+图片1（对应文件：~/downloads/jimeng-2026-09-15-4427.png）作为外星小王子的视觉锚定：头大身小的q版比例，身高约90厘米（站在她身边只到她的髋部），焦糖色蓬松卷发，翠绿大眼带星星状高光，脸颊腮红，头顶悬浮着一枚倾斜45度的透明卫星环（透明水晶质感，边缘有玻璃般的白色高光与折射，可以透过它看到后面的头发），蓝色毛呢外套配同色圆纽扣与胸前贴袋，姜黄色粗针织围巾，藏青色短裤，白色短袜，白色短靴（靴口一圈橙色、橙色鞋底）；只继承人物的五官、发型、服装、配色与3d卡通潮玩质感，不继承原图中的纯黑背景、三视图排列与站立姿势。
+
+图片2（对应文件：~/downloads/chatgpt image 2026年9月17日 12_28_26.png）作为地球女生的视觉锚定：20–25岁东亚女性，圆润鹅蛋脸、面颊饱满，深棕色大眼睛（双眼皮、卧蚕）、棕色平缓一字眉、鼻头小巧、饱满唇形配正红偏橘红口红，伪素颜妆容，白皙偏冷调的皮肤；深棕色头发在头顶盘成蓬松丸子头，额前与脸颊两侧留自然碎发，黑色大框太阳镜架在头顶；纤细苗条身材，黑色oversized圆领短袖t恤（落肩、衣长过臀），米白色抽绳阔腿休闲裤（裤脚在脚踝自然堆积），黑色人字拖；金色小圆环耳环、细金锁骨链、右腕金色宽手镯，棕白横条纹草编托特包单肩挎在右肩；只继承人物的五官、发型、服装、配饰、配色与真实人物质感，不继承原图中的纯白背景、四视图排列与站立姿势。
+
+图片6（对应文件：~/downloads/hermes-output/场景参考图/场景四天台-1.jpg）作为本段天台的空间锚定：水泥地面的天台、四周的女儿墙与墙顶管状金属栏杆（含顶部横档）、锈蚀的肘形排风管与空调外机、远处的城市天际线；只继承空间的位置、尺度、形状与结构关系，不继承原图中的四宫格排版、机位角度与构图；本段光影与它一致（黄昏金色低角度光、太阳贴近天际线），生成时不得出现镜像或复制效果。
+
+图片2的女生与全部场景按写实摄影呈现；图片1的小王子保持3d卡通潮玩质感，是这个写实世界里唯一的非写实角色，两种质感互不污染。两张参考图的棚拍背景与视图排列均不继承；小王子身高约90厘米，与女生的身高差在每一镜中都保持一致。
+
+
+【镜头】
+
+shot 01（0–1.5秒）
+
+镜头：竖幅中远景空镜，35mm，机位固定、对着天台边缘；画面里没有人物，只有天台的水泥围栏、生锈的排风管与远处层层叠叠的城市天际线；起幅云从画面左侧快速掠过楼顶，落幅天际线的灯开始亮起来。
+
+拍摄内容：黄昏的写字楼天台（@图片6），风很大，云走得很快；天台的水泥围栏顶部是一根通长的金属横档，旁边的排风管上搭着一根不知道谁留下的旧绳头，远处整座城市在暮色里铺开，落日正贴着天际线往下沉，零星亮起几盏灯。环境音：风声、远处若有若无的车流声。
+
+shot 02（1.5–5秒）
+
+镜头：竖幅中景，35mm，机位在两人侧后方、与两人同速缓缓向前跟移，略低机位；两人在画面下半部、背对镜头朝栏杆方向走，前方是黄昏的天空与城市天际线，两人被夕阳勾出一圈暖色轮廓；起幅两人走上天台，落幅保持同一构图跟移。
+
+拍摄内容：@图片6的天台上，@图片2锚定的女生和@图片1锚定的小王子并肩向前走，她的碎发被风掀起，小王子双手护着自己长长的围巾，走两步就要停顿一下才跟得上。她侧头问（侧脸，画外念白、不露口型）：&quot;你会想家吗？那里回得去吗？&quot;环境音：风声、远处城市车流声。
+
+shot 03（5–6.5秒）
+
+镜头：竖幅特写插入镜，50mm浅景深、焦点锁定他的透明卫星环与手；机位压到与栏杆齐平的低位、轻微仰角；起幅他踮脚的手，落幅他够到横档、头顶的透明卫星环露出小半截。
+
+拍摄内容：@图片6的天台围栏顶部的金属横档比@图片1锚定的小王子还高；他一手护着自己的围巾、一手扒住横档往上够，踮起脚时头顶倾斜45度的透明卫星环只露出小半截，晃了一下，环的边缘折着夕阳的光，在金属横档上留下一小点亮斑。环境音：风把金属围栏吹出轻微的嗡响。
+
+shot 04（6.5–13秒）
+
+镜头：竖幅近景，50mm浅景深、焦点锁定小王子的脸；摄影机在两人侧面、与小王子视线等高的低位（约80厘米高）固定，逆着夕阳、轻微仰角，人物边缘有一圈金色轮廓光；起幅他望向远处的地平线开口，落幅他说完。
+
+拍摄内容：天台栏杆边（@图片6）。@图片1锚定的小王子踮着脚扒住横档，下巴刚好搭在栏杆上，望向远处的地平线，认真地说（对口型，口型与语音对齐，台词完整念出）：&quot;想。它一直在那儿。可你们地球人总说的'以后'，我从来没找到过。&quot;她的身影虚化在画面上缘；画面里只有他仰着的脸和身后正在下沉的天际线。环境音：风声渐强、远处城市声。
+
+shot 05（13–15秒）
+
+镜头：竖幅特写情绪镜，50mm浅景深、焦点落在她的侧脸；机位固定、逆光、略微仰角；起幅她的侧脸与飞起的碎发，落幅碎发被别到耳后、背景的夕阳又沉下去一格。
+
+拍摄内容：@图片6的天台上，@图片2锚定女生的侧脸在逆光里，她愣住，慢慢转头看向正在下落的太阳；风把碎发吹到眼前又吹开，她抬手把碎发别到耳后，眼睛一直没有离开天边。背景里，夕阳又沉下去一格，天台的边缘亮成一条金线。环境音：风声、城市的声音变得很远。
+
+【全局设定】
+
+核心风格：写实摄影影像——真实场景与真人质感，电影级自然光影，真实的皮肤、发丝与织物细节，轻微胶片颗粒；竖幅9:16电影感构图。全片唯一的非写实元素是来自外星球的小王子：他保持3d卡通、潮玩ip手办质感，以实拍合成的方式存在于写实世界里，两种质感互不污染。
+
+影片基调：安静、温柔、释然；与提示词⑥同为全片节奏最慢的两段，情绪落点。
+
+光线设计：日落暖橙逆光，江面反着碎金一样的光，人物与影子都被拉长，边缘有一圈暖色轮廓光。
+
+导演意图：整段只做一件事——让时间慢下来；她问得很轻，他的答案更轻；答案由画面给出（呼吸、转头、江面反光），不由台词给出。本段到&quot;她的呼吸慢下来&quot;结束，落点在紧接的提示词⑥。
+
+
+【参考图】
+
+图片1（对应文件：~/downloads/jimeng-2026-09-15-4427.png）作为外星小王子的视觉锚定：头大身小的q版比例，身高约90厘米（站在她身边只到她的髋部），焦糖色蓬松卷发，翠绿大眼带星星状高光，脸颊腮红，头顶悬浮着一枚倾斜45度的透明卫星环（透明水晶质感，边缘有玻璃般的白色高光与折射，可以透过它看到后面的头发），蓝色毛呢外套配同色圆纽扣与胸前贴袋，姜黄色粗针织围巾，藏青色短裤，白色短袜，白色短靴（靴口一圈橙色、橙色鞋底）；只继承人物的五官、发型、服装、配色与3d卡通潮玩质感，不继承原图中的纯黑背景、三视图排列与站立姿势。
+
+图片2（对应文件：~/downloads/chatgpt image 2026年9月17日 12_28_26.png）作为地球女生的视觉锚定：20–25岁东亚女性，圆润鹅蛋脸、面颊饱满，深棕色大眼睛（双眼皮、卧蚕）、棕色平缓一字眉、鼻头小巧、饱满唇形配正红偏橘红口红，伪素颜妆容，白皙偏冷调的皮肤；深棕色头发在头顶盘成蓬松丸子头，额前与脸颊两侧留自然碎发，黑色大框太阳镜架在头顶；纤细苗条身材，黑色oversized圆领短袖t恤（落肩、衣长过臀），米白色抽绳阔腿休闲裤（裤脚在脚踝自然堆积），黑色人字拖；金色小圆环耳环、细金锁骨链、右腕金色宽手镯，棕白横条纹草编托特包单肩挎在右肩；只继承人物的五官、发型、服装、配饰、配色与真实人物质感，不继承原图中的纯白背景、四视图排列与站立姿势。
+
+图片7（对应文件：~/downloads/hermes-output/场景参考图/场景五江边日落.jpg）作为本段江边步道的空间锚定：沿江的通长金属栏杆、灰色石材铺装的步道、江面与对岸城市天际线、正在下沉的落日与暖橙色逆光；只继承空间的位置、尺度、形状与结构关系，不继承原图中的四宫格排版、机位角度与构图；落日方位以江面正前方为准，本段光影与它一致（暖橙日落逆光），生成时不得出现镜像或复制效果。
+
+图片2的女生与全部场景按写实摄影呈现；图片1的小王子保持3d卡通潮玩质感，是这个写实世界里唯一的非写实角色，两种质感互不污染。两张参考图的棚拍背景与视图排列均不继承；小王子身高约90厘米，与女生的身高差在每一镜中都保持一致。
+
+
+【镜头】
+
+shot 01（0–1.5秒）
+
+镜头：竖幅中景空镜，35mm，机位固定、接近水面高度；画面里没有人物；起幅江面被夕阳烧成金红色、波纹晃动，落幅一只水鸟贴水掠过、把倒影划开。
+
+拍摄内容：傍晚的江面（@图片7的江面与落日方向），落日把整片水染成金红色，波光晃动；一只水鸟贴着水面掠过，划开一道长长的倒影。环境音：江水轻拍岸边的声音、风声。
+
+shot 02（1.5–5.5秒）
+
+镜头：竖幅中远景，35mm，机位在两人正后方约三米、齐腰高度，与两人同速缓缓向前跟移；落日位于画面上方三分之一处，两人的影子拉在画面下半部；起幅两人的背影与落日同框，落幅保持同一构图继续跟移。
+
+拍摄内容：江边步道（@图片7），夕阳正落。@图片2锚定的女生和@图片1锚定的小王子并肩向前走，两人的影子被夕阳拉得很长——一长一短。她望着前面的落日，轻声问（背对镜头，画外念白、不露口型）：&quot;那……你们星球的人，一天都做什么？&quot;小王子抱着围巾小步快跑着跟上。环境音：江风、水声、远处城市的声音。
+
+shot 03（5.5–7秒）
+
+镜头：竖幅特写插入镜，35mm，机位贴近地面、与步道齐平，焦点落在被夕阳拉长的两道影子上；画面里只有地面的影子，没有人的身体；起幅两道一长一短的影子并排向前移动，落幅影子的边缘被江面的反光扫过。
+
+拍摄内容：江边步道的铺装地面上（@图片7），@图片2锚定的女生与@图片1锚定的小王子的影子被夕阳拉得很长——一道长、一道短，并排着向前移动，长的那道偶尔会慢下来等一等短的那道。她的问句尾音继续从画外传来，声音与画面分离。环境音：江风、水声、两个人的脚步声。
+
+shot 04（7–10.5秒）
+
+镜头：竖幅近景，50mm浅景深、焦点锁定小王子的脸；摄影机绕到两人侧前方、降到与小王子视线等高的低位（约80厘米高），逆光、轻微仰角，机位固定；起幅两人停下脚步，落幅他说完。
+
+拍摄内容：江边栏杆前（@图片7）。@图片2锚定的女生停下脚步，@图片1锚定的小王子仰头看她，逆光把他头顶倾斜45度的透明卫星环照得透亮，他认真地回答（对口型，口型与语音对齐，台词完整念出）：&quot;看日落。一天，四十三次。&quot;她的身影虚化在画面上缘，先是没听懂。环境音：江风、水声。
+
+shot 05（10.5–13秒）
+
+镜头：竖幅特写情绪镜，50mm浅景深、焦点落在她的眼睛；机位固定、微仰角，落日的余光从画面右侧打进来；起幅她的脸在余光里，落幅她的呼吸慢下来、眼睛亮起来，慢慢转向天边。
+
+拍摄内容：@图片7的江边，@图片2锚定女生的脸在落日余光里，她先是没听懂、慢慢转头看向他，又转头望向天边；她呼吸慢了下来，眼睛里映着一点碎金一样的光——像第一次看清什么东西。这一镜没有台词，环境音只剩江风与水声。
+
+【全局设定】
+
+核心风格：写实摄影影像——真实场景与真人质感，电影级自然光影，真实的皮肤、发丝与织物细节，轻微胶片颗粒；竖幅9:16电影感构图。全片唯一的非写实元素是来自外星球的小王子：他保持3d卡通、潮玩ip手办质感，以实拍合成的方式存在于写实世界里，两种质感互不污染。
+
+影片基调：安静、温柔、释然；与提示词⑤同为全片节奏最慢的两段，情绪落点由本段收束。
+
+光线设计：日落暖橙逆光，江面反着碎金一样的光，人物与影子都被拉长，边缘有一圈暖色轮廓光。
+
+导演意图：本段是提示词⑤的直接延续——同一场景、同一光线、同一时刻，起幅是她的侧脸。整段只做一件事：把&quot;慢下来&quot;收完。她轻声问出&quot;我上一次看日落是什么时候&quot;，答案不由台词给出，由画面给出（半蹲平视、递围巾、关掉录音、升镜、定格）。这场访谈由她开始，也由她亲手结束。
+
+
+【参考图】
+
+图片1（对应文件：~/downloads/jimeng-2026-09-15-4427.png）作为外星小王子的视觉锚定：头大身小的q版比例，身高约90厘米（站在她身边只到她的髋部），焦糖色蓬松卷发，翠绿大眼带星星状高光，脸颊腮红，头顶悬浮着一枚倾斜45度的透明卫星环（透明水晶质感，边缘有玻璃般的白色高光与折射，可以透过它看到后面的头发），蓝色毛呢外套配同色圆纽扣与胸前贴袋，姜黄色粗针织围巾，藏青色短裤，白色短袜，白色短靴（靴口一圈橙色、橙色鞋底）；只继承人物的五官、发型、服装、配色与3d卡通潮玩质感，不继承原图中的纯黑背景、三视图排列与站立姿势。
+
+图片2（对应文件：~/downloads/chatgpt image 2026年9月17日 12_28_26.png）作为地球女生的视觉锚定：20–25岁东亚女性，圆润鹅蛋脸、面颊饱满，深棕色大眼睛（双眼皮、卧蚕）、棕色平缓一字眉、鼻头小巧、饱满唇形配正红偏橘红口红，伪素颜妆容，白皙偏冷调的皮肤；深棕色头发在头顶盘成蓬松丸子头，额前与脸颊两侧留自然碎发，黑色大框太阳镜架在头顶；纤细苗条身材，黑色oversized圆领短袖t恤（落肩、衣长过臀），米白色抽绳阔腿休闲裤（裤脚在脚踝自然堆积），黑色人字拖；金色小圆环耳环、细金锁骨链、右腕金色宽手镯，棕白横条纹草编托特包单肩挎在右肩；只继承人物的五官、发型、服装、配饰、配色与真实人物质感，不继承原图中的纯白背景、四视图排列与站立姿势。
+
+图片7（对应文件：~/downloads/hermes-output/场景参考图/场景五江边日落.jpg）作为本段江边步道（与提示词⑤同一场景、同一时刻）的空间锚定：沿江的通长金属栏杆、灰色石材铺装的步道、江面与对岸城市天际线、正在下沉的落日与暖橙色逆光；只继承空间的位置、尺度、形状与结构关系，不继承原图中的四宫格排版、机位角度与构图；落日方位以江面正前方为准，本段光影与它一致（暖橙日落逆光），生成时不得出现镜像或复制效果。
+
+图片2的女生与全部场景按写实摄影呈现；图片1的小王子保持3d卡通潮玩质感，是这个写实世界里唯一的非写实角色，两种质感互不污染。两张参考图的棚拍背景与视图排列均不继承；小王子身高约90厘米，与女生的身高差在每一镜中都保持一致。
+
+
+【镜头】
+
+shot 01（0–3.5秒）
+
+镜头：竖幅近景，50mm浅景深、焦点落在她的侧脸；机位在两人侧后方、齐腰高度固定，逆光，落日的余光从画面右侧打进来；起幅她的侧脸在余光里，落幅她说完、下巴微微收起。
+
+拍摄内容：江边栏杆前（@图片7）。@图片2锚定的女生望着江面，轻声说（画外念白、不露口型，几乎像自语）：&quot;我上一次看日落……是什么时候？&quot;她的碎发被风掀起。环境音：江风、水声、远处城市的声音。
+
+shot 02（3.5–5秒）
+
+镜头：竖幅中景，35mm，机位在两人侧前方、与她的站立视线等高；起幅她站在那儿，落幅她弯下腰、半蹲下来，视线与@图片1锚定的小王子齐平。
+
+拍摄内容：@图片7的江边，@图片2锚定的女生在栏杆前弯下腰、半蹲下来，把视线降到和@图片1锚定的小王子一样高；小王子仰头看她，两个人第一次真正平视。环境音：江风、水声。
+
+shot 03（5–6.5秒）
+
+镜头：竖幅近景，50mm浅景深、焦点落在两只手之间；机位略低、轻微仰角；起幅小王子的手把围巾的一端举起来，落幅围巾的一端落到她的掌心里。
+
+拍摄内容：@图片7的江边，@图片1锚定的小王子把自己姜黄色围巾的一端举起来，递到@图片2锚定女生的手边——他的手很小，只够握住围巾的一端；她摊开手掌接住围巾。环境音：江风、水声、布料摩擦声。
+
+shot 04（6.5–8秒）
+
+镜头：竖幅特写，50mm浅景深、焦点锁定手机屏幕；机位固定、略微俯视；起幅屏幕上走动的录音波形，落幅波形停住、计时定在原地。
+
+拍摄内容：@图片2锚定女生的手抬起来，拇指在手机屏幕上按了一下录音键——录音界面的波形停住，计时停在原地；屏幕的光在她指尖上暗下去。环境音：一声轻响、江风、水声。
+
+shot 05（8–11秒）
+
+镜头：竖幅中远景，35mm，机位在两人身后，位置缓慢升高并轻微拉远（升镜头），升起过程中始终保持两人在画面下半部、落日与晚霞在画面上方；起幅两人并排站定的背影，落幅定格在两人的背影与整轮落日同框，画面最后1.5秒完全静止。
+
+拍摄内容：江边（@图片7）。两个人并排站着，一起看着正在沉入江面的太阳，她的碎发和小王子的围巾被风吹动；江面上的反光碎成一片金色，夕阳把两个人一高一矮的影子一起拉长，投在步道上。环境音：江风、水声、远处城市的声音渐轻。
+"><div class="card-media"><div class="photo"><img src="/prompt-archive-site/media/427ba9769f10f349.png" alt="一天四十三次日落 输入参考图" loading="lazy"></div></div><div class="card-holes" aria-hidden="true"></div><div class="card-body"><div class="card-meta"><span>PA-003</span><span>视频</span><span class="evidence-badge evidence-author"><span class="icon" style="width:12px;height:12px" aria-hidden="true"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 12.5l4.4 4.4L19.5 6.3"/></svg></span>作者称已测</span></div><h3 class="card-title" title="一天四十三次日落"><a class="card-detail-link" href="/prompt-archive-site/cases/forty-three-sunsets/"><span class="card-title-text">一天四十三次日落</span></a></h3><p class="card-summary">外星小王子 × 地球女生的六段对谈短片：随问题推进从人行道走到江边日落。作者实测判定「勉强及格」，身高差、时间跨度与段落收尾三项问题及预改方向随案例记录；未附成片文件。</p><div class="card-tags"><span class="tag">多段成片</span><span class="tag">对谈</span><span class="tag">多段生成</span></div><div class="card-copy-row"><a class="card-segments" href="/prompt-archive-site/cases/forty-three-sunsets/" tabindex="-1">分 6 段 · 查看并复制</a><span class="copy-feedback" data-copy-feedback aria-live="polite"></span></div></div></article></div><p style="font-size:var(--fs-14);margin-top:var(--sp-12)" data-astro-cid-vex5zuxs><a href="/prompt-archive-site/videos/" data-astro-cid-vex5zuxs>浏览视频案例 →</a></p></section></div></div></div></main><footer class="site-footer" data-astro-cid-tq46r5sz><div class="container" data-astro-cid-tq46r5sz><div class="footer-grid" data-astro-cid-tq46r5sz><div class="footer-brand" data-astro-cid-tq46r5sz><a class="brand" href="/prompt-archive-site/" data-astro-cid-tq46r5sz><span class="brand-glyph" data-astro-cid-tq46r5sz>PA</span><span class="brand-name" data-astro-cid-tq46r5sz>AI 提示词档案馆</span></a><p class="footer-desc" data-astro-cid-tq46r5sz>可浏览、可检索、可复制的 AI 图像与视频提示词案例库。每个完整案例一个独立页面，提示词与 Wiki 原文逐字一致。</p></div><nav class="footer-col" aria-label="页脚导航" data-astro-cid-tq46r5sz><p class="footer-label" data-astro-cid-tq46r5sz>浏览</p><a href="/prompt-archive-site/images/" data-astro-cid-tq46r5sz>图像案例</a><a href="/prompt-archive-site/videos/" data-astro-cid-tq46r5sz>视频案例</a><a href="/prompt-archive-site/notes/" data-astro-cid-tq46r5sz>方法笔记</a><a href="/prompt-archive-site/cases/" data-astro-cid-tq46r5sz>全站搜索</a></nav><div class="footer-col" data-astro-cid-tq46r5sz><p class="footer-label" data-astro-cid-tq46r5sz>本馆收录</p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>案例</span><b data-astro-cid-tq46r5sz>105</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>附实测成片</span><b data-astro-cid-tq46r5sz>2</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>方法笔记</span><b data-astro-cid-tq46r5sz>30</b></p><p class="footer-stat" data-astro-cid-tq46r5sz><span data-astro-cid-tq46r5sz>合集</span><b data-astro-cid-tq46r5sz>11</b></p></div></div><div class="footer-bottom" data-astro-cid-tq46r5sz><p data-astro-cid-tq46r5sz>「作者称已测」表示来源声明，本站未复测。</p><p data-astro-cid-tq46r5sz>PA·ARCHIVE © 2026</p></div></div></footer></body><script type="module">var e=`pa:recent-copies`;function t(e){return e&&typeof e.slug==`string`&&e.slug.length>0&&typeof e.title==`string`&&e.title.length>0&&typeof e.href==`string`&&/^\/(?!\/)/.test(e.href)&&!/[\\\s]/.test(e.href)&&Number.isFinite(e.t)}function n(e){let n=new Set;return e.filter(t).toSorted((e,t)=>t.t-e.t).filter(e=>!n.has(e.slug)&&(n.add(e.slug),!0)).slice(0,8).map(({slug:e,title:t,href:n,t:r})=>({slug:e,title:t,href:n,t:r}))}function r(e){try{let r=JSON.parse(e);return Array.isArray(r)&&r.every(t)?n(r):[]}catch{return[]}}function i(e,t){return n([t,...e.filter(e=>e.slug!==t.slug)])}function a(t){try{let n=t??window.localStorage,i=n.getItem(e),a=r(i);return i!==null&&a.length===0&&n.removeItem(e),a}catch{return null}}function o(t,n){try{let r=t??window.localStorage,o=a(r);if(o===null)return null;let s=i(o,n);return r.setItem(e,JSON.stringify(s)),s}catch{return null}}function s(t){try{return(t??window.localStorage).removeItem(e),!0}catch{return!1}}async function c(e){try{return await navigator.clipboard.writeText(e),!0}catch{let t,n=document.activeElement;try{return t=document.createElement(`textarea`),t.value=e,t.style.position=`fixed`,t.style.opacity=`0`,document.body.appendChild(t),t.select(),document.execCommand(`copy`)}catch{return!1}finally{t?.remove(),n?.focus({preventScroll:!0})}}}function l(){document.querySelectorAll(`[data-copy-button]`).forEach(e=>{let t,n=e.querySelector(`[data-copy-text]`),r=n?.textContent??`复制`,i=e.closest(`[data-copy-context]`)?.querySelector(`[data-copy-feedback]`);e.addEventListener(`click`,async()=>{e.disabled=!0,clearTimeout(t);let a=!1;try{let t=document.getElementById(e.dataset.copySource),n=JSON.parse(t.textContent??`null`);typeof n==`string`&&(a=await c(n))}catch{}e.disabled=!1,n&&(n.textContent=a?`已复制`:r),e.classList.toggle(`copied`,a),i&&(i.textContent=a?`已复制`:`复制失败，请手动选取`,i.classList.toggle(`error`,!a)),a&&(o(void 0,{slug:e.dataset.copySlug,title:e.dataset.copyTitle,href:e.dataset.copyHref,t:Date.now()}),window.dispatchEvent(new Event(`pa:recent-copies-changed`))),t=setTimeout(()=>{n&&(n.textContent=r),e.classList.remove(`copied`),i&&(i.textContent=``,i.classList.remove(`error`))},2e3)})})}function u(){document.querySelectorAll(`[data-recent-copies]`).forEach(e=>{let t=e.querySelector(`[data-recent-links]`);function n(){let n=a();e.hidden=!n?.length,t.replaceChildren(...(n??[]).map(e=>{let t=document.createElement(`a`);return t.className=`recent-link`,t.href=e.href,t.title=e.title,t.textContent=e.title,t}))}e.querySelector(`[data-recent-clear]`)?.addEventListener(`click`,()=>{s(),e.hidden=!0,window.dispatchEvent(new Event(`pa:recent-copies-changed`))}),window.addEventListener(`pa:recent-copies-changed`,n),window.addEventListener(`storage`,e=>{(e.key===`pa:recent-copies`||e.key===null)&&n()}),window.addEventListener(`pageshow`,n),n()})}l(),u();</script><script type="module">var e=new WeakMap;function t(){document.querySelectorAll(`[data-masonry]`).forEach(t=>{let n=e.get(t)??Array.from(t.children);if(e.set(t,n),t.querySelectorAll(`.m-cols`).forEach(e=>e.remove()),n.length===0)return;let r=window.matchMedia(`(max-width: 767px)`).matches?1:window.matchMedia(`(max-width: 1199px)`).matches?2:3,i=document.createElement(`div`);i.className=`m-cols`;let a=Array.from({length:r},()=>{let e=document.createElement(`div`);return e.className=`m-col`,e}),o=0;n.forEach(e=>{let t=e.hasAttribute(`hidden`)?0:o++%r;a[t].appendChild(e)}),t.appendChild(i),a.forEach(e=>i.appendChild(e))})}window.refreshMasonry=t,t();var n;window.addEventListener(`resize`,()=>{clearTimeout(n),n=setTimeout(t,150)});</script><script type="module">(()=>{let e=`.case-card, .note-card, .note-list-card`,t=window.matchMedia(`(prefers-reduced-motion: reduce)`),n=null,r=null,i=0;t.addEventListener?.(`change`,()=>{t.matches&&a()});function a(){if(!n)return;let e=n;e.classList.remove(`tilt-active`),e.classList.add(`tilt-return`),e.style.transform=``,clearTimeout(i),i=setTimeout(()=>e.classList.remove(`tilt-return`),320),n=null,r=null}document.addEventListener(`pointermove`,i=>{if(i.pointerType!==`mouse`||!i.isPrimary||t.matches)return;let o=i.target instanceof Element?i.target.closest(e):null;if(o!==n){if(a(),!o)return;n=o,r=n.getBoundingClientRect(),n.classList.add(`tilt-active`),n.classList.remove(`tilt-return`)}if(!n||!r)return;let s=(i.clientX-r.left)/r.width-.5,c=(i.clientY-r.top)/r.height-.5,l=Math.max(-1,Math.min(1,s*2))*4.5,u=Math.max(-1,Math.min(1,c*2))*-4.5;n.style.transform=`perspective(1100px) rotateX(${u.toFixed(3)}deg) rotateY(${l.toFixed(3)}deg) translateY(-3px)`},{passive:!0}),document.addEventListener(`pointerleave`,()=>a()),document.addEventListener(`pointerdown`,t=>{(t.target instanceof Element?t.target.closest(e):null)!==n&&a()},{passive:!0}),window.addEventListener(`blur`,()=>a()),window.addEventListener(`scroll`,()=>a(),{passive:!0})})();</script></html><script type="module">function e(){document.querySelectorAll(`.prose pre`).forEach(e=>{if(e.closest(`.code-panel`))return;let t=e.querySelector(`code`),n=(t??e).textContent??``,r=t?.className.match(/language-([\w+-]+)/)?.[1]??`text`,i=n.replace(/\n$/,``).split(`
 `).length,a=Array.from(n.matchAll(/`{3,}/g)).map(e=>e[0].length),o=a.length?Math.max(3,Math.max(...a)+1):3,s="`".repeat(o)+`markdown
 `+(n.endsWith(`
 `)?n:n+`
