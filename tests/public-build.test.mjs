@@ -17,8 +17,10 @@ test('公开门禁：public 导出仅含 approvedForPublic 条目且可复核', 
     path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../content/catalog.json'),
     path.join(projectRoot, 'content/catalog.json'),
   );
-  // 此处只验证公开门禁；视频转码由 media-optimization.test.mjs 单独验证。
-  const report = await exportWiki({ wikiRoot: WIKI_ROOT, projectRoot, mode: 'public', optimizeMedia: false });
+  fs.mkdirSync(path.join(projectRoot, 'public'), { recursive: true });
+  fs.symlinkSync(fileURLToPath(new URL('../public/media', import.meta.url)), path.join(projectRoot, 'public/media'), 'dir');
+  // 只读复用已有媒体；视频转码由独立的合成样本测试验证。
+  const report = await exportWiki({ wikiRoot: WIKI_ROOT, projectRoot, mode: 'public', optimizeMedia: false, preserveMedia: true });
 
   const cases = JSON.parse(fs.readFileSync(path.join(projectRoot, 'src/generated/cases.json'), 'utf8')).cases;
   const notes = JSON.parse(fs.readFileSync(path.join(projectRoot, 'src/generated/notes.json'), 'utf8')).notes;

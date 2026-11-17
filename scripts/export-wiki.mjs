@@ -7,7 +7,8 @@ const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), '
 const wikiRoot = process.env.WIKI_ROOT ?? '/Users/zhiguang/wiki';
 const mode = process.env.SITE_MODE === 'public' ? 'public' : 'preview';
 
-const report = await exportWiki({ wikiRoot, projectRoot, mode });
+// PRESERVE_MEDIA=1 时只读取既有媒体；默认保留原有发布流程。
+const report = await exportWiki({ wikiRoot, projectRoot, mode, preserveMedia: process.env.PRESERVE_MEDIA === '1' });
 
 const lines = [
   `[export] mode=${mode} wiki=${wikiRoot}`,

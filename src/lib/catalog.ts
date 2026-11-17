@@ -2,6 +2,8 @@
 import casesJson from '../generated/cases.json';
 import notesJson from '../generated/notes.json';
 import collectionsJson from '../generated/collections.json';
+import { listedNotes } from './catalog-display.mjs';
+export { evidenceLabel, getFilterOptions, listedNoteCategories } from './catalog-display.mjs';
 
 export type Medium = 'image' | 'video';
 
@@ -100,6 +102,10 @@ export function getAllNotes(): NoteItem[] {
   return noteData.notes;
 }
 
+export function getListedNotes(): NoteItem[] {
+  return listedNotes(noteData.notes);
+}
+
 export function getNote(slug: string): NoteItem | undefined {
   return noteData.notes.find((n) => n.slug === slug);
 }
@@ -134,41 +140,21 @@ export function getCaseNeighbors(item: CaseItem): { prev?: CaseItem; next?: Case
   };
 }
 
-/** 证据状态 → 列表卡片上的媒体身份文案（视频与图像措辞不同）。 */
-export function evidenceLabel(item: Pick<CaseItem, 'evidence' | 'medium'>): { text: string; tone: 'ok' | 'plain' | 'copper' } {
-  const isVideo = item.medium === 'video';
-  switch (item.evidence) {
-    case 'film-attached':
-      return { text: '附实测成片', tone: 'ok' };
-    case 'result-attached':
-      return { text: '附结果图', tone: 'ok' };
-    case 'author-tested':
-      return { text: isVideo ? '作者称已测试 · 未附成片' : '作者称已测试 · 未附结果图', tone: 'copper' };
-    case 'source-example':
-      return { text: isVideo ? '附源资料示例视频' : '附源资料示例图', tone: 'copper' };
-    case 'reference-only':
-      return { text: isVideo ? '有参考图 · 未附成片' : '有参考图 · 未附结果图', tone: 'plain' };
-    case 'no-record':
-    default:
-      return { text: isVideo ? '暂无成片' : '暂无结果图', tone: 'plain' };
-  }
-}
-
 /** 案例页「来源与结果」里展示的实测依据标准句。 */
 export function evidenceStatement(item: CaseItem): { text: string; tone: 'ok' | 'warn' } {
   switch (item.evidence) {
     case 'film-attached':
-      return { text: '附实测成片，可在本页播放核对。', tone: 'ok' };
+      return { text: '附实测成片：可在本页播放核对。', tone: 'ok' };
     case 'author-tested':
-      return { text: '作者称已测试；本站未复测，未附成片。', tone: 'warn' };
+      return { text: `作者称已测：本站未复测，未附${item.medium === 'video' ? '成片' : '结果图'}。`, tone: 'warn' };
     case 'source-example':
-      return { text: '源资料附示例视频/示例图；本站未复现，不作为生成结果展示。', tone: 'warn' };
+      return { text: '源资料示例：示例视频/示例图来自源资料，本站未复现，不作为生成结果展示。', tone: 'warn' };
     case 'result-attached':
-      return { text: '附结果图，已与提示词对应核对。', tone: 'ok' };
+      return { text: '附实测结果图：已与提示词对应核对。', tone: 'ok' };
     case 'reference-only':
-      return { text: '仅有输入参考图，未附生成结果。', tone: 'warn' };
+      return { text: '仅提示词：只有输入参考图，未附生成结果。', tone: 'warn' };
     default:
-      return { text: '源文未见实测记录。', tone: 'warn' };
+      return { text: '仅提示词：源文未见实测记录。', tone: 'warn' };
   }
 }
 

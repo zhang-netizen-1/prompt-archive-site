@@ -1,9 +1,9 @@
 ---
 import SiteLayout from '../../layouts/SiteLayout.astro';
-import { getAllNotes } from '../../lib/catalog';
+import { getListedNotes, listedNoteCategories } from '../../lib/catalog';
 
-const notes = getAllNotes();
-const categories = ['模板', '变量库', '方法', '规则'];
+const notes = getListedNotes();
+const categories = listedNoteCategories;
 const grouped = categories
   .map((cat) => ({ cat, items: notes.filter((n) => n.category === cat) }))
   .filter((g) => g.items.length > 0);
@@ -11,7 +11,7 @@ const grouped = categories
 <SiteLayout title="方法笔记 · AI 提示词档案馆" activeNav="notes">
   <div class="container">
     <section class="case-header" style="padding-bottom:0">
-      <h1 style="font-size:36px">方法笔记</h1>
+      <h1 class="page-title">方法笔记</h1>
       <p class="case-summary">
         提示词结构、模板与变量库：来自 Wiki 原文的转换预览。带占位符的骨架与取值集合归入这里，不冒充实测案例。
       </p>
@@ -24,7 +24,7 @@ const grouped = categories
         <div class="note-list-grid">
           {group.items.map((note) => (
             <a class="note-list-card" href={`/notes/${note.slug}/`}>
-              <span style="font-family:var(--font-mono);font-size:12px;letter-spacing:0.12em;color:var(--text-2)">
+              <span style="font-family:var(--font-mono);font-size:var(--fs-12);letter-spacing:0.12em;color:var(--ink-3)">
                 {note.medium === 'image' ? '图像' : note.medium === 'video' ? '视频' : '共用'}
               </span>
               <h2>{note.title}</h2>

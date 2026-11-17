@@ -1,8 +1,11 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
 import CaseCard from '../components/CaseCard.astro';
+import ScenarioChips from '../components/ScenarioChips.astro';
+import RecentCopies from '../components/RecentCopies.astro';
+import Icon from '../components/Icon.astro';
 import NotePreview from '../components/NotePreview.astro';
-import { getFeaturedCases, getAllNotes, getAllCases } from '../lib/catalog';
+import { getFeaturedCases, getAllNotes, getListedNotes, getAllCases } from '../lib/catalog';
 import type { CaseItem, NoteItem } from '../lib/catalog';
 
 // 混合精选：视频案例、图像案例与方法笔记交错排列
@@ -19,7 +22,7 @@ for (const kind of pattern) {
   else if (ni < featuredNotes.length) featured.push({ kind: 'note', item: featuredNotes[ni++] });
 }
 const filmCount = getAllCases().filter((c) => c.evidence === 'film-attached').length;
-const notes = getAllNotes();
+const notes = getListedNotes();
 const heroPhotoCase = featured.find((e) => e.kind === 'case' && e.item.media.some((m) => m.poster))?.item
   ?? featured.find((e) => e.kind === 'case' && e.item.media.length > 0)?.item;
 const heroPhotoItem = heroPhotoCase
@@ -31,11 +34,19 @@ const heroPhotoItem = heroPhotoCase
     <div class="container">
       <div>
         <p class="hero-kicker">The Prompt Archive</p>
-        <h1>先看真实的图像与成片，<br />再<span class="hl">复制提示词原文</span>。</h1>
+        <h1>图像与视频提示词，<br /><span class="hl">原文可复制</span>。</h1>
         <p class="hero-sub">
-          案例分「图像案例」与「视频案例」两类，共用搜索与方法笔记。每个完整案例一个独立页面，
-          生成结果、实测成片与输入参考图分别标注，不混淆身份。
+          按图像与视频分类，支持搜索与复制。附有实测成片的案例，卡片标注<span class="keep-together">「附实测成片」</span>。
         </p>
+        <form class="hero-search" action={`${import.meta.env.PUBLIC_SITE_BASE_PATH ?? ''}/cases/`} method="get" role="search">
+          <label class="hero-search-field">
+            <Icon name="search" size={16} />
+            <input type="search" name="q" placeholder="输入关键词找提示词" aria-label="搜索案例" />
+          </label>
+          <button class="btn hero-search-submit" type="submit">搜索</button>
+        </form>
+        <ScenarioChips />
+        <RecentCopies />
         <div class="hero-actions">
           <a class="btn btn-primary" href="/cases/">浏览案例 <span class="arrow">&gt;</span></a>
           <a class="btn btn-ghost" href="/notes/">方法笔记</a>

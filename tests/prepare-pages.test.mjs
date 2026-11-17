@@ -12,7 +12,8 @@ test('Pages 发布目录补全项目路径且保留提示词正文', () => {
   fs.mkdirSync(path.join(source, '_astro'), { recursive: true });
   fs.writeFileSync(path.join(source, 'index.html'),
     '<a href="/cases/">案例</a><img src="/media/a.png"><video poster="/media/p.png"></video><a href="https://example.com/">外链</a><pre>href=&quot;/cases/&quot;</pre>');
-  fs.writeFileSync(path.join(source, '_astro/site.css'), "@font-face{src:url('/fonts/a.woff2')}body{background:url(data:image/png;base64,AAAA)}");
+  const select = fs.readFileSync(new URL('../src/styles/global.css', import.meta.url), 'utf8').match(/^select\s*\{[^}]+\}/m)[0];
+  fs.writeFileSync(path.join(source, '_astro/site.css'), "@font-face{src:url('/fonts/a.woff2')}body{background:url(data:image/png;base64,AAAA)}" + select);
   try {
     const result = preparePages(source, target);
     assert.equal(result.htmlCount, 1);
@@ -24,6 +25,7 @@ test('Pages 发布目录补全项目路径且保留提示词正文', () => {
     assert.ok(html.includes('href="https://example.com/"'));
     assert.ok(html.includes('<pre>href=&quot;/cases/&quot;</pre>'));
     assert.ok(fs.readFileSync(path.join(target, '_astro/site.css'), 'utf8').includes("url('/prompt-archive-site/fonts/a.woff2')"));
+    assert.ok(fs.readFileSync(path.join(target, '_astro/site.css'), 'utf8').includes(select), '编码 SVG data URI 和 select 样式完整保留');
     assert.ok(fs.existsSync(path.join(target, '.nojekyll')));
     assert.ok(fs.readFileSync(path.join(source, 'index.html'), 'utf8').includes('href="/cases/"'));
   } finally {

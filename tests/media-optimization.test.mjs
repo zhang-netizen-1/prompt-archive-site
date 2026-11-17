@@ -3,8 +3,34 @@ import assert from 'node:assert/strict';
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
+import crypto from 'node:crypto';
 import { execFileSync } from 'node:child_process';
 import { copyMedia } from '../scripts/lib/export.mjs';
+
+test('只读模式复用既有媒体，缺失时报错且不创建文件', () => {
+  const root = fs.mkdtempSync(path.join(os.tmpdir(), 'media-readonly-'));
+  const source = path.join(root, 'original.mov');
+  const mediaDir = path.join(root, 'media');
+  fs.mkdirSync(mediaDir);
+  const raw = Buffer.from('只读复用，不调用转码或海报工具');
+  fs.writeFileSync(source, raw);
+  const hash = crypto.createHash('sha256').update(raw).digest('hex').slice(0, 16);
+  const name = `${hash}-h264-720p-v1.mp4`;
+  const existing = path.join(mediaDir, name);
+  fs.writeFileSync(existing, raw);
+  try {
+    const before = fs.statSync(existing);
+    assert.equal(copyMedia(source, mediaDir, new Map(), { preserveMedia: true, optimizeMedia: true }), `/media/${name}`);
+    assert.equal(fs.statSync(existing).mtimeMs, before.mtimeMs);
+    assert.deepEqual(fs.readFileSync(existing), raw);
+    assert.deepEqual(fs.readdirSync(mediaDir), [name]);
+    fs.rmSync(existing);
+    assert.throws(() => copyMedia(source, mediaDir, new Map(), { preserveMedia: true }), /只读媒体模式下缺少已有文件/);
+    assert.deepEqual(fs.readdirSync(mediaDir), []);
+  } finally {
+    fs.rmSync(root, { recursive: true, force: true });
+  }
+});
 
 test('公开版视频转为可播放的 720p MP4，复用缓存且不修改原片', () => {
   const root = fs.mkdtempSync(path.join(os.tmpdir(), 'media-optimization-'));

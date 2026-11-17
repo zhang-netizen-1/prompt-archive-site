@@ -8,6 +8,7 @@ import { execFile, execFileSync } from 'node:child_process';
 import { promisify } from 'node:util';
 import GithubSlugger from 'github-slugger';
 import { readSource, findFencedBlock } from './source.mjs';
+import { deriveEvidence, evidenceLabel } from '../../src/lib/catalog-display.mjs';
 import {
   buildWikiIndex,
   resolveObsidianMedia,
@@ -59,11 +60,23 @@ function optimizedVideo(absPath, hash, cacheDir) {
 }
 
 /** 复制媒体到 public/media；公开版仅压缩视频，原始 Wiki 文件保持不变。 */
-export function copyMedia(absPath, mediaDir, copied, { optimizeMedia = false, cacheDir } = {}) {
+export function copyMedia(absPath, mediaDir, copied, { optimizeMedia = false, cacheDir, preserveMedia = false } = {}) {
   const buf = fs.readFileSync(absPath);
   const hash = crypto.createHash('sha256').update(buf).digest('hex').slice(0, 16);
   const ext = path.extname(absPath).toLowerCase() || '.bin';
   const isVideo = VIDEO_EXTENSIONS.has(ext);
+  if (preserveMedia) {
+    const candidates = [`${hash}${ext}`];
+    if (isVideo) {
+      const optimized = `${hash}-${PUBLIC_VIDEO_PROFILE}.mp4`;
+      if (optimizeMedia) candidates.unshift(optimized);
+      else candidates.push(optimized);
+    }
+    const existing = candidates.find(name => fs.existsSync(path.join(mediaDir, name)) && fs.statSync(path.join(mediaDir, name)).size > 0);
+    if (!existing) throw new Error(`只读媒体模式下缺少已有文件：${absPath}`);
+    copied.set(existing, { absPath, sourceBytes: buf.length, bytes: fs.statSync(path.join(mediaDir, existing)).size });
+    return `${MEDIA_URL_BASE}/${existing}`;
+  }
   const compressed = optimizeMedia && isVideo
     ? optimizedVideo(absPath, hash, cacheDir)
     : null;
@@ -78,10 +91,11 @@ export function copyMedia(absPath, mediaDir, copied, { optimizeMedia = false, ca
 }
 
 /** 为视频生成海报帧（macOS qlmanage，尽力而为；失败不阻断导出）。 */
-async function makeVideoPoster(absPath, mediaDir, hashName) {
+async function makeVideoPoster(absPath, mediaDir, hashName, preserveMedia = false) {
   const posterName = `${path.basename(hashName, path.extname(hashName))}-poster.png`;
   const posterPath = path.join(mediaDir, posterName);
   if (fs.existsSync(posterPath)) return `${MEDIA_URL_BASE}/${posterName}`;
+  if (preserveMedia) return null;
   try {
     const tmp = fs.mkdtempSync(path.join(path.dirname(mediaDir), '.poster-'));
     await execFileAsync('qlmanage', ['-t', '-s', '1280', '-o', tmp, absPath], { timeout: 30000 });
@@ -141,14 +155,16 @@ async function exportCase(entry, ctx) {
     const url = copyMedia(resolution.absPath, mediaDir, copied, mediaOptions);
     const item = { role: m.role, kind: m.kind, label: m.label, url };
     if (m.kind === 'video') {
-      item.poster = await makeVideoPoster(resolution.absPath, mediaDir, url);
+      item.poster = await makeVideoPoster(resolution.absPath, mediaDir, url, mediaOptions.preserveMedia);
     }
     media.push(item);
   }
 
   const fullPrompt = promptBlocks.length === 1 ? promptBlocks[0].raw : null;
+  const evidence = deriveEvidence({ ...entry, media });
   const searchText = [
     entry.title, entry.topic, entry.summary ?? '',
+    evidenceLabel({ ...entry, evidence }).text,
     (entry.tags ?? []).join(' '),
     promptBlocks.map((b) => b.raw).join('\n'),
   ].join('\n').toLowerCase();
@@ -160,7 +176,7 @@ async function exportCase(entry, ctx) {
     medium: entry.medium,
     topic: entry.topic,
     tags: entry.tags ?? [],
-    evidence: entry.evidence,
+    evidence,
     duration: entry.duration ?? null,
     summary: entry.summary ?? '',
     media,
@@ -409,7 +425,7 @@ export function normalizeValueTables(markdown) {
 }
 
 /**
- * @param {{ wikiRoot: string, projectRoot: string, mode: 'preview'|'public', optimizeMedia?: boolean }} options
+ * @param {{ wikiRoot: string, projectRoot: string, mode: 'preview'|'public', optimizeMedia?: boolean, preserveMedia?: boolean }} options
  */
 export async function exportWiki(options) {
   const { wikiRoot, projectRoot, mode } = options;
@@ -422,8 +438,9 @@ export async function exportWiki(options) {
   const mediaOptions = {
     optimizeMedia: options.optimizeMedia ?? mode === 'public',
     cacheDir: path.join(projectRoot, '.cache/media'),
+    preserveMedia: options.preserveMedia ?? false,
   };
-  for (const dir of [generatedDir, generatedNotesDir, mediaDir]) {
+  for (const dir of [generatedDir, generatedNotesDir, ...(mediaOptions.preserveMedia ? [] : [mediaDir])]) {
     fs.rmSync(dir, { recursive: true, force: true });
     fs.mkdirSync(dir, { recursive: true });
   }

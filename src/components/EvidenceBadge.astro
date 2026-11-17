@@ -1,0 +1,11 @@
+---
+import Icon from './Icon.astro';
+import { evidenceLabel } from '../lib/catalog-display.mjs';
+interface Props { item: { evidence: string }; dark?: boolean }
+const { item, dark = false } = Astro.props;
+const status = evidenceLabel(item);
+---
+<span class:list={['evidence-badge', `evidence-${status.tone}`, { 'evidence-dark': dark }]}>
+  <Icon name={status.icon} size={12} />
+  {status.text}
+</span>

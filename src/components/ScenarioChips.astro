@@ -1,0 +1,13 @@
+---
+import { getAllCases } from '../lib/catalog';
+import { scenarioChips } from '../lib/catalog-display.mjs';
+interface Props { filter?: boolean }
+const { filter = false } = Astro.props;
+const chips = scenarioChips(getAllCases());
+---
+<div class="scenario-chips" role="group" aria-label="按场景找提示词">
+  {filter && <button class="scenario-chip" type="button" data-scenario-topic="" aria-pressed="true">全部</button>}
+  {chips.map(({ topic, count }) => filter
+    ? <button class="scenario-chip" type="button" data-scenario-topic={topic} aria-pressed="false">{topic} <span>{count}</span></button>
+    : <a class="scenario-chip" href={`/cases/?topic=${encodeURIComponent(topic)}`}>{topic} <span>{count}</span></a>)}
+</div>

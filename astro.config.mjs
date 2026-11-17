@@ -12,7 +12,18 @@ export default defineConfig({
     // 关闭智能标点：笔记正文渲染时不改写引号、破折号等原文字符。
     processor: satteri({
       features: { smartPunctuation: false },
-      hastPlugins: [satteriHeadingIdsPlugin()],
+      hastPlugins: [satteriHeadingIdsPlugin(), {
+        name: 'table-scroll',
+        element: {
+          filter: ['table'],
+          visit(node, ctx) {
+            ctx.wrapNode(node, {
+              type: 'element', tagName: 'div',
+              properties: { className: ['table-scroll'] }, children: [],
+            });
+          },
+        },
+      }],
       shikiConfig: { theme: 'vitesse-light' },
     }),
   },

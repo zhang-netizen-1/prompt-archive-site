@@ -1,13 +1,19 @@
 ---
 import Icon from './Icon.astro';
-import { evidenceLabel, type CaseItem } from '../lib/catalog';
+import { type CaseItem } from '../lib/catalog';
+import EvidenceBadge from './EvidenceBadge.astro';
+import { cardCopyPayload } from '../lib/catalog-display.mjs';
 
 interface Props {
   item: CaseItem;
   eager?: boolean;
+  search?: boolean;
 }
-const { item, eager = false } = Astro.props;
-const status = evidenceLabel(item);
+const { item, eager = false, search = false } = Astro.props;
+const payload = cardCopyPayload(item);
+const payloadId = `card-prompt-${item.slug}`;
+const basePath = import.meta.env.PUBLIC_SITE_BASE_PATH ?? '';
+const detailHref = `${basePath}/cases/${item.slug}/`;
 
 const resultMedia = item.media.find((m) => m.role === 'result' && m.kind === 'video');
 const poster = resultMedia?.poster ?? null;
@@ -16,20 +22,12 @@ const coverImage = item.media.find((m) => m.kind === 'image' && m.role === 'resu
   ?? item.media.find((m) => m.kind === 'image' && m.role === 'reference');
 const hasVisual = Boolean(poster || coverImage);
 
-// 右上角荧光笔角标：短身份词；完整状态词在下方 meta 行
-const badge = resultMedia
-  ? { text: '实测成片', ok: true, icon: 'play' as const }
-  : coverImage?.role === 'example'
-    ? { text: '示例图', ok: false, icon: 'image' as const }
-    : coverImage?.role === 'reference'
-      ? { text: '参考图', ok: false, icon: 'image' as const }
-      : null;
 ---
-<a class="case-card" href={`/cases/${item.slug}/`}
+<article class:list={['case-card', { 'search-card': search }]} data-copy-context
   data-medium={item.medium}
   data-topic={item.topic}
   data-evidence={item.evidence}
-  data-search={[item.title, item.topic, item.summary, item.tags.join(' ')].join(' ').toLowerCase()}>
+  data-search={item.searchText}>
   <div class="card-media">
     <div class="photo">
       {poster && (
@@ -42,32 +40,33 @@ const badge = resultMedia
           loading={eager ? 'eager' : 'lazy'} />
       )}
       {!hasVisual && (
-        <div class="media-cover">
-          <span class="cover-kind">{item.medium === 'video' ? 'VIDEO PROMPT' : 'IMAGE PROMPT'}</span>
-          <span class="cover-title">{item.title}</span>
-          <span class="cover-note">{item.medium === 'video' ? '暂无成片 · 提示词可复制' : '暂无结果图 · 提示词可复制'}</span>
+        <div class={`media-cover media-cover-${item.medium}`}>
+          <span class="cover-note">仅提示词 · 可复制</span>
+          <span class="cover-excerpt">{Array.from(item.promptBlocks[0]?.raw ?? '').slice(0, 200).join('')}</span>
         </div>
       )}
     </div>
-    {badge && (
-      <span class={`card-badge${badge.ok ? '' : ' mute'}`}>
-        <Icon name={badge.icon} size={12} />
-        {badge.text}
-      </span>
-    )}
   </div>
   <div class="card-holes" aria-hidden="true"></div>
   <div class="card-body">
     <div class="card-meta">
       <span>{item.archiveNo}</span>
       <span>{item.medium === 'video' ? '视频' : '图像'}</span>
-      <span class={`status ${status.tone === 'ok' ? 'ok' : status.tone === 'copper' ? 'warn' : ''}`}>{status.text}</span>
+      <EvidenceBadge item={item} />
     </div>
-    <h3 class="card-title">{item.title}</h3>
+    <h3 class="card-title" title={item.title}><a class="card-detail-link" href={`/cases/${item.slug}/`}><span class="card-title-text">{item.title}</span></a></h3>
     <p class="card-summary">{item.summary}</p>
     <div class="card-tags">
       <span class="tag">{item.topic}</span>
       {item.tags.slice(0, 2).map((t) => <span class="tag">{t}</span>)}
     </div>
+    <div class="card-copy-row">
+      {payload !== null ? <button class="copy-btn" type="button" data-copy-button
+        data-copy-source={payloadId} data-copy-slug={item.slug} data-copy-title={item.title} data-copy-href={detailHref}>
+        <Icon name="copy" size={16} /><span data-copy-text>复制提示词</span>
+      </button> : item.promptBlocks.length > 1 && <a class="card-segments" href={`/cases/${item.slug}/`} tabindex="-1">分 {item.promptBlocks.length} 段 · 查看并复制</a>}
+      <span class="copy-feedback" data-copy-feedback aria-live="polite"></span>
+    </div>
   </div>
-</a>
+  {payload !== null && <script type="application/json" id={payloadId} set:html={JSON.stringify(payload).replace(/</g, '\\u003c')} />}
+</article>

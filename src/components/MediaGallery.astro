@@ -23,7 +23,6 @@ pushPanel('reference', '输入参考图');
 pushPanel('example', '源资料示例图');
 
 const hasMedia = panels.length > 0;
-const noMediaText = medium === 'video' ? '暂无成片' : '暂无结果图';
 ---
 
 {hasMedia ? (
@@ -45,12 +44,7 @@ const noMediaText = medium === 'video' ? '暂无成片' : '暂无结果图';
   </div>
 ) : null}
 
-{!hasMedia && (
-  <div class="no-media-note">
-    <strong>{noMediaText}</strong>
-    本案例暂无{medium === 'video' ? '实测成片' : '生成结果图'}，提示词与来源说明仍可阅读、复制。
-  </div>
-)}
+{!hasMedia && <p class="no-media-note">这条案例只收录了提示词，没有附{medium === 'video' ? '成片' : '结果图'}。</p>}
 
 {panels.map((p, i) => (
   <div
@@ -86,12 +80,12 @@ const noMediaText = medium === 'video' ? '暂无成片' : '暂无结果图';
   </div>
 ))}
 
-<dialog class="lightbox" data-lightbox aria-label="查看大图">
+{hasMedia && <dialog class="lightbox" data-lightbox aria-label="查看大图">
   <button class="lightbox-close" type="button" data-lightbox-close aria-label="关闭大图">
     <Icon name="close" size={20} />
   </button>
   <img data-lightbox-img alt="" />
-</dialog>
+</dialog>}
 
 <script>
   function initMediaGallery(root: HTMLElement) {

@@ -1,12 +1,12 @@
 ---
 import '../styles/global.css';
 import Icon from '../components/Icon.astro';
-import { getAllCases, getAllNotes, getAllCollections } from '../lib/catalog';
+import { getAllCases, getListedNotes, getAllCollections } from '../lib/catalog';
 
 const footerStats = {
   caseCount: getAllCases().length,
   filmCount: getAllCases().filter((c) => c.evidence === 'film-attached').length,
-  noteCount: getAllNotes().length,
+  noteCount: getListedNotes().length,
   collectionCount: getAllCollections().length,
 };
 const { caseCount, filmCount, noteCount, collectionCount } = footerStats;
@@ -49,7 +49,7 @@ const navItems = [
           ))}
         </nav>
         <div class="header-cta">
-          <a class="header-search-link" href="/cases/" aria-label="全站搜索案例">
+          <a class="header-search-link" href="/cases/" aria-current={activeNav === 'cases' ? 'page' : undefined} aria-label="全站搜索案例">
             <Icon name="search" size={15} />
             <span>搜索</span>
             <span class="nav-no">04</span>
@@ -86,7 +86,7 @@ const navItems = [
           </div>
         </div>
         <div class="footer-bottom">
-          <p>「作者称已测试」表示来源声明，本站未复测。</p>
+          <p>「作者称已测」表示来源声明，本站未复测。</p>
           <p>PA·ARCHIVE © 2026</p>
         </div>
       </div>
@@ -99,17 +99,26 @@ const navItems = [
         z-index: 100;
         background: var(--bg-raised);
         color: var(--text);
-        padding: 10px 16px;
+        padding: var(--sp-8) var(--sp-16);
       }
       .skip-link:focus { left: 8px; }
     </style>
   </body>
   <script>
+    import { initCopyButtons } from '../client/copy';
+    import { initRecentCopies } from '../client/recent-copies';
+    initCopyButtons();
+    initRecentCopies();
+  </script>
+  <script>
     // 瀑布流：把 [data-masonry] 的卡片按行序轮转分配到 N 个列容器，
     // 列高取最高列，卡片完整呈现、不会被后续区块遮盖。
+    const masonryOrder = new WeakMap<Element, Element[]>();
     function layoutMasonry() {
       document.querySelectorAll('[data-masonry]').forEach((grid) => {
-        const cards = Array.from(grid.querySelectorAll(':scope > .m-cols > .m-col > *, :scope > *:not(.m-cols)'));
+        // 缓存服务端行序；筛选和追加显示后仍按原顺序轮转分列。
+        const cards = masonryOrder.get(grid) ?? Array.from(grid.children);
+        masonryOrder.set(grid, cards);
         grid.querySelectorAll('.m-cols').forEach((w) => w.remove());
         if (cards.length === 0) return;
         const cols = window.matchMedia('(max-width: 767px)').matches ? 1
@@ -121,7 +130,11 @@ const navItems = [
           d.className = 'm-col';
           return d;
         });
-        cards.forEach((el, i) => colDivs[i % cols].appendChild(el));
+        let visibleIndex = 0;
+        cards.forEach((el) => {
+          const column = el.hasAttribute('hidden') ? 0 : visibleIndex++ % cols;
+          colDivs[column].appendChild(el);
+        });
         grid.appendChild(wrap);
         colDivs.forEach((d) => wrap.appendChild(d));
       });

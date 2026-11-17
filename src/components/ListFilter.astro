@@ -31,39 +31,42 @@ const { topics, evidenceOptions, topicParam = '' } = Astro.props;
   <span class="result-count" data-result-count aria-live="polite"></span>
 </div>
 <div data-empty-state hidden class="empty-state">
-  <p style="margin:0 0 4px"><strong style="color:var(--chalk)">没有匹配的案例</strong></p>
-  <p style="margin:0;font-size:14px">当前主题与媒体状态下没有案例，试试清除筛选。</p>
+  <p style="margin:0 0 var(--sp-4)"><strong style="color:var(--chalk)">没有匹配的案例</strong></p>
+  <p style="margin:0;font-size:var(--fs-14)">当前主题与媒体状态下没有案例，试试清除筛选。</p>
   <button class="btn btn-ghost" type="button" data-filter-reset>清除筛选</button>
 </div>
 
 <script>
+  import { PAGE_SIZE, pageMatches } from '../lib/catalog-display.mjs';
   function initListFilter(toolbar: HTMLElement) {
     const topicSelect = toolbar.querySelector<HTMLSelectElement>('[data-filter-topic]')!;
     const evidenceSelect = toolbar.querySelector<HTMLSelectElement>('[data-filter-evidence]')!;
     const count = toolbar.querySelector<HTMLElement>('[data-result-count]')!;
     const grid = toolbar.parentElement?.querySelector<HTMLElement>('[data-case-grid][data-masonry]');
     const empty = toolbar.parentElement?.querySelector<HTMLElement>('[data-empty-state]');
+    const more = toolbar.parentElement?.querySelector<HTMLButtonElement>('[data-load-more]');
     if (!grid) return;
     const cards = Array.from(grid.querySelectorAll<HTMLElement>('.case-card'));
+    const items = cards.map(card => ({ card, ...card.dataset }));
+    let limit = PAGE_SIZE;
 
-    function apply() {
-      const topic = topicSelect.value;
-      const evidence = evidenceSelect.value;
-      let visible = 0;
-      for (const card of cards) {
-        const okTopic = !topic || card.dataset.topic === topic;
-        const okEvidence = !evidence || card.dataset.evidence === evidence;
-        const show = okTopic && okEvidence;
-        card.hidden = !show;
-        if (show) visible += 1;
+    function apply(reset = true) {
+      if (reset) limit = PAGE_SIZE;
+      const { matches, shown, remaining } = pageMatches(items, { topic: topicSelect.value, evidence: evidenceSelect.value }, limit);
+      const visible = new Set(shown.map(item => item.card));
+      for (const card of cards) card.hidden = !visible.has(card);
+      count.textContent = `${matches.length} 个案例`;
+      if (empty) empty.hidden = matches.length !== 0;
+      if (more) {
+        more.hidden = remaining === 0;
+        more.textContent = `加载更多（还有 ${remaining} 条）`;
       }
-      count.textContent = `${visible} 个案例`;
-      if (empty) empty.hidden = visible !== 0;
-      // 瀑布流列高随隐藏卡片收缩，无需重排
+      window.refreshMasonry?.();
     }
 
-    topicSelect.addEventListener('change', apply);
-    evidenceSelect.addEventListener('change', apply);
+    topicSelect.addEventListener('change', () => apply());
+    evidenceSelect.addEventListener('change', () => apply());
+    more?.addEventListener('click', () => { limit += PAGE_SIZE; apply(false); });
     toolbar.parentElement?.querySelectorAll('[data-filter-reset]').forEach((btn) => {
       btn.addEventListener('click', () => {
         topicSelect.value = '';

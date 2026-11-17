@@ -17,12 +17,14 @@ async function makeTempProject() {
     path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../content/catalog.json'),
     path.join(projectRoot, 'content/catalog.json'),
   );
+  fs.mkdirSync(path.join(projectRoot, 'public'), { recursive: true });
+  fs.symlinkSync(fileURLToPath(new URL('../public/media', import.meta.url)), path.join(projectRoot, 'public/media'), 'dir');
   return projectRoot;
 }
 
 test('preview 导出：案例、笔记、媒体与报告齐备', { skip: WIKI_AVAILABLE ? false : '本机无 Wiki 源' }, async () => {
   const projectRoot = await makeTempProject();
-  const report = await exportWiki({ wikiRoot: WIKI_ROOT, projectRoot, mode: 'preview' });
+  const report = await exportWiki({ wikiRoot: WIKI_ROOT, projectRoot, mode: 'preview', preserveMedia: true });
 
   const expectedCases = JSON.parse(fs.readFileSync(path.resolve(path.dirname(fileURLToPath(import.meta.url)), '../content/catalog.json'), 'utf8')).cases.length;
   const data = JSON.parse(fs.readFileSync(path.join(projectRoot, 'src/generated/cases.json'), 'utf8'));
@@ -96,13 +98,16 @@ test('preview 导出：案例、笔记、媒体与报告齐备', { skip: WIKI_AV
 
 test('证据状态与展示文案的映射正确', { skip: WIKI_AVAILABLE ? false : '本机无 Wiki 源' }, async () => {
   const projectRoot = await makeTempProject();
-  await exportWiki({ wikiRoot: WIKI_ROOT, projectRoot, mode: 'preview' });
+  await exportWiki({ wikiRoot: WIKI_ROOT, projectRoot, mode: 'preview', preserveMedia: true });
   const data = JSON.parse(fs.readFileSync(path.join(projectRoot, 'src/generated/cases.json'), 'utf8'));
   const withFilm = data.cases.filter((c) => c.evidence === 'film-attached');
   assert.equal(withFilm.length, 2, '有实测成片的案例');
   const authorTested = data.cases.filter((c) => c.evidence === 'author-tested');
   const examples = data.cases.filter((c) => c.evidence === 'source-example');
-  assert.equal(authorTested.length + withFilm.length + examples.length, data.cases.length,
+  const noRecord = data.cases.filter((c) => c.evidence === 'no-record');
+  assert.equal(noRecord.length, 5);
+  assert.ok(noRecord.every(c => c.media.length === 0));
+  assert.equal(authorTested.length + withFilm.length + examples.length + noRecord.length, data.cases.length,
     '证据状态互斥且完备');
   for (const c of authorTested) {
     assert.ok(!c.media.some((m) => m.role === 'result'), '作者称已测试的案例不得带结果媒体');
@@ -135,7 +140,7 @@ test('构建失败路径：缺失源文件与重复 slug 必须报错', async ()
     collections: [],
   };
   fs.writeFileSync(path.join(projectRoot, 'content/catalog.json'), JSON.stringify(badCatalog));
-  const report = await exportWiki({ wikiRoot: WIKI_ROOT, projectRoot, mode: 'preview' });
+  const report = await exportWiki({ wikiRoot: WIKI_ROOT, projectRoot, mode: 'preview', preserveMedia: true });
   const types = report.errors.map((e) => e.type);
   assert.ok(types.includes('duplicate-slug'), '重复 slug 报错');
   assert.ok(types.includes('invalid-enum'), '非法 medium 报错');

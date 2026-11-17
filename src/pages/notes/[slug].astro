@@ -35,7 +35,7 @@ const listLabel = note.medium === 'image' ? '图像案例' : note.medium === 'vi
         <span aria-hidden="true">/</span>
         <span aria-current="page">{note.title}</span>
       </nav>
-      <h1 style="font-size:32px">{note.title}</h1>
+      <h1 style="font-size:var(--fs-28)">{note.title}</h1>
       <p class="note-meta">
         <span class="medium-chip">{note.category}</span>
         <span>{note.medium === 'image' ? '图像' : note.medium === 'video' ? '视频' : '图像＋视频共用'}</span>
@@ -46,7 +46,7 @@ const listLabel = note.medium === 'image' ? '图像案例' : note.medium === 'vi
     <div class="note-layout">
       <aside class="note-toc" aria-label="目录">
         <p class="toc-title">目录</p>
-        {note.toc.length === 0 && <p style="font-size:13px;color:var(--text-2);margin:0">本笔记无二级标题</p>}
+        {note.toc.length === 0 && <p style="font-size:var(--fs-12);color:var(--text-2);margin:0">本笔记无二级标题</p>}
         {note.toc.map((t) => (
           <a href={`#${t.slug}`} class={t.depth === 3 ? 'depth-3' : undefined}>{t.text}</a>
         ))}
@@ -58,13 +58,13 @@ const listLabel = note.medium === 'image' ? '图像案例' : note.medium === 'vi
 
         {relatedCases.length > 0 && (
           <section class="note-related" aria-label="关联案例">
-            <h2 class="section-title" style="font-size:20px">
+            <h2 class="section-title" style="font-size:var(--fs-20)">
               <Icon name="link" size={18} /> 应用这些写法的案例
             </h2>
-            <div class="grid-cases" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr));margin-top:16px">
+            <div class="grid-cases" style="grid-template-columns:repeat(auto-fill,minmax(260px,1fr));margin-top:var(--sp-16)">
               {relatedCases.map((c) => c && <CaseCard item={c} />)}
             </div>
-            <p style="font-size:14px;margin-top:12px">
+            <p style="font-size:var(--fs-14);margin-top:var(--sp-12)">
               <a href={listHref}>浏览{listLabel} →</a>
             </p>
           </section>
@@ -146,6 +146,6 @@ const listLabel = note.medium === 'image' ? '图像案例' : note.medium === 'vi
   .note-header {
     max-width: calc(var(--note-width) + 280px);
     margin: 0 auto;
-    padding: 40px 24px 0;
+    padding: var(--sp-32) var(--sp-24) 0;
   }
 </style>
